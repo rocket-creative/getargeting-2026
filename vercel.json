@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd itl-website && npm install && npm run build",
+  "outputDirectory": "itl-website/.next",
+  "installCommand": "cd itl-website && npm install",
+  "framework": "nextjs",
+  "rootDirectory": "itl-website"
+}
