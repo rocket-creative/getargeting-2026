@@ -18,12 +18,12 @@ interface FAQ {
 }
 
 interface AnimatedFAQProps {
-  title: string;
+  title?: string;
   faqs: FAQ[];
   backgroundColor?: string;
 }
 
-export default function UXUIDCAnimatedFAQ({ 
+export function UXUIDCAnimatedFAQ({ 
   title, 
   faqs, 
   backgroundColor = 'white' 
@@ -101,22 +101,24 @@ export default function UXUIDCAnimatedFAQ({
     <section
       ref={sectionRef}
       className="flex flex-col justify-start items-center"
-      style={{ backgroundColor, padding: '60px 20px' }}
+      style={{ backgroundColor, padding: title ? '60px 20px' : '0' }}
     >
-      <h2
-        style={{
-          color: '#2384da',
-          textAlign: 'center',
-          letterSpacing: '-.5px',
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '2rem',
-          fontWeight: 700,
-          lineHeight: 1,
-          marginBottom: '30px',
-        }}
-      >
-        {title}
-      </h2>
+      {title && (
+        <h2
+          style={{
+            color: '#2384da',
+            textAlign: 'center',
+            letterSpacing: '-.5px',
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '2rem',
+            fontWeight: 700,
+            lineHeight: 1,
+            marginBottom: '30px',
+          }}
+        >
+          {title}
+        </h2>
+      )}
 
       <div style={{ maxWidth: '800px', width: '100%' }}>
         {faqs.map((faq, index) => (
@@ -190,3 +192,5 @@ export default function UXUIDCAnimatedFAQ({
     </section>
   );
 }
+
+export default UXUIDCAnimatedFAQ;

@@ -49,7 +49,7 @@ const footerSections = [
   },
 ];
 
-export default function UXUIDCFooter() {
+export function UXUIDCFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -139,3 +139,5 @@ export default function UXUIDCFooter() {
     </footer>
   );
 }
+
+export default UXUIDCFooter;

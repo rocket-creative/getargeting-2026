@@ -116,7 +116,7 @@ const navigationItems: NavItem[] = [
   },
 ];
 
-export default function UXUIDCNavigation() {
+export function UXUIDCNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -321,3 +321,5 @@ export default function UXUIDCNavigation() {
     </>
   );
 }
+
+export default UXUIDCNavigation;
