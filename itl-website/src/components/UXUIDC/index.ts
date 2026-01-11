@@ -25,6 +25,17 @@ export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
 
+// Glossary Components
+export { 
+  UXUIDCGlossarySection,
+  knockoutTerms,
+  conditionalTerms,
+  knockinTerms,
+  humanizationTerms,
+  inducibleTerms,
+  transgenicTerms
+} from './GlossarySection';
+
 // Icons - Flat SVG icons (no emojis)
 export * from './Icons';
 

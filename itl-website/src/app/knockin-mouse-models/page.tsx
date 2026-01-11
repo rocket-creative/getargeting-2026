@@ -16,6 +16,8 @@ import {
   UXUIDCAnimatedFAQ,
   UXUIDCAnimatedCounter,
   UXUIDCStartProjectCTA,
+  UXUIDCGlossarySection,
+  knockinTerms,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -689,6 +691,13 @@ export default function KnockinMouseModelsPage() {
             { label: 'Request a Quote', href: '/request-quote' },
             { label: 'Contact Us', href: '/contact' },
           ]}
+        />
+
+        {/* ========== GLOSSARY ========== */}
+        <UXUIDCGlossarySection
+          title="Key Terms"
+          description="Understanding the terminology used in knockin mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
+          terms={knockinTerms}
         />
 
         {/* ========== FAQ ========== */}

@@ -6,6 +6,7 @@ import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
 import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
 import { UXUIDCAnimatedFAQ } from '@/components/UXUIDC/AnimatedFAQ';
 import { UXUIDCAnimatedCounter } from '@/components/UXUIDC/AnimatedCounter';
+import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -906,6 +907,13 @@ export default function HumanizedMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* Glossary Section */}
+        <UXUIDCGlossarySection
+          title="Key Terms"
+          description="Understanding the terminology used in humanized mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
+          terms={humanizationTerms}
+        />
 
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>

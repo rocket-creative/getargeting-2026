@@ -16,6 +16,8 @@ import {
   UXUIDCAnimatedFAQ,
   UXUIDCAnimatedCounter,
   UXUIDCStartProjectCTA,
+  UXUIDCGlossarySection,
+  knockoutTerms,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -938,6 +940,13 @@ export default function KnockoutMouseModelsPage() {
             { label: 'Request a Quote', href: '/request-quote' },
             { label: 'Contact Us', href: '/contact' },
           ]}
+        />
+
+        {/* ========== GLOSSARY ========== */}
+        <UXUIDCGlossarySection
+          title="Key Terms"
+          description="Understanding the terminology used in knockout mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
+          terms={knockoutTerms}
         />
 
         {/* ========== FAQ ========== */}

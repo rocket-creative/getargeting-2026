@@ -5,6 +5,7 @@ import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
 import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
 import { UXUIDCAnimatedFAQ } from '@/components/UXUIDC/AnimatedFAQ';
 import { UXUIDCAnimatedCounter } from '@/components/UXUIDC/AnimatedCounter';
+import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -909,6 +910,13 @@ export default function ConditionalKnockoutMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* Glossary Section */}
+        <UXUIDCGlossarySection
+          title="Key Terms"
+          description="Understanding the terminology used in conditional knockout mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
+          terms={conditionalTerms}
+        />
 
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
