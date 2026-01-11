@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
-import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
-import { UXUIDCAnimatedFAQ } from '@/components/UXUIDC/AnimatedFAQ';
-import { UXUIDCAnimatedCounter } from '@/components/UXUIDC/AnimatedCounter';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
+import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 

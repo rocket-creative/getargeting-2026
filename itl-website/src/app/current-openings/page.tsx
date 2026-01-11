@@ -2,9 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
-import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
-import { UXUIDCAnimatedCounter } from '@/components/UXUIDC/AnimatedCounter';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Hero Data

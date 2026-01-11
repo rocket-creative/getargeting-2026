@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
-import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import { IconDNA, IconChevronRight, IconLayers, IconSearch } from '@/components/UXUIDC/Icons';
 
 // Hero Data

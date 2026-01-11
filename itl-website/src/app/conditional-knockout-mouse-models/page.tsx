@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { UXUIDCNavigation } from '@/components/UXUIDC/Navigation';
-import { UXUIDCFooter } from '@/components/UXUIDC/Footer';
-import { UXUIDCAnimatedFAQ } from '@/components/UXUIDC/AnimatedFAQ';
-import { UXUIDCAnimatedCounter } from '@/components/UXUIDC/AnimatedCounter';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
+import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
