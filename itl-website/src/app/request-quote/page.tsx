@@ -241,10 +241,6 @@ const testimonialData = {
 
 // ========== PAGE COMPONENT ==========
 
-// HubSpot Configuration
-const HUBSPOT_PORTAL_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID || 'YOUR_PORTAL_ID';
-const HUBSPOT_FORM_ID = process.env.NEXT_PUBLIC_HUBSPOT_QUOTE_FORM_ID || 'YOUR_FORM_ID';
-
 export default function RequestQuotePage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -253,7 +249,7 @@ export default function RequestQuotePage() {
 
   useEffect(() => {
     const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el, i) => {
+    animateElements.forEach((el) => {
       gsap.fromTo(
         el,
         { opacity: 0, y: 30 },
@@ -261,7 +257,7 @@ export default function RequestQuotePage() {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          delay: 0, // remove cumulative delays to avoid slow stagger on scroll
+          delay: 0,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: el,
@@ -284,47 +280,38 @@ export default function RequestQuotePage() {
 
     const formData = new FormData(formRef.current!);
     
-    // HubSpot form submission
-    const hubspotData = {
-      portalId: HUBSPOT_PORTAL_ID,
-      formGuid: HUBSPOT_FORM_ID,
-      fields: [
-        { name: 'firstname', value: formData.get('name') || '' },
-        { name: 'email', value: formData.get('email') || '' },
-        { name: 'phone', value: formData.get('phone') || '' },
-        { name: 'company', value: formData.get('institution-company') || '' },
-        { name: 'department', value: formData.get('department') || '' },
-        { name: 'gene_symbol', value: formData.get('gene-symbol') || '' },
-        { name: 'modification_type', value: formData.get('modification-type') || '' },
-        { name: 'model_type', value: formData.get('model-type') || '' },
-        { name: 'strain_background', value: formData.get('strain-background') || '' },
-        { name: 'timeline_requirements', value: formData.get('timeline-requirements') || '' },
-        { name: 'cohort_needs', value: formData.get('cohort-needs') || '' },
-        { name: 'message', value: formData.get('additional-notes') || '' },
-        { name: 'preferred_contact_method', value: formData.get('preferred-contact') || '' },
-      ],
-      context: {
-        pageUri: window.location.href,
-        pageName: 'Request Quote',
-      },
+    // Prepare data for API route
+    const quoteData = {
+      name: formData.get('name') as string || '',
+      email: formData.get('email') as string || '',
+      phone: formData.get('phone') as string || '',
+      institution: formData.get('institution-company') as string || '',
+      department: formData.get('department') as string || '',
+      geneSymbol: formData.get('gene-symbol') as string || '',
+      modificationType: formData.get('modification-type') as string || '',
+      modelType: formData.get('model-type') as string || '',
+      strainBackground: formData.get('strain-background') as string || '',
+      timelineRequirements: formData.get('timeline-requirements') as string || '',
+      cohortNeeds: formData.get('cohort-needs') as string || '',
+      additionalNotes: formData.get('additional-notes') as string || '',
+      preferredContact: formData.get('preferred-contact') as string || '',
     };
 
     try {
-      const response = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(hubspotData),
-        }
-      );
+      const response = await fetch('/api/send-quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quoteData),
+      });
 
       if (response.ok) {
         setSubmitStatus('success');
         formRef.current?.reset();
       } else {
+        const errorData = await response.json();
+        console.error('Form submission error:', errorData);
         setSubmitStatus('error');
       }
     } catch (error) {
