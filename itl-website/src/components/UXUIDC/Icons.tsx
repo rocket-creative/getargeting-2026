@@ -318,3 +318,30 @@ export const IconPlus = ({ size = 24, color = 'currentColor', className = '' }: 
     <line x1="5" y1="12" x2="19" y2="12" />
   </svg>
 );
+
+// Flask / Lab
+export const IconFlask = ({ size = 24, color = 'currentColor', className = '' }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M9 3h6" />
+    <path d="M10 9V3" />
+    <path d="M14 9V3" />
+    <path d="M6 21h12" />
+    <path d="M10 9a5 5 0 0 0-4 8l-1 4h14l-1-4a5 5 0 0 0-4-8" />
+  </svg>
+);
+
+// ChevronRight
+export const IconChevronRight = ({ size = 24, color = 'currentColor', className = '' }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+);
+
+// Layers / Stacked
+export const IconLayers = ({ size = 24, color = 'currentColor', className = '' }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+    <polyline points="2 17 12 22 22 17" />
+    <polyline points="2 12 12 17 22 12" />
+  </svg>
+);
