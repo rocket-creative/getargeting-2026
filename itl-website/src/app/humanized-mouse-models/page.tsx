@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -927,6 +927,19 @@ export default function HumanizedMouseModelsPage() {
               description="Download our free guides to help plan your humanized mouse model project."
               resources={humanizationResources}
               variant="card"
+            />
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter Section */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Stay Updated on Humanized Model Research"
+              description="Subscribe to Lab Signals for biweekly insights on humanized mouse models, immuno-oncology applications, and translational research from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/humanized-mouse-models')}
             />
           </div>
         </section>

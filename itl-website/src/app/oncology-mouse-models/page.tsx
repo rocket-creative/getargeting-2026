@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconZap, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -196,24 +197,31 @@ const technicalData = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Mlynarczyk C et al.",
     year: "2023",
     title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
-    journal: "Science 379(6629): eabj0412"
+    journal: "Science",
+    volume: "379(6629): eabj0412",
+    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
   },
   {
     authors: "Chakrabarti S et al.",
     year: "2024",
     title: "Touch sensation requires the mechanically gated ion channel ELKIN1.",
-    journal: "Science 383(6686): 992 to 998"
+    journal: "Science",
+    volume: "383(6686): 992-998",
+    link: "https://pubmed.ncbi.nlm.nih.gov/38422143/"
   },
   {
     authors: "Clausen BE et al.",
     year: "1999",
     title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research 8(4): 265 to 277"
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -844,7 +852,7 @@ export default function OncologyMouseModelsPage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -854,8 +862,36 @@ export default function OncologyMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}
@@ -966,6 +1002,19 @@ export default function OncologyMouseModelsPage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Breakthroughs in Cancer Research"
+              description="Subscribe to Lab Signals for the latest on immunotherapy innovations, tumor model design, and oncology research insights from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/oncology-mouse-models')}
+            />
           </div>
         </section>
 
