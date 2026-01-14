@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -921,6 +921,18 @@ export default function ConditionalKnockoutMouseModelsPage() {
           description="Understanding the terminology used in conditional knockout mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
           terms={conditionalTerms}
         />
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Conditional Knockout Resources"
+              description="Download our free guides and tools to help plan your conditional knockout project."
+              resources={conditionalKnockoutResources}
+              variant="card"
+            />
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>

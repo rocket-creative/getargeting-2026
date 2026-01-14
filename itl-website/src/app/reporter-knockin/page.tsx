@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconFlask, IconTarget, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, reporterResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -832,6 +833,18 @@ export default function ReporterKnockinPage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Reporter Resources"
+              description="Download our free guide to enhance your model with reporter functionality."
+              resources={reporterResources}
+              variant="card"
+            />
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, breedingResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -719,6 +720,18 @@ export default function ColonyManagementServicesPage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Breeding Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Breeding Tools"
+              description="Use our interactive Breeding Scheme Architect to plan your colony expansion strategy."
+              resources={breedingResources}
+              variant="banner"
+            />
           </div>
         </section>
 

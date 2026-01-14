@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, pointMutationResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -787,6 +788,18 @@ export default function PointMutationMicePage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Point Mutation Resources"
+              description="Download our free comparison chart to help plan your point mutation project."
+              resources={pointMutationResources}
+              variant="card"
+            />
           </div>
         </section>
 
