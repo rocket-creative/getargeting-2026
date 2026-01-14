@@ -69,5 +69,9 @@ export {
 // Flodesk Form
 export { default as FlodeskForm } from './FlodeskForm';
 
+// Newsletter Components
+export { default as NewsletterGate } from './NewsletterGate';
+export { default as SocialShare } from './SocialShare';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';

@@ -2,11 +2,11 @@
 
 /**
  * Lab Signals Page - Ingenious Targeting Laboratory
- * Newsletter signup and article hub
+ * Newsletter signup and article hub with CMS-like article linking
  * Based on https://www.genetargeting.com/lab-signals
  */
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,7 +15,6 @@ import {
   UXUIDCFooter,
   UXUIDCStartProjectCTA,
   FlodeskForm,
-  IconDNA,
   IconFileText,
   IconArrowRight,
   IconCheckCircle,
@@ -23,121 +22,47 @@ import {
   IconFlask,
   IconMail,
 } from '@/components/UXUIDC';
+import { 
+  newsletterArticles, 
+  getAllCategories, 
+  getArticlesByCategory,
+  type NewsletterArticle 
+} from '@/data/newsletterArticles';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Featured Articles from Lab Signals Newsletter
-const featuredArticles = [
-  {
-    id: 'article-1',
-    title: "Insights into Neurodegenerative Diseases: Alzheimer's Disease Progression and Treatments",
-    subtitle: "Insights into Neurodegenerative Diseases",
-    description: "We read the most important recent biomedical articles that used mouse models and this is what we learned about Alzheimer's disease research.",
-    category: "Neuroscience",
-    slug: "insights-into-neurodegenerative-diseases-alzheimers-disease-progression-and-treatments",
-    relatedPage: "/alzheimers-mouse-models"
-  },
-  {
-    id: 'article-2',
-    title: "Advances in Metabolic Disorders Research: Obesity and Diabetes",
-    subtitle: "Advances in Metabolic Disorders Research",
-    description: "Key insights from recent publications on metabolic disease mouse models, obesity research, and diabetes therapeutic development.",
-    category: "Metabolic",
-    slug: "article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes",
-    relatedPage: "/nash-mash-mouse-models"
-  },
-  {
-    id: 'article-3',
-    title: "Developments in Immune and Infectious Diseases: Insights from Humanized Models",
-    subtitle: "Developments in Immune and Infectious Diseases",
-    description: "How humanized mouse models are advancing our understanding of immune responses and infectious disease mechanisms.",
-    category: "Immunology",
-    slug: "article-3-developments-in-immune-and-infectious-diseases-insights-from-humanized-models",
-    relatedPage: "/humanized-mouse-models"
-  },
-  {
-    id: 'article-4',
-    title: "Breakthroughs in Cancer Research: Innovations in Immunotherapy",
-    subtitle: "Breakthroughs in Cancer Research",
-    description: "The latest innovations in immunotherapy development using genetically engineered mouse models for oncology research.",
-    category: "Oncology",
-    slug: "article-4-breakthroughs-in-cancer-research-innovations-in-immunotherapy",
-    relatedPage: "/immuno-oncology-mouse-models"
-  },
-  {
-    id: 'article-5',
-    title: "Advancements in Gene Editing Technologies: Enhancements in CRISPR-Cas9",
-    subtitle: "Advancements in Gene Editing Technologies",
-    description: "How CRISPR-Cas9 improvements are accelerating mouse model generation and enabling more precise genetic modifications.",
-    category: "Technology",
-    slug: "article-5-advancements-in-gene-editing-technologies-enhancements-in-crispr-cas9",
-    relatedPage: "/knockout-mouse-models"
-  },
-  {
-    id: 'article-6',
-    title: "Top 5 Lab Mouse Colony Management Software Options For 2025",
-    subtitle: "Colony Management",
-    description: "Compare the best software solutions for managing your mouse breeding colonies, including our Breeding Scheme Architect.",
-    category: "Resources",
-    slug: "top-5-lab-mouse-colony-management-software-options-for-2025",
-    relatedPage: "/breeding-scheme-architect"
-  }
-];
+// Category colors
+const getCategoryColor = (category: string): string => {
+  const colors: Record<string, string> = {
+    'Neuroscience': '#6b46c1',
+    'Metabolic': '#d97706',
+    'Immunology': '#059669',
+    'Oncology': '#dc2626',
+    'Technology': '#2384da',
+    'Technical Guide': '#008080',
+    'Selection Guide': '#7c3aed',
+    'Resources': '#0891b2',
+    'Research': '#4f46e5',
+    'Industry Insights': '#be185d',
+    'Comparison': '#0d9488',
+  };
+  return colors[category] || '#666';
+};
 
-// Additional Technical Articles
-const technicalArticles = [
-  {
-    title: "Building Better Floxed Alleles for Conditional Knockout Mice",
-    description: "Best practices for loxP site placement and critical exon selection.",
-    category: "Technical Guide",
-    slug: "building-better-floxed-alleles-for-conditional-knockout-mice"
-  },
-  {
-    title: "Conventional vs. Conditional Knockout Mice",
-    description: "Understanding when to choose each approach for your research.",
-    category: "Selection Guide",
-    slug: "conventional-vs-conditional-knockout-mice"
-  },
-  {
-    title: "Cre-Lox: 6 Facts You May Not Know",
-    description: "Essential insights about the Cre-lox recombination system.",
-    category: "Technical Guide",
-    slug: "cre-lox-6-facts-you-may-not-know"
-  },
-  {
-    title: "How a Knockout Mouse Is Made",
-    description: "Step-by-step overview of the knockout mouse generation process.",
-    category: "Educational",
-    slug: "how-a-knockout-mouse-is-made"
-  },
-  {
-    title: "How Humanized Mouse Models Are Transforming Pre-clinical R&D",
-    description: "The growing role of humanized mice in drug development.",
-    category: "Industry Insights",
-    slug: "how-humanized-mouse-models-are-transforming-pre-clinical-r-d"
-  },
-  {
-    title: "Knock-In Mice vs. Transgenic Mice: What You Need to Know",
-    description: "Comparing targeted knockin approaches with random integration.",
-    category: "Selection Guide",
-    slug: "knock-in-mice-vs-transgenic-mice-what-you-need-to-know"
-  },
-  {
-    title: "Leveraging Mouse Models for Point Mutation Diseases",
-    description: "R&D landscape for disease variant modeling.",
-    category: "Industry Insights",
-    slug: "leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape"
-  },
-  {
-    title: "The Impact of Knockout and Knock-in Mouse Models on Biomedical Research",
-    description: "How genetically engineered mice have advanced science.",
-    category: "Educational",
-    slug: "the-impact-of-knockout-and-knock-in-mouse-models-on-biomedical-research"
-  }
-];
+// RSS Icon
+const RSSIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+  </svg>
+);
 
 export default function LabSignalsPage() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  const categories = getAllCategories();
 
   useEffect(() => {
     if (heroRef.current) {
@@ -167,6 +92,18 @@ export default function LabSignalsPage() {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
+
+  // Filter articles
+  const filteredArticles = newsletterArticles.filter((article) => {
+    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+    const matchesSearch = searchQuery === '' || 
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  // Featured articles (first 6)
+  const featuredArticles = newsletterArticles.slice(0, 6);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -236,6 +173,29 @@ export default function LabSignalsPage() {
             >
               Your Biweekly Source for Life Science Research Insights
             </p>
+
+            {/* RSS Feed Link */}
+            <a
+              href="/api/rss/lab-signals"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: '#ff6600',
+                color: 'white',
+                padding: '10px 20px',
+                borderRadius: '25px',
+                fontSize: '.85rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+              }}
+            >
+              <RSSIcon />
+              <span>Subscribe via RSS</span>
+            </a>
           </div>
         </section>
 
@@ -345,7 +305,7 @@ export default function LabSignalsPage() {
                 fontWeight: 700,
                 marginBottom: '12px',
               }}>
-                We Read the Most Important...
+                Latest Research Insights
               </h2>
               <p style={{ color: '#666', fontSize: '1.1rem' }}>
                 Recent Biomedical Articles That Used Mouse Models and This Is What We Learned
@@ -354,15 +314,16 @@ export default function LabSignalsPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredArticles.map((article, i) => (
-                <div
+                <Link
                   key={article.id}
-                  id={article.slug}
+                  href={`/lab-signals/${article.slug}`}
                   className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
                   style={{
                     backgroundColor: 'white',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     border: '1px solid #e0e0e0',
+                    textDecoration: 'none',
                   }}
                 >
                   <div style={{
@@ -379,14 +340,14 @@ export default function LabSignalsPage() {
                       fontWeight: 600,
                       lineHeight: 1.3,
                     }}>
-                      {article.subtitle}
+                      {article.subtitle || article.category}
                     </span>
                   </div>
                   <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <span style={{
                       display: 'inline-block',
-                      backgroundColor: '#e8f4f4',
-                      color: '#008080',
+                      backgroundColor: `${getCategoryColor(article.category)}15`,
+                      color: getCategoryColor(article.category),
                       fontSize: '.7rem',
                       fontWeight: 600,
                       padding: '4px 10px',
@@ -396,47 +357,37 @@ export default function LabSignalsPage() {
                     }}>
                       {article.category}
                     </span>
+                    <h3 style={{
+                      color: '#333',
+                      fontFamily: 'Poppins, sans-serif',
+                      fontSize: '.95rem',
+                      fontWeight: 600,
+                      lineHeight: 1.4,
+                      marginBottom: '10px',
+                    }}>
+                      {article.title}
+                    </h3>
                     <p style={{
                       color: '#555',
-                      fontSize: '.9rem',
+                      fontSize: '.85rem',
                       lineHeight: 1.6,
                       flex: 1,
                       marginBottom: '16px',
                     }}>
-                      {article.description}
+                      {article.description.slice(0, 120)}...
                     </p>
-                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                      <a
-                        href={`https://www.genetargeting.com/lab-signals/${article.slug}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 transition-all duration-300"
-                        style={{
-                          color: '#008080',
-                          fontSize: '.85rem',
-                          fontWeight: 600,
-                          textDecoration: 'none',
-                        }}
-                      >
-                        <span>Read More</span>
-                        <IconArrowRight size={14} color="#008080" />
-                      </a>
-                      {article.relatedPage && (
-                        <Link
-                          href={article.relatedPage}
-                          className="inline-flex items-center gap-1"
-                          style={{
-                            color: '#666',
-                            fontSize: '.8rem',
-                            textDecoration: 'none',
-                          }}
-                        >
-                          <span>Related Service →</span>
-                        </Link>
-                      )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{
+                        color: '#008080',
+                        fontSize: '.85rem',
+                        fontWeight: 600,
+                      }}>
+                        Read Article
+                      </span>
+                      <IconArrowRight size={14} color="#008080" />
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -474,7 +425,7 @@ export default function LabSignalsPage() {
           </div>
         </section>
 
-        {/* More Articles Grid */}
+        {/* All Articles Section with Filtering */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2
@@ -488,24 +439,78 @@ export default function LabSignalsPage() {
                 textAlign: 'center',
               }}
             >
-              Technical Guides & Resources
+              Browse All Articles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {technicalArticles.map((article, i) => (
-                <div
-                  key={i}
+
+            {/* Search & Filter */}
+            <div style={{ marginBottom: '30px' }}>
+              <div style={{ marginBottom: '15px' }}>
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{
+                    width: '100%',
+                    maxWidth: '400px',
+                    padding: '12px 16px',
+                    fontSize: '.95rem',
+                    border: '1px solid #ddd',
+                    borderRadius: '6px',
+                    outline: 'none',
+                  }}
+                />
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    style={{
+                      padding: '8px 16px',
+                      fontSize: '.85rem',
+                      fontWeight: 500,
+                      border: 'none',
+                      borderRadius: '20px',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      backgroundColor: selectedCategory === category ? '#0a253c' : '#f0f0f0',
+                      color: selectedCategory === category ? 'white' : '#666',
+                    }}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Results count */}
+            <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '20px' }}>
+              Showing {filteredArticles.length} of {newsletterArticles.length} articles
+              {selectedCategory !== 'All' && ` in "${selectedCategory}"`}
+              {searchQuery && ` matching "${searchQuery}"`}
+            </p>
+
+            {/* Articles Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filteredArticles.map((article) => (
+                <Link
+                  key={article.id}
+                  href={`/lab-signals/${article.slug}`}
                   className="animate-in transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                   style={{
+                    display: 'block',
                     backgroundColor: '#f7f7f7',
                     padding: '20px',
                     borderRadius: '8px',
-                    borderLeft: '3px solid #008080',
+                    borderLeft: `3px solid ${getCategoryColor(article.category)}`,
+                    textDecoration: 'none',
                   }}
                 >
                   <span style={{
                     display: 'inline-block',
-                    backgroundColor: '#e8f4f4',
-                    color: '#008080',
+                    backgroundColor: `${getCategoryColor(article.category)}15`,
+                    color: getCategoryColor(article.category),
                     fontSize: '.65rem',
                     fontWeight: 600,
                     padding: '3px 8px',
@@ -528,12 +533,43 @@ export default function LabSignalsPage() {
                     color: '#666',
                     fontSize: '.8rem',
                     lineHeight: 1.5,
+                    marginBottom: '10px',
                   }}>
-                    {article.description}
+                    {article.description.slice(0, 100)}...
                   </p>
-                </div>
+                  <span style={{
+                    color: '#008080',
+                    fontSize: '.8rem',
+                    fontWeight: 500,
+                  }}>
+                    Read Article →
+                  </span>
+                </Link>
               ))}
             </div>
+
+            {filteredArticles.length === 0 && (
+              <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+                <p style={{ color: '#666', fontSize: '1rem' }}>
+                  No articles found matching your criteria.
+                </p>
+                <button
+                  onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
+                  style={{
+                    marginTop: '15px',
+                    padding: '10px 20px',
+                    backgroundColor: '#008080',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontSize: '.9rem',
+                  }}
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
@@ -557,7 +593,7 @@ export default function LabSignalsPage() {
               {[
                 { label: 'Publications', href: '/publications' },
                 { label: 'Downloadable Resources', href: '/resources' },
-                { label: 'Ingenious Blog', href: '/ingenious-blog' },
+                { label: 'Ingenious Blog Archive', href: '/ingenious-blog' },
                 { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
                 { label: 'Technologies', href: '/technologies' },
               ].map((item, i) => (
