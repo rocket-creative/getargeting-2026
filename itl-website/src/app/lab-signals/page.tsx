@@ -2,7 +2,7 @@
 
 /**
  * Lab Signals Page - Newsletter Hub
- * NO nav, NO footer
+ * NO nav, NO footer (except gold CTA)
  * Colors: gold #fb0, black, grey, white only
  * Same fonts/animations as Ingenious site
  */
@@ -32,10 +32,11 @@ const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
-  lightGray: '#f5f5f5',
+  lightGray: '#f0f0f0',
+  bodyGray: '#e8e8e8',
   mediumGray: '#888888',
   darkGray: '#444444',
-  borderGray: '#e0e0e0',
+  borderGray: '#d0d0d0',
 };
 
 // RSS Icon (flat grey)
@@ -119,28 +120,56 @@ export default function LabSignalsPage() {
   });
 
   return (
-    <div style={{ backgroundColor: BRAND.black }}>
-      {/* Section 1: Header Image - Full width, fit height */}
-      <section style={{ backgroundColor: BRAND.black }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <Image
-            src="/images/lab-signals-header.png"
-            alt="Lab Signals"
-            width={1200}
-            height={400}
-            style={{ 
-              width: '100%', 
-              height: 'auto',
-              display: 'block',
-            }}
-            priority
-          />
-        </div>
-      </section>
+    <div style={{ backgroundColor: BRAND.bodyGray }}>
+      {/* Hero Section - Header Image with Overlay Content */}
+      <section ref={heroRef} style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Back to Ingenious - floating top right */}
+        <Link
+          href="/"
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+            zIndex: 10,
+            color: BRAND.white,
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '.85rem',
+            fontWeight: 500,
+            textDecoration: 'none',
+            textShadow: '0 1px 3px rgba(0,0,0,0.5)',
+          }}
+        >
+          Back to Ingenious →
+        </Link>
 
-      {/* Section 2: Hero Content */}
-      <section ref={heroRef} style={{ backgroundColor: BRAND.black, padding: '50px 20px 60px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Header Image */}
+        <Image
+          src="/images/lab-signals-header.png"
+          alt="Lab Signals"
+          width={1200}
+          height={500}
+          style={{ 
+            width: '100%', 
+            height: 'auto',
+            display: 'block',
+          }}
+          priority
+        />
+
+        {/* Floating Content - Right Justified */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'flex-end',
+          padding: '40px',
+          textAlign: 'right',
+          maxWidth: '500px',
+        }}>
           <div className="hero-animate" style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -148,13 +177,13 @@ export default function LabSignalsPage() {
             backgroundColor: BRAND.gold,
             padding: '6px 16px',
             borderRadius: '20px',
-            marginBottom: '20px',
+            marginBottom: '16px',
           }}>
-            <IconMail size={16} color={BRAND.black} />
+            <IconMail size={14} color={BRAND.black} />
             <span style={{ 
               color: BRAND.black, 
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '.75rem', 
+              fontSize: '.7rem', 
               fontWeight: 700, 
               letterSpacing: '0.5px',
               textTransform: 'uppercase',
@@ -165,36 +194,36 @@ export default function LabSignalsPage() {
           <h1 className="hero-animate" style={{
             color: BRAND.white,
             fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
             fontWeight: 700,
             lineHeight: 1.1,
-            marginBottom: '15px',
+            marginBottom: '12px',
+            textShadow: '0 2px 8px rgba(0,0,0,0.3)',
           }}>
             Lab Signals
           </h1>
           <p className="hero-animate" style={{
-            color: 'rgba(255,255,255,0.85)',
+            color: BRAND.white,
             fontFamily: 'Lato, sans-serif',
-            fontSize: '1.1rem',
-            lineHeight: 1.6,
-            maxWidth: '550px',
-            marginBottom: '25px',
+            fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
+            lineHeight: 1.5,
+            marginBottom: '20px',
+            textShadow: '0 1px 4px rgba(0,0,0,0.4)',
           }}>
             Your Biweekly Source for Life Science Research Insights
           </p>
-          <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <div className="hero-animate" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             <a
               href="#signup"
-              className="btn-hover"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 backgroundColor: BRAND.gold,
                 color: BRAND.black,
-                padding: '12px 28px',
+                padding: '10px 22px',
                 borderRadius: '6px',
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '.9rem',
+                fontSize: '.85rem',
                 fontWeight: 600,
                 textDecoration: 'none',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
@@ -218,33 +247,32 @@ export default function LabSignalsPage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'rgba(255,255,255,0.2)',
+                backdropFilter: 'blur(4px)',
                 color: BRAND.white,
-                padding: '12px 20px',
+                padding: '10px 16px',
                 borderRadius: '6px',
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '.9rem',
+                fontSize: '.85rem',
                 fontWeight: 500,
                 textDecoration: 'none',
-                border: `1px solid rgba(255,255,255,0.3)`,
-                transition: 'border-color 0.2s ease, background-color 0.2s ease',
+                border: '1px solid rgba(255,255,255,0.3)',
+                transition: 'background-color 0.2s ease',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.6)';
-                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)';
-                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)';
               }}
             >
-              <RSSIcon color={BRAND.white} /> RSS Feed
+              <RSSIcon color={BRAND.white} /> RSS
             </a>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Video */}
+      {/* Section: Video */}
       <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
         <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
@@ -272,7 +300,7 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
-      {/* Section 4: Signup */}
+      {/* Section: Signup */}
       <section id="signup" style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
         <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{
@@ -297,7 +325,7 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
-      {/* Section 5: Why Subscribe */}
+      {/* Section: Why Subscribe */}
       <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 className="section-animate" style={{
@@ -374,7 +402,7 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
-      {/* Section 6: All Articles */}
+      {/* Section: All Articles */}
       <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="section-animate" style={{ 
@@ -545,7 +573,7 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
-      {/* Section 7: Final CTA */}
+      {/* Section: Final CTA - Gold, full width */}
       <section style={{ backgroundColor: BRAND.gold, padding: '60px 20px' }}>
         <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <IconMail size={40} color={BRAND.black} />
@@ -570,28 +598,6 @@ export default function LabSignalsPage() {
           <FlodeskForm />
         </div>
       </section>
-
-      {/* Minimal link back to Ingenious */}
-      <div style={{ 
-        backgroundColor: BRAND.black, 
-        padding: '20px',
-        textAlign: 'center',
-      }}>
-        <Link 
-          href="/" 
-          style={{ 
-            color: BRAND.gold, 
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '.85rem', 
-            textDecoration: 'none',
-            transition: 'opacity 0.2s ease',
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-        >
-          ← Back to Ingenious Targeting Laboratory
-        </Link>
-      </div>
     </div>
   );
 }

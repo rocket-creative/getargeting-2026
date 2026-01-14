@@ -16,7 +16,8 @@ const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
-  lightGray: '#f5f5f5',
+  lightGray: '#f0f0f0',
+  bodyGray: '#e8e8e8',
   mediumGray: '#888888',
   darkGray: '#444444',
 };
@@ -92,15 +93,15 @@ export default async function LabSignalsArticlePage({
   const articleUrl = `https://www.genetargeting.com/lab-signals/${article.slug}`;
 
   return (
-    <div style={{ backgroundColor: BRAND.lightGray }}>
+    <div style={{ backgroundColor: BRAND.bodyGray }}>
       {/* Article Header */}
-      <section style={{ backgroundColor: BRAND.black, padding: '40px 20px 50px' }}>
+      <section style={{ backgroundColor: BRAND.lightGray, padding: '30px 20px 40px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {/* Back Link */}
           <Link
             href="/lab-signals"
             style={{
-              color: BRAND.gold,
+              color: BRAND.darkGray,
               fontFamily: 'Poppins, sans-serif',
               fontSize: '.85rem',
               textDecoration: 'none',
@@ -131,7 +132,7 @@ export default async function LabSignalsArticlePage({
 
           {/* Title */}
           <h1 style={{
-            color: BRAND.white,
+            color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
             fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
             fontWeight: 700,
@@ -191,24 +192,6 @@ export default async function LabSignalsArticlePage({
         </div>
       </section>
 
-      {/* Minimal back link */}
-      <div style={{ 
-        backgroundColor: BRAND.black, 
-        padding: '20px',
-        textAlign: 'center',
-      }}>
-        <Link 
-          href="/" 
-          style={{ 
-            color: BRAND.gold, 
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '.85rem', 
-            textDecoration: 'none',
-          }}
-        >
-          ← Back to Ingenious Targeting Laboratory
-        </Link>
-      </div>
     </div>
   );
 }
