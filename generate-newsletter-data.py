@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate TypeScript data file from the Exclusive Newsletter Contents CSV.
+Preserves full HTML content without truncation.
 """
 
 import csv
@@ -13,16 +14,17 @@ CSV_PATH = Path("Ingenious Targeting Laboratory - Exclusive Newsletter Contents.
 OUTPUT_PATH = Path("itl-website/src/data/newsletterArticles.ts")
 
 def clean_html(html_content):
-    """Clean HTML content and fix escaping."""
+    """Clean HTML content while preserving structure."""
     if not html_content:
         return ""
-    # Fix double-escaped quotes
+    # Fix double-escaped quotes from CSV
     html_content = html_content.replace('""', '"')
-    # Clean up id="" attributes which are empty
-    html_content = re.sub(r'\s+id=""', '', html_content)
+    # Remove empty id attributes
     html_content = re.sub(r'\s+id="[^"]*"', '', html_content)
-    # Clean up empty paragraphs with just &nbsp; or whitespace
+    # Clean empty paragraphs
     html_content = re.sub(r'<p>\s*‍?\s*</p>', '', html_content)
+    # Fix unclosed tags and other issues
+    html_content = html_content.replace('<strong>', '<strong>').replace('</strong>', '</strong>')
     return html_content.strip()
 
 def escape_for_ts(s):
@@ -38,19 +40,22 @@ def escape_for_ts(s):
 def get_category(name, slug):
     """Determine category based on article name/content."""
     name_lower = name.lower()
-    slug_lower = slug.lower()
     
     if 'neurodegenerative' in name_lower or 'alzheimer' in name_lower:
         return 'Neuroscience'
     elif 'metabolic' in name_lower or 'obesity' in name_lower or 'diabetes' in name_lower:
         return 'Metabolic'
-    elif 'immune' in name_lower or 'infectious' in name_lower or 'humanized' in name_lower:
+    elif 'immune' in name_lower or 'infectious' in name_lower:
+        return 'Immunology'
+    elif 'humanized' in name_lower:
         return 'Immunology'
     elif 'cancer' in name_lower or 'immunotherapy' in name_lower or 'oncology' in name_lower:
         return 'Oncology'
     elif 'crispr' in name_lower or 'gene editing' in name_lower:
         return 'Technology'
-    elif 'floxed' in name_lower or 'knockout' in name_lower or 'cre-lox' in name_lower or 'conditional' in name_lower:
+    elif 'floxed' in name_lower or 'knockout' in name_lower and 'conditional' in name_lower:
+        return 'Technical Guide'
+    elif 'cre-lox' in name_lower or 'conditional' in name_lower:
         return 'Technical Guide'
     elif 'knock-in' in name_lower or 'knockin' in name_lower or 'transgenic' in name_lower:
         return 'Selection Guide'
@@ -60,6 +65,8 @@ def get_category(name, slug):
         return 'Industry Insights'
     elif 'model vs' in name_lower or 'organoid' in name_lower:
         return 'Comparison'
+    elif 'knockout' in name_lower:
+        return 'Technical Guide'
     else:
         return 'Research'
 
@@ -71,8 +78,10 @@ def get_related_page(name, slug):
         return '/alzheimers-mouse-models'
     elif 'metabolic' in name_lower or 'obesity' in name_lower or 'diabetes' in name_lower:
         return '/metabolic-disease-mouse-models'
-    elif 'humanized' in name_lower or 'immune' in name_lower:
+    elif 'humanized' in name_lower:
         return '/humanized-mouse-models'
+    elif 'immune' in name_lower:
+        return '/immunology-mouse-models'
     elif 'cancer' in name_lower or 'immunotherapy' in name_lower:
         return '/immuno-oncology-mouse-models'
     elif 'crispr' in name_lower:
@@ -87,6 +96,10 @@ def get_related_page(name, slug):
         return '/transgenic-mouse-service'
     elif 'point mutation' in name_lower:
         return '/point-mutation-mice'
+    elif 'knockout' in name_lower and 'conditional' in name_lower:
+        return '/conditional-knockout-mouse-models'
+    elif 'knockout' in name_lower:
+        return '/knockout-mouse-models'
     elif 'colony' in name_lower or 'software' in name_lower:
         return '/breeding-scheme-architect'
     else:
@@ -101,8 +114,11 @@ def extract_description(html_content, max_length=200):
     # Clean up whitespace
     text = re.sub(r'\s+', ' ', text).strip()
     # Remove special characters
-    text = text.replace('‍', '').replace('&nbsp;', ' ')
-    text = re.sub(r'&[a-z]+;', '', text)
+    text = text.replace('‍', '').replace('\u200b', '')
+    text = re.sub(r'&nbsp;', ' ', text)
+    text = re.sub(r'&amp;', '&', text)
+    text = re.sub(r'&lt;', '<', text)
+    text = re.sub(r'&gt;', '>', text)
     # Truncate
     if len(text) > max_length:
         text = text[:max_length].rsplit(' ', 1)[0] + '...'
@@ -125,6 +141,9 @@ def parse_csv():
                 continue
             if name.startswith('<'):
                 continue
+            # Skip if body is too short (less than 500 chars suggests incomplete)
+            if len(body) < 100:
+                continue
                 
             # Clean title - remove "Article X." prefix
             display_title = re.sub(r'^Article \d+[.:]\s*', '', name)
@@ -135,7 +154,7 @@ def parse_csv():
             else:
                 subtitle = ""
             
-            # Clean the HTML body
+            # Clean the HTML body - preserve full content
             cleaned_body = clean_html(body)
             
             # Extract description
@@ -154,7 +173,8 @@ def parse_csv():
                 'category': category,
                 'relatedPage': related_page,
                 'body': cleaned_body,
-                'publishedAt': '2025-01-01',  # Default date
+                'publishedAt': '2025-01-01',
+                'bodyLength': len(cleaned_body),
             }
             articles.append(article)
             
@@ -238,9 +258,10 @@ def main():
     print(f"\n=== Found {len(articles)} articles ===\n")
     
     for i, article in enumerate(articles, 1):
-        print(f"{i}. {article['title']}")
+        print(f"{i}. {article['title'][:60]}...")
         print(f"   Slug: {article['slug']}")
         print(f"   Category: {article['category']}")
+        print(f"   Body length: {article['bodyLength']} chars")
         print()
     
     # Generate TypeScript file
@@ -254,6 +275,8 @@ def main():
     
     print(f"\nGenerated TypeScript file: {OUTPUT_PATH}")
     print(f"Total articles: {len(articles)}")
+    total_content = sum(a['bodyLength'] for a in articles)
+    print(f"Total content: {total_content:,} characters")
 
 if __name__ == '__main__':
     main()
