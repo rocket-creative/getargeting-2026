@@ -243,7 +243,7 @@ export default function CustomProjectsPage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -924,6 +924,6 @@ export default function CustomProjectsPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

@@ -390,7 +390,7 @@ export default function GlossaryPage() {
   const sortedLetters = Object.keys(groupedTerms).sort();
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -767,6 +767,6 @@ export default function GlossaryPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

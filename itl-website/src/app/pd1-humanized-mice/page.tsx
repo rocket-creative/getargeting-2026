@@ -320,7 +320,7 @@ export default function PD1HumanizedMicePage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -1144,6 +1144,6 @@ export default function PD1HumanizedMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

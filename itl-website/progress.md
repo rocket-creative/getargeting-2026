@@ -51,7 +51,7 @@
   - `--med-blue: #134978` (Secondary)
   - `--green: teal` (CTA)
 - Set up Poppins font for headings
-- Implemented 1440px max-width constraint
+- Implemented 1200px max-width constraint (per DESIGN-SYSTEM.md)
 - Created CSS custom properties for theming
 
 #### 4. Core Components Built ✅
@@ -177,7 +177,7 @@ All extracted to `/src/content/pages/*.md`
 2. **Use glossary PDF** - Check `itl_glossary_60-terms-webflow_enhanced.pdf` for terminology
 3. **Follow design screenshot** - Reference `design-screenshot.png` for visual guidance
 4. **Component naming** - Always use `|UXUIDC|` prefix for custom components
-5. **1440px constraint** - All content must respect max-width
+5. **1200px constraint** - All content must respect max-width (per DESIGN-SYSTEM.md)
 
 ---
 

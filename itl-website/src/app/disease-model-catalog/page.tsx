@@ -197,7 +197,7 @@ export default function DiseaseModelCatalogPage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -771,6 +771,6 @@ export default function DiseaseModelCatalogPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

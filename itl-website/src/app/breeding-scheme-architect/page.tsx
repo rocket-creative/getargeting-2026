@@ -218,7 +218,7 @@ function BreedingSchemeArchitectContent() {
   };
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
       {/* ========== HERO SECTION ========== */}
@@ -947,7 +947,7 @@ function BreedingSchemeArchitectContent() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }
 

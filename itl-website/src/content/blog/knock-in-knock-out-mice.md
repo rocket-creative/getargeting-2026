@@ -1,0 +1,21 @@
+---
+title: "Knock In Knock Out Mice"
+slug: "knock-in-knock-out-mice"
+date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
+category: "Educational"
+legacy_url: "https://www.genetargeting.com/ingenious-blog/knock-in-knock-out-mice"
+author: "ingenious"
+---
+
+# Knock In Knock Out Mice
+
+![Knock In Knock Out Mice by INGENIOUS](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b8b02bb426dfa0705c1c3_Knock-In-Knock-Out-Mice-680x378.jpeg)
+## The Similarities and Achievements of Knock-in, Knock Out Mice and Genetic Manipulation Techniques
+
+There is much deliberation about the practical insight and help that the use of knock-in and knockout mice has brought over the years. Scientists have proven time and time again that there are real, innovative achievements that we can look forward to with the help of knockout and knock-in mouse models. Their goal is to discover more efficient treatments for diseases like Alzheimer’s, cancer, diabetes, heart disease, as well as the numerous rare genetic diseases that continue to claim lives every year. It’s one that genetic engineering and manipulation can help us reach.
+
+Knockout mice are among the most favored and popular genetically modified animals that researchers tend to use. These mice have many potential benefits, some of which have proven to be quite effective. The science behind a knockout mouse model is simple: the mouse is designed to have one or more of its genes impaired and inactivated, so that researchers can better understand what happens in the body once the gene no longer fulfills its function. That way, many diseases and impairments can be studied while prototype treatments and drugs can be tested without any risks to human subjects. The use of humanized mice has helped this avenue of research along even more. Aside from the obvious similarities between the human and mouse genome, researchers are able to produce mice that are even more genetically similar to humans. This is accomplished by adding human genes to the mouse genetic makeup and then deactivating one of the vital genes to study the effects.
+
+While knockout mice can be extremely useful, they aren’t able to cover every level and variety of genetic manipulation that researchers need. For instance, even though early knockout mice were able to help researchers study the potential effects of the loss of a certain gene – since they were produced by disrupting the coding exons of a gene – these types of genetically modified mice did not have ability to help us learn about all the aspects of genetic mutation. For that purpose, knock-in mice were developed, allowing scientists to replace an original gene within the mouse’s genome with a new, foreign or mutated gene. Studying the effects of such mutations has proven to be invaluable throughout the past few years.Knock-in genes are produced primarily through the use of genetic vectors featuring flanking sequences known as loxP, which undergo reciprocal recombination when exposed to an enzyme known as Cre recombinase. Therefore, these types of knock-ins can allow for the immediate deletion and subsequent replacement of a piece of genetic coding with a sequence of the researchers’ choosing. As a result, many useful clinical applications are now possible that may not have happened solely with the use of knockout mice.
+
+While the concept of genetically modified mice has existed for years, scientists continue to come up with newer, more effective strategies for generating these models. Today, obtaining knockout or knock-in mice is quite simple, with knockout models available for purchase online and the use ES cells or CRISPR, which make the process straightforward. With the help of these genetic modification techniques, entire strains of genetically altered mice can be studied to examine the long-term effects of various mutations, genetic impairments and genetically caused ailments. The result is that medical researchers are better able to perfect drugs and genetic treatments to prevent side effects from impacting the next generation.

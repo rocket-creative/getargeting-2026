@@ -197,38 +197,38 @@ const downloadableResourcesData = {
       title: "Charts",
       icon: "chart",
       resources: [
-        { title: "Conditional Knockout Comparison Chart", href: "https://share.hsforms.com/1GnCYXQ8cTZqX8c3JNvLK6A4n7eh" },
-        { title: "Humanization Comparison Chart", href: "https://share.hsforms.com/1h2mZrQxZS4W9vXPL8KkJ5A4n7eh" },
-        { title: "Point Mutation Comparison Chart", href: "https://share.hsforms.com/1pM3tYR7nTSuKfL2dNvW8zA4n7eh" }
+        { title: "Conditional Knockout Comparison Chart", href: "https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/2019%20Images/Conditional%20Knockout%20Comparison%20Chart.jpg" },
+        { title: "Humanization Comparison Chart", href: "https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/2021%20Images/Humanization%20Comparison%20Chart-1.jpg" },
+        { title: "Point Mutation Comparison Chart", href: "https://go.genetargeting.com/point-mutation-chart" }
       ]
     },
     {
       title: "Guides",
       icon: "guide",
       resources: [
-        { title: "Enhance With A Reporter Quick Guide", href: "https://share.hsforms.com/1rPt5XQ2cS1qM8nJvKL9k4A4n7eh" },
-        { title: "Cre lox Design Guide", href: "https://share.hsforms.com/1cL0xD3s1gN2R4v5bK8m7jA4n7eh" },
-        { title: "Conditional Knockout (cKO) Quick Guide", href: "https://share.hsforms.com/1cK0qG5u1dE4F6y7zX9w2hA4n7eh" },
-        { title: "Conditional + Reversible Mouse Model Guide", href: "https://share.hsforms.com/1cR3v4S5aBl7C8d9eF0g1hA4n7eh" },
-        { title: "ingenious Pricing Guide", href: "https://share.hsforms.com/1pG5u1d3EaB7l8C9dF0g2hA4n7eh" },
-        { title: "Mouse Model Generation: Step by Step Guide", href: "https://share.hsforms.com/1mG3n5S7t8p9B0v1C2d3e4A4n7eh" },
-        { title: "Rapid Rosa26™ Quick Guide", href: "https://share.hsforms.com/1rR0s2a2L6Q4u5i6c7k8G9A4n7eh" },
-        { title: "Rat Model Quick Guide", href: "https://share.hsforms.com/1rM0d3l5Q7u1i2c3k4G5H6A4n7eh" }
+        { title: "Enhance With A Reporter Quick Guide", href: "https://go.genetargeting.com/reporter-quick-guide-0" },
+        { title: "Cre-lox Design Guide", href: "https://go.genetargeting.com/crelox-design-guide" },
+        { title: "Conditional Knockout (cKO) Quick Guide", href: "https://go.genetargeting.com/conditional-ko-quick-guide" },
+        { title: "Conditional + Reversible Mouse Model Guide", href: "https://go.genetargeting.com/conditional-reversible-guide" },
+        { title: "ingenious Pricing Guide", href: "https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/Pricing%20Guide%202024.pdf" },
+        { title: "Mouse Model Generation: Step-by-Step Guide", href: "/mouse-model-generation-guide", isInternal: true },
+        { title: "Rapid-Rosa26™ Quick Guide", href: "https://go.genetargeting.com/rapid-rosa26-quick-guide" },
+        { title: "Rat Model Quick Guide", href: "https://go.genetargeting.com/rat-model-technology-guide" }
       ]
     },
     {
       title: "White Papers",
       icon: "whitepaper",
       resources: [
-        { title: "Humanization White Paper", href: "https://share.hsforms.com/1hW5h1i7t3P4a5p6e7r8W9A4n7eh" },
-        { title: "Rats For Tissue Specific Gene Knockout White Paper", href: "https://share.hsforms.com/1rT5s4K7n8o9c1k2o3u4t5A4n7eh" }
+        { title: "Humanization White Paper", href: "https://go.genetargeting.com/humanization-white-paper" },
+        { title: "Rats For Tissue-Specific Gene Knockout White Paper", href: "https://go.genetargeting.com/rat-tissue-specific-white-paper" }
       ]
     },
     {
       title: "Other Resources",
       icon: "other",
       resources: [
-        { title: "Cre Mouse Repositories (Find Cre Expressing Mice)", href: "https://share.hsforms.com/1cR3p5o7s1i2t3o4r5i6e7A4n7eh" },
+        { title: "Cre Mouse Repositories (Find Cre-Expressing Mice)", href: "https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/2020%20Images/Cre%20Mouse%20Repositories.pdf" },
         { title: "Mouse Breeding Planner", href: "/breeding-scheme-architect", isInternal: true }
       ]
     }
@@ -325,7 +325,7 @@ export default function ResourcesPage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -672,6 +672,7 @@ export default function ResourcesPage() {
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                       {category.resources.map((resource, idx) => {
                         const isInternal = 'isInternal' in resource && resource.isInternal;
+                        const isBreedingPlanner = resource.href === '/breeding-scheme-architect';
                         const linkStyles = {
                           display: 'flex',
                           alignItems: 'center',
@@ -699,7 +700,11 @@ export default function ResourcesPage() {
                                   e.currentTarget.style.boxShadow = 'none';
                                 }}
                               >
-                                <IconGitBranch size={16} color="#008080" />
+                                {isBreedingPlanner ? (
+                                  <IconGitBranch size={16} color="#008080" />
+                                ) : (
+                                  <IconBookOpen size={16} color="#008080" />
+                                )}
                                 <span style={{
                                   flex: 1,
                                   fontSize: '.9rem',
@@ -708,16 +713,18 @@ export default function ResourcesPage() {
                                 }}>
                                   {resource.title}
                                 </span>
-                                <span style={{
-                                  fontSize: '.7rem',
-                                  background: '#008080',
-                                  color: '#ffffff',
-                                  padding: '3px 8px',
-                                  borderRadius: '10px',
-                                  fontWeight: 600
-                                }}>
-                                  NEW
-                                </span>
+                                {isBreedingPlanner && (
+                                  <span style={{
+                                    fontSize: '.7rem',
+                                    background: '#008080',
+                                    color: '#ffffff',
+                                    padding: '3px 8px',
+                                    borderRadius: '10px',
+                                    fontWeight: 600
+                                  }}>
+                                    NEW
+                                  </span>
+                                )}
                                 <IconChevronRight size={14} color="#008080" />
                               </Link>
                             </li>
@@ -1451,6 +1458,6 @@ export default function ResourcesPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

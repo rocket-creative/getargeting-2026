@@ -6,7 +6,7 @@
  * All text displayed EXACTLY as written - DO NOT MODIFY TEXT
  * 
  * Design System: UXUIDC / Biotech standards
- * Max-width: 1440px
+ * Max-width: 1200px (per DESIGN-SYSTEM.md)
  * Icons: Flat SVG (no emojis)
  */
 
