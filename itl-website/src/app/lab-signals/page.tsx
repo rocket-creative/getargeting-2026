@@ -104,7 +104,7 @@ export default function LabSignalsPage() {
         }}>
           <Link href="/lab-signals" style={{ display: 'block' }}>
             <Image 
-              src="/images/logo.png" 
+              src="/images/lab-signals-logo.svg" 
               alt="Lab Signals" 
               width={140} 
               height={45}
@@ -131,7 +131,7 @@ export default function LabSignalsPage() {
           {/* Header Image */}
           <div style={{ position: 'relative', width: '100%', height: '300px' }}>
             <Image
-              src="/images/mouse-hero-blue.jpg"
+              src="/images/lab-signals-header.png"
               alt="Lab Signals"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -492,10 +492,10 @@ export default function LabSignalsPage() {
           textAlign: 'center',
         }}>
           <Image 
-            src="/images/logo.png" 
+            src="/images/lab-signals-logo.svg" 
             alt="Lab Signals" 
-            width={100} 
-            height={35}
+            width={120} 
+            height={40}
             style={{ height: 'auto', marginBottom: '15px' }}
           />
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginBottom: '10px' }}>
