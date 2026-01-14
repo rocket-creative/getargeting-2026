@@ -1,13 +1,20 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NewsletterGate, SocialShare } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Lab Signals brand colors
+const BRAND = {
+  gold: '#fb0',
+  black: '#000000',
+  darkGray: '#111111',
+  white: '#ffffff',
+};
 
 interface LabSignalsArticleClientProps {
   article: NewsletterArticle;
@@ -43,11 +50,11 @@ export default function LabSignalsArticleClient({
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 500);
-    return <p style={{ color: '#555', lineHeight: 1.8 }}>{textContent}...</p>;
+    return <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8 }}>{textContent}...</p>;
   };
 
   return (
-    <section ref={contentRef} style={{ backgroundColor: 'white', padding: '50px 20px' }}>
+    <section ref={contentRef} style={{ backgroundColor: BRAND.darkGray, padding: '50px 20px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         {/* Social Share Bar */}
         <div
@@ -57,7 +64,7 @@ export default function LabSignalsArticleClient({
             alignItems: 'flex-start',
             marginBottom: '30px',
             paddingBottom: '20px',
-            borderBottom: '1px solid #e0e0e0',
+            borderBottom: `1px solid ${BRAND.gold}33`,
             flexWrap: 'wrap',
             gap: '20px',
           }}
@@ -67,28 +74,6 @@ export default function LabSignalsArticleClient({
             title={article.title}
             description={article.description}
           />
-
-          {article.relatedPage && (
-            <Link
-              href={article.relatedPage}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '10px 20px',
-                backgroundColor: '#f7f7f7',
-                border: '1px solid #e0e0e0',
-                borderRadius: '6px',
-                color: '#008080',
-                fontSize: '.85rem',
-                fontWeight: 500,
-                textDecoration: 'none',
-              }}
-            >
-              <span>Related Service</span>
-              <span>→</span>
-            </Link>
-          )}
         </div>
 
         {/* Gated Article Content */}
@@ -101,7 +86,7 @@ export default function LabSignalsArticleClient({
             className="lab-signals-article"
             dangerouslySetInnerHTML={{ __html: article.body }}
             style={{
-              color: '#333',
+              color: BRAND.white,
               fontSize: '1.05rem',
               lineHeight: 1.9,
             }}
@@ -112,7 +97,7 @@ export default function LabSignalsArticleClient({
             style={{
               marginTop: '40px',
               paddingTop: '30px',
-              borderTop: '1px solid #e0e0e0',
+              borderTop: `1px solid ${BRAND.gold}33`,
             }}
           >
             <div
@@ -129,11 +114,11 @@ export default function LabSignalsArticleClient({
                   style={{
                     display: 'inline-block',
                     fontSize: '.75rem',
-                    fontWeight: 600,
-                    color: categoryColor,
-                    backgroundColor: `${categoryColor}15`,
-                    padding: '4px 12px',
-                    borderRadius: '12px',
+                    fontWeight: 700,
+                    color: BRAND.black,
+                    backgroundColor: BRAND.gold,
+                    padding: '5px 14px',
+                    borderRadius: '15px',
                   }}
                 >
                   {article.category}
@@ -144,6 +129,7 @@ export default function LabSignalsArticleClient({
                 url={articleUrl}
                 title={article.title}
                 description={article.description}
+                showRss={false}
               />
             </div>
           </div>
@@ -161,7 +147,7 @@ export default function LabSignalsArticleClient({
           .lab-signals-article h4,
           .lab-signals-article h5 {
             font-family: 'Poppins', sans-serif;
-            color: #0a253c;
+            color: ${BRAND.gold};
             margin-top: 2em;
             margin-bottom: 0.8em;
             line-height: 1.3;
@@ -189,12 +175,14 @@ export default function LabSignalsArticleClient({
 
           .lab-signals-article p {
             margin-bottom: 1.5em;
+            color: rgba(255, 255, 255, 0.9);
           }
 
           .lab-signals-article ul,
           .lab-signals-article ol {
             margin-bottom: 1.5em;
             padding-left: 1.5em;
+            color: rgba(255, 255, 255, 0.9);
           }
 
           .lab-signals-article li {
@@ -202,18 +190,18 @@ export default function LabSignalsArticleClient({
           }
 
           .lab-signals-article a {
-            color: #008080;
+            color: ${BRAND.gold};
             text-decoration: underline;
             text-underline-offset: 2px;
           }
 
           .lab-signals-article a:hover {
-            color: #006666;
+            color: #ffcc33;
           }
 
           .lab-signals-article strong {
             font-weight: 700;
-            color: #0a253c;
+            color: ${BRAND.white};
           }
 
           .lab-signals-article em {
@@ -221,17 +209,17 @@ export default function LabSignalsArticleClient({
           }
 
           .lab-signals-article blockquote {
-            border-left: 4px solid #008080;
+            border-left: 4px solid ${BRAND.gold};
             padding-left: 1.5em;
             margin: 2em 0;
-            color: #555;
+            color: rgba(255, 255, 255, 0.8);
             font-style: italic;
           }
 
           .lab-signals-article sup {
             font-size: 0.75em;
             vertical-align: super;
-            color: #008080;
+            color: ${BRAND.gold};
           }
 
           .lab-signals-article img {
@@ -249,31 +237,34 @@ export default function LabSignalsArticleClient({
 
           .lab-signals-article th,
           .lab-signals-article td {
-            border: 1px solid #e0e0e0;
+            border: 1px solid ${BRAND.gold}44;
             padding: 12px;
             text-align: left;
           }
 
           .lab-signals-article th {
-            background-color: #f7f7f7;
+            background-color: ${BRAND.gold}22;
             font-weight: 600;
+            color: ${BRAND.gold};
           }
 
           .lab-signals-article code {
-            background-color: #f0f0f0;
+            background-color: ${BRAND.black};
             padding: 2px 6px;
             border-radius: 4px;
             font-family: 'Monaco', 'Menlo', monospace;
             font-size: 0.9em;
+            color: ${BRAND.gold};
           }
 
           .lab-signals-article pre {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
+            background-color: ${BRAND.black};
+            color: rgba(255, 255, 255, 0.9);
             padding: 1.5em;
             border-radius: 8px;
             overflow-x: auto;
             margin: 2em 0;
+            border: 1px solid ${BRAND.gold}33;
           }
 
           .lab-signals-article pre code {
@@ -283,8 +274,19 @@ export default function LabSignalsArticleClient({
 
           .lab-signals-article hr {
             border: none;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid ${BRAND.gold}33;
             margin: 3em 0;
+          }
+
+          .lab-signals-article figure {
+            margin: 2em 0;
+          }
+
+          .lab-signals-article figcaption {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+            margin-top: 0.5em;
+            text-align: center;
           }
         `}</style>
       </div>
