@@ -12,8 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 const BRAND = {
   gold: '#fb0',
   black: '#000000',
-  darkGray: '#111111',
   white: '#ffffff',
+  lightGray: '#f5f5f5',
 };
 
 interface LabSignalsArticleClientProps {
@@ -43,32 +43,30 @@ export default function LabSignalsArticleClient({
     };
   }, []);
 
-  // Create a preview of the content (first 500 chars of clean text)
+  // Create a preview of the content
   const createPreview = () => {
     const textContent = article.body
       .replace(/<[^>]+>/g, ' ')
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 500);
-    return <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8 }}>{textContent}...</p>;
+    return <p style={{ color: '#555', lineHeight: 1.8 }}>{textContent}...</p>;
   };
 
   return (
-    <section ref={contentRef} style={{ backgroundColor: BRAND.darkGray, padding: '50px 20px' }}>
+    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '40px 20px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         {/* Social Share Bar */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            marginBottom: '30px',
-            paddingBottom: '20px',
-            borderBottom: `1px solid ${BRAND.gold}33`,
-            flexWrap: 'wrap',
-            gap: '20px',
-          }}
-        >
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '25px',
+          paddingBottom: '15px',
+          borderBottom: '1px solid #e0e0e0',
+          flexWrap: 'wrap',
+          gap: '15px',
+        }}>
           <SocialShare
             url={articleUrl}
             title={article.title}
@@ -86,45 +84,36 @@ export default function LabSignalsArticleClient({
             className="lab-signals-article"
             dangerouslySetInnerHTML={{ __html: article.body }}
             style={{
-              color: BRAND.white,
+              color: '#333',
               fontSize: '1.05rem',
-              lineHeight: 1.9,
+              lineHeight: 1.85,
             }}
           />
 
           {/* Article Footer */}
-          <div
-            style={{
-              marginTop: '40px',
-              paddingTop: '30px',
-              borderTop: `1px solid ${BRAND.gold}33`,
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                gap: '20px',
-              }}
-            >
-              <div>
-                <span
-                  style={{
-                    display: 'inline-block',
-                    fontSize: '.75rem',
-                    fontWeight: 700,
-                    color: BRAND.black,
-                    backgroundColor: BRAND.gold,
-                    padding: '5px 14px',
-                    borderRadius: '15px',
-                  }}
-                >
-                  {article.category}
-                </span>
-              </div>
-
+          <div style={{
+            marginTop: '35px',
+            paddingTop: '25px',
+            borderTop: '1px solid #e0e0e0',
+          }}>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '15px',
+            }}>
+              <span style={{
+                display: 'inline-block',
+                fontSize: '.7rem',
+                fontWeight: 700,
+                color: BRAND.black,
+                backgroundColor: BRAND.gold,
+                padding: '4px 12px',
+                borderRadius: '12px',
+              }}>
+                {article.category}
+              </span>
               <SocialShare
                 url={articleUrl}
                 title={article.title}
@@ -147,145 +136,120 @@ export default function LabSignalsArticleClient({
           .lab-signals-article h4,
           .lab-signals-article h5 {
             font-family: 'Poppins', sans-serif;
-            color: ${BRAND.gold};
-            margin-top: 2em;
-            margin-bottom: 0.8em;
+            color: #111;
+            margin-top: 1.8em;
+            margin-bottom: 0.7em;
             line-height: 1.3;
           }
 
-          .lab-signals-article h1 {
-            font-size: 2rem;
-            font-weight: 700;
-          }
-
-          .lab-signals-article h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-          }
-
-          .lab-signals-article h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-          }
-
-          .lab-signals-article h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-          }
+          .lab-signals-article h1 { font-size: 1.8rem; font-weight: 700; }
+          .lab-signals-article h2 { font-size: 1.5rem; font-weight: 700; }
+          .lab-signals-article h3 { font-size: 1.25rem; font-weight: 600; }
+          .lab-signals-article h4 { font-size: 1.1rem; font-weight: 600; }
 
           .lab-signals-article p {
-            margin-bottom: 1.5em;
-            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.4em;
+            color: #444;
           }
 
           .lab-signals-article ul,
           .lab-signals-article ol {
-            margin-bottom: 1.5em;
+            margin-bottom: 1.4em;
             padding-left: 1.5em;
-            color: rgba(255, 255, 255, 0.9);
+            color: #444;
           }
 
-          .lab-signals-article li {
-            margin-bottom: 0.5em;
-          }
+          .lab-signals-article li { margin-bottom: 0.4em; }
 
           .lab-signals-article a {
-            color: ${BRAND.gold};
+            color: #d4a000;
             text-decoration: underline;
             text-underline-offset: 2px;
           }
 
-          .lab-signals-article a:hover {
-            color: #ffcc33;
-          }
+          .lab-signals-article a:hover { color: #b38f00; }
 
           .lab-signals-article strong {
             font-weight: 700;
-            color: ${BRAND.white};
+            color: #222;
           }
 
-          .lab-signals-article em {
-            font-style: italic;
-          }
+          .lab-signals-article em { font-style: italic; }
 
           .lab-signals-article blockquote {
-            border-left: 4px solid ${BRAND.gold};
-            padding-left: 1.5em;
-            margin: 2em 0;
-            color: rgba(255, 255, 255, 0.8);
+            border-left: 3px solid #fb0;
+            padding-left: 1.2em;
+            margin: 1.5em 0;
+            color: #555;
             font-style: italic;
           }
 
           .lab-signals-article sup {
             font-size: 0.75em;
             vertical-align: super;
-            color: ${BRAND.gold};
+            color: #d4a000;
           }
 
           .lab-signals-article img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin: 2em 0;
+            border-radius: 6px;
+            margin: 1.5em 0;
           }
 
           .lab-signals-article table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2em 0;
+            margin: 1.5em 0;
           }
 
           .lab-signals-article th,
           .lab-signals-article td {
-            border: 1px solid ${BRAND.gold}44;
-            padding: 12px;
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: left;
           }
 
           .lab-signals-article th {
-            background-color: ${BRAND.gold}22;
+            background-color: #f5f5f5;
             font-weight: 600;
-            color: ${BRAND.gold};
           }
 
           .lab-signals-article code {
-            background-color: ${BRAND.black};
-            padding: 2px 6px;
-            border-radius: 4px;
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
             font-family: 'Monaco', 'Menlo', monospace;
             font-size: 0.9em;
-            color: ${BRAND.gold};
           }
 
           .lab-signals-article pre {
-            background-color: ${BRAND.black};
-            color: rgba(255, 255, 255, 0.9);
-            padding: 1.5em;
-            border-radius: 8px;
+            background-color: #1a1a1a;
+            color: #e8e8e8;
+            padding: 1.2em;
+            border-radius: 6px;
             overflow-x: auto;
-            margin: 2em 0;
-            border: 1px solid ${BRAND.gold}33;
+            margin: 1.5em 0;
           }
 
           .lab-signals-article pre code {
             background: none;
             padding: 0;
+            color: inherit;
           }
 
           .lab-signals-article hr {
             border: none;
-            border-top: 1px solid ${BRAND.gold}33;
-            margin: 3em 0;
+            border-top: 1px solid #e0e0e0;
+            margin: 2.5em 0;
           }
 
-          .lab-signals-article figure {
-            margin: 2em 0;
-          }
+          .lab-signals-article figure { margin: 1.5em 0; }
 
           .lab-signals-article figcaption {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9em;
-            margin-top: 0.5em;
+            color: #777;
+            font-size: 0.85em;
+            margin-top: 0.4em;
             text-align: center;
           }
         `}</style>
