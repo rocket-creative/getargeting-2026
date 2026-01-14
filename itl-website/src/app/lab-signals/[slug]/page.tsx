@@ -103,7 +103,7 @@ export default async function LabSignalsArticlePage({
         }}>
           <Link href="/lab-signals" style={{ display: 'block' }}>
             <Image 
-              src="/images/logo.png" 
+              src="/images/lab-signals-logo.svg" 
               alt="Lab Signals" 
               width={140} 
               height={45}
@@ -311,10 +311,10 @@ export default async function LabSignalsArticlePage({
           textAlign: 'center',
         }}>
           <Image 
-            src="/images/logo.png" 
+            src="/images/lab-signals-logo.svg" 
             alt="Lab Signals" 
-            width={100} 
-            height={35}
+            width={120} 
+            height={40}
             style={{ height: 'auto', marginBottom: '15px' }}
           />
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginBottom: '10px' }}>
