@@ -197,7 +197,7 @@ export default function CatalogMouseModelsPage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -727,6 +727,6 @@ export default function CatalogMouseModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }

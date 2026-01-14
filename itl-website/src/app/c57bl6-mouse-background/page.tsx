@@ -280,7 +280,7 @@ export default function C57BL6MouseBackgroundPage() {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -1100,6 +1100,6 @@ export default function C57BL6MouseBackgroundPage() {
         </section>
       </main>
       <UXUIDCFooter />
-    </>
+    </div>
   );
 }
