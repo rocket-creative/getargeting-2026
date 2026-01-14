@@ -67,30 +67,32 @@ export default function RelatedArticles({ articles, categoryName }: RelatedArtic
               <span style={{
                 display: 'inline-block',
                 fontSize: '.65rem',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontFamily: 'Poppins, sans-serif',
                 color: BRAND.mediumGray,
                 marginBottom: '10px',
                 textTransform: 'uppercase',
-                letterSpacing: '0.3px',
+                letterSpacing: '0.5px',
               }}>
                 {related.category}
               </span>
               <h4 style={{
                 color: BRAND.black,
-                fontFamily: 'Poppins, sans-serif',
+                fontFamily: 'Lato, sans-serif',
                 fontSize: '.95rem',
-                fontWeight: 600,
-                lineHeight: 1.4,
+                fontWeight: 400,
+                lineHeight: 1.5,
                 marginBottom: '10px',
+                letterSpacing: '0.01em',
               }}>
                 {related.title}
               </h4>
               <span style={{ 
                 color: BRAND.darkGray, 
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '.8rem', 
-                fontWeight: 500 
+                fontSize: '.75rem', 
+                fontWeight: 500,
+                letterSpacing: '0.02em',
               }}>
                 Read →
               </span>

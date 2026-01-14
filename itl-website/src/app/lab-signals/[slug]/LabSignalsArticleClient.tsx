@@ -117,10 +117,12 @@ export default function LabSignalsArticleClient({
       <style jsx global>{`
         .lab-signals-article {
           font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
-          font-size: 1.1rem;
-          line-height: 1.9;
+          font-size: 1.05rem;
+          line-height: 2;
           color: ${BRAND.textGray};
           max-width: 100%;
+          letter-spacing: 0.01em;
+          word-spacing: 0.05em;
         }
         
         /* Headings */
@@ -135,19 +137,20 @@ export default function LabSignalsArticleClient({
           line-height: 1.4;
           margin-top: 2.5em;
           margin-bottom: 1em;
+          letter-spacing: -0.01em;
         }
         .lab-signals-article h1 { 
-          font-size: 2rem; 
+          font-size: 1.9rem; 
           font-weight: 700; 
         }
         .lab-signals-article h2 { 
-          font-size: 1.6rem; 
-          font-weight: 700;
+          font-size: 1.5rem; 
+          font-weight: 600;
           padding-bottom: 0.5em;
           border-bottom: 2px solid ${BRAND.gold};
         }
         .lab-signals-article h3 { 
-          font-size: 1.35rem; 
+          font-size: 1.3rem; 
           font-weight: 600; 
         }
         .lab-signals-article h4 { 
@@ -161,20 +164,20 @@ export default function LabSignalsArticleClient({
         
         /* Paragraphs */
         .lab-signals-article p {
-          margin-bottom: 1.8em;
+          margin-bottom: 1.6em;
           color: ${BRAND.textGray};
         }
         
         /* Lists */
         .lab-signals-article ul,
         .lab-signals-article ol {
-          margin-bottom: 1.8em;
+          margin-bottom: 1.6em;
           padding-left: 1.8em;
           color: ${BRAND.textGray};
         }
         .lab-signals-article li { 
-          margin-bottom: 0.8em;
-          line-height: 1.8;
+          margin-bottom: 0.7em;
+          line-height: 1.9;
         }
         .lab-signals-article li::marker {
           color: ${BRAND.gold};
@@ -196,7 +199,7 @@ export default function LabSignalsArticleClient({
         /* Bold/Strong */
         .lab-signals-article strong,
         .lab-signals-article b {
-          font-weight: 700;
+          font-weight: 600;
           color: ${BRAND.black};
         }
         
