@@ -15,7 +15,8 @@ const BRAND = {
   white: '#ffffff',
   lightGray: '#f0f0f0',
   mediumGray: '#888888',
-  darkGray: '#444444',
+  darkGray: '#333333',
+  textGray: '#444444',
 };
 
 interface LabSignalsArticleClientProps {
@@ -49,157 +50,251 @@ export default function LabSignalsArticleClient({
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 500);
-    return <p style={{ color: BRAND.darkGray, fontFamily: 'Lato, sans-serif', lineHeight: 1.8 }}>{textContent}...</p>;
+    return <p style={{ color: BRAND.textGray, fontFamily: 'Lato, sans-serif', lineHeight: 1.9, fontSize: '1.1rem' }}>{textContent}...</p>;
   };
 
   return (
-    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        {/* Social Share */}
+    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '50px 20px 60px' }}>
+      {/* Social Share */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginBottom: '35px',
+        paddingBottom: '20px',
+        borderBottom: `1px solid ${BRAND.lightGray}`,
+      }}>
+        <SocialShare
+          url={articleUrl}
+          title={article.title}
+          description={article.description}
+        />
+      </div>
+
+      {/* Gated Content */}
+      <NewsletterGate
+        articleTitle={article.title}
+        previewContent={createPreview()}
+      >
+        <article
+          className="lab-signals-article"
+          dangerouslySetInnerHTML={{ __html: article.body }}
+        />
+
         <div style={{
+          marginTop: '50px',
+          paddingTop: '30px',
+          borderTop: `1px solid ${BRAND.lightGray}`,
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: '30px',
-          paddingBottom: '18px',
-          borderBottom: `1px solid ${BRAND.lightGray}`,
+          flexWrap: 'wrap',
+          gap: '15px',
         }}>
+          <span style={{
+            fontSize: '.7rem',
+            fontWeight: 700,
+            fontFamily: 'Poppins, sans-serif',
+            color: BRAND.black,
+            backgroundColor: BRAND.gold,
+            padding: '5px 14px',
+            borderRadius: '12px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.3px',
+          }}>
+            {article.category}
+          </span>
           <SocialShare
             url={articleUrl}
             title={article.title}
             description={article.description}
+            showRss={false}
           />
         </div>
+      </NewsletterGate>
 
-        {/* Gated Content */}
-        <NewsletterGate
-          articleTitle={article.title}
-          previewContent={createPreview()}
-        >
-          <article
-            className="lab-signals-article"
-            dangerouslySetInnerHTML={{ __html: article.body }}
-            style={{
-              color: BRAND.darkGray,
-              fontFamily: 'Lato, sans-serif',
-              fontSize: '1.05rem',
-              lineHeight: 1.85,
-            }}
-          />
-
-          <div style={{
-            marginTop: '40px',
-            paddingTop: '25px',
-            borderTop: `1px solid ${BRAND.lightGray}`,
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '15px',
-          }}>
-            <span style={{
-              fontSize: '.7rem',
-              fontWeight: 700,
-              fontFamily: 'Poppins, sans-serif',
-              color: BRAND.black,
-              backgroundColor: BRAND.gold,
-              padding: '5px 14px',
-              borderRadius: '12px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.3px',
-            }}>
-              {article.category}
-            </span>
-            <SocialShare
-              url={articleUrl}
-              title={article.title}
-              description={article.description}
-              showRss={false}
-            />
-          </div>
-        </NewsletterGate>
-
-        <style jsx global>{`
-          .lab-signals-article {
-            font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
-          }
-          .lab-signals-article h1,
-          .lab-signals-article h2,
-          .lab-signals-article h3,
-          .lab-signals-article h4,
-          .lab-signals-article h5 {
-            font-family: 'Poppins', sans-serif;
-            color: ${BRAND.black};
-            margin-top: 2em;
-            margin-bottom: 0.75em;
-            line-height: 1.35;
-          }
-          .lab-signals-article h1 { font-size: 1.8rem; font-weight: 700; }
-          .lab-signals-article h2 { font-size: 1.5rem; font-weight: 700; }
-          .lab-signals-article h3 { font-size: 1.25rem; font-weight: 600; }
-          .lab-signals-article h4 { font-size: 1.1rem; font-weight: 600; }
-          .lab-signals-article p {
-            margin-bottom: 1.5em;
-            color: ${BRAND.darkGray};
-          }
-          .lab-signals-article ul,
-          .lab-signals-article ol {
-            margin-bottom: 1.5em;
-            padding-left: 1.5em;
-            color: ${BRAND.darkGray};
-          }
-          .lab-signals-article li { margin-bottom: 0.5em; }
-          .lab-signals-article a {
-            color: ${BRAND.darkGray};
-            text-decoration: underline;
-            transition: color 0.2s ease;
-          }
-          .lab-signals-article a:hover { color: ${BRAND.black}; }
-          .lab-signals-article strong {
-            font-weight: 700;
-            color: ${BRAND.black};
-          }
-          .lab-signals-article blockquote {
-            border-left: 4px solid ${BRAND.mediumGray};
-            padding-left: 1.5em;
-            margin: 1.8em 0;
-            color: ${BRAND.mediumGray};
-            font-style: italic;
-          }
-          .lab-signals-article sup {
-            font-size: 0.75em;
-            vertical-align: super;
-            color: ${BRAND.mediumGray};
-          }
-          .lab-signals-article img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1.8em 0;
-          }
-          .lab-signals-article table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.8em 0;
-          }
-          .lab-signals-article th,
-          .lab-signals-article td {
-            border: 1px solid ${BRAND.lightGray};
-            padding: 12px;
-            text-align: left;
-          }
-          .lab-signals-article th {
-            background-color: ${BRAND.lightGray};
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-          }
-          .lab-signals-article hr {
-            border: none;
-            border-top: 1px solid ${BRAND.lightGray};
-            margin: 2.5em 0;
-          }
-        `}</style>
-      </div>
+      {/* Article Typography Styles */}
+      <style jsx global>{`
+        .lab-signals-article {
+          font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-size: 1.1rem;
+          line-height: 1.9;
+          color: ${BRAND.textGray};
+          max-width: 100%;
+        }
+        
+        /* Headings */
+        .lab-signals-article h1,
+        .lab-signals-article h2,
+        .lab-signals-article h3,
+        .lab-signals-article h4,
+        .lab-signals-article h5,
+        .lab-signals-article h6 {
+          font-family: 'Poppins', sans-serif;
+          color: ${BRAND.black};
+          line-height: 1.4;
+          margin-top: 2.5em;
+          margin-bottom: 1em;
+        }
+        .lab-signals-article h1 { 
+          font-size: 2rem; 
+          font-weight: 700; 
+        }
+        .lab-signals-article h2 { 
+          font-size: 1.6rem; 
+          font-weight: 700;
+          padding-bottom: 0.5em;
+          border-bottom: 2px solid ${BRAND.gold};
+        }
+        .lab-signals-article h3 { 
+          font-size: 1.35rem; 
+          font-weight: 600; 
+        }
+        .lab-signals-article h4 { 
+          font-size: 1.15rem; 
+          font-weight: 600; 
+        }
+        .lab-signals-article h5 { 
+          font-size: 1rem; 
+          font-weight: 600; 
+        }
+        
+        /* Paragraphs */
+        .lab-signals-article p {
+          margin-bottom: 1.8em;
+          color: ${BRAND.textGray};
+        }
+        
+        /* Lists */
+        .lab-signals-article ul,
+        .lab-signals-article ol {
+          margin-bottom: 1.8em;
+          padding-left: 1.8em;
+          color: ${BRAND.textGray};
+        }
+        .lab-signals-article li { 
+          margin-bottom: 0.8em;
+          line-height: 1.8;
+        }
+        .lab-signals-article li::marker {
+          color: ${BRAND.gold};
+        }
+        
+        /* Links */
+        .lab-signals-article a {
+          color: #0066cc;
+          text-decoration: underline;
+          text-decoration-color: rgba(0, 102, 204, 0.3);
+          text-underline-offset: 3px;
+          transition: all 0.2s ease;
+        }
+        .lab-signals-article a:hover { 
+          color: #004499;
+          text-decoration-color: #004499;
+        }
+        
+        /* Bold/Strong */
+        .lab-signals-article strong,
+        .lab-signals-article b {
+          font-weight: 700;
+          color: ${BRAND.black};
+        }
+        
+        /* Italics */
+        .lab-signals-article em,
+        .lab-signals-article i {
+          font-style: italic;
+        }
+        
+        /* Blockquotes */
+        .lab-signals-article blockquote {
+          border-left: 4px solid ${BRAND.gold};
+          padding: 1em 1.5em;
+          margin: 2em 0;
+          background-color: ${BRAND.lightGray};
+          border-radius: 0 8px 8px 0;
+          color: ${BRAND.darkGray};
+          font-style: italic;
+        }
+        .lab-signals-article blockquote p {
+          margin-bottom: 0;
+        }
+        
+        /* Superscript (citations) */
+        .lab-signals-article sup {
+          font-size: 0.75em;
+          vertical-align: super;
+          color: #0066cc;
+        }
+        
+        /* Images */
+        .lab-signals-article img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin: 2em 0;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Tables */
+        .lab-signals-article table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 2em 0;
+          font-size: 0.95rem;
+        }
+        .lab-signals-article th,
+        .lab-signals-article td {
+          border: 1px solid #ddd;
+          padding: 14px 16px;
+          text-align: left;
+        }
+        .lab-signals-article th {
+          background-color: ${BRAND.lightGray};
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+          color: ${BRAND.black};
+        }
+        .lab-signals-article tr:nth-child(even) {
+          background-color: #fafafa;
+        }
+        
+        /* Horizontal rules */
+        .lab-signals-article hr {
+          border: none;
+          border-top: 2px solid ${BRAND.lightGray};
+          margin: 3em 0;
+        }
+        
+        /* Code */
+        .lab-signals-article code {
+          background-color: ${BRAND.lightGray};
+          padding: 2px 6px;
+          border-radius: 4px;
+          font-family: 'Monaco', 'Consolas', monospace;
+          font-size: 0.9em;
+        }
+        .lab-signals-article pre {
+          background-color: #1a1a1a;
+          color: #e8e8e8;
+          padding: 1.5em;
+          border-radius: 8px;
+          overflow-x: auto;
+          margin: 2em 0;
+        }
+        .lab-signals-article pre code {
+          background: none;
+          padding: 0;
+        }
+        
+        /* First paragraph after heading - no extra margin */
+        .lab-signals-article h1 + p,
+        .lab-signals-article h2 + p,
+        .lab-signals-article h3 + p,
+        .lab-signals-article h4 + p {
+          margin-top: 0;
+        }
+      `}</style>
     </section>
   );
 }

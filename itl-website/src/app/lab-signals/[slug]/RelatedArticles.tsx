@@ -27,7 +27,7 @@ export default function RelatedArticles({ articles, categoryName }: RelatedArtic
 
   return (
     <section style={{ backgroundColor: BRAND.lightGray, padding: '50px 20px' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div>
         <h3 style={{
           color: BRAND.black,
           fontFamily: 'Poppins, sans-serif',

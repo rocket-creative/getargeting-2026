@@ -2,29 +2,60 @@
 """
 Generate TypeScript data file from the Exclusive Newsletter Contents CSV.
 Preserves full HTML content without truncation.
+Strips out malformed HTML document structure.
 """
 
 import csv
 import re
-import json
 from pathlib import Path
-from datetime import datetime
 
 CSV_PATH = Path("Ingenious Targeting Laboratory - Exclusive Newsletter Contents.csv")
 OUTPUT_PATH = Path("itl-website/src/data/newsletterArticles.ts")
 
 def clean_html(html_content):
-    """Clean HTML content while preserving structure."""
+    """Clean HTML content while preserving article structure."""
     if not html_content:
         return ""
+    
     # Fix double-escaped quotes from CSV
     html_content = html_content.replace('""', '"')
+    
+    # Remove entire <head>...</head> sections
+    html_content = re.sub(r'<head[^>]*>.*?</head>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+    
+    # Remove <html>, <body>, <!DOCTYPE> tags
+    html_content = re.sub(r'<!DOCTYPE[^>]*>', '', html_content, flags=re.IGNORECASE)
+    html_content = re.sub(r'</?html[^>]*>', '', html_content, flags=re.IGNORECASE)
+    html_content = re.sub(r'</?body[^>]*>', '', html_content, flags=re.IGNORECASE)
+    
+    # Remove <script>...</script> tags
+    html_content = re.sub(r'<script[^>]*>.*?</script>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+    
+    # Remove <style>...</style> tags
+    html_content = re.sub(r'<style[^>]*>.*?</style>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+    
+    # Remove <meta> and <link> tags
+    html_content = re.sub(r'<meta[^>]*/?>', '', html_content, flags=re.IGNORECASE)
+    html_content = re.sub(r'<link[^>]*/?>', '', html_content, flags=re.IGNORECASE)
+    html_content = re.sub(r'<title[^>]*>.*?</title>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+    
     # Remove empty id attributes
     html_content = re.sub(r'\s+id="[^"]*"', '', html_content)
+    
+    # Remove class attributes (often Webflow-specific)
+    html_content = re.sub(r'\s+class="[^"]*"', '', html_content)
+    
     # Clean empty paragraphs
     html_content = re.sub(r'<p>\s*‍?\s*</p>', '', html_content)
-    # Fix unclosed tags and other issues
-    html_content = html_content.replace('<strong>', '<strong>').replace('</strong>', '</strong>')
+    html_content = re.sub(r'<p>\s*&nbsp;\s*</p>', '', html_content)
+    
+    # Fix broken strong tags (missing opening bracket)
+    html_content = re.sub(r'([^<])strong>', r'\1<strong>', html_content)
+    
+    # Clean up multiple newlines/spaces
+    html_content = re.sub(r'\n\s*\n', '\n', html_content)
+    html_content = re.sub(r'  +', ' ', html_content)
+    
     return html_content.strip()
 
 def escape_for_ts(s):
@@ -154,11 +185,16 @@ def parse_csv():
             else:
                 subtitle = ""
             
-            # Clean the HTML body - preserve full content
+            # Clean the HTML body - preserve full content, strip document structure
             cleaned_body = clean_html(body)
             
+            # Skip if cleaned body is too short
+            if len(cleaned_body) < 200:
+                print(f"  Skipping '{display_title[:40]}...' - body too short after cleaning ({len(cleaned_body)} chars)")
+                continue
+            
             # Extract description
-            description = extract_description(body)
+            description = extract_description(cleaned_body)
             
             # Determine category and related page
             category = get_category(name, slug)
