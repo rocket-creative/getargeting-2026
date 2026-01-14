@@ -14,8 +14,8 @@ import LabSignalsArticleClient from './LabSignalsArticleClient';
 const BRAND = {
   gold: '#fb0',
   black: '#000000',
-  darkGray: '#111111',
   white: '#ffffff',
+  lightGray: '#f5f5f5',
 };
 
 // Generate static params for all articles
@@ -72,14 +72,14 @@ function getCategoryColor(category: string): string {
     'Immunology': '#10b981',
     'Oncology': '#ef4444',
     'Technology': '#3b82f6',
-    'Technical Guide': '#fb0',
+    'Technical Guide': '#0891b2',
     'Selection Guide': '#a855f7',
     'Resources': '#06b6d4',
     'Research': '#6366f1',
     'Industry Insights': '#ec4899',
     'Comparison': '#14b8a6',
   };
-  return colors[category] || '#fb0';
+  return colors[category] || '#666';
 }
 
 // Get related articles
@@ -107,108 +107,99 @@ export default async function LabSignalsArticlePage({
   const articleUrl = `https://www.genetargeting.com/lab-signals/${article.slug}`;
 
   return (
-    <div style={{ backgroundColor: BRAND.black, minHeight: '100vh' }}>
-      {/* Simple Header */}
+    <div style={{ backgroundColor: BRAND.lightGray, minHeight: '100vh' }}>
+      {/* Header */}
       <header style={{
-        padding: '20px 30px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        maxWidth: '1200px',
-        margin: '0 auto',
+        backgroundColor: BRAND.black,
+        padding: '15px 30px',
       }}>
-        <Link href="/lab-signals" style={{ display: 'block' }}>
-          <Image 
-            src="/images/logo.png" 
-            alt="Lab Signals" 
-            width={150} 
-            height={50}
-            style={{ height: 'auto' }}
-          />
-        </Link>
-        <Link
-          href="/"
-          style={{
-            color: BRAND.gold,
-            fontSize: '.9rem',
-            fontWeight: 500,
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-          }}
-        >
-          <span>← Back to Ingenious</span>
-        </Link>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          maxWidth: '1200px',
+          margin: '0 auto',
+        }}>
+          <Link href="/lab-signals" style={{ display: 'block' }}>
+            <Image 
+              src="/images/logo.png" 
+              alt="Lab Signals" 
+              width={140} 
+              height={45}
+              style={{ height: 'auto' }}
+            />
+          </Link>
+          <Link
+            href="/"
+            style={{
+              color: BRAND.gold,
+              fontSize: '.85rem',
+              fontWeight: 500,
+              textDecoration: 'none',
+            }}
+          >
+            ← Back to Ingenious
+          </Link>
+        </div>
       </header>
 
       <main>
         {/* Hero/Header Section */}
         <section style={{
           backgroundColor: BRAND.black,
-          padding: '40px 20px 60px',
-          position: 'relative',
+          padding: '30px 20px 50px',
         }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: '25px' }}>
-              <Link
-                href="/lab-signals"
-                style={{
-                  color: BRAND.gold,
-                  fontSize: '.9rem',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
-              >
-                <span>←</span>
-                <span>Back to Lab Signals</span>
-              </Link>
-            </nav>
+            <Link
+              href="/lab-signals"
+              style={{
+                color: BRAND.gold,
+                fontSize: '.85rem',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                marginBottom: '20px',
+              }}
+            >
+              ← Back to Lab Signals
+            </Link>
 
             {/* Category Badge */}
-            <div style={{ marginBottom: '15px' }}>
-              <span
-                style={{
-                  display: 'inline-block',
-                  fontSize: '.75rem',
-                  fontWeight: 700,
-                  color: BRAND.black,
-                  backgroundColor: BRAND.gold,
-                  padding: '6px 16px',
-                  borderRadius: '20px',
-                }}
-              >
+            <div style={{ marginBottom: '12px' }}>
+              <span style={{
+                display: 'inline-block',
+                fontSize: '.7rem',
+                fontWeight: 700,
+                color: BRAND.black,
+                backgroundColor: BRAND.gold,
+                padding: '5px 14px',
+                borderRadius: '15px',
+              }}>
                 {article.category}
               </span>
             </div>
 
             {/* Title */}
-            <h1
-              style={{
-                color: BRAND.white,
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '2.4rem',
-                fontWeight: 700,
-                lineHeight: 1.2,
-                marginBottom: '15px',
-              }}
-            >
+            <h1 style={{
+              color: BRAND.white,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '2.2rem',
+              fontWeight: 700,
+              lineHeight: 1.2,
+              marginBottom: '12px',
+            }}>
               {article.title}
             </h1>
 
             {/* Subtitle */}
             {article.subtitle && (
-              <p
-                style={{
-                  color: BRAND.gold,
-                  fontSize: '1.1rem',
-                  lineHeight: 1.6,
-                  fontWeight: 500,
-                }}
-              >
+              <p style={{
+                color: BRAND.gold,
+                fontSize: '1rem',
+                fontWeight: 500,
+              }}>
                 {article.subtitle}
               </p>
             )}
@@ -224,21 +215,21 @@ export default async function LabSignalsArticlePage({
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <section style={{ backgroundColor: BRAND.darkGray, padding: '50px 20px' }}>
+          <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
             <div style={{ maxWidth: '900px', margin: '0 auto' }}>
               <h3 style={{
-                color: BRAND.white,
+                color: BRAND.black,
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.4rem',
+                fontSize: '1.2rem',
                 fontWeight: 600,
-                marginBottom: '25px',
+                marginBottom: '20px',
               }}>
-                Related Articles in {article.category}
+                More in {article.category}
               </h3>
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: '20px',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                gap: '16px',
               }}>
                 {relatedArticles.map((related) => (
                   <Link
@@ -246,42 +237,34 @@ export default async function LabSignalsArticlePage({
                     href={`/lab-signals/${related.slug}`}
                     style={{
                       display: 'block',
-                      backgroundColor: BRAND.black,
-                      padding: '20px',
+                      backgroundColor: BRAND.white,
+                      padding: '16px',
                       borderRadius: '8px',
-                      border: `1px solid ${BRAND.gold}33`,
                       textDecoration: 'none',
-                      transition: 'all 0.2s ease',
+                      borderLeft: `3px solid ${BRAND.gold}`,
                     }}
                   >
                     <span style={{
                       display: 'inline-block',
-                      fontSize: '.7rem',
+                      fontSize: '.65rem',
                       fontWeight: 600,
                       color: getCategoryColor(related.category),
-                      backgroundColor: `${getCategoryColor(related.category)}22`,
-                      padding: '3px 10px',
-                      borderRadius: '10px',
-                      marginBottom: '10px',
+                      marginBottom: '8px',
                     }}>
                       {related.category}
                     </span>
                     <h4 style={{
-                      color: BRAND.white,
+                      color: BRAND.black,
                       fontFamily: 'Poppins, sans-serif',
-                      fontSize: '.95rem',
+                      fontSize: '.9rem',
                       fontWeight: 600,
-                      lineHeight: 1.4,
+                      lineHeight: 1.35,
                       marginBottom: '8px',
                     }}>
                       {related.title}
                     </h4>
-                    <span style={{
-                      color: BRAND.gold,
-                      fontSize: '.8rem',
-                      fontWeight: 500,
-                    }}>
-                      Read Article →
+                    <span style={{ color: '#d4a000', fontSize: '.8rem', fontWeight: 500 }}>
+                      Read →
                     </span>
                   </Link>
                 ))}
@@ -292,62 +275,53 @@ export default async function LabSignalsArticlePage({
 
         {/* Related Service Link */}
         {article.relatedPage && (
-          <section style={{ 
-            backgroundColor: BRAND.black, 
-            padding: '40px 20px', 
-            borderTop: `1px solid ${BRAND.gold}22` 
-          }}>
+          <section style={{ backgroundColor: BRAND.white, padding: '35px 20px' }}>
             <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
               <h3 style={{
-                color: BRAND.white,
+                color: BRAND.black,
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.2rem',
+                fontSize: '1.1rem',
                 fontWeight: 600,
-                marginBottom: '12px',
+                marginBottom: '10px',
               }}>
                 Interested in This Research Area?
               </h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.95rem', marginBottom: '20px' }}>
-                Learn more about our mouse model services for this therapeutic area.
+              <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '15px' }}>
+                Learn more about our mouse model services.
               </p>
               <Link
                 href={article.relatedPage}
                 style={{
                   display: 'inline-block',
-                  backgroundColor: BRAND.gold,
-                  color: BRAND.black,
-                  padding: '12px 28px',
-                  fontSize: '.95rem',
-                  fontWeight: 600,
+                  backgroundColor: BRAND.black,
+                  color: BRAND.white,
+                  padding: '10px 24px',
+                  fontSize: '.9rem',
+                  fontWeight: 500,
                   textDecoration: 'none',
-                  borderRadius: '6px',
+                  borderRadius: '5px',
                 }}
               >
-                Explore Related Services →
+                Explore Services →
               </Link>
             </div>
           </section>
         )}
 
         {/* Newsletter CTA */}
-        <section style={{ backgroundColor: BRAND.gold, padding: '60px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+        <section style={{ backgroundColor: BRAND.gold, padding: '45px 20px' }}>
+          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
             <h3 style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.8rem',
+              fontSize: '1.4rem',
               fontWeight: 700,
-              marginBottom: '15px',
+              marginBottom: '10px',
             }}>
               Get More Research Insights
             </h3>
-            <p style={{
-              color: 'rgba(0,0,0,0.8)',
-              fontSize: '1rem',
-              lineHeight: 1.7,
-              marginBottom: '25px',
-            }}>
-              Subscribe to Lab Signals for biweekly updates on mouse model research, technical guides, and industry insights.
+            <p style={{ color: 'rgba(0,0,0,0.75)', fontSize: '.9rem', marginBottom: '20px' }}>
+              Subscribe for biweekly updates on mouse model research.
             </p>
             <FlodeskForm />
           </div>
@@ -355,31 +329,22 @@ export default async function LabSignalsArticlePage({
 
         {/* Footer */}
         <footer style={{
-          backgroundColor: BRAND.darkGray,
-          padding: '40px 20px',
+          backgroundColor: BRAND.black,
+          padding: '30px 20px',
           textAlign: 'center',
-          borderTop: `1px solid ${BRAND.gold}22`,
         }}>
           <Image 
             src="/images/logo.png" 
             alt="Lab Signals" 
-            width={120} 
-            height={40}
-            style={{ height: 'auto', marginBottom: '20px' }}
+            width={100} 
+            height={35}
+            style={{ height: 'auto', marginBottom: '15px' }}
           />
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '.85rem', marginBottom: '15px' }}>
-            Lab Signals is powered by Ingenious Targeting Laboratory
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginBottom: '10px' }}>
+            Powered by Ingenious Targeting Laboratory
           </p>
-          <Link
-            href="/"
-            style={{
-              color: BRAND.gold,
-              fontSize: '.9rem',
-              fontWeight: 500,
-              textDecoration: 'none',
-            }}
-          >
-            Visit Ingenious Targeting Laboratory →
+          <Link href="/" style={{ color: BRAND.gold, fontSize: '.85rem', textDecoration: 'none' }}>
+            Visit Ingenious →
           </Link>
         </footer>
       </main>
