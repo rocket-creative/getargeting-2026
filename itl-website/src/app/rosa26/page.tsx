@@ -6,6 +6,8 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   LegacyInfoLink,
+  UXUIDCResourceLinks,
+  rosa26Resources,
 } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconImage, IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -343,6 +345,18 @@ export default function Rosa26Page() {
               </p>
             </div>
             <LegacyInfoLink href={legacyContentUrl} />
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Rosa26 Resources"
+              description="Download our free Rapid-Rosa26™ Quick Guide to learn more about our accelerated targeting technology."
+              resources={rosa26Resources}
+              variant="card"
+            />
           </div>
         </section>
 

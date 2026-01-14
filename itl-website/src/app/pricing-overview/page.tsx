@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, pricingResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -919,6 +920,18 @@ export default function PricingOverviewPage() {
                 {ctaData.secondaryButton.label}
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Downloadable Pricing Guide Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Download Pricing Guide"
+              description="Get our detailed pricing guide with package options and service breakdowns."
+              resources={pricingResources}
+              variant="card"
+            />
           </div>
         </section>
 

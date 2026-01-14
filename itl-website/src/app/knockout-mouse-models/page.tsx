@@ -19,6 +19,9 @@ import {
   UXUIDCGlossarySection,
   knockoutTerms,
   LegacyInfoLink,
+  UXUIDCResourceLinks,
+  conditionalKnockoutResources,
+  breedingResources,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -952,6 +955,18 @@ export default function KnockoutMouseModelsPage() {
           description="Understanding the terminology used in knockout mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
           terms={knockoutTerms}
         />
+
+        {/* ========== DOWNLOADABLE RESOURCES ========== */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Knockout Resources & Tools"
+              description="Download our free guides and use our interactive tools to plan your knockout project."
+              resources={[...conditionalKnockoutResources, ...breedingResources]}
+              variant="card"
+            />
+          </div>
+        </section>
 
         {/* ========== FAQ ========== */}
         <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="white" />

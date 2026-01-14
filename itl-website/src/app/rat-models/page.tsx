@@ -6,6 +6,8 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   LegacyInfoLink,
+  UXUIDCResourceLinks,
+  ratModelResources,
 } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconImage, IconQuote, IconChevronRight
 } from '@/components/UXUIDC/Icons';
@@ -368,6 +370,18 @@ export default function RatModelsPage() {
               </p>
             </div>
             <LegacyInfoLink href={legacyContentUrl} />
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Rat Model Resources"
+              description="Download our free guides to learn more about custom rat model generation."
+              resources={ratModelResources}
+              variant="card"
+            />
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, conditionalReversibleResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -1085,6 +1086,18 @@ export default function InducibleConditionalKnockoutPage() {
                 {ctaData.secondaryButton.label}
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Inducible & Reversible Resources"
+              description="Download our free guides for inducible and reversible conditional knockout project planning."
+              resources={conditionalReversibleResources}
+              variant="card"
+            />
           </div>
         </section>
 

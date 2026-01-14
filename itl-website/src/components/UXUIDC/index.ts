@@ -42,5 +42,20 @@ export * from './Icons';
 // Legacy Content Links
 export { default as LegacyInfoLink } from './LegacyInfoLink';
 
+// Resource Links
+export { 
+  default as UXUIDCResourceLinks,
+  conditionalKnockoutResources,
+  humanizationResources,
+  pointMutationResources,
+  reporterResources,
+  rosa26Resources,
+  ratModelResources,
+  creResources,
+  breedingResources,
+  pricingResources,
+  conditionalReversibleResources
+} from './ResourceLinks';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';

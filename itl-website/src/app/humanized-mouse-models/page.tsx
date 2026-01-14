@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -918,6 +918,18 @@ export default function HumanizedMouseModelsPage() {
           description="Understanding the terminology used in humanized mouse model generation helps you communicate effectively with our scientific team and interpret project documentation."
           terms={humanizationTerms}
         />
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Humanization Resources"
+              description="Download our free guides to help plan your humanized mouse model project."
+              resources={humanizationResources}
+              variant="card"
+            />
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>

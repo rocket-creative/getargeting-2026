@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { UXUIDCResourceLinks, creResources, breedingResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -982,6 +983,18 @@ export default function CreLoxSystemPage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <UXUIDCResourceLinks
+              title="Cre-Lox Resources"
+              description="Download our free guides and tools for your Cre-lox project."
+              resources={[...creResources, ...breedingResources]}
+              variant="card"
+            />
           </div>
         </section>
 
