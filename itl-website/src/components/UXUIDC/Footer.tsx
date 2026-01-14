@@ -42,9 +42,9 @@ const footerSections = [
       { label: 'About ITL', href: '/about-itl' },
       { label: 'Why Choose ITL', href: '/why-choose-itl' },
       { label: 'Resources', href: '/resources' },
+      { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
       { label: 'Request Quote', href: '/request-quote' },
       { label: 'Contact', href: '/contact' },
-      { label: 'Careers', href: '/current-openings' },
     ],
   },
 ];
