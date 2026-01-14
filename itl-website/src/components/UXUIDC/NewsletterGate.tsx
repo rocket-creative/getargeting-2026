@@ -13,6 +13,14 @@ interface NewsletterGateProps {
 const COOKIE_NAME = 'itl_newsletter_verified';
 const COOKIE_DAYS = 30;
 
+// Lab Signals brand colors
+const BRAND = {
+  gold: '#fb0',
+  black: '#000000',
+  darkGray: '#111111',
+  white: '#ffffff',
+};
+
 // Cookie helpers
 function setCookie(name: string, value: string, days: number) {
   const expires = new Date();
@@ -33,12 +41,7 @@ function getCookie(name: string): string | null {
 
 /**
  * NewsletterGate - Gates content behind email verification
- * 
- * Matches the live site flow:
- * 1. Shows "Members-Only Content" gate
- * 2. User enters email to verify subscription
- * 3. If verified, stores cookie and shows content
- * 4. If not subscribed, shows signup form
+ * Lab Signals branded: gold #fb0 + black
  */
 export default function NewsletterGate({ 
   children, 
@@ -65,8 +68,6 @@ export default function NewsletterGate({
     setVerifyError('');
     setIsVerifying(true);
 
-    // Simulate verification - in production this would check against Flodesk API
-    // For now, we accept any valid email format and set the cookie
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     if (!emailRegex.test(email)) {
@@ -75,10 +76,8 @@ export default function NewsletterGate({
       return;
     }
 
-    // Simulate brief delay for UX
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    // Set verified cookie
     setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
     setIsVerified(true);
     setIsVerifying(false);
@@ -90,14 +89,14 @@ export default function NewsletterGate({
       <div style={{ 
         padding: '60px 20px', 
         textAlign: 'center',
-        backgroundColor: '#f7f7f7',
+        backgroundColor: BRAND.darkGray,
         borderRadius: '12px'
       }}>
         <div style={{
           width: '40px',
           height: '40px',
-          border: '3px solid #e0e0e0',
-          borderTopColor: '#008080',
+          border: `3px solid ${BRAND.gold}33`,
+          borderTopColor: BRAND.gold,
           borderRadius: '50%',
           animation: 'spin 1s linear infinite',
           margin: '0 auto'
@@ -142,7 +141,7 @@ export default function NewsletterGate({
             left: 0,
             right: 0,
             height: '200px',
-            background: 'linear-gradient(transparent, white)',
+            background: `linear-gradient(transparent, ${BRAND.darkGray})`,
           }} />
         </div>
       )}
@@ -150,12 +149,12 @@ export default function NewsletterGate({
       {/* Verification gate */}
       <div style={{
         position: 'relative',
-        backgroundColor: 'white',
+        backgroundColor: BRAND.black,
         borderRadius: '16px',
         padding: '50px 30px',
         textAlign: 'center',
-        boxShadow: '0 10px 40px rgba(0,0,0,0.12)',
-        border: '1px solid #e0e0e0',
+        boxShadow: `0 10px 40px rgba(0,0,0,0.5)`,
+        border: `1px solid ${BRAND.gold}33`,
         zIndex: 10,
         maxWidth: '500px',
         margin: '0 auto',
@@ -165,14 +164,14 @@ export default function NewsletterGate({
           display: 'inline-flex',
           alignItems: 'center',
           gap: '8px',
-          backgroundColor: '#0a253c',
-          color: 'white',
+          backgroundColor: BRAND.gold,
+          color: BRAND.black,
           padding: '8px 20px',
           borderRadius: '25px',
           marginBottom: '25px',
         }}>
-          <IconMail size={18} color="#00d4d4" />
-          <span style={{ fontSize: '.85rem', fontWeight: 600, letterSpacing: '0.5px' }}>
+          <IconMail size={18} color={BRAND.black} />
+          <span style={{ fontSize: '.85rem', fontWeight: 700, letterSpacing: '0.5px' }}>
             MEMBERS-ONLY CONTENT
           </span>
         </div>
@@ -184,7 +183,7 @@ export default function NewsletterGate({
               fontFamily: 'Poppins, sans-serif',
               fontSize: '1.4rem',
               fontWeight: 700,
-              color: '#0a253c',
+              color: BRAND.white,
               marginBottom: '12px',
             }}>
               Enter your email to verify your subscription
@@ -207,15 +206,17 @@ export default function NewsletterGate({
                   style={{
                     padding: '14px 18px',
                     fontSize: '1rem',
-                    border: verifyError ? '2px solid #dc2626' : '1px solid #ddd',
+                    border: verifyError ? `2px solid #ef4444` : `1px solid ${BRAND.gold}44`,
                     borderRadius: '8px',
                     outline: 'none',
                     width: '100%',
                     boxSizing: 'border-box',
+                    backgroundColor: BRAND.darkGray,
+                    color: BRAND.white,
                   }}
                 />
                 {verifyError && (
-                  <p style={{ color: '#dc2626', fontSize: '.85rem', margin: 0 }}>
+                  <p style={{ color: '#ef4444', fontSize: '.85rem', margin: 0 }}>
                     {verifyError}
                   </p>
                 )}
@@ -225,9 +226,9 @@ export default function NewsletterGate({
                   style={{
                     padding: '14px 24px',
                     fontSize: '1rem',
-                    fontWeight: 600,
-                    backgroundColor: isVerifying ? '#999' : '#008080',
-                    color: 'white',
+                    fontWeight: 700,
+                    backgroundColor: isVerifying ? '#666' : BRAND.gold,
+                    color: BRAND.black,
                     border: 'none',
                     borderRadius: '8px',
                     cursor: isVerifying ? 'wait' : 'pointer',
@@ -242,7 +243,7 @@ export default function NewsletterGate({
             {/* Divider */}
             <div style={{
               margin: '35px 0',
-              borderTop: '1px solid #e0e0e0',
+              borderTop: `1px solid ${BRAND.gold}33`,
               position: 'relative',
             }}>
               <span style={{
@@ -250,9 +251,9 @@ export default function NewsletterGate({
                 top: '-12px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                backgroundColor: 'white',
+                backgroundColor: BRAND.black,
                 padding: '0 15px',
-                color: '#999',
+                color: 'rgba(255,255,255,0.5)',
                 fontSize: '.85rem',
               }}>
                 or
@@ -264,13 +265,13 @@ export default function NewsletterGate({
               fontFamily: 'Poppins, sans-serif',
               fontSize: '1.1rem',
               fontWeight: 600,
-              color: '#0a253c',
+              color: BRAND.white,
               marginBottom: '10px',
             }}>
               Not a Subscriber Yet?
             </h4>
             <p style={{
-              color: '#666',
+              color: 'rgba(255,255,255,0.6)',
               fontSize: '.9rem',
               marginBottom: '15px',
             }}>
@@ -282,9 +283,9 @@ export default function NewsletterGate({
                 padding: '12px 28px',
                 fontSize: '.95rem',
                 fontWeight: 600,
-                backgroundColor: 'white',
-                color: '#008080',
-                border: '2px solid #008080',
+                backgroundColor: 'transparent',
+                color: BRAND.gold,
+                border: `2px solid ${BRAND.gold}`,
                 borderRadius: '8px',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
@@ -300,13 +301,13 @@ export default function NewsletterGate({
               fontFamily: 'Poppins, sans-serif',
               fontSize: '1.4rem',
               fontWeight: 700,
-              color: '#0a253c',
+              color: BRAND.white,
               marginBottom: '12px',
             }}>
               Subscribe to Lab Signals
             </h3>
             <p style={{
-              color: '#666',
+              color: 'rgba(255,255,255,0.7)',
               fontSize: '.95rem',
               lineHeight: 1.6,
               marginBottom: '20px',
@@ -335,11 +336,11 @@ export default function NewsletterGate({
                     display: 'flex',
                     alignItems: 'center',
                     gap: '10px',
-                    color: '#333',
+                    color: BRAND.white,
                     fontSize: '.9rem',
                   }}
                 >
-                  <IconCheckCircle size={18} color="#008080" />
+                  <IconCheckCircle size={18} color={BRAND.gold} />
                   <span>{benefit}</span>
                 </div>
               ))}
@@ -356,7 +357,7 @@ export default function NewsletterGate({
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#666',
+                color: BRAND.gold,
                 fontSize: '.85rem',
                 cursor: 'pointer',
                 textDecoration: 'underline',
