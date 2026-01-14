@@ -126,41 +126,21 @@ export default function LabSignalsPage() {
       </header>
 
       <main style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Hero Section */}
-        <section
-          ref={heroRef}
-          style={{
-            position: 'relative',
-            overflow: 'hidden',
-            minHeight: '350px',
-          }}
-        >
-          {/* Hero Image Background */}
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-          }}>
+        {/* Hero Section - Full Width Header Image */}
+        <section ref={heroRef}>
+          {/* Header Image */}
+          <div style={{ position: 'relative', width: '100%', height: '300px' }}>
             <Image
               src="/images/mouse-hero-blue.jpg"
-              alt=""
+              alt="Lab Signals"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               priority
             />
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%)',
-            }} />
           </div>
 
-          <div style={{ position: 'relative', padding: '60px 20px' }}>
+          {/* Hero Content */}
+          <div style={{ backgroundColor: BRAND.black, padding: '40px 20px' }}>
             <div className="hero-animate" style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -235,22 +215,51 @@ export default function LabSignalsPage() {
           </div>
         </section>
 
-        {/* Signup Section */}
+        {/* Signup Section with Video */}
         <section id="signup" style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.5rem',
-              fontWeight: 700,
-              marginBottom: '10px',
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            {/* Video */}
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%',
+              paddingTop: 0,
+              height: 0,
+              marginBottom: '40px',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
             }}>
-              Sign Up for Free Access
-            </h2>
-            <p style={{ color: BRAND.darkGray, fontSize: '.95rem', marginBottom: '25px' }}>
-              Get biweekly research insights delivered to your inbox
-            </p>
-            <FlodeskForm />
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+                src="https://mediazilla.com/xxexlvtJRB"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen"
+              />
+            </div>
+
+            {/* Signup Form */}
+            <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 style={{
+                color: BRAND.black,
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.5rem',
+                fontWeight: 700,
+                marginBottom: '10px',
+              }}>
+                Sign Up for Free Access
+              </h2>
+              <p style={{ color: BRAND.darkGray, fontSize: '.95rem', marginBottom: '25px' }}>
+                Get biweekly research insights delivered to your inbox
+              </p>
+              <FlodeskForm />
+            </div>
           </div>
         </section>
 
