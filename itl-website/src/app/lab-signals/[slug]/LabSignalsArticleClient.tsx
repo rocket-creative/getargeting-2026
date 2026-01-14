@@ -33,7 +33,7 @@ export default function LabSignalsArticleClient({
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current,
-        { opacity: 0, y: 20 },
+        { opacity: 0, y: 25 },
         { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
       );
     }
@@ -49,19 +49,19 @@ export default function LabSignalsArticleClient({
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 500);
-    return <p style={{ color: BRAND.darkGray, lineHeight: 1.8 }}>{textContent}...</p>;
+    return <p style={{ color: BRAND.darkGray, fontFamily: 'Lato, sans-serif', lineHeight: 1.8 }}>{textContent}...</p>;
   };
 
   return (
-    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '40px 20px' }}>
-      <div style={{ maxWidth: '800px' }}>
+    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         {/* Social Share */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: '25px',
-          paddingBottom: '15px',
+          marginBottom: '30px',
+          paddingBottom: '18px',
           borderBottom: `1px solid ${BRAND.lightGray}`,
         }}>
           <SocialShare
@@ -81,13 +81,14 @@ export default function LabSignalsArticleClient({
             dangerouslySetInnerHTML={{ __html: article.body }}
             style={{
               color: BRAND.darkGray,
+              fontFamily: 'Lato, sans-serif',
               fontSize: '1.05rem',
               lineHeight: 1.85,
             }}
           />
 
           <div style={{
-            marginTop: '35px',
+            marginTop: '40px',
             paddingTop: '25px',
             borderTop: `1px solid ${BRAND.lightGray}`,
             display: 'flex',
@@ -99,10 +100,13 @@ export default function LabSignalsArticleClient({
             <span style={{
               fontSize: '.7rem',
               fontWeight: 700,
+              fontFamily: 'Poppins, sans-serif',
               color: BRAND.black,
               backgroundColor: BRAND.gold,
-              padding: '4px 12px',
+              padding: '5px 14px',
               borderRadius: '12px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.3px',
             }}>
               {article.category}
             </span>
@@ -126,28 +130,29 @@ export default function LabSignalsArticleClient({
           .lab-signals-article h5 {
             font-family: 'Poppins', sans-serif;
             color: ${BRAND.black};
-            margin-top: 1.8em;
-            margin-bottom: 0.7em;
-            line-height: 1.3;
+            margin-top: 2em;
+            margin-bottom: 0.75em;
+            line-height: 1.35;
           }
           .lab-signals-article h1 { font-size: 1.8rem; font-weight: 700; }
           .lab-signals-article h2 { font-size: 1.5rem; font-weight: 700; }
           .lab-signals-article h3 { font-size: 1.25rem; font-weight: 600; }
           .lab-signals-article h4 { font-size: 1.1rem; font-weight: 600; }
           .lab-signals-article p {
-            margin-bottom: 1.4em;
+            margin-bottom: 1.5em;
             color: ${BRAND.darkGray};
           }
           .lab-signals-article ul,
           .lab-signals-article ol {
-            margin-bottom: 1.4em;
+            margin-bottom: 1.5em;
             padding-left: 1.5em;
             color: ${BRAND.darkGray};
           }
-          .lab-signals-article li { margin-bottom: 0.4em; }
+          .lab-signals-article li { margin-bottom: 0.5em; }
           .lab-signals-article a {
             color: ${BRAND.darkGray};
             text-decoration: underline;
+            transition: color 0.2s ease;
           }
           .lab-signals-article a:hover { color: ${BRAND.black}; }
           .lab-signals-article strong {
@@ -155,9 +160,9 @@ export default function LabSignalsArticleClient({
             color: ${BRAND.black};
           }
           .lab-signals-article blockquote {
-            border-left: 3px solid ${BRAND.mediumGray};
-            padding-left: 1.2em;
-            margin: 1.5em 0;
+            border-left: 4px solid ${BRAND.mediumGray};
+            padding-left: 1.5em;
+            margin: 1.8em 0;
             color: ${BRAND.mediumGray};
             font-style: italic;
           }
@@ -169,23 +174,24 @@ export default function LabSignalsArticleClient({
           .lab-signals-article img {
             max-width: 100%;
             height: auto;
-            border-radius: 6px;
-            margin: 1.5em 0;
+            border-radius: 8px;
+            margin: 1.8em 0;
           }
           .lab-signals-article table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5em 0;
+            margin: 1.8em 0;
           }
           .lab-signals-article th,
           .lab-signals-article td {
             border: 1px solid ${BRAND.lightGray};
-            padding: 10px;
+            padding: 12px;
             text-align: left;
           }
           .lab-signals-article th {
             background-color: ${BRAND.lightGray};
             font-weight: 600;
+            font-family: 'Poppins', sans-serif;
           }
           .lab-signals-article hr {
             border: none;
