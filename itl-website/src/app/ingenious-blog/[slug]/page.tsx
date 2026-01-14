@@ -56,43 +56,86 @@ function parseFrontmatter(fileContent: string) {
   return { data, content };
 }
 
-// Convert markdown to HTML
+// Convert markdown to HTML with proper structure
 function markdownToHtml(markdown: string): string {
-  let html = markdown
+  // Split into blocks by double newlines
+  const blocks = markdown.split(/\n\n+/);
+  const htmlBlocks: string[] = [];
+
+  for (const block of blocks) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+
+    // Skip image-only lines that aren't part of content
+    if (trimmed.startsWith('![') && trimmed.endsWith(')') && !trimmed.includes('\n')) {
+      // Extract image URL and create img tag
+      const imgMatch = trimmed.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+      if (imgMatch) {
+        htmlBlocks.push(`<figure class="blog-figure"><img src="${imgMatch[2]}" alt="${imgMatch[1]}" class="blog-image" loading="lazy" /></figure>`);
+      }
+      continue;
+    }
+
     // Headers
-    .replace(/^#### (.*$)/gm, '<h4 class="blog-h4">$1</h4>')
-    .replace(/^### (.*$)/gm, '<h3 class="blog-h3">$1</h3>')
-    .replace(/^## (.*$)/gm, '<h2 class="blog-h2">$1</h2>')
-    .replace(/^# (.*$)/gm, '<h1 class="blog-h1">$1</h1>')
-    // Bold
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Italic
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    if (trimmed.startsWith('#### ')) {
+      htmlBlocks.push(`<h4 class="blog-h4">${processInline(trimmed.slice(5))}</h4>`);
+    } else if (trimmed.startsWith('### ')) {
+      htmlBlocks.push(`<h3 class="blog-h3">${processInline(trimmed.slice(4))}</h3>`);
+    } else if (trimmed.startsWith('## ')) {
+      htmlBlocks.push(`<h2 class="blog-h2">${processInline(trimmed.slice(3))}</h2>`);
+    } else if (trimmed.startsWith('# ')) {
+      htmlBlocks.push(`<h1 class="blog-h1">${processInline(trimmed.slice(2))}</h1>`);
+    }
+    // Blockquotes
+    else if (trimmed.startsWith('> ')) {
+      const quoteContent = trimmed.split('\n').map(line => 
+        line.startsWith('> ') ? line.slice(2) : line
+      ).join(' ');
+      htmlBlocks.push(`<blockquote class="blog-quote">${processInline(quoteContent)}</blockquote>`);
+    }
+    // Unordered lists
+    else if (trimmed.startsWith('- ')) {
+      const items = trimmed.split('\n')
+        .filter(line => line.trim().startsWith('- '))
+        .map(line => `<li>${processInline(line.slice(2).trim())}</li>`)
+        .join('');
+      htmlBlocks.push(`<ul class="blog-list">${items}</ul>`);
+    }
+    // Horizontal rule
+    else if (trimmed === '---') {
+      htmlBlocks.push('<hr class="blog-hr" />');
+    }
+    // Link-only blocks (CTA buttons)
+    else if (trimmed.startsWith('[') && trimmed.includes('](') && trimmed.endsWith(')')) {
+      const linkMatch = trimmed.match(/\[([^\]]+)\]\(([^)]+)\)/);
+      if (linkMatch) {
+        htmlBlocks.push(`<p class="blog-cta"><a href="${linkMatch[2]}" class="blog-button">${linkMatch[1]}</a></p>`);
+      }
+    }
+    // Regular paragraphs
+    else {
+      // Handle single line breaks within a paragraph
+      const processed = trimmed.split('\n').map(line => processInline(line.trim())).join('<br />');
+      htmlBlocks.push(`<p>${processed}</p>`);
+    }
+  }
+
+  return htmlBlocks.join('\n');
+}
+
+// Process inline markdown (bold, italic, links, images)
+function processInline(text: string): string {
+  return text
+    // Images within text
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="blog-inline-image" loading="lazy" />')
     // Links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="blog-link">$1</a>')
-    // Blockquotes
-    .replace(/^> (.*$)/gm, '<blockquote class="blog-quote">$1</blockquote>')
-    // Unordered lists
-    .replace(/^- (.*$)/gm, '<li>$1</li>')
-    // Numbered lists
-    .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
-    // Horizontal rules
-    .replace(/^---$/gm, '<hr class="blog-hr" />')
-    // Paragraphs (double newlines)
-    .replace(/\n\n/g, '</p><p>')
-    // Line breaks
-    .replace(/\n/g, '<br />');
-
-  // Wrap consecutive list items in ul
-  html = html.replace(/(<li>[^<]*<\/li>(\s*<br \/>)?)+/g, (match) => {
-    const cleaned = match.replace(/<br \/>/g, '');
-    return `<ul class="blog-list">${cleaned}</ul>`;
-  });
-
-  // Clean up multiple consecutive list wraps
-  html = html.replace(/<\/ul>\s*<ul class="blog-list">/g, '');
-
-  return `<p>${html}</p>`;
+    // Bold
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    // Italic
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    // Code
+    .replace(/`([^`]+)`/g, '<code class="blog-code">$1</code>');
 }
 
 // Get all blog slugs for static generation
@@ -265,15 +308,140 @@ export default async function IngeniousBlogPost({
         {/* Content */}
         <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            {/* Blog Content Styles */}
+            <style>{`
+              .blog-content {
+                font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+                font-size: 1.05rem;
+                line-height: 1.9;
+                color: #333;
+              }
+              .blog-content h1.blog-h1 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #1a4a6e;
+                margin: 2.5rem 0 1rem;
+                line-height: 1.3;
+              }
+              .blog-content h2.blog-h2 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #2384da;
+                margin: 2.5rem 0 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid #008080;
+                line-height: 1.3;
+              }
+              .blog-content h3.blog-h3 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #1a4a6e;
+                margin: 2rem 0 0.75rem;
+                line-height: 1.4;
+              }
+              .blog-content h4.blog-h4 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #333;
+                margin: 1.75rem 0 0.5rem;
+                line-height: 1.4;
+              }
+              .blog-content p {
+                margin: 0 0 1.5rem;
+                color: #444;
+              }
+              .blog-content .blog-link {
+                color: #008080;
+                text-decoration: underline;
+                text-decoration-color: rgba(0,128,128,0.3);
+                text-underline-offset: 3px;
+                transition: color 0.2s ease;
+              }
+              .blog-content .blog-link:hover {
+                color: #006666;
+                text-decoration-color: #006666;
+              }
+              .blog-content .blog-list {
+                margin: 1rem 0 1.5rem 1.5rem;
+                padding: 0;
+              }
+              .blog-content .blog-list li {
+                margin-bottom: 0.6rem;
+                line-height: 1.7;
+                color: #444;
+              }
+              .blog-content .blog-list li::marker {
+                color: #008080;
+              }
+              .blog-content .blog-quote {
+                margin: 1.5rem 0;
+                padding: 1rem 1.5rem;
+                border-left: 4px solid #008080;
+                background: #f7f9fa;
+                color: #555;
+                font-style: italic;
+                border-radius: 0 6px 6px 0;
+              }
+              .blog-content .blog-figure {
+                margin: 2rem 0;
+                text-align: center;
+              }
+              .blog-content .blog-image {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+              }
+              .blog-content .blog-inline-image {
+                max-width: 100%;
+                height: auto;
+                margin: 1rem 0;
+                border-radius: 6px;
+              }
+              .blog-content .blog-hr {
+                border: none;
+                border-top: 1px solid #e0e0e0;
+                margin: 2rem 0;
+              }
+              .blog-content .blog-cta {
+                margin: 1.5rem 0;
+              }
+              .blog-content .blog-button {
+                display: inline-block;
+                background: #008080;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                transition: all 0.2s ease;
+              }
+              .blog-content .blog-button:hover {
+                background: #006666;
+                transform: translateY(-2px);
+              }
+              .blog-content .blog-code {
+                background: #f4f4f4;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'Monaco', 'Menlo', monospace;
+                font-size: 0.9em;
+                color: #d63384;
+              }
+              .blog-content strong {
+                font-weight: 600;
+                color: #222;
+              }
+            `}</style>
             {contentExists ? (
               <div
                 className="blog-content"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
-                style={{
-                  color: '#333',
-                  fontSize: '1rem',
-                  lineHeight: '1.8',
-                }}
               />
             ) : (
               <div
