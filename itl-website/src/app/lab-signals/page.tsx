@@ -14,6 +14,7 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCStartProjectCTA,
+  FlodeskForm,
   IconDNA,
   IconFileText,
   IconArrowRight,
@@ -235,25 +236,13 @@ export default function LabSignalsPage() {
             >
               Your Biweekly Source for Life Science Research Insights
             </p>
-            <a
-              href="https://go.genetargeting.com/lab-signals-signup"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-animate inline-flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{
-                backgroundColor: '#008080',
-                color: 'white',
-                padding: '16px 36px',
-                fontSize: '1.1rem',
-                fontWeight: 600,
-                borderRadius: '8px',
-                textDecoration: 'none',
-                boxShadow: '0 4px 15px rgba(0,128,128,0.4)',
-              }}
-            >
-              <span>Subscribe Free</span>
-              <IconArrowRight size={20} color="white" />
-            </a>
+          </div>
+        </section>
+
+        {/* Flodesk Signup Form Section */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <FlodeskForm />
           </div>
         </section>
 
@@ -453,9 +442,9 @@ export default function LabSignalsPage() {
           </div>
         </section>
 
-        {/* Newsletter Signup CTA */}
+        {/* Newsletter Signup CTA with Flodesk Form */}
         <section style={{ backgroundColor: '#0a253c', padding: '80px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <IconMail size={56} color="#00d4d4" />
             <h2
               style={{
@@ -478,25 +467,7 @@ export default function LabSignalsPage() {
             >
               Join thousands of researchers receiving biweekly insights on mouse model development, gene targeting strategies, and the latest in biomedical research.
             </p>
-            <a
-              href="https://go.genetargeting.com/lab-signals-signup"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{
-                backgroundColor: '#008080',
-                color: 'white',
-                padding: '16px 40px',
-                fontSize: '1.1rem',
-                fontWeight: 600,
-                borderRadius: '8px',
-                textDecoration: 'none',
-                boxShadow: '0 4px 15px rgba(0,128,128,0.4)',
-              }}
-            >
-              <span>Subscribe Free</span>
-              <IconArrowRight size={20} color="white" />
-            </a>
+            <FlodeskForm />
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '.85rem', marginTop: '16px' }}>
               Lab Signals is powered by Ingenious Targeting Laboratory
             </p>

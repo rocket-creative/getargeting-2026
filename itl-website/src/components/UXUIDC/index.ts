@@ -66,5 +66,8 @@ export {
   getRelatedLabSignalsArticles
 } from './LabSignalsSignup';
 
+// Flodesk Form
+export { default as FlodeskForm } from './FlodeskForm';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';
