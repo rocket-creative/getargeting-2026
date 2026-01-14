@@ -39,5 +39,8 @@ export {
 // Icons - Flat SVG icons (no emojis)
 export * from './Icons';
 
+// Legacy Content Links
+export { default as LegacyInfoLink } from './LegacyInfoLink';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';
