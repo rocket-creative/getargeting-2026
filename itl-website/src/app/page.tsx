@@ -22,6 +22,7 @@ import TrustedBySection from './components/homepage/TrustedBySection';
 import TestimonialsSection from './components/homepage/TestimonialsSection';
 import StartProjectSection from './components/homepage/StartProjectSection';
 import FAQSection from './components/homepage/FAQSection';
+import VideoSection from './components/homepage/VideoSection';
 
 // ============================================
 // META - from homepage.md lines 1-6
@@ -222,6 +223,9 @@ export default function HomePage() {
         
         {/* 1. Hero Section */}
         <HeroSection data={heroData} />
+
+        {/* Video Section */}
+        <VideoSection />
 
         {/* 2. Core Research Services */}
         <CoreServicesSection data={servicesData} />
