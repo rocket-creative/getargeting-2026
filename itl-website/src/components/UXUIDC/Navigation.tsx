@@ -100,6 +100,7 @@ const navigationItems: NavItem[] = [
     href: '/resources',
     children: [
       { label: 'View All Resources', href: '/resources' },
+      { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
       { label: 'Publications', href: '/publications' },

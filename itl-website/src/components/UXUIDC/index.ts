@@ -19,6 +19,8 @@ export { default as UXUIDCTrustBadges } from './TrustBadges';
 // Cards & Lists
 export { default as UXUIDCServiceCard, UXUIDCServiceCardGrid } from './ServiceCard';
 export { default as UXUIDCTestimonialCard, UXUIDCTestimonialsSection } from './TestimonialCard';
+export { PublicationCard, PublicationList } from './PublicationCard';
+export type { PublicationData } from './PublicationCard';
 
 // Reusable Animated Components
 export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
@@ -56,6 +58,13 @@ export {
   pricingResources,
   conditionalReversibleResources
 } from './ResourceLinks';
+
+// Lab Signals Newsletter
+export { 
+  default as LabSignalsSignup,
+  labSignalsArticles,
+  getRelatedLabSignalsArticles
+} from './LabSignalsSignup';
 
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';

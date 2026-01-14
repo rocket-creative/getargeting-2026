@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, creResources, breedingResources } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -164,24 +164,23 @@ const applicationsData = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Salzbank J, Lacaille H, Gaby J, O'Reilly JJ, Kissner M, Vacher CM, Penn AA.",
-    year: "2025",
-    title: "Microglia alter sex-specific cerebellar myelination following placental hormone loss.",
-    journal: "Nat Commun. 16(1): 9846"
-  },
-  {
-    authors: "Wang L, Noyer L, Jishage M, Wang YH, Tao AY, McDermott M, Gando I, Sidhu I, Hu K, Zhong L, Sun K, Drmic D, Kaufmann U, Feske S.",
+    authors: "Wang L, Noyer L, Jishage M, et al.",
     year: "2025",
     title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
-    journal: "Sci Immunol 108(10): eadq8860"
+    journal: "Sci Immunol",
+    volume: "10(108): eadq8860",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
   },
   {
-    authors: "Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM Jr.",
-    year: "2025",
-    title: "Presynaptic α2δs specify synaptic gain, not synaptogenesis, in the mammalian brain.",
-    journal: "Neuron 12(113): p1886-1897.E9"
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -869,7 +868,7 @@ export default function CreLoxSystemPage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -879,8 +878,36 @@ export default function CreLoxSystemPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}
@@ -994,6 +1021,19 @@ export default function CreLoxSystemPage() {
               description="Download our free guides and tools for your Cre-lox project."
               resources={[...creResources, ...breedingResources]}
               variant="card"
+            />
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter Section */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Master the Cre-Lox System"
+              description="Subscribe to Lab Signals for expert articles on Cre-lox design, floxed allele optimization, and conditional gene targeting strategies."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/cre-lox-system')}
             />
           </div>
         </section>

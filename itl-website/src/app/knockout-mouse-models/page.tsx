@@ -22,6 +22,8 @@ import {
   UXUIDCResourceLinks,
   conditionalKnockoutResources,
   breedingResources,
+  LabSignalsSignup,
+  getRelatedLabSignalsArticles,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -964,6 +966,19 @@ export default function KnockoutMouseModelsPage() {
               description="Download our free guides and use our interactive tools to plan your knockout project."
               resources={[...conditionalKnockoutResources, ...breedingResources]}
               variant="card"
+            />
+          </div>
+        </section>
+
+        {/* ========== LAB SIGNALS NEWSLETTER ========== */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Learn How Knockout Mice Are Made"
+              description="Subscribe to Lab Signals for step-by-step guides, CRISPR vs ES cell targeting comparisons, and expert insights on knockout mouse generation."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/knockout-mouse-models')}
             />
           </div>
         </section>
