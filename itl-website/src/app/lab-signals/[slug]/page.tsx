@@ -94,9 +94,11 @@ export default async function LabSignalsArticlePage({
 
   return (
     <div style={{ backgroundColor: BRAND.bodyGray }}>
-      {/* Article Header */}
-      <section style={{ backgroundColor: BRAND.lightGray, padding: '30px 20px 40px' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      {/* Page wrapper - 1200px max */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        
+        {/* Article Header */}
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '30px 20px 40px' }}>
           {/* Back Link */}
           <Link
             href="/lab-signals"
@@ -134,10 +136,11 @@ export default async function LabSignalsArticlePage({
           <h1 style={{
             color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
+            fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
             fontWeight: 700,
-            lineHeight: 1.25,
+            lineHeight: 1.3,
             marginBottom: '15px',
+            maxWidth: '900px',
           }}>
             {article.title}
           </h1>
@@ -146,52 +149,52 @@ export default async function LabSignalsArticlePage({
             <p style={{
               color: BRAND.mediumGray,
               fontFamily: 'Lato, sans-serif',
-              fontSize: '1rem',
+              fontSize: '1.1rem',
               lineHeight: 1.5,
             }}>
               {article.subtitle}
             </p>
           )}
-        </div>
-      </section>
+        </section>
 
-      {/* Article Content */}
-      <LabSignalsArticleClient 
-        article={article}
-        articleUrl={articleUrl}
-      />
+        {/* Article Content */}
+        <LabSignalsArticleClient 
+          article={article}
+          articleUrl={articleUrl}
+        />
 
-      {/* Related Articles */}
-      <RelatedArticles articles={relatedArticles} categoryName={article.category} />
+        {/* Related Articles */}
+        <RelatedArticles articles={relatedArticles} categoryName={article.category} />
 
-      {/* Related Service */}
-      {article.relatedPage && <ServiceLink href={article.relatedPage} />}
+        {/* Related Service */}
+        {article.relatedPage && <ServiceLink href={article.relatedPage} />}
 
-      {/* Newsletter CTA */}
-      <section style={{ backgroundColor: BRAND.gold, padding: '55px 20px' }}>
-        <div style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
-          <h3 style={{
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-            fontWeight: 700,
-            marginBottom: '10px',
-          }}>
-            Get More Research Insights
-          </h3>
-          <p style={{ 
-            color: 'rgba(0,0,0,0.7)', 
-            fontFamily: 'Lato, sans-serif',
-            fontSize: '.9rem', 
-            marginBottom: '25px',
-            lineHeight: 1.6,
-          }}>
-            Subscribe for biweekly updates on mouse model research.
-          </p>
-          <FlodeskForm />
-        </div>
-      </section>
+        {/* Newsletter CTA */}
+        <section style={{ backgroundColor: BRAND.gold, padding: '55px 20px' }}>
+          <div style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+            <h3 style={{
+              color: BRAND.black,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+              fontWeight: 700,
+              marginBottom: '10px',
+            }}>
+              Get More Research Insights
+            </h3>
+            <p style={{ 
+              color: 'rgba(0,0,0,0.7)', 
+              fontFamily: 'Lato, sans-serif',
+              fontSize: '.9rem', 
+              marginBottom: '25px',
+              lineHeight: 1.6,
+            }}>
+              Subscribe for biweekly updates on mouse model research.
+            </p>
+            <FlodeskForm />
+          </div>
+        </section>
 
+      </div>
     </div>
   );
 }
