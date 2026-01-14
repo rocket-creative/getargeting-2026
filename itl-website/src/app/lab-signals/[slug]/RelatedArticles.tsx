@@ -6,7 +6,7 @@ const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
-  lightGray: '#f0f0f0',
+  lightGray: '#f5f5f5',
   mediumGray: '#888888',
   darkGray: '#444444',
 };

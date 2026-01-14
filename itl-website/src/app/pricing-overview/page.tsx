@@ -587,10 +587,10 @@ export default function PricingOverviewPage() {
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="animate-in" style={{
-              background: '#fff8e6',
+              background: '#f7f7f7',
               borderRadius: '8px',
               padding: '32px',
-              borderLeft: '4px solid #f39c12'
+              borderLeft: '4px solid #2384da'
             }}>
               <h2 style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -613,7 +613,7 @@ export default function PricingOverviewPage() {
                     fontSize: '.85rem',
                     color: '#666'
                   }}>
-                    <IconShield size={14} color="#f39c12" />
+                    <IconShield size={14} color="#2384da" />
                     <span>{item}</span>
                   </div>
                 ))}

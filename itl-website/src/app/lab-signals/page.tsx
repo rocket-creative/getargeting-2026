@@ -32,8 +32,7 @@ const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
-  lightGray: '#f0f0f0',
-  bodyGray: '#e8e8e8',
+  lightGray: '#f5f5f5',
   mediumGray: '#888888',
   darkGray: '#444444',
   borderGray: '#d0d0d0',
@@ -120,9 +119,12 @@ export default function LabSignalsPage() {
   });
 
   return (
-    <div style={{ backgroundColor: BRAND.bodyGray }}>
-      {/* Hero Section - Header Image with Overlay Content */}
-      <section ref={heroRef} style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto' }}>
+    <div style={{ backgroundColor: BRAND.white }}>
+      {/* Page wrapper - 1200px max for all sections */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        
+        {/* Hero Section - Header Image with Overlay Content */}
+        <section ref={heroRef} style={{ position: 'relative' }}>
         {/* Back to Ingenious - floating top right */}
         <Link
           href="/"
@@ -272,9 +274,9 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
-      {/* Section: Video */}
-      <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
-        <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
+        {/* Section: Video */}
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px', borderRadius: '8px', marginTop: '20px' }}>
+          <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             position: 'relative',
             paddingBottom: '56.25%',
@@ -298,11 +300,11 @@ export default function LabSignalsPage() {
             />
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Section: Signup */}
-      <section id="signup" style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
-        <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+        {/* Section: Signup */}
+        <section id="signup" style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
+          <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{
             color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
@@ -321,13 +323,13 @@ export default function LabSignalsPage() {
           }}>
             Get biweekly research insights delivered to your inbox
           </p>
-          <FlodeskForm />
-        </div>
-      </section>
+            <FlodeskForm />
+          </div>
+        </section>
 
-      {/* Section: Why Subscribe */}
-      <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Section: Why Subscribe */}
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px', borderRadius: '8px' }}>
+          <div>
           <h2 className="section-animate" style={{
             color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
@@ -397,14 +399,14 @@ export default function LabSignalsPage() {
                   {item.desc}
                 </p>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Section: All Articles */}
-      <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Section: All Articles */}
+        <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
+          <div>
           <div className="section-animate" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
@@ -570,36 +572,38 @@ export default function LabSignalsPage() {
               >
                 Clear Filters
               </button>
-            </div>
-          )}
-        </div>
-      </section>
+              </div>
+            )}
+          </div>
+        </section>
 
-      {/* Section: Final CTA - Gold, full width */}
-      <section style={{ backgroundColor: BRAND.gold, padding: '60px 20px' }}>
-        <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-          <IconMail size={40} color={BRAND.black} />
-          <h2 style={{
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
-            fontWeight: 700,
-            margin: '18px 0 10px',
-          }}>
-            Join Lab Signals Today
-          </h2>
-          <p style={{ 
-            color: 'rgba(0,0,0,0.7)', 
-            fontFamily: 'Lato, sans-serif',
-            fontSize: '.95rem', 
-            marginBottom: '25px',
-            lineHeight: 1.6,
-          }}>
-            Join thousands of researchers receiving biweekly insights.
-          </p>
-          <FlodeskForm />
-        </div>
-      </section>
+        {/* Section: Final CTA - Gold */}
+        <section style={{ backgroundColor: BRAND.gold, padding: '60px 20px', borderRadius: '8px', marginTop: '20px', marginBottom: '20px' }}>
+          <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+            <IconMail size={40} color={BRAND.black} />
+            <h2 style={{
+              color: BRAND.black,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
+              fontWeight: 700,
+              margin: '18px 0 10px',
+            }}>
+              Join Lab Signals Today
+            </h2>
+            <p style={{ 
+              color: 'rgba(0,0,0,0.7)', 
+              fontFamily: 'Lato, sans-serif',
+              fontSize: '.95rem', 
+              marginBottom: '25px',
+              lineHeight: 1.6,
+            }}>
+              Join thousands of researchers receiving biweekly insights.
+            </p>
+            <FlodeskForm />
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }

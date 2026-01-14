@@ -16,8 +16,7 @@ const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
-  lightGray: '#f0f0f0',
-  bodyGray: '#e8e8e8',
+  lightGray: '#f5f5f5',
   mediumGray: '#888888',
   darkGray: '#444444',
 };
@@ -93,7 +92,7 @@ export default async function LabSignalsArticlePage({
   const articleUrl = `https://www.genetargeting.com/lab-signals/${article.slug}`;
 
   return (
-    <div style={{ backgroundColor: BRAND.bodyGray }}>
+    <div style={{ backgroundColor: BRAND.white }}>
       {/* Page wrapper - 1200px max */}
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         
