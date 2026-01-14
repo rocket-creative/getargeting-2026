@@ -549,24 +549,45 @@ export default function PublicationsPage() {
                               marginBottom: '8px',
                               lineHeight: 1.6
                             }}>
-                              {pub.authors} {pub.year}.
+                              {pub.authors}{' '}{pub.year}.
                             </p>
-                            <p style={{
-                              fontSize: '.95rem',
-                              color: '#333',
-                              fontWeight: 500,
-                              marginBottom: '8px',
-                              lineHeight: 1.5
-                            }}>
-                              {pub.title}
-                            </p>
+                            {pub.link ? (
+                              <a
+                                href={pub.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                  display: 'block',
+                                  fontSize: '.95rem',
+                                  color: '#008080',
+                                  fontWeight: 500,
+                                  marginBottom: '8px',
+                                  lineHeight: 1.5,
+                                  textDecoration: 'none'
+                                }}
+                                onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+                                onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+                              >
+                                {pub.title}
+                              </a>
+                            ) : (
+                              <p style={{
+                                fontSize: '.95rem',
+                                color: '#333',
+                                fontWeight: 500,
+                                marginBottom: '8px',
+                                lineHeight: 1.5
+                              }}>
+                                {pub.title}
+                              </p>
+                            )}
                             <p style={{
                               fontSize: '.85rem',
-                              color: '#008080',
+                              color: '#666',
                               fontStyle: 'italic'
                             }}>
                               <em>{pub.journal}</em>
-                              {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
+                              {pub.volume && <span style={{ fontStyle: 'normal' }}>{' '}{pub.volume}</span>}
                             </p>
                           </div>
                         ))}
