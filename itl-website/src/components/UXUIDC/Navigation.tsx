@@ -99,11 +99,12 @@ const navigationItems: NavItem[] = [
     label: 'Resources',
     href: '/resources',
     children: [
+      { label: 'View All Resources', href: '/resources' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
+      { label: 'Publications', href: '/publications' },
       { label: 'C57BL/6 Background', href: '/c57bl6-mouse-background' },
       { label: 'BALB/c Background', href: '/balbc-mouse-background' },
       { label: 'Pricing Overview', href: '/pricing-overview' },
-      { label: 'Publications', href: '/publications' },
     ],
   },
   {
