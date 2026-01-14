@@ -2,8 +2,8 @@
 
 /**
  * Lab Signals Page - Newsletter Hub
- * Standalone branding with light grey/white sections
- * No nav/footer - only link back to Ingenious
+ * Colors: gold #fb0, black, grey, white only
+ * Max width 1200px, flat grey icons
  */
 
 import { useEffect, useRef, useState } from 'react';
@@ -15,7 +15,6 @@ import {
   FlodeskForm,
   IconFileText,
   IconArrowRight,
-  IconCheckCircle,
   IconTarget,
   IconFlask,
   IconMail,
@@ -27,36 +26,20 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Lab Signals brand colors
+// Lab Signals colors - gold, black, grey, white only
 const BRAND = {
   gold: '#fb0',
   black: '#000000',
   white: '#ffffff',
   lightGray: '#f5f5f5',
-  mediumGray: '#e8e8e8',
+  mediumGray: '#888888',
+  darkGray: '#444444',
+  borderGray: '#e0e0e0',
 };
 
-// Category colors
-const getCategoryColor = (category: string): string => {
-  const colors: Record<string, string> = {
-    'Neuroscience': '#8b5cf6',
-    'Metabolic': '#f59e0b',
-    'Immunology': '#10b981',
-    'Oncology': '#ef4444',
-    'Technology': '#3b82f6',
-    'Technical Guide': '#0891b2',
-    'Selection Guide': '#a855f7',
-    'Resources': '#06b6d4',
-    'Research': '#6366f1',
-    'Industry Insights': '#ec4899',
-    'Comparison': '#14b8a6',
-  };
-  return colors[category] || '#666';
-};
-
-// RSS Icon
-const RSSIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+// RSS Icon (flat grey)
+const RSSIcon = ({ color = BRAND.mediumGray }: { color?: string }) => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill={color}>
     <circle cx="6.18" cy="17.82" r="2.18"/>
     <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
   </svg>
@@ -108,18 +91,16 @@ export default function LabSignalsPage() {
   });
 
   return (
-    <div style={{ backgroundColor: BRAND.lightGray, minHeight: '100vh' }}>
+    <div style={{ backgroundColor: BRAND.lightGray }}>
       {/* Header */}
-      <header style={{
-        backgroundColor: BRAND.black,
-        padding: '15px 30px',
-      }}>
+      <header style={{ backgroundColor: BRAND.black }}>
         <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '15px 20px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          maxWidth: '1200px',
-          margin: '0 auto',
         }}>
           <Link href="/lab-signals" style={{ display: 'block' }}>
             <Image 
@@ -144,31 +125,30 @@ export default function LabSignalsPage() {
         </div>
       </header>
 
-      <main>
+      <main style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Hero Section */}
         <section
           ref={heroRef}
           style={{
-            backgroundColor: BRAND.black,
-            padding: '50px 20px 60px',
             position: 'relative',
             overflow: 'hidden',
+            minHeight: '350px',
           }}
         >
-          {/* Hero Image */}
+          {/* Hero Image Background */}
           <div style={{
             position: 'absolute',
             top: 0,
+            left: 0,
             right: 0,
             bottom: 0,
-            width: '45%',
-            opacity: 0.25,
           }}>
             <Image
               src="/images/mouse-hero-blue.jpg"
               alt=""
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
+              priority
             />
             <div style={{
               position: 'absolute',
@@ -176,11 +156,11 @@ export default function LabSignalsPage() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: `linear-gradient(90deg, ${BRAND.black} 0%, transparent 100%)`,
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%)',
             }} />
           </div>
 
-          <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+          <div style={{ position: 'relative', padding: '60px 20px' }}>
             <div className="hero-animate" style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -206,7 +186,7 @@ export default function LabSignalsPage() {
               Lab Signals
             </h1>
             <p className="hero-animate" style={{
-              color: 'rgba(255,255,255,0.85)',
+              color: 'rgba(255,255,255,0.9)',
               fontSize: '1.15rem',
               lineHeight: '1.5',
               maxWidth: '550px',
@@ -220,7 +200,6 @@ export default function LabSignalsPage() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '8px',
                   backgroundColor: BRAND.gold,
                   color: BRAND.black,
                   padding: '12px 24px',
@@ -240,16 +219,17 @@ export default function LabSignalsPage() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  backgroundColor: '#f97316',
-                  color: 'white',
+                  backgroundColor: 'rgba(255,255,255,0.15)',
+                  color: BRAND.white,
                   padding: '12px 20px',
                   borderRadius: '6px',
                   fontSize: '.9rem',
                   fontWeight: 500,
                   textDecoration: 'none',
+                  border: '1px solid rgba(255,255,255,0.3)',
                 }}
               >
-                <RSSIcon /> RSS
+                <RSSIcon color={BRAND.white} /> RSS Feed
               </a>
             </div>
           </div>
@@ -257,17 +237,17 @@ export default function LabSignalsPage() {
 
         {/* Signup Section */}
         <section id="signup" style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '650px', margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.6rem',
+              fontSize: '1.5rem',
               fontWeight: 700,
               marginBottom: '10px',
             }}>
               Sign Up for Free Access
             </h2>
-            <p style={{ color: '#666', fontSize: '.95rem', marginBottom: '25px' }}>
+            <p style={{ color: BRAND.darkGray, fontSize: '.95rem', marginBottom: '25px' }}>
               Get biweekly research insights delivered to your inbox
             </p>
             <FlodeskForm />
@@ -276,246 +256,229 @@ export default function LabSignalsPage() {
 
         {/* Why Subscribe */}
         <section style={{ backgroundColor: BRAND.lightGray, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.5rem',
-              fontWeight: 700,
-              marginBottom: '30px',
-              textAlign: 'center',
-            }}>
-              Why Researchers Stay Connected
-            </h2>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '20px',
-            }}>
-              {[
-                { icon: IconFileText, title: "Expert Analysis", desc: "Written by PhD-level scientists with practical application." },
-                { icon: IconTarget, title: "Actionable Insights", desc: "Apply trends directly to your research projects." },
-                { icon: IconFlask, title: "Full Archive Access", desc: "Instant access to all past articles upon signup." }
-              ].map((item, i) => (
-                <div key={i} style={{
-                  textAlign: 'center',
-                  padding: '25px 15px',
-                  backgroundColor: BRAND.white,
-                  borderRadius: '10px',
+          <h2 style={{
+            color: BRAND.black,
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '1.4rem',
+            fontWeight: 700,
+            marginBottom: '30px',
+            textAlign: 'center',
+          }}>
+            Why Researchers Stay Connected
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '20px',
+          }}>
+            {[
+              { icon: IconFileText, title: "Expert Analysis", desc: "Written by PhD-level scientists with practical application." },
+              { icon: IconTarget, title: "Actionable Insights", desc: "Apply trends directly to your research projects." },
+              { icon: IconFlask, title: "Full Archive Access", desc: "Instant access to all past articles upon signup." }
+            ].map((item, i) => (
+              <div key={i} style={{
+                textAlign: 'center',
+                padding: '25px 15px',
+                backgroundColor: BRAND.white,
+                borderRadius: '8px',
+              }}>
+                <div style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  backgroundColor: BRAND.lightGray,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 12px',
                 }}>
-                  <div style={{
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '50%',
-                    backgroundColor: `${BRAND.gold}22`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 12px',
-                  }}>
-                    <item.icon size={24} color="#d4a000" />
-                  </div>
-                  <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, color: BRAND.black, marginBottom: '6px' }}>
-                    {item.title}
-                  </h3>
-                  <p style={{ color: '#666', fontSize: '.85rem', lineHeight: 1.5 }}>{item.desc}</p>
+                  <item.icon size={24} color={BRAND.mediumGray} />
                 </div>
-              ))}
-            </div>
+                <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, color: BRAND.black, marginBottom: '6px' }}>
+                  {item.title}
+                </h3>
+                <p style={{ color: BRAND.darkGray, fontSize: '.85rem', lineHeight: 1.5 }}>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* All Articles Section */}
         <section style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ 
-              display: 'flex', 
-              justifyContent: 'space-between', 
-              alignItems: 'flex-start',
-              flexWrap: 'wrap',
-              gap: '20px',
-              marginBottom: '25px' 
-            }}>
-              <div>
-                <h2 style={{
-                  color: BRAND.black,
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '1.5rem',
-                  fontWeight: 700,
-                  marginBottom: '5px',
-                }}>
-                  All Articles ({newsletterArticles.length})
-                </h2>
-                <p style={{ color: '#666', fontSize: '.9rem' }}>
-                  {filteredArticles.length !== newsletterArticles.length && 
-                    `Showing ${filteredArticles.length} articles`}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'flex-start',
+            flexWrap: 'wrap',
+            gap: '20px',
+            marginBottom: '25px' 
+          }}>
+            <div>
+              <h2 style={{
+                color: BRAND.black,
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.4rem',
+                fontWeight: 700,
+                marginBottom: '5px',
+              }}>
+                All Articles ({newsletterArticles.length})
+              </h2>
+              {filteredArticles.length !== newsletterArticles.length && (
+                <p style={{ color: BRAND.mediumGray, fontSize: '.85rem' }}>
+                  Showing {filteredArticles.length} articles
                 </p>
-              </div>
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  padding: '10px 14px',
-                  fontSize: '.9rem',
-                  border: '1px solid #ddd',
-                  borderRadius: '6px',
-                  width: '250px',
-                  outline: 'none',
-                }}
-              />
+              )}
             </div>
-
-            {/* Category Filter */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '25px' }}>
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  style={{
-                    padding: '6px 14px',
-                    fontSize: '.8rem',
-                    fontWeight: 500,
-                    border: 'none',
-                    borderRadius: '20px',
-                    cursor: 'pointer',
-                    backgroundColor: selectedCategory === category ? BRAND.black : BRAND.lightGray,
-                    color: selectedCategory === category ? BRAND.white : '#555',
-                  }}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Articles Grid - All articles */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              gap: '16px',
-            }}>
-              {filteredArticles.map((article, i) => (
-                <Link
-                  key={article.id}
-                  href={`/lab-signals/${article.slug}`}
-                  className="animate-in"
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    backgroundColor: BRAND.lightGray,
-                    borderRadius: '10px',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-3px)';
-                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  {/* Gold top bar */}
-                  <div style={{
-                    backgroundColor: BRAND.gold,
-                    padding: '12px 16px',
-                    minHeight: '50px',
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}>
-                    <span style={{
-                      color: BRAND.black,
-                      fontFamily: 'Poppins, sans-serif',
-                      fontSize: '.85rem',
-                      fontWeight: 700,
-                      lineHeight: 1.3,
-                    }}>
-                      {article.subtitle || article.category}
-                    </span>
-                  </div>
-                  <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <span style={{
-                      display: 'inline-block',
-                      backgroundColor: `${getCategoryColor(article.category)}18`,
-                      color: getCategoryColor(article.category),
-                      fontSize: '.65rem',
-                      fontWeight: 600,
-                      padding: '3px 8px',
-                      borderRadius: '10px',
-                      marginBottom: '8px',
-                      alignSelf: 'flex-start',
-                    }}>
-                      {article.category}
-                    </span>
-                    <h3 style={{
-                      color: BRAND.black,
-                      fontFamily: 'Poppins, sans-serif',
-                      fontSize: '.9rem',
-                      fontWeight: 600,
-                      lineHeight: 1.35,
-                      marginBottom: '8px',
-                      flex: 1,
-                    }}>
-                      {article.title}
-                    </h3>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <span style={{ color: '#d4a000', fontSize: '.8rem', fontWeight: 600 }}>Read</span>
-                      <IconArrowRight size={12} color="#d4a000" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {filteredArticles.length === 0 && (
-              <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-                <p style={{ color: '#666' }}>No articles found.</p>
-                <button
-                  onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-                  style={{
-                    marginTop: '10px',
-                    padding: '8px 16px',
-                    backgroundColor: BRAND.black,
-                    color: BRAND.white,
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '.85rem',
-                  }}
-                >
-                  Clear Filters
-                </button>
-              </div>
-            )}
+            <input
+              type="text"
+              placeholder="Search articles..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                padding: '10px 14px',
+                fontSize: '.9rem',
+                border: `1px solid ${BRAND.borderGray}`,
+                borderRadius: '6px',
+                width: '240px',
+                outline: 'none',
+              }}
+            />
           </div>
+
+          {/* Category Filter */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '25px' }}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                style={{
+                  padding: '6px 14px',
+                  fontSize: '.8rem',
+                  fontWeight: 500,
+                  border: 'none',
+                  borderRadius: '20px',
+                  cursor: 'pointer',
+                  backgroundColor: selectedCategory === category ? BRAND.black : BRAND.lightGray,
+                  color: selectedCategory === category ? BRAND.white : BRAND.darkGray,
+                }}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Articles Grid */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: '16px',
+          }}>
+            {filteredArticles.map((article) => (
+              <Link
+                key={article.id}
+                href={`/lab-signals/${article.slug}`}
+                className="animate-in"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  backgroundColor: BRAND.lightGray,
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                {/* Gold header */}
+                <div style={{
+                  backgroundColor: BRAND.gold,
+                  padding: '14px 16px',
+                }}>
+                  <span style={{
+                    color: BRAND.black,
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '.8rem',
+                    fontWeight: 700,
+                  }}>
+                    {article.category}
+                  </span>
+                </div>
+                <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <h3 style={{
+                    color: BRAND.black,
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '.9rem',
+                    fontWeight: 600,
+                    lineHeight: 1.35,
+                    marginBottom: '10px',
+                    flex: 1,
+                  }}>
+                    {article.title}
+                  </h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span style={{ color: BRAND.darkGray, fontSize: '.8rem', fontWeight: 500 }}>Read Article</span>
+                    <IconArrowRight size={12} color={BRAND.mediumGray} />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {filteredArticles.length === 0 && (
+            <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+              <p style={{ color: BRAND.darkGray }}>No articles found.</p>
+              <button
+                onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
+                style={{
+                  marginTop: '10px',
+                  padding: '8px 16px',
+                  backgroundColor: BRAND.black,
+                  color: BRAND.white,
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '.85rem',
+                }}
+              >
+                Clear Filters
+              </button>
+            </div>
+          )}
         </section>
 
         {/* CTA Section */}
         <section style={{ backgroundColor: BRAND.gold, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <IconMail size={40} color={BRAND.black} />
+          <div style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+            <IconMail size={36} color={BRAND.black} />
             <h2 style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.6rem',
+              fontSize: '1.5rem',
               fontWeight: 700,
               margin: '15px 0 10px',
             }}>
               Join Lab Signals Today
             </h2>
-            <p style={{ color: 'rgba(0,0,0,0.75)', fontSize: '.95rem', marginBottom: '25px' }}>
-              Join thousands of researchers receiving biweekly insights on mouse model research.
+            <p style={{ color: 'rgba(0,0,0,0.7)', fontSize: '.95rem', marginBottom: '25px' }}>
+              Join thousands of researchers receiving biweekly insights.
             </p>
             <FlodeskForm />
           </div>
         </section>
+      </main>
 
-        {/* Footer */}
-        <footer style={{
-          backgroundColor: BRAND.black,
+      {/* Footer */}
+      <footer style={{ backgroundColor: BRAND.black }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
           padding: '30px 20px',
           textAlign: 'center',
         }}>
@@ -532,8 +495,8 @@ export default function LabSignalsPage() {
           <Link href="/" style={{ color: BRAND.gold, fontSize: '.85rem', textDecoration: 'none' }}>
             Visit Ingenious →
           </Link>
-        </footer>
-      </main>
+        </div>
+      </footer>
     </div>
   );
 }
