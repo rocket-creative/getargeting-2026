@@ -504,28 +504,29 @@ export default function LabSignalsPage() {
               >
                 <div style={{
                   backgroundColor: BRAND.gold,
-                  padding: '14px 18px',
+                  padding: '12px 16px',
                 }}>
                   <span style={{
                     color: BRAND.black,
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: '.75rem',
-                    fontWeight: 700,
+                    fontSize: '.7rem',
+                    fontWeight: 600,
                     textTransform: 'uppercase',
-                    letterSpacing: '0.3px',
+                    letterSpacing: '0.5px',
                   }}>
                     {article.category}
                   </span>
                 </div>
-                <div style={{ padding: '18px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <h3 style={{
                     color: BRAND.black,
-                    fontFamily: 'Poppins, sans-serif',
+                    fontFamily: 'Lato, sans-serif',
                     fontSize: '.95rem',
-                    fontWeight: 600,
-                    lineHeight: 1.4,
+                    fontWeight: 400,
+                    lineHeight: 1.5,
                     marginBottom: '12px',
                     flex: 1,
+                    letterSpacing: '0.01em',
                   }}>
                     {article.title}
                   </h3>
@@ -533,8 +534,9 @@ export default function LabSignalsPage() {
                     <span style={{ 
                       color: BRAND.darkGray, 
                       fontFamily: 'Poppins, sans-serif',
-                      fontSize: '.8rem', 
-                      fontWeight: 500 
+                      fontSize: '.75rem', 
+                      fontWeight: 500,
+                      letterSpacing: '0.02em',
                     }}>
                       Read Article
                     </span>

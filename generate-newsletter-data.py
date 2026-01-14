@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate TypeScript data file from the Exclusive Newsletter Contents CSV.
-Preserves full HTML content without truncation.
-Strips out malformed HTML document structure.
+Preserves full HTML content, cleans up formatting.
 """
 
 import csv
@@ -20,41 +19,45 @@ def clean_html(html_content):
     # Fix double-escaped quotes from CSV
     html_content = html_content.replace('""', '"')
     
-    # Remove entire <head>...</head> sections
-    html_content = re.sub(r'<head[^>]*>.*?</head>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+    # Fix malformed id attributes like id="> to id="">
+    html_content = re.sub(r'id=">', 'id="">', html_content)
     
-    # Remove <html>, <body>, <!DOCTYPE> tags
-    html_content = re.sub(r'<!DOCTYPE[^>]*>', '', html_content, flags=re.IGNORECASE)
-    html_content = re.sub(r'</?html[^>]*>', '', html_content, flags=re.IGNORECASE)
-    html_content = re.sub(r'</?body[^>]*>', '', html_content, flags=re.IGNORECASE)
-    
-    # Remove <script>...</script> tags
-    html_content = re.sub(r'<script[^>]*>.*?</script>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # Remove <style>...</style> tags
-    html_content = re.sub(r'<style[^>]*>.*?</style>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # Remove <meta> and <link> tags
-    html_content = re.sub(r'<meta[^>]*/?>', '', html_content, flags=re.IGNORECASE)
-    html_content = re.sub(r'<link[^>]*/?>', '', html_content, flags=re.IGNORECASE)
-    html_content = re.sub(r'<title[^>]*>.*?</title>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # Remove empty id attributes
-    html_content = re.sub(r'\s+id="[^"]*"', '', html_content)
-    
-    # Remove class attributes (often Webflow-specific)
+    # Now safely remove id and class attributes
+    html_content = re.sub(r'\s+id=""', '', html_content)
     html_content = re.sub(r'\s+class="[^"]*"', '', html_content)
     
-    # Clean empty paragraphs
-    html_content = re.sub(r'<p>\s*‍?\s*</p>', '', html_content)
-    html_content = re.sub(r'<p>\s*&nbsp;\s*</p>', '', html_content)
+    # Remove zero-width characters
+    html_content = html_content.replace('‍', '')  # zero-width joiner (visible)
+    html_content = html_content.replace('\u200d', '')  # zero-width joiner (unicode)
+    html_content = html_content.replace('\u200b', '')  # zero-width space
+    html_content = html_content.replace('\u200c', '')  # zero-width non-joiner
+    html_content = html_content.replace('\ufeff', '')  # BOM
     
-    # Fix broken strong tags (missing opening bracket)
-    html_content = re.sub(r'([^<])strong>', r'\1<strong>', html_content)
+    # Remove empty paragraphs (including those with only whitespace or &nbsp;)
+    html_content = re.sub(r'<p>\s*(&nbsp;)?\s*</p>', '', html_content)
     
-    # Clean up multiple newlines/spaces
-    html_content = re.sub(r'\n\s*\n', '\n', html_content)
+    # Remove empty headings
+    html_content = re.sub(r'<h[1-6]>\s*</h[1-6]>', '', html_content)
+    
+    # Remove empty spans
+    html_content = re.sub(r'<span>\s*</span>', '', html_content)
+    
+    # Remove empty divs
+    html_content = re.sub(r'<div>\s*</div>', '', html_content)
+    
+    # Remove empty strong/em tags
+    html_content = re.sub(r'<strong>\s*</strong>', '', html_content)
+    html_content = re.sub(r'<em>\s*</em>', '', html_content)
+    
+    # Clean up &nbsp;
+    html_content = re.sub(r'&nbsp;\s*&nbsp;', ' ', html_content)
+    html_content = re.sub(r'&nbsp;', ' ', html_content)
+    
+    # Clean multiple spaces
     html_content = re.sub(r'  +', ' ', html_content)
+    
+    # Clean multiple newlines
+    html_content = re.sub(r'\n\s*\n', '\n', html_content)
     
     return html_content.strip()
 
@@ -172,7 +175,7 @@ def parse_csv():
                 continue
             if name.startswith('<'):
                 continue
-            # Skip if body is too short (less than 500 chars suggests incomplete)
+            # Skip if body is too short
             if len(body) < 100:
                 continue
                 
@@ -185,15 +188,14 @@ def parse_csv():
             else:
                 subtitle = ""
             
-            # Clean the HTML body - preserve full content, strip document structure
+            # Clean the HTML body
             cleaned_body = clean_html(body)
             
             # Skip if cleaned body is too short
             if len(cleaned_body) < 200:
-                print(f"  Skipping '{display_title[:40]}...' - body too short after cleaning ({len(cleaned_body)} chars)")
-                continue
+                print(f"  WARNING: '{display_title[:40]}...' - body short ({len(cleaned_body)} chars)")
             
-            # Extract description
+            # Extract description from cleaned body
             description = extract_description(cleaned_body)
             
             # Determine category and related page
@@ -291,14 +293,11 @@ export function getArticlesByCategory(category: string): NewsletterArticle[] {
 def main():
     articles = parse_csv()
     
-    print(f"\n=== Found {len(articles)} articles ===\n")
+    print(f"\n=== Generated {len(articles)} articles ===\n")
     
     for i, article in enumerate(articles, 1):
-        print(f"{i}. {article['title'][:60]}...")
-        print(f"   Slug: {article['slug']}")
-        print(f"   Category: {article['category']}")
-        print(f"   Body length: {article['bodyLength']} chars")
-        print()
+        status = "OK" if article['bodyLength'] > 1000 else "SHORT"
+        print(f"{i:2}. [{status:5}] {article['bodyLength']:6} chars - {article['title'][:50]}...")
     
     # Generate TypeScript file
     ts_content = generate_typescript(articles)
@@ -309,10 +308,10 @@ def main():
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(ts_content)
     
-    print(f"\nGenerated TypeScript file: {OUTPUT_PATH}")
-    print(f"Total articles: {len(articles)}")
+    print(f"\n✓ Generated: {OUTPUT_PATH}")
+    print(f"  Total articles: {len(articles)}")
     total_content = sum(a['bodyLength'] for a in articles)
-    print(f"Total content: {total_content:,} characters")
+    print(f"  Total content: {total_content:,} characters")
 
 if __name__ == '__main__':
     main()
