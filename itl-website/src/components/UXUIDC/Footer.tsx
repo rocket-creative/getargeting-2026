@@ -41,6 +41,7 @@ const footerSections = [
     links: [
       { label: 'About ITL', href: '/about-itl' },
       { label: 'Why Choose ITL', href: '/why-choose-itl' },
+      { label: 'Ingenious Blog', href: '/ingenious-blog' },
       { label: 'Publications', href: '/publications' },
       { label: 'Resources', href: '/resources' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
