@@ -8,6 +8,8 @@ import {
   newsletterArticles 
 } from '@/data/newsletterArticles';
 import LabSignalsArticleClient from './LabSignalsArticleClient';
+import RelatedArticles from './RelatedArticles';
+import ServiceLink from './ServiceLink';
 
 // Lab Signals colors - gold, black, grey, white only
 const BRAND = {
@@ -70,7 +72,8 @@ function getRelatedArticles(currentSlug: string, category: string) {
   return newsletterArticles
     .filter(a => a.slug !== currentSlug)
     .filter(a => a.category === category)
-    .slice(0, 3);
+    .slice(0, 3)
+    .map(a => ({ slug: a.slug, category: a.category, title: a.title }));
 }
 
 export default async function LabSignalsArticlePage({
@@ -103,7 +106,6 @@ export default async function LabSignalsArticlePage({
               textDecoration: 'none',
               display: 'inline-block',
               marginBottom: '25px',
-              transition: 'opacity 0.2s ease',
             }}
           >
             ← Back to Lab Signals
@@ -159,132 +161,10 @@ export default async function LabSignalsArticlePage({
       />
 
       {/* Related Articles */}
-      {relatedArticles.length > 0 && (
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <h3 style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.2rem',
-              fontWeight: 600,
-              marginBottom: '25px',
-            }}>
-              More in {article.category}
-            </h3>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              gap: '20px',
-            }}>
-              {relatedArticles.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={`/lab-signals/${related.slug}`}
-                  style={{
-                    display: 'block',
-                    backgroundColor: BRAND.white,
-                    padding: '20px',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    borderLeft: `4px solid ${BRAND.gold}`,
-                    transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-                  }}
-                  onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
-                  }}
-                  onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <span style={{
-                    display: 'inline-block',
-                    fontSize: '.65rem',
-                    fontWeight: 600,
-                    fontFamily: 'Poppins, sans-serif',
-                    color: BRAND.mediumGray,
-                    marginBottom: '10px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.3px',
-                  }}>
-                    {related.category}
-                  </span>
-                  <h4 style={{
-                    color: BRAND.black,
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '.95rem',
-                    fontWeight: 600,
-                    lineHeight: 1.4,
-                    marginBottom: '10px',
-                  }}>
-                    {related.title}
-                  </h4>
-                  <span style={{ 
-                    color: BRAND.darkGray, 
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '.8rem', 
-                    fontWeight: 500 
-                  }}>
-                    Read →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <RelatedArticles articles={relatedArticles} categoryName={article.category} />
 
       {/* Related Service */}
-      {article.relatedPage && (
-        <section style={{ backgroundColor: BRAND.white, padding: '45px 20px' }}>
-          <div style={{ maxWidth: '600px', textAlign: 'center', margin: '0 auto' }}>
-            <h3 style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.15rem',
-              fontWeight: 600,
-              marginBottom: '10px',
-            }}>
-              Interested in This Research Area?
-            </h3>
-            <p style={{ 
-              color: BRAND.darkGray, 
-              fontFamily: 'Lato, sans-serif',
-              fontSize: '.9rem', 
-              marginBottom: '18px',
-              lineHeight: 1.6,
-            }}>
-              Learn more about our mouse model services.
-            </p>
-            <Link
-              href={article.relatedPage}
-              style={{
-                display: 'inline-block',
-                backgroundColor: BRAND.black,
-                color: BRAND.white,
-                fontFamily: 'Poppins, sans-serif',
-                padding: '12px 28px',
-                fontSize: '.9rem',
-                fontWeight: 500,
-                textDecoration: 'none',
-                borderRadius: '6px',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-              }}
-              onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Explore Services →
-            </Link>
-          </div>
-        </section>
-      )}
+      {article.relatedPage && <ServiceLink href={article.relatedPage} />}
 
       {/* Newsletter CTA */}
       <section style={{ backgroundColor: BRAND.gold, padding: '55px 20px' }}>
