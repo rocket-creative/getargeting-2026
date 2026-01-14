@@ -83,7 +83,7 @@ export default function AnimatedCTASection() {
           {/* Outlined white button */}
           <Link
             href="/request-quote"
-            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <span>Request a Quote</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -91,7 +91,7 @@ export default function AnimatedCTASection() {
           {/* Outlined white button */}
           <Link
             href="/contact"
-            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <span>Schedule Consultation</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

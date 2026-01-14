@@ -329,7 +329,7 @@ export default function NashMashMouseModelsPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -746,7 +746,7 @@ export default function NashMashMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -826,7 +826,7 @@ export default function NashMashMouseModelsPage() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',

@@ -6,7 +6,11 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
+import { LegacyInfoLink } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+
+// Legacy content link
+const legacyContentUrl = '/legacy/conditional-knockout-mouse-models';
 
 // Hero Data
 const heroData = {
@@ -348,7 +352,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   </Link>
                   <Link 
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -536,7 +540,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/tissue-specific-cre-lines"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -806,7 +810,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -894,7 +898,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
               </Link>
               <Link 
                 href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
@@ -927,6 +931,21 @@ export default function ConditionalKnockoutMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
+          </div>
+        </section>
+
+        {/* Legacy Content Link */}
+        <section style={{ backgroundColor: '#e8f5f5', padding: '30px 20px', borderTop: '3px solid #008080' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+            <div>
+              <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 500, marginBottom: '5px' }}>
+                Looking for detailed technical information?
+              </p>
+              <p style={{ color: '#666', fontSize: '.85rem' }}>
+                View our comprehensive legacy documentation with in-depth specifications.
+              </p>
+            </div>
+            <LegacyInfoLink href={legacyContentUrl} />
           </div>
         </section>
 

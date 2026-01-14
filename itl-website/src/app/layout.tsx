@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { AllPixels } from "@/components/analytics";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -49,6 +50,9 @@ export default function RootLayout({
         <link rel="canonical" href="https://www.genetargeting.com" />
       </head>
       <body className="antialiased">
+        {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}
+        <AllPixels />
+        
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="skip-link">
           Skip to main content

@@ -1,12 +1,14 @@
 /**
  * |UXUIDC| Cookie Consent Component
- * @version 1.0.0
+ * @version 1.2.0
  * @created 2026
- * @description GDPR/CCPA compliant cookie consent banner
+ * @description GDPR/CCPA compliant cookie consent banner with multi-platform tracking
  * @features
  * - Cookie preferences management
  * - Granular consent options
  * - Persistent storage
+ * - Google Consent Mode v2 integration
+ * - Facebook, LinkedIn, Twitter, AdRoll consent handling
  * - Accessible
  */
 
@@ -14,12 +16,65 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { gtag, updateFBConsent } from '@/components/analytics';
 
 interface CookiePreferences {
   necessary: boolean;
   analytics: boolean;
   marketing: boolean;
   functional: boolean;
+}
+
+/**
+ * Update all platform consent based on user preferences
+ */
+function updateAllPlatformConsent(prefs: CookiePreferences, shouldReload = false) {
+  // Google Analytics consent
+  if (prefs.analytics) {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  } else {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+  }
+
+  // Marketing/Ads consent (Google Ads)
+  if (prefs.marketing) {
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+    });
+    
+    // Update Facebook consent
+    updateFBConsent(true);
+  } else {
+    gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
+    
+    // Revoke Facebook consent
+    updateFBConsent(false);
+  }
+
+  // Functional consent
+  if (prefs.functional) {
+    gtag('consent', 'update', {
+      functionality_storage: 'granted',
+      personalization_storage: 'granted',
+    });
+  } else {
+    gtag('consent', 'update', {
+      functionality_storage: 'denied',
+      personalization_storage: 'denied',
+    });
+  }
+
+  // Reload page if marketing preferences changed to load/unload pixels
+  // LinkedIn, Twitter, and AdRoll check localStorage on load
+  if (shouldReload && typeof window !== 'undefined') {
+    window.location.reload();
+  }
 }
 
 export default function UXUIDCCookieConsent() {
@@ -54,19 +109,15 @@ export default function UXUIDCCookieConsent() {
         }
       : preferences;
 
+    // Check if marketing preference changed (for reload)
+    const oldPrefs = JSON.parse(localStorage.getItem('itl-cookie-preferences') || '{}');
+    const marketingChanged = oldPrefs.marketing !== prefs.marketing;
+
     localStorage.setItem('itl-cookie-consent', 'true');
     localStorage.setItem('itl-cookie-preferences', JSON.stringify(prefs));
 
-    // Update analytics consent if available
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (cmd: string, action: string, params: Record<string, string>) => void }).gtag) {
-      const gtag = (window as unknown as { gtag: (cmd: string, action: string, params: Record<string, string>) => void }).gtag;
-      if (prefs.analytics) {
-        gtag('consent', 'update', { analytics_storage: 'granted' });
-      }
-      if (prefs.marketing) {
-        gtag('consent', 'update', { ad_storage: 'granted' });
-      }
-    }
+    // Update all platform consent (reload if marketing changed to load pixels)
+    updateAllPlatformConsent(prefs, marketingChanged && prefs.marketing);
 
     setShow(false);
     setShowPreferences(false);
@@ -162,7 +213,7 @@ export default function UXUIDCCookieConsent() {
                   <div className="flex-1">
                     <h4 className="font-medium text-[var(--dk-blue)] mb-1">Analytics Cookies</h4>
                     <p className="text-sm text-gray-600">
-                      Help us understand how visitors interact with our website.
+                      Help us understand how visitors interact with our website using Google Analytics.
                     </p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
@@ -204,7 +255,8 @@ export default function UXUIDCCookieConsent() {
                   <div className="flex-1">
                     <h4 className="font-medium text-[var(--dk-blue)] mb-1">Marketing Cookies</h4>
                     <p className="text-sm text-gray-600">
-                      Used to track visitors across websites for advertising purposes.
+                      Used for advertising and retargeting across platforms including Google Ads, 
+                      Meta (Facebook/Instagram), LinkedIn, X (Twitter), and AdRoll.
                     </p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">

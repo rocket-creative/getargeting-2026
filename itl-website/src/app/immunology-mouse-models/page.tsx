@@ -397,7 +397,7 @@ export default function ImmunologyMouseModelsPage() {
                   </Link>
                   <Link 
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -808,7 +808,7 @@ export default function ImmunologyMouseModelsPage() {
             <div className="animate-in flex flex-wrap gap-4 mt-6">
               <Link 
                 href="/humanized-immune-checkpoint-mice"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'white',
                   color: '#008080',
@@ -823,7 +823,7 @@ export default function ImmunologyMouseModelsPage() {
               </Link>
               <Link 
                 href="/humanized-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
@@ -959,7 +959,7 @@ export default function ImmunologyMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -1047,7 +1047,7 @@ export default function ImmunologyMouseModelsPage() {
               </Link>
               <Link 
                 href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',

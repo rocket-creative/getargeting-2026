@@ -315,7 +315,7 @@ export default function KnockinMouseModelsPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -421,7 +421,7 @@ export default function KnockinMouseModelsPage() {
                   </p>
                   <Link
                     href={approach.href}
-                    className="inline-flex items-center gap-2 mt-4 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 mt-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: '#008080',
                       color: 'white',
@@ -613,7 +613,7 @@ export default function KnockinMouseModelsPage() {
             <div className="animate-in text-center mt-6">
               <Link
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#134978',
                   color: 'white',

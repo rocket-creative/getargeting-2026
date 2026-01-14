@@ -357,3 +357,64 @@ export const IconX = ({ size = 24, color = 'currentColor', className = '', style
     <line x1="6" y1="6" x2="18" y2="18" />
   </svg>
 );
+
+// Download
+export const IconDownload = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+);
+
+// Document
+export const IconDocument = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+    <line x1="16" y1="13" x2="8" y2="13" />
+    <line x1="16" y1="17" x2="8" y2="17" />
+    <polyline points="10 9 9 9 8 9" />
+  </svg>
+);
+
+// BarChart / Chart
+export const IconBarChart = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <line x1="18" y1="20" x2="18" y2="10" />
+    <line x1="12" y1="20" x2="12" y2="4" />
+    <line x1="6" y1="20" x2="6" y2="14" />
+  </svg>
+);
+
+// BookOpen / Guide
+export const IconBookOpen = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+  </svg>
+);
+
+// Sparkle / New
+export const IconSparkle = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z" />
+  </svg>
+);
+
+// GitBranch / Breeding
+export const IconGitBranch = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <line x1="6" y1="3" x2="6" y2="15" />
+    <circle cx="18" cy="6" r="3" />
+    <circle cx="6" cy="18" r="3" />
+    <path d="M18 9a9 9 0 0 1-9 9" />
+  </svg>
+);
+
+// Filter / Sorting
+export const IconFilter = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+  </svg>
+);

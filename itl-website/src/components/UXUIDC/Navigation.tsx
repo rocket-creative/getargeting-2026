@@ -186,7 +186,7 @@ export function UXUIDCNavigation() {
               {/* Start an Order - White/rev button with animation */}
               <Link 
                 href="/request-quote"
-                className="group hidden lg:flex items-center gap-2 bg-white text-[#666] px-4 py-1.5 border border-black mr-2 transition-all duration-300 hover:bg-gray-100 hover:-translate-y-0.5"
+                className="group hidden lg:flex items-center gap-2 bg-white text-[#666] px-4 py-1.5 border border-black mr-2 transition-all duration-300 hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-md"
                 style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
               >
                 <span>Start an Order</span>

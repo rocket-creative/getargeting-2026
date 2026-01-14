@@ -1,27 +1,224 @@
-/**
- * LoxP Site Design - Placeholder Page
- * To be built with full content
- */
+'use client';
 
-import {
-  UXUIDCNavigation,
-  UXUIDCFooter,
-} from '@/components/UXUIDC';
+import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
+import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
-export const metadata = {
-  title: 'LoxP Site Design | ingenious targeting laboratory',
-  description: 'Expert LoxP site design for conditional knockout and knockin mouse models.',
+const heroData = {
+  badge: "Conditional Allele Architecture",
+  title: "loxP Site Design",
+  intro: "Since 1998, Ingenious Targeting Laboratory has designed and implemented loxP sites in over 1,500 conditional alleles, establishing precise frameworks for Cre mediated recombination that enable spatial and temporal control of gene expression.",
+  description: "loxP site design determines the success of conditional knockout and knockin strategies. Proper positioning ensures normal gene function before Cre exposure while guaranteeing complete loss of function after recombination."
 };
 
+const statsData = [
+  { value: 1500, suffix: "+", label: "Conditional Alleles" },
+  { value: 800, suffix: "+", label: "Publications" },
+  { value: 26, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "%", label: "Success Guarantee" }
+];
+
+const loxPStructure = {
+  sequence: "ATAACTTCGTATA GCATACAT TATACGAAGTTAT",
+  components: [
+    { name: "Inverted Repeats", size: "13 bp each", function: "Cre binding sites" },
+    { name: "Spacer Region", size: "8 bp", function: "Determines orientation and outcome" }
+  ]
+};
+
+const recombinationOutcomes = [
+  { orientation: "Same Orientation", outcome: "Cre excises intervening DNA as circular molecule. Standard conditional knockout configuration." },
+  { orientation: "Opposite Orientation", outcome: "Cre inverts intervening sequence rather than excising. Used for conditional gene activation." }
+];
+
+const exonSelectionCriteria = [
+  { criterion: "Essential for protein function", rationale: "Deletion must eliminate activity" },
+  { criterion: "Present in all splice variants", rationale: "Ensures all isoforms affected" },
+  { criterion: "Deletion causes frameshift", rationale: "Prevents partial protein production" },
+  { criterion: "Early in coding sequence", rationale: "Minimizes truncated protein" }
+];
+
+const positioningGuidelines = [
+  { guideline: "Distance from Splice Sites", recommendation: "At least 100 to 200 bp from exon boundaries to avoid disrupting splicing" },
+  { guideline: "Avoid Regulatory Elements", recommendation: "Introns contain enhancers, silencers, and branch points that must be avoided" },
+  { guideline: "Minimum Floxed Region", recommendation: "500 bp to 5 kb optimal; regions under 200 bp reduce efficiency" },
+  { guideline: "Maximum Floxed Region", recommendation: "Regions over 10 kb can recombine but with decreased efficiency" }
+];
+
+const designPatterns = [
+  { pattern: "Single Exon Floxing", description: "Simplest approach when one exon contains catalytic domain, is in all isoforms, and deletion causes frameshift" },
+  { pattern: "Multi Exon Floxing", description: "Required when gene has multiple functional domains, single exon maintains frame, or isoform specific exons exist" },
+  { pattern: "First Coding Exon", description: "Eliminates all downstream sequence. No possibility of truncated functional protein. Frameshift guaranteed." }
+];
+
+const commonPitfalls = [
+  { pitfall: "Hypomorphic Alleles", cause: "loxP sites or cassette disrupt regulatory elements before Cre exposure", prevention: "Careful intronic placement. Test floxed allele homozygotes for normal phenotype." },
+  { pitfall: "Incomplete Null After Recombination", cause: "Floxed exon not essential, alternative splicing bypasses region, or in frame deletion preserves function", prevention: "Thorough gene structure analysis. Target functionally essential domains." },
+  { pitfall: "Inefficient Recombination", cause: "loxP sites too close together, chromatin inaccessibility, or low Cre expression", prevention: "Optimal spacing (500 bp to 5 kb). Use robust Cre drivers." }
+];
+
+const testimonials = [{ quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process.", author: "Raghu Mirmira, MD/PhD", affiliation: "University of Chicago" }];
+
+const relatedLinks = [
+  { title: "Cre Lox System", href: "/cre-lox-system" },
+  { title: "Cre Recombinase Mice", href: "/cre-recombinase-mice" },
+  { title: "Critical Exon Selection", href: "/critical-exon-selection" },
+  { title: "Conditional Knockout Models", href: "/conditional-knockout-mouse-models" },
+  { title: "tm1a Allele Design", href: "/tm1a-allele-design" }
+];
+
+const faqData = [
+  { question: "Where should loxP sites be placed for conditional knockout?", answer: "loxP sites should be placed in introns flanking the exon to be deleted, avoiding placement within exons or too close to splice sites. Sites should be at least 100 to 200 bp from exon boundaries to avoid interfering with splicing. The floxed exon should encode critical functional domains." },
+  { question: "How far apart should loxP sites be for efficient recombination?", answer: "loxP sites can efficiently recombine when separated by distances from a few hundred base pairs to several kilobases. Very large floxed regions (10+ kb) may show reduced efficiency. Standard floxed exons are typically 100 to 500 bp, with intronic loxP sites placed appropriately." },
+  { question: "Should selection cassettes be removed from floxed alleles?", answer: "Yes. Selection cassettes (Neo) should be removed using FLP mediated deletion because cassettes can affect neighboring gene expression through promoter interference or cause splice abnormalities. After FLP removal, the floxed allele contains only loxP sites and functions normally until Cre exposure." },
+  { question: "Can loxP variant sites be used for more complex designs?", answer: "Yes. loxP variant sites (lox2272, loxN) enable independent recombination events in the same construct for serial deletions, inversions, or dual recombinase strategies. Standard loxP is preferred for most applications as variant sites require compatible Cre variants." }
+];
+
 export default function LoxPSiteDesignPage() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const loadGSAP = async () => {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+      if (heroRef.current) { gsap.fromTo(heroRef.current.querySelectorAll('.hero-animate'), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }); }
+      document.querySelectorAll('.animate-in').forEach((el) => { gsap.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } }); });
+    };
+    loadGSAP();
+  }, []);
+
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
-      <main id="main-content" style={{ minHeight: '60vh', padding: '80px 20px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2.5rem', color: '#0a253c', marginBottom: '20px' }}>LoxP Site Design</h1>
-        <p style={{ color: '#666', fontSize: '1.1rem' }}>Page content coming soon.</p>
+      <main id="main-content">
+        <section ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
+                <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
+                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 300, lineHeight: '1.7rem', marginBottom: '15px' }}>{heroData.intro}</p>
+                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '25px' }}>{heroData.description}</p>
+                <div className="hero-animate flex flex-wrap gap-4">
+                  <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
+                </div>
+              </div>
+              <div className="hero-animate"><div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}><IconImage size={60} color="rgba(255,255,255,0.4)" /><span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>loxP Site Architecture Diagram</span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {statsData.map((stat, index) => (<div key={index} className="text-center"><div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}><UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} /></div><div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div></div>))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>loxP Site Structure</h2>
+            <p className="animate-in" style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '20px' }}>The loxP sequence is a 34 base pair DNA element recognized by Cre recombinase:</p>
+            <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', marginBottom: '25px', textAlign: 'center' }}>
+              <code style={{ color: '#008080', fontSize: '1rem', fontFamily: 'monospace' }}>{loxPStructure.sequence}</code>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {loxPStructure.components.map((comp, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '5px' }}>{comp.name}</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem' }}><strong>Size:</strong> {comp.size}</p>
+                  <p style={{ color: '#555', fontSize: '.85rem' }}><strong>Function:</strong> {comp.function}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Positioning Guidelines</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {positioningGuidelines.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.guideline}</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.recommendation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Common Design Patterns</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {designPatterns.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: 'white', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.pattern}</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Common Design Pitfalls</h2>
+            <div className="grid grid-cols-1 gap-6">
+              {commonPitfalls.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.pitfall}</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem', marginBottom: '10px' }}><strong>Cause:</strong> {item.cause}</p>
+                  <p style={{ color: '#008080', fontSize: '.85rem', lineHeight: '1.5rem' }}><strong>Prevention:</strong> {item.prevention}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
+            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '.9rem', lineHeight: '1.6rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>Start Your loxP Design Project</h2>
+            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Our scientific team evaluates each gene for optimal loxP placement, including gene structure review, exon essentiality analysis, and frameshift verification.</p>
+            <div className="animate-in flex flex-wrap justify-center gap-4">
+              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: '#008080', color: 'white', padding: '12px 30px', fontSize: '.9rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '12px 30px', border: '2px solid white', fontSize: '.9rem', fontWeight: 500 }}><span>Free Consultation</span><span>→</span></Link>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Resources</h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
+            </div>
+          </div>
+        </section>
       </main>
       <UXUIDCFooter />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "loxP Site Design", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "loxP site design for conditional knockout alleles since 1998.", "serviceType": "loxP Site Design" }) }} />
     </div>
   );
 }

@@ -1,27 +1,209 @@
-/**
- * Humanized Immune Checkpoint Mice - Placeholder Page
- * To be built with full content
- */
+'use client';
 
-import {
-  UXUIDCNavigation,
-  UXUIDCFooter,
-} from '@/components/UXUIDC';
+import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
+import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
+import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
-export const metadata = {
-  title: 'Humanized Immune Checkpoint Mice | ingenious targeting laboratory',
-  description: 'Humanized immune checkpoint mouse models for immuno-oncology research.',
+const heroData = {
+  badge: "Immuno Oncology",
+  title: "Humanized Immune Checkpoint Mice",
+  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models, including humanized immune checkpoint models, enabling preclinical testing of checkpoint inhibitor antibodies and combination immunotherapies.",
+  description: "These models express human checkpoint proteins in immunocompetent mice, providing platforms for evaluating human specific therapeutics in the context of functional immune systems."
 };
 
+const statsData = [
+  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 800, suffix: "+", label: "Publications" },
+  { value: 26, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "%", label: "Success Guarantee" }
+];
+
+const checkpointModels = [
+  { name: "PD1 Humanized Mice", gene: "PDCD1", description: "Enables testing of anti PD1 antibodies including pembrolizumab and nivolumab.", href: "/pd1-humanized-mice" },
+  { name: "PDL1 Humanized Mice", gene: "CD274", description: "Enables testing of anti PDL1 antibodies including atezolizumab, durvalumab, and avelumab.", href: "/pdl1-humanized-mice" },
+  { name: "CTLA4 Humanized Mice", gene: "CTLA4", description: "Enables testing of anti CTLA4 antibodies including ipilimumab.", href: "/ctla4-humanized-mice" },
+  { name: "LAG3 Humanized Mice", gene: "CD223", description: "Supports development of anti LAG3 antibodies as single agents and in combination with PD1 blockade.", href: "/lag3-humanized-mice" },
+  { name: "TIM3 Humanized Mice", gene: "HAVCR2", description: "Enables testing of anti TIM3 antibodies as emerging checkpoint targets.", href: "/tim3-humanized-mice" }
+];
+
+const combinationModels = [
+  { combination: "PD1/CTLA4 Double Humanized", application: "Testing combinations similar to nivolumab plus ipilimumab" },
+  { combination: "PD1/LAG3 Double Humanized", application: "Next generation combination therapies" },
+  { combination: "Triple Checkpoint Models", application: "Multi agent regimens testing" },
+  { combination: "Custom Combinations", application: "Tailored to specific immunotherapy programs" }
+];
+
+const humanizationStrategies = [
+  { strategy: "Extracellular Domain Humanization", description: "Humanizes the extracellular domain where therapeutic antibodies bind while retaining mouse transmembrane and intracellular domains. Maintains normal signaling while enabling human antibody binding." },
+  { strategy: "Complete Gene Replacement", description: "Complete replacement with the human gene provides a fully humanized target. Preferred when studying antibodies that modulate signaling or when complete humanization is required." }
+];
+
+const compatibleTumors = [
+  { background: "C57BL/6", tumors: "MC38 (colon), B16 (melanoma), E0771 (breast), Lewis lung carcinoma" },
+  { background: "BALB/c", tumors: "CT26 (colon), 4T1 (breast), Renca (kidney)" }
+];
+
+const testimonials = [{ quote: "Our project manager did an outstanding job and has provided us with excellent customer service. Her availability to clarify issues has been nothing short of fantastic. I have recommended ingenious to others. Look forward for further collaboration on other projects.", author: "Hamid M. Said, PhD, PharmD", affiliation: "University of California, Irvine" }];
+
+const relatedLinks = [
+  { title: "PD1 Humanized Mice", href: "/pd1-humanized-mice" },
+  { title: "PDL1 Humanized Mice", href: "/pdl1-humanized-mice" },
+  { title: "CTLA4 Humanized Mice", href: "/ctla4-humanized-mice" },
+  { title: "Syngeneic Tumor Models", href: "/syngeneic-tumor-models" },
+  { title: "Humanized Mouse Models", href: "/humanized-mouse-models" },
+  { title: "Immuno Oncology Models", href: "/immuno-oncology-mouse-models" }
+];
+
+const faqData = [
+  { question: "Why do I need humanized checkpoint models instead of using mouse checkpoint inhibitors?", answer: "Most clinical checkpoint inhibitor antibodies are designed to target human proteins and do not cross react with mouse orthologs. Humanized checkpoint models express human PD1, PDL1, CTLA4, or other targets, enabling efficacy testing of clinical antibodies in immunocompetent mice with functional immune systems." },
+  { question: "What checkpoint models are available as catalog models?", answer: "We offer humanized models for PD1, PDL1, CTLA4, LAG3, TIM3, and other checkpoints, as well as single and dual checkpoint combinations. Catalog models provide study ready mice with shorter lead times than custom projects." },
+  { question: "Can I combine multiple humanized checkpoints in one mouse?", answer: "Yes. Dual or triple humanized checkpoint mice are commonly used for combination therapy studies. For example, PD1/CTLA4 double humanized mice enable testing of dual checkpoint blockade, which is increasingly important in clinical practice." },
+  { question: "What syngeneic tumors can I use with humanized checkpoint models?", answer: "Humanized checkpoint models on C57BL/6 background are compatible with MC38, B16, E0771, and Lewis lung carcinoma. BALB/c models are compatible with CT26 and 4T1 tumors. Syngeneic tumor compatibility enables evaluation of checkpoint inhibitors in immunocompetent mice." }
+];
+
 export default function HumanizedImmuneCheckpointMicePage() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const loadGSAP = async () => {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+      if (heroRef.current) { gsap.fromTo(heroRef.current.querySelectorAll('.hero-animate'), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }); }
+      document.querySelectorAll('.animate-in').forEach((el) => { gsap.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } }); });
+    };
+    loadGSAP();
+  }, []);
+
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
-      <main id="main-content" style={{ minHeight: '60vh', padding: '80px 20px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2.5rem', color: '#0a253c', marginBottom: '20px' }}>Humanized Immune Checkpoint Mice</h1>
-        <p style={{ color: '#666', fontSize: '1.1rem' }}>Page content coming soon.</p>
+      <main id="main-content">
+        <section ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
+                <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
+                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 300, lineHeight: '1.7rem', marginBottom: '15px' }}>{heroData.intro}</p>
+                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '25px' }}>{heroData.description}</p>
+                <div className="hero-animate flex flex-wrap gap-4">
+                  <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
+                </div>
+              </div>
+              <div className="hero-animate"><div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}><IconImage size={60} color="rgba(255,255,255,0.4)" /><span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Checkpoint Immunotherapy Illustration</span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {statsData.map((stat, index) => (<div key={index} className="text-center"><div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}><UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} /></div><div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div></div>))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Available Checkpoint Models</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {checkpointModels.map((model, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                    <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600 }}>{model.name}</h3>
+                    <span style={{ backgroundColor: '#008080', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '.7rem' }}>{model.gene}</span>
+                  </div>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem', marginBottom: '10px' }}>{model.description}</p>
+                  <Link href={model.href} className="inline-flex items-center gap-2 transition-colors duration-300" style={{ color: '#2384da', fontSize: '.85rem', fontWeight: 500 }}><span>Learn more</span><IconChevronRight size={14} color="#2384da" /></Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Combination Checkpoint Models</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {combinationModels.map((model, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{model.combination}</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{model.application}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Humanization Strategies</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {humanizationStrategies.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: 'white', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.strategy}</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Tumor Model Compatibility</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {compatibleTumors.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.background} Background</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}><strong>Compatible lines:</strong> {item.tumors}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
+            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '.9rem', lineHeight: '1.6rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>Start Your Checkpoint Model Project</h2>
+            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Ready to discuss humanized checkpoint models for your immunotherapy program? Our scientific team provides complimentary consultation to help you select the optimal checkpoint model design.</p>
+            <div className="animate-in flex flex-wrap justify-center gap-4">
+              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: '#008080', color: 'white', padding: '12px 30px', fontSize: '.9rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '12px 30px', border: '2px solid white', fontSize: '.9rem', fontWeight: 500 }}><span>Free Consultation</span><span>→</span></Link>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Resources</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
+            </div>
+          </div>
+        </section>
       </main>
       <UXUIDCFooter />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
     </div>
   );
 }

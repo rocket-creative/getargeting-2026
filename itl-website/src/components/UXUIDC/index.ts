@@ -41,3 +41,6 @@ export * from './Icons';
 
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';
+
+// Legacy Content Link
+export { default as LegacyInfoLink } from './LegacyInfoLink';

@@ -416,7 +416,7 @@ export default function OncologyMouseModelsPage() {
                   </Link>
                   <Link 
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -690,7 +690,7 @@ export default function OncologyMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '30px' }}>
               <Link 
                 href="/immuno-oncology-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'white',
                   color: '#008080',
@@ -864,7 +864,7 @@ export default function OncologyMouseModelsPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -952,7 +952,7 @@ export default function OncologyMouseModelsPage() {
               </Link>
               <Link 
                 href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',

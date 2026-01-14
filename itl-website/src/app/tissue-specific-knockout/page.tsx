@@ -317,7 +317,7 @@ export default function TissueSpecificKnockoutPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -603,7 +603,7 @@ export default function TissueSpecificKnockoutPage() {
             <div className="animate-in text-center mt-6">
               <Link
                 href="/cre-line-selection-guide"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'white',
                   color: '#008080',
@@ -743,7 +743,7 @@ export default function TissueSpecificKnockoutPage() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',

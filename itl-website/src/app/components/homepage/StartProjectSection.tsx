@@ -296,14 +296,14 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
         <div className="animate-cta flex flex-row gap-5 justify-center" style={{ opacity: 0 }}>
           <Link
             href={data.cta1.href}
-            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <span>{data.cta1.label}</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
           <Link
             href={data.cta2.href}
-            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+            className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <span>{data.cta2.label}</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

@@ -288,7 +288,7 @@ export default function TherapeuticAreasPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -449,7 +449,7 @@ export default function TherapeuticAreasPage() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
@@ -489,7 +489,7 @@ export default function TherapeuticAreasPage() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="animate-in inline-flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                  className="animate-in inline-flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                   style={{
                     backgroundColor: 'white',
                     color: '#2384da',

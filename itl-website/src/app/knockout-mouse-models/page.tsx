@@ -18,6 +18,7 @@ import {
   UXUIDCStartProjectCTA,
   UXUIDCGlossarySection,
   knockoutTerms,
+  LegacyInfoLink,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -209,6 +210,9 @@ const relatedResources = [
   { label: 'FAQs', href: '/faqs' },
 ];
 
+// Legacy content link
+const legacyContentUrl = '/legacy/knockout-mouse-models';
+
 export default function KnockoutMouseModelsPage() {
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -342,7 +346,7 @@ export default function KnockoutMouseModelsPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -464,7 +468,7 @@ export default function KnockoutMouseModelsPage() {
                   </p>
                   <Link
                     href={approach.href}
-                    className="inline-flex items-center gap-2 mt-4 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 mt-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: '#008080',
                       color: 'white',
@@ -645,7 +649,7 @@ export default function KnockoutMouseModelsPage() {
             <div className="animate-in text-center mt-6">
               <Link
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#134978',
                   color: 'white',
@@ -681,7 +685,7 @@ export default function KnockoutMouseModelsPage() {
               {testimonialsData.map((testimonial, i) => (
                 <div
                   key={i}
-                  className="flex flex-col transition-all duration-300 hover:-translate-y-2"
+                  className="flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
                   style={{
                     backgroundColor: 'rgba(255,255,255,0.05)',
                     padding: '30px',
@@ -716,7 +720,7 @@ export default function KnockoutMouseModelsPage() {
             <div className="text-center mt-6">
               <Link
                 href="/testimonials"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-teal-700"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-white hover:text-teal-700"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
@@ -951,6 +955,21 @@ export default function KnockoutMouseModelsPage() {
 
         {/* ========== FAQ ========== */}
         <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="white" />
+
+        {/* ========== LEGACY CONTENT LINK ========== */}
+        <section style={{ backgroundColor: '#e8f5f5', padding: '30px 20px', borderTop: '3px solid #008080' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+            <div>
+              <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 500, marginBottom: '5px' }}>
+                Looking for detailed technical information?
+              </p>
+              <p style={{ color: '#666', fontSize: '.85rem' }}>
+                View our comprehensive legacy documentation with in-depth specifications.
+              </p>
+            </div>
+            <LegacyInfoLink href={legacyContentUrl} />
+          </div>
+        </section>
 
         {/* ========== RELATED LINKS ========== */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>

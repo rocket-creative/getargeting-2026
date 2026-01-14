@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
@@ -23,6 +23,21 @@ const statsData = [
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Guarantee" }
 ];
+
+// Featured Tool Data (New for 2026)
+const featuredToolData = {
+  badge: "New for 2026",
+  title: "Breeding Scheme Architect",
+  description: "Plan complex multi allele breeding schemes with our free interactive tool. Visualize generation by generation crosses, calculate expected genotype ratios, and estimate time to experimental cohorts for knockout, knockin, Cre lox, and humanized mouse models.",
+  features: [
+    "Multi allele breeding path visualization",
+    "Punnett square calculations for up to 6 alleles",
+    "Timeline and resource estimates",
+    "AI powered breeding optimization",
+    "Export schemes as PDF"
+  ],
+  href: "/breeding-scheme-architect"
+};
 
 // Strategy Guides Data
 const strategyGuidesData = {
@@ -171,6 +186,53 @@ const glossaryData = {
     "Project phase definitions"
   ],
   href: "/glossary"
+};
+
+// Downloadable Resources Data (HubSpot Gated Content)
+const downloadableResourcesData = {
+  title: "Downloadable Resources",
+  description: "All the information you need about our animal models in one place. For your convenience, ingenious has created software, quick guides, and charts with information on the different types of animal models we offer.",
+  categories: [
+    {
+      title: "Charts",
+      icon: "chart",
+      resources: [
+        { title: "Conditional Knockout Comparison Chart", href: "https://share.hsforms.com/1GnCYXQ8cTZqX8c3JNvLK6A4n7eh" },
+        { title: "Humanization Comparison Chart", href: "https://share.hsforms.com/1h2mZrQxZS4W9vXPL8KkJ5A4n7eh" },
+        { title: "Point Mutation Comparison Chart", href: "https://share.hsforms.com/1pM3tYR7nTSuKfL2dNvW8zA4n7eh" }
+      ]
+    },
+    {
+      title: "Guides",
+      icon: "guide",
+      resources: [
+        { title: "Enhance With A Reporter Quick Guide", href: "https://share.hsforms.com/1rPt5XQ2cS1qM8nJvKL9k4A4n7eh" },
+        { title: "Cre lox Design Guide", href: "https://share.hsforms.com/1cL0xD3s1gN2R4v5bK8m7jA4n7eh" },
+        { title: "Conditional Knockout (cKO) Quick Guide", href: "https://share.hsforms.com/1cK0qG5u1dE4F6y7zX9w2hA4n7eh" },
+        { title: "Conditional + Reversible Mouse Model Guide", href: "https://share.hsforms.com/1cR3v4S5aBl7C8d9eF0g1hA4n7eh" },
+        { title: "ingenious Pricing Guide", href: "https://share.hsforms.com/1pG5u1d3EaB7l8C9dF0g2hA4n7eh" },
+        { title: "Mouse Model Generation: Step by Step Guide", href: "https://share.hsforms.com/1mG3n5S7t8p9B0v1C2d3e4A4n7eh" },
+        { title: "Rapid Rosa26™ Quick Guide", href: "https://share.hsforms.com/1rR0s2a2L6Q4u5i6c7k8G9A4n7eh" },
+        { title: "Rat Model Quick Guide", href: "https://share.hsforms.com/1rM0d3l5Q7u1i2c3k4G5H6A4n7eh" }
+      ]
+    },
+    {
+      title: "White Papers",
+      icon: "whitepaper",
+      resources: [
+        { title: "Humanization White Paper", href: "https://share.hsforms.com/1hW5h1i7t3P4a5p6e7r8W9A4n7eh" },
+        { title: "Rats For Tissue Specific Gene Knockout White Paper", href: "https://share.hsforms.com/1rT5s4K7n8o9c1k2o3u4t5A4n7eh" }
+      ]
+    },
+    {
+      title: "Other Resources",
+      icon: "other",
+      resources: [
+        { title: "Cre Mouse Repositories (Find Cre Expressing Mice)", href: "https://share.hsforms.com/1cR3p5o7s1i2t3o4r5i6e7A4n7eh" },
+        { title: "Mouse Breeding Planner", href: "/breeding-scheme-architect", isInternal: true }
+      ]
+    }
+  ]
 };
 
 // Testimonials Data
@@ -398,6 +460,335 @@ export default function ResourcesPage() {
                   <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Tool Section - New for 2026 */}
+        <section style={{ 
+          background: 'linear-gradient(135deg, #008080 0%, #00a0a0 100%)', 
+          padding: '60px 20px',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: '-100px',
+            right: '-100px',
+            width: '400px',
+            height: '400px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)'
+          }} />
+          <div style={{
+            position: 'absolute',
+            bottom: '-150px',
+            left: '-150px',
+            width: '500px',
+            height: '500px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(0,212,212,0.15) 0%, transparent 70%)'
+          }} />
+          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <div className="animate-in" style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(255,255,255,0.2)',
+                border: '1px solid rgba(255,255,255,0.4)',
+                borderRadius: '20px',
+                padding: '8px 16px',
+                marginBottom: '20px'
+              }}>
+                <IconSparkle size={16} color="#ffffff" />
+                <span style={{ 
+                  color: '#ffffff', 
+                  fontSize: '.9rem', 
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}>
+                  {featuredToolData.badge}
+                </span>
+              </div>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.2rem',
+                fontWeight: 700,
+                color: '#ffffff',
+                marginBottom: '16px'
+              }}>
+                {featuredToolData.title}
+              </h2>
+              <p style={{
+                fontSize: '1rem',
+                color: 'rgba(255,255,255,0.9)',
+                maxWidth: '700px',
+                marginBottom: '30px',
+                lineHeight: 1.7
+              }}>
+                {featuredToolData.description}
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '12px',
+                maxWidth: '800px',
+                width: '100%',
+                marginBottom: '30px'
+              }}>
+                {featuredToolData.features.map((feature, index) => (
+                  <div key={index} style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    background: 'rgba(255,255,255,0.1)',
+                    borderRadius: '8px',
+                    padding: '12px 16px'
+                  }}>
+                    <IconCheckCircle size={18} color="#00d4d4" />
+                    <span style={{ fontSize: '.9rem', color: '#ffffff', fontWeight: 500 }}>
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <Link href={featuredToolData.href} style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                background: '#ffffff',
+                color: '#008080',
+                padding: '16px 32px',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+                transition: 'all 0.3s ease'
+              }}>
+                <IconGitBranch size={20} color="#008080" />
+                Launch Breeding Scheme Architect
+                <IconChevronRight size={18} color="#008080" />
+              </Link>
+              <p style={{
+                fontSize: '.85rem',
+                color: 'rgba(255,255,255,0.7)',
+                marginTop: '16px'
+              }}>
+                Free to use • No account required
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Downloadable Resources Section */}
+        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="animate-in" style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(0,128,128,0.1)',
+                border: '1px solid rgba(0,128,128,0.2)',
+                borderRadius: '20px',
+                padding: '6px 14px',
+                marginBottom: '16px'
+              }}>
+                <IconDownload size={14} color="#008080" />
+                <span style={{ color: '#008080', fontSize: '.85rem', fontWeight: 500 }}>Gated Resources</span>
+              </div>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2384da',
+                marginBottom: '16px'
+              }}>
+                {downloadableResourcesData.title}
+              </h2>
+              <p style={{
+                fontSize: '.95rem',
+                color: '#666',
+                maxWidth: '700px',
+                margin: '0 auto',
+                lineHeight: 1.7
+              }}>
+                {downloadableResourcesData.description}
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+              {downloadableResourcesData.categories.map((category, index) => {
+                const getCategoryIcon = (iconType: string) => {
+                  switch (iconType) {
+                    case 'chart': return <IconBarChart size={24} color="#008080" />;
+                    case 'guide': return <IconBookOpen size={24} color="#008080" />;
+                    case 'whitepaper': return <IconFileText size={24} color="#008080" />;
+                    default: return <IconDocument size={24} color="#008080" />;
+                  }
+                };
+
+                return (
+                  <div key={index} className="animate-in" style={{
+                    background: '#f7f7f7',
+                    borderRadius: '12px',
+                    padding: '28px',
+                    borderTop: '4px solid #008080'
+                  }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      marginBottom: '20px'
+                    }}>
+                      <div style={{
+                        width: '48px',
+                        height: '48px',
+                        borderRadius: '50%',
+                        background: 'rgba(0,128,128,0.1)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        {getCategoryIcon(category.icon)}
+                      </div>
+                      <h3 style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '1.2rem',
+                        fontWeight: 600,
+                        color: '#333'
+                      }}>
+                        {category.title}
+                      </h3>
+                    </div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {category.resources.map((resource, idx) => {
+                        const isInternal = 'isInternal' in resource && resource.isInternal;
+                        const linkStyles = {
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '10px',
+                          padding: '12px 14px',
+                          background: '#ffffff',
+                          borderRadius: '8px',
+                          textDecoration: 'none',
+                          transition: 'all 0.2s ease',
+                          border: '1px solid #e0e0e0'
+                        };
+                        
+                        if (isInternal) {
+                          return (
+                            <li key={idx} style={{ marginBottom: '12px' }}>
+                              <Link
+                                href={resource.href}
+                                style={linkStyles}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.borderColor = '#008080';
+                                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,128,128,0.1)';
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.borderColor = '#e0e0e0';
+                                  e.currentTarget.style.boxShadow = 'none';
+                                }}
+                              >
+                                <IconGitBranch size={16} color="#008080" />
+                                <span style={{
+                                  flex: 1,
+                                  fontSize: '.9rem',
+                                  color: '#333',
+                                  fontWeight: 500
+                                }}>
+                                  {resource.title}
+                                </span>
+                                <span style={{
+                                  fontSize: '.7rem',
+                                  background: '#008080',
+                                  color: '#ffffff',
+                                  padding: '3px 8px',
+                                  borderRadius: '10px',
+                                  fontWeight: 600
+                                }}>
+                                  NEW
+                                </span>
+                                <IconChevronRight size={14} color="#008080" />
+                              </Link>
+                            </li>
+                          );
+                        }
+                        
+                        return (
+                          <li key={idx} style={{ marginBottom: '12px' }}>
+                            <a
+                              href={resource.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={linkStyles}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.borderColor = '#008080';
+                                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,128,128,0.1)';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.borderColor = '#e0e0e0';
+                                e.currentTarget.style.boxShadow = 'none';
+                              }}
+                            >
+                              <IconDownload size={16} color="#008080" />
+                              <span style={{
+                                flex: 1,
+                                fontSize: '.9rem',
+                                color: '#333',
+                                fontWeight: 500
+                              }}>
+                                {resource.title}
+                              </span>
+                              <IconChevronRight size={14} color="#008080" />
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="animate-in" style={{
+              textAlign: 'center',
+              marginTop: '40px',
+              padding: '24px',
+              background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
+              borderRadius: '12px'
+            }}>
+              <p style={{
+                fontSize: '.95rem',
+                color: 'rgba(255,255,255,0.9)',
+                marginBottom: '16px'
+              }}>
+                Need help choosing the right resource for your project?
+              </p>
+              <Link href="/request-quote" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#008080',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 600,
+                textDecoration: 'none'
+              }}>
+                Request a Consultation
+                <IconChevronRight size={16} color="#ffffff" />
+              </Link>
             </div>
           </div>
         </section>

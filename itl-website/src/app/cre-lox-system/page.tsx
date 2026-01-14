@@ -407,7 +407,7 @@ export default function CreLoxSystemPage() {
                   </Link>
                   <Link 
                     href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
                       color: 'white',
@@ -685,7 +685,7 @@ export default function CreLoxSystemPage() {
             <div className="animate-in flex flex-wrap gap-4 mt-6">
               <Link 
                 href="/tissue-specific-cre-lines"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#008080',
                   color: 'white',
@@ -700,7 +700,7 @@ export default function CreLoxSystemPage() {
               </Link>
               <Link 
                 href="/cre-line-selection-guide"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'white',
                   color: '#008080',
@@ -815,7 +815,7 @@ export default function CreLoxSystemPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/derivative-alleles"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
                 <span>Learn more about derivative alleles</span>
@@ -888,7 +888,7 @@ export default function CreLoxSystemPage() {
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
                 href="/publications"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: '#2384da',
                   color: 'white',
@@ -968,7 +968,7 @@ export default function CreLoxSystemPage() {
               </Link>
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',

@@ -282,7 +282,7 @@ export default function UXUIDCStartProjectCTA({ title, content, buttons }: Start
             <Link
               key={i}
               href={btn.href}
-              className="group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-teal-700"
+              className="group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-white hover:text-teal-700"
               style={{
                 backgroundColor: 'transparent',
                 color: 'white',
