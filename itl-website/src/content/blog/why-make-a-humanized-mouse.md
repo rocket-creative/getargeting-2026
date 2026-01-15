@@ -14,8 +14,7 @@ author: "ingenious"
 
 The mouse has been used for over 30 years as a model system for studying human disease. Recently, “humanized” mice have grown in popularity because they are formidable models of the human being and therefore extremely useful for understanding the human condition. What exactly is a humanized mouse? A humanized mouse is a mouse that carries functional human genes, cells, tissues, and/or organs. There are many ways to study human disease. So why do researchers make humanized mouse models in particular?
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Humanization White Paper[GET YOUR COPY](https://go.genetargeting.com/humanization-white-paper)
+[Download Free Humanization White Paper](https://go.genetargeting.com/humanization-white-paper)
 
 #### The mouse as a model system in human disease research
 

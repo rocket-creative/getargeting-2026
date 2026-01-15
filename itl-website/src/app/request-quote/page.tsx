@@ -272,9 +272,10 @@ export default function RequestQuotePage() {
               style={{
                 color: 'white',
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.75rem',
+                fontSize: '2.5rem',
                 fontWeight: 700,
-                marginBottom: '8px',
+                marginBottom: '12px',
+                lineHeight: 1.2,
               }}
             >
               Request a Custom Mouse Model Quote
@@ -294,9 +295,9 @@ export default function RequestQuotePage() {
           </div>
 
           {/* Two Column Layout: Form + Sidebar */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             {/* ===== MAIN FORM ===== */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 flex">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -305,6 +306,9 @@ export default function RequestQuotePage() {
                   borderRadius: '12px',
                   padding: '28px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
                 {/* Contact Info Row */}
@@ -499,7 +503,7 @@ export default function RequestQuotePage() {
             </div>
 
             {/* ===== SIDEBAR ===== */}
-            <div className="lg:col-span-1 space-y-4">
+            <div className="lg:col-span-1 flex flex-col gap-4">
               {/* What You'll Receive */}
               <div
                 style={{
@@ -508,6 +512,7 @@ export default function RequestQuotePage() {
                   borderRadius: '12px',
                   padding: '20px',
                   border: '1px solid rgba(255,255,255,0.2)',
+                  flex: 1,
                 }}
               >
                 <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '12px' }}>

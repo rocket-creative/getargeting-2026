@@ -38,11 +38,6 @@ Every conditional knockout model has a unique characteristic: the chromosomal lo
 
 As mentioned above, each conditional knockout line has unique features that affect the efficiency of deletion. The other variable in an experiment is the level and duration of Cre expression. It can happen that a Cre line which has reliably worked for years suddenly seems weak when you cross it with a new conditional knockout line. One possible explanation is that the Cre line was weaker than you thought, but you were using it with conditional knockout lines where the gene deletion was particularly efficient. If your Cre mice lines express in multiple tissues it’s almost certain that their expression levels will vary by cell type. Using a binary off/on reporter to determine where Cre is expressed can obscure these differences – low Cre levels might be enough to trigger the reporter but not reliably work with a conditional knockout line. A new conditional knockout line with a conditional reporter is one way to conclusively know that your target gene has been disrupted when you think it has. You will likely observe that knockout efficiency varies between tissues because of different Cre activity levels.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-#### Download Our Free Cre-lox Design Guide
-
-Learn about the design strategies you need to consider before starting your conditional knockout model.
-
-[GET YOUR COPY](https://go.genetargeting.com/crelox-design-guide)
+[Download Free Cre-lox Design Guide](https://go.genetargeting.com/crelox-design-guide)
 
 ‍

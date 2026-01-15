@@ -68,6 +68,10 @@ function markdownToHtml(markdown: string): string {
     .replace(/\r\n/g, '\n')
     .trim();
   
+  // Pre-process: Convert multi-line linked images to single line
+  // Pattern: [\n![alt](img)\n](link) -> [![alt](img)](link)
+  cleaned = cleaned.replace(/\[\s*\n\s*!\[([^\]]*)\]\(([^)]+)\)\s*\n\s*\]\(([^)]+)\)/g, '[![$1]($2)]($3)');
+  
   // Pre-process: separate linked images followed by headers
   // Pattern: ](url)## Header -> ](url)\n\n## Header
   cleaned = cleaned.replace(/\]\(([^)]+)\)(#{1,6}\s)/g, ']($1)\n\n$2');
@@ -84,17 +88,34 @@ function markdownToHtml(markdown: string): string {
     const linkedImageMatch = trimmed.match(/^\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)$/);
     if (linkedImageMatch) {
       const alt = linkedImageMatch[1] || 'Article image';
-      htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImageMatch[3]}" class="blog-image-link" target="_blank" rel="noopener noreferrer"><img src="${linkedImageMatch[2]}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
+      const src = linkedImageMatch[2];
+      const href = linkedImageMatch[3];
+      
+      // Check if this is a CTA image - convert to text CTA instead
+      if (src.includes('CTA') || src.includes('Get-a-Quote') || src.includes('Button-Post') || 
+          src.includes('quote-request') || alt.toLowerCase().includes('cta') || 
+          alt.toLowerCase().includes('quote') || alt.toLowerCase().includes('get a quote')) {
+        // Determine CTA type from URL
+        const isQuote = href.includes('quote') || href.includes('request');
+        const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
+        const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
+        const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
+        htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
+      } else {
+        htmlBlocks.push(`<figure class="blog-figure"><a href="${href}" class="blog-image-link"><img src="${src}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
+      }
       continue;
     }
 
-    // Standalone image: ![alt](url) - filter out placeholder/tracking images
+    // Standalone image: ![alt](url) - filter out placeholder/tracking images and CTA images
     const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (imageMatch) {
       const alt = imageMatch[1] || 'Article image';
       const src = imageMatch[2];
-      // Skip tiny/icon images that are likely download icons or tracking pixels
-      if (src.includes('Downloadable-Icon') || src.includes('tracking') || src.includes('pixel')) {
+      // Skip tiny/icon images, tracking pixels, and CTA images
+      if (src.includes('Downloadable-Icon') || src.includes('tracking') || src.includes('pixel') ||
+          src.includes('CTA') || src.includes('Get-a-Quote') || src.includes('Button-Post') ||
+          src.includes('quote-request')) {
         continue;
       }
       htmlBlocks.push(`<figure class="blog-figure"><img src="${src}" alt="${alt}" class="blog-image" loading="lazy" /></figure>`);
@@ -140,7 +161,21 @@ function markdownToHtml(markdown: string): string {
       const linkedImgInline = trimmed.match(/^\[\s*!\[([^\]]*)\]\(([^)]+)\)\s*\]\(([^)]+)\)$/);
       if (linkedImgInline) {
         const alt = linkedImgInline[1] || 'Article image';
-        htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImgInline[3]}" class="blog-image-link" target="_blank" rel="noopener noreferrer"><img src="${linkedImgInline[2]}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
+        const src = linkedImgInline[2];
+        const href = linkedImgInline[3];
+        
+        // Check if this is a CTA image - convert to text CTA instead
+        if (src.includes('CTA') || src.includes('Get-a-Quote') || src.includes('Button-Post') || 
+            src.includes('quote-request') || alt.toLowerCase().includes('cta') || 
+            alt.toLowerCase().includes('quote') || alt.toLowerCase().includes('get a quote')) {
+          const isQuote = href.includes('quote') || href.includes('request');
+          const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
+          const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
+          const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
+          htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
+        } else {
+          htmlBlocks.push(`<figure class="blog-figure"><a href="${href}" class="blog-image-link"><img src="${src}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
+        }
       } else {
         // Plain link - check if it's a CTA
         const linkMatch = trimmed.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
@@ -380,30 +415,6 @@ export default async function IngeniousBlogPost({
               {title}
             </h1>
 
-            {/* Meta - Glass Effect */}
-            <div
-              style={{
-                display: 'inline-block',
-                backgroundColor: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(8px)',
-                WebkitBackdropFilter: 'blur(8px)',
-                padding: '10px 16px',
-                borderRadius: '8px',
-                border: '1px solid rgba(255,255,255,0.15)',
-              }}
-            >
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', margin: 0 }}>
-                Originally published on{' '}
-                <a
-                  href={legacyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: '#00d4d4', textDecoration: 'underline' }}
-                >
-                  genetargeting.com
-                </a>
-              </p>
-            </div>
           </div>
         </section>
 
@@ -420,27 +431,25 @@ export default async function IngeniousBlogPost({
               }
               .blog-content h1.blog-h1 {
                 font-family: 'Poppins', sans-serif;
-                font-size: 2rem;
+                font-size: 1.85rem;
                 font-weight: 700;
-                color: #1a4a6e;
+                color: #0a253c;
                 margin: 2.5rem 0 1rem;
                 line-height: 1.3;
               }
               .blog-content h2.blog-h2 {
                 font-family: 'Poppins', sans-serif;
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 font-weight: 700;
-                color: #2384da;
+                color: #0a253c;
                 margin: 2.5rem 0 1rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #008080;
                 line-height: 1.3;
               }
               .blog-content h3.blog-h3 {
                 font-family: 'Poppins', sans-serif;
-                font-size: 1.3rem;
+                font-size: 1.25rem;
                 font-weight: 600;
-                color: #1a4a6e;
+                color: #0a253c;
                 margin: 2rem 0 0.75rem;
                 line-height: 1.4;
               }
@@ -448,7 +457,7 @@ export default async function IngeniousBlogPost({
                 font-family: 'Poppins', sans-serif;
                 font-size: 1.1rem;
                 font-weight: 600;
-                color: #333;
+                color: #0a253c;
                 margin: 1.75rem 0 0.5rem;
                 line-height: 1.4;
               }

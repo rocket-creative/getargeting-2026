@@ -13,11 +13,11 @@ author: "ingenious"
 ## The Basics of Transgenic Rats vs Mice in Genetic Research and Engineering
 
 The use of transgenic rats vs mice to facilitate genetic research has been an important choice that researchers have needed to consider since the first transgenic rats were developed. Before that, laboratory mice and their use in embryonic stem cell studies dominated the world of genetics. Scientists around the world found them to be the most effective animals for everything from generating basic knockin models to using complex methods to create conditional knockout models for studying a variety of ailments and genetic disorders that affect both mice and humans.
- 
 
-[
-![Rats For Tissue-Specific Gene Knockout White Paper](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b8a212fffe4e0eb629ed1_Tissue-Specific-Rat-White-Paper-CTA-min.jpeg)
-](https://go.genetargeting.com/rat-tissue-specific-white-paper)### Premiere animal model of human heart disease
+
+[Download Free White Paper: Custom Rat Models for Tissue-Specific Knockout](https://go.genetargeting.com/rat-tissue-specific-white-paper)
+
+### Premiere animal model of human heart disease
 
 When considering transgenic rats vs mice, we have to look at why transgenic rats take longer to develop than mice. Even though rats have been used for common research purposes such as testing drugs and genetically modified organic substances to help treat certain diseases, scientists were unable to develop knockout or knockin transgenic rats until about 10 years ago. The technology was successful but not consistent, after researchers figured out how to correctly harvest and maintain rat ES cells, which is much more complicated in comparison to mouse ES cells. These methods, combined with advanced genetic modification technologies such as CRISPR/Cas9, paved the way for genetic scientists to explore and decode physiological processes relating to metabolic, cardiovascular and brain functions that were still impossible to target using transgenic mouse models.
 

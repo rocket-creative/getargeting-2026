@@ -22,10 +22,7 @@ Before covering conditional knockout mouse protocol methods, it’s necessary to
 
 Conditional knockout mouse protocol techniques and procedures for altering the mouse genome are primarily based on conditional knockouts. This concept was first introduced quite recently in the world of genetics, and is based on the goal of eliminating a specific gene that targets a particular tissue within the body. For example, conditional knockouts can be developed to impair a particular function that only affects the liver or to alter genes that affect the proper functioning of the heart. These methods are extremely valuable due to the possibilities they present, allowing scientists to closely monitor how the impairment of a certain gene can affect the functioning of an organ or the integrity of a specific type of tissue within the body.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 Common Techniques for Generating KnockoutsThe Cre-lox recombination system is the most commonly utilized system for generating knockouts in any types of animals. Used primarily for knockout mice, the reason why the Cre-lox system is used is because of the ease with which the Cre enzyme is able to recognize the two lox sites within the mammalian DNA and trigger the recombination process between them. This process then leads to the deletion or inversion of specific genes within the lox, depending how they are oriented. This system is most often used with the help of chemicals like tetracycline, which can be introduced to trigger a conditional gene knockout at a specific time.
 

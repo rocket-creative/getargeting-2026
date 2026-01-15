@@ -16,9 +16,9 @@ If your lab isn’t already using specialized software, you may be keeping track
 
 It may be time to invest in a colony management software solution for your lab. You’ll be able to keep track of your animals and maintain your colony over time, giving you more time and resources to focus on your research project. You can also ensure that your lab will be in compliance with animal welfare laws.
 
-[
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b9831f26f3c2e2611b607_New-Website-Templates-for-Featured-Images-1024x246.png)
-](https://go.genetargeting.com/mouse-breeding-planner-ingenious)## Here are the top 5 lab mouse colony management software options we found, as recommended by [real users and scientists](https://www.researchgate.net/post/Can_anyone_recommend_a_mouse_colony_management_software_system) [on ResearchGate](https://www.researchgate.net/post/Is_there_a_software_free_or_cheap_to_manage_animal_breeding):
+[Try Our Free Mouse Breeding Planner](https://go.genetargeting.com/mouse-breeding-planner-ingenious)
+
+## Here are the top 5 lab mouse colony management software options we found, as recommended by [real users and scientists](https://www.researchgate.net/post/Can_anyone_recommend_a_mouse_colony_management_software_system) [on ResearchGate](https://www.researchgate.net/post/Is_there_a_software_free_or_cheap_to_manage_animal_breeding):
 
 ### 1) [SoftMouse.NET](https://www.softmouse.net/)
 

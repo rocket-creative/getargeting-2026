@@ -18,10 +18,7 @@ Knock-in mice were first made with a technique that’s still useful today: by r
 
 Rosa26 refers to a specific site on the mouse chromosome 6. It was identified in a screen that was designed to find places in the genome where the insertion of foreign DNA would not have unpredictable results. Unpredictable results in this case could mean two things – either unwanted effects on the health of the mouse or unpredictable expression of the foreign DNA. Carefully targeting the foreign DNA into the Rosa26 locus seems to have essentially no effect on the mouse’s health. In addition, the DNA that’s inserted will have a consistent expression pattern. With the older method of randomly inserting DNA into the genome, it’s possible for the new DNA to have an unpredictable expression pattern. This can happen if it’s inserted near another gene, and that gene’s promoter influences the inserted DNA. With the Rosa26 locus this is not the case. 
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Quick Guide: Rosa26 Knockin Approaches & Targeted Transgenics
-
-[GET YOUR COPY](https://go.genetargeting.com/rapid-rosa26-quick-guide)
+[Download Free Quick Guide: Rosa26 Knockin Approaches & Targeted Transgenics](https://go.genetargeting.com/rapid-rosa26-quick-guide)
 
 ## Why is the Rosa26 Gene Used?
 

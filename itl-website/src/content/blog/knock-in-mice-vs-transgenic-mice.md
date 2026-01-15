@@ -16,10 +16,7 @@ Transgenic and [knock-in mice](/knockin-mouse-models/) have existed for years. A
 
 First of all, it’s important to understand what knock-in and transgenic mice are and how they relate to each other. They are by no means identical, or even similar in many respects. While knock-in mice are designed to help scientists explore the possibilities of what might happen when a particularly targeted gene’s function is inactivated, genetic impairment in transgenic mice is more randomized. Because transgenic models use what is called “random integration,” researchers have very little control over where the desired gene actually ends up within the host genome. There is no mechanism in place to target a specific locus, which is what happens when knock-in mice are generating through the loxP and Cre recombinase method. Through the latter technique, it’s possible to precisely target the space that the newly introduced gene will occupy once the genetic mutation is complete.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Free Mouse Model Generation Guide: Step-by-step process for creating new custom models
-
-[LEARN MORE](/mouse-model-generation-guide/)
+[Download Free Mouse Model Generation Guide](/mouse-model-generation-guide/)
 
 It’s important to note that both in transgenic and knock-in mouse models, the species from which the foreign genetic material comes from can differ from that of the original mouse. There is no reason why the new gene should be “compatible” with the mouse, so the level of freedom and accuracy associated with knock-ins is quite impressive. Theories that can now be proven as true or false could not even have been explored before knock-in mice became prominent. Across the internet, it’s easy to find studies and news articles that mention how certain knock-in mouse models have helped researchers find better treatments and discover new mysteries related to the human genome without even having to use anything more than some basic genetic material.
 

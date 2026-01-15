@@ -28,9 +28,7 @@ Likewise, another study using humanized ACE2 mice characterized the duration of 
 
 hACE2 transgenic mouse models are an invaluable preclinical research tool that can be used to establish SARS-CoV-2 vaccine efficacy, safety, host immune response, and protection duration.  Importantly, the hACE2 mouse model can also be used in a variety of other research studies aimed at characterizing SARS-CoV-2 infectivity, life cycle, and COVID-19 disease progression.  ingenious has developed an exclusive human ACE2 transgenic model, [huACE2-ingenL](/humanized-ace2-mouse/), that expresses a human/mouse hybrid ACE2 transgene developed to bind SARS-CoV-2 and maintain downstream intracellular signalling in the mouse.  This innovation will maximize the likelihood that experimental results in the model organism will translate to humans and inform future SARS-CoV-2 studies and clinical trials.
 
-[
-![Order COVID-19 Large Scale Humanized Model](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b97264e1cb7d65e2e55dc_COVID-19-Large-Scale-Humanized-Order-CTA.jpeg)
-](/humanized-ace2-mouse/)#### Future applications for hACE2 transgenic mice
+#### Future applications for hACE2 transgenic mice
 
 A great deal more research is required to eliminate COVID-19 fatalities, and the hACE2 transgenic mouse model will play a critical role in preclinical studies.  Currently, only one antiviral agent, remdesivir, has been granted EUA by the FDA for use in some COVID-19 patients, and the antiparasitic drugs ivermectin and nitazoxanide are currently being evaluated for use in individuals with COVID-19.[[9]](/mouse-models/hace2-transgenic-mice/#_ftn9)  Additional research into new or existing drugs that can treat and/or prevent SARS-CoV-2 infection is necessary to provide additional protection for the immunocompromised and against new virus variants.[[10]](/mouse-models/hace2-transgenic-mice/#_ftn10)
 

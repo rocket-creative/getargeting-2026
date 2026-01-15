@@ -28,9 +28,9 @@ The Cre-lox recombination system is the most prevalent method used for obtaining
 
 Joseph A. Fraietta, PhDPerelman School of Medicine, University of Pennsylvania
 
-[
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acaf595a0972d992836_Get-a-Quote-Button-Post.png)
-](/quote-request-form/)### Advanced Knockout Techniques and Technologies
+[Request a Quote](/quote-request-form/)
+
+### Advanced Knockout Techniques and Technologies
 
 While conditional gene knockout was not as prevalent several years ago, the conditional knockout process is receiving far more attention today than ever before. Companies and academic institutes involved with the study and creation of new knockout mice are also able to use newer, more advanced techniques such as CRISPR. As a result, these conditional mouse model systems help towards developing a greater variety of derivative mouse lines for studying gene function in biology and disease.
 
@@ -38,10 +38,7 @@ While conditional gene knockout was not as prevalent several years ago, the cond
 
 What are conditional knockouts made for? The application of animal models that are developed using this methodology has to do with modeling human diseases accurately in other mammals – primarily in mice. Cancer is best studied with conditional knockout mouse models, due to the implication of somatic mutations in cancer development and progression, and also to allow researchers to study one specific type of cancer at a time. For example, conditional knockout models have been used to specifically study breast cancer.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ## You may also be interested in…
 

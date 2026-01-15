@@ -22,10 +22,7 @@ A conditional mutation works by changing its result based on the severity of a c
 
 There are many examples of conditional mutations and the diseases that they can cause. These mutations can sometimes result in defective functions that render the organism incapable of surviving under specific conditions. One of the best example is the temperature-dependent or temperature-sensitive mutation. These mutations cause the organism to be at risk of cell death when the temperature rises above or diminishes below a certain level. In such cases, the restrictive temperature condition leads to severe dysfunction. On the other hand, permissive conditions under normal temperatures will more likely lead to the mutation displaying a wild-type phenotype which only causes mild effects.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ### The Importance of These Mutations
 

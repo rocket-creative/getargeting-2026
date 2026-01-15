@@ -18,10 +18,7 @@ In essence, through the use of floxing and Cre recombinase, it is possible to sp
 
 One of the greatest advantages of floxing is that it allows for detailed in vivo study of abnormalities and diseases associated with genetic modifications. During the development of floxed mouse models, gene knockouts and other alterations can be triggered by certain processes at specific times. This action is made possible by the use of floxing together with the Cre/lox recombination system, allowing for the generation of better, more precise animal models. The development of drugs and genetic treatments can be highly dependent on new breakthroughs and results that are found during the in vivo study of floxed mouse models. Better models can accelerate this process, as they allow researchers to obtain more accurate and practical results.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 Tissue-specific knockouts using Cre/lox recombination and floxed mice can prevent many of the problems that occur during conventional knockout mutations. These can include serious concerns such as increased embryonic lethality and unwanted inconsistencies in the gene knockout process. As a result, whenever greater accuracy or a tissue-specific recombination is needed, most experts will recommend the use of floxed mouse models that have the gene in question inactivated only in a specific type of tissue, such as the kidneys or liver.
 
