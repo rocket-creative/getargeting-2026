@@ -283,9 +283,9 @@ export function CatalogSearch({
         <div style={{
           textAlign: 'center',
           padding: '20px',
-          background: '#fff5f5',
+          background: '#f5f5f5',
           borderRadius: '8px',
-          color: '#c53030',
+          color: '#666',
           fontSize: '.9rem',
         }}>
           <p style={{ margin: 0 }}>{error}</p>
@@ -294,7 +294,7 @@ export function CatalogSearch({
             style={{
               marginTop: '12px',
               padding: '8px 16px',
-              background: '#c53030',
+              background: '#666',
               color: '#fff',
               border: 'none',
               borderRadius: '4px',
@@ -632,12 +632,12 @@ export function CatalogSearch({
 // Helper function to get color based on model type
 function getModelTypeColor(modelType: string): string {
   const type = modelType?.toLowerCase() || '';
-  if (type.includes('knockout') || type.includes('ko')) return '#e74c3c';
-  if (type.includes('knockin') || type.includes('ki')) return '#3498db';
-  if (type.includes('humanized')) return '#9b59b6';
-  if (type.includes('conditional')) return '#f39c12';
-  if (type.includes('transgenic')) return '#27ae60';
-  if (type.includes('cre')) return '#00d4d4';
+  if (type.includes('knockout') || type.includes('ko')) return '#555';
+  if (type.includes('knockin') || type.includes('ki')) return '#134978';
+  if (type.includes('humanized')) return '#666';
+  if (type.includes('conditional')) return '#777';
+  if (type.includes('transgenic')) return '#444';
+  if (type.includes('cre')) return '#008080';
   return '#008080';
 }
 
