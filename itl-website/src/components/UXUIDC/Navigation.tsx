@@ -239,8 +239,8 @@ export function UXUIDCNavigation() {
                 >
                   <Link
                     href={item.href}
-                    className="relative text-[#666] hover:text-teal-600 transition-colors duration-300 flex items-center gap-1 py-2"
-                    style={{ fontFamily: 'var(--system-ui)', fontWeight: 100 }}
+                    className="relative text-[#333] hover:text-teal-600 transition-colors duration-300 flex items-center gap-1 py-2"
+                    style={{ fontFamily: 'var(--system-ui)', fontWeight: 450 }}
                   >
                     <span className="relative">
                       {item.label}
