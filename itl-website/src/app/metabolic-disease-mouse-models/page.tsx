@@ -60,7 +60,10 @@ const publicationsData = [
   { authors: "Vacher CM et al.", year: "2021", title: "Placental endocrine function shapes cerebellar development and social behavior.", journal: "Nature Neuroscience", volume: "24(10): 1392-1401", link: "https://pubmed.ncbi.nlm.nih.gov/34400844/" }
 ];
 
-const testimonials = [{ quote: "The Hephaestin flox model ingenious has made for us has been great. It has helped generate eight research publications.", author: "Joshua Dunaief, PhD, MD", affiliation: "University of Pennsylvania" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const testimonials = [{ quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation }];
 
 const relatedDiseaseModels = [
   { title: "Diabetes Mouse Models", href: "/diabetes-mouse-models" },

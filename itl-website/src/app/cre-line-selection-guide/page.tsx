@@ -189,21 +189,19 @@ const resourcesData = [
 ];
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { CRE_LOX_TESTIMONIALS, SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialsData = [
+  ...CRE_LOX_TESTIMONIALS.map(t => ({
+    quote: t.quote,
+    author: formatAuthorWithCredentials(t),
+    affiliation: t.affiliation,
+  })),
   {
-    quote: "Ingenious Targeting Laboratory has been a valuable resource for my lab for the generation of several transgenic strains. The iTL scientists were invaluable in designing the targeting strategies, and provided invaluable feedback. I would highly recommend iTL for the generation of conventional, conditional, knock in, or transgenic mice.",
-    author: "Mark R. Bhowmik, PhD",
-    affiliation: "National Institute of Environmental Health Sciences (NIH)"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
+    quote: SINGLE_DUNAIEF.quote,
+    author: formatAuthorWithCredentials(SINGLE_DUNAIEF),
+    affiliation: SINGLE_DUNAIEF.affiliation,
   }
 ];
 

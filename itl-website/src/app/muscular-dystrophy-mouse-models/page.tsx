@@ -47,7 +47,10 @@ const therapeuticApps = [
   { approach: "Cell Based", applications: ["Satellite cell transplantation", "iPSC derived myocytes", "Patient specific approaches"] }
 ];
 
-const testimonials = [{ quote: "The quality of service was exceptional. Your team went above and beyond to ensure that all aspects of the project were completed to the highest possible standards.", author: "Albert Basson, PhD", affiliation: "King's College London" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const testimonials = [{ quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "Rare Disease Mouse Models", href: "/rare-disease-mouse-models" },

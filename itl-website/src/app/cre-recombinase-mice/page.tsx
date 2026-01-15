@@ -128,12 +128,12 @@ const publicationsData = [
 ];
 
 // Testimonials
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const testimonials = [
-  {
-    quote: "The Hephaestin flox model ordered from Bharat has been used in a large number of experiments in my laboratory. The model has worked exactly as designed and has contributed to eight research publications.",
-    author: "Joshua Dunaief, MD, PhD",
-    affiliation: "University of Pennsylvania"
-  }
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation }
 ];
 
 // Related Links

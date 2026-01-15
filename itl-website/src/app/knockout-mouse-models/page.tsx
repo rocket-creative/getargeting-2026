@@ -123,18 +123,14 @@ const publicationsData = {
   ],
 };
 
-const testimonialsData = [
-  {
-    quote: "I'd like to thank the ingenious team for making this mouse for us. We are so excited! Everyone at ingenious has been wonderful to work with throughout the entire process. We will definitely be in contact the next time we need a mouse!",
-    name: 'Julia Maxson, PhD',
-    affiliation: 'Knight Cancer Institute, Oregon Health & Science University',
-  },
-  {
-    quote: 'We have generated 2 conditional knockout mouse lines with ingenious. Their scientific consulting was superb and both projects have gone very smoothly.',
-    name: 'Hyekyung Plumley, PhD',
-    affiliation: 'Warren Center for Neuroscience Drug Discovery',
-  },
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { KNOCKOUT_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = KNOCKOUT_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  name: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 const strategyData = {
   conventional: {

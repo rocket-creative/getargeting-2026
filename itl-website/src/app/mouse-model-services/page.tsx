@@ -122,17 +122,15 @@ const additionalServices = [
 ];
 
 // Testimonials
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+
 const testimonials = [
-  {
-    quote: "The Hephaestin flox model made by Ingenious is now the basis for eight research publications from multiple research groups in three countries.",
-    author: "Joshua Dunaief, MD, PhD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
-    author: "Raghu Mirmira, MD/PhD",
-    affiliation: "University of Chicago"
-  }
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
+  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
 
 // Related Links

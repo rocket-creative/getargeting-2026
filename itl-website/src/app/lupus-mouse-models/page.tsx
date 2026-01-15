@@ -122,10 +122,13 @@ const phenotypingEndpoints = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_MIRMIRA, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
-  author: "Raghu Mirmira, MD/PhD",
-  affiliation: "University of Chicago"
+  quote: SINGLE_MIRMIRA.quote,
+  author: formatAuthorWithCredentials(SINGLE_MIRMIRA),
+  affiliation: SINGLE_MIRMIRA.affiliation
 };
 
 // Related Links

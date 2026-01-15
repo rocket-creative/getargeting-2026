@@ -54,7 +54,10 @@ const therapeuticTargets = [
   { category: "Barrier/Microbiome", therapies: ["Tight junction modulators", "Mucus enhancement", "Probiotics", "Fecal microbiota transplant"] }
 ];
 
-const testimonials = [{ quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process.", author: "Raghu Mirmira, MD/PhD", affiliation: "University of Chicago" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const testimonials = [{ quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "Immunology Mouse Models", href: "/immunology-mouse-models" },

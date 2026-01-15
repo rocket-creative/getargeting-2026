@@ -172,11 +172,13 @@ const publicationsData = [
   }
 ];
 
-// Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "The Hephaestin model has been so successful that our colony has recently expanded to different laboratories, generating eight research publications thus far. We were impressed with the knowledge and attention to detail of the gene targeting team.",
-  author: "Joshua Dunaief, MD, PhD",
-  affiliation: "University of Pennsylvania"
+  quote: SINGLE_DUNAIEF.quote,
+  author: formatAuthorWithCredentials(SINGLE_DUNAIEF),
+  affiliation: SINGLE_DUNAIEF.affiliation
 };
 
 // Related Links

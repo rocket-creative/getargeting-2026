@@ -259,22 +259,17 @@ const applicationsData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const fimmelTestimonial = getTestimonialById('fimmel-loyola')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+
 const testimonialsData = [
-  {
-    quote: "The project was very well managed…in fact, using iTL validated my decision to not try and do this in my own lab. It would have been a catastrophe… (My project manager) was very helpful, always getting back to us in time and explaining every step of the project. I would be glad to serve as a reference for iTL and its staff.",
-    author: "Claus Fimmel, MD",
-    affiliation: "Loyola University Medical Center"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  }
+  { quote: fimmelTestimonial.quote, author: formatAuthorWithCredentials(fimmelTestimonial), affiliation: fimmelTestimonial.affiliation },
+  { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
 ];
 
 // FAQ Data

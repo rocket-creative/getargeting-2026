@@ -116,10 +116,13 @@ const alternativeContactData = [
   },
 ];
 
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_FRANCO, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: 'ITL provided exactly the humanized checkpoint models we needed for our immuno-oncology studies. Fast delivery and excellent support.',
-  author: 'Research Director',
-  institution: 'Leading Pharma Company',
+  quote: SINGLE_FRANCO.quote,
+  author: formatAuthorWithCredentials(SINGLE_FRANCO),
+  institution: SINGLE_FRANCO.affiliation,
 };
 
 // ========== PAGE COMPONENT ==========

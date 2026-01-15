@@ -212,24 +212,14 @@ const checkpointTableData = [
   { target: "SIRPα", approach: "Extracellular domain", applications: "CD47 SIRPα axis studies" }
 ];
 
-// Testimonials Data
-const testimonialsData = [
-  {
-    quote: "My experience with iTL has been great. This is a very professional and efficient team. Everything went smoothly throughout the process and we got our mouse model in a very timely manner. I would highly recommend iTL to my colleagues.",
-    author: "Emily Wu, PhD",
-    affiliation: "University of California, Los Angeles"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { HUMANIZED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = HUMANIZED_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // Related Links
 const checkpointModels = [

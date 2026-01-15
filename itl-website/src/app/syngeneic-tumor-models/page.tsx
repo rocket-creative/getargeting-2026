@@ -57,7 +57,10 @@ const implantationMethods = [
   { method: "Intravenous", description: "Tail vein injection seeds tumors in lung.", advantages: "Metastasis and lung colonization studies", limitations: "Limited to lung metastasis model" }
 ];
 
-const testimonials = [{ quote: "The quality of service was exceptional. Your team went above and beyond to ensure that all aspects of the project were completed to the highest possible standards.", author: "Albert Basson, PhD", affiliation: "King's College London" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const testimonials = [{ quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "PD1 Humanized Mice", href: "/pd1-humanized-mice" },

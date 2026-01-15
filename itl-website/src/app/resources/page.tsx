@@ -237,23 +237,14 @@ const downloadableResourcesData = {
 };
 
 // Testimonials Data
-const testimonialsData = [
-  {
-    quote: "The Hephaestin flox model made by Ingenious is now the basis for eight research publications from multiple research groups in three countries.",
-    author: "Joshua Dunaief, MD, PhD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards in every aspect of our project.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { RESOURCES_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = RESOURCES_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // Related Services Data
 const relatedServicesData = [

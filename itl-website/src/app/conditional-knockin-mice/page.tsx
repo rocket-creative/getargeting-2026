@@ -91,10 +91,14 @@ const expressionTiming = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const maxsonTestimonial = getTestimonialById('maxson-ohsu')!;
 const testimonialData = {
-  quote: "I'd like to thank the ingenious team for making this mouse for us. We are so excited! Everyone at ingenious has been wonderful to work with throughout the entire process. We will definitely be in contact the next time we need a mouse!",
-  author: "Julia Maxson, PhD",
-  affiliation: "Knight Cancer Institute, Oregon Health & Science University"
+  quote: maxsonTestimonial.quote,
+  author: formatAuthorWithCredentials(maxsonTestimonial),
+  affiliation: maxsonTestimonial.affiliation
 };
 
 // Related Links

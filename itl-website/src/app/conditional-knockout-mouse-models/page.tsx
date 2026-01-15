@@ -158,10 +158,13 @@ const publicationsData = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_PLUMLEY, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "Ingenious Targeting Laboratory is highly recommended for generating custom animal models. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.",
-  author: "Hyekyung Plumley, PhD",
-  affiliation: "Warren Center for Neuroscience Drug Discovery"
+  quote: SINGLE_PLUMLEY.quote,
+  author: formatAuthorWithCredentials(SINGLE_PLUMLEY),
+  affiliation: SINGLE_PLUMLEY.affiliation
 };
 
 // Related Links

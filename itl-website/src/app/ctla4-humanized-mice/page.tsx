@@ -98,10 +98,14 @@ const relatedApplications = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const diekwischTestimonial = getTestimonialById('diekwisch-tamu')!;
 const testimonialData = {
-  quote: "iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.",
-  author: "Thomas G.H. Diekwisch, DMD, PhD (sc), PhD (phil.)",
-  affiliation: "Texas A&M University College of Dentistry"
+  quote: diekwischTestimonial.quote,
+  author: formatAuthorWithCredentials(diekwischTestimonial),
+  affiliation: diekwischTestimonial.affiliation
 };
 
 // FAQ Data

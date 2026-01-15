@@ -121,23 +121,14 @@ const commonApplicationsData = {
 };
 
 // Testimonials Data
-const testimonialsData = [
-  {
-    quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
-    author: "Raghu Mirmira, MD, PhD",
-    affiliation: "University of Chicago"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // Publications Data
 const publicationsData = {

@@ -50,13 +50,10 @@ const creERT2Lines = [
   { category: "Cardiovascular", lines: [{ name: "Myh6 CreERT2", tissue: "Cardiomyocytes" }, { name: "Cdh5 CreERT2", tissue: "Endothelial cells" }] }
 ];
 
-const testimonials = [
-  {
-    quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
-    author: "Raghu Mirmira, MD/PhD",
-    affiliation: "University of Chicago"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const testimonials = [{ quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation }];
 
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },

@@ -111,18 +111,14 @@ const publicationsData = [
 ];
 
 // Testimonials
-const testimonials = [
-  {
-    quote: "The Hephaestin flox model made by Ingenious is now the basis for eight research publications from multiple research groups in three countries.",
-    author: "Joshua Dunaief, MD, PhD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process.",
-    author: "Raghu Mirmira, MD/Phd",
-    affiliation: "University of Chicago"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { TECHNOLOGY_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonials = TECHNOLOGY_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // FAQ Data
 const faqData = [

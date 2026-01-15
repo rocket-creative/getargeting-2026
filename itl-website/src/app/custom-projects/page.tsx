@@ -137,22 +137,17 @@ const deliverablesData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const francoTestimonial = getTestimonialById('franco-colorado')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+
 const testimonialsData = [
-  {
-    quote: "iTL generated a conditional knockout mouse for our laboratory in less than a year. The project manager kept us updated throughout the project, and the final characterization report was exceptionally thorough. We have now published multiple papers using this model.",
-    author: "Research Director",
-    affiliation: "Major Research University"
-  },
-  {
-    quote: "Working with Ingenious Targeting Laboratory has been a wonderful experience. Their scientists are knowledgeable and responsive, and the quality of the mice they produce is excellent. I would recommend them to anyone needing custom mouse models.",
-    author: "Principal Investigator",
-    affiliation: "Academic Medical Center"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  }
+  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
+  { quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // Publications Data

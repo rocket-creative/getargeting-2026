@@ -160,26 +160,17 @@ const trustedData = {
   ctaHref: '/publications',
 };
 
-// Testimonials - lines 65-75
+// Testimonials - using verified testimonials from master data
+// Source: https://www.genetargeting.com/testimonials
+import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialsData = {
   title: 'What Researchers Say',
-  testimonials: [
-    {
-      quote: 'The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.',
-      name: 'Joshua Dunaief, PhD, MD',
-      affiliation: 'University of Pennsylvania',
-    },
-    {
-      quote: 'We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.',
-      name: 'Hyekyung Plumley, PhD',
-      affiliation: 'Warren Center for Neuroscience Drug Discovery',
-    },
-    {
-      quote: 'The quality of service was exceptional and performed to the highest possible standards.',
-      name: 'Albert Basson, PhD',
-      affiliation: "King's College London",
-    },
-  ],
+  testimonials: FEATURED_TESTIMONIALS.map(t => ({
+    quote: t.quote,
+    name: formatAuthorWithCredentials(t),
+    affiliation: t.affiliation,
+  })),
   ctaHref: '/testimonials',
 };
 
