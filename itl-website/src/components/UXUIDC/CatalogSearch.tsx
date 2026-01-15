@@ -12,7 +12,7 @@ import Link from 'next/link';
 // Google Sheets API Configuration
 const SPREADSHEET_ID = '1DG54nHKf-A-7Ii8nSHvps74nCXbmNsPk51uL15JzuRU';
 const SHEET_NAME = 'ITL-Cat-24-25';
-const API_KEY = 'AIzaSyArMlYIOAXxXVB3jWiY23Pe4bqdNRq4gSI';
+const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY || '';
 
 interface CatalogModel {
   id: string;
