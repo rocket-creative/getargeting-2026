@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -103,14 +104,16 @@ const publicationsData = [
 ];
 
 // Testimonial Data
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_BASSON, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_BASSON.quote,
-  author: formatAuthorWithCredentials(SINGLE_BASSON),
-  affiliation: SINGLE_BASSON.affiliation
-};
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const bosmansTestimonial = getTestimonialById('bosmans-ghent')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+
+const testimonials = [
+  { quote: bosmansTestimonial.quote, name: formatAuthorWithCredentials(bosmansTestimonial), affiliation: bosmansTestimonial.affiliation },
+];
 
 // Related Links
 const transgenicServices = [
@@ -139,22 +142,38 @@ const projectResources = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "What is the difference between transgenic and knockin models?",
-    answer: "Transgenic models introduce exogenous DNA sequences through random integration (pronuclear injection) or targeted insertion at safe-harbor loci (ROSA26). Knockin models modify endogenous gene loci through homologous recombination. Transgenics add new genetic elements; knockins modify existing genes at their native locations."
+    answer: (
+      <>
+        Transgenic models introduce exogenous DNA sequences through random integration (<GlossaryTermLink term="pronuclear-injection">pronuclear injection</GlossaryTermLink>) or targeted insertion at <GlossaryTermLink term="safe-harbor-locus">safe-harbor loci</GlossaryTermLink> (<GlossaryTermLink term="rosa26-locus">ROSA26</GlossaryTermLink>). <GlossaryTermLink term="knockin-mouse-models">Knockin models</GlossaryTermLink> modify endogenous gene loci through <GlossaryTermLink term="homologous-recombination">homologous recombination</GlossaryTermLink>. Transgenics add new genetic elements; knockins modify existing genes at their native locations.
+      </>
+    )
   },
   {
     question: "When should I use conventional transgenesis vs ROSA26 targeting?",
-    answer: "Use conventional transgenesis for rapid generation, multiple founder lines for comparison, or when high expression levels are desired. Use ROSA26 targeting for single-copy integration at a defined location, predictable expression patterns, or when position effects must be avoided. ROSA26 provides more consistent expression across generations."
+    answer: (
+      <>
+        Use conventional transgenesis for rapid generation, multiple founder lines for comparison, or when high expression levels are desired. Use <GlossaryTermLink term="rosa26-locus">ROSA26 targeting</GlossaryTermLink> for <GlossaryTermLink term="single-copy-integration">single-copy integration</GlossaryTermLink> at a defined location, predictable expression patterns, or when position effects must be avoided. ROSA26 provides more consistent expression across generations.
+      </>
+    )
   },
   {
     question: "What is BAC transgenesis and when is it used?",
-    answer: "BAC (bacterial artificial chromosome) transgenesis uses large genomic fragments (100-200 kb) including the gene of interest with native regulatory elements. BAC transgenics show more physiological expression patterns than conventional transgenics because distant enhancers and regulatory regions are preserved. BAC transgenesis is particularly valuable for generating Cre driver lines."
+    answer: (
+      <>
+        <GlossaryTermLink term="large-fragment-bac-targeting">BAC (bacterial artificial chromosome) transgenesis</GlossaryTermLink> uses large genomic fragments (100-200 kb) including the gene of interest with native <GlossaryTermLink term="promoter-enhancer-regulatory-element">regulatory elements</GlossaryTermLink>. BAC transgenics show more physiological expression patterns than conventional transgenics because distant enhancers and regulatory regions are preserved. BAC transgenesis is particularly valuable for generating <GlossaryTermLink term="cre-driver-line">Cre driver lines</GlossaryTermLink>.
+      </>
+    )
   },
   {
     question: "Can transgenic models be used for conditional expression?",
-    answer: "Yes. Transgenic models can incorporate conditional expression cassettes including loxP-stop-loxP for Cre-dependent expression, TRE-driven systems for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional reporter or Cre expression."
+    answer: (
+      <>
+        Yes. Transgenic models can incorporate conditional expression cassettes including <GlossaryTermLink term="lox-stop-lox-cassette">loxP-stop-loxP</GlossaryTermLink> for Cre-dependent expression, <GlossaryTermLink term="tet-on-tet-off-systems">TRE-driven systems</GlossaryTermLink> for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional <GlossaryTermLink term="reporter-gene-reporter-allele">reporter</GlossaryTermLink> or Cre expression.
+      </>
+    )
   }
 ];
 
@@ -581,46 +600,59 @@ export default function TransgenicMouseServicePage() {
           </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <div className="animate-in" style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(0,128,128,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 25px'
-              }}>
-                <IconQuote size={30} color="#008080" />
-              </div>
-              <blockquote style={{ 
-                color: '#333', 
-                fontSize: '1.1rem', 
-                lineHeight: '1.8rem',
-                fontStyle: 'italic',
-                marginBottom: '25px'
-              }}>
-                &ldquo;{testimonialData.quote}&rdquo;
-              </blockquote>
-              <div>
-                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.95rem', marginBottom: '3px' }}>
-                  — {testimonialData.author}
-                </p>
-                <p style={{ color: '#666', fontSize: '.85rem' }}>
-                  {testimonialData.affiliation}
-                </p>
-              </div>
+        {/* Testimonials Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
+              What Researchers Say
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="animate-in"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    padding: '30px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.3s ease',
+                  }}
+                >
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                  <p style={{
+                    color: '#666',
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.9rem',
+                    fontWeight: 400,
+                    lineHeight: 1.6,
+                    fontStyle: 'italic',
+                    marginBottom: '20px',
+                    flex: 1,
+                  }}>
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div style={{ marginTop: 'auto' }}>
+                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                      — {testimonial.name}
+                    </p>
+                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>
+                      {testimonial.affiliation}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
               <Link
                 href="/testimonials"
-                className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
-                style={{ color: '#008080', fontSize: '.85rem', fontWeight: 500 }}
+                className="inline-flex items-center gap-2 transition-colors duration-300"
+                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
                 <span>Read more testimonials</span>
-                <IconChevronRight size={14} color="#008080" />
+                <IconChevronRight size={16} color="#008080" />
               </Link>
             </div>
           </div>
@@ -687,7 +719,7 @@ export default function TransgenicMouseServicePage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>

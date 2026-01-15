@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Note: Metadata exported from metadata.ts for this client component
 
@@ -72,14 +73,17 @@ const driverLines = [
 ];
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { SINGLE_DUNAIEF, getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
 const testimonials = [
   {
     quote: SINGLE_DUNAIEF.quote,
     author: formatAuthorWithCredentials(SINGLE_DUNAIEF),
     affiliation: SINGLE_DUNAIEF.affiliation
-  }
+  },
 ];
 
 const relatedTechnologies = [
@@ -95,10 +99,14 @@ const relatedModelTypes = [
   { title: "Reporter Knockin", href: "/reporter-knockin" }
 ];
 
-const faqData = [
+const getFaqData = () => [
   {
     question: "When should I use FLP FRT instead of Cre lox?",
-    answer: "FLP FRT is primarily used for removal of FRT flanked selection cassettes from knockout first alleles (tm1a to tm1c conversion), enabling generation of clean conditional alleles. FLP can also be used in dual recombinase experiments where independent control of Cre and FLP modifications is needed."
+    answer: (
+      <>
+        <GlossaryTermLink term="flp-frt-system">FLP FRT</GlossaryTermLink> is primarily used for removal of FRT flanked <GlossaryTermLink term="selection-markers">selection cassettes</GlossaryTermLink> from knockout first alleles (tm1a to tm1c conversion), enabling generation of clean <GlossaryTermLink term="conditional-knockout-mouse-models">conditional alleles</GlossaryTermLink>. FLP can also be used in dual recombinase experiments where independent control of Cre and FLP modifications is needed.
+      </>
+    )
   },
   {
     question: "How does FLP recombination efficiency compare to Cre?",
@@ -106,11 +114,19 @@ const faqData = [
   },
   {
     question: "Can FLP FRT be combined with Cre lox in the same model?",
-    answer: "Yes. Dual recombinase designs use both FRT (for FLP) and loxP (for Cre) sites, enabling independent control. For example, FLP removes FRT flanked cassettes to generate clean conditional alleles, then Cre controls gene deletion. This sequential use enables flexible allele architecture from knockout first designs."
+    answer: (
+      <>
+        Yes. Dual recombinase designs use both FRT (for FLP) and <GlossaryTermLink term="floxed-gene-loxp-site">loxP</GlossaryTermLink> (for Cre) sites, enabling independent control. For example, FLP removes FRT flanked cassettes to generate clean conditional alleles, then Cre controls gene deletion. This sequential use enables flexible allele architecture from knockout first designs.
+      </>
+    )
   },
   {
     question: "What FLP driver lines are available?",
-    answer: "Germline FLP expression lines include ActFLPe (ubiquitous from beta actin promoter) and Rosa26 FLPe (ubiquitous from Rosa26 locus). Tissue specific FLP drivers are more limited than Cre drivers. Nestin FLP and Syn FLP provide neural specific recombination, but fewer options exist for other tissues."
+    answer: (
+      <>
+        <GlossaryTermLink term="germline-transmission">Germline</GlossaryTermLink> FLP expression lines include ActFLPe (ubiquitous from beta actin promoter) and <GlossaryTermLink term="rosa26-locus">Rosa26</GlossaryTermLink> FLPe (ubiquitous from Rosa26 locus). Tissue specific FLP drivers are more limited than <GlossaryTermLink term="cre-driver-line">Cre drivers</GlossaryTermLink>. Nestin FLP and Syn FLP provide neural specific recombination, but fewer options exist for other tissues.
+      </>
+    )
   }
 ];
 
@@ -290,7 +306,7 @@ export default function FlpFrtSystemPage() {
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently Asked Questions</h2>
-            <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
+            <div className="animate-in"><UXUIDCAnimatedFAQ faqs={getFaqData()} /></div>
           </div>
         </section>
 

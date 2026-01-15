@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface FAQ {
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 }
 
 interface AnimatedFAQProps {

@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -98,10 +99,10 @@ import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verified
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const bassonTestimonial = getTestimonialById('basson-kings')!;
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
-  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // Related Links
@@ -125,10 +126,14 @@ const relatedTechnologies = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "What is pre germline characterization and why is it important?",
-    answer: "Pre germline characterization verifies that ES cell clones carry the intended genetic modification before committing to mouse generation. PCR, Southern blot analysis, and sequencing confirm correct targeting, proper allele structure, and absence of random integrations. This quality control prevents wasted time and resources on incorrectly targeted clones."
+    answer: (
+      <>
+        Pre <GlossaryTermLink term="germline-transmission">germline</GlossaryTermLink> characterization verifies that ES cell clones carry the intended genetic modification before committing to mouse generation. <GlossaryTermLink term="genotyping-pcr-qpcr">PCR</GlossaryTermLink>, <GlossaryTermLink term="southern-blot-copy-number">Southern blot</GlossaryTermLink> analysis, and <GlossaryTermLink term="sanger-ngs-validation">sequencing</GlossaryTermLink> confirm correct targeting, proper allele structure, and absence of random integrations. This quality control prevents wasted time and resources on incorrectly targeted clones.
+      </>
+    )
   },
   {
     question: "What strain backgrounds are available for ES cell targeting?",
@@ -136,11 +141,19 @@ const faqData = [
   },
   {
     question: "Can ES cell targeting be used for any gene modification?",
-    answer: "Yes. ES cell targeting via homologous recombination can modify any genomic locus with base pair precision. This includes knockouts, knockins (point mutations, reporters, tags), conditional alleles, and humanization. The approach works for any gene regardless of size or complexity."
+    answer: (
+      <>
+        Yes. <GlossaryTermLink term="es-cell-targeting">ES cell targeting</GlossaryTermLink> via <GlossaryTermLink term="homologous-recombination">homologous recombination</GlossaryTermLink> can modify any genomic locus with base pair precision. This includes <GlossaryTermLink term="knockout-mouse-models">knockouts</GlossaryTermLink>, <GlossaryTermLink term="knockin-mouse-models">knockins</GlossaryTermLink> (point mutations, reporters, tags), <GlossaryTermLink term="conditional-knockout-mouse-models">conditional alleles</GlossaryTermLink>, and <GlossaryTermLink term="humanized-mouse-models">humanization</GlossaryTermLink>. The approach works for any gene regardless of size or complexity.
+      </>
+    )
   },
   {
     question: "What is the advantage of ES cell targeting over other methods?",
-    answer: "ES cell targeting provides precision (base pair accuracy), predictability (pre germline verification), and flexibility (multiple allele types from one platform). Unlike random transgenesis or CRISPR in zygotes, ES cell targeting enables comprehensive characterization before mouse production and supports complex allele designs."
+    answer: (
+      <>
+        ES cell targeting provides precision (base pair accuracy), predictability (pre germline verification), and flexibility (multiple allele types from one platform). Unlike random transgenesis or nuclease methods in zygotes, ES cell targeting enables comprehensive characterization before mouse production and supports complex allele designs including <GlossaryTermLink term="targeting-vector">targeting vectors</GlossaryTermLink> with multiple elements.
+      </>
+    )
   }
 ];
 
@@ -595,7 +608,7 @@ export default function ESCellGeneTargetingPage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>

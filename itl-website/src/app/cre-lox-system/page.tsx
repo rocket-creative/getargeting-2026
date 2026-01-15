@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -185,14 +185,16 @@ const publicationsData = [
 ];
 
 // Testimonial Data
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_DUNAIEF.quote,
-  author: formatAuthorWithCredentials(SINGLE_DUNAIEF),
-  affiliation: SINGLE_DUNAIEF.affiliation
-};
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
+const marmigereTestimonial = getTestimonialById('marmigere-inserm')!;
+
+const testimonials = [
+  { quote: coetzeeTestimonial.quote, name: formatAuthorWithCredentials(coetzeeTestimonial), affiliation: coetzeeTestimonial.affiliation },
+];
 
 // Related Links
 const creLoxTechnologies = [
@@ -216,22 +218,38 @@ const relatedModelTypes = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "What is the difference between loxP and FRT sites?",
-    answer: "loxP sites are recognized by Cre recombinase; FRT sites are recognized by Flp recombinase. Both are 34 base pair sequences that enable DNA excision when two sites flank a DNA segment."
+    answer: (
+      <>
+        <GlossaryTermLink term="floxed-gene-loxp-site">loxP sites</GlossaryTermLink> are recognized by Cre recombinase; FRT sites are recognized by <GlossaryTermLink term="flp-frt-system">Flp recombinase</GlossaryTermLink>. Both are 34 base pair sequences that enable DNA <GlossaryTermLink term="inversion-vs-excision">excision</GlossaryTermLink> when two sites flank a DNA segment.
+      </>
+    )
   },
   {
     question: "How do I choose between tissue-specific and inducible Cre systems?",
-    answer: "Tissue-specific Cre provides spatial control (gene deleted in specific organs). Inducible Cre (CreERT2) provides temporal control (gene deleted at specific times). Combining both (tissue-specific CreERT2) provides maximum control. Choose based on whether you need spatial control, temporal control, or both."
+    answer: (
+      <>
+        <GlossaryTermLink term="cre-driver-line">Tissue-specific Cre</GlossaryTermLink> provides spatial control (gene deleted in specific organs). <GlossaryTermLink term="inducible-cre-ert2">Inducible Cre (CreERT2)</GlossaryTermLink> provides <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink> (gene deleted at specific times). Combining both (tissue-specific CreERT2) provides maximum control. Choose based on whether you need spatial control, temporal control, or both.
+      </>
+    )
   },
   {
     question: "What is a floxed allele?",
-    answer: "A floxed allele has loxP sites flanking a critical exon. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites and eliminates gene function. Floxed alleles are the foundation of conditional knockout strategies."
+    answer: (
+      <>
+        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed allele</GlossaryTermLink> has loxP sites flanking a critical exon. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites and eliminates gene function. Floxed alleles are the foundation of <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> strategies.
+      </>
+    )
   },
   {
     question: "Can I use the same floxed mouse with different Cre drivers?",
-    answer: "Yes. This is a major advantage of conditional systems. A single floxed allele can be crossed to any Cre driver line to achieve tissue-specific knockout in different organs. One floxed mouse project can support studies across multiple tissues and research programs."
+    answer: (
+      <>
+        Yes. This is a major advantage of conditional systems. A single floxed allele can be crossed to any <GlossaryTermLink term="cre-driver-line">Cre driver line</GlossaryTermLink> to achieve <GlossaryTermLink term="tissue-specific-knockout">tissue-specific knockout</GlossaryTermLink> in different organs. One floxed mouse project can support studies across multiple tissues and research programs.
+      </>
+    )
   }
 ];
 
@@ -936,39 +954,50 @@ export default function CreLoxSystemPage() {
           </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <div className="animate-in" style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(0,128,128,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 25px'
-              }}>
-                <IconQuote size={30} color="#008080" />
-              </div>
-              <blockquote style={{ 
-                color: '#333', 
-                fontSize: '1.1rem', 
-                lineHeight: '1.8rem',
-                fontStyle: 'italic',
-                marginBottom: '25px'
-              }}>
-                &ldquo;{testimonialData.quote}&rdquo;
-              </blockquote>
-              <div>
-                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.95rem', marginBottom: '3px' }}>
-                  — {testimonialData.author}
-                </p>
-                <p style={{ color: '#666', fontSize: '.85rem' }}>
-                  {testimonialData.affiliation}
-                </p>
-              </div>
+        {/* Testimonials Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
+              What Researchers Say
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="animate-in"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    padding: '30px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.3s ease',
+                  }}
+                >
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                  <p style={{
+                    color: '#666',
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.9rem',
+                    fontWeight: 400,
+                    lineHeight: 1.6,
+                    fontStyle: 'italic',
+                    marginBottom: '20px',
+                    flex: 1,
+                  }}>
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div style={{ marginTop: 'auto' }}>
+                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                      — {testimonial.name}
+                    </p>
+                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>
+                      {testimonial.affiliation}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -1048,7 +1077,7 @@ export default function CreLoxSystemPage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>
