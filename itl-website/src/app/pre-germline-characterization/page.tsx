@@ -119,7 +119,7 @@ export default function PreGermlineCharacterizationPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Characterization Steps</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {characterizationSteps.map((step, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{step.step}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{step.description}</p>
                 </div>
@@ -133,7 +133,7 @@ export default function PreGermlineCharacterizationPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Southern Blot Analysis</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {southernBlotDetails.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.aspect}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.purpose}</p>
                 </div>

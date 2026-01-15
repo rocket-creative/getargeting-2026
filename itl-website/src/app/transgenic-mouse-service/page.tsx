@@ -367,7 +367,7 @@ export default function TransgenicMouseServicePage() {
               {transgenicApproaches.map((approach, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '30px',
@@ -413,7 +413,7 @@ export default function TransgenicMouseServicePage() {
               {applicationsData.map((app, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -514,7 +514,7 @@ export default function TransgenicMouseServicePage() {
               {publicationsData.map((pub, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',

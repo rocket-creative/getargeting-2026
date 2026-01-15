@@ -370,7 +370,7 @@ export default function LupusMouseModelsPage() {
               {diseaseMechanisms.map((mechanism, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -401,7 +401,7 @@ export default function LupusMouseModelsPage() {
               {customModelApproaches.map((approach, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -506,7 +506,7 @@ export default function LupusMouseModelsPage() {
               {researchApplications.map((app, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',

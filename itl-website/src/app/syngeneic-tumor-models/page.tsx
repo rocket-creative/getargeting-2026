@@ -120,7 +120,7 @@ export default function SyngeneicTumorModelsPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Key Advantages of Syngeneic Models</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {keyAdvantages.map((item, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}><h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.title}</h3><p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p></div>))}
+              {keyAdvantages.map((item, index) => (<div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}><h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.title}</h3><p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p></div>))}
             </div>
           </div>
         </section>

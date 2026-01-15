@@ -595,7 +595,7 @@ export default function KnockinMouseModelsPage() {
               {publicationsData.publications.map((pub, i) => (
                 <div
                   key={i}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f7f7f7',
                     padding: '20px 25px',

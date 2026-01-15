@@ -425,7 +425,7 @@ export default function TIM3HumanizedMicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {tim3BiologyItems.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>
                     {item.name}
                   </h4>
@@ -519,7 +519,7 @@ export default function TIM3HumanizedMicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {humanizationStrategies.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>
                     {item.name}
                   </h4>
@@ -536,7 +536,7 @@ export default function TIM3HumanizedMicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {designConsiderations.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                   <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>
                     {item.name}
                   </h4>
@@ -616,7 +616,7 @@ export default function TIM3HumanizedMicePage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Dual Humanized Models
                 </h3>
@@ -632,7 +632,7 @@ export default function TIM3HumanizedMicePage() {
                 </table>
               </div>
 
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Higher Order Combinations
                 </h3>
@@ -773,7 +773,7 @@ export default function TIM3HumanizedMicePage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {immuneCharacterization.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <p style={{ color: '#008080', fontWeight: 600, marginBottom: '5px' }}>{item.test}</p>
                   <p style={{ color: '#555', fontSize: '.9rem' }}>{item.description}</p>
                 </div>
@@ -847,7 +847,7 @@ export default function TIM3HumanizedMicePage() {
 
             <div className="space-y-4">
               {publications.map((pub, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '5px' }}>
                     {pub.authors} ({pub.year})
                   </p>

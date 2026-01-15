@@ -391,7 +391,7 @@ export default function OphthalmologyMouseModelsPage() {
               {ocularAdvantages.map((item, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -420,7 +420,7 @@ export default function OphthalmologyMouseModelsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Retinitis Pigmentosa */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
                   Retinitis Pigmentosa
                 </h3>
@@ -438,7 +438,7 @@ export default function OphthalmologyMouseModelsPage() {
               </div>
 
               {/* LCA and Cone Dystrophies */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
                   Leber Congenital Amaurosis & Cone Dystrophies
                 </h3>
@@ -514,7 +514,7 @@ export default function OphthalmologyMouseModelsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Dry AMD */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Dry AMD Models
                 </h3>
@@ -529,7 +529,7 @@ export default function OphthalmologyMouseModelsPage() {
               </div>
 
               {/* Wet AMD */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Wet AMD Models
                 </h3>
@@ -560,7 +560,7 @@ export default function OphthalmologyMouseModelsPage() {
               {diabeticModels.map((model, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -717,7 +717,7 @@ export default function OphthalmologyMouseModelsPage() {
               {publicationsData.map((pub, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',

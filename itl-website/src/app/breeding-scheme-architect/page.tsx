@@ -610,7 +610,7 @@ function BreedingSchemeArchitectContent() {
             {howItWorksSteps.map((step, index) => (
               <div
                 key={index}
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   border: '.5px solid #e0e0e0',

@@ -51,7 +51,7 @@ export default function AllCatalogMouseModelsPage() {
               Search our extensive catalog of over 10,000 genetically engineered mouse models including knockout, knockin, humanized, Cre driver, and reporter strains for biomedical research and drug development.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
+              <Link href="/order-inquiry-catalog-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -63,10 +63,10 @@ export default function AllCatalogMouseModelsPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request a Quote
+                Request Catalog Model
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/custom-mouse-models" style={{
+              <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -79,7 +79,7 @@ export default function AllCatalogMouseModelsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Custom Models
+                Custom Model Quote
               </Link>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function AllCatalogMouseModelsPage() {
               Our team can help you find the right model or create a custom solution tailored to your research.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{
+              <Link href="/order-inquiry-catalog-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -167,8 +167,23 @@ export default function AllCatalogMouseModelsPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Contact Us
+                Request a Catalog Model
                 <IconChevronRight size={16} color="#008080" />
+              </Link>
+              <Link href="/request-quote" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'transparent',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                border: '2px solid rgba(255,255,255,0.5)'
+              }}>
+                Custom Model Quote
               </Link>
             </div>
           </div>

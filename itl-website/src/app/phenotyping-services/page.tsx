@@ -393,7 +393,7 @@ export default function PhenotypingServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Serum Chemistry */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Serum Chemistry
                 </h3>
@@ -413,7 +413,7 @@ export default function PhenotypingServicesPage() {
               </div>
 
               {/* Hematology & Specialized Assays */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Hematology
                 </h3>
