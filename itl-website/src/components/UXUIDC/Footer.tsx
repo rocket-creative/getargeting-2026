@@ -16,6 +16,7 @@ const footerSections = [
       { label: 'Knockin Models', href: '/knockin-mouse-models' },
       { label: 'Humanized Models', href: '/humanized-mouse-models' },
       { label: 'Transgenic Service', href: '/transgenic-mouse-service' },
+      { label: 'Catalog Models', href: '/all-catalog-mouse-models' },
     ],
   },
   {

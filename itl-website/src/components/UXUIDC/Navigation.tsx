@@ -40,10 +40,12 @@ const navigationItems: NavItem[] = [
     ],
   },
   {
-    label: 'Catalog',
+    label: 'Catalog Models',
     href: '/catalog-mouse-models',
     children: [
+      { label: 'All Catalog Models', href: '/catalog-mouse-models' },
       { label: 'Disease Model Catalog', href: '/disease-model-catalog' },
+      { label: 'Humanized Immune Checkpoint', href: '/humanized-immune-checkpoint-mice' },
       { label: 'PD1 Humanized Mice', href: '/pd1-humanized-mice' },
       { label: 'PDL1 Humanized Mice', href: '/pdl1-humanized-mice' },
       { label: 'LAG3 Humanized Mice', href: '/lag3-humanized-mice' },

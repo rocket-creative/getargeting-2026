@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 const heroData = {
   badge: "Immuno Oncology",
@@ -97,6 +98,13 @@ export default function HumanizedImmuneCheckpointMicePage() {
               </div>
               <div className="hero-animate"><div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}><IconImage size={60} color="rgba(255,255,255,0.4)" /><span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Checkpoint Immunotherapy Illustration</span></div></div>
             </div>
+          </div>
+        </section>
+
+        {/* Catalog Search Section */}
+        <section style={{ backgroundColor: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <CatalogSearch maxResults={15} showTitle={true} />
           </div>
         </section>
 
