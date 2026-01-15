@@ -6,6 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import LabSignalsSignup, { getRelatedLabSignalsArticles } from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, pointMutationResources } from '@/components/UXUIDC';
 
@@ -339,7 +340,7 @@ export default function PointMutationMicePage() {
                   style={{
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                     marginBottom: '15px'
                   }}
@@ -352,7 +353,7 @@ export default function PointMutationMicePage() {
                   style={{
                     color: 'rgba(255,255,255,0.85)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginBottom: '25px'
                   }}
@@ -837,6 +838,19 @@ export default function PointMutationMicePage() {
               description="Download our free comparison chart to help plan your point mutation project."
               resources={pointMutationResources}
               variant="card"
+            />
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter CTA */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Point Mutation Design Expertise"
+              description="Subscribe to Lab Signals for expert insights on disease variant modeling, allele design strategies, and point mutation mouse generation."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/point-mutation-mice')}
             />
           </div>
         </section>

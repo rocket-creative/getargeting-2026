@@ -95,7 +95,7 @@ export default function CustomRabbitModelsPage() {
               style={{
                 color: 'rgba(255,255,255,0.9)',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.7rem',
                 maxWidth: '800px',
               }}
@@ -139,7 +139,7 @@ export default function CustomRabbitModelsPage() {
               style={{
                 color: '#666',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.8rem',
                 marginBottom: '20px',
               }}
@@ -150,7 +150,7 @@ export default function CustomRabbitModelsPage() {
               style={{
                 color: '#666',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.8rem',
                 paddingLeft: '25px',
                 marginBottom: '30px',
@@ -187,7 +187,7 @@ export default function CustomRabbitModelsPage() {
                 style={{
                   color: '#666',
                   fontSize: '.95rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.6rem',
                 }}
               >

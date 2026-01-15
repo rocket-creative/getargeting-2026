@@ -250,7 +250,7 @@ export default function WhyChooseITLPage() {
                   color: 'rgba(255,255,255,0.9)',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '1rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.7rem',
                   marginBottom: '25px',
                 }}
@@ -429,7 +429,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.85rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                     }}
                   >
@@ -479,7 +479,7 @@ export default function WhyChooseITLPage() {
                         color: '#666',
                         fontFamily: 'var(--system-ui)',
                         fontSize: '.9rem',
-                        fontWeight: 300,
+                        fontWeight: 400,
                         lineHeight: '1.6rem',
                         marginBottom: '6px',
                       }}
@@ -510,7 +510,7 @@ export default function WhyChooseITLPage() {
                         color: '#666',
                         fontFamily: 'var(--system-ui)',
                         fontSize: '.9rem',
-                        fontWeight: 300,
+                        fontWeight: 400,
                         lineHeight: '1.6rem',
                         marginBottom: '6px',
                       }}
@@ -582,7 +582,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       marginBottom: '6px',
                     }}
@@ -611,7 +611,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       marginBottom: '6px',
                     }}
@@ -649,7 +649,7 @@ export default function WhyChooseITLPage() {
                     color: '#666',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.5rem',
                   }}
                 >
@@ -698,7 +698,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       marginBottom: '6px',
                     }}
@@ -729,7 +729,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       marginBottom: '6px',
                     }}
@@ -772,7 +772,7 @@ export default function WhyChooseITLPage() {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.5rem',
                 }}
               >
@@ -795,7 +795,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                       marginBottom: '6px',
                     }}
@@ -821,7 +821,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                       marginBottom: '6px',
                     }}
@@ -868,7 +868,7 @@ export default function WhyChooseITLPage() {
                     color: 'rgba(255,255,255,0.9)',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginTop: '12px',
                     flex: 1,
@@ -892,7 +892,7 @@ export default function WhyChooseITLPage() {
                     color: 'rgba(255,255,255,0.7)',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.85rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                   }}
                 >
                   {t.org}
@@ -951,7 +951,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                     }}
                   >
@@ -973,7 +973,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                     }}
                   >
@@ -995,7 +995,7 @@ export default function WhyChooseITLPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                     }}
                   >
@@ -1087,7 +1087,7 @@ export default function WhyChooseITLPage() {
               color: '#666',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               marginBottom: '24px',
             }}
           >
@@ -1147,7 +1147,7 @@ export default function WhyChooseITLPage() {
                         color: '#666',
                         fontFamily: 'var(--system-ui)',
                         fontSize: '.9rem',
-                        fontWeight: 300,
+                        fontWeight: 400,
                         lineHeight: '1.5rem',
                       }}
                     >

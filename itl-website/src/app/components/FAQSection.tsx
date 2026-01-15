@@ -129,7 +129,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.4rem',
                 }}
               >

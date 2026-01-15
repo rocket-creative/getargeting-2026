@@ -284,7 +284,7 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
             color: 'white',
             fontFamily: 'var(--system-ui)',
             fontSize: '.9rem',
-            fontWeight: 300,
+            fontWeight: 400,
             lineHeight: '1.4rem',
             marginBottom: '25px',
           }}

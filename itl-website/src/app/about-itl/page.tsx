@@ -21,6 +21,7 @@ import {
   UXUIDCAnimatedCounter,
   UXUIDCAnimatedFAQ,
   UXUIDCStartProjectCTA,
+  LabSignalsSignup,
   IconTarget,
   IconHandshake,
   IconClipboard,
@@ -298,7 +299,7 @@ export default function AboutPage() {
                   color: 'rgba(255,255,255,0.9)',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '1rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.7rem',
                   marginBottom: '25px',
                 }}>
@@ -419,7 +420,7 @@ export default function AboutPage() {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.95rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.7rem',
                 }}>
                   {missionData.content}
@@ -446,7 +447,7 @@ export default function AboutPage() {
                 color: 'rgba(255,255,255,0.8)',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.6rem',
                 maxWidth: '700px',
                 margin: '0 auto',
@@ -497,7 +498,7 @@ export default function AboutPage() {
                     color: 'rgba(255,255,255,0.9)',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.5rem',
                   }}>
                     {milestone.text}
@@ -510,7 +511,7 @@ export default function AboutPage() {
               color: 'rgba(255,255,255,0.7)',
               fontFamily: 'var(--system-ui)',
               fontSize: '.85rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.5rem',
               marginTop: '30px',
               fontStyle: 'italic',
@@ -559,7 +560,7 @@ export default function AboutPage() {
                     color: '#666',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.85rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.5rem',
                     flex: section.items ? 0 : 1,
                   }}>
@@ -572,7 +573,7 @@ export default function AboutPage() {
                           color: '#666',
                           fontFamily: 'var(--system-ui)',
                           fontSize: '.8rem',
-                          fontWeight: 300,
+                          fontWeight: 400,
                           lineHeight: '1.4rem',
                           marginBottom: '4px',
                         }}>
@@ -613,7 +614,7 @@ export default function AboutPage() {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.6rem',
                   marginBottom: '20px',
                 }}>
@@ -642,7 +643,7 @@ export default function AboutPage() {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.85rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.5rem',
                   marginTop: '20px',
                   fontStyle: 'italic',
@@ -689,7 +690,7 @@ export default function AboutPage() {
                 color: '#666',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.6rem',
                 maxWidth: '700px',
                 margin: '0 auto',
@@ -733,7 +734,7 @@ export default function AboutPage() {
                           color: '#666',
                           fontFamily: 'var(--system-ui)',
                           fontSize: '.8rem',
-                          fontWeight: 300,
+                          fontWeight: 400,
                           lineHeight: '1.4rem',
                         }}>
                           {facility.desc}
@@ -792,7 +793,7 @@ export default function AboutPage() {
                     color: '#666',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     fontStyle: 'italic',
                     flex: 1,
@@ -812,7 +813,7 @@ export default function AboutPage() {
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.8rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                     }}>
                       {testimonial.affiliation}
                     </p>
@@ -849,7 +850,7 @@ export default function AboutPage() {
               color: '#666',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.6rem',
               marginBottom: '25px',
             }}>
@@ -890,6 +891,17 @@ export default function AboutPage() {
             { label: 'Request a Quote', href: '/request-quote' },
           ]}
         />
+
+        {/* ========== LAB SIGNALS NEWSLETTER ========== */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Stay Connected with Lab Signals"
+              description="Subscribe to our biweekly newsletter for research insights, technical guides, and the latest in mouse model science from our PhD scientists."
+            />
+          </div>
+        </section>
 
         {/* ========== FAQ - Animated Accordion ========== */}
         <UXUIDCAnimatedFAQ

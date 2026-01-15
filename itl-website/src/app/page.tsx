@@ -10,6 +10,7 @@ import {
   UXUIDCFooter,
   UXUIDCCookieConsent,
   BreedingSchemeArchitectCTA,
+  LabSignalsSignup,
 } from '@/components/UXUIDC';
 
 // Components for each section
@@ -239,6 +240,17 @@ export default function HomePage() {
 
         {/* 8. What Researchers Say (Testimonials) */}
         <TestimonialsSection data={testimonialsData} />
+
+        {/* 8.5 Lab Signals Newsletter CTA */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Stay Ahead with Lab Signals"
+              description="Subscribe for biweekly insights from our PhD scientists. Expert articles on mouse model design, gene targeting strategies, and research best practices."
+            />
+          </div>
+        </section>
 
         {/* 9. Start Your Project */}
         <StartProjectSection data={startProjectData} />

@@ -110,7 +110,7 @@ export default function InducibleRosa26Page() {
               style={{
                 color: 'rgba(255,255,255,0.9)',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.7rem',
                 maxWidth: '800px',
               }}
@@ -156,7 +156,7 @@ export default function InducibleRosa26Page() {
               style={{
                 color: '#666',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.8rem',
                 marginBottom: '25px',
               }}
@@ -177,7 +177,7 @@ export default function InducibleRosa26Page() {
                 <h3 style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
                   Doxycycline-Inducible
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem' }}>
                   Tet-On and Tet-Off systems provide reversible control over transgene expression through doxycycline administration in drinking water or food.
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function InducibleRosa26Page() {
                 <h3 style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
                   Cre-Dependent Expression
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem' }}>
                   LSL (lox-STOP-lox) cassettes enable Cre-dependent activation, allowing tissue-specific or temporally controlled expression when combined with Cre driver lines.
                 </p>
               </div>
@@ -216,7 +216,7 @@ export default function InducibleRosa26Page() {
               style={{
                 color: '#666',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.8rem',
                 paddingLeft: '25px',
                 marginBottom: '30px',

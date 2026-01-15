@@ -105,7 +105,7 @@ export default function CoreServicesSection({ data }: { data: ServiceItem[] }) {
                 marginBottom: '15px',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.3rem',
               }}
             >

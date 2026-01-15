@@ -130,7 +130,7 @@ export default function ContactPage() {
                   color: 'rgba(255,255,255,0.9)',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '1.1rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.7',
                   marginBottom: '30px',
                 }}>
@@ -376,7 +376,7 @@ export default function ContactPage() {
               color: 'rgba(255,255,255,0.9)',
               fontFamily: 'var(--system-ui)',
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               margin: 0,
             }}>
               We respond to all inquiries within one business day. Complex projects receive a detailed technical review within 2-3 days.

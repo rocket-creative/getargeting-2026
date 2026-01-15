@@ -89,7 +89,7 @@ export default function GeneralContactPage() {
               color: 'rgba(255,255,255,0.85)',
               fontFamily: 'var(--system-ui)',
               fontSize: '.95rem',
-              fontWeight: 300,
+              fontWeight: 400,
               maxWidth: '600px',
               margin: '0 auto',
               lineHeight: '1.6',

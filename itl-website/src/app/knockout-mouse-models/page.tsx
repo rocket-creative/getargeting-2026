@@ -311,7 +311,7 @@ export default function KnockoutMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                     marginBottom: '15px',
                   }}
@@ -323,7 +323,7 @@ export default function KnockoutMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.85)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginBottom: '25px',
                   }}
@@ -450,7 +450,7 @@ export default function KnockoutMouseModelsPage() {
                     style={{
                       color: '#666',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       marginBottom: '12px',
                     }}
@@ -461,7 +461,7 @@ export default function KnockoutMouseModelsPage() {
                     style={{
                       color: '#666',
                       fontSize: '.85rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.5rem',
                       flex: 1,
                     }}
@@ -509,7 +509,7 @@ export default function KnockoutMouseModelsPage() {
               style={{
                 color: '#666',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.6rem',
                 marginBottom: '30px',
                 maxWidth: '700px',
@@ -573,7 +573,7 @@ export default function KnockoutMouseModelsPage() {
                   style={{
                     color: '#666',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                   }}
                 >
@@ -621,7 +621,7 @@ export default function KnockoutMouseModelsPage() {
               style={{
                 color: '#666',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 marginBottom: '30px',
               }}
             >
@@ -642,7 +642,7 @@ export default function KnockoutMouseModelsPage() {
                   <p style={{ color: '#333', fontSize: '.9rem', fontWeight: 500, marginBottom: '5px' }}>
                     {pub.authors} {pub.year}. {pub.title}
                   </p>
-                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, fontStyle: 'italic' }}>
+                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, fontStyle: 'italic' }}>
                     {pub.journal}
                   </p>
                 </div>
@@ -699,10 +699,10 @@ export default function KnockoutMouseModelsPage() {
                 >
                   {strategyData.conventional.title}
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '12px' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '12px' }}>
                   {strategyData.conventional.content}
                 </p>
-                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, lineHeight: '1.5rem' }}>
+                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, lineHeight: '1.5rem' }}>
                   {strategyData.conventional.ideal}
                 </p>
               </div>
@@ -718,10 +718,10 @@ export default function KnockoutMouseModelsPage() {
                 >
                   {strategyData.conditional.title}
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '12px' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '12px' }}>
                   {strategyData.conditional.content}
                 </p>
-                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, lineHeight: '1.5rem' }}>
+                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, lineHeight: '1.5rem' }}>
                   {strategyData.conditional.ideal}
                 </p>
               </div>
@@ -738,10 +738,10 @@ export default function KnockoutMouseModelsPage() {
               >
                 {strategyData.planning.title}
               </h3>
-              <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '10px' }}>
+              <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '10px' }}>
                 {strategyData.planning.content}
               </p>
-              <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, lineHeight: '1.5rem', fontStyle: 'italic' }}>
+              <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, lineHeight: '1.5rem', fontStyle: 'italic' }}>
                 {strategyData.planning.outro}
               </p>
             </div>
@@ -834,10 +834,10 @@ export default function KnockoutMouseModelsPage() {
                 >
                   {advancedData.knockoutFirst.title}
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '12px' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '12px' }}>
                   {advancedData.knockoutFirst.content}
                 </p>
-                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, lineHeight: '1.5rem' }}>
+                <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, lineHeight: '1.5rem' }}>
                   {advancedData.knockoutFirst.benefit}
                 </p>
               </div>
@@ -861,7 +861,7 @@ export default function KnockoutMouseModelsPage() {
                 >
                   {advancedData.tissueSpecific.title}
                 </h3>
-                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem' }}>
+                <p style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem' }}>
                   {advancedData.tissueSpecific.content}
                 </p>
               </div>

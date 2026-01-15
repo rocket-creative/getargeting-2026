@@ -430,7 +430,7 @@ export default function DoxycyclineInducibleSystemsPage() {
             </h1>
             <p className="hero-animate" style={{
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '16px',
               lineHeight: 1.7,
@@ -440,7 +440,7 @@ export default function DoxycyclineInducibleSystemsPage() {
             </p>
             <p className="hero-animate" style={{
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.8)',
               marginBottom: '30px',
               lineHeight: 1.7,

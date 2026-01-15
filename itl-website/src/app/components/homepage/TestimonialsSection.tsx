@@ -94,7 +94,7 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
                 color: '#666',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.4rem',
                 fontStyle: 'italic',
                 marginBottom: '20px',
@@ -125,7 +125,7 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.8rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                 }}
               >
                 {testimonial.affiliation}

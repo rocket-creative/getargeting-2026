@@ -6,6 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -259,7 +260,7 @@ export default function TransgenicMouseServicePage() {
                   style={{
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                     marginBottom: '15px'
                   }}
@@ -272,7 +273,7 @@ export default function TransgenicMouseServicePage() {
                   style={{
                     color: 'rgba(255,255,255,0.85)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginBottom: '25px'
                   }}
@@ -665,6 +666,17 @@ export default function TransgenicMouseServicePage() {
                 <span>→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter CTA */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Transgenic Design Insights"
+              description="Subscribe to Lab Signals for expert guides on BAC transgenics, ROSA26 targeting, and Cre driver design from our PhD scientists."
+            />
           </div>
         </section>
 

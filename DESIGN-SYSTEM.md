@@ -51,9 +51,9 @@ This document defines the exact design tokens and patterns to ensure consistency
 
 | Element | Size | Weight | Color | Line Height |
 |---------|------|--------|-------|-------------|
-| Hero intro | `1rem` | 300 | `rgba(255,255,255,0.9)` | `1.7rem` |
-| Body text | `.9rem` | 300 | `#666` | `1.6rem` |
-| Small text | `.85rem` | 300 | `#666` | `1.5rem` |
+| Hero intro | `1rem` | 400 | `rgba(255,255,255,0.9)` | `1.7rem` |
+| Body text | `.9rem` | 400 | `#666` | `1.6rem` |
+| Small text | `.85rem` | 400 | `#666` | `1.5rem` |
 | Button text | `.85rem` | 500 | varies | - |
 | Badge text | `.8rem` | 500 | varies | - |
 
