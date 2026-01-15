@@ -373,76 +373,60 @@ export const SHORT_TESTIMONIALS: Testimonial[] = VERIFIED_TESTIMONIALS.filter(
  * Pre-selected testimonials for specific page contexts
  * These are curated selections that work well for specific pages
  */
+/**
+ * Single testimonial exports for standardized page display
+ * Each page should use exactly 1 testimonial
+ */
 export const KNOCKOUT_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'maxson-ohsu')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
 ];
 
 export const NEUROSCIENCE_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'mirmira-chicago')!,
 ];
 
 export const ONCOLOGY_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'maxson-ohsu')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'basson-kings')!,
 ];
 
 export const SERVICES_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'said-uci')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'franco-colorado')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'creemers-leuven')!,
 ];
 
 export const RESOURCES_TESTIMONIALS = [
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'diekwisch-tamu')!,
   VERIFIED_TESTIMONIALS.find(t => t.id === 'dunaief-upenn')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
 ];
 
 export const HUMANIZED_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'bosmans-ghent')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'arenzana-pasteur')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'roth-upenn')!,
 ];
 
 export const CONDITIONAL_KO_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'marmigere-inserm')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'coetzee-nyu')!,
 ];
 
 export const PHARMA_BIOTECH_TESTIMONIALS = [
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'reid-amgen')!,
   VERIFIED_TESTIMONIALS.find(t => t.id === 'means-sanofi')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'fraietta-upenn-decart')!,
 ];
 
 export const CARDIOVASCULAR_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'rateri-kentucky')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'mirmira-chicago')!,
 ];
 
 export const CATALOG_TESTIMONIALS = [
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'diekwisch-tamu')!,
   VERIFIED_TESTIMONIALS.find(t => t.id === 'dunaief-upenn')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
 ];
 
 export const IMMUNOLOGY_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'said-uci')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'hussain-michigan')!,
 ];
 
 export const CRE_LOX_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'coetzee-nyu')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'marmigere-inserm')!,
 ];
 
 export const TECHNOLOGY_TESTIMONIALS = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'bosmans-ghent')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'clarke-cambridge')!,
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'fraietta-upenn-decart')!,
 ];
 
 /**

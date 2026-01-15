@@ -251,8 +251,6 @@ const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonialsData = [
   { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
-  { quote: coetzeeTestimonial.quote, author: formatAuthorWithCredentials(coetzeeTestimonial), affiliation: coetzeeTestimonial.affiliation },
-  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
 ];
 
 // FAQ Data

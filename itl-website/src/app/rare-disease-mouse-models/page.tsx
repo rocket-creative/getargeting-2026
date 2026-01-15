@@ -128,10 +128,10 @@ import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verified
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const bassonTestimonial = getTestimonialById('basson-kings')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
-  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // Related Links

@@ -189,8 +189,6 @@ const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonialsData = [
   { quote: rothTestimonial.quote, author: formatAuthorWithCredentials(rothTestimonial), affiliation: rothTestimonial.affiliation },
-  { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
-  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // FAQ Data

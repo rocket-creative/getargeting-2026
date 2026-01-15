@@ -117,14 +117,14 @@ const creDrivers = [
 ];
 
 // Testimonial Data
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_RATERI, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_RATERI.quote,
-  author: formatAuthorWithCredentials(SINGLE_RATERI),
-  affiliation: SINGLE_RATERI.affiliation
-};
+const rateriTestimonial = getTestimonialById('rateri-kentucky')!;
+
+const testimonials = [
+  { quote: rateriTestimonial.quote, name: formatAuthorWithCredentials(rateriTestimonial), affiliation: rateriTestimonial.affiliation },
+];
 
 // Related Links
 const relatedDiseaseModels = [
@@ -566,39 +566,14 @@ export default function HeartFailureMouseModelsPage() {
           </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        {/* Testimonials Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <div className="animate-in" style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(0,128,128,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 25px'
-              }}>
-                <IconQuote size={30} color="#008080" />
-              </div>
-              <blockquote style={{
-                color: '#333',
-                fontSize: '1.1rem',
-                lineHeight: '1.8rem',
-                fontStyle: 'italic',
-                marginBottom: '25px'
-              }}>
-                &ldquo;{testimonialData.quote}&rdquo;
-              </blockquote>
-              <div>
-                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.95rem', marginBottom: '3px' }}>
-                  — {testimonialData.author}
-                </p>
-                <p style={{ color: '#666', fontSize: '.85rem' }}>
-                  {testimonialData.affiliation}
-                </p>
-              </div>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
+            <div className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '40px', textAlign: 'center' }}>
+              <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '1.05rem', fontWeight: 400, lineHeight: 1.7, fontStyle: 'italic', marginBottom: '25px' }}>&ldquo;{testimonials[0].quote}&rdquo;</p>
+              <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonials[0].name}</p>
+              <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.85rem', fontWeight: 400 }}>{testimonials[0].affiliation}</p>
             </div>
           </div>
         </section>

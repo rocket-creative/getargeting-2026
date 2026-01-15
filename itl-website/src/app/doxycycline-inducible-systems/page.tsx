@@ -267,9 +267,7 @@ const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonialsData = [
-  { quote: fimmelTestimonial.quote, author: formatAuthorWithCredentials(fimmelTestimonial), affiliation: fimmelTestimonial.affiliation },
   { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
-  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
 ];
 
 // FAQ Data

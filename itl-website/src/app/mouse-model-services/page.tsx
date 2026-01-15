@@ -127,10 +127,10 @@ import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verified
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const francoTestimonial = getTestimonialById('franco-colorado')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
-  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
 
 // Related Links
