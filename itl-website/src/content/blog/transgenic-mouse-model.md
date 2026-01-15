@@ -21,10 +21,7 @@ Transgenic animal models are created either to serve as a model system to unders
 
 Transgenic mouse models are extremely useful for scientific and medical research but they’re not without limitations. Mice and humans share many aspects of their biology right down to the genetic sequences in their DNA. However any study that uses transgenic animal models must take into account the biological differences as well. For example the organs and immune system of a mouse are significantly different from what’s found in humans which can lead to different outcomes. In addition every researcher considering a new transgenic mouse model must evaluate whether the same results can be obtained without the use of a large number of animals.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Free Mouse Model Generation Guide: Step-by-step process for creating new custom models
-
-[LEARN MORE](/mouse-model-generation-guide/)
+[Download Free Mouse Model Generation Guide](/mouse-model-generation-guide/)
 
 ### Specific Mouse Model Applications: Alzheimer’s Disease
 

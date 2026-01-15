@@ -18,10 +18,7 @@ When it comes to the study of disease through genetic means, point mutation dise
 
 Point mutation diseases don’t always have to be the end result. In many instances, the consequences of a point mutation are neutral or even beneficial gene function. In fact, point mutations are responsible for the adaptation of certain organisms to adverse situations, that leads to evolution. Neutral mutations are also common when the change of one or more nucleotides doesn’t lead to a non-conservative missense mutation. This shows just how powerful point mutations truly are. That power is further increased when we learn that these mutations can also be used to induce certain diseases just by changing a single base pair. Researchers often use this action on purpose to study point mutations, point mutation diseases, and any potential therapies and treatments that can be effective against the generated conditions.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Point Mutation Comparison Chart
-
-[GET YOUR COPY](https://go.genetargeting.com/point-mutation-chart)
+[Download Free Point Mutation Comparison Chart](https://go.genetargeting.com/point-mutation-chart)
 
 ### Point Mutations and Immune System Problems
 

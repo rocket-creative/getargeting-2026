@@ -20,9 +20,9 @@ With the advancement of modern techniques and technologies used for genetic mani
 
 What are humanized mice? To put it simply, they are animal models used as a type of surrogate of various parts of human biology, such as the human immune system. Some humanized mice may only have human cells, while others might share many genetic and physiologic properties with humans. Because the mouse genome is close in similarity to that of humans, there are many components of mouse biology and genetics that can easily be manipulated to faithfully mimic human biological qualities.
 
-[
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b97ec327acd15569ce7a6_Custom-Humanized-Mice-CTA.jpeg)
-](/humanized-mouse-models/)### How Are Humanized Mice Made?
+[Explore Custom Humanized Mice](/humanized-mouse-models/)
+
+### How Are Humanized Mice Made?
 
 When using humanized mice in scientific research, there is no universal method or technology when it comes to how to generate humanized mice. Basically, there are three main model types to choose from: tumor, immune system, and gene targeted.
 
@@ -56,10 +56,7 @@ Immunocompromised mice engrafted with human cells or tissues is one way to study
 
 Another way to humanize the mouse is to use a specific gene-targeted approach. In this way, the mouse genes are replaced to express human versions of those genes. This allows researchers to study human genes that contain gene mutations within a native and controlled genetic environment. Overall, researchers need to evaluate their field of research, what gene they’re studying, and which model type would be appropriate to them when they decide how to make humanized mice.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Humanization White Paper
-
-[GET YOUR COPY](https://go.genetargeting.com/humanization-white-paper)
+[Download Free Humanization White Paper](https://go.genetargeting.com/humanization-white-paper)
 
 #### Humanized Mouse Models in COVID-19 Studies
 

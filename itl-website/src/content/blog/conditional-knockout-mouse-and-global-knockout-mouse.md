@@ -36,9 +36,6 @@ When comparing conditional knockout mouse and global knockout mouse specimens, w
 
 Conditional knockout mice have experienced a significant surge in popularity due to their practical advantages. A conditional mouse model can be used to evaluate the details of how a certain gene behaves in a single organ or tissue, making it easy for researchers to study the local effects of various diseases and genetic impairments. When compared, the main difference between a conditional knockout mouse and a global knockout mouse is the practical specificity of the conditional model, which allows for a far greater range of applications than its global knockout counterpart.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ‍

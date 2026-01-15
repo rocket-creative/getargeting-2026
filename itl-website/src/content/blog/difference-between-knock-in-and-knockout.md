@@ -16,10 +16,7 @@ author: "ingenious"
 
 The processes for making knockin mice and knockout mice are similar in many ways and require special skills, tools, and reagents. A major difference in knockin vs knockout is that a knockout mutation is always targeted to a precise spot in the mouse’s genome. This is because the goal of a knockout mouse model is to prevent a gene of interest from functioning so the genetic modification must happen in that gene’s sequence. A knockin mutation can be targeted but it’s also possible to insert a knockin sequence randomly into the genome and find out later where it ended up. This method was used to generate some of the very first genetically modified mouse models in the early 1980s, which had new genetic sequences randomly inserted into their genomes. 
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ## How are Knockout Mice Made?
 

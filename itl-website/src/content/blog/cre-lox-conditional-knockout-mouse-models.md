@@ -9,10 +9,9 @@ author: "ingenious"
 
 # New Design Guide For Cre-lox Conditional Knockout Mouse Models
 
-![New Cre-Lox Design Guide For Conditional Knockout Mouse Models](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b8fa82d7bcc726023a301_New-Cre-Lox-Design-Guide-For-Conditional-Knockout-Mouse-Models-680x378.jpeg)
-[
-![Free Cre-lox design guide](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b8fa883f227d3972092b2_Cre-lox-CTA.jpeg)
-](https://go.genetargeting.com/crelox-design-guide)## How to choose the right strategy for your cKO model
+## How to choose the right strategy for your cKO model
+
+[Download Free Cre-lox Design Guide](https://go.genetargeting.com/crelox-design-guide)
 
 We’ve compiled a short guide to choosing a strategy for your next Cre-lox conditional knockout (cKO) model which you can download [here](https://go.genetargeting.com/crelox-design-guide). Compared with standard knockout models a cKO has much greater flexibility, for example by enabling tissue-specific knockout of your target gene. As with any genetic modification the right design is crucial and must be carefully evaluated. There’s no one-size-fits-all approach when making new cKO models and our guide can help you evaluate the options for your gene of interest. We also list five rules to follow for designing a successful model.
 

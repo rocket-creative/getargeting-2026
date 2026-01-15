@@ -28,12 +28,7 @@ RELATED: [Conditional Knockout Mouse Models](/conditional-knockout-mouse-models/
 - Flank gene of interest with LoxP sites
 - Inject a plasmid or cross into strain that expresses Cre recombinase where/when/how you want loss-of-function to occur
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-#### Download Our Free Cre-lox Design Guide
-
-Learn about the design strategies you need to consider before starting your conditional knockout model.
-
-[GET YOUR COPY](https://go.genetargeting.com/crelox-design-guide)
+[Download Free Cre-lox Design Guide](https://go.genetargeting.com/crelox-design-guide)
 
 ## Lesser Known Facts about Cre/lox Recombination and Floxed Allele
 

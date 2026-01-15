@@ -26,9 +26,9 @@ With the sequencing of the Brown Norway rat in 2004 by the Rat Genome Sequencing
 
 In terms of the diseases that they are used to study, rats are usually not the model of choice when it comes to disorders related to neoplasms, blood and immune function. However, they’re more widely used in studying cardiovascular and metabolic disorders, as well as the onset of conditions that relate to the brain, digestive system, and various health problems related to behavior. Researchers are often advised to begin their studies using rat models in these areas, not only because they are a suitable model, but also due to the fact that rats have already helped scientists reach a few significant breakthroughs in these areas. Some of the disadvantages of choosing a different animal model for these fields could be difficulty in collecting accurate data, comparing data from previous studies that used rat models, and drawing definitive conclusions that could apply to future studies.
 
-[
-![Free Rat Model Guide](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b298b866d65b51ebcebaa_Rat-Model-Guide-CTA.jpeg)
-](https://go.genetargeting.com/rat-model-technology-guide)#### Researchers choose rats over other species for a number of reasons:
+[Download Free Rat Model Technology Guide](https://go.genetargeting.com/rat-model-technology-guide)
+
+#### Researchers choose rats over other species for a number of reasons:
 
 - The larger size when compared to mice makes handling, sampling and performing procedures easier.
 From a physiological standpoint, more is known about the responses and pathways in rats than in other species due to the wealth of data collected over the years.
@@ -62,9 +62,9 @@ Murray Clarke, PhDUniversity of Cambridge
 
 Interested in using rats for your next research project? Click the button below to get a quote!
 
-[
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b298cb4d6169216da1808_Get-a-Quote-Button-Post.jpeg)
-](/quote-request-form/)### Why are rats used to model hypoxia-ischemia?
+[Request a Quote](/quote-request-form/)
+
+### Why are rats used to model hypoxia-ischemia?
 
 This research has almost exclusively used a single procedure to induce the condition in animal models. The hypoxia-ischemia model, first published in 1981, has brain damage similar to that observed in cerebral palsy patients. Originally the method was used on rat pups seven days after birth, when their brains are most similar to those of newborn babies. It has since been applied to a variety of species, to leverage similarities between the brains of humans and different animals. In recent years mice have been used with increasing frequency, to take advantage of genetically modified lines as well as the relatively lower costs compared with rats. However mice are less likely to survive the hypoxia-ischemia procedure, display a wider variety of brain damage, and have dramatic strain-to-strain differences. Rat models are therefore still widely used. Most studies focus on either testing how a specific genetic pathway responds to the brain injury, or how administering a drug affects the severity of damage after injury. These decades of work will enable the integration of new techniques and technologies for cerebral palsy research and maximize the utility of the hypoxia-ischemia model.
 

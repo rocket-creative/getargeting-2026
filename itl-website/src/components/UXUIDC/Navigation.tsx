@@ -17,7 +17,7 @@ interface NavItem {
   children?: NavItem[];
 }
 
-// Complete Navigation Structure - from START-HERE.docx.md sitemap
+// Complete Navigation Structure - Updated January 2026
 const navigationItems: NavItem[] = [
   {
     label: 'Custom Models',
@@ -37,20 +37,25 @@ const navigationItems: NavItem[] = [
       { label: 'Gene Replacement', href: '/gene-replacement' },
       { label: 'Transgenic Mouse Service', href: '/transgenic-mouse-service' },
       { label: 'cDNA Knockin', href: '/cdna-knockin' },
+      { label: 'Rat Models', href: '/rat-models' },
+      { label: 'Custom Animal Models', href: '/custom-animal-models' },
     ],
   },
   {
     label: 'Catalog Models',
     href: '/catalog-mouse-models',
     children: [
-      { label: 'All Catalog Models', href: '/catalog-mouse-models' },
+      { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
       { label: 'Disease Model Catalog', href: '/disease-model-catalog' },
       { label: 'Humanized Immune Checkpoint', href: '/humanized-immune-checkpoint-mice' },
       { label: 'PD1 Humanized Mice', href: '/pd1-humanized-mice' },
       { label: 'PDL1 Humanized Mice', href: '/pdl1-humanized-mice' },
+      { label: 'CTLA4 Humanized Mice', href: '/ctla4-humanized-mice' },
       { label: 'LAG3 Humanized Mice', href: '/lag3-humanized-mice' },
       { label: 'TIM3 Humanized Mice', href: '/tim3-humanized-mice' },
+      { label: 'Single Checkpoint Mice', href: '/single-checkpoint-mice' },
       { label: 'Double Checkpoint Mice', href: '/double-checkpoint-mice' },
+      { label: 'Syngeneic Tumor Models', href: '/syngeneic-tumor-models' },
     ],
   },
   {
@@ -59,15 +64,20 @@ const navigationItems: NavItem[] = [
     children: [
       { label: 'Oncology', href: '/oncology-mouse-models' },
       { label: 'Immuno-Oncology', href: '/immuno-oncology-mouse-models' },
-      { label: 'Tumor Suppressor Knockout', href: '/tumor-suppressor-knockout-mice' },
       { label: 'Neuroscience', href: '/neuroscience-mouse-models' },
       { label: "Alzheimer's", href: '/alzheimers-mouse-models' },
-      { label: 'NASH/MASH', href: '/nash-mash-mouse-models' },
-      { label: 'Immunology', href: '/immunology-mouse-models' },
-      { label: 'Lupus', href: '/lupus-mouse-models' },
-      { label: 'Allergy & Asthma', href: '/allergy-asthma-mouse-models' },
+      { label: "Parkinson's", href: '/parkinsons-mouse-models' },
+      { label: 'ALS', href: '/als-mouse-models' },
       { label: 'Cardiovascular', href: '/cardiovascular-mouse-models' },
       { label: 'Heart Failure', href: '/heart-failure-mouse-models' },
+      { label: 'Immunology', href: '/immunology-mouse-models' },
+      { label: 'Autoimmune Disease', href: '/autoimmune-disease-mice' },
+      { label: 'Lupus', href: '/lupus-mouse-models' },
+      { label: 'IBD', href: '/ibd-mouse-models' },
+      { label: 'Metabolic Disease', href: '/metabolic-disease-mouse-models' },
+      { label: 'Diabetes', href: '/diabetes-mouse-models' },
+      { label: 'NASH/MASH', href: '/nash-mash-mouse-models' },
+      { label: 'Rare Disease', href: '/rare-disease-mouse-models' },
       { label: 'Ophthalmology', href: '/ophthalmology-mouse-models' },
     ],
   },
@@ -75,11 +85,18 @@ const navigationItems: NavItem[] = [
     label: 'Technology',
     href: '/technologies',
     children: [
+      { label: 'Technology Overview', href: '/technology-overview' },
       { label: 'Cre-Lox System', href: '/cre-lox-system' },
-      { label: 'Cre Line Selection Guide', href: '/cre-line-selection-guide' },
+      { label: 'Flp-Frt System', href: '/flp-frt-system' },
+      { label: 'Rosa26 Targeting', href: '/rosa26' },
+      { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
+      { label: 'Inducible Gene Expression', href: '/inducible-gene-expression' },
       { label: 'Doxycycline Inducible Systems', href: '/doxycycline-inducible-systems' },
       { label: 'BAC-to-BAC Large Scale Targeting', href: '/bac-to-bac-large-scale-targeting' },
+      { label: 'Cre Line Selection Guide', href: '/cre-line-selection-guide' },
       { label: 'Conditional vs Conventional Guide', href: '/conditional-vs-conventional-guide' },
+      { label: 'Critical Exon Selection', href: '/critical-exon-selection' },
+      { label: 'LoxP Site Design', href: '/loxp-site-design' },
     ],
   },
   {
@@ -95,6 +112,7 @@ const navigationItems: NavItem[] = [
       { label: 'Preclinical Services', href: '/preclinical-services' },
       { label: 'Phenotyping Services', href: '/phenotyping-services' },
       { label: 'Mouse Genotyping', href: '/mouse-genotyping-service' },
+      { label: 'Post-Project Services', href: '/post-project-services' },
     ],
   },
   {
@@ -106,8 +124,10 @@ const navigationItems: NavItem[] = [
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
       { label: 'Publications', href: '/publications' },
-      { label: 'C57BL/6 Background', href: '/c57bl6-mouse-background' },
-      { label: 'BALB/c Background', href: '/balbc-mouse-background' },
+      { label: 'Glossary', href: '/glossary' },
+      { label: 'Mouse Model Generation Guide', href: '/mouse-model-generation-guide' },
+      { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
+      { label: 'Video Library', href: '/video-library' },
       { label: 'Pricing Overview', href: '/pricing-overview' },
     ],
   },
@@ -116,6 +136,8 @@ const navigationItems: NavItem[] = [
     href: '/about-itl',
     children: [
       { label: 'Why Choose ITL', href: '/why-choose-itl' },
+      { label: 'Testimonials', href: '/testimonials' },
+      { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },
       { label: 'Contact', href: '/contact' },
       { label: 'Request Quote', href: '/request-quote' },

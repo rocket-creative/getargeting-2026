@@ -23,7 +23,8 @@ Before going any further: what is a transgene exactly? The concept of a transgen
 ![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b86efbe0c91bf11aef6de_3.jpeg)
 Claus Fimmel, MDLoyola University Medical Center
 
-![https://genetargeting.com/quote-request-form/](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b298cb4d6169216da1808_Get-a-Quote-Button-Post.jpeg)
+[Request a Quote](/quote-request-form/)
+
 ### Why Are Transgenes So Important?
 
 When you ask “what is a transgene,” you also have to ask yourself, why were transgenes were developed in the first place? Transgenic organisms have the important role of expressing various genes, which may make them vulnerable to specific disorders or conditions that researchers aim to study. The valuable research gathered from the development of humanized transgenic mice, for example, has been used to develop new treatments for cancer and other, equally debilitating disorders. Advancements in molecular biology allow for new models to be developed, helping scientists study the human genome more closely and conditions such as aging, diabetes, infertility and immune response.

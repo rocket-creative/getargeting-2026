@@ -20,10 +20,7 @@ Point mutations alter a single nucleotide in the genetic code. The effects of su
 
 At one end of the spectrum of possible effects are silent and conservative mutations. These cause no change in the function of the protein encoded by the gene, or a change that’s so minor it’s hard to measure. Silent mutations are possible because of the way genetic code is translated into protein sequence. The genetic code has redundancy built in, so sometimes changes to genes don’t result in changes to the final protein. Conservative mutations occur when the protein sequence is changed but the new amino acid is similar to the original one. 
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Point Mutation Comparison Chart
-
-[GET YOUR COPY](https://go.genetargeting.com/point-mutation-chart)
+[Download Free Point Mutation Comparison Chart](https://go.genetargeting.com/point-mutation-chart)
 
 Non-conservative mutations can be more severe because they cause a greater change to the protein sequence or expression level. An example would be changing an acidic amino acid into a basic one. However, this kind of mutation can also be mild if the protein sequence is changed in a domain that’s not crucial. Evaluating this kind of mutation requires extensive knowledge about the protein and which parts of the sequence and structure are vital. 
 

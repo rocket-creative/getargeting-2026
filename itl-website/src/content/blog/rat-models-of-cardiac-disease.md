@@ -22,10 +22,7 @@ In more recent years mice gained prominence as models for human heart disease be
 
 If you need a custom rat model for your project, look no further than ingenious. We’ll generate one exactly to your specifications. Get started by [clicking here](/quote-request-form/).
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download free white paper: Custom rat models for tissue-specific knockout
-
-[GET YOUR COPY](https://go.genetargeting.com/rat-tissue-specific-white-paper)
+[Download Free White Paper: Custom Rat Models for Tissue-Specific Knockout](https://go.genetargeting.com/rat-tissue-specific-white-paper)
 
 #### References
 

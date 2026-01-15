@@ -18,10 +18,7 @@ Genetic research has come a long way in the past few years alone as a result of 
 
 Mouse models are at the forefront of a large percentage of the studies dedicated to understanding DNA sequences and specific, individual genes with the help of conventional knockout procedures. This fact isn’t solely true because mice are genetically similar to humans – since other mammals, such as chimps and apes share an even greater similarity with us in terms of their genetic makeup – but also because mice are small in size, and the specific procedures that make knockout techniques work can be more easily applied to mice than to any other laboratory animal. As opposed to mice, even gene knockout in rats has been extremely difficult to apply, and has only been possible for the past 15 years.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ### Conventional vs. Conditional Knockouts
 

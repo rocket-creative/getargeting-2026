@@ -33,14 +33,6 @@ const videosData = [
     featured: true,
   },
   {
-    id: 'covid-19-models',
-    title: 'COVID-19 Mouse Models',
-    description: 'Learn about our COVID-19 research mouse models developed to support pandemic research efforts.',
-    youtubeId: 'REPLACE_WITH_YOUTUBE_ID',
-    category: 'Disease Models',
-    featured: false,
-  },
-  {
     id: 'humanized-mice-intro',
     title: 'Introduction to Humanized Mice',
     description: 'An overview of humanized mouse models and their applications in biomedical research.',

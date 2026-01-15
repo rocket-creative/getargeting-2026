@@ -30,10 +30,7 @@ The emergence of CRISPR/Cas9 gene editing technology has considerably improved t
 
 A knockout mouse is an animal model in which a gene of interest is disrupted or inactivated. The goal of making knockout mice is to completely deactivate a certain gene in order to study its effect on the body. Without the gene, certain physiological functions may be impaired, which can give insight into the development of various diseases. This allows researchers to find ways to counteract such problems and symptoms, and then use that data to develop new treatments for human diseases.
 
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b2acb44f58580d203e612_Downloadable-Icon-min.png)
-Download Our Free Conditional Knockout (cKO) Quick Guide
-
-[GET YOUR COPY](http://go.genetargeting.com/conditional-ko-quick-guide)
+[Download Free Conditional Knockout (cKO) Quick Guide](http://go.genetargeting.com/conditional-ko-quick-guide)
 
 ## How are gene knockouts done?
 
@@ -55,9 +52,9 @@ Once the right cells are prepared, it’s time to inject them into the blastocys
 
 Once the chimeric mouse is successfully generated, the final process is to validate and breed it. The chimeric mouse will normally be bred with a normal, black mouse, in order to pass down the altered genetic material to its offspring. Typically, if the experiment is successful, the resulting mice will have a normal version of the knockout gene from their mother and a knocked out version of the gene resulting from their father. These results will become apparent when performing DNA sequencing on the gene in question. By regularly making knockout mice, it’s possible to become more proficient, learn better techniques for targeting genes more successfully, and more.
 
-[
-![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b965d327acd15569bf63f_Custom-Knockout-Mice-CTA-min.jpeg)
-](/knockout-mouse-models/)### Knockout Mice Using CRISPR:
+[Explore Custom Knockout Mice](/knockout-mouse-models/)
+
+### Knockout Mice Using CRISPR:
 
 #### Targeting Material Design and Creation
 
