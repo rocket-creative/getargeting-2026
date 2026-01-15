@@ -138,12 +138,11 @@ export default function LabSignalsPage() {
             top: '20px',
             right: '20px',
             zIndex: 10,
-            color: BRAND.white,
+            color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
             fontSize: '.85rem',
             fontWeight: 500,
             textDecoration: 'none',
-            textShadow: '0 1px 3px rgba(0,0,0,0.5)',
           }}
         >
           Back to Ingenious →
@@ -199,23 +198,21 @@ export default function LabSignalsPage() {
             </span>
           </div>
           <h1 className="hero-animate" style={{
-            color: BRAND.white,
+            color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
             fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
             fontWeight: 700,
             lineHeight: 1.1,
             marginBottom: '12px',
-            textShadow: '0 2px 8px rgba(0,0,0,0.3)',
           }}>
             Lab Signals
           </h1>
           <p className="hero-animate" style={{
-            color: BRAND.white,
+            color: BRAND.black,
             fontFamily: 'Lato, sans-serif',
             fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
             lineHeight: 1.5,
             marginBottom: '20px',
-            textShadow: '0 1px 4px rgba(0,0,0,0.4)',
           }}>
             Your Biweekly Source for Life Science Research Insights
           </p>
@@ -280,7 +277,7 @@ export default function LabSignalsPage() {
       </section>
 
         {/* Section: Video */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px', borderRadius: '0' }}>
+        <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
           <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             position: 'relative',
@@ -308,7 +305,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Signup */}
-        <section id="signup" style={{ backgroundColor: BRAND.white, padding: '35px 20px 40px' }}>
+        <section id="signup" style={{ backgroundColor: BRAND.lightGray, padding: '35px 20px 40px' }}>
           <div className="section-animate" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
               color: BRAND.black,
@@ -333,7 +330,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Why Subscribe */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px', borderRadius: '0' }}>
+        <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
           <div>
             <h2 className="section-animate" style={{
               color: BRAND.black,
@@ -361,7 +358,7 @@ export default function LabSignalsPage() {
                 style={{
                   textAlign: 'center',
                   padding: '30px 20px',
-                  backgroundColor: BRAND.white,
+                  backgroundColor: BRAND.lightGray,
                   borderRadius: '8px',
                   transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                 }}
@@ -410,7 +407,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: All Articles */}
-        <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
           <div>
           <div className="section-animate" style={{ 
             display: 'flex', 
@@ -494,7 +491,7 @@ export default function LabSignalsPage() {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  backgroundColor: BRAND.lightGray,
+                  backgroundColor: BRAND.white,
                   borderRadius: '8px',
                   overflow: 'hidden',
                   textDecoration: 'none',

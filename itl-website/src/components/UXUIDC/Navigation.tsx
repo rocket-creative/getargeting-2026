@@ -1,7 +1,7 @@
 /**
  * |UXUIDC| Navigation Component - Matches Screenshot Exactly
  * @version 2.1.0
- * Layout: Logo | Search (teal) | Nav Items | Start an Order | Contact (blue)
+ * Layout: Logo | Search (teal) | Nav Items | Start an Order | Start Your Project (grey)
  */
 
 'use client';
@@ -139,8 +139,15 @@ const navigationItems: NavItem[] = [
       { label: 'Testimonials', href: '/testimonials' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },
-      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+    children: [
+      { label: 'General Contact', href: '/general-contact' },
       { label: 'Request Quote', href: '/request-quote' },
+      { label: 'Schedule Meeting', href: '/schedule-meeting' },
     ],
   },
 ];
@@ -177,7 +184,7 @@ export function UXUIDCNavigation() {
   return (
     <>
       <nav ref={navRef} className="w-full z-50 sticky top-0" aria-label="Main navigation">
-        {/* Row 1: Logo, Search (blue), Input, Start an Order (white/rev), Contact (grey) */}
+        {/* Row 1: Logo, Search (blue), Input, Start an Order (white/rev), Start Your Project (grey) */}
         <div className="bg-white">
           <div className="container">
             <div className="flex items-center justify-end h-16 gap-0 py-5 px-5">
@@ -222,13 +229,13 @@ export function UXUIDCNavigation() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
 
-              {/* Contact - Solid grey button with animation */}
+              {/* Start Your Project - Solid grey button with animation */}
               <Link 
-                href="/contact" 
+                href="/start-your-project" 
                 className="group hidden lg:flex items-center gap-2 bg-[#666] text-white px-4 py-1.5 transition-all duration-300 hover:bg-[#555] hover:-translate-y-0.5 hover:shadow-md"
                 style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
               >
-                <span>Contact</span>
+                <span>Start Your Project</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
 
@@ -325,15 +332,6 @@ export function UXUIDCNavigation() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <Link
-                    href="/contact"
-                    onClick={() => setIsOpen(false)}
-                    className="block py-2 text-sm text-[#0a253c] font-medium"
-                  >
-                    Contact
-                  </Link>
-                </li>
               </ul>
               <Link
                 href="/request-quote"

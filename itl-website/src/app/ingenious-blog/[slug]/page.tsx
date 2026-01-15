@@ -346,7 +346,7 @@ export default async function IngeniousBlogPost({
       'Selection Guide': '#6b46c1',
       Protocol: '#d97706',
       'Research Spotlight': '#059669',
-      'Company News': '#dc2626',
+      'Company News': '#666666',
       'Industry Insights': '#7c3aed',
     };
     return colors[cat] || '#666';
@@ -567,7 +567,7 @@ export default async function IngeniousBlogPost({
                 border-radius: 4px;
                 font-family: 'Monaco', 'Menlo', monospace;
                 font-size: 0.9em;
-                color: #d63384;
+                color: #555555;
               }
               .blog-content strong {
                 font-weight: 600;

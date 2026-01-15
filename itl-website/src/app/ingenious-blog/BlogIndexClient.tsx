@@ -37,7 +37,7 @@ const getCategoryColor = (category: string) => {
     'Selection Guide': '#6b46c1',
     Protocol: '#d97706',
     'Research Spotlight': '#059669',
-    'Company News': '#dc2626',
+    'Company News': '#666666',
     'Industry Insights': '#7c3aed',
   };
   return colors[category] || '#666';
