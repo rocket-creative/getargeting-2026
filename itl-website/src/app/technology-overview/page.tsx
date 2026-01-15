@@ -178,8 +178,10 @@ const safeHarborLinks = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
-  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation }
+  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
 
 // FAQ Data

@@ -16,7 +16,6 @@
   { "source": "/technology-overview", "destination": "/technologies/", "permanent": true },
   { "source": "/current-openings", "destination": "/about-itl/", "permanent": true },
   { "source": "/partners", "destination": "/about-itl/", "permanent": true },
-  { "source": "/testimonials", "destination": "/why-choose-itl/", "permanent": true },
   { "source": "/project-faqs-resources", "destination": "/resources/", "permanent": true },
   { "source": "/service-steps", "destination": "/mouse-model-services/", "permanent": true },
   { "source": "/transgenic-mouse-service", "destination": "/mouse-model-services/", "permanent": true },

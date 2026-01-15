@@ -165,7 +165,6 @@ const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
 const testimonials = [
   { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
-  { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
 
 // Related Links

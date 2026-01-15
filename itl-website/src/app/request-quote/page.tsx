@@ -116,14 +116,16 @@ const alternativeContactData = [
   },
 ];
 
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_BASSON, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_BASSON.quote,
-  author: formatAuthorWithCredentials(SINGLE_BASSON),
-  institution: SINGLE_BASSON.affiliation,
-};
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const francoTestimonial = getTestimonialById('franco-colorado')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+
+const testimonials = [
+  { quote: bassonTestimonial.quote, name: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
+];
 
 // ========== PAGE COMPONENT ==========
 
@@ -736,27 +738,22 @@ export default function RequestQuotePage() {
         </div>
       </section>
 
-      {/* ========== COMPACT TESTIMONIAL ========== */}
-      <section style={{ backgroundColor: '#0a253c', padding: '40px 20px' }}>
-        <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
-          <IconQuote size={28} color="#008080" className="mx-auto mb-3" />
-          <blockquote
-            className="animate-in"
-            style={{
-              color: 'rgba(255,255,255,0.9)',
-              fontFamily: 'var(--system-ui)',
-              fontSize: '1rem',
-              fontWeight: 400,
-              lineHeight: '1.7',
-              fontStyle: 'italic',
-              marginBottom: '12px',
-            }}
-          >
-            &ldquo;{testimonialData.quote}&rdquo;
-          </blockquote>
-          <p style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.85rem', fontWeight: 600, margin: 0 }}>
-            — {testimonialData.author}, {testimonialData.institution}
-          </p>
+      {/* ========== TESTIMONIALS ========== */}
+      <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 className="animate-in" style={{ textAlign: 'center', color: '#ffffff', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
+                <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                <div style={{ marginTop: 'auto' }}>
+                  <p style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
+                  <p style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

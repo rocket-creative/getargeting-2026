@@ -146,8 +146,6 @@ const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonialsData = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
-  { quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
-  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // Publications Data

@@ -132,17 +132,13 @@ import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verified
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const bassonTestimonial = getTestimonialById('basson-kings')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
 const testimonials = [
   {
     quote: dunaiefTestimonial.quote,
     author: formatAuthorWithCredentials(dunaiefTestimonial),
     org: dunaiefTestimonial.affiliation,
-  },
-  {
-    quote: bassonTestimonial.quote,
-    author: formatAuthorWithCredentials(bassonTestimonial),
-    org: bassonTestimonial.affiliation,
   },
 ];
 
@@ -850,7 +846,7 @@ export default function WhyChooseITLPage() {
           >
             What Researchers Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <div
                 key={i}

@@ -58,7 +58,11 @@ const projectTimeline = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 const francoTestimonial = getTestimonialById('franco-colorado')!;
-const testimonials = [{ quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation }];
+const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const testimonials = [
+  { quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
+];
 
 const relatedLinks = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },

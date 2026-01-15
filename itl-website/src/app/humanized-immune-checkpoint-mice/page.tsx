@@ -51,7 +51,11 @@ const compatibleTumors = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 const saidTestimonial = getTestimonialById('said-uci')!;
-const testimonials = [{ quote: saidTestimonial.quote, author: formatAuthorWithCredentials(saidTestimonial), affiliation: saidTestimonial.affiliation }];
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const testimonials = [
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
+];
 
 const relatedLinks = [
   { title: "PD1 Humanized Mice", href: "/pd1-humanized-mice" },

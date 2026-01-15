@@ -113,46 +113,47 @@ export default function TestimonialsSection({
 
       <div
         style={{ 
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '24px',
-          maxWidth: '1000px', 
+          display: 'flex',
+          justifyContent: 'center',
+          maxWidth: testimonials.length === 1 ? '700px' : '1000px', 
           width: '100%' 
         }}
       >
-        {testimonials.map((testimonial, index) => (
+        {testimonials.slice(0, 1).map((testimonial, index) => (
           <div
             key={index}
             className="testimonial-card"
             style={{
               ...cardStyle,
               opacity: 0,
-              padding: '30px',
+              padding: '40px',
               display: 'flex',
               flexDirection: 'column',
               transition: 'all 0.3s ease',
+              width: '100%',
+              maxWidth: '700px',
+              textAlign: 'center',
             }}
           >
             <p
               style={{
                 ...quoteStyle,
                 fontFamily: 'Lato, sans-serif',
-                fontSize: '.9rem',
+                fontSize: '1.05rem',
                 fontWeight: 400,
-                lineHeight: 1.6,
+                lineHeight: 1.7,
                 fontStyle: 'italic',
-                marginBottom: '20px',
-                flex: 1,
+                marginBottom: '25px',
               }}
             >
               &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <div style={{ marginTop: 'auto' }}>
+            <div>
               <p
                 style={{
                   ...nameStyle,
                   fontFamily: 'Poppins, sans-serif',
-                  fontSize: '.9rem',
+                  fontSize: '.95rem',
                   fontWeight: 600,
                   marginBottom: '5px',
                 }}
@@ -163,7 +164,7 @@ export default function TestimonialsSection({
                 style={{
                   ...affiliationStyle,
                   fontFamily: 'Lato, sans-serif',
-                  fontSize: '.8rem',
+                  fontSize: '.85rem',
                   fontWeight: 400,
                 }}
               >
@@ -200,11 +201,6 @@ export default function TestimonialsSection({
         .testimonial-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        @media (max-width: 900px) {
-          div[style*="grid-template-columns: repeat(3, 1fr)"] {
-            grid-template-columns: 1fr !important;
-          }
         }
       `}</style>
     </section>
