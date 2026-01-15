@@ -9,6 +9,7 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCCookieConsent,
+  BreedingSchemeArchitectCTA,
 } from '@/components/UXUIDC';
 
 // Components for each section
@@ -238,6 +239,9 @@ export default function HomePage() {
 
         {/* 6. Conceptual Workflow */}
         <WorkflowSection data={workflowData} />
+
+        {/* 6.5 Breeding Scheme Architect - New for 2026 */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
 
         {/* 7. Trusted by Researchers Worldwide */}
         <TrustedBySection data={trustedData} />

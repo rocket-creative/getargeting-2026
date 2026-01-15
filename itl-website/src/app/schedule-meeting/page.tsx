@@ -37,16 +37,30 @@ const contactInfo = {
 };
 
 export default function ScheduleMeetingPage() {
-  // Load HubSpot meetings script
+  // Load HubSpot form script
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
     script.type = 'text/javascript';
     script.async = true;
     document.head.appendChild(script);
 
+    script.onload = () => {
+      // @ts-ignore - HubSpot global
+      if (window.hbspt) {
+        // @ts-ignore
+        window.hbspt.forms.create({
+          region: 'na1',
+          portalId: '242707', // ITL's HubSpot portal ID
+          formId: 'REPLACE_WITH_MEETING_FORM_ID', // Replace with actual meeting form ID
+          target: '#hubspot-meeting-form',
+        });
+      }
+    };
+
     return () => {
-      const existingScript = document.querySelector('script[src*="MeetingsEmbed"]');
+      const existingScript = document.querySelector('script[src*="hsforms"]');
       if (existingScript) {
         existingScript.remove();
       }
@@ -129,41 +143,49 @@ export default function ScheduleMeetingPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.25rem',
                     fontWeight: 600,
-                    marginBottom: '20px',
+                    marginBottom: '8px',
                   }}
                 >
-                  Select a Time
+                  Schedule Your Consultation
                 </h2>
-                
-                {/* HubSpot Meetings Container */}
-                <div 
-                  className="meetings-iframe-container" 
-                  data-src="https://meetings.hubspot.com/itl-scientific-consultant?embed=true"
-                  style={{ minHeight: '500px' }}
+                <p
+                  style={{
+                    color: '#666',
+                    fontFamily: 'var(--system-ui)',
+                    fontSize: '.9rem',
+                    marginBottom: '24px',
+                    lineHeight: '1.5',
+                  }}
                 >
-                  {/* HubSpot meetings widget will be injected here */}
+                  Fill in your details below and one of our scientific strategy consultants will reach out to schedule a time that works for you.
+                </p>
+                
+                {/* HubSpot Form Container */}
+                <div 
+                  id="hubspot-meeting-form"
+                  style={{ minHeight: '400px' }}
+                >
+                  {/* HubSpot form will be injected here */}
                   <div style={{ 
                     display: 'flex', 
                     flexDirection: 'column',
                     alignItems: 'center', 
                     justifyContent: 'center', 
-                    height: '400px',
+                    height: '300px',
                     color: '#666',
                     fontFamily: 'var(--system-ui)',
                     textAlign: 'center',
                     padding: '20px',
                   }}>
                     <IconClock size={40} color="#d1d5db" style={{ marginBottom: '16px' }} />
-                    <p style={{ fontSize: '.9rem', marginBottom: '8px' }}>Loading meeting scheduler...</p>
+                    <p style={{ fontSize: '.9rem', marginBottom: '8px' }}>Loading consultation form...</p>
                     <p style={{ fontSize: '.8rem', color: '#999' }}>
-                      If the scheduler doesn&apos;t load, please{' '}
+                      Having trouble? Email us at{' '}
                       <a 
-                        href="https://meetings.hubspot.com/itl-scientific-consultant" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                        href="mailto:inquiry@genetargeting.com"
                         style={{ color: '#008080', textDecoration: 'underline' }}
                       >
-                        click here to schedule directly
+                        inquiry@genetargeting.com
                       </a>
                     </p>
                   </div>

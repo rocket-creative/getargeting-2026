@@ -344,17 +344,6 @@ export default function DiseaseModelCatalogPage() {
           </div>
         </section>
 
-        {/* Search Section */}
-        <section style={{ 
-          background: '#ffffff', 
-          padding: '40px 20px',
-          borderBottom: '1px solid #e0e0e0'
-        }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <CatalogSearch maxResults={15} showTitle={true} />
-          </div>
-        </section>
-
         {/* Stats Section */}
         <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -386,7 +375,7 @@ export default function DiseaseModelCatalogPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {catalogCategoriesData.map((category, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '28px',
@@ -452,7 +441,7 @@ export default function DiseaseModelCatalogPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {catalogFeaturesData.map((feature, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '28px',

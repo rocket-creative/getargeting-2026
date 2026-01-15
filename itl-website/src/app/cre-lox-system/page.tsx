@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -472,7 +472,7 @@ export default function CreLoxSystemPage() {
               {technologyBenefits.map((benefit, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '20px',
@@ -507,7 +507,7 @@ export default function CreLoxSystemPage() {
               {creComponents.map((component, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -729,7 +729,7 @@ export default function CreLoxSystemPage() {
               {inducibleSystems.map((system, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -780,7 +780,7 @@ export default function CreLoxSystemPage() {
               {derivativeAlleles.map((allele, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -836,7 +836,7 @@ export default function CreLoxSystemPage() {
               {applicationsData.map((app, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -870,7 +870,7 @@ export default function CreLoxSystemPage() {
               {publicationsData.map((pub, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -1116,8 +1116,11 @@ export default function CreLoxSystemPage() {
             </div>
           </div>
         </section>
+
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
-      
+
       <UXUIDCFooter />
       
       <script
