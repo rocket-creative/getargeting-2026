@@ -438,3 +438,18 @@ export const IconPubMed = ({ size = 24, color = 'currentColor', className = '', 
     <path d="M8 15h4" />
   </svg>
 );
+
+// Play / Video
+export const IconPlay = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color} stroke="none" className={className} style={style}>
+    <polygon points="5 3 19 12 5 21 5 3" />
+  </svg>
+);
+
+// Video Camera
+export const IconVideo = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polygon points="23 7 16 12 23 17 23 7" />
+    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+  </svg>
+);
