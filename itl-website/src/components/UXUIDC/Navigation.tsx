@@ -123,7 +123,6 @@ const navigationItems: NavItem[] = [
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
-      { label: 'Publications', href: '/publications' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'Mouse Model Generation Guide', href: '/mouse-model-generation-guide' },
       { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
@@ -140,6 +139,10 @@ const navigationItems: NavItem[] = [
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },
     ],
+  },
+  {
+    label: 'Publications',
+    href: '/publications',
   },
   {
     label: 'Contact',

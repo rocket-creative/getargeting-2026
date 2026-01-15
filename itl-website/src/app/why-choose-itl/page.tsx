@@ -339,15 +339,14 @@ export default function WhyChooseITLPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: '28 Years of Experience',
+                title: 'Years of Experience',
                 number: '28',
-                suffix: ' Years',
                 text:
                   'Since 1998, Ingenious Targeting Laboratory has focused exclusively on custom mouse model generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.',
                 accent: '#008080',
               },
               {
-                title: '2,500+ Custom Projects Completed',
+                title: 'Custom Projects Completed',
                 number: '2500',
                 plus: true,
                 comma: true,
@@ -356,7 +355,7 @@ export default function WhyChooseITLPage() {
                 accent: '#134978',
               },
               {
-                title: '800+ Peer Reviewed Publications',
+                title: 'Peer Reviewed Publications',
                 number: '800',
                 plus: true,
                 text:
@@ -384,47 +383,50 @@ export default function WhyChooseITLPage() {
                     height: '100%',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                  {/* Number or Icon */}
+                  <div style={{ marginBottom: '8px' }}>
                     {IconComponent ? (
-                      <IconComponent size={28} color={item.accent} />
+                      <IconComponent size={40} color={item.accent} />
                     ) : (
                       <span
                         className="stat-number"
                         data-target={item.number}
                         data-plus={item.plus ? 'true' : 'false'}
                         data-comma={item.comma ? 'true' : 'false'}
-                        data-suffix={item.suffix || ''}
                         style={{
                           color: item.accent,
                           fontFamily: 'Poppins, sans-serif',
-                          fontSize: '1.8rem',
+                          fontSize: '2.5rem',
                           fontWeight: 700,
                           lineHeight: 1,
+                          display: 'block',
                         }}
                       >
                         0
                       </span>
                     )}
-                    <h3
-                      style={{
-                        color: '#333',
-                        fontFamily: 'Poppins, sans-serif',
-                        fontSize: '1.05rem',
-                        fontWeight: 600,
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {item.title}
-                    </h3>
                   </div>
+                  {/* Title */}
+                  <h3
+                    style={{
+                      color: '#333',
+                      fontFamily: 'Poppins, sans-serif',
+                      fontSize: '1rem',
+                      fontWeight: 600,
+                      lineHeight: 1.3,
+                      marginBottom: '10px',
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  {/* Description */}
                   <p
                     style={{
                       color: '#666',
                       fontFamily: 'var(--system-ui)',
-                      fontSize: '.9rem',
+                      fontSize: '.85rem',
                       fontWeight: 300,
-                      lineHeight: '1.6rem',
-                      marginTop: '4px',
+                      lineHeight: '1.5rem',
                     }}
                   >
                     {item.text}
@@ -1008,7 +1010,7 @@ export default function WhyChooseITLPage() {
         content="Experience the Ingenious Targeting Laboratory difference on your next mouse model project."
         buttons={[
           { label: 'Request a Quote', href: '/request-quote' },
-          { label: 'Request a Quote', href: '/request-quote' },
+          { label: 'Schedule Consultation', href: '/schedule-meeting' },
         ]}
       />
 

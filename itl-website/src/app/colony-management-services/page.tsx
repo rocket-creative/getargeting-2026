@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, breedingResources } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, breedingResources, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -354,7 +354,7 @@ export default function ColonyManagementServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Colony Maintenance */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Colony Maintenance
                 </h3>
@@ -372,7 +372,7 @@ export default function ColonyManagementServicesPage() {
               </div>
 
               {/* Breeding Expansion */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Breeding Expansion
                 </h3>
@@ -390,7 +390,7 @@ export default function ColonyManagementServicesPage() {
               </div>
 
               {/* Complex Breeding */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Complex Breeding Schemes
                 </h3>
@@ -418,7 +418,7 @@ export default function ColonyManagementServicesPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
                   Routine Genotyping
                 </h3>
@@ -438,7 +438,7 @@ export default function ColonyManagementServicesPage() {
                 </ul>
               </div>
 
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
                   Assay Development
                 </h3>
@@ -605,7 +605,7 @@ export default function ColonyManagementServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Resource Efficiency */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Resource Efficiency
                 </h3>
@@ -623,7 +623,7 @@ export default function ColonyManagementServicesPage() {
               </div>
 
               {/* Expertise and Consistency */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Expertise and Consistency
                 </h3>
@@ -793,6 +793,9 @@ export default function ColonyManagementServicesPage() {
             </div>
           </div>
         </section>
+
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
 
       <UXUIDCFooter />

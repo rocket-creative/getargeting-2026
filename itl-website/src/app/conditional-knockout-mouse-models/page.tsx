@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -421,7 +421,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 return (
                   <div 
                     key={index}
-                    className="animate-in"
+                    className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                     style={{
                       backgroundColor: '#f8f9fa',
                       padding: '30px',
@@ -518,7 +518,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
               {tissueSpecificData.drivers.map((driver, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '20px',
@@ -791,7 +791,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
               {publicationsData.map((pub, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -1070,8 +1070,11 @@ export default function ConditionalKnockoutMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
-      
+
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
