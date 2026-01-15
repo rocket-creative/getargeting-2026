@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 // Hero Data
 const heroData = {
@@ -322,8 +323,19 @@ export default function CatalogMouseModelsPage() {
           </div>
         </section>
 
+        {/* Search Section */}
+        <section style={{ 
+          background: '#ffffff', 
+          padding: '40px 20px',
+          borderBottom: '1px solid #e0e0e0'
+        }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <CatalogSearch maxResults={15} showTitle={true} />
+          </div>
+        </section>
+
         {/* Stats Section */}
-        <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
+        <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
               {statsData.map((stat, index) => (

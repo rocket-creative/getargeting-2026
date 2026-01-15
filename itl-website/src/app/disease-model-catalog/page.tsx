@@ -6,7 +6,9 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -125,12 +127,22 @@ const shippingData = {
   ]
 };
 
-// Testimonials Data
+// Testimonials Data - 3 testimonials to match homepage design
 const testimonialsData = [
   {
     quote: "iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.",
     author: "Thomas G.H. Diekwisch, DMD, PhD (sc), PhD (phil.)",
     affiliation: "Texas A&M University College of Dentistry"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
+  },
+  {
+    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
+    author: "Hyekyung Plumley, PhD",
+    affiliation: "Warren Center for Neuroscience Drug Discovery"
   }
 ];
 
@@ -321,8 +333,30 @@ export default function DiseaseModelCatalogPage() {
           </div>
         </section>
 
+        {/* Search Section */}
+        <section style={{ 
+          background: '#ffffff', 
+          padding: '40px 20px',
+          borderBottom: '1px solid #e0e0e0'
+        }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <CatalogSearch maxResults={15} showTitle={true} />
+          </div>
+        </section>
+
+        {/* Search Section */}
+        <section style={{ 
+          background: '#ffffff', 
+          padding: '40px 20px',
+          borderBottom: '1px solid #e0e0e0'
+        }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <CatalogSearch maxResults={15} showTitle={true} />
+          </div>
+        </section>
+
         {/* Stats Section */}
-        <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
+        <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
               {statsData.map((stat, index) => (
@@ -581,65 +615,7 @@ export default function DiseaseModelCatalogPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '32px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '20px' }}>
-                    <IconQuote size={32} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                    fontStyle: 'italic'
-                  }}>
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link href="/testimonials" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: '#00d4d4',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                View More Testimonials
-                <IconChevronRight size={16} color="#00d4d4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="light" />
 
         {/* Browse by Category Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>

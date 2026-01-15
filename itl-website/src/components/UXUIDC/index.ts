@@ -73,5 +73,8 @@ export { default as FlodeskForm } from './FlodeskForm';
 export { default as NewsletterGate } from './NewsletterGate';
 export { default as SocialShare } from './SocialShare';
 
+// Catalog Search
+export { default as CatalogSearch } from './CatalogSearch';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';

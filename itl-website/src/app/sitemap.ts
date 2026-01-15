@@ -113,8 +113,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/phenotyping-services',
     '/mouse-genotyping-service',
 
-    // Catalog (6)
+    // Catalog (7)
     '/catalog-mouse-models',
+    '/all-catalog-mouse-models',
     '/humanized-immune-checkpoint-mice',
     '/reporter-mouse-catalog',
     '/single-checkpoint-mice',
