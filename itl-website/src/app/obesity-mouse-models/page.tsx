@@ -48,7 +48,10 @@ const phenotypingEndpoints = [
   { category: "Glucose/Lipid", endpoints: ["IPGTT/OGTT", "Insulin tolerance", "Plasma lipids", "Hepatic triglycerides"] }
 ];
 
-const testimonials = [{ quote: "The quality of service was exceptional. Your team went above and beyond to ensure that all aspects of the project were completed to the highest possible standards.", author: "Albert Basson, PhD", affiliation: "King's College London" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const testimonials = [{ quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "Diabetes Mouse Models", href: "/diabetes-mouse-models" },

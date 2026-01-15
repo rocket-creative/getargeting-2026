@@ -125,10 +125,13 @@ const protocolOptimization = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_SAID, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "Our project manager did an outstanding job and has provided us with excellent customer service. Her availability to clarify genotyping issues has been nothing short of fantastic. I have recommended ingenious to others. Look forward to further collaboration on other projects.",
-  author: "Hamid M. Said, PhD",
-  affiliation: "University of California, Irvine"
+  quote: SINGLE_SAID.quote,
+  author: formatAuthorWithCredentials(SINGLE_SAID),
+  affiliation: SINGLE_SAID.affiliation
 };
 
 // Related Links

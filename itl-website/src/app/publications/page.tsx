@@ -35,10 +35,14 @@ const statsData = [
 ];
 
 // Testimonial
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const clarkeTestimonial = getTestimonialById('clarke-cambridge')!;
 const testimonial = {
-  quote: "ingenious was very competitively priced compared to other reputable transgenic companies. Most importantly, however, from the very beginning their knowledge and competence convinced me they would deliver on our project, so I trusted them and they fully met our expectations. Why use anyone else!",
-  author: "Murray Clarke, PhD",
-  affiliation: "University of Cambridge"
+  quote: clarkeTestimonial.quote,
+  author: formatAuthorWithCredentials(clarkeTestimonial),
+  affiliation: clarkeTestimonial.affiliation
 };
 
 // CTA Data

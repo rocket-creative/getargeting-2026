@@ -135,18 +135,24 @@ const facilitiesData = {
   ],
 };
 
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+
 const testimonialsData = {
   title: 'What Researchers Say',
   testimonials: [
     {
-      quote: 'The Hephaestin flox model made by Ingenious is now the basis for eight research publications from multiple research groups in three countries.',
-      name: 'Joshua Dunaief, MD, PhD',
-      affiliation: 'University of Pennsylvania',
+      quote: dunaiefTestimonial.quote,
+      name: formatAuthorWithCredentials(dunaiefTestimonial),
+      affiliation: dunaiefTestimonial.affiliation,
     },
     {
-      quote: 'The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards in every aspect of our project.',
-      name: 'Albert Basson, PhD',
-      affiliation: "King's College London",
+      quote: bassonTestimonial.quote,
+      name: formatAuthorWithCredentials(bassonTestimonial),
+      affiliation: bassonTestimonial.affiliation,
     },
   ],
 };

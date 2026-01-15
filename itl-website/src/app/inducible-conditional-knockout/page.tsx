@@ -180,22 +180,17 @@ const publicationsData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const rothTestimonial = getTestimonialById('roth-upenn')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+
 const testimonialsData = [
-  {
-    quote: "The people at InGenious are friendly, professional, and extremely good at what they do. I have made 5 Knockin mice with them and everything has gone like clockwork.",
-    author: "David B. Roth, MD, PhD",
-    affiliation: "Perelman School of Medicine, University of Pennsylvania"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  }
+  { quote: rothTestimonial.quote, author: formatAuthorWithCredentials(rothTestimonial), affiliation: rothTestimonial.affiliation },
+  { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // FAQ Data

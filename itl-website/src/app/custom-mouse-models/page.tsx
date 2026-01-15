@@ -127,22 +127,17 @@ const itlApproachData = {
 };
 
 // Testimonials Data - 3 cards like homepage
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const hussainTestimonial = getTestimonialById('hussain-michigan')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+
 const testimonialsData = [
-  {
-    quote: "We engaged in the production of a number of conditional mouse models with iTL. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and iTL recommending the strategies for each gene.",
-    author: "Mehboob Hussain, MD",
-    affiliation: "University of Michigan Health"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  }
+  { quote: hussainTestimonial.quote, author: formatAuthorWithCredentials(hussainTestimonial), affiliation: hussainTestimonial.affiliation },
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
 ];
 
 // Publications Data - 3 cards

@@ -98,12 +98,12 @@ const publicationsData = [
 ];
 
 // Testimonials
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
 const testimonials = [
-  {
-    quote: "iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.",
-    author: "William A. Coetzee, DSc",
-    affiliation: "NYU School of Medicine"
-  }
+  { quote: coetzeeTestimonial.quote, author: formatAuthorWithCredentials(coetzeeTestimonial), affiliation: coetzeeTestimonial.affiliation }
 ];
 
 // Related Links

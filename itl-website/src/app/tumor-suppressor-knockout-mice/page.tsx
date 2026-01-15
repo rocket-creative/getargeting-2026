@@ -123,10 +123,13 @@ const applications = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_PLUMLEY, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "Ingenious Targeting Laboratory developed 2 conditional knockout mouse lines for us. The scientific consulting was superb and exceeded our expectations.",
-  author: "Hyekyung Plumley, PhD",
-  affiliation: "Regeneron Pharmaceuticals"
+  quote: SINGLE_PLUMLEY.quote,
+  author: formatAuthorWithCredentials(SINGLE_PLUMLEY),
+  affiliation: SINGLE_PLUMLEY.affiliation
 };
 
 // Related Links

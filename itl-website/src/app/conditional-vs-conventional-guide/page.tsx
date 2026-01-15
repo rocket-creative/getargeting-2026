@@ -171,22 +171,17 @@ const quickDecisionData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const harhajTestimonial = getTestimonialById('harhaj-pennstate')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+
 const testimonialsData = [
-  {
-    quote: "iTL generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend iTL's services for anyone considering knockout mouse models.",
-    author: "Edward Harhaj, PhD",
-    affiliation: "Penn State College of Medicine"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  }
+  { quote: harhajTestimonial.quote, author: formatAuthorWithCredentials(harhajTestimonial), affiliation: harhajTestimonial.affiliation },
+  { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
 ];
 
 // FAQ Data

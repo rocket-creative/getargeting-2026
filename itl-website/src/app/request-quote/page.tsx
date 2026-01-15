@@ -116,10 +116,13 @@ const alternativeContactData = [
   },
 ];
 
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_BASSON, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: 'The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards.',
-  author: 'Albert Basson, PhD',
-  institution: "King's College London",
+  quote: SINGLE_BASSON.quote,
+  author: formatAuthorWithCredentials(SINGLE_BASSON),
+  institution: SINGLE_BASSON.affiliation,
 };
 
 // ========== PAGE COMPONENT ==========

@@ -55,7 +55,10 @@ const projectTimeline = [
   { phase: "Germline Transmission", duration: "8 to 12 weeks", includes: "Breeding, genotyping F1 pups" }
 ];
 
-const testimonials = [{ quote: "iTL has provided us with expert service and efficient generation of animal models for our research program. The quality of the service, the attention to scientific rigor and sound experimental design and the level of communication throughout the process have been uniformly excellent.", author: "Colin Stewart, PhD", affiliation: "Singapore A*STAR" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const francoTestimonial = getTestimonialById('franco-colorado')!;
+const testimonials = [{ quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },

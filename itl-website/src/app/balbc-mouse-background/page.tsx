@@ -150,23 +150,14 @@ const comparisonData = {
 };
 
 // Testimonials Data
-const testimonialsData = [
-  {
-    quote: "The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards in every aspect of our project.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // FAQ Data
 const faqData = [

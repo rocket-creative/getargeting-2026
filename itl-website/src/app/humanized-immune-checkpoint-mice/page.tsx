@@ -48,7 +48,10 @@ const compatibleTumors = [
   { background: "BALB/c", tumors: "CT26 (colon), 4T1 (breast), Renca (kidney)" }
 ];
 
-const testimonials = [{ quote: "Our project manager did an outstanding job and has provided us with excellent customer service. Her availability to clarify issues has been nothing short of fantastic. I have recommended ingenious to others. Look forward for further collaboration on other projects.", author: "Hamid M. Said, PhD, PharmD", affiliation: "University of California, Irvine" }];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+const saidTestimonial = getTestimonialById('said-uci')!;
+const testimonials = [{ quote: saidTestimonial.quote, author: formatAuthorWithCredentials(saidTestimonial), affiliation: saidTestimonial.affiliation }];
 
 const relatedLinks = [
   { title: "PD1 Humanized Mice", href: "/pd1-humanized-mice" },

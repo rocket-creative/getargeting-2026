@@ -95,10 +95,13 @@ const publicationsData = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_MIRMIRA, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-  author: "Joshua Dunaief, PhD, MD",
-  affiliation: "University of Pennsylvania"
+  quote: SINGLE_MIRMIRA.quote,
+  author: formatAuthorWithCredentials(SINGLE_MIRMIRA),
+  affiliation: SINGLE_MIRMIRA.affiliation
 };
 
 // Related Links

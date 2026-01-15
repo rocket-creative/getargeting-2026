@@ -71,11 +71,14 @@ const driverLines = [
   { line: "Syn FLP", expression: "Mature neurons", use: "Neuronal specific recombination" }
 ];
 
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonials = [
   {
-    quote: "The Hephaestin flox model has been so successful that our colony has recently expanded to different laboratories, generating eight research publications thus far.",
-    author: "Joshua Dunaief, MD, PhD",
-    affiliation: "University of Pennsylvania"
+    quote: SINGLE_DUNAIEF.quote,
+    author: formatAuthorWithCredentials(SINGLE_DUNAIEF),
+    affiliation: SINGLE_DUNAIEF.affiliation
   }
 ];
 

@@ -138,10 +138,13 @@ const publicationsData = [
 ];
 
 // Testimonial Data
+// Verified testimonial from master data - https://www.genetargeting.com/testimonials
+import { SINGLE_BASSON, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
 const testimonialData = {
-  quote: "The quality of service was exceptional. Your team went above and beyond to ensure that all aspects of the project were completed to the highest possible standards.",
-  author: "Albert Basson, PhD",
-  affiliation: "King's College London"
+  quote: SINGLE_BASSON.quote,
+  author: formatAuthorWithCredentials(SINGLE_BASSON),
+  affiliation: SINGLE_BASSON.affiliation
 };
 
 // Related Links

@@ -234,22 +234,17 @@ const publicationsData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+
 const testimonialsData = [
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  },
-  {
-    quote: "iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.",
-    author: "William A. Coetzee, DSc",
-    affiliation: "NYU School of Medicine"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  }
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
+  { quote: coetzeeTestimonial.quote, author: formatAuthorWithCredentials(coetzeeTestimonial), affiliation: coetzeeTestimonial.affiliation },
+  { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
 ];
 
 // FAQ Data

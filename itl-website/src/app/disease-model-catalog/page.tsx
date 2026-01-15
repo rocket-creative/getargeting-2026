@@ -127,24 +127,14 @@ const shippingData = {
   ]
 };
 
-// Testimonials Data - 3 testimonials to match homepage design
-const testimonialsData = [
-  {
-    quote: "iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.",
-    author: "Thomas G.H. Diekwisch, DMD, PhD (sc), PhD (phil.)",
-    affiliation: "Texas A&M University College of Dentistry"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  },
-  {
-    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
-    author: "Hyekyung Plumley, PhD",
-    affiliation: "Warren Center for Neuroscience Drug Discovery"
-  }
-];
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { CATALOG_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const testimonialsData = CATALOG_TESTIMONIALS.map(t => ({
+  quote: t.quote,
+  author: formatAuthorWithCredentials(t),
+  affiliation: t.affiliation,
+}));
 
 // Browse Categories Data
 const browseCategoriesData = [

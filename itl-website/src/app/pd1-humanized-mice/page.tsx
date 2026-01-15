@@ -219,22 +219,17 @@ const publicationsData = {
 };
 
 // Testimonials Data
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
+
 const testimonialsData = [
-  {
-    quote: "iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.",
-    author: "William A. Coetzee, DSc",
-    affiliation: "NYU School of Medicine"
-  },
-  {
-    quote: "The quality of service was exceptional and performed to the highest possible standards.",
-    author: "Albert Basson, PhD",
-    affiliation: "King's College London"
-  },
-  {
-    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
-    author: "Joshua Dunaief, PhD, MD",
-    affiliation: "University of Pennsylvania"
-  }
+  { quote: coetzeeTestimonial.quote, author: formatAuthorWithCredentials(coetzeeTestimonial), affiliation: coetzeeTestimonial.affiliation },
+  { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
+  { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
 ];
 
 // FAQ Data
