@@ -8,7 +8,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { gsap } from '@/lib/UXUIDC/gsap';
-import { IconDNA, IconArrowRight, IconTarget, IconCalculator } from './Icons';
+import { IconDNA, IconArrowRight } from './Icons';
 
 interface BreedingSchemeArchitectCTAProps {
   variant?: 'dark' | 'light' | 'gradient';
