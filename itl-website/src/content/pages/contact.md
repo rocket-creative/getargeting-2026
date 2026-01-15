@@ -90,7 +90,7 @@ Current clients can reach project managers for:
 
 Interested in Ingenious Targeting Laboratory's catalog mouse models, including humanized mice?
 
-(/order-inquiry-catalog-models)
+(/order-catalog-models)
 
 ### Model Feasibility
 
