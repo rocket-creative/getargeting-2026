@@ -120,8 +120,13 @@ export default function LabSignalsPage() {
 
   return (
     <div style={{ backgroundColor: BRAND.white }}>
-      {/* Page wrapper - 1200px max for all sections */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      {/* Page wrapper - 1200px max for all sections with thin border */}
+      <div style={{ 
+        maxWidth: '1200px', 
+        margin: '0 auto',
+        border: `1px solid ${BRAND.borderGray}`,
+        borderTop: 'none',
+      }}>
         
         {/* Hero Section - Header Image with Overlay Content */}
         <section ref={heroRef} style={{ position: 'relative' }}>
@@ -275,7 +280,7 @@ export default function LabSignalsPage() {
       </section>
 
         {/* Section: Video */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px', borderRadius: '8px', marginTop: '20px' }}>
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px', borderRadius: '0' }}>
           <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             position: 'relative',
@@ -303,43 +308,43 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Signup */}
-        <section id="signup" style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
-          <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
-            fontWeight: 700,
-            marginBottom: '10px',
-          }}>
-            Sign Up for Free Access
-          </h2>
-          <p style={{ 
-            color: BRAND.darkGray, 
-            fontFamily: 'Lato, sans-serif',
-            fontSize: '.95rem', 
-            marginBottom: '25px',
-            lineHeight: 1.6,
-          }}>
-            Get biweekly research insights delivered to your inbox
-          </p>
+        <section id="signup" style={{ backgroundColor: BRAND.white, padding: '35px 20px 40px' }}>
+          <div className="section-animate" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{
+              color: BRAND.black,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
+              fontWeight: 700,
+              marginBottom: '6px',
+            }}>
+              Sign Up for Free Access
+            </h2>
+            <p style={{ 
+              color: BRAND.darkGray, 
+              fontFamily: 'Lato, sans-serif',
+              fontSize: '.9rem', 
+              marginBottom: '18px',
+              lineHeight: 1.5,
+            }}>
+              Get biweekly research insights delivered to your inbox
+            </p>
             <FlodeskForm />
           </div>
         </section>
 
         {/* Section: Why Subscribe */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px', borderRadius: '8px' }}>
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px', borderRadius: '0' }}>
           <div>
-          <h2 className="section-animate" style={{
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.3rem, 3vw, 1.5rem)',
-            fontWeight: 700,
-            marginBottom: '35px',
-            textAlign: 'center',
-          }}>
-            Why Researchers Stay Connected
-          </h2>
+            <h2 className="section-animate" style={{
+              color: BRAND.black,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
+              fontWeight: 700,
+              marginBottom: '25px',
+              textAlign: 'center',
+            }}>
+              Why Researchers Stay Connected
+            </h2>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -578,24 +583,24 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Final CTA - Gold */}
-        <section style={{ backgroundColor: BRAND.gold, padding: '60px 20px', borderRadius: '8px', marginTop: '20px', marginBottom: '20px' }}>
-          <div className="section-animate" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <IconMail size={40} color={BRAND.black} />
+        <section style={{ backgroundColor: BRAND.gold, padding: '40px 20px' }}>
+          <div className="section-animate" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+            <IconMail size={32} color={BRAND.black} />
             <h2 style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
+              fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
               fontWeight: 700,
-              margin: '18px 0 10px',
+              margin: '12px 0 6px',
             }}>
               Join Lab Signals Today
             </h2>
             <p style={{ 
               color: 'rgba(0,0,0,0.7)', 
               fontFamily: 'Lato, sans-serif',
-              fontSize: '.95rem', 
-              marginBottom: '25px',
-              lineHeight: 1.6,
+              fontSize: '.9rem', 
+              marginBottom: '18px',
+              lineHeight: 1.5,
             }}>
               Join thousands of researchers receiving biweekly insights.
             </p>
