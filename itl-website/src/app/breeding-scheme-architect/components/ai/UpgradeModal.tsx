@@ -101,7 +101,7 @@ export default function ConsultationModal() {
               color: 'rgba(255,255,255,0.85)',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
             {isAtLimit

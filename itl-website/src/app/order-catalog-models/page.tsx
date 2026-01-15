@@ -291,7 +291,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 color: 'rgba(255,255,255,0.8)',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.875rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 maxWidth: '600px',
                 margin: '0 auto',
               }}
@@ -850,7 +850,7 @@ export default function OrderInquiryCatalogModelsPage() {
               color: 'rgba(255,255,255,0.9)',
               fontFamily: 'var(--system-ui)',
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.7',
               fontStyle: 'italic',
               marginBottom: '12px',

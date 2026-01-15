@@ -292,7 +292,7 @@ function BreedingSchemeArchitectContent() {
               color: 'rgba(255,255,255,0.9)',
               fontFamily: 'var(--system-ui)',
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.7rem',
               maxWidth: '700px',
               marginBottom: '30px',
@@ -383,7 +383,7 @@ function BreedingSchemeArchitectContent() {
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.6rem',
               maxWidth: '700px',
               margin: '0 auto 40px',
@@ -589,7 +589,7 @@ function BreedingSchemeArchitectContent() {
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.6rem',
               maxWidth: '700px',
               margin: '0 auto 40px',
@@ -658,7 +658,7 @@ function BreedingSchemeArchitectContent() {
                   style={{
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     color: '#666',
                     lineHeight: '1.6rem',
                   }}
@@ -737,7 +737,7 @@ function BreedingSchemeArchitectContent() {
                   style={{
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     color: '#666',
                     lineHeight: '1.6rem',
                   }}
@@ -771,7 +771,7 @@ function BreedingSchemeArchitectContent() {
                 color: 'rgba(255,255,255,0.9)',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '1.1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.8rem',
                 fontStyle: 'italic',
                 marginBottom: '20px',
@@ -837,7 +837,7 @@ function BreedingSchemeArchitectContent() {
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               lineHeight: '1.6rem',
               marginBottom: '40px',
             }}
@@ -896,7 +896,7 @@ function BreedingSchemeArchitectContent() {
                   style={{
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     color: '#666',
                     lineHeight: '1.6rem',
                     flex: 1,

@@ -6,6 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -392,7 +393,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="hero-animate" style={{
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '16px',
               lineHeight: 1.7,
@@ -402,7 +403,7 @@ export default function ResourcesPage() {
             </p>
             <p className="hero-animate" style={{
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.8)',
               marginBottom: '30px',
               lineHeight: 1.7,
@@ -1338,6 +1339,17 @@ export default function ResourcesPage() {
                 {ctaData.secondaryButton.label}
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Lab Signals Newsletter CTA */}
+        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Expert Research Insights Delivered"
+              description="Subscribe to Lab Signals for biweekly articles on mouse model design, gene targeting best practices, and research insights from our PhD scientists."
+            />
           </div>
         </section>
 

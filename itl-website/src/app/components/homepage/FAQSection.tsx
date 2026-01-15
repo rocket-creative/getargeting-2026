@@ -130,7 +130,7 @@ export default function FAQSection({ data }: { data: FAQData }) {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.4rem',
                 }}
               >

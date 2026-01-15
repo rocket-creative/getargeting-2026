@@ -104,7 +104,7 @@ export default function HighLevelApproachSection({ data }: { data: ApproachData 
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.3rem',
                 }}
               >
@@ -146,7 +146,7 @@ export default function HighLevelApproachSection({ data }: { data: ApproachData 
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.3rem',
                 }}
               >

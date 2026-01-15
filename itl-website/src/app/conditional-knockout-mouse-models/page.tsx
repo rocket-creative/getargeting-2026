@@ -315,7 +315,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                     marginBottom: '15px'
                   }}
@@ -328,7 +328,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.85)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginBottom: '25px'
                   }}

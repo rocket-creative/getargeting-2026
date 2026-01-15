@@ -81,7 +81,7 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
           textAlign: 'center',
           fontFamily: 'var(--system-ui)',
           fontSize: '.9rem',
-          fontWeight: 300,
+          fontWeight: 400,
           lineHeight: '1.4rem',
           marginBottom: '40px',
           maxWidth: '700px',
@@ -145,7 +145,7 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
                   color: '#666',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.8rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.2rem',
                 }}
               >

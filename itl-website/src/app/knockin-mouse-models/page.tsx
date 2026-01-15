@@ -18,6 +18,8 @@ import {
   UXUIDCStartProjectCTA,
   UXUIDCGlossarySection,
   knockinTerms,
+  LabSignalsSignup,
+  getRelatedLabSignalsArticles,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -281,7 +283,7 @@ export default function KnockinMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.7rem',
                     marginBottom: '15px',
                   }}
@@ -293,7 +295,7 @@ export default function KnockinMouseModelsPage() {
                   style={{
                     color: 'rgba(255,255,255,0.85)',
                     fontSize: '.9rem',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: '1.6rem',
                     marginBottom: '25px',
                   }}
@@ -416,10 +418,10 @@ export default function KnockinMouseModelsPage() {
                   >
                     {approach.title}
                   </h3>
-                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, lineHeight: '1.5rem', marginBottom: '10px' }}>
+                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, lineHeight: '1.5rem', marginBottom: '10px' }}>
                     {approach.description}
                   </p>
-                  <p style={{ color: '#666', fontSize: '.8rem', fontWeight: 300, lineHeight: '1.4rem', flex: 1 }}>
+                  <p style={{ color: '#666', fontSize: '.8rem', fontWeight: 400, lineHeight: '1.4rem', flex: 1 }}>
                     {approach.benefit}
                   </p>
                   <Link
@@ -472,14 +474,14 @@ export default function KnockinMouseModelsPage() {
                 >
                   {technicalData.subtitle}
                 </h3>
-                <p className="animate-in" style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, lineHeight: '1.6rem', marginBottom: '15px' }}>
+                <p className="animate-in" style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '15px' }}>
                   {technicalData.content}
                 </p>
                 <ul className="animate-in space-y-2">
                   {technicalData.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <IconArrowRight size={16} color="#008080" className="mt-1 flex-shrink-0" />
-                      <span style={{ color: '#666', fontSize: '.9rem', fontWeight: 300 }}>{point}</span>
+                      <span style={{ color: '#666', fontSize: '.9rem', fontWeight: 400 }}>{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -520,7 +522,7 @@ export default function KnockinMouseModelsPage() {
             >
               {whenToUseData.title}
             </h2>
-            <p className="animate-in" style={{ color: '#666', fontSize: '1rem', fontWeight: 300, lineHeight: '1.7rem' }}>
+            <p className="animate-in" style={{ color: '#666', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem' }}>
               {whenToUseData.content}
             </p>
           </div>
@@ -591,7 +593,7 @@ export default function KnockinMouseModelsPage() {
             >
               {publicationsData.title}
             </h2>
-            <p className="animate-in text-center" style={{ color: '#666', fontSize: '.9rem', fontWeight: 300, marginBottom: '30px' }}>
+            <p className="animate-in text-center" style={{ color: '#666', fontSize: '.9rem', fontWeight: 400, marginBottom: '30px' }}>
               {publicationsData.intro}
             </p>
             <div className="space-y-4">
@@ -609,7 +611,7 @@ export default function KnockinMouseModelsPage() {
                   <p style={{ color: '#333', fontSize: '.9rem', fontWeight: 500, marginBottom: '5px' }}>
                     {pub.authors} {pub.year}. {pub.title}
                   </p>
-                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 300, fontStyle: 'italic' }}>{pub.journal}</p>
+                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, fontStyle: 'italic' }}>{pub.journal}</p>
                 </div>
               ))}
             </div>
@@ -651,7 +653,7 @@ export default function KnockinMouseModelsPage() {
                 style={{
                   color: 'rgba(255,255,255,0.9)',
                   fontSize: '1.1rem',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   lineHeight: '1.8rem',
                   fontStyle: 'italic',
                   marginTop: '20px',
@@ -663,7 +665,7 @@ export default function KnockinMouseModelsPage() {
               <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600 }}>
                 — {testimonialData.name}
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.9rem', fontWeight: 300 }}>{testimonialData.affiliation}</p>
+              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.9rem', fontWeight: 400 }}>{testimonialData.affiliation}</p>
             </div>
             <div className="mt-6">
               <Link
@@ -695,6 +697,19 @@ export default function KnockinMouseModelsPage() {
             { label: 'Contact Us', href: '/contact' },
           ]}
         />
+
+        {/* ========== LAB SIGNALS NEWSLETTER ========== */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Master Knockin Mouse Design"
+              description="Subscribe to Lab Signals for expert guides on knockin strategies, reporter selection, and point mutation design from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/knockin-mouse-models')}
+            />
+          </div>
+        </section>
 
         {/* ========== GLOSSARY ========== */}
         <UXUIDCGlossarySection

@@ -1,7 +1,7 @@
 /**
  * What Researchers Say - Testimonials Section
  * Supports both light and dark background variants
- * Dark variant uses glass effect for cards
+ * Cards are always solid white with dark text for maximum legibility
  */
 
 'use client';
@@ -66,30 +66,21 @@ export default function TestimonialsSection({
     ? { color: '#ffffff' }
     : { color: '#2384da' };
 
-  const cardStyle = isDark
-    ? {
-        background: 'rgba(255,255,255,0.08)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255,255,255,0.15)',
-        borderRadius: '8px',
-      }
-    : {
-        backgroundColor: '#ffffff',
-        border: '1px solid #e0e0e0',
-      };
+  // Cards are always solid white with dark text for maximum legibility
+  const cardStyle = {
+    backgroundColor: '#ffffff',
+    border: '1px solid #e0e0e0',
+    borderRadius: '8px',
+  };
 
-  const quoteStyle = isDark
-    ? { color: 'rgba(255,255,255,0.9)' }
-    : { color: '#666' };
+  // Quote text is always dark grey for readability
+  const quoteStyle = { color: '#666' };
 
-  const nameStyle = isDark
-    ? { color: '#00d4d4' }
-    : { color: '#333' };
+  // Name is always dark for readability
+  const nameStyle = { color: '#333' };
 
-  const affiliationStyle = isDark
-    ? { color: 'rgba(255,255,255,0.7)' }
-    : { color: '#666' };
+  // Affiliation is always dark grey for readability
+  const affiliationStyle = { color: '#666' };
 
   const buttonStyle = isDark
     ? { backgroundColor: '#00d4d4', color: '#0a253c' }
@@ -147,7 +138,7 @@ export default function TestimonialsSection({
                 ...quoteStyle,
                 fontFamily: 'Lato, sans-serif',
                 fontSize: '.9rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: 1.6,
                 fontStyle: 'italic',
                 marginBottom: '20px',
@@ -208,9 +199,7 @@ export default function TestimonialsSection({
       <style jsx>{`
         .testimonial-card:hover {
           transform: translateY(-4px);
-          box-shadow: ${isDark 
-            ? '0 8px 32px rgba(0,212,212,0.15)' 
-            : '0 8px 20px rgba(0,0,0,0.1)'};
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         @media (max-width: 900px) {
           div[style*="grid-template-columns: repeat(3, 1fr)"] {

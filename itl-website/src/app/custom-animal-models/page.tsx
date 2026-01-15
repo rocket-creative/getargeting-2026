@@ -156,7 +156,7 @@ export default function CustomAnimalModelsPage() {
               style={{
                 color: 'rgba(255,255,255,0.9)',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.7rem',
                 maxWidth: '800px',
               }}
@@ -253,7 +253,7 @@ export default function CustomAnimalModelsPage() {
                     style={{
                       color: '#666',
                       fontSize: '.9rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       lineHeight: '1.6rem',
                       flex: 1,
                     }}

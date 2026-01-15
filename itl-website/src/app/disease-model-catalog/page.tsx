@@ -39,7 +39,7 @@ const catalogCategoriesData = [
       "Humanized checkpoint models"
     ],
     href: "/oncology-mouse-models",
-    color: "#e74c3c"
+    color: "#008080"
   },
   {
     title: "Neuroscience Models",
@@ -52,7 +52,7 @@ const catalogCategoriesData = [
       "Autism models"
     ],
     href: "/neuroscience-mouse-models",
-    color: "#9b59b6"
+    color: "#134978"
   },
   {
     title: "Metabolic Disease Models",
@@ -64,7 +64,7 @@ const catalogCategoriesData = [
       "Cardiovascular models"
     ],
     href: "/metabolic-disease-mouse-models",
-    color: "#f39c12"
+    color: "#008080"
   },
   {
     title: "Immunology Models",
@@ -76,7 +76,7 @@ const catalogCategoriesData = [
       "Allergy and asthma models"
     ],
     href: "/immunology-mouse-models",
-    color: "#008080"
+    color: "#134978"
   }
 ];
 
@@ -270,7 +270,7 @@ export default function DiseaseModelCatalogPage() {
             </h1>
             <p className="hero-animate" style={{
               fontSize: '1rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '16px',
               lineHeight: 1.7,
@@ -280,7 +280,7 @@ export default function DiseaseModelCatalogPage() {
             </p>
             <p className="hero-animate" style={{
               fontSize: '.9rem',
-              fontWeight: 300,
+              fontWeight: 400,
               color: 'rgba(255,255,255,0.8)',
               marginBottom: '30px',
               lineHeight: 1.7,

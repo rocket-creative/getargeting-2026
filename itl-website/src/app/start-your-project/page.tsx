@@ -209,7 +209,7 @@ export default function StartYourProjectPage() {
               style={{
                 color: 'rgba(255,255,255,0.9)',
                 fontSize: '1rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: '1.7rem',
                 maxWidth: '700px',
                 marginBottom: '30px',
@@ -662,7 +662,7 @@ export default function StartYourProjectPage() {
                       style={{
                         color: '#008080',
                         fontSize: '1.5rem',
-                        fontWeight: 300,
+                        fontWeight: 400,
                         transition: 'transform 0.2s ease',
                         transform: expandedFaq === i ? 'rotate(45deg)' : 'rotate(0deg)',
                       }}

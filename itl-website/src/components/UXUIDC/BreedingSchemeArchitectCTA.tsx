@@ -138,7 +138,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                 color: subtextColor,
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.95rem',
-                fontWeight: 300,
+                fontWeight: 400,
                 lineHeight: 1.7,
                 marginBottom: '20px',
               }}

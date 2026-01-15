@@ -367,13 +367,6 @@ export const conditionalKnockoutResources: ResourceLink[] = [
     description: "Comprehensive guide to Cre-lox system design and implementation",
     href: "https://go.genetargeting.com/crelox-design-guide",
     type: 'guide'
-  },
-  {
-    title: "Breeding Scheme Architect",
-    description: "Plan your multi-allele breeding schemes with our interactive tool",
-    href: "/breeding-scheme-architect",
-    type: 'tool',
-    isNew: true
   }
 ];
 

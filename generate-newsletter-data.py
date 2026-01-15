@@ -169,6 +169,7 @@ def parse_csv():
             body = row.get('Body', '').strip()
             name_pt1 = row.get('Name-pt1', '').strip()
             name_pt2 = row.get('Name-pt2', '').strip()
+            references = row.get('CI-2', '').strip()  # References are in CI-2 column
             
             # Skip empty rows or rows that look like HTML fragments
             if not name or not slug or slug.startswith('<'):
@@ -187,6 +188,10 @@ def parse_csv():
                 subtitle = name_pt1
             else:
                 subtitle = ""
+            
+            # Append references to body if present
+            if references:
+                body = body + references
             
             # Clean the HTML body
             cleaned_body = clean_html(body)
