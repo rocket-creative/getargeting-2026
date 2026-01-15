@@ -196,24 +196,23 @@ const technicalConsiderations = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Tsvilovskyy V, Ottenheijm R, Kriebs U, Schütz A, Diakopoulos KN, Jha A, et al.",
+    authors: "Tsvilovskyy V, Ottenheijm R, Kriebs U, Schütz A, et al.",
     year: "2024",
     title: "OCaR1 endows exocytic vesicles with autoregulatory competence by preventing uncontrolled Ca2+ release, exocytosis, and pancreatic tissue damage.",
-    journal: "J Clin Invest 134(7): e169428"
+    journal: "J Clin Invest",
+    volume: "134(7): e169428",
+    link: "https://pubmed.ncbi.nlm.nih.gov/38557489/"
   },
   {
-    authors: "Chhabra KH, Bathina S, Faniyan TS, Samuel DJ, Raza MU, de Souza Cordeiro LM, et al.",
-    year: "2024",
-    title: "ADGRL1 is a glucose receptor involved in mediating energy and glucose homeostasis.",
-    journal: "Diabetologia 67(1): 170-189"
-  },
-  {
-    authors: "Li H, Chaitankar V, Cui L, Chen W, Chin K, Zhu J, Liu W, Rodgers GP.",
-    year: "2023",
-    title: "Characterization of olfactomedin 4+ cells in prostate and urethral-tube epithelium during murine postnatal development and in adult mice.",
-    journal: "Sci Rep 13(1): 10290"
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -719,7 +718,7 @@ export default function ReporterKnockinPage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -729,8 +728,36 @@ export default function ReporterKnockinPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

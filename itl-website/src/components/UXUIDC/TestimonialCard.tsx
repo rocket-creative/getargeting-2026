@@ -19,7 +19,7 @@ export default function UXUIDCTestimonialCard({
   organization,
 }: TestimonialCardProps) {
   return (
-    <blockquote className="bg-[var(--3-grey)] rounded-xl p-6 lg:p-8">
+    <blockquote className="bg-[var(--3-grey)] rounded-xl p-6 lg:p-8 hover-card transition-all duration-300">
       {/* Quote Icon */}
       <svg
         className="w-8 h-8 text-[var(--blue)] mb-4 opacity-50"

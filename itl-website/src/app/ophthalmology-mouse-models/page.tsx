@@ -115,24 +115,23 @@ const therapeuticApplications = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Xia F et al.",
     year: "2025",
     title: "CXCR3 Deficiency Alleviates Retinal Ganglion Cell Loss by Regulating Neuron Astrocyte Communication in a Mouse Model of Glaucoma.",
-    journal: "Investigative Ophthalmology & Visual Science"
+    journal: "Investigative Ophthalmology & Visual Science",
+    volume: "66(3): 27",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41247127/"
   },
   {
     authors: "Hoppe C et al.",
     year: "2025",
     title: "The alternative complement pathway drives neuroinflammation and neurodegeneration in mouse models of glaucoma and optic nerve injury.",
-    journal: "Neurobiology of Disease"
-  },
-  {
-    authors: "Ye H et al.",
-    year: "2025",
-    title: "Ferroptosis Contributes to Retinal Ganglion Cell Loss in GLAST Knockout Mouse Model of Normal Tension Glaucoma.",
-    journal: "Investigative Ophthalmology & Visual Science"
+    journal: "Neurobiology of Disease",
+    volume: "210: 106927",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41005572/"
   }
 ];
 
@@ -726,8 +725,36 @@ export default function OphthalmologyMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

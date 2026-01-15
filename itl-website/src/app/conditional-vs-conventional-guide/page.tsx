@@ -6,7 +6,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -175,6 +176,16 @@ const testimonialsData = [
     quote: "iTL generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend iTL's services for anyone considering knockout mouse models.",
     author: "Edward Harhaj, PhD",
     affiliation: "Penn State College of Medicine"
+  },
+  {
+    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
+    author: "Hyekyung Plumley, PhD",
+    affiliation: "Warren Center for Neuroscience Drug Discovery"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
   }
 ];
 
@@ -925,65 +936,7 @@ export default function ConditionalVsConventionalGuidePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '32px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '20px' }}>
-                    <IconQuote size={32} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                    fontStyle: 'italic'
-                  }}>
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link href="/testimonials" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: '#00d4d4',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                View More Testimonials
-                <IconChevronRight size={16} color="#00d4d4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
         {/* CTA Section */}
         <section style={{ background: '#008080', padding: '60px 20px' }}>

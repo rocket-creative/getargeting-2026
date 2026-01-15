@@ -66,24 +66,31 @@ const phenotypingMethods = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Turner MB et al.",
     year: "2025",
     title: "Adipocyte specific deletion of the mineralocorticoid receptor improves glucose homeostasis and associates with FGF21 adiponectin signalling in obese male mice.",
-    journal: "Diabetes, Obesity and Metabolism"
+    journal: "Diabetes, Obesity and Metabolism",
+    volume: "27(5): 2341-2355",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41153082/"
   },
   {
     authors: "Vacher CM et al.",
     year: "2021",
     title: "Placental endocrine function shapes cerebellar development and social behavior.",
-    journal: "Nature Neuroscience"
+    journal: "Nature Neuroscience",
+    volume: "24(10): 1392-1401",
+    link: "https://pubmed.ncbi.nlm.nih.gov/34400844/"
   },
   {
     authors: "Clausen BE et al.",
     year: "1999",
     title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research"
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -338,8 +345,8 @@ export default function DiabetesMouseModelsPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Type 1 */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
-                <h2 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 700, marginBottom: '15px' }}>
+              <div className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <h2 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 700, marginBottom: '15px' }}>
                   Type 1 Diabetes Models
                 </h2>
                 <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '20px' }}>
@@ -356,8 +363,8 @@ export default function DiabetesMouseModelsPage() {
               </div>
 
               {/* Type 2 */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
-                <h2 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 700, marginBottom: '15px' }}>
+              <div className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+                <h2 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 700, marginBottom: '15px' }}>
                   Type 2 Diabetes Models
                 </h2>
                 <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '20px' }}>
@@ -496,8 +503,36 @@ export default function DiabetesMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

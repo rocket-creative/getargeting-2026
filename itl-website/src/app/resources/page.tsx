@@ -6,7 +6,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -246,6 +247,11 @@ const testimonialsData = [
     quote: "The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards in every aspect of our project.",
     author: "Albert Basson, PhD",
     affiliation: "King's College London"
+  },
+  {
+    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
+    author: "Hyekyung Plumley, PhD",
+    affiliation: "Warren Center for Neuroscience Drug Discovery"
   }
 ];
 
@@ -1152,65 +1158,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '28px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '16px' }}>
-                    <IconQuote size={28} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '.95rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.7,
-                    marginBottom: '16px',
-                    fontStyle: 'italic'
-                  }}>
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link href="/testimonials" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: '#00d4d4',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                View More Testimonials
-                <IconChevronRight size={16} color="#00d4d4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
         {/* Video Library & Glossary Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>

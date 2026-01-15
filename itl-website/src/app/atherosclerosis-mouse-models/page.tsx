@@ -71,24 +71,23 @@ const phenotypingMethods = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Noonan J et al.",
+    authors: "Chen H et al.",
     year: "2025",
-    title: "Atherosclerotic Plaque Instability and Rupture: Recommended Mouse Models to Empower Clinically Relevant Discoveries.",
-    journal: "Arteriosclerosis, Thrombosis, and Vascular Biology"
+    title: "Novel Mouse Model of Coronary Atherosclerosis With Myocardial Infarction: Insights Into Human CAD.",
+    journal: "Circulation Research",
+    volume: "136(7): 679-692",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40485474/"
   },
   {
-    authors: "Velagapudi S et al.",
-    year: "2025",
-    title: "Sirtuin 1 directly binds and deacetylates hepatic PCSK9 thereby promoting the inhibition of LDL receptor degradation.",
-    journal: "Cardiovascular Research"
-  },
-  {
-    authors: "Li J et al.",
-    year: "2025",
-    title: "IMM H007 promotes hepatic cholesterol and triglyceride metabolism by activating AMPK to attenuate hypercholesterolemia.",
-    journal: "Acta Pharmaceutica Sinica B"
+    authors: "Meng Z et al.",
+    year: "2024",
+    title: "Adipose transplantation improves metabolism and atherosclerosis but not perivascular adipose tissue abnormality or vascular dysfunction in lipodystrophic Seipin null mice.",
+    journal: "American Journal of Physiology Cell Physiology",
+    volume: "326(5): C1356-C1368",
+    link: "https://pubmed.ncbi.nlm.nih.gov/38525541/"
   }
 ];
 
@@ -498,8 +497,36 @@ export default function AtherosclerosisMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

@@ -6,7 +6,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconTarget } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconTarget } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -154,6 +155,16 @@ const testimonialsData = [
     quote: "The quality of service was exceptional. The team at Ingenious consistently met the highest possible standards in every aspect of our project.",
     author: "Albert Basson, PhD",
     affiliation: "King's College London"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
+  },
+  {
+    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
+    author: "Hyekyung Plumley, PhD",
+    affiliation: "Warren Center for Neuroscience Drug Discovery"
   }
 ];
 
@@ -740,51 +751,7 @@ export default function BALBcMouseBackgroundPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '24px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '16px' }}>
-                    <IconQuote size={24} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '.9rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.7,
-                    marginBottom: '16px',
-                    fontStyle: 'italic'
-                  }}>
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
         {/* CTA Section */}
         <section style={{ background: '#008080', padding: '60px 20px' }}>

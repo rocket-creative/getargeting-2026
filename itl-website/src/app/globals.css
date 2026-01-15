@@ -200,6 +200,97 @@ li {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================================
+   HOVER CARD EFFECT - Homepage Style
+   Cool drop shadow + lift effect
+   ======================================== */
+.hover-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 
+              0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover card with teal title effect */
+.hover-card-teal h3,
+.hover-card-teal .card-title {
+  transition: color 0.3s ease;
+}
+
+.hover-card-teal:hover h3,
+.hover-card-teal:hover .card-title {
+  color: teal;
+}
+
+/* Hover card variants */
+.hover-card-sm {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-card-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card-lg {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-card-lg:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15),
+              0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover button effect */
+.hover-btn {
+  transition: all 0.3s ease;
+}
+
+.hover-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover link with arrow animation */
+.hover-link-arrow {
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hover-link-arrow:hover {
+  transform: translateY(-1px);
+}
+
+.hover-link-arrow .arrow {
+  transition: transform 0.3s ease;
+}
+
+.hover-link-arrow:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Image hover zoom effect */
+.hover-image-zoom {
+  overflow: hidden;
+}
+
+.hover-image-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.hover-image-zoom:hover img {
+  transform: scale(1.05);
+}
+
 .interactive-link {
   position: relative;
   transition: color 0.3s ease;

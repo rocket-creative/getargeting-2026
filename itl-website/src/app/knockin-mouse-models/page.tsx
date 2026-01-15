@@ -380,7 +380,7 @@ export default function KnockinMouseModelsPage() {
               {approachesData.map((approach, i) => (
                 <div
                   key={i}
-                  className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                  className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group"
                   style={{
                     backgroundColor: '#f7f7f7',
                     padding: '25px',

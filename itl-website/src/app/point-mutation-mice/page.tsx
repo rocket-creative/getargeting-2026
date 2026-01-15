@@ -159,24 +159,31 @@ const experimentalConsiderations = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Navarro HI, Daly AE, Rodriguez B, Wu S, Ngo KA, Fraser A, et al.",
     year: "2025",
     title: "NF-κB RelB suppresses the inflammatory gene expression programs of dendritic cells by competing with RelA for binding to target gene promoters.",
-    journal: "Cell Discov 11(1): 13"
+    journal: "Cell Discov",
+    volume: "11(1): 13",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39929805/"
   },
   {
     authors: "Mohassel P, Hearn H, Rooney J, Zou Y, Johnson K, Norato G, et al.",
     year: "2025",
     title: "Collagen type VI regulates TGF-β bioavailability in skeletal muscle in mice.",
-    journal: "J Clin Invest. 9(135): e173354"
+    journal: "J Clin Invest",
+    volume: "135(9): e173354",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40309777/"
   },
   {
     authors: "Hockemeyer K, Sakellaropoulos T, Chen X, Ivashkiv O, et al.",
     year: "2024",
     title: "The stress response regulator HSF1 modulates natural killer cell anti-tumour immunity.",
-    journal: "Nat Cell Biol 26(10): 1734-1744"
+    journal: "Nat Cell Biol",
+    volume: "26(10): 1734-1744",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39223375/"
   }
 ];
 
@@ -674,7 +681,7 @@ export default function PointMutationMicePage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -684,8 +691,36 @@ export default function PointMutationMicePage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

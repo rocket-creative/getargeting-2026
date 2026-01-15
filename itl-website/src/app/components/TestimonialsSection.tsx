@@ -1,5 +1,7 @@
 /**
- * What Researchers Say - Testimonials Section - from homepage.md
+ * What Researchers Say - Testimonials Section
+ * Supports both light and dark background variants
+ * Dark variant uses glass effect for cards
  */
 
 'use client';
@@ -10,16 +12,24 @@ import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface Testimonial {
   quote: string;
-  name: string;
+  name?: string;
+  author?: string; // Support both 'name' and 'author' field names
   affiliation: string;
 }
 
 interface TestimonialsSectionProps {
   testimonials: Testimonial[];
+  variant?: 'light' | 'dark';
+  showCta?: boolean;
 }
 
-export default function TestimonialsSection({ testimonials }: TestimonialsSectionProps) {
+export default function TestimonialsSection({ 
+  testimonials, 
+  variant = 'light',
+  showCta = true 
+}: TestimonialsSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
+  const isDark = variant === 'dark';
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -47,99 +57,167 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
     return () => ctx.revert();
   }, []);
 
+  // Styles based on variant
+  const sectionStyle = isDark 
+    ? { background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)', padding: '60px 20px' }
+    : { backgroundColor: '#f7f7f7', padding: '60px 20px' };
+
+  const titleStyle = isDark
+    ? { color: '#ffffff' }
+    : { color: '#2384da' };
+
+  const cardStyle = isDark
+    ? {
+        background: 'rgba(255,255,255,0.08)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255,255,255,0.15)',
+        borderRadius: '8px',
+      }
+    : {
+        backgroundColor: '#ffffff',
+        border: '1px solid #e0e0e0',
+      };
+
+  const quoteStyle = isDark
+    ? { color: 'rgba(255,255,255,0.9)' }
+    : { color: '#666' };
+
+  const nameStyle = isDark
+    ? { color: '#00d4d4' }
+    : { color: '#333' };
+
+  const affiliationStyle = isDark
+    ? { color: 'rgba(255,255,255,0.7)' }
+    : { color: '#666' };
+
+  const buttonStyle = isDark
+    ? { backgroundColor: '#00d4d4', color: '#0a253c' }
+    : { backgroundColor: '#134978', color: '#ffffff' };
+
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col justify-start items-center"
       style={{
-        backgroundColor: 'white',
-        padding: '50px 20px',
+        ...sectionStyle,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
       <h2
         style={{
-          color: '#2384da',
+          ...titleStyle,
           textAlign: 'center',
           letterSpacing: '-.5px',
           fontFamily: 'Poppins, sans-serif',
           fontSize: '2rem',
           fontWeight: 700,
           lineHeight: 1,
-          marginBottom: '30px',
+          marginBottom: '40px',
         }}
       >
         What Researchers Say
       </h2>
 
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        style={{ maxWidth: '1200px', width: '100%' }}
+        style={{ 
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '24px',
+          maxWidth: '1000px', 
+          width: '100%' 
+        }}
       >
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="testimonial-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className="testimonial-card"
             style={{
+              ...cardStyle,
               opacity: 0,
-              backgroundColor: '#f7f7f7',
               padding: '30px',
-              border: '.5px solid #e0e0e0',
+              display: 'flex',
+              flexDirection: 'column',
+              transition: 'all 0.3s ease',
             }}
           >
             <p
               style={{
-                color: '#666',
-                fontFamily: 'var(--system-ui)',
+                ...quoteStyle,
+                fontFamily: 'Lato, sans-serif',
                 fontSize: '.9rem',
                 fontWeight: 300,
-                lineHeight: '1.4rem',
+                lineHeight: 1.6,
                 fontStyle: 'italic',
                 marginBottom: '20px',
+                flex: 1,
               }}
             >
               &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <p
-              style={{
-                color: '#333',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                marginBottom: '5px',
-              }}
-            >
-              — {testimonial.name}
-            </p>
-            <p
-              style={{
-                color: '#666',
-                fontFamily: 'var(--system-ui)',
-                fontSize: '.8rem',
-                fontWeight: 300,
-              }}
-            >
-              {testimonial.affiliation}
-            </p>
+            <div style={{ marginTop: 'auto' }}>
+              <p
+                style={{
+                  ...nameStyle,
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  marginBottom: '5px',
+                }}
+              >
+                — {testimonial.name || testimonial.author}
+              </p>
+              <p
+                style={{
+                  ...affiliationStyle,
+                  fontFamily: 'Lato, sans-serif',
+                  fontSize: '.8rem',
+                  fontWeight: 400,
+                }}
+              >
+                {testimonial.affiliation}
+              </p>
+            </div>
           </div>
         ))}
       </div>
 
-      <Link
-        href="/testimonials"
-        className="group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-        style={{
-          marginTop: '30px',
-          backgroundColor: 'teal',
-          color: 'white',
-          padding: '12px 24px',
-          fontFamily: 'var(--system-ui)',
-          fontSize: '.9rem',
-          fontWeight: 400,
-        }}
-      >
-        <span>View All Testimonials</span>
-        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-      </Link>
+      {showCta && (
+        <Link
+          href="/testimonials"
+          style={{
+            ...buttonStyle,
+            marginTop: '30px',
+            padding: '12px 24px',
+            fontFamily: 'Lato, sans-serif',
+            fontSize: '.9rem',
+            fontWeight: 500,
+            textDecoration: 'none',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            transition: 'all 0.3s ease',
+          }}
+        >
+          <span>View All Testimonials</span>
+          <span>→</span>
+        </Link>
+      )}
+
+      <style jsx>{`
+        .testimonial-card:hover {
+          transform: translateY(-4px);
+          box-shadow: ${isDark 
+            ? '0 8px 32px rgba(0,212,212,0.15)' 
+            : '0 8px 20px rgba(0,0,0,0.1)'};
+        }
+        @media (max-width: 900px) {
+          div[style*="grid-template-columns: repeat(3, 1fr)"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

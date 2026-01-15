@@ -181,31 +181,31 @@ const complexModelDesigns = [
   { name: "Humanized Targets", description: "Human gene expression enables testing of therapeutic antibodies or compounds designed for human targets." }
 ];
 
-// Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Jin H et al.",
+    authors: "Chen H et al.",
     year: "2025",
-    title: "Identification of a PRDM1 regulated T cell network to regulate atherosclerotic plaque inflammation.",
-    journal: "Genome Medicine"
+    title: "Novel Mouse Model of Coronary Atherosclerosis With Myocardial Infarction: Insights Into Human CAD.",
+    journal: "Circulation Research",
+    volume: "136(7): 679-692",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40485474/"
   },
   {
     authors: "Xiao Y et al.",
     year: "2025",
     title: "The innate immune receptor NLRX1 is a novel required modulator for mPTP opening: implications for cardioprotection.",
-    journal: "Basic Research in Cardiology"
-  },
-  {
-    authors: "Chen H et al.",
-    year: "2025",
-    title: "Novel Mouse Model of Coronary Atherosclerosis With Myocardial Infarction: Insights Into Human CAD.",
-    journal: "Circulation Research"
+    journal: "Basic Research in Cardiology",
+    volume: "120(4): 617-634",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40536683/"
   },
   {
     authors: "Meng Z et al.",
     year: "2024",
     title: "Adipose transplantation improves metabolism and atherosclerosis but not perivascular adipose tissue abnormality or vascular dysfunction in lipodystrophic Seipin null mice.",
-    journal: "American Journal of Physiology Cell Physiology"
+    journal: "American Journal of Physiology Cell Physiology",
+    volume: "326(5): C1356-C1368",
+    link: "https://pubmed.ncbi.nlm.nih.gov/38525541/"
   }
 ];
 
@@ -534,8 +534,8 @@ export default function CardiovascularMouseModelsPage() {
             </h2>
             
             {/* Atherosclerosis Models */}
-            <div className="animate-in" style={{ marginBottom: '40px' }}>
-              <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+            <div className="animate-in hover-card hover-card-teal group" style={{ marginBottom: '40px', padding: '20px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+              <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
                 Atherosclerosis Models
               </h3>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -575,8 +575,8 @@ export default function CardiovascularMouseModelsPage() {
             </div>
 
             {/* Heart Failure Models */}
-            <div className="animate-in" style={{ marginBottom: '40px' }}>
-              <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+            <div className="animate-in hover-card hover-card-teal group" style={{ marginBottom: '40px', padding: '20px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+              <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
                 Heart Failure and Cardiomyopathy Models
               </h3>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -606,8 +606,8 @@ export default function CardiovascularMouseModelsPage() {
             </div>
 
             {/* Hypertension Models */}
-            <div className="animate-in" style={{ marginBottom: '40px' }}>
-              <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+            <div className="animate-in hover-card hover-card-teal group" style={{ marginBottom: '40px', padding: '20px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+              <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
                 Hypertension Models
               </h3>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -677,8 +677,8 @@ export default function CardiovascularMouseModelsPage() {
             </h2>
             
             {/* Background Strain Selection */}
-            <div className="animate-in" style={{ marginBottom: '40px' }}>
-              <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+            <div className="animate-in hover-card hover-card-teal group" style={{ marginBottom: '40px', padding: '20px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+              <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
                 Background Strain Selection
               </h3>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -718,8 +718,8 @@ export default function CardiovascularMouseModelsPage() {
             </div>
 
             {/* Clinical Relevance */}
-            <div className="animate-in" style={{ marginBottom: '40px' }}>
-              <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+            <div className="animate-in hover-card hover-card-teal group" style={{ marginBottom: '40px', padding: '20px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+              <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
                 Achieving Clinically Relevant Phenotypes
               </h3>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -958,7 +958,7 @@ export default function CardiovascularMouseModelsPage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -968,8 +968,36 @@ export default function CardiovascularMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

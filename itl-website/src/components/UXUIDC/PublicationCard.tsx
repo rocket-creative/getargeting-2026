@@ -107,12 +107,13 @@ export function PublicationCard({
   // Default variant
   return (
     <div
-      className={className}
+      className={`${className} hover-card-sm`}
       style={{
         backgroundColor: '#f8f9fa',
         padding: '20px 24px',
         borderRadius: '8px',
         borderLeft: '4px solid #2384da',
+        transition: 'all 0.3s ease',
         ...style
       }}
     >

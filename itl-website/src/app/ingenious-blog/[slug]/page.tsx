@@ -65,7 +65,8 @@ function markdownToHtml(markdown: string): string {
     .replace(/\u200c/g, '') // Zero-width non-joiner
     .replace(/\ufeff/g, '') // BOM
     .replace(/‍/g, '')      // HTML entity zero-width joiner
-    .replace(/\r\n/g, '\n');
+    .replace(/\r\n/g, '\n')
+    .trim();
   
   // Pre-process: separate linked images followed by headers
   // Pattern: ](url)## Header -> ](url)\n\n## Header
@@ -82,18 +83,25 @@ function markdownToHtml(markdown: string): string {
     // Linked image: [![alt](img)](link)
     const linkedImageMatch = trimmed.match(/^\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)$/);
     if (linkedImageMatch) {
-      htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImageMatch[3]}" class="blog-image-link"><img src="${linkedImageMatch[2]}" alt="${linkedImageMatch[1]}" class="blog-image" loading="lazy" /></a></figure>`);
+      const alt = linkedImageMatch[1] || 'Article image';
+      htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImageMatch[3]}" class="blog-image-link" target="_blank" rel="noopener noreferrer"><img src="${linkedImageMatch[2]}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
       continue;
     }
 
-    // Standalone image: ![alt](url)
+    // Standalone image: ![alt](url) - filter out placeholder/tracking images
     const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (imageMatch) {
-      htmlBlocks.push(`<figure class="blog-figure"><img src="${imageMatch[2]}" alt="${imageMatch[1]}" class="blog-image" loading="lazy" /></figure>`);
+      const alt = imageMatch[1] || 'Article image';
+      const src = imageMatch[2];
+      // Skip tiny/icon images that are likely download icons or tracking pixels
+      if (src.includes('Downloadable-Icon') || src.includes('tracking') || src.includes('pixel')) {
+        continue;
+      }
+      htmlBlocks.push(`<figure class="blog-figure"><img src="${src}" alt="${alt}" class="blog-image" loading="lazy" /></figure>`);
       continue;
     }
 
-    // Headers
+    // Headers - skip duplicate H1s if they match the title pattern
     if (trimmed.startsWith('#### ')) {
       htmlBlocks.push(`<h4 class="blog-h4">${processInline(trimmed.slice(5))}</h4>`);
     } else if (trimmed.startsWith('### ')) {
@@ -101,7 +109,11 @@ function markdownToHtml(markdown: string): string {
     } else if (trimmed.startsWith('## ')) {
       htmlBlocks.push(`<h2 class="blog-h2">${processInline(trimmed.slice(3))}</h2>`);
     } else if (trimmed.startsWith('# ')) {
-      htmlBlocks.push(`<h1 class="blog-h1">${processInline(trimmed.slice(2))}</h1>`);
+      // Skip redundant H1 headers that just repeat the title
+      const h1Content = trimmed.slice(2).trim();
+      if (!htmlBlocks.some(b => b.includes('blog-h1'))) {
+        htmlBlocks.push(`<h1 class="blog-h1">${processInline(h1Content)}</h1>`);
+      }
     }
     // Blockquotes
     else if (trimmed.startsWith('> ')) {
@@ -122,17 +134,43 @@ function markdownToHtml(markdown: string): string {
     else if (trimmed === '---') {
       htmlBlocks.push('<hr class="blog-hr" />');
     }
-    // Link with image inside: [[![...](img)](url) or [text](url) as CTA
+    // CTA-style standalone links
     else if (trimmed.startsWith('[') && trimmed.endsWith(')') && !trimmed.includes('\n')) {
       // Check if it's a linked image
       const linkedImgInline = trimmed.match(/^\[\s*!\[([^\]]*)\]\(([^)]+)\)\s*\]\(([^)]+)\)$/);
       if (linkedImgInline) {
-        htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImgInline[3]}" class="blog-image-link"><img src="${linkedImgInline[2]}" alt="${linkedImgInline[1]}" class="blog-image" loading="lazy" /></a></figure>`);
+        const alt = linkedImgInline[1] || 'Article image';
+        htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImgInline[3]}" class="blog-image-link" target="_blank" rel="noopener noreferrer"><img src="${linkedImgInline[2]}" alt="${alt}" class="blog-image" loading="lazy" /></a></figure>`);
       } else {
-        // Plain link as CTA button
+        // Plain link - check if it's a CTA
         const linkMatch = trimmed.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         if (linkMatch) {
-          htmlBlocks.push(`<p class="blog-cta"><a href="${linkMatch[2]}" class="blog-button">${linkMatch[1]}</a></p>`);
+          const text = linkMatch[1];
+          const url = linkMatch[2];
+          // Filter out ONLY newsletter subscribe links
+          if (url.includes('subscribe-to-ingenious') || 
+              text.toLowerCase() === 'subscribe to our newsletter' ||
+              text.toLowerCase() === 'stay in the loop') {
+            continue;
+          }
+          // Determine button style based on link type
+          const isDownload = url.includes('quick-guide') || 
+                            url.includes('white-paper') || 
+                            url.includes('design-guide') ||
+                            url.includes('chart') ||
+                            url.includes('technology-guide') ||
+                            text.toLowerCase().includes('get your copy') ||
+                            text.toLowerCase().includes('download');
+          const isMeeting = url.includes('schedule-meeting');
+          const isBreedingPlanner = url.includes('breeding-planner');
+          
+          // Choose appropriate button class
+          let buttonClass = 'blog-button';
+          if (isDownload) buttonClass = 'blog-button blog-button-download';
+          else if (isMeeting) buttonClass = 'blog-button blog-button-meeting';
+          else if (isBreedingPlanner) buttonClass = 'blog-button blog-button-tool';
+          
+          htmlBlocks.push(`<div class="blog-cta"><a href="${url}" class="${buttonClass}" target="_blank" rel="noopener noreferrer">${text}</a></div>`);
         } else {
           // Treat as paragraph
           htmlBlocks.push(`<p>${processInline(trimmed)}</p>`);
@@ -158,12 +196,28 @@ function processInline(text: string): string {
   if (!text) return '';
   
   return text
+    // Clean up zero-width characters
+    .replace(/[\u200d\u200b\u200c\ufeff]/g, '')
     // Linked images: [![alt](img)](link)
-    .replace(/\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)/g, '<a href="$3" class="blog-image-link"><img src="$2" alt="$1" class="blog-inline-image" loading="lazy" /></a>')
+    .replace(/\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)/g, (_, alt, img, link) => {
+      const altText = alt || 'Image';
+      return `<a href="${link}" class="blog-image-link" target="_blank" rel="noopener noreferrer"><img src="${img}" alt="${altText}" class="blog-inline-image" loading="lazy" /></a>`;
+    })
     // Standalone images: ![alt](url)
-    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="blog-inline-image" loading="lazy" />')
-    // Links: [text](url)
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="blog-link">$1</a>')
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
+      // Skip download icons
+      if (src.includes('Downloadable-Icon')) return '';
+      const altText = alt || 'Image';
+      return `<img src="${src}" alt="${altText}" class="blog-inline-image" loading="lazy" />`;
+    })
+    // Links: [text](url) - handle external vs internal
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, linkText, url) => {
+      // Skip subscribe links in inline context too
+      if (url.includes('subscribe-to-ingenious')) return linkText;
+      const isExternal = url.startsWith('http');
+      const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return `<a href="${url}" class="blog-link"${targetAttr}>${linkText}</a>`;
+    })
     // Bold: **text**
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     // Italic: *text*
@@ -171,7 +225,7 @@ function processInline(text: string): string {
     // Code: `text`
     .replace(/`([^`]+)`/g, '<code class="blog-code">$1</code>')
     // Footnote references: [[1]]
-    .replace(/\[\[(\d+)\]\]/g, '<sup class="blog-footnote">[$1]</sup>');
+    .replace(/\[\[(\d+)\]\]/g, '<sup class="blog-footnote">$1</sup>');
 }
 
 // Get all blog slugs for static generation
@@ -276,21 +330,21 @@ export default async function IngeniousBlogPost({
           }}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            {/* Archive Notice */}
+            {/* Archive Notice - Light Grey */}
             <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: 'rgba(255,200,100,0.2)',
+                backgroundColor: 'rgba(255,255,255,0.1)',
                 padding: '6px 14px',
                 borderRadius: '15px',
                 marginBottom: '15px',
-                border: '1px solid rgba(255,200,100,0.3)',
+                border: '1px solid rgba(255,255,255,0.2)',
               }}
             >
               <span style={{ fontSize: '14px' }}>📁</span>
-              <span style={{ color: '#ffc864', fontSize: '.75rem', fontWeight: 500 }}>
+              <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.75rem', fontWeight: 500 }}>
                 Archived Blog Post
               </span>
             </div>
@@ -326,18 +380,30 @@ export default async function IngeniousBlogPost({
               {title}
             </h1>
 
-            {/* Meta */}
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '.8rem' }}>
-              Originally published on{' '}
-              <a
-                href={legacyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#00d4d4', textDecoration: 'underline' }}
-              >
-                genetargeting.com
-              </a>
-            </p>
+            {/* Meta - Glass Effect */}
+            <div
+              style={{
+                display: 'inline-block',
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                padding: '10px 16px',
+                borderRadius: '8px',
+                border: '1px solid rgba(255,255,255,0.15)',
+              }}
+            >
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', margin: 0 }}>
+                Originally published on{' '}
+                <a
+                  href={legacyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#00d4d4', textDecoration: 'underline' }}
+                >
+                  genetargeting.com
+                </a>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -444,22 +510,47 @@ export default async function IngeniousBlogPost({
                 margin: 2rem 0;
               }
               .blog-content .blog-cta {
-                margin: 1.5rem 0;
+                margin: 2rem 0;
+                padding: 1.25rem;
+                background: linear-gradient(135deg, #f8fafa 0%, #f0f5f5 100%);
+                border-radius: 8px;
+                border: 1px solid #e0e8e8;
+                text-align: center;
               }
               .blog-content .blog-button {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
                 background: #008080;
                 color: white;
                 padding: 12px 24px;
                 border-radius: 6px;
                 text-decoration: none;
                 font-weight: 600;
-                font-size: 0.95rem;
+                font-size: 0.9rem;
                 transition: all 0.2s ease;
+                box-shadow: 0 2px 4px rgba(0,128,128,0.2);
               }
               .blog-content .blog-button:hover {
                 background: #006666;
                 transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,128,128,0.25);
+              }
+              .blog-content .blog-button-download::before {
+                content: '↓';
+                font-weight: bold;
+              }
+              .blog-content .blog-button-meeting::before {
+                content: '📅';
+              }
+              .blog-content .blog-button-tool {
+                background: #2384da;
+              }
+              .blog-content .blog-button-tool:hover {
+                background: #1a6bb8;
+              }
+              .blog-content .blog-button-tool::before {
+                content: '🔧';
               }
               .blog-content .blog-code {
                 background: #f4f4f4;
@@ -551,7 +642,7 @@ export default async function IngeniousBlogPost({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                color: '#008080',
+                color: '#222222',
                 fontSize: '.9rem',
                 fontWeight: 500,
                 textDecoration: 'none',

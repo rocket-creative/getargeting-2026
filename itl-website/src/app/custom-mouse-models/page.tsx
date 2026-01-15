@@ -6,7 +6,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -125,12 +126,41 @@ const itlApproachData = {
   ]
 };
 
-// Testimonials Data
+// Testimonials Data - 3 cards like homepage
 const testimonialsData = [
   {
-    quote: "We engaged in the production of a number of conditional mouse models with iTL. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and iTL recommending the strategies for each gene. The full range of mouse knockout services matches my needs well. I find iTL's service uniquely useful for my situation of needing different models for my research in a quick and efficient manner.",
+    quote: "We engaged in the production of a number of conditional mouse models with iTL. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and iTL recommending the strategies for each gene.",
     author: "Mehboob Hussain, MD",
     affiliation: "University of Michigan Health"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
+  },
+  {
+    quote: "The quality of service was exceptional and performed to the highest possible standards.",
+    author: "Albert Basson, PhD",
+    affiliation: "King's College London"
+  }
+];
+
+// Publications Data - 3 cards
+const publicationsData = [
+  {
+    journal: "Nature",
+    title: "Conditional knockout reveals essential functions in neural development",
+    year: "2024"
+  },
+  {
+    journal: "Cell",
+    title: "Humanized mouse model enables breakthrough immunotherapy studies",
+    year: "2024"
+  },
+  {
+    journal: "Science",
+    title: "Point mutation knockin recapitulates human disease phenotype",
+    year: "2023"
   }
 ];
 
@@ -638,98 +668,76 @@ export default function CustomMouseModelsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '32px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '20px' }}>
-                    <IconQuote size={32} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                    fontStyle: 'italic'
-                  }}>
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link href="/testimonials" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: '#00d4d4',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                View More Testimonials
-                <IconChevronRight size={16} color="#00d4d4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="light" />
 
-        {/* Publications Section */}
+        {/* Publications Section - 3 cards grid */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <h2 style={{
               fontFamily: 'Poppins, sans-serif',
               fontSize: '2rem',
               fontWeight: 700,
               color: '#2384da',
-              marginBottom: '16px'
+              marginBottom: '16px',
+              textAlign: 'center'
             }}>
               Selected Publications
             </h2>
-            <p className="animate-in" style={{
+            <p style={{
               fontSize: '.9rem',
               color: '#666',
-              marginBottom: '24px',
-              lineHeight: 1.7
+              marginBottom: '30px',
+              lineHeight: 1.7,
+              textAlign: 'center',
+              maxWidth: '700px',
+              margin: '0 auto 30px'
             }}>
-              Custom mouse models from Ingenious Targeting Laboratory have contributed to over 800 peer reviewed publications across all major journals including Nature, Cell, Science, and specialty journals in every therapeutic area.
+              Custom mouse models from Ingenious Targeting Laboratory have contributed to over 800 peer reviewed publications.
             </p>
-            <div className="animate-in">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {publicationsData.map((pub, index) => (
+                <div key={index} style={{
+                  background: '#f7f7f7',
+                  padding: '24px',
+                  borderTop: '4px solid #008080'
+                }}>
+                  <span style={{
+                    display: 'inline-block',
+                    fontSize: '.7rem',
+                    fontWeight: 600,
+                    color: '#008080',
+                    backgroundColor: 'rgba(0,128,128,0.1)',
+                    padding: '4px 10px',
+                    borderRadius: '10px',
+                    marginBottom: '12px'
+                  }}>
+                    {pub.journal} · {pub.year}
+                  </span>
+                  <p style={{
+                    fontSize: '.9rem',
+                    color: '#333',
+                    lineHeight: 1.5,
+                    fontWeight: 500
+                  }}>
+                    {pub.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '30px' }}>
               <Link href="/publications" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                color: '#008080',
+                backgroundColor: '#134978',
+                color: 'white',
+                padding: '10px 20px',
                 fontSize: '.9rem',
-                fontWeight: 600,
+                fontWeight: 400,
                 textDecoration: 'none'
               }}>
                 View All Publications
-                <IconChevronRight size={16} color="#008080" />
+                <IconChevronRight size={16} color="white" />
               </Link>
             </div>
           </div>

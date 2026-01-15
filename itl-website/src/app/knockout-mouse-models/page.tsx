@@ -39,6 +39,7 @@ import {
   IconClock,
   IconArrowRight,
 } from '@/components/UXUIDC';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -416,7 +417,7 @@ export default function KnockoutMouseModelsPage() {
               {approachesData.map((approach, i) => (
                 <div
                   key={i}
-                  className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                  className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group"
                   style={{
                     backgroundColor: '#f7f7f7',
                     padding: '30px',
@@ -672,76 +673,7 @@ export default function KnockoutMouseModelsPage() {
         </section>
 
         {/* ========== TESTIMONIALS ========== */}
-        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h2
-              className="text-center"
-              style={{
-                color: 'white',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '2rem',
-                fontWeight: 700,
-                marginBottom: '30px',
-              }}
-            >
-              What Researchers Say
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {testimonialsData.map((testimonial, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-                  style={{
-                    backgroundColor: 'rgba(255,255,255,0.05)',
-                    padding: '30px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                  }}
-                >
-                  <IconQuote size={32} color="#00d4d4" />
-                  <p
-                    style={{
-                      color: 'rgba(255,255,255,0.9)',
-                      fontSize: '.9rem',
-                      fontWeight: 300,
-                      lineHeight: '1.6rem',
-                      fontStyle: 'italic',
-                      marginTop: '15px',
-                      flex: 1,
-                    }}
-                  >
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                    <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600 }}>
-                      — {testimonial.name}
-                    </p>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.8rem', fontWeight: 300 }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-6">
-              <Link
-                href="/testimonials"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-white hover:text-teal-700"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '10px 20px',
-                  minWidth: '160px',
-                  border: '2px solid white',
-                  fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
-              >
-                <span>View All Testimonials</span>
-                <span>→</span>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
         {/* ========== KNOCKOUT MODEL SELECTION ========== */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>

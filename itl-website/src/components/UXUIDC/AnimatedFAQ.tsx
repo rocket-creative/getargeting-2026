@@ -124,7 +124,7 @@ export function UXUIDCAnimatedFAQ({
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="faq-item"
+            className="faq-item hover-card-sm"
             style={{
               backgroundColor: backgroundColor === 'white' ? '#f7f7f7' : 'white',
               marginBottom: '10px',
