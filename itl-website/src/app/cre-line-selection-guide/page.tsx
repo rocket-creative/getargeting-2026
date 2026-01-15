@@ -445,7 +445,7 @@ export default function CreLineSelectionGuidePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {selectionCriteriaData.map((criterion, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '28px',
@@ -512,7 +512,7 @@ export default function CreLineSelectionGuidePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {creLineCategoriesData.map((category, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',
@@ -564,7 +564,7 @@ export default function CreLineSelectionGuidePage() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {inducibleCreData.systems.map((system, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '28px',
@@ -695,7 +695,7 @@ export default function CreLineSelectionGuidePage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {commonMistakesData.map((item, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '24px',
@@ -734,7 +734,7 @@ export default function CreLineSelectionGuidePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {resourcesData.map((resource, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',

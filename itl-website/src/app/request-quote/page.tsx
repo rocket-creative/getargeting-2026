@@ -103,15 +103,15 @@ const alternativeContactData = [
     label: 'Schedule',
   },
   {
-    title: 'General Inquiries',
-    content: 'Questions about services or capabilities',
-    href: '/contact',
-    label: 'Contact',
+    title: 'Order Catalog Models',
+    content: 'Request from 10,000+ ready-made models',
+    href: '/order-inquiry-catalog-models',
+    label: 'Order',
   },
   {
-    title: 'Catalog Models',
-    content: 'Browse ready-made humanized models',
-    href: '/catalog-mouse-models',
+    title: 'Browse Catalog',
+    content: 'Search humanized, knockout & disease models',
+    href: '/all-catalog-mouse-models',
     label: 'View Catalog',
   },
 ];

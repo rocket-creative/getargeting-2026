@@ -385,7 +385,7 @@ export default function TissueSpecificKnockoutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {twoComponentSystem.map((component, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '10px' }}>
                     {component.name}
                   </h4>
@@ -396,7 +396,7 @@ export default function TissueSpecificKnockoutPage() {
               ))}
             </div>
 
-            <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px' }}>
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px' }}>
               <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                 Deletion Pattern Determination
               </h4>
@@ -628,7 +628,7 @@ export default function TissueSpecificKnockoutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {applications.map((app, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <div style={{
                     width: '50px',
                     height: '50px',

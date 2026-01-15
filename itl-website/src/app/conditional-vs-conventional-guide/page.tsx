@@ -688,7 +688,7 @@ export default function ConditionalVsConventionalGuidePage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {decisionScenariosData.map((scenario, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '24px',
@@ -835,7 +835,7 @@ export default function ConditionalVsConventionalGuidePage() {
               Quick Decision Guide
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-              <div className="animate-in" style={{
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
                 padding: '24px',
@@ -867,7 +867,7 @@ export default function ConditionalVsConventionalGuidePage() {
                   ))}
                 </ul>
               </div>
-              <div className="animate-in" style={{
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
                 padding: '24px',
@@ -899,7 +899,7 @@ export default function ConditionalVsConventionalGuidePage() {
                   ))}
                 </ul>
               </div>
-              <div className="animate-in" style={{
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
                 padding: '24px',

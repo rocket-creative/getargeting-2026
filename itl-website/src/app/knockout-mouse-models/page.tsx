@@ -635,7 +635,7 @@ export default function KnockoutMouseModelsPage() {
               {publicationsData.publications.map((pub, i) => (
                 <div
                   key={i}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '20px 25px',
@@ -819,7 +819,7 @@ export default function KnockoutMouseModelsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   padding: '30px',
@@ -846,7 +846,7 @@ export default function KnockoutMouseModelsPage() {
                 </p>
               </div>
               <div
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   padding: '30px',

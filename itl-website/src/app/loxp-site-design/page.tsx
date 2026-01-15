@@ -125,12 +125,12 @@ export default function LoxPSiteDesignPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>loxP Site Structure</h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '20px' }}>The loxP sequence is a 34 base pair DNA element recognized by Cre recombinase:</p>
-            <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', marginBottom: '25px', textAlign: 'center' }}>
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', marginBottom: '25px', textAlign: 'center' }}>
               <code style={{ color: '#008080', fontSize: '1rem', fontFamily: 'monospace' }}>{loxPStructure.sequence}</code>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {loxPStructure.components.map((comp, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '5px' }}>{comp.name}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem' }}><strong>Size:</strong> {comp.size}</p>
                   <p style={{ color: '#555', fontSize: '.85rem' }}><strong>Function:</strong> {comp.function}</p>
@@ -145,7 +145,7 @@ export default function LoxPSiteDesignPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Positioning Guidelines</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {positioningGuidelines.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.guideline}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.recommendation}</p>
                 </div>
@@ -173,7 +173,7 @@ export default function LoxPSiteDesignPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Common Design Pitfalls</h2>
             <div className="grid grid-cols-1 gap-6">
               {commonPitfalls.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.pitfall}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem', marginBottom: '10px' }}><strong>Cause:</strong> {item.cause}</p>
                   <p style={{ color: '#008080', fontSize: '.85rem', lineHeight: '1.5rem' }}><strong>Prevention:</strong> {item.prevention}</p>

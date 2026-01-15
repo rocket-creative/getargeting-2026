@@ -522,7 +522,7 @@ export default function LAG3HumanizedMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {lag3BiologyData.sections.map((section, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '24px',
@@ -596,7 +596,7 @@ export default function LAG3HumanizedMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {strategiesData.strategies.map((strategy, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',
@@ -656,7 +656,7 @@ export default function LAG3HumanizedMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {designConsiderationsData.considerations.map((consideration, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '24px',
@@ -723,7 +723,7 @@ export default function LAG3HumanizedMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {applicationsData.applications.map((app, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',
@@ -849,7 +849,7 @@ export default function LAG3HumanizedMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {modelDesignData.sections.map((section, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',
@@ -892,7 +892,7 @@ export default function LAG3HumanizedMicePage() {
         {/* ITL Approach Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="animate-in" style={{
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
               background: '#ffffff',
               borderRadius: '8px',
               padding: '40px',
@@ -969,7 +969,7 @@ export default function LAG3HumanizedMicePage() {
             </p>
             <div style={{ display: 'grid', gap: '16px' }}>
               {publicationsData.publications.map((pub, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '20px',

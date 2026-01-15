@@ -358,7 +358,7 @@ export default function DoubleCheckpointMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {modelsData.models.map((model, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '24px',
@@ -428,7 +428,7 @@ export default function DoubleCheckpointMicePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {applicationsData.applications.map((app, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '24px',

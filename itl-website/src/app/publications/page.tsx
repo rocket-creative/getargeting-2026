@@ -286,7 +286,7 @@ export default function PublicationsPage() {
         {/* Testimonial Banner */}
         <section style={{ background: '#f7f7f7', padding: '40px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="animate-in" style={{
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
               display: 'flex',
               alignItems: 'flex-start',
               gap: '20px',

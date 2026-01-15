@@ -125,7 +125,7 @@ export default function TissueSpecificCreLinesPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Nervous System Cre Drivers</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {nervousSystemCre.map((category, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{category.category}</h3>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     {category.lines.map((line, idx) => (
@@ -145,7 +145,7 @@ export default function TissueSpecificCreLinesPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Metabolic and Cardiovascular Cre Drivers</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Metabolic Tissues</h3>
                 <div style={{ overflowX: 'auto' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -153,7 +153,7 @@ export default function TissueSpecificCreLinesPage() {
                   </table>
                 </div>
               </div>
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Cardiovascular Tissues</h3>
                 <div style={{ overflowX: 'auto' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse' }}>

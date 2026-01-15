@@ -276,7 +276,7 @@ export default function StartYourProjectPage() {
 
               {/* Right: Download Form */}
               <div
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: 'white',
                   padding: '30px',
@@ -444,7 +444,7 @@ export default function StartYourProjectPage() {
               {catalogFeatures.map((feature, i) => (
                 <div
                   key={i}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f7f7f7',
                     padding: '24px',
@@ -528,7 +528,7 @@ export default function StartYourProjectPage() {
               {specializedServices.map((service, i) => (
                 <div
                   key={i}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '24px',

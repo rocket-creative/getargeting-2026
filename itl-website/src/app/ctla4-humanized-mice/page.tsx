@@ -334,7 +334,7 @@ export default function CTLA4HumanizedMicePage() {
               Cytotoxic T lymphocyte associated protein 4 (CTLA4, CD152) is a critical immune checkpoint that regulates T cell activation. Blocking CTLA4 with antibodies such as ipilimumab enhances antitumor immunity and was the first checkpoint inhibitor approved for cancer treatment.
             </p>
 
-            <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
               <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                 Key CTLA4 Biology
               </h3>
@@ -368,7 +368,7 @@ export default function CTLA4HumanizedMicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {applications.map((app, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{app.title}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.6rem' }}>{app.desc}</p>
                 </div>
@@ -407,14 +407,14 @@ export default function CTLA4HumanizedMicePage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {tumorLines.map((tumor, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
                   <h4 style={{ color: '#008080', fontSize: '1rem', fontWeight: 600, marginBottom: '5px' }}>{tumor.name}</h4>
                   <p style={{ color: '#555', fontSize: '.8rem' }}>{tumor.type}</p>
                 </div>
               ))}
             </div>
 
-            <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', marginTop: '25px', borderLeft: '4px solid #2384da' }}>
+            <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', marginTop: '25px', borderLeft: '4px solid #2384da' }}>
               <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>Available Designs</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {availableDesigns.map((design, idx) => (

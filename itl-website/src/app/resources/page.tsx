@@ -643,7 +643,7 @@ export default function ResourcesPage() {
                 };
 
                 return (
-                  <div key={index} className="animate-in" style={{
+                  <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                     background: '#f7f7f7',
                     borderRadius: '12px',
                     padding: '28px',
@@ -841,7 +841,7 @@ export default function ResourcesPage() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '40px' }}>
               {strategyGuidesData.guides.map((guide, index) => (
-                <Link key={index} href={guide.href} className="animate-in" style={{
+                <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
                   background: '#ffffff',
                   borderRadius: '8px',
@@ -893,7 +893,7 @@ export default function ResourcesPage() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
               {planningGuidesData.guides.map((guide, index) => (
-                <Link key={index} href={guide.href} className="animate-in" style={{
+                <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
                   background: '#ffffff',
                   borderRadius: '8px',
@@ -960,7 +960,7 @@ export default function ResourcesPage() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {caseStudiesData.studies.map((study, index) => (
-                <Link key={index} href={study.href} className="animate-in" style={{
+                <Link key={index} href={study.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
                   background: '#f7f7f7',
                   borderRadius: '8px',
@@ -1034,7 +1034,7 @@ export default function ResourcesPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {technicalResourcesData.categories.map((category, index) => (
-                <div key={index} className="animate-in" style={{
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '28px',
@@ -1165,7 +1165,7 @@ export default function ResourcesPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {/* Video Library */}
-              <div className="animate-in" style={{
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
                 padding: '28px',
@@ -1229,7 +1229,7 @@ export default function ResourcesPage() {
               </div>
 
               {/* Glossary */}
-              <div className="animate-in" style={{
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
                 padding: '28px',

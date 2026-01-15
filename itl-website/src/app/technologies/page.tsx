@@ -332,7 +332,7 @@ export default function TechnologiesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {coreTechnologies.map((tech, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
                     {tech.title}
                   </h3>
@@ -366,7 +366,7 @@ export default function TechnologiesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {conditionalSystems.map((system, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{system.name}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem', marginBottom: '15px' }}>{system.desc}</p>
                   <Link href={system.link} className="inline-flex items-center gap-2 transition-colors duration-300" style={{ color: '#2384da', fontSize: '.85rem', fontWeight: 500 }}>

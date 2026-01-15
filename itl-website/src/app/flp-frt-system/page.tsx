@@ -181,7 +181,7 @@ export default function FlpFrtSystemPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Applications of the FLP FRT System</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {applications.map((app, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{app.title}</h3>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     {app.items.map((item, idx) => (

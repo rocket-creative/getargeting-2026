@@ -625,7 +625,7 @@ export default function GlossaryPage() {
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {groupedTerms[letter].map((item, index) => (
-                      <div key={index} className="animate-in" style={{
+                      <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                         background: '#f7f7f7',
                         borderRadius: '8px',
                         padding: '24px',

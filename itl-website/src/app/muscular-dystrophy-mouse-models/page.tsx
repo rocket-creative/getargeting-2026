@@ -111,7 +111,7 @@ export default function MuscularDystrophyMouseModelsPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Duchenne Muscular Dystrophy Models</h2>
             <div className="grid grid-cols-1 gap-6">
               {dmdModels.map((model, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '10px' }}>{model.model}</h3>
                   <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '15px' }}>{model.description}</p>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -128,7 +128,7 @@ export default function MuscularDystrophyMouseModelsPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Phenotyping Muscular Dystrophy Models</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {phenotypingEndpoints.map((item, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{item.category} Assessment</h3>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     {item.endpoints.map((endpoint, idx) => (<li key={idx} style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px', paddingLeft: '15px', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#008080' }}>•</span>{endpoint}</li>))}

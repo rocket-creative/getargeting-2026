@@ -166,7 +166,7 @@ export default function InducibleRosa26Page() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   padding: '25px',
@@ -182,7 +182,7 @@ export default function InducibleRosa26Page() {
                 </p>
               </div>
               <div
-                className="animate-in"
+                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   padding: '25px',

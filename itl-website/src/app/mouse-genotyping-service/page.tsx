@@ -367,7 +367,7 @@ export default function MouseGenotypingServicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {genotypingMethods.map((method, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: `4px solid ${index % 2 === 0 ? '#008080' : '#2384da'}` }}>
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: `4px solid ${index % 2 === 0 ? '#008080' : '#2384da'}` }}>
                   <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '10px' }}>
                     {method.name}
                   </h3>
@@ -400,7 +400,7 @@ export default function MouseGenotypingServicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Colony Maintenance */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Colony Maintenance
                 </h3>
@@ -418,7 +418,7 @@ export default function MouseGenotypingServicePage() {
               </div>
 
               {/* Experimental Design */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Experimental Design
                 </h3>
@@ -436,7 +436,7 @@ export default function MouseGenotypingServicePage() {
               </div>
 
               {/* Quality Assurance */}
-              <div className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Quality Assurance
                 </h3>
@@ -516,7 +516,7 @@ export default function MouseGenotypingServicePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Assay Design */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Assay Design
                 </h3>
@@ -534,7 +534,7 @@ export default function MouseGenotypingServicePage() {
               </div>
 
               {/* Protocol Optimization */}
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+              <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Protocol Optimization
                 </h3>

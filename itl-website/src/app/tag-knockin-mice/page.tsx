@@ -399,7 +399,7 @@ export default function TagKnockinMicePage() {
               {whyTagKnockinData.map((item, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -430,7 +430,7 @@ export default function TagKnockinMicePage() {
               {epitopeTagsData.map((tag, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -488,7 +488,7 @@ export default function TagKnockinMicePage() {
               {tagPlacementData.map((placement, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'rgba(255,255,255,0.1)',
                     padding: '25px',
@@ -524,7 +524,7 @@ export default function TagKnockinMicePage() {
               {applicationsData.map((app, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
@@ -579,7 +579,7 @@ export default function TagKnockinMicePage() {
               {designConsiderationsData.map((item, index) => (
                 <div 
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: 'white',
                     padding: '25px',
@@ -613,7 +613,7 @@ export default function TagKnockinMicePage() {
               {publicationsData.map((pub, index) => (
                 <div
                   key={index}
-                  className="animate-in"
+                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
