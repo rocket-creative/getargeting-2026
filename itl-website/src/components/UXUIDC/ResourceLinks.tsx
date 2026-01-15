@@ -292,6 +292,7 @@ export default function UXUIDCResourceLinks({
             <LinkComponent
               key={idx}
               {...linkProps}
+              className="hover-card"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -301,7 +302,7 @@ export default function UXUIDCResourceLinks({
                 border: '1px solid #e0e0e0',
                 borderRadius: '8px',
                 textDecoration: 'none',
-                transition: 'all 0.2s ease'
+                transition: 'all 0.3s ease'
               }}
             >
               {getIcon(resource.type)}

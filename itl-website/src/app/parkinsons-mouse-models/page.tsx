@@ -65,24 +65,23 @@ const neuropathologyEndpoints = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Lunn MO et al.",
     year: "2025",
     title: "Variants in Lrrk2 and Snca deficiency do not alter the course of primary encephalitis due to neurotropic reovirus T3D in newborn mice.",
-    journal: "PLoS One"
+    journal: "PLoS One",
+    volume: "20(5): e0318685",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40471880/"
   },
   {
-    authors: "Maekawa T et al.",
-    year: "2024",
-    title: "Biphenotypic Cells and alpha Synuclein Accumulation in Enteric Neurons of Leucine Rich Repeat Kinase 2 Knockout Mice.",
-    journal: "Digestive Diseases and Sciences"
-  },
-  {
-    authors: "Chen K et al.",
-    year: "2023",
-    title: "Leucine rich repeat kinase 2 (LRRK2) inhibition upregulates microtubule associated protein 1B to ameliorate lysosomal dysfunction and parkinsonism.",
-    journal: "MedComm"
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -333,8 +332,8 @@ export default function ParkinsonsMouseModelsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pdGenes.map((gene, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
-                  <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{gene.name}</h3>
+                <div key={index} className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{gene.name}</h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.6rem' }}>{gene.desc}</p>
                 </div>
               ))}
@@ -351,8 +350,8 @@ export default function ParkinsonsMouseModelsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {modelTypes.map((type, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
-                  <h3 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{type.category}</h3>
+                <div key={index} className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                  <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{type.category}</h3>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     {type.models.map((model, idx) => (
                       <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
@@ -397,8 +396,8 @@ export default function ParkinsonsMouseModelsPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
-                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
+              <div className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Motor Assessment
                 </h3>
                 <div className="space-y-4">
@@ -411,8 +410,8 @@ export default function ParkinsonsMouseModelsPage() {
                 </div>
               </div>
 
-              <div className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
-                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
+              <div className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #2384da' }}>
+                <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Neuropathology Endpoints
                 </h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -450,8 +449,36 @@ export default function ParkinsonsMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

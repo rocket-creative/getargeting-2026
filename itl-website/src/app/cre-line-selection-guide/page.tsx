@@ -6,7 +6,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
@@ -193,6 +194,16 @@ const testimonialsData = [
     quote: "Ingenious Targeting Laboratory has been a valuable resource for my lab for the generation of several transgenic strains. The iTL scientists were invaluable in designing the targeting strategies, and provided invaluable feedback. I would highly recommend iTL for the generation of conventional, conditional, knock in, or transgenic mice.",
     author: "Mark R. Bhowmik, PhD",
     affiliation: "National Institute of Environmental Health Sciences (NIH)"
+  },
+  {
+    quote: "We have generated 2 conditional knockout mouse lines with Ingenious. Their scientific consulting was superb and both projects have gone very smoothly.",
+    author: "Hyekyung Plumley, PhD",
+    affiliation: "Warren Center for Neuroscience Drug Discovery"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
   }
 ];
 
@@ -748,51 +759,7 @@ export default function CreLineSelectionGuidePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ background: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              What Researchers Say
-            </h2>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              {testimonialsData.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '8px',
-                  padding: '32px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <div style={{ marginBottom: '20px' }}>
-                    <IconQuote size={32} color="#00d4d4" />
-                  </div>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255,255,255,0.9)',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                    fontStyle: 'italic'
-                  }}>
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '.9rem', color: '#00d4d4', fontWeight: 600, marginBottom: '4px' }}>
-                      {testimonial.author}
-                    </p>
-                    <p style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
         {/* CTA Section */}
         <section style={{ background: '#008080', padding: '60px 20px' }}>

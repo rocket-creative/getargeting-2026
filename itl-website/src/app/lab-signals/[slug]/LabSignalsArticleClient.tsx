@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NewsletterGate, SocialShare } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
+import fixArticleLinks from '@/utils/fixArticleLinks';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +79,7 @@ export default function LabSignalsArticleClient({
       >
         <article
           className="lab-signals-article"
-          dangerouslySetInnerHTML={{ __html: article.body }}
+          dangerouslySetInnerHTML={{ __html: fixArticleLinks(article.body) }}
         />
 
         <div style={{
@@ -296,6 +297,44 @@ export default function LabSignalsArticleClient({
         .lab-signals-article h3 + p,
         .lab-signals-article h4 + p {
           margin-top: 0;
+        }
+        
+        /* Citation markers - styled superscripts for references */
+        .lab-signals-article .citation-marker {
+          font-size: 0.7em;
+          color: ${BRAND.mediumGray};
+          vertical-align: super;
+          font-weight: 600;
+          background: ${BRAND.lightGray};
+          padding: 1px 4px;
+          border-radius: 3px;
+          margin: 0 1px;
+          cursor: default;
+        }
+        
+        /* Legacy reference class */
+        .lab-signals-article .reference {
+          font-size: 0.7em;
+          color: ${BRAND.mediumGray};
+          vertical-align: super;
+          font-weight: 600;
+          background: ${BRAND.lightGray};
+          padding: 1px 4px;
+          border-radius: 3px;
+          margin: 0 1px;
+        }
+        
+        /* Article series links */
+        .lab-signals-article .article-series-link {
+          color: #0066cc;
+          text-decoration: underline;
+          text-decoration-color: rgba(0, 102, 204, 0.3);
+          text-underline-offset: 3px;
+          font-weight: 500;
+        }
+        .lab-signals-article .article-series-link:hover {
+          color: #004499;
+          text-decoration-color: #004499;
         }
       `}</style>
     </section>

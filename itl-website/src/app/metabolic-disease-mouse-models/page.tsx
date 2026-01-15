@@ -53,10 +53,11 @@ const strainConsiderations = [
   { strain: "129 strains", characteristics: "Variable metabolic phenotypes depending on substrain" }
 ];
 
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
-  { authors: "Turner MB et al.", year: "2025", title: "Adipocyte specific deletion of the mineralocorticoid receptor improves glucose homeostasis.", journal: "Diabetes, Obesity and Metabolism 28(1): 562 to 573" },
-  { authors: "Philippe MA et al.", year: "2025", title: "BMAL2 controls adipose tissue inflammation and metabolic adaptation during obesity.", journal: "Metabolism 174: 156396" },
-  { authors: "Vacher CM et al.", year: "2021", title: "Placental endocrine function shapes cerebellar development and social behavior.", journal: "Nature Neuroscience 24(10): 1392 to 1401" }
+  { authors: "Turner MB et al.", year: "2025", title: "Adipocyte specific deletion of the mineralocorticoid receptor improves glucose homeostasis.", journal: "Diabetes, Obesity and Metabolism", volume: "27(5): 2341-2355", link: "https://pubmed.ncbi.nlm.nih.gov/41153082/" },
+  { authors: "Philippe MA et al.", year: "2025", title: "BMAL2 controls adipose tissue inflammation and metabolic adaptation during obesity.", journal: "Metabolism", volume: "174: 156396", link: "https://pubmed.ncbi.nlm.nih.gov/40983272/" },
+  { authors: "Vacher CM et al.", year: "2021", title: "Placental endocrine function shapes cerebellar development and social behavior.", journal: "Nature Neuroscience", volume: "24(10): 1392-1401", link: "https://pubmed.ncbi.nlm.nih.gov/34400844/" }
 ];
 
 const testimonials = [{ quote: "The Hephaestin flox model ingenious has made for us has been great. It has helped generate eight research publications.", author: "Joshua Dunaief, PhD, MD", affiliation: "University of Pennsylvania" }];
@@ -166,7 +167,19 @@ export default function MetabolicDiseaseMouseModelsPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Selected Publications</h2>
             <div className="grid grid-cols-1 gap-4">
-              {publicationsData.map((pub, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}><p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}><span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span></p></div>))}
+              {publicationsData.map((pub, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #2384da' }}>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block', fontSize: '.95rem', color: '#008080', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5', textDecoration: 'none' }} onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')} onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}>{pub.title} ↗</a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>{pub.title}</p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}><em>{pub.journal}</em>{pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}</p>
+                </div>
+              ))}
             </div>
             <div className="animate-in text-center" style={{ marginTop: '25px' }}><Link href="/publications" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: '#2384da', color: 'white', padding: '10px 25px', borderRadius: '4px', fontSize: '.85rem', fontWeight: 500 }}><span>View All Publications</span><IconChevronRight size={16} color="white" /></Link></div>
           </div>

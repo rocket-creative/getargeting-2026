@@ -94,24 +94,23 @@ const neuropathologyEndpoints = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
-  {
-    authors: "Le Friec J et al.",
-    year: "2025",
-    title: "Positive modulation of sigma 1 receptor: a new weapon to mitigate disease progression in amyotrophic lateral sclerosis.",
-    journal: "Translational Neurodegeneration"
-  },
-  {
-    authors: "Tendulkar S et al.",
-    year: "2025",
-    title: "Dysregulated lactate metabolism synergizes with ALS genetic risk factors to accelerate motor decline.",
-    journal: "bioRxiv"
-  },
   {
     authors: "Ionescu A et al.",
     year: "2025",
-    title: "Muscle derived miR 126 regulates TDP 43 axonal local synthesis and NMJ integrity in ALS models.",
-    journal: "Nature Neuroscience"
+    title: "Muscle derived miR-126 regulates TDP-43 axonal local synthesis and NMJ integrity in ALS models.",
+    journal: "Nature Neuroscience",
+    volume: "28(4): 821-833",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41044342/"
+  },
+  {
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -375,8 +374,8 @@ export default function ALSMouseModelsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {alsGenes.map((gene, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
-                  <h4 style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{gene.name}</h4>
+                <div key={index} className="animate-in hover-card hover-card-teal group" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <h4 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{gene.name}</h4>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.6rem' }}>{gene.desc}</p>
                 </div>
               ))}
@@ -558,8 +557,36 @@ export default function ALSMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

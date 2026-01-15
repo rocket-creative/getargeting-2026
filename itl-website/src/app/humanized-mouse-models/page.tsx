@@ -8,7 +8,8 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
 import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
-import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
+import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Legacy content link
 const legacyContentUrl = '/legacy/humanized-mouse-models';
@@ -222,6 +223,11 @@ const testimonialsData = [
     quote: "The quality of service was exceptional and performed to the highest possible standards.",
     author: "Albert Basson, PhD",
     affiliation: "King's College London"
+  },
+  {
+    quote: "The Hephaestin flox model Ingenious has made for us has been great. It has helped generate eight research publications.",
+    author: "Joshua Dunaief, PhD, MD",
+    affiliation: "University of Pennsylvania"
   }
 ];
 
@@ -805,69 +811,7 @@ export default function HumanizedMouseModelsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
-              What Researchers Say
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {testimonialsData.map((testimonial, index) => (
-                <div 
-                  key={index}
-                  className="animate-in"
-                  style={{
-                    backgroundColor: 'white',
-                    padding: '30px',
-                    borderRadius: '8px',
-                    borderLeft: '4px solid #008080'
-                  }}
-                >
-                  <div style={{
-                    width: '40px',
-                    height: '40px',
-                    borderRadius: '50%',
-                    backgroundColor: 'rgba(0,128,128,0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '15px'
-                  }}>
-                    <IconQuote size={20} color="#008080" />
-                  </div>
-                  <blockquote style={{ 
-                    color: '#333', 
-                    fontSize: '.95rem', 
-                    lineHeight: '1.7rem',
-                    fontStyle: 'italic',
-                    marginBottom: '20px'
-                  }}>
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div>
-                    <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '3px' }}>
-                      — {testimonial.author}
-                    </p>
-                    <p style={{ color: '#666', fontSize: '.85rem' }}>
-                      {testimonial.affiliation}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="animate-in text-center" style={{ marginTop: '25px' }}>
-              <Link 
-                href="/testimonials"
-                className="inline-flex items-center gap-2 transition-colors duration-300"
-                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
-              >
-                <span>Read more testimonials</span>
-                <IconChevronRight size={16} color="#008080" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection testimonials={testimonialsData} variant="light" />
 
         {/* CTA Section */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>

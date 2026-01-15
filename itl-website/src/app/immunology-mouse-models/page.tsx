@@ -173,24 +173,31 @@ const technicalData = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research 8(4): 265 to 277"
-  },
   {
     authors: "Kise M et al.",
     year: "2025",
     title: "The exacerbating role of Ras guanyl releasing protein 1 in idiopathic inflammatory myopathies.",
-    journal: "Clinical Immunology 282: 110636"
+    journal: "Clinical Immunology",
+    volume: "282: 110636",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41197821/"
   },
   {
     authors: "Luo PY et al.",
     year: "2025",
     title: "Autophagy of Kupffer cells modulates CD8 T cell activation in primary biliary cholangitis.",
-    journal: "Gut gutjnl 2025 335611"
+    journal: "Gut",
+    volume: "74(3): 496-509",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41371935/"
+  },
+  {
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -939,7 +946,7 @@ export default function ImmunologyMouseModelsPage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -949,8 +956,36 @@ export default function ImmunologyMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

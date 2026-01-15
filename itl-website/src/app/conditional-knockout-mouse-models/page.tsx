@@ -638,7 +638,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 return (
                   <div 
                     key={index}
-                    className="animate-in"
+                    className="animate-in hover-card hover-card-teal group"
                     style={{
                       backgroundColor: '#f8f9fa',
                       padding: '30px',
@@ -660,7 +660,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                         <IconComponent size={22} color="#008080" />
                       </div>
                       <div style={{ flex: 1 }}>
-                        <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.15rem', fontWeight: 600, marginBottom: '10px' }}>
+                        <h3 className="card-title transition-colors duration-300 group-hover:text-teal-600" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.15rem', fontWeight: 600, marginBottom: '10px' }}>
                           {section.title}
                         </h3>
                         <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '15px' }}>

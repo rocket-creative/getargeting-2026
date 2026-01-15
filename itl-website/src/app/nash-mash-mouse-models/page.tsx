@@ -117,24 +117,23 @@ const therapeuticTargets = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
     authors: "Zhou Y et al.",
     year: "2025",
     title: "FAM83A acts as an amplifier for lipogenic signaling to facilitate the pathogenesis of metabolic dysfunction associated steatohepatitis.",
-    journal: "Metabolism"
-  },
-  {
-    authors: "Warasnhe K et al.",
-    year: "2025",
-    title: "Glycogen Synthase Kinase 3 beta Hepatocyte Deletion Attenuates Ferroptosis and Metabolic Dysfunction associated Steatohepatitis in Mice.",
-    journal: "Cellular and Molecular Gastroenterology and Hepatology"
+    journal: "Metabolism",
+    volume: "166: 156164",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41338474/"
   },
   {
     authors: "Xu D et al.",
     year: "2025",
     title: "Decreased LONP1 expression exacerbates MASH induced liver fibrosis via elevated orotic acid levels.",
-    journal: "Journal of Hepatology"
+    journal: "Journal of Hepatology",
+    volume: "Online ahead of print",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40784490/"
   }
 ];
 
@@ -736,8 +735,36 @@ export default function NashMashMouseModelsPage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

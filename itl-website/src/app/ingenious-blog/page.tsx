@@ -114,15 +114,15 @@ export default function IngeniousBlogPage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: 'rgba(255,200,100,0.2)',
+                backgroundColor: 'rgba(255,255,255,0.1)',
                 padding: '6px 16px',
                 borderRadius: '20px',
                 marginBottom: '20px',
-                border: '1px solid rgba(255,200,100,0.3)',
+                border: '1px solid rgba(255,255,255,0.2)',
               }}
             >
               <span style={{ fontSize: '14px' }}>📁</span>
-              <span style={{ color: '#ffc864', fontSize: '.8rem', fontWeight: 500 }}>
+              <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', fontWeight: 500 }}>
                 Archived Content
               </span>
             </div>
@@ -152,7 +152,7 @@ export default function IngeniousBlogPage() {
             </p>
             <p
               style={{
-                color: 'rgba(255,200,100,0.8)',
+                color: 'rgba(255,255,255,0.6)',
                 fontSize: '.85rem',
                 fontWeight: 400,
                 marginTop: '15px',

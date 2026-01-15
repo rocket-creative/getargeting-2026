@@ -62,24 +62,23 @@ const phenotypingMethods = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
-  {
-    authors: "Liu Y et al.",
-    year: "2024",
-    title: "Role of STING Deficiency in Amelioration of Mouse Models of Lupus and Atherosclerosis.",
-    journal: "Arthritis & Rheumatology"
-  },
   {
     authors: "Tan L et al.",
     year: "2024",
     title: "FoxO1 Deficiency in Monocytic Myeloid Derived Suppressor Cells Exacerbates B Cell Dysfunction in Systemic Lupus Erythematosus.",
-    journal: "Arthritis & Rheumatology"
+    journal: "Arthritis & Rheumatology",
+    volume: "76(12): 1834-1846",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39492682/"
   },
   {
-    authors: "Nakabo S et al.",
-    year: "2024",
-    title: "The circadian clock gene BMAL1 modulates autoimmunity features in lupus.",
-    journal: "Frontiers in Immunology"
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -465,8 +464,36 @@ export default function AutoimmuneDiseaseMicePage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

@@ -82,11 +82,32 @@ const relatedModelTypes = [
   { title: "Transgenic Mouse Service", href: "/transgenic-mouse-service" }
 ];
 
-// Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
-  "Nature, Cell, Science publications featuring conditional alleles",
-  "Peer reviewed methods papers describing allele design strategies",
-  "Disease focused publications across all therapeutic areas"
+  {
+    authors: "Chakrabarti S et al.",
+    year: "2024",
+    title: "Touch sensation requires the mechanically gated ion channel ELKIN1.",
+    journal: "Science",
+    volume: "383(6686): 992-998",
+    link: "https://pubmed.ncbi.nlm.nih.gov/38422143/"
+  },
+  {
+    authors: "Mlynarczyk C et al.",
+    year: "2023",
+    title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
+    journal: "Science",
+    volume: "379(6629): eabj0412",
+    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
+  },
+  {
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
+  }
 ];
 
 // Testimonials

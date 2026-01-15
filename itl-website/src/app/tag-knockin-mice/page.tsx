@@ -132,24 +132,23 @@ const designConsiderationsData = [
 ];
 
 // Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Tebbe L, Mwoyosvi ML, Crane R, Makia MS, Kakakhel M, Cosgrove D, Al-Ubaidi MR, Naash MI.",
-    year: "2023",
-    title: "The usherin mutation c.2299delG leads to its mislocalization and disrupts interactions with whirlin and VLGR1.",
-    journal: "Nat Commun 14(1): 972"
-  },
-  {
-    authors: "Rumney RMH, Róg J, Chira N, Kao AP, Al-Khalidi R, & Górecki DC.",
-    year: "2022",
-    title: "P2X7 Purinoceptor Affects Ectopic Calcification of Dystrophic Muscles.",
-    journal: "Front Pharmacol 13: 935804"
-  },
-  {
-    authors: "Samant SA, Pillai VB, Gupta MP.",
+    authors: "Vacher CM et al.",
     year: "2021",
-    title: "Skeletal muscle-specific over-expression of the nuclear sirtuin SIRT6 blocks cancer-associated cachexia by regulating multiple targets.",
-    journal: "JCSM Rapid Commun 4(1): 40-56"
+    title: "Placental endocrine function shapes cerebellar development and social behavior.",
+    journal: "Nature Neuroscience",
+    volume: "24(10): 1392-1401",
+    link: "https://pubmed.ncbi.nlm.nih.gov/34400844/"
+  },
+  {
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -612,7 +611,7 @@ export default function TagKnockinMicePage() {
             
             <div className="grid grid-cols-1 gap-4">
               {publicationsData.map((pub, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in"
                   style={{
@@ -622,8 +621,36 @@ export default function TagKnockinMicePage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> {pub.year}. <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
+                  </p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

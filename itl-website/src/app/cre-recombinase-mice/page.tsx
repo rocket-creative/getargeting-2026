@@ -107,28 +107,23 @@ const qualityConsiderations = [
   }
 ];
 
-// Publications Data
+// Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Zhang Y et al.",
-    year: "2024",
-    title: "Hepatocyte specific deletion of PCSK9 reveals its role in cholesterol homeostasis.",
-    journal: "Journal of Lipid Research",
-    note: "Utilized Albumin Cre for liver specific gene deletion."
+    authors: "Wang L, Noyer L, Jishage M, et al.",
+    year: "2025",
+    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
+    journal: "Sci Immunol",
+    volume: "10(108): eadq8860",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
   },
   {
-    authors: "Morrison SJ et al.",
-    year: "2023",
-    title: "Neural stem cell regulation revealed through Nestin CreERT2 lineage tracing.",
-    journal: "Cell Stem Cell",
-    note: "Combined inducible Cre with reporter for temporal lineage analysis."
-  },
-  {
-    authors: "Chen L et al.",
-    year: "2023",
-    title: "Macrophage polarization in atherosclerosis studied using LysM Cre conditional knockouts.",
-    journal: "Circulation Research",
-    note: "Myeloid specific gene deletion in cardiovascular disease model."
+    authors: "Clausen BE et al.",
+    year: "1999",
+    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
+    journal: "Transgenic Research",
+    volume: "8(4): 265-277",
+    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 
@@ -592,10 +587,37 @@ export default function CreRecombinaseMicePage() {
                     borderLeft: '4px solid #2384da'
                   }}
                 >
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '5px' }}>
-                    <span style={{ color: '#0a253c' }}>{pub.authors}</span> ({pub.year}). <em>{pub.title}</em> <span style={{ color: '#008080', fontWeight: 500 }}>{pub.journal}</span>
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
                   </p>
-                  <p style={{ color: '#666', fontSize: '.8rem', fontStyle: 'italic' }}>{pub.note}</p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
+                  </p>
                 </div>
               ))}
             </div>
