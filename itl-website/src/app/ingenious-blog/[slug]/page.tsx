@@ -58,21 +58,38 @@ function parseFrontmatter(fileContent: string) {
 
 // Convert markdown to HTML with proper structure
 function markdownToHtml(markdown: string): string {
+  // Clean up zero-width characters and normalize line endings
+  let cleaned = markdown
+    .replace(/\u200d/g, '') // Zero-width joiner
+    .replace(/\u200b/g, '') // Zero-width space
+    .replace(/\u200c/g, '') // Zero-width non-joiner
+    .replace(/\ufeff/g, '') // BOM
+    .replace(/‍/g, '')      // HTML entity zero-width joiner
+    .replace(/\r\n/g, '\n');
+  
+  // Pre-process: separate linked images followed by headers
+  // Pattern: ](url)## Header -> ](url)\n\n## Header
+  cleaned = cleaned.replace(/\]\(([^)]+)\)(#{1,6}\s)/g, ']($1)\n\n$2');
+  
   // Split into blocks by double newlines
-  const blocks = markdown.split(/\n\n+/);
+  const blocks = cleaned.split(/\n\n+/);
   const htmlBlocks: string[] = [];
 
   for (const block of blocks) {
     const trimmed = block.trim();
     if (!trimmed) continue;
 
-    // Skip image-only lines that aren't part of content
-    if (trimmed.startsWith('![') && trimmed.endsWith(')') && !trimmed.includes('\n')) {
-      // Extract image URL and create img tag
-      const imgMatch = trimmed.match(/!\[([^\]]*)\]\(([^)]+)\)/);
-      if (imgMatch) {
-        htmlBlocks.push(`<figure class="blog-figure"><img src="${imgMatch[2]}" alt="${imgMatch[1]}" class="blog-image" loading="lazy" /></figure>`);
-      }
+    // Linked image: [![alt](img)](link)
+    const linkedImageMatch = trimmed.match(/^\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)$/);
+    if (linkedImageMatch) {
+      htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImageMatch[3]}" class="blog-image-link"><img src="${linkedImageMatch[2]}" alt="${linkedImageMatch[1]}" class="blog-image" loading="lazy" /></a></figure>`);
+      continue;
+    }
+
+    // Standalone image: ![alt](url)
+    const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imageMatch) {
+      htmlBlocks.push(`<figure class="blog-figure"><img src="${imageMatch[2]}" alt="${imageMatch[1]}" class="blog-image" loading="lazy" /></figure>`);
       continue;
     }
 
@@ -97,7 +114,7 @@ function markdownToHtml(markdown: string): string {
     else if (trimmed.startsWith('- ')) {
       const items = trimmed.split('\n')
         .filter(line => line.trim().startsWith('- '))
-        .map(line => `<li>${processInline(line.slice(2).trim())}</li>`)
+        .map(line => `<li>${processInline(line.trim().slice(2).trim())}</li>`)
         .join('');
       htmlBlocks.push(`<ul class="blog-list">${items}</ul>`);
     }
@@ -105,18 +122,31 @@ function markdownToHtml(markdown: string): string {
     else if (trimmed === '---') {
       htmlBlocks.push('<hr class="blog-hr" />');
     }
-    // Link-only blocks (CTA buttons)
-    else if (trimmed.startsWith('[') && trimmed.includes('](') && trimmed.endsWith(')')) {
-      const linkMatch = trimmed.match(/\[([^\]]+)\]\(([^)]+)\)/);
-      if (linkMatch) {
-        htmlBlocks.push(`<p class="blog-cta"><a href="${linkMatch[2]}" class="blog-button">${linkMatch[1]}</a></p>`);
+    // Link with image inside: [[![...](img)](url) or [text](url) as CTA
+    else if (trimmed.startsWith('[') && trimmed.endsWith(')') && !trimmed.includes('\n')) {
+      // Check if it's a linked image
+      const linkedImgInline = trimmed.match(/^\[\s*!\[([^\]]*)\]\(([^)]+)\)\s*\]\(([^)]+)\)$/);
+      if (linkedImgInline) {
+        htmlBlocks.push(`<figure class="blog-figure"><a href="${linkedImgInline[3]}" class="blog-image-link"><img src="${linkedImgInline[2]}" alt="${linkedImgInline[1]}" class="blog-image" loading="lazy" /></a></figure>`);
+      } else {
+        // Plain link as CTA button
+        const linkMatch = trimmed.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          htmlBlocks.push(`<p class="blog-cta"><a href="${linkMatch[2]}" class="blog-button">${linkMatch[1]}</a></p>`);
+        } else {
+          // Treat as paragraph
+          htmlBlocks.push(`<p>${processInline(trimmed)}</p>`);
+        }
       }
     }
     // Regular paragraphs
     else {
       // Handle single line breaks within a paragraph
-      const processed = trimmed.split('\n').map(line => processInline(line.trim())).join('<br />');
-      htmlBlocks.push(`<p>${processed}</p>`);
+      const lines = trimmed.split('\n');
+      const processedLines = lines.map(line => processInline(line.trim())).filter(l => l);
+      if (processedLines.length > 0) {
+        htmlBlocks.push(`<p>${processedLines.join('<br />')}</p>`);
+      }
     }
   }
 
@@ -125,17 +155,23 @@ function markdownToHtml(markdown: string): string {
 
 // Process inline markdown (bold, italic, links, images)
 function processInline(text: string): string {
+  if (!text) return '';
+  
   return text
-    // Images within text
+    // Linked images: [![alt](img)](link)
+    .replace(/\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)/g, '<a href="$3" class="blog-image-link"><img src="$2" alt="$1" class="blog-inline-image" loading="lazy" /></a>')
+    // Standalone images: ![alt](url)
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="blog-inline-image" loading="lazy" />')
-    // Links
+    // Links: [text](url)
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="blog-link">$1</a>')
-    // Bold
+    // Bold: **text**
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    // Italic
+    // Italic: *text*
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-    // Code
-    .replace(/`([^`]+)`/g, '<code class="blog-code">$1</code>');
+    // Code: `text`
+    .replace(/`([^`]+)`/g, '<code class="blog-code">$1</code>')
+    // Footnote references: [[1]]
+    .replace(/\[\[(\d+)\]\]/g, '<sup class="blog-footnote">[$1]</sup>');
 }
 
 // Get all blog slugs for static generation
@@ -436,6 +472,23 @@ export default async function IngeniousBlogPost({
               .blog-content strong {
                 font-weight: 600;
                 color: #222;
+              }
+              .blog-content .blog-image-link {
+                display: block;
+                text-decoration: none;
+                transition: transform 0.2s ease;
+              }
+              .blog-content .blog-image-link:hover {
+                transform: scale(1.01);
+              }
+              .blog-content .blog-footnote {
+                font-size: 0.75em;
+                color: #008080;
+                cursor: pointer;
+              }
+              .blog-content .blog-footnote:hover {
+                color: #006666;
+                text-decoration: underline;
               }
             `}</style>
             {contentExists ? (

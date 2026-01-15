@@ -133,13 +133,14 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
       </section>
 
       {/* Blog Posts Grid */}
-      <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
+      <section style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p
             style={{
-              color: '#666',
+              color: '#555',
               fontSize: '.9rem',
               marginBottom: '25px',
+              fontFamily: 'Lato, sans-serif',
             }}
           >
             Showing {filteredPosts.length} of {blogPosts.length} posts
@@ -152,7 +153,7 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-              gap: '20px',
+              gap: '24px',
             }}
           >
             {filteredPosts.map((post) => (
@@ -161,21 +162,26 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
                 href={`/ingenious-blog/${post.slug}`}
                 className="blog-card"
                 style={{
-                  display: 'block',
-                  backgroundColor: '#fafafa',
-                  padding: '20px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  backgroundColor: '#ffffff',
+                  padding: '24px',
                   border: '1px solid #e8e8e8',
-                  borderTop: `3px solid ${getCategoryColor(post.category)}`,
+                  borderTop: `4px solid ${getCategoryColor(post.category)}`,
+                  borderRadius: '6px',
                   textDecoration: 'none',
-                  transition: 'all 0.2s ease',
+                  transition: 'all 0.25s ease',
+                  minHeight: '160px',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
+                  e.currentTarget.style.borderColor = '#d0d0d0';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.borderColor = '#e8e8e8';
                 }}
               >
                 <span
@@ -184,22 +190,26 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
                     fontSize: '.7rem',
                     fontWeight: 600,
                     color: getCategoryColor(post.category),
-                    backgroundColor: `${getCategoryColor(post.category)}15`,
-                    padding: '3px 10px',
-                    borderRadius: '10px',
-                    marginBottom: '10px',
+                    backgroundColor: `${getCategoryColor(post.category)}12`,
+                    padding: '4px 12px',
+                    borderRadius: '12px',
+                    marginBottom: '14px',
+                    letterSpacing: '0.3px',
+                    textTransform: 'uppercase',
                   }}
                 >
                   {post.category}
                 </span>
                 <h3
                   style={{
-                    color: '#333',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    lineHeight: 1.4,
-                    marginBottom: '12px',
+                    color: '#222',
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.95rem',
+                    fontWeight: 400,
+                    lineHeight: 1.5,
+                    marginBottom: '16px',
+                    flex: 1,
+                    letterSpacing: '0.01em',
                   }}
                 >
                   {post.title}
@@ -208,10 +218,12 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: '5px',
+                    gap: '6px',
                     color: '#008080',
                     fontSize: '.8rem',
-                    fontWeight: 500,
+                    fontWeight: 600,
+                    fontFamily: 'Poppins, sans-serif',
+                    letterSpacing: '0.02em',
                   }}
                 >
                   Read Article <IconArrowRight size={12} color="#008080" />
