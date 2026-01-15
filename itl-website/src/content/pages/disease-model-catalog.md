@@ -101,7 +101,7 @@ To order catalog models:
 - Receive quote and timeline
 - Place order
 
-(/order-inquiry-catalog-models)
+(/order-catalog-models)
 
 ### Shipping
 
@@ -137,7 +137,7 @@ Models are shipped:
 
 Contact us for information about available catalog models or to request a specific model.
 
-(/order-inquiry-catalog-models)
+(/order-catalog-models)
 
 (/request-quote)
 
@@ -151,5 +151,5 @@ Contact us for information about available catalog models or to request a specif
 - Zone 3: Navigation and CTAs
 - Testimonial
 - 10+ internal links
-- CTA to /order-inquiry-catalog-models
+- CTA to /order-catalog-models
 - Word count ~2,000

@@ -135,7 +135,7 @@ If catalog models do not meet your specific requirements, ingenious targeting la
 
 Ready to order catalog models or need availability information? Contact us with your requirements.
 
-(/order-inquiry-catalog-models)
+(/order-catalog-models)
 
 (/request-quote)
 

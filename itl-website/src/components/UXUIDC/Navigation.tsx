@@ -150,7 +150,7 @@ const navigationItems: NavItem[] = [
     children: [
       { label: 'General Contact', href: '/general-contact' },
       { label: 'Custom Model Quote', href: '/request-quote' },
-      { label: 'Catalog Model Quote', href: '/order-inquiry-catalog-models' },
+      { label: 'Catalog Model Quote', href: '/order-catalog-models' },
       { label: 'Schedule Meeting', href: '/schedule-meeting' },
     ],
   },

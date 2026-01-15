@@ -155,7 +155,7 @@ const relatedResourcesData = [
 const ctaData = {
   title: "Request Catalog Information",
   description: "Contact us for information about available catalog models or to request a specific model.",
-  primaryButton: { href: "/order-inquiry-catalog-models", label: "Order Inquiry" },
+  primaryButton: { href: "/order-catalog-models", label: "Order Inquiry" },
   secondaryButton: { href: "/request-quote", label: "Request Quote" }
 };
 
@@ -289,7 +289,7 @@ export default function DiseaseModelCatalogPage() {
               {heroData.description}
             </p>
             <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/order-inquiry-catalog-models" style={{
+              <Link href="/order-catalog-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',

@@ -51,7 +51,7 @@ export default function AllCatalogMouseModelsPage() {
               Search our extensive catalog of over 10,000 genetically engineered mouse models including knockout, knockin, humanized, Cre driver, and reporter strains for biomedical research and drug development.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/order-inquiry-catalog-models" style={{
+              <Link href="/order-catalog-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -155,7 +155,7 @@ export default function AllCatalogMouseModelsPage() {
               Our team can help you find the right model or create a custom solution tailored to your research.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/order-inquiry-catalog-models" style={{
+              <Link href="/order-catalog-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',

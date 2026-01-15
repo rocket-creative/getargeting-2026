@@ -105,7 +105,7 @@ const alternativeContactData = [
   {
     title: 'Order Catalog Models',
     content: 'Request from 10,000+ ready-made models',
-    href: '/order-inquiry-catalog-models',
+    href: '/order-catalog-models',
     label: 'Order',
   },
   {

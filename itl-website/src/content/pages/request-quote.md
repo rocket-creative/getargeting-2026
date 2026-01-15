@@ -175,7 +175,7 @@ For questions about Ingenious Targeting Laboratory services or capabilities:
 
 For humanized immune checkpoint mice and other catalog models:
 
-(/order-inquiry-catalog-models)
+(/order-catalog-models)
 
 ## Frequently Asked Questions
 
