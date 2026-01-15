@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -158,14 +158,16 @@ const publicationsData = [
 ];
 
 // Testimonial Data
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_PLUMLEY, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_PLUMLEY.quote,
-  author: formatAuthorWithCredentials(SINGLE_PLUMLEY),
-  affiliation: SINGLE_PLUMLEY.affiliation
-};
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+const marmigereTestimonial = getTestimonialById('marmigere-inserm')!;
+const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
+
+const testimonials = [
+  { quote: plumleyTestimonial.quote, name: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
+];
 
 // Related Links
 const relatedModelTypes = [
@@ -191,22 +193,38 @@ const projectResources = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "What is the difference between a floxed mouse and a conditional knockout?",
-    answer: "A floxed mouse carries loxP sites flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a Cre driver line. The resulting offspring with both the floxed allele and Cre expression are the actual conditional knockouts, where gene deletion occurs in Cre-expressing tissues."
+    answer: (
+      <>
+        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed mouse</GlossaryTermLink> carries <GlossaryTermLink term="floxed-gene-loxp-site">loxP sites</GlossaryTermLink> flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a <GlossaryTermLink term="cre-driver-line">Cre driver line</GlossaryTermLink>. The resulting offspring with both the floxed allele and Cre expression are the actual <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockouts</GlossaryTermLink>, where gene deletion occurs in Cre-expressing tissues.
+      </>
+    )
   },
   {
     question: "Can I use the same floxed mouse line with different Cre drivers?",
-    answer: "Yes. This is a major advantage of conditional knockout models. A single floxed allele can be crossed to any Cre driver line to achieve tissue-specific knockout in different organs. One floxed mouse project can support studies in liver (Albumin-Cre), brain (Nestin-Cre), immune cells (LysM-Cre), and many other tissues."
+    answer: (
+      <>
+        Yes. This is a major advantage of conditional knockout models. A single floxed allele can be crossed to any <GlossaryTermLink term="cre-driver-line">Cre driver line</GlossaryTermLink> to achieve <GlossaryTermLink term="tissue-specific-knockout">tissue-specific knockout</GlossaryTermLink> in different organs. One floxed mouse project can support studies in liver (Albumin-Cre), brain (Nestin-Cre), immune cells (LysM-Cre), and many other tissues.
+      </>
+    )
   },
   {
     question: "How do I choose which exon to flox?",
-    answer: "The critical exon must be essential for gene function. Ideal targets are exons present in all transcript variants, exons encoding functional domains, and exons whose deletion causes frameshift in downstream sequence. Our scientific team analyzes gene structure and transcript architecture to identify optimal targets for each project."
+    answer: (
+      <>
+        The critical exon must be essential for gene function. Ideal targets are exons present in all transcript variants, exons encoding functional domains, and exons whose deletion causes <GlossaryTermLink term="frameshift-mutation">frameshift</GlossaryTermLink> in downstream sequence. Our scientific team analyzes gene structure and transcript architecture to identify optimal targets for each project.
+      </>
+    )
   },
   {
     question: "How long does a conditional knockout project take?",
-    answer: "Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of loxP site positioning in germline transmission mice. The investment provides greater experimental flexibility through tissue-specific and temporal control."
+    answer: (
+      <>
+        Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of loxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>.
+      </>
+    )
   }
 ];
 
@@ -857,42 +875,55 @@ export default function ConditionalKnockoutMouseModelsPage() {
           </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="animate-in" style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(0,128,128,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 25px'
-              }}>
-                <IconQuote size={30} color="#008080" />
-              </div>
-              <blockquote style={{ 
-                color: '#333', 
-                fontSize: '1.05rem', 
-                lineHeight: '1.8rem',
-                fontStyle: 'italic',
-                marginBottom: '25px'
-              }}>
-                "{testimonialData.quote}"
-              </blockquote>
-              <div>
-                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.95rem', marginBottom: '3px' }}>
-                  — {testimonialData.author}
-                </p>
-                <p style={{ color: '#666', fontSize: '.85rem' }}>
-                  {testimonialData.affiliation}
-                </p>
-              </div>
+        {/* Testimonials Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
+              What Researchers Say
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="animate-in"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    padding: '30px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.3s ease',
+                  }}
+                >
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                  <p style={{
+                    color: '#666',
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.9rem',
+                    fontWeight: 400,
+                    lineHeight: 1.6,
+                    fontStyle: 'italic',
+                    marginBottom: '20px',
+                    flex: 1,
+                  }}>
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div style={{ marginTop: 'auto' }}>
+                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                      — {testimonial.name}
+                    </p>
+                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>
+                      {testimonial.affiliation}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
               <Link 
                 href="/testimonials"
-                className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
+                className="inline-flex items-center gap-2 transition-colors duration-300"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
                 <span>Read more testimonials</span>
@@ -984,7 +1015,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>

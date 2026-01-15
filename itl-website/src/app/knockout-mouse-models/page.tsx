@@ -24,6 +24,7 @@ import {
   breedingResources,
   LabSignalsSignup,
   getRelatedLabSignalsArticles,
+  GlossaryTermLink,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -162,26 +163,47 @@ const advancedData = {
   },
 };
 
-const faqData = [
+// FAQ Data with Glossary Links
+const getFaqData = () => [
   {
     question: 'What is the difference between a conventional knockout and a conditional knockout?',
-    answer: 'A conventional knockout permanently eliminates gene function in all tissues from the earliest stages of development. A conditional knockout uses the Cre-lox system to control where and when gene deletion occurs. Conditional knockouts preserve normal gene function until exposed to Cre recombinase, allowing tissue-specific or temporally controlled gene inactivation.',
+    answer: (
+      <>
+        A <GlossaryTermLink term="conventional-knockout-mouse-models">conventional knockout</GlossaryTermLink> permanently eliminates gene function in all tissues from the earliest stages of development. A <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> uses the <GlossaryTermLink term="cre-lox-system">Cre-lox system</GlossaryTermLink> to control where and when gene deletion occurs. Conditional knockouts preserve normal gene function until exposed to Cre recombinase, allowing tissue-specific or temporally controlled gene inactivation.
+      </>
+    ),
   },
   {
     question: 'How do I know if my gene is essential and requires a conditional knockout approach?',
-    answer: 'If homozygous null mutations of your target gene result in embryonic lethality in published studies, a conditional approach is required. If no published data exists, we recommend starting with a conditional allele design, which can function as a conventional knockout when crossed to germline Cre, while preserving the option for tissue-specific studies.',
+    answer: (
+      <>
+        If <GlossaryTermLink term="zygosity">homozygous</GlossaryTermLink> <GlossaryTermLink term="hypomorphic-null-allele">null</GlossaryTermLink> mutations of your target gene result in embryonic lethality in published studies, a conditional approach is required. If no published data exists, we recommend starting with a conditional allele design, which can function as a conventional knockout when crossed to germline Cre, while preserving the option for tissue-specific studies.
+      </>
+    ),
   },
   {
     question: 'What is a floxed allele?',
-    answer: 'A floxed allele contains loxP sites flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of conditional knockout strategies.',
+    answer: (
+      <>
+        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed allele</GlossaryTermLink> contains <GlossaryTermLink term="floxed-gene-loxp-site">loxP sites</GlossaryTermLink> flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> strategies.
+      </>
+    ),
   },
   {
     question: 'How long does it take to generate a knockout mouse model?',
-    answer: 'Conventional knockout projects typically require 6-8 months. Conditional knockout projects can take 8-10 months due to additional complexity in allele design and verification. Timelines include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain germline transmission mice.',
+    answer: (
+      <>
+        Conventional knockout projects typically require 6-8 months. Conditional knockout projects can take 8-10 months due to additional complexity in allele design and verification. Timelines include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice.
+      </>
+    ),
   },
   {
     question: 'What deliverables will I receive at the end of a knockout project?',
-    answer: 'You will receive a minimum of 2 germline transmission F1 heterozygous mice, comprehensive project verification documentation, and genotyping protocols.',
+    answer: (
+      <>
+        You will receive a minimum of 2 <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> F1 <GlossaryTermLink term="zygosity">heterozygous</GlossaryTermLink> mice, comprehensive project verification documentation, and <GlossaryTermLink term="genotyping-pcr-qpcr">genotyping</GlossaryTermLink> protocols.
+      </>
+    ),
   },
 ];
 
@@ -912,7 +934,7 @@ export default function KnockoutMouseModelsPage() {
         </section>
 
         {/* ========== FAQ ========== */}
-        <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="white" />
+        <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={getFaqData()} backgroundColor="white" />
 
         {/* ========== LEGACY CONTENT LINK ========== */}
         <section style={{ backgroundColor: '#e8f5f5', padding: '30px 20px', borderTop: '3px solid #008080' }}>

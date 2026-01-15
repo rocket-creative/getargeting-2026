@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconBrain, IconLayers } from '@/components/UXUIDC/Icons';
+import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -244,14 +245,14 @@ const publicationsData = [
 ];
 
 // Testimonial Data
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_PLUMLEY, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_PLUMLEY.quote,
-  author: formatAuthorWithCredentials(SINGLE_PLUMLEY),
-  affiliation: SINGLE_PLUMLEY.affiliation
-};
+const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+
+const testimonials = [
+  { quote: plumleyTestimonial.quote, name: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
+];
 
 // Related Links
 const neurodegenerativeLinks = [
@@ -281,18 +282,30 @@ const projectResources = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "Why are conditional knockouts essential for neuroscience research?",
-    answer: "Many neural genes are essential for embryonic development and cause lethality when deleted globally. Conditional knockouts allow gene deletion in specific cell types (neurons, astrocytes, microglia) or brain regions, enabling study of gene function in adult animals without developmental defects."
+    answer: (
+      <>
+        Many neural genes are essential for embryonic development and cause lethality when deleted globally. <GlossaryTermLink term="conditional-knockout-mouse-models">Conditional knockouts</GlossaryTermLink> allow gene deletion in specific cell types (neurons, astrocytes, microglia) or brain regions, enabling study of gene function in adult animals without developmental defects.
+      </>
+    )
   },
   {
     question: "What Cre driver lines are available for neuroscience research?",
-    answer: "Common neural Cre drivers include Nestin-Cre (neural progenitors), Synapsin-Cre (neurons), GFAP-Cre (astrocytes), and CX3CR1-Cre (microglia). Inducible CreERT2 systems enable temporal control. Cre driver selection depends on your target cell type and research question."
+    answer: (
+      <>
+        Common neural <GlossaryTermLink term="cre-driver-line">Cre drivers</GlossaryTermLink> include Nestin-Cre (neural progenitors), Synapsin-Cre (neurons), GFAP-Cre (astrocytes), and CX3CR1-Cre (microglia). <GlossaryTermLink term="inducible-cre-ert2">Inducible CreERT2 systems</GlossaryTermLink> enable <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>. Cre driver selection depends on your target cell type and research question.
+      </>
+    )
   },
   {
     question: "Can I model neurodegenerative diseases with mouse models?",
-    answer: "Yes. Point mutation knockins can introduce human disease mutations (e.g., APP, tau, α-synuclein mutations for AD, PD). Conditional systems enable tissue-specific expression of disease proteins. Reporter knockins enable visualization of disease protein aggregation and spread."
+    answer: (
+      <>
+        Yes. <GlossaryTermLink term="point-mutation">Point mutation</GlossaryTermLink> <GlossaryTermLink term="knockin-mouse-models">knockins</GlossaryTermLink> can introduce human disease mutations (e.g., APP, tau, α-synuclein mutations for AD, PD). <GlossaryTermLink term="conditional-knockout-mouse-models">Conditional systems</GlossaryTermLink> enable <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> expression of disease proteins. <GlossaryTermLink term="reporter-gene-reporter-allele">Reporter knockins</GlossaryTermLink> enable visualization of disease protein aggregation and spread.
+      </>
+    )
   },
   {
     question: "What strain background is best for behavioral neuroscience studies?",
@@ -300,7 +313,11 @@ const faqData = [
   },
   {
     question: "How do I ensure reproducible behavioral phenotypes?",
-    answer: "Standardize age, sex, circadian timing, and environmental conditions. Use littermate controls from heterozygous crosses. Ensure adequate statistical power. Consider that genetic background modifiers can affect behavioral outcomes, so maintaining defined backgrounds is important."
+    answer: (
+      <>
+        Standardize age, sex, circadian timing, and environmental conditions. Use littermate controls from <GlossaryTermLink term="zygosity">heterozygous</GlossaryTermLink> crosses. Ensure adequate statistical power. Consider that genetic background modifiers can affect behavioral outcomes, so maintaining defined backgrounds through <GlossaryTermLink term="colony-management-backcrossing">backcrossing</GlossaryTermLink> is important.
+      </>
+    )
   }
 ];
 
@@ -943,42 +960,44 @@ export default function NeuroscienceMouseModelsPage() {
           </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        {/* Testimonials Section */}
+        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <div className="animate-in" style={{ textAlign: 'center' }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(0,128,128,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 25px'
-              }}>
-                <IconQuote size={30} color="#008080" />
-              </div>
-              <blockquote style={{ 
-                color: '#333', 
-                fontSize: '1.1rem', 
-                lineHeight: '1.8rem',
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
+              What Researchers Say
+            </h2>
+            <div
+              className="animate-in"
+              style={{
+                backgroundColor: '#ffffff',
+                border: '1px solid #e0e0e0',
+                borderRadius: '8px',
+                padding: '40px',
+                textAlign: 'center',
+              }}
+            >
+              <p style={{
+                color: '#666',
+                fontFamily: 'Lato, sans-serif',
+                fontSize: '1.05rem',
+                fontWeight: 400,
+                lineHeight: 1.7,
                 fontStyle: 'italic',
-                marginBottom: '25px'
+                marginBottom: '25px',
               }}>
-                &ldquo;{testimonialData.quote}&rdquo;
-              </blockquote>
-              <div>
-                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.95rem', marginBottom: '3px' }}>
-                  — {testimonialData.author}
-                </p>
-                <p style={{ color: '#666', fontSize: '.85rem' }}>
-                  {testimonialData.affiliation}
-                </p>
-              </div>
-              <Link 
+                &ldquo;{testimonials[0].quote}&rdquo;
+              </p>
+              <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>
+                — {testimonials[0].name}
+              </p>
+              <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.85rem', fontWeight: 400 }}>
+                {testimonials[0].affiliation}
+              </p>
+            </div>
+            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
+              <Link
                 href="/testimonials"
-                className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
+                className="inline-flex items-center gap-2 transition-colors duration-300"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
                 <span>Read more testimonials</span>
@@ -1038,7 +1057,7 @@ export default function NeuroscienceMouseModelsPage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>

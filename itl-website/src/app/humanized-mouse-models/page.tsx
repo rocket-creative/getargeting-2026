@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -249,22 +249,38 @@ const projectResources = [
 ];
 
 // FAQ Data
-const faqData = [
+const getFaqData = () => [
   {
     question: "Why do I need a humanized mouse model for drug development?",
-    answer: "Many therapeutic antibodies and biologics are designed to target human proteins and do not cross-react with mouse orthologs. Humanized mice express human target proteins, enabling efficacy testing of human-specific therapeutics in an immunocompetent mouse with a functional immune system."
+    answer: (
+      <>
+        Many therapeutic antibodies and biologics are designed to target human proteins and do not cross-react with mouse orthologs. <GlossaryTermLink term="humanized-mouse-models">Humanized mice</GlossaryTermLink> express human target proteins, enabling efficacy testing of human-specific therapeutics in an immunocompetent mouse with a functional immune system.
+      </>
+    )
   },
   {
     question: "What is the difference between full gene replacement and extracellular domain humanization?",
-    answer: "Full gene replacement substitutes the entire mouse gene with human sequence, including regulatory elements. Extracellular domain humanization replaces only the portion of the protein that therapeutic antibodies recognize, while preserving mouse intracellular domains for proper signaling. ECD humanization is often sufficient for antibody testing and may be faster to generate."
+    answer: (
+      <>
+        Full gene replacement substitutes the entire mouse gene with human sequence, including regulatory elements. Extracellular domain humanization replaces only the portion of the protein that therapeutic antibodies recognize, while preserving mouse intracellular domains for proper signaling. ECD humanization is often sufficient for antibody testing and may be faster to generate using <GlossaryTermLink term="knockin-mouse-models">knockin strategies</GlossaryTermLink>.
+      </>
+    )
   },
   {
     question: "Can I combine multiple humanized genes in one mouse?",
-    answer: "Yes. Dual or triple humanized mice are commonly used for combination therapy studies. For example, PD1/CTLA4 double humanized mice enable testing of dual checkpoint blockade. Multiple humanizations can be combined through breeding or sequential targeting."
+    answer: (
+      <>
+        Yes. <GlossaryTermLink term="single-vs-double-humanized-targets">Dual or triple humanized mice</GlossaryTermLink> are commonly used for combination therapy studies. For example, PD1/CTLA4 double humanized mice enable testing of dual checkpoint blockade. Multiple humanizations can be combined through <GlossaryTermLink term="breeding-scheme">breeding</GlossaryTermLink> or sequential targeting.
+      </>
+    )
   },
   {
     question: "Which humanized immune checkpoint models are available?",
-    answer: "Ingenious Targeting Laboratory offers humanized models for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies."
+    answer: (
+      <>
+        Ingenious Targeting Laboratory offers <GlossaryTermLink term="humanized-immune-checkpoint">humanized immune checkpoint models</GlossaryTermLink> for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies.
+      </>
+    )
   }
 ];
 
@@ -885,7 +901,7 @@ export default function HumanizedMouseModelsPage() {
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
-              <UXUIDCAnimatedFAQ faqs={faqData} />
+              <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
           </div>
         </section>

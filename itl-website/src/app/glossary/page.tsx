@@ -5,321 +5,20 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import { IconDNA, IconChevronRight, IconLayers, IconSearch } from '@/components/UXUIDC/Icons';
+import { 
+  glossaryTerms, 
+  glossaryCategories, 
+  type GlossaryCategory,
+  type GlossaryTerm 
+} from '@/data/glossaryTerms';
 
 // Hero Data
 const heroData = {
   badge: "Glossary",
-  title: "Gene Targeting Glossary",
-  intro: "A comprehensive reference of technical terminology used in mouse genetics and gene targeting.",
-  description: "This glossary covers key concepts in knockout, knockin, conditional, and transgenic mouse model generation to help researchers understand project discussions and scientific literature."
+  title: "Mouse Genetics Glossary",
+  intro: "A comprehensive reference of 60 technical terms used in mouse genetics and gene targeting.",
+  description: "This glossary covers essential concepts across 7 key categories: core genetics, mouse model strategies, recombination systems, vectors and ES cells, validation and QC, immunology and humanization, and study design applications."
 };
-
-// Complete Glossary Terms (60 terms from PDF)
-const glossaryTerms = [
-  {
-    term: "Allele",
-    definition: "One of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome. In gene targeting, alleles refer to the modified versions of genes created through targeting strategies.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "BAC (Bacterial Artificial Chromosome)",
-    definition: "A DNA construct used for cloning large DNA fragments (100-300 kb) in bacteria. BACs are used in gene targeting for large-scale modifications and to maintain regulatory elements.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Blastocyst",
-    definition: "An early-stage embryo (approximately 3.5 days post-fertilization in mice) consisting of an outer cell layer and an inner cell mass. ES cells are injected into blastocysts to generate chimeric mice.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Chimera",
-    definition: "An organism composed of cells derived from two or more different sources. In gene targeting, chimeric mice contain cells derived from both injected ES cells and the host blastocyst.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Coat Color Markers",
-    definition: "Visible genetic markers used to identify chimeric mice and track germline transmission. Common markers include agouti, albino, and black coat colors that help distinguish ES cell-derived tissues.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Conditional Knockout",
-    definition: "A gene targeting strategy where gene inactivation is controlled by a recombinase system, allowing tissue-specific or temporally-controlled gene deletion. Uses loxP sites flanking critical exons.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Constitutive Knockout",
-    definition: "A gene targeting strategy where the target gene is permanently inactivated in all cells throughout development. Also called conventional or global knockout.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Cre Recombinase",
-    definition: "A site-specific recombinase enzyme from bacteriophage P1 that catalyzes recombination between loxP sites. Used in conditional knockout systems to excise DNA sequences flanked by loxP sites.",
-    category: "Recombinase Systems"
-  },
-  {
-    term: "Cre-ERT2",
-    definition: "A tamoxifen-inducible form of Cre recombinase fused to a modified estrogen receptor. Cre activity is blocked until tamoxifen administration, enabling temporal control of gene deletion.",
-    category: "Recombinase Systems"
-  },
-  {
-    term: "CRISPR/Cas9",
-    definition: "A genome editing technology using a guide RNA to direct Cas9 nuclease to specific DNA sequences, creating double-strand breaks that enable targeted modifications through cellular repair mechanisms.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Derivative Allele",
-    definition: "Additional allele types generated from a single targeting event through recombinase-mediated modifications. A knockout-first allele can generate both null and conditional alleles.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Doxycycline-Inducible System",
-    definition: "A gene expression control system using the tetracycline transactivator (tTA or rtTA) to regulate gene expression in response to doxycycline administration. Enables reversible gene control.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Electroporation",
-    definition: "A technique using electrical pulses to introduce DNA into cells by temporarily creating pores in the cell membrane. Used to deliver targeting vectors into ES cells.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Embryonic Stem (ES) Cells",
-    definition: "Pluripotent cells derived from the inner cell mass of blastocyst-stage embryos. ES cells can contribute to all tissues including the germline when injected into host blastocysts.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Exon",
-    definition: "A segment of a gene that contains protein-coding sequences. In gene targeting, critical exons are often deleted or flanked by loxP sites to disrupt gene function.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "Floxed Allele",
-    definition: "A gene with loxP sites flanking a critical region. The floxed allele functions normally until Cre recombinase excises the flanked region, creating a null allele.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Flp Recombinase",
-    definition: "A site-specific recombinase from yeast that catalyzes recombination between FRT sites. Often used to remove selection cassettes from targeted alleles.",
-    category: "Recombinase Systems"
-  },
-  {
-    term: "FRT Site",
-    definition: "A 34 base pair DNA sequence recognized by Flp recombinase. FRT sites are used to flank selection cassettes for subsequent removal or to create inducible systems.",
-    category: "Recombinase Systems"
-  },
-  {
-    term: "Germline Transmission",
-    definition: "The passage of a targeted allele from chimeric mice to their offspring through the germline (sperm or eggs). Confirmed by breeding chimeras and genotyping progeny.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Genotyping",
-    definition: "The process of determining an organism's genetic makeup at specific loci. PCR-based genotyping is used to identify mice carrying targeted alleles.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Global Knockout",
-    definition: "A gene inactivation strategy affecting all cells throughout the organism from the earliest developmental stages. Synonymous with constitutive or conventional knockout.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Heterozygous",
-    definition: "Having two different alleles at a particular gene locus, one on each chromosome. Targeted mice are typically first obtained as heterozygotes.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "Homologous Recombination",
-    definition: "A precise DNA repair mechanism where a sequence is exchanged between two similar DNA molecules. Used in gene targeting to insert modifications at specific genomic locations.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Homozygous",
-    definition: "Having two identical alleles at a particular gene locus. Homozygous targeted mice are generated by intercrossing heterozygotes.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "Humanized Mouse",
-    definition: "A mouse model where a mouse gene or genomic region has been replaced with the corresponding human sequence, enabling study of human-specific biology.",
-    category: "Model Types"
-  },
-  {
-    term: "Inducible System",
-    definition: "A gene regulation system allowing temporal control of gene expression or deletion through administration of an inducing agent such as tamoxifen or doxycycline.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Intron",
-    definition: "A non-coding segment of a gene that is transcribed but removed during RNA processing. Selection cassettes are often placed in introns to minimize functional disruption.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "Knockin",
-    definition: "A gene targeting strategy that inserts a specific DNA sequence at a defined genomic location, such as reporter genes, point mutations, or human sequences.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Knockout",
-    definition: "A gene targeting strategy that inactivates a gene by deleting critical sequences, disrupting the reading frame, or inserting stop sequences.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Knockout-First Allele",
-    definition: "A versatile allele design that functions as a null allele but can be converted to a conditional allele through Flp-mediated recombination.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "LacZ Reporter",
-    definition: "A reporter gene encoding β-galactosidase enzyme from E. coli. LacZ expression produces blue color when cells are stained with X-gal substrate.",
-    category: "Reporter Systems"
-  },
-  {
-    term: "Lineage Tracing",
-    definition: "A technique to track cell populations and their descendants using reporter genes, enabling study of cell fate during development or disease.",
-    category: "Research Applications"
-  },
-  {
-    term: "loxP Site",
-    definition: "A 34 base pair DNA sequence recognized by Cre recombinase. Two loxP sites in the same orientation enable excision of the flanked sequence; opposite orientations cause inversion.",
-    category: "Recombinase Systems"
-  },
-  {
-    term: "Microinjection",
-    definition: "A technique to introduce DNA, RNA, or other molecules directly into cells using a fine needle. Used for ES cell injection into blastocysts and pronuclear injection.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Neo Cassette",
-    definition: "A selection cassette containing the neomycin phosphotransferase gene conferring resistance to G418/neomycin. Used to select ES cells containing the targeted allele.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Null Allele",
-    definition: "An allele that produces no functional gene product. Created by deleting critical exons or introducing premature stop codons.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Phenotype",
-    definition: "The observable characteristics of an organism resulting from the interaction of genotype with the environment. Phenotyping assesses the effects of genetic modifications.",
-    category: "Research Applications"
-  },
-  {
-    term: "Point Mutation",
-    definition: "A change in a single nucleotide within a gene sequence. Point mutation knockin models introduce specific mutations to study disease mechanisms.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Positive Selection",
-    definition: "Selection for ES cells containing the targeting construct using drug resistance genes (typically neomycin resistance). Only cells with the integrated construct survive selection.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Pronuclear Injection",
-    definition: "A microinjection technique delivering DNA directly into the pronucleus of a fertilized egg to generate transgenic animals through random integration.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Reporter Gene",
-    definition: "A gene encoding an easily detectable protein used to visualize gene expression patterns. Common reporters include fluorescent proteins, LacZ, and luciferase.",
-    category: "Reporter Systems"
-  },
-  {
-    term: "Rosa26 Locus",
-    definition: "A genomic safe harbor locus that supports ubiquitous gene expression without disrupting essential genes. Commonly used for knockin of reporters and transgenes.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "rtTA (Reverse Tetracycline Transactivator)",
-    definition: "A transcriptional activator that binds TRE sequences in the presence of doxycycline, enabling Tet-On gene expression systems.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Safe Harbor Locus",
-    definition: "A genomic location where transgene insertion does not disrupt essential gene functions and supports stable expression. Rosa26 and Hipp11 are common safe harbors.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Selection Cassette",
-    definition: "A DNA element containing a drug resistance gene used to identify ES cells that have incorporated the targeting vector. Typically flanked by FRT sites for removal.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Short Homology Arms",
-    definition: "DNA sequences (typically 50-500 bp) homologous to the target locus used in CRISPR-based targeting. Shorter than traditional homology arms but effective with nuclease-mediated breaks.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "Southern Blot",
-    definition: "A technique to detect specific DNA sequences in genomic DNA using labeled probes. Used to confirm correct targeting and allele structure in ES cells.",
-    category: "Laboratory Techniques"
-  },
-  {
-    term: "Strain Background",
-    definition: "The genetic background of a mouse strain, affecting phenotype expression. Common backgrounds include C57BL/6, 129, and BALB/c.",
-    category: "Mouse Development"
-  },
-  {
-    term: "Tamoxifen",
-    definition: "A synthetic estrogen receptor modulator used to activate Cre-ERT2 recombinase. Administration triggers nuclear localization of Cre-ERT2 and gene deletion.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Targeting Vector",
-    definition: "A DNA construct containing the desired modification flanked by homology arms, used to introduce changes at specific genomic locations through homologous recombination.",
-    category: "Tools & Vectors"
-  },
-  {
-    term: "tdTomato",
-    definition: "A bright red fluorescent protein reporter derived from DsRed. Widely used for lineage tracing and cell-type specific labeling due to high brightness.",
-    category: "Reporter Systems"
-  },
-  {
-    term: "Tet-Off System",
-    definition: "An inducible expression system where gene expression is active in the absence of doxycycline and silenced when doxycycline is present (using tTA).",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Tet-On System",
-    definition: "An inducible expression system where gene expression is silenced in the absence of doxycycline and activated when doxycycline is present (using rtTA).",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Tissue-Specific Expression",
-    definition: "Gene expression restricted to specific cell types or tissues, achieved through tissue-specific promoters or Cre driver lines.",
-    category: "Targeting Strategies"
-  },
-  {
-    term: "Transgene",
-    definition: "An exogenous gene introduced into an organism's genome. Transgenes may integrate randomly (pronuclear injection) or at specific sites (targeted insertion).",
-    category: "Model Types"
-  },
-  {
-    term: "Transgenic Mouse",
-    definition: "A mouse carrying an exogenous DNA sequence integrated into its genome. Can be generated by pronuclear injection or targeted knockin approaches.",
-    category: "Model Types"
-  },
-  {
-    term: "TRE (Tetracycline Response Element)",
-    definition: "A DNA element containing tetO sequences recognized by tetracycline transactivators. Placed upstream of genes for doxycycline-controlled expression.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "tTA (Tetracycline Transactivator)",
-    definition: "A transcriptional activator that binds TRE sequences in the absence of tetracycline/doxycycline, enabling Tet-Off gene expression systems.",
-    category: "Inducible Systems"
-  },
-  {
-    term: "Wild-Type",
-    definition: "The naturally occurring, non-mutant form of a gene or organism. Used as a control for comparison with targeted alleles.",
-    category: "Basic Genetics"
-  },
-  {
-    term: "Zygote",
-    definition: "A fertilized egg cell before the first cell division. Pronuclear injection targets the zygote stage for transgene delivery.",
-    category: "Mouse Development"
-  }
-];
-
-// Get all unique categories
-const categories = [...new Set(glossaryTerms.map(t => t.category))].sort();
 
 // CTA Data
 const ctaData = {
@@ -332,7 +31,7 @@ const ctaData = {
 export default function GlossaryPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<GlossaryCategory | null>(null);
 
   useEffect(() => {
     const initGSAP = async () => {
@@ -385,7 +84,7 @@ export default function GlossaryPage() {
     if (!acc[letter]) acc[letter] = [];
     acc[letter].push(term);
     return acc;
-  }, {} as Record<string, typeof glossaryTerms>);
+  }, {} as Record<string, GlossaryTerm[]>);
 
   const sortedLetters = Object.keys(groupedTerms).sort();
 
@@ -536,26 +235,29 @@ export default function GlossaryPage() {
                     fontWeight: 500
                   }}
                 >
-                  All
+                  All ({glossaryTerms.length})
                 </button>
-                {categories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    style={{
-                      padding: '8px 16px',
-                      fontSize: '.85rem',
-                      border: '1px solid #e0e0e0',
-                      borderRadius: '20px',
-                      background: selectedCategory === category ? '#008080' : '#ffffff',
-                      color: selectedCategory === category ? '#ffffff' : '#666',
-                      cursor: 'pointer',
-                      fontWeight: 500
-                    }}
-                  >
-                    {category}
-                  </button>
-                ))}
+                {glossaryCategories.map(category => {
+                  const count = glossaryTerms.filter(t => t.category === category).length;
+                  return (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      style={{
+                        padding: '8px 16px',
+                        fontSize: '.85rem',
+                        border: '1px solid #e0e0e0',
+                        borderRadius: '20px',
+                        background: selectedCategory === category ? '#008080' : '#ffffff',
+                        color: selectedCategory === category ? '#ffffff' : '#666',
+                        cursor: 'pointer',
+                        fontWeight: 500
+                      }}
+                    >
+                      {category} ({count})
+                    </button>
+                  );
+                })}
               </div>
             </div>
             
@@ -625,12 +327,19 @@ export default function GlossaryPage() {
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {groupedTerms[letter].map((item, index) => (
-                      <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
-                        background: '#f7f7f7',
-                        borderRadius: '8px',
-                        padding: '24px',
-                        borderLeft: '4px solid #008080'
-                      }}>
+                      <Link 
+                        key={index} 
+                        href={`/mouse-genetics-glossary/${item.slug}`}
+                        className="animate-in group transition-all duration-300 hover:shadow-lg hover:-translate-y-1" 
+                        style={{
+                          display: 'block',
+                          background: '#f7f7f7',
+                          borderRadius: '8px',
+                          padding: '24px',
+                          borderLeft: '4px solid #008080',
+                          textDecoration: 'none'
+                        }}
+                      >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px', marginBottom: '12px' }}>
                           <h3 style={{
                             fontFamily: 'Poppins, sans-serif',
@@ -661,7 +370,19 @@ export default function GlossaryPage() {
                         }}>
                           {item.definition}
                         </p>
-                      </div>
+                        <div style={{
+                          marginTop: '12px',
+                          fontSize: '.85rem',
+                          color: '#008080',
+                          fontWeight: 500,
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '4px'
+                        }}>
+                          Learn more
+                          <IconChevronRight size={14} color="#008080" />
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -727,7 +448,7 @@ export default function GlossaryPage() {
 
         {/* Related Resources Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
               fontSize: '2rem',
@@ -740,8 +461,10 @@ export default function GlossaryPage() {
             </h2>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               {[
-                { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
-                { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional" },
+                { href: "/knockout-mouse-models", label: "Knockout Mouse Models" },
+                { href: "/knockin-mouse-models", label: "Knockin Mouse Models" },
+                { href: "/conditional-knockout-mouse-models", label: "Conditional Knockouts" },
+                { href: "/humanized-mouse-models", label: "Humanized Models" },
                 { href: "/cre-lox-system", label: "Cre-Lox System" },
                 { href: "/resources", label: "All Resources" }
               ].map((link, index) => (

@@ -20,6 +20,7 @@ import {
   knockinTerms,
   LabSignalsSignup,
   getRelatedLabSignalsArticles,
+  GlossaryTermLink,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -132,14 +133,16 @@ const publicationsData = {
   ],
 };
 
-// Verified testimonial from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_BASSON, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+// Verified testimonials from master data - https://www.genetargeting.com/testimonials
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const testimonialData = {
-  quote: SINGLE_BASSON.quote,
-  name: formatAuthorWithCredentials(SINGLE_BASSON),
-  affiliation: SINGLE_BASSON.affiliation,
-};
+const bassonTestimonial = getTestimonialById('basson-kings')!;
+const rothTestimonial = getTestimonialById('roth-upenn')!;
+const arenzanaTestimonial = getTestimonialById('arenzana-pasteur')!;
+
+const testimonials = [
+  { quote: rothTestimonial.quote, name: formatAuthorWithCredentials(rothTestimonial), affiliation: rothTestimonial.affiliation },
+];
 
 const comparisonTable = [
   { goal: 'Model human disease mutation', knockin: 'Point mutation knockin', alternative: 'Transgenic (but loses native regulation)' },
@@ -149,14 +152,22 @@ const comparisonTable = [
   { goal: 'Tissue specific mutant expression', knockin: 'Conditional knockin', alternative: 'Viral delivery (but variable efficiency)' },
 ];
 
-const faqData = [
+const getFaqData = () => [
   {
     question: 'What is the difference between a knockin and a transgenic mouse?',
-    answer: 'A knockin mouse has a precise modification at a specific genomic location, typically the endogenous gene locus. Expression is controlled by native regulatory elements. A transgenic mouse carries randomly integrated DNA that inserts at unpredictable locations, often in multiple copies. Knockins provide physiological expression levels; transgenics often overexpress.',
+    answer: (
+      <>
+        A <GlossaryTermLink term="knockin-mouse-models">knockin mouse</GlossaryTermLink> has a precise modification at a specific genomic location, typically the endogenous gene locus. Expression is controlled by native regulatory elements. A transgenic mouse carries randomly integrated DNA that inserts at unpredictable locations, often in multiple copies via <GlossaryTermLink term="pronuclear-injection">pronuclear injection</GlossaryTermLink>. Knockins provide physiological expression levels through <GlossaryTermLink term="single-copy-integration">single-copy integration</GlossaryTermLink>; transgenics often overexpress.
+      </>
+    ),
   },
   {
     question: 'What reporter options are available for knockin models?',
-    answer: 'Common reporters include fluorescent proteins (GFP, EGFP, tdTomato, mCherry), enzymatic reporters (LacZ/beta-galactosidase), and bioluminescent reporters (luciferase). Reporter selection depends on your detection method, tissue of interest, and whether you need to combine with other fluorescent tools.',
+    answer: (
+      <>
+        Common <GlossaryTermLink term="reporter-gene-reporter-allele">reporters</GlossaryTermLink> include fluorescent proteins (GFP, EGFP, tdTomato, mCherry), enzymatic reporters (LacZ/beta-galactosidase), and bioluminescent reporters (luciferase). <GlossaryTermLink term="reporter-readouts">Reporter selection</GlossaryTermLink> depends on your detection method, tissue of interest, and whether you need to combine with other fluorescent tools.
+      </>
+    ),
   },
   {
     question: 'How do I choose between N-terminal and C-terminal tag placement?',
@@ -164,7 +175,11 @@ const faqData = [
   },
   {
     question: 'How long does it take to generate a knockin mouse model?',
-    answer: 'Knockin projects typically require 6-10 months depending on complexity. Point mutations and small tags are faster. Large insertions require more time. Timelines include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain germline transmission mice.',
+    answer: (
+      <>
+        Knockin projects typically require 6-10 months depending on complexity. <GlossaryTermLink term="point-mutation">Point mutations</GlossaryTermLink> and small tags are faster. Large insertions require more time. Timelines include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice.
+      </>
+    ),
   },
 ];
 
@@ -635,39 +650,50 @@ export default function KnockinMouseModelsPage() {
           </div>
         </section>
 
-        {/* ========== TESTIMONIAL ========== */}
+        {/* ========== TESTIMONIALS ========== */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               What Researchers Say
             </h2>
-            <div
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                padding: '40px',
-                border: '1px solid rgba(255,255,255,0.1)',
-              }}
-            >
-              <IconQuote size={40} color="#00d4d4" />
-              <p
-                style={{
-                  color: 'rgba(255,255,255,0.9)',
-                  fontSize: '1.1rem',
-                  fontWeight: 400,
-                  lineHeight: '1.8rem',
-                  fontStyle: 'italic',
-                  marginTop: '20px',
-                  marginBottom: '20px',
-                }}
-              >
-                "{testimonialData.quote}"
-              </p>
-              <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600 }}>
-                — {testimonialData.name}
-              </p>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.9rem', fontWeight: 400 }}>{testimonialData.affiliation}</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.05)',
+                    padding: '30px',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <IconQuote size={28} color="#00d4d4" />
+                  <p
+                    style={{
+                      color: 'rgba(255,255,255,0.9)',
+                      fontSize: '.95rem',
+                      fontWeight: 400,
+                      lineHeight: '1.6rem',
+                      fontStyle: 'italic',
+                      marginTop: '15px',
+                      marginBottom: '15px',
+                      flex: 1,
+                    }}
+                  >
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div style={{ marginTop: 'auto' }}>
+                    <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                      — {testimonial.name}
+                    </p>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-6" style={{ textAlign: 'center' }}>
               <Link
                 href="/testimonials"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-teal-700"
@@ -719,7 +745,7 @@ export default function KnockinMouseModelsPage() {
         />
 
         {/* ========== FAQ ========== */}
-        <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="white" />
+        <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={getFaqData()} backgroundColor="white" />
 
         {/* ========== RELATED LINKS ========== */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>

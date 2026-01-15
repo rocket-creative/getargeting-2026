@@ -39,6 +39,13 @@ export {
   transgenicTerms
 } from './GlossarySection';
 
+// Glossary Term Links (New - Phase 3)
+export { 
+  GlossaryTermLink, 
+  GlossaryHighlight,
+  getTermBySlug as getGlossaryTerm
+} from './GlossaryTermLink';
+
 // Icons - Flat SVG icons (no emojis)
 export * from './Icons';
 
