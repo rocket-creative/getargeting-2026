@@ -344,7 +344,7 @@ export default function LabSignalsPage() {
             </h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
             gap: '20px',
           }}>
             {[
@@ -480,7 +480,7 @@ export default function LabSignalsPage() {
           {/* Articles Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
             gap: '20px',
           }}>
             {filteredArticles.map((article) => (

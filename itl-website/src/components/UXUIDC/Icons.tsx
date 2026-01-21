@@ -461,3 +461,81 @@ export const IconVideo = ({ size = 24, color = 'currentColor', className = '', s
     <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
   </svg>
 );
+
+// Scale / Legal / Balance
+export const IconScale = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M12 3v18" />
+    <path d="M1 7h6l3 10H4L1 7z" />
+    <path d="M17 7h6l-3 10h-6l3-10z" />
+    <path d="M5 3h14" />
+    <circle cx="12" cy="3" r="1" />
+  </svg>
+);
+
+// Accessibility
+export const IconAccessibility = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <circle cx="12" cy="4" r="2" />
+    <path d="M12 6v6" />
+    <path d="M8 8l4 2 4-2" />
+    <path d="M12 12l-4 8" />
+    <path d="M12 12l4 8" />
+  </svg>
+);
+
+// Keyboard
+export const IconKeyboard = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
+    <path d="M6 8h.001" />
+    <path d="M10 8h.001" />
+    <path d="M14 8h.001" />
+    <path d="M18 8h.001" />
+    <path d="M8 12h.001" />
+    <path d="M12 12h.001" />
+    <path d="M16 12h.001" />
+    <path d="M7 16h10" />
+  </svg>
+);
+
+// Lock / Security
+export const IconLock = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+  </svg>
+);
+
+// Database
+export const IconDatabase = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <ellipse cx="12" cy="5" rx="9" ry="3" />
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+  </svg>
+);
+
+// Folder / Case
+export const IconFolder = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+  </svg>
+);
+
+// Lightbulb / Idea
+export const IconLightbulb = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+    <path d="M9 18h6" />
+    <path d="M10 22h4" />
+  </svg>
+);
+
+// TrendingUp / Growth
+export const IconTrendingUp = ({ size = 24, color = 'currentColor', className = '', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+    <polyline points="17 6 23 6 23 12" />
+  </svg>
+);

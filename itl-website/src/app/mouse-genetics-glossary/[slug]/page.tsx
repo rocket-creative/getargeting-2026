@@ -381,7 +381,7 @@ export default async function GlossaryTermPage({
               }}>
                 Related Terms
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '16px' }}>
                 {relatedTerms.map((relTerm) => (
                   <Link
                     key={relTerm.slug}

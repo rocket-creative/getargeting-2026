@@ -202,7 +202,7 @@ export default function GlossaryPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
               {/* Search Box */}
-              <div style={{ position: 'relative', flex: '1', minWidth: '300px', maxWidth: '500px' }}>
+              <div style={{ position: 'relative', flex: '1', minWidth: 'min(100%, 300px)', maxWidth: '500px' }}>
                 <IconSearch size={18} color="#666" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
                 <input
                   type="text"
