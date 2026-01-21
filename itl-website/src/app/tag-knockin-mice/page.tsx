@@ -192,7 +192,7 @@ const faqData = [
   },
   {
     question: "Can tagged proteins be used for live imaging?",
-    answer: "Yes, but standard epitope tags (FLAG, HA, V5) require fixation and antibodies for detection. For live imaging, fluorescent protein tags (GFP, mCherry, tdTomato) are used instead. These can be knocked in similarly to epitope tags and enable real-time visualization of protein localization and dynamics in living cells and tissues."
+    answer: "Yes, but standard epitope tags (FLAG, HA, V5) require fixation and antibodies for detection. For live imaging, fluorescent protein tags (GFP, mCherry, tdTomato) are used instead. These can be knocked in similarly to epitope tags and enable real time visualization of protein localization and dynamics in living cells and tissues."
   },
   {
     question: "What is the advantage of tag knockin over using gene-specific antibodies?",

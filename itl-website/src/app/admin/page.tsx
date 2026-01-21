@@ -137,7 +137,7 @@ export default function AdminDashboardPage() {
   useEffect(() => {
     if (isAuthenticated) {
       fetchData();
-      // Refresh real-time data every 30 seconds
+      // Refresh data every 30 seconds
       const interval = setInterval(fetchData, 30000);
       return () => clearInterval(interval);
     }
@@ -220,11 +220,11 @@ export default function AdminDashboardPage() {
           </div>
         ) : null}
 
-        {/* Real-time Users Banner */}
+        {/* Active Users Banner */}
         <div className="bg-gradient-to-r from-[#002B5C] to-[#004080] text-white rounded-xl p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm opacity-80">Real-time Active Users</p>
+              <p className="text-sm opacity-80">Active Users Now</p>
               <p className="text-4xl font-bold mt-1">
                 {loading ? '...' : data?.realtime.activeUsers ?? 0}
               </p>
