@@ -11,17 +11,29 @@ const SHEET_NAME = 'ITL-Cat-24-25';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+export const runtime = 'nodejs';
+
+const noStore = { 'Cache-Control': 'no-store' };
 
 export async function GET() {
-  const apiKey = process.env.GOOGLE_SHEETS_API_KEY;
+  const apiKey = (
+    process.env.GOOGLE_SHEETS_API_KEY ??
+    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY ??
+    process.env.CATALOG_API_KEY ??
+    ''
+  ).trim();
 
   if (!apiKey) {
+    console.warn(
+      '[api/catalog] GOOGLE_SHEETS_API_KEY, NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY, and CATALOG_API_KEY all missing. Check Vercel → Settings → Environment Variables, scope, and redeploy.'
+    );
     return NextResponse.json(
       {
         error: 'Catalog not configured',
-        message: 'GOOGLE_SHEETS_API_KEY is not set. Catalog search is unavailable.',
+        message:
+          'GOOGLE_SHEETS_API_KEY is not set. Try /api/catalog/status to debug. In Vercel: add GOOGLE_SHEETS_API_KEY or CATALOG_API_KEY, scope Production/Preview, then redeploy.',
       },
-      { status: 503 }
+      { status: 503, headers: noStore }
     );
   }
 
