@@ -132,6 +132,14 @@ NEXT_PUBLIC_ADROLL_ADV_ID=XXXXXXXXXXXXXXXXXXXX
 NEXT_PUBLIC_ADROLL_PIX_ID=XXXXXXXXXXXXXXXXXXXX
 
 # ============================================
+# Catalog Search (Google Sheets)
+# Required for catalog model search on /catalog-mouse-models, /all-catalog-mouse-models, etc.
+# Get from: Google Cloud Console → APIs & Services → Credentials → Create API key
+# Enable "Google Sheets API" for the project. See CATALOG-SETUP.md for details.
+# ============================================
+GOOGLE_SHEETS_API_KEY=your-google-sheets-api-key
+
+# ============================================
 # Admin Dashboard
 # ============================================
 ADMIN_PASSWORD=your-secure-password
