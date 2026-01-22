@@ -55,16 +55,20 @@ RULES_2026/
     ├── accessibility.mdc     # WCAG compliance
     ├── api-patterns.mdc      # API design patterns
     ├── assets-images.mdc     # Image & asset management
+    ├── bundle-optimization.mdc # Bundle analysis & code splitting
     ├── coding-style.mdc      # Code style conventions
     ├── component-standards.mdc # Component architecture
     ├── content-copy.mdc      # Content writing rules
     ├── core-stack.mdc        # Technology stack
     ├── design-philosophy.mdc # Design taste & principles
     ├── design-system.mdc     # Design system template
+    ├── dynamic-imports.mdc   # Dynamic imports & lazy loading
     ├── git-workflow.mdc      # Git conventions
+    ├── nextjs-build-optimization.mdc # Next.js build config & optimizations
     ├── observability.mdc     # Logging & monitoring
     ├── performance.mdc       # Performance requirements
     ├── privacy-compliance.mdc # GDPR/CCPA compliance
+    ├── refactoring.mdc       # LLM-assisted code refactoring process
     ├── security.mdc          # Security baseline requirements
     ├── security-hardening.mdc # Detailed vulnerability patterns & fixes (CRITICAL)
     ├── seo-ai-readability.mdc # SEO & AI optimization
@@ -82,8 +86,12 @@ RULES_2026/
 - `rules/seo-ai-readability.mdc` - SEO standards
 - `rules/accessibility.mdc` - WCAG compliance
 - `rules/privacy-compliance.mdc` - Privacy requirements
+- `rules/refactoring.mdc` - LLM-assisted refactoring process
 - `rules/security.mdc` - Security requirements
 - `rules/performance.mdc` - Performance targets
+- `rules/bundle-optimization.mdc` - Bundle analysis & code splitting
+- `rules/dynamic-imports.mdc` - Dynamic imports & lazy loading patterns
+- `rules/nextjs-build-optimization.mdc` - Next.js build configuration
 - `docs/ERROR_PATTERNS.mdc` - Common errors
 - `docs/BUILD_ERRORS.mdc` - Build error solutions
 - `docs/DEPLOYMENT_CHECKLIST.mdc` - Deployment verification
@@ -156,6 +164,7 @@ Every AI response that changes code must include a Change Log explaining what, w
 | Version | Date | Changes |
 |---------|------|---------|
 | 2026.1 | Jan 2026 | Initial release with comprehensive SEO, error logging, deployment checklists |
+| 2026.2 | Jan 2026 | Added bundle optimization, dynamic imports, and Next.js build optimization rules |
 
 ---
 

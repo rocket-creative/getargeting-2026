@@ -167,12 +167,12 @@ export default function UXUIDCCookieConsent() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
                 <button
-                  onClick={() => setShowPreferences(true)}
-                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                  onClick={() => savePreferences(true)}
+                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium order-first sm:order-none"
                 >
-                  Cookie Settings
+                  Accept All
                 </button>
                 <button
                   onClick={rejectAll}
@@ -181,10 +181,10 @@ export default function UXUIDCCookieConsent() {
                   Reject Non-Essential
                 </button>
                 <button
-                  onClick={() => savePreferences(true)}
-                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium"
+                  onClick={() => setShowPreferences(true)}
+                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
                 >
-                  Accept All
+                  Cookie Settings
                 </button>
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function UXUIDCCookieConsent() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-end">
+              <div className="flex flex-col sm:flex-row gap-3 justify-end flex-wrap">
                 <button
                   onClick={() => setShowPreferences(false)}
                   className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
@@ -281,10 +281,22 @@ export default function UXUIDCCookieConsent() {
                   Back
                 </button>
                 <button
+                  onClick={rejectAll}
+                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                >
+                  Reject Non-Essential
+                </button>
+                <button
                   onClick={() => savePreferences(false)}
-                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium"
+                  className="px-6 py-2.5 border border-[var(--cta)] text-[var(--cta)] rounded-lg hover:bg-[var(--cta)]/5 transition text-sm font-medium"
                 >
                   Save Preferences
+                </button>
+                <button
+                  onClick={() => savePreferences(true)}
+                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium"
+                >
+                  Accept All
                 </button>
               </div>
             </div>

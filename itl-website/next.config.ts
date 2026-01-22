@@ -48,12 +48,63 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Performance optimizations
+  compress: true,
+  
+  // Image optimization
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+
+  // Experimental features for performance
+  experimental: {
+    optimizePackageImports: ['gsap', '@headlessui/react'],
+  },
+
+  // Turbopack configuration (Next.js 16+)
+  // Note: Webpack config below only applies when using webpack bundler
+  turbopack: {},
+
   // Security headers for all routes
   async headers() {
     return [
       {
         source: '/:path*',
         headers: securityHeaders,
+      },
+      // Cache static assets
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
     ];
   },
@@ -66,6 +117,58 @@ const nextConfig: NextConfig = {
       permanent: redirect.permanent,
     }));
   },
+
+  // Webpack optimizations (only applies when using --webpack flag)
+  // Turbopack has built-in optimizations, but webpack config is kept for compatibility
+  webpack: (config, { isServer }) => {
+    // Optimize bundle size
+    if (!isServer) {
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            // GSAP vendor chunk
+            gsap: {
+              name: 'gsap',
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/](gsap)[\\/]/,
+              priority: 30,
+            },
+            // React vendor chunk
+            react: {
+              name: 'react',
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              priority: 20,
+            },
+            // Other vendor chunk
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/]/,
+              priority: 10,
+            },
+          },
+        },
+      };
+    }
+    return config;
+  },
 };
 
-export default nextConfig;
+// Conditionally apply bundle analyzer
+let config: NextConfig = nextConfig;
+
+if (process.env.ANALYZE === 'true') {
+  const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: true,
+  });
+  config = withBundleAnalyzer(config);
+}
+
+export default config;
