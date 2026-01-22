@@ -1,18 +1,13 @@
 /**
  * |UXUIDC| Catalog Search Component
- * @version 1.0.0
- * Searches 10,000+ mouse models from Google Sheets API
+ * @version 1.1.0
+ * Searches 10,000+ mouse models via /api/catalog (Google Sheets proxied server-side)
  */
 
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
-
-// Google Sheets API Configuration
-const SPREADSHEET_ID = '1DG54nHKf-A-7Ii8nSHvps74nCXbmNsPk51uL15JzuRU';
-const SHEET_NAME = 'ITL-Cat-24-25';
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY || '';
 
 interface CatalogModel {
   id: string;
@@ -47,55 +42,51 @@ export function CatalogSearch({
   const [headers, setHeaders] = useState<string[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Fetch data from Google Sheets
+  // Fetch data from /api/catalog (proxied Google Sheets, no CORS)
   const fetchCatalogData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    
+
     try {
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
-      const response = await fetch(url);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch catalog data');
+      const res = await fetch('/api/catalog');
+      const data = await res.json();
+
+      if (!res.ok) {
+        const msg = (data?.message || data?.error) ?? 'Catalog is temporarily unavailable.';
+        throw new Error(msg);
       }
-      
-      const data = await response.json();
-      
-      if (!data.values || data.values.length < 2) {
-        throw new Error('No data found in spreadsheet');
+
+      if (!data.values || !Array.isArray(data.values) || data.values.length < 2) {
+        throw new Error('No catalog data available.');
       }
-      
-      // First row is headers
+
       const headerRow = data.values[0] as string[];
       setHeaders(headerRow);
-      
-      // Convert rows to objects
-      const models: CatalogModel[] = data.values.slice(1).map((row: string[], index: number) => {
-        const model: CatalogModel = {
-          id: `model-${index}`,
-          geneName: row[0] || '',
-          modelType: row[1] || '',
-          background: row[2] || '',
-          description: row[3] || '',
-          category: row[4] || '',
-          availability: row[5] || '',
-        };
-        
-        // Add any additional columns dynamically
-        headerRow.forEach((header, i) => {
-          if (i > 5 && row[i]) {
-            model[header.toLowerCase().replace(/\s+/g, '_')] = row[i];
-          }
-        });
-        
-        return model;
-      }).filter((model: CatalogModel) => model.geneName); // Filter out empty rows
-      
+
+      const models: CatalogModel[] = data.values
+        .slice(1)
+        .map((row: string[], index: number) => {
+          const model: CatalogModel = {
+            id: `model-${index}`,
+            geneName: row[0] || '',
+            modelType: row[1] || '',
+            background: row[2] || '',
+            description: row[3] || '',
+            category: row[4] || '',
+            availability: row[5] || '',
+          };
+          headerRow.forEach((h, i) => {
+            if (i > 5 && row[i]) model[h.toLowerCase().replace(/\s+/g, '_')] = row[i];
+          });
+          return model;
+        })
+        .filter((m: CatalogModel) => m.geneName);
+
       setAllModels(models);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-      console.error('Error fetching catalog data:', err);
+      const message = err instanceof Error ? err.message : 'Catalog search is temporarily unavailable.';
+      setError(message);
+      console.error('Catalog fetch error:', err);
     } finally {
       setIsLoading(false);
     }
@@ -282,28 +273,67 @@ export function CatalogSearch({
       {error && (
         <div style={{
           textAlign: 'center',
-          padding: '20px',
-          background: '#f5f5f5',
+          padding: '24px',
+          background: '#f9f9f9',
           borderRadius: '8px',
-          color: '#666',
+          border: '1px solid #e0e0e0',
+          color: '#333',
           fontSize: '.9rem',
         }}>
-          <p style={{ margin: 0 }}>{error}</p>
-          <button
-            onClick={fetchCatalogData}
-            style={{
-              marginTop: '12px',
-              padding: '8px 16px',
-              background: '#666',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '.85rem',
-            }}
-          >
-            Try Again
-          </button>
+          <p style={{ margin: '0 0 8px', fontWeight: 500 }}>Catalog search is temporarily unavailable</p>
+          <p style={{ margin: 0, color: '#666', fontSize: '.85rem' }}>{error}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginTop: '16px' }}>
+            <button
+              onClick={fetchCatalogData}
+              style={{
+                padding: '10px 20px',
+                background: '#008080',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontSize: '.9rem',
+                fontWeight: 600,
+              }}
+            >
+              Try Again
+            </button>
+            <Link
+              href="/all-catalog-mouse-models"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '10px 20px',
+                background: '#f0f0f0',
+                color: '#333',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 500,
+                textDecoration: 'none',
+              }}
+            >
+              Browse catalog
+            </Link>
+            <Link
+              href="/contact"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '10px 20px',
+                background: 'transparent',
+                color: '#008080',
+                border: '1px solid #008080',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 500,
+                textDecoration: 'none',
+              }}
+            >
+              Contact us
+            </Link>
+          </div>
         </div>
       )}
 

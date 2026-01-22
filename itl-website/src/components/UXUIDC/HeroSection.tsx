@@ -73,7 +73,8 @@ export default function UXUIDCHeroSection({
       style={{
         backgroundImage: 'url(/images/mouse-hero-blue.jpg)',
         backgroundPosition: '0 0',
-        backgroundSize: 'auto',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         minHeight: '600px'
       }}
     >

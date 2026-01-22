@@ -8,6 +8,8 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -48,6 +50,13 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <head>
         <link rel="canonical" href="https://www.genetargeting.com" />
+        {/* Preload critical hero image */}
+        <link
+          rel="preload"
+          href="/images/mouse-hero-blue.jpg"
+          as="image"
+          fetchPriority="high"
+        />
       </head>
       <body className="antialiased">
         {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}

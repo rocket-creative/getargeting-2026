@@ -30,6 +30,7 @@ When deploying, ensure all required vars are set.
 | Variable | Required | Public | Description |
 |----------|----------|--------|-------------|
 | `META_CAPI_ACCESS_TOKEN` | No | **No** | Meta Conversions API token |
+| `GOOGLE_SHEETS_API_KEY` | No | **No** | Google Sheets API key for catalog search (/api/catalog) |
 | `DATABASE_URL` | Varies | **No** | Database connection string |
 | `API_SECRET_KEY` | Varies | **No** | API authentication key |
 
@@ -102,25 +103,21 @@ When deploying, ensure all required vars are set.
 
 ## Project-Specific Variables
 
-Add your project-specific environment variables here:
+### GOOGLE_SHEETS_API_KEY
 
-```markdown
-### [VARIABLE_NAME]
+**Purpose:** Google Sheets API key used by `/api/catalog` to fetch catalog mouse model data. Required for Catalog Search on catalog pages, order-catalog-models, etc.
 
-**Purpose:** [What this variable is used for]
+**Format:** API key string (from Google Cloud Console)
 
-**Format:** [Expected format]
+**Required:** No. If missing, catalog search shows a friendly error with “Try Again”, “Browse catalog”, and “Contact us”.
 
-**Required:** Yes/No
-
-**Public:** Yes/No (can it be exposed to browser?)
-
-**Default:** [Default value if any]
+**Public:** No (server-only, used only in API route)
 
 **Setup:**
-1. [Step 1]
-2. [Step 2]
-```
+1. Google Cloud Console → APIs & Services → Credentials
+2. Create API key, restrict to “Google Sheets API” (and optionally to your domain)
+3. Enable “Google Sheets API” for the project
+4. Add to `.env.local` and deployment env as `GOOGLE_SHEETS_API_KEY`
 
 ---
 
@@ -163,6 +160,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 # API Keys (if needed locally)
 # DATABASE_URL=
+# GOOGLE_SHEETS_API_KEY=   # For catalog search (/api/catalog)
 ```
 
 **Note:** `.env.local` should be in `.gitignore` and never committed.

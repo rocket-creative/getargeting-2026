@@ -5,6 +5,7 @@
  */
 
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -13,17 +14,40 @@ import {
   LabSignalsSignup,
 } from '@/components/UXUIDC';
 
-// Components for each section
+// Critical above-fold components - loaded immediately
 import HeroSection from './components/homepage/HeroSection';
 import CoreServicesSection from './components/homepage/CoreServicesSection';
 import OverviewSection from './components/homepage/OverviewSection';
-import ModelLandscapeSection from './components/homepage/ModelLandscapeSection';
-import HighLevelApproachSection from './components/homepage/HighLevelApproachSection';
-import WorkflowSection from './components/homepage/WorkflowSection';
-import TrustedBySection from './components/homepage/TrustedBySection';
-import TestimonialsSection from './components/homepage/TestimonialsSection';
-import StartProjectSection from './components/homepage/StartProjectSection';
-import FAQSection from './components/homepage/FAQSection';
+
+// Below-fold components - lazy loaded for better initial performance
+const ModelLandscapeSection = dynamic(
+  () => import('./components/homepage/ModelLandscapeSection'),
+  { ssr: true }
+);
+const HighLevelApproachSection = dynamic(
+  () => import('./components/homepage/HighLevelApproachSection'),
+  { ssr: true }
+);
+const WorkflowSection = dynamic(
+  () => import('./components/homepage/WorkflowSection'),
+  { ssr: true }
+);
+const TrustedBySection = dynamic(
+  () => import('./components/homepage/TrustedBySection'),
+  { ssr: true }
+);
+const TestimonialsSection = dynamic(
+  () => import('./components/homepage/TestimonialsSection'),
+  { ssr: true }
+);
+const StartProjectSection = dynamic(
+  () => import('./components/homepage/StartProjectSection'),
+  { ssr: true }
+);
+const FAQSection = dynamic(
+  () => import('./components/homepage/FAQSection'),
+  { ssr: true }
+);
 // Video section removed per user request
 
 // ============================================
