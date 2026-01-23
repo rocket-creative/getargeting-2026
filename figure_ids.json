@@ -1,0 +1,232 @@
+[
+  {
+    "category": "A2",
+    "title": "FLP-FRT Recombination System",
+    "figure_id": "fig-flp-frt-001"
+  },
+  {
+    "category": "A3",
+    "title": "CreERT2 Tamoxifen Induction Mechanism",
+    "figure_id": "fig-creert2-001"
+  },
+  {
+    "category": "A4",
+    "title": "Conditional Knockout Mechanism",
+    "figure_id": "fig-cko-mechanism-001"
+  },
+  {
+    "category": "A5",
+    "title": "Tissue-Specific Cre Expression Pattern",
+    "figure_id": "fig-tissue-cre-001"
+  },
+  {
+    "category": "A6",
+    "title": "Humanized Gene Strategy",
+    "figure_id": "fig-humanization-001"
+  },
+  {
+    "category": "A7",
+    "title": "Knockin vs Knockout Comparison",
+    "figure_id": "fig-ki-vs-ko-001"
+  },
+  {
+    "category": "A8",
+    "title": "Reporter Gene Mechanism",
+    "figure_id": "fig-reporter-001"
+  },
+  {
+    "category": "A9",
+    "title": "Point Mutation Knockin",
+    "figure_id": "fig-point-mutation-001"
+  },
+  {
+    "category": "A10",
+    "title": "Tag Knockin Design",
+    "figure_id": "fig-tag-knockin-001"
+  },
+  {
+    "category": "A11",
+    "title": "Doxycycline Inducible System",
+    "figure_id": "fig-tet-system-001"
+  },
+  {
+    "category": "A12",
+    "title": "ROSA26 Safe Harbor Locus",
+    "figure_id": "fig-rosa26-001"
+  },
+  {
+    "category": "A13",
+    "title": "ES Cell Gene Targeting",
+    "figure_id": "fig-es-targeting-001"
+  },
+  {
+    "category": "A14",
+    "title": "LoxP Site Positioning",
+    "figure_id": "fig-loxp-design-001"
+  },
+  {
+    "category": "A15",
+    "title": "Inversion vs Excision",
+    "figure_id": "fig-inversion-excision-001"
+  },
+  {
+    "category": "A16",
+    "title": "Transgenic vs Knockin Comparison",
+    "figure_id": "fig-tg-vs-ki-001"
+  },
+  {
+    "category": "B1",
+    "title": "Derivative Allele System (tm1a/b/c/d)",
+    "figure_id": "fig-derivative-001"
+  },
+  {
+    "category": "B2",
+    "title": "Knockout Allele Structure",
+    "figure_id": "fig-ko-structure-001"
+  },
+  {
+    "category": "B3",
+    "title": "Conventional vs Conditional Allele Structure",
+    "figure_id": "fig-conv-vs-cond-001"
+  },
+  {
+    "category": "B4",
+    "title": "Floxed Allele Design",
+    "figure_id": "fig-floxed-001"
+  },
+  {
+    "category": "B5",
+    "title": "Knockout-First Allele (tm1a)",
+    "figure_id": "fig-tm1a-001"
+  },
+  {
+    "category": "B6",
+    "title": "cDNA Knockin Structure",
+    "figure_id": "fig-cdna-ki-001"
+  },
+  {
+    "category": "B7",
+    "title": "Conditional Knockin (LSL) Structure",
+    "figure_id": "fig-lsl-ki-001"
+  },
+  {
+    "category": "B8",
+    "title": "Reporter Allele Configurations",
+    "figure_id": "fig-reporter-configs-001"
+  },
+  {
+    "category": "B9",
+    "title": "Inducible ROSA26 Allele",
+    "figure_id": "fig-rosa26-inducible-001"
+  },
+  {
+    "category": "B10",
+    "title": "Dual Recombinase Allele",
+    "figure_id": "fig-dual-recombinase-001"
+  },
+  {
+    "category": "B11",
+    "title": "H11 Safe Harbor Locus",
+    "figure_id": "fig-h11-001"
+  },
+  {
+    "category": "B12",
+    "title": "Selection Cassette Designs",
+    "figure_id": "fig-selection-cassette-001"
+  },
+  {
+    "category": "C1",
+    "title": "Amyloid Cascade Pathway",
+    "figure_id": "fig-amyloid-001"
+  },
+  {
+    "category": "C2",
+    "title": "Tau Pathology Mechanism",
+    "figure_id": "fig-tau-001"
+  },
+  {
+    "category": "C3",
+    "title": "Immune Checkpoint Pathway",
+    "figure_id": "fig-checkpoint-001"
+  },
+  {
+    "category": "C4",
+    "title": "Parkinson's Disease Pathway",
+    "figure_id": "fig-parkinsons-001"
+  },
+  {
+    "category": "C5",
+    "title": "Metabolic Disease Pathway",
+    "figure_id": "fig-metabolic-001"
+  },
+  {
+    "category": "C6",
+    "title": "Cardiovascular Disease Mechanisms",
+    "figure_id": "fig-cardiovascular-001"
+  },
+  {
+    "category": "C7",
+    "title": "IBD/Inflammatory Pathway",
+    "figure_id": "fig-ibd-001"
+  },
+  {
+    "category": "C8",
+    "title": "Muscular Dystrophy Mechanism",
+    "figure_id": "fig-dmd-001"
+  },
+  {
+    "category": "C9",
+    "title": "Huntington's Disease Pathway",
+    "figure_id": "fig-huntingtons-001"
+  },
+  {
+    "category": "C10",
+    "title": "ALS Disease Mechanisms",
+    "figure_id": "fig-als-001"
+  },
+  {
+    "category": "D1",
+    "title": "Knockout Strategy Decision Tree",
+    "figure_id": "fig-ko-decision-001"
+  },
+  {
+    "category": "D2",
+    "title": "Conditional vs Conventional Comparison",
+    "figure_id": "fig-cond-conv-compare-001"
+  },
+  {
+    "category": "D3",
+    "title": "Cre Line Selection Guide",
+    "figure_id": "fig-cre-selection-001"
+  },
+  {
+    "category": "D4",
+    "title": "Reporter Selection Guide",
+    "figure_id": "fig-reporter-selection-001"
+  },
+  {
+    "category": "D5",
+    "title": "Strain Background Selection",
+    "figure_id": "fig-strain-selection-001"
+  },
+  {
+    "category": "E1",
+    "title": "Mouse Model Generation Timeline",
+    "figure_id": "fig-timeline-001"
+  },
+  {
+    "category": "E2",
+    "title": "Breeding Scheme for Homozygotes",
+    "figure_id": "fig-breeding-001"
+  },
+  {
+    "category": "E3",
+    "title": "Conditional Knockout Breeding",
+    "figure_id": "fig-cko-breeding-001"
+  },
+  {
+    "category": "E4",
+    "title": "Derivative Allele Conversion Workflow",
+    "figure_id": "fig-derivative-workflow-001"
+  }
+]
