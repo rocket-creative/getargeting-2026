@@ -272,7 +272,7 @@ export default function CustomAnimalModelsPage() {
                       alignSelf: 'flex-start',
                     }}
                   >
-                    <span>Learn More</span>
+                    <span>Learn more</span>
                     <IconArrowRight size={14} color="white" />
                   </Link>
                 </div>

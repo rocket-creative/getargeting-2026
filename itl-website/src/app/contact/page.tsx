@@ -347,7 +347,7 @@ export default function ContactPage() {
                         fontWeight: 600,
                       }}
                     >
-                      <span>Get Started</span>
+                      <span>Get started</span>
                       <IconArrowRight size={14} />
                     </div>
                   </Link>
@@ -493,7 +493,7 @@ export default function ContactPage() {
                     fontWeight: 600,
                   }}
                 >
-                  <span>Contact Us</span>
+                  <span>Contact us</span>
                   <IconArrowRight size={16} />
                 </a>
               </div>

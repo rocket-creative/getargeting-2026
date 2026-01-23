@@ -3,34 +3,18 @@
  * Auto-generated for canonical URLs and structured data
  */
 
-import { Metadata } from 'next';
+import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'IBD Mouse Models | ingenious targeting laboratory',
+export const metadata = generateMetadata({
+  title: 'IBD Mouse Models',
   description: 'IBD Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/ibd-mouse-models',
-  },
-  openGraph: {
-    title: 'IBD Mouse Models | ingenious targeting laboratory',
-    description: 'IBD Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-    url: 'https://www.genetargeting.com/ibd-mouse-models',
-    siteName: 'ingenious targeting laboratory',
-    locale: 'en_US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  path: '/ibd-mouse-models',
+});
 
 // BreadcrumbList structured data
-export const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.genetargeting.com" },
-    { "@type": "ListItem", position: 2, name: "IBD Mouse Models", item: "https://www.genetargeting.com/ibd-mouse-models" }
+export const breadcrumbSchema = generateBreadcrumbs({
+  items: [
+    { name: 'Home', path: '/' },
+    { name: 'IBD Mouse Models', path: '/ibd-mouse-models' },
   ],
-};
+});

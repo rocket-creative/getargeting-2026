@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconZap, IconEye, IconImage, IconQuote, IconChevronRight, IconFileText, IconUsers, IconFlask, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -390,19 +390,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
               </div>
               
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Conditional Knockout Visual</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-cko-mechanism-001"
+                  aspectRatio="4:3"
+                  title="Conditional Knockout Mechanism"
+                  caption="Fig. 1: Floxed alleles function normally until Cre expression triggers tissue-specific gene deletion."
+                  variant="hero"
+                  altText="Conditional knockout mechanism showing floxed allele before and after Cre-mediated excision"
+                />
               </div>
             </div>
           </div>
@@ -505,19 +500,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 </Link>
               </div>
               <div className="animate-in">
-                <div style={{
-                  border: '2px dashed #ccc',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'white'
-                }}>
-                  <IconImage size={50} color="#ccc" />
-                  <span style={{ color: '#999', fontSize: '.8rem', marginTop: '10px' }}>Cre Lox Mechanism Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-floxed-001"
+                  aspectRatio="4:3"
+                  title="Floxed Allele Design"
+                  caption="Fig. 2: A properly designed floxed allele functions normally until exposed to Cre recombinase, then becomes a null allele."
+                  variant="section"
+                  altText="Floxed allele design showing normal function before and null after Cre exposure"
+                />
               </div>
             </div>
           </div>
@@ -628,19 +618,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 </Link>
               </div>
               <div className="animate-in">
-                <div style={{
-                  border: '2px dashed #ccc',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'white'
-                }}>
-                  <IconImage size={50} color="#ccc" />
-                  <span style={{ color: '#999', fontSize: '.8rem', marginTop: '10px' }}>CreERT2 Inducible System</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-creert2-001"
+                  aspectRatio="4:3"
+                  title="CreERT2 Tamoxifen Induction Mechanism"
+                  caption="Fig. 3: CreERT2 remains cytoplasmic until tamoxifen binding triggers nuclear translocation and Cre activity."
+                  variant="section"
+                  altText="Tamoxifen-inducible CreERT2 mechanism showing cytoplasmic sequestration and nuclear translocation"
+                />
               </div>
             </div>
           </div>
@@ -780,19 +765,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 </ul>
               </div>
               <div className="animate-in">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={50} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>TruView Technology Visual</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-reporter-configs-001"
+                  aspectRatio="4:3"
+                  title="TruView Reporter Configuration"
+                  caption="Fig. 4: TruView technology provides strong reporter expression after knockout for visualization of recombined cells."
+                  variant="hero"
+                  altText="TruView conditional knockout reporter configuration and expression visualization"
+                />
               </div>
             </div>
           </div>

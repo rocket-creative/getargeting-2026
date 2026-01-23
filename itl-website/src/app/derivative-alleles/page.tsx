@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA, IconFlask, IconSettings } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -357,19 +358,14 @@ export default function DerivativeAllelesPage() {
               </div>
 
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Derivative Allele Pathway Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-derivative-001"
+                  aspectRatio="4:3"
+                  title="Derivative Allele System (tm1a/b/c/d)"
+                  caption="Fig. 1: The derivative allele system generates four functional configurations from a single ES cell targeting event."
+                  variant="hero"
+                  altText="Derivative allele system showing tm1a to tm1b, tm1c, and tm1d conversions"
+                />
               </div>
             </div>
           </div>

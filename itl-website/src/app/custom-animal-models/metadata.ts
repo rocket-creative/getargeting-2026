@@ -3,34 +3,18 @@
  * Auto-generated for canonical URLs and structured data
  */
 
-import { Metadata } from 'next';
+import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Custom Animal Models | ingenious targeting laboratory',
+export const metadata = generateMetadata({
+  title: 'Custom Animal Models',
   description: 'Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/custom-animal-models',
-  },
-  openGraph: {
-    title: 'Custom Animal Models | ingenious targeting laboratory',
-    description: 'Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-    url: 'https://www.genetargeting.com/custom-animal-models',
-    siteName: 'ingenious targeting laboratory',
-    locale: 'en_US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  path: '/custom-animal-models',
+});
 
 // BreadcrumbList structured data
-export const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.genetargeting.com" },
-    { "@type": "ListItem", position: 2, name: "Custom Animal Models", item: "https://www.genetargeting.com/custom-animal-models" }
+export const breadcrumbSchema = generateBreadcrumbs({
+  items: [
+    { name: 'Home', path: '/' },
+    { name: 'Custom Animal Models', path: '/custom-animal-models' },
   ],
-};
+});

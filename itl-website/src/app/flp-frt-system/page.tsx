@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink } from '@/components/UXUIDC';
+import { GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Note: Metadata exported from metadata.ts for this client component
 
@@ -173,10 +173,14 @@ export default function FlpFrtSystemPage() {
                 </div>
               </div>
               <div className="hero-animate">
-                <div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>FLP FRT System Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-flp-frt-001"
+                  aspectRatio="4:3"
+                  title="FLP-FRT Recombination System"
+                  caption="Fig. 1: FLP recombinase from yeast excises DNA between FRT sites, commonly used for selection cassette removal."
+                  variant="hero"
+                  altText="FLP-FRT recombination system diagram showing DNA excision and inversion outcomes"
+                />
               </div>
             </div>
           </div>
@@ -305,7 +309,7 @@ export default function FlpFrtSystemPage() {
 
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
             <div className="animate-in"><UXUIDCAnimatedFAQ faqs={getFaqData()} /></div>
           </div>
         </section>

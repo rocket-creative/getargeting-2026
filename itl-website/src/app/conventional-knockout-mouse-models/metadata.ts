@@ -3,35 +3,19 @@
  * Auto-generated for canonical URLs and structured data
  */
 
-import { Metadata } from 'next';
+import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Conventional Knockout Mouse Models | ingenious targeting laboratory',
+export const metadata = generateMetadata({
+  title: 'Conventional Knockout Mouse Models',
   description: 'Conventional Knockout Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/conventional-knockout-mouse-models',
-  },
-  openGraph: {
-    title: 'Conventional Knockout Mouse Models | ingenious targeting laboratory',
-    description: 'Conventional Knockout Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
-    url: 'https://www.genetargeting.com/conventional-knockout-mouse-models',
-    siteName: 'ingenious targeting laboratory',
-    locale: 'en_US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  path: '/conventional-knockout-mouse-models',
+});
 
 // BreadcrumbList structured data
-export const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.genetargeting.com" },
-    { "@type": "ListItem", position: 2, name: "Custom Models", item: "https://www.genetargeting.com/custom-mouse-models" },
-    { "@type": "ListItem", position: 3, name: "Conventional Knockout Mouse Models", item: "https://www.genetargeting.com/conventional-knockout-mouse-models" }
+export const breadcrumbSchema = generateBreadcrumbs({
+  items: [
+    { name: 'Home', path: '/' },
+    { name: 'Custom Models', path: '/custom-mouse-models' },
+    { name: 'Conventional Knockout Mouse Models', path: '/conventional-knockout-mouse-models' },
   ],
-};
+});

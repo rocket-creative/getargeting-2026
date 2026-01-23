@@ -440,7 +440,7 @@ export default function TumorSuppressorKnockoutMicePage() {
                       className="inline-flex items-center gap-2 transition-colors duration-300 mt-3"
                       style={{ color: 'white', fontSize: '.85rem', fontWeight: 500 }}
                     >
-                      <span>Learn More</span>
+                      <span>Learn more</span>
                       <IconChevronRight size={14} color="white" />
                     </Link>
                   )}

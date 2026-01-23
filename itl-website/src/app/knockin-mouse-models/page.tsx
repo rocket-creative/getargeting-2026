@@ -31,6 +31,7 @@ import {
   IconImage,
   IconArrowRight,
   IconFileText,
+  ScientificDiagramPlaceholder,
 } from '@/components/UXUIDC';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -352,23 +353,14 @@ export default function KnockinMouseModelsPage() {
                 </div>
               </div>
               <div className="hero-animate">
-                <div
-                  style={{
-                    border: '2px dashed rgba(255,255,255,0.4)',
-                    borderRadius: '8px',
-                    aspectRatio: '4/3',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'rgba(255,255,255,0.05)',
-                  }}
-                >
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>
-                    Knockin Mouse Model Visual
-                  </span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-ki-vs-ko-001"
+                  aspectRatio="4:3"
+                  title="Knockin vs Knockout Comparison"
+                  caption="Fig. 1: Knockin modifications preserve gene structure while introducing specific changes; knockouts eliminate gene function."
+                  variant="hero"
+                  altText="Comparison diagram showing knockin modification vs knockout deletion strategies"
+                />
               </div>
             </div>
           </div>
@@ -451,7 +443,7 @@ export default function KnockinMouseModelsPage() {
                       alignSelf: 'flex-start',
                     }}
                   >
-                    <span>Learn More</span>
+                    <span>Learn more</span>
                     <span>→</span>
                   </Link>
                 </div>
@@ -502,21 +494,14 @@ export default function KnockinMouseModelsPage() {
                 </ul>
               </div>
               <div className="animate-in">
-                <div
-                  style={{
-                    border: '2px dashed #e0e0e0',
-                    borderRadius: '8px',
-                    aspectRatio: '4/3',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'white',
-                  }}
-                >
-                  <IconDNA size={50} color="#ccc" />
-                  <span style={{ color: '#999', fontSize: '.8rem', marginTop: '10px' }}>Knockin Allele Design</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-point-mutation-001"
+                  aspectRatio="4:3"
+                  title="Point Mutation Knockin Design"
+                  caption="Fig. 2: Point mutation knockins introduce single nucleotide changes to model human disease variants at the endogenous locus."
+                  variant="section"
+                  altText="Point mutation knockin diagram showing DNA, codon, and protein-level changes"
+                />
               </div>
             </div>
           </div>
