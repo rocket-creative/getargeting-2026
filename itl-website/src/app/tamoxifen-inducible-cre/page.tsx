@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Temporal Gene Control",
@@ -131,10 +132,14 @@ export default function TamoxifenInducibleCrePage() {
                 </div>
               </div>
               <div className="hero-animate">
-                <div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>CreERT2 Mechanism Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-creert2-mechanism-001"
+                  aspectRatio="4:3"
+                  title="CreERT2 Tamoxifen Induction Mechanism"
+                  caption="Fig. 1: CreERT2 remains cytoplasmic until tamoxifen binding triggers nuclear translocation and Cre activity."
+                  variant="hero"
+                  altText="Tamoxifen-inducible CreERT2 mechanism showing cytoplasmic sequestration and nuclear translocation"
+                />
               </div>
             </div>
           </div>
@@ -250,7 +255,7 @@ export default function TamoxifenInducibleCrePage() {
 
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
             <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
           </div>
         </section>

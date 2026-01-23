@@ -383,7 +383,7 @@ export default function TherapeuticAreasPage() {
                     className="inline-flex items-center gap-2 transition-colors duration-300"
                     style={{ color: area.color, fontSize: '.85rem', fontWeight: 500 }}
                   >
-                    <span>Learn More</span>
+                    <span>Learn more</span>
                     <IconChevronRight size={14} color={area.color} />
                   </Link>
                 </div>

@@ -84,5 +84,11 @@ export { default as SocialShare } from './SocialShare';
 // Catalog Search
 export { default as CatalogSearch } from './CatalogSearch';
 
+// Scientific Diagram Placeholders
+export { 
+  ScientificDiagramPlaceholder,
+  type DiagramPlaceholderProps 
+} from './ScientificDiagramPlaceholder';
+
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';

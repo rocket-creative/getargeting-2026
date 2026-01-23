@@ -170,7 +170,7 @@ export default function PostProjectServicesPage() {
                   fontWeight: 500,
                 }}
               >
-                <span>Contact Us</span>
+                <span>Contact us</span>
                 <span>→</span>
               </Link>
             </div>

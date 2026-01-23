@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -446,19 +446,14 @@ export default function HumanizedMouseModelsPage() {
               </div>
               
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Humanized Mouse Model Visual</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-humanization-001"
+                  aspectRatio="4:3"
+                  title="Humanized Gene Strategies"
+                  caption="Fig. 1: Humanization strategies replace mouse sequences with human ortholog sequences at the endogenous locus."
+                  variant="hero"
+                  altText="Comparison of gene humanization strategies showing full replacement, domain, and epitope approaches"
+                />
               </div>
             </div>
           </div>

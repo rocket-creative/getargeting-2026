@@ -39,6 +39,7 @@ import {
   IconImage,
   IconClock,
   IconArrowRight,
+  ScientificDiagramPlaceholder,
 } from '@/components/UXUIDC';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -387,23 +388,14 @@ export default function KnockoutMouseModelsPage() {
                 </div>
               </div>
               <div className="hero-animate">
-                <div
-                  style={{
-                    border: '2px dashed rgba(255,255,255,0.4)',
-                    borderRadius: '8px',
-                    aspectRatio: '4/3',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'rgba(255,255,255,0.05)',
-                  }}
-                >
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>
-                    Knockout Mouse Model Visual
-                  </span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-ko-structure-001"
+                  aspectRatio="4:3"
+                  title="Knockout Allele Structure"
+                  caption="Fig. 1: Knockout alleles eliminate gene function through deletion of critical coding sequences, resulting in a null allele."
+                  variant="hero"
+                  altText="Knockout allele structure showing exon deletion and resulting null allele"
+                />
               </div>
             </div>
           </div>
@@ -502,7 +494,7 @@ export default function KnockoutMouseModelsPage() {
                       alignSelf: 'flex-start',
                     }}
                   >
-                    <span>Learn More</span>
+                    <span>Learn more</span>
                     <span>→</span>
                   </Link>
                 </div>
@@ -603,21 +595,14 @@ export default function KnockoutMouseModelsPage() {
                 </p>
               </div>
               <div className="animate-in">
-                <div
-                  style={{
-                    border: '2px dashed #e0e0e0',
-                    borderRadius: '8px',
-                    aspectRatio: '4/3',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: '#fafafa',
-                  }}
-                >
-                  <IconDNA size={50} color="#ccc" />
-                  <span style={{ color: '#999', fontSize: '.8rem', marginTop: '10px' }}>Allele Design Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-ko-decision-001"
+                  aspectRatio="4:3"
+                  title="Knockout Strategy Decision Tree"
+                  caption="Fig. 2: Decision flowchart for selecting between conventional, conditional, and inducible knockout strategies."
+                  variant="section"
+                  altText="Knockout strategy decision flowchart for conventional vs conditional approaches"
+                />
               </div>
             </div>
           </div>
