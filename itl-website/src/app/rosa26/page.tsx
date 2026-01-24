@@ -8,8 +8,9 @@ import {
   LegacyInfoLink,
   UXUIDCResourceLinks,
   rosa26Resources,
+  ScientificDiagramPlaceholder,
 } from '@/components/UXUIDC';
-import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconImage, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
 const legacyContentUrl = '/legacy/rosa26';
@@ -168,23 +169,14 @@ export default function Rosa26Page() {
               </div>
 
               <div className="hero-animate">
-                <div
-                  style={{
-                    border: '2px dashed rgba(255,255,255,0.4)',
-                    borderRadius: '8px',
-                    aspectRatio: '4/3',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'rgba(255,255,255,0.05)',
-                  }}
-                >
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>
-                    Rosa26 Locus Diagram
-                  </span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-rosa26-001"
+                  aspectRatio="4:3"
+                  title="ROSA26 Safe Harbor Locus"
+                  caption="Fig. 1: The ROSA26 locus provides reliable ubiquitous expression without disrupting endogenous genes."
+                  variant="hero"
+                  altText="ROSA26 safe harbor locus structure and transgene insertion strategy"
+                />
               </div>
             </div>
           </div>

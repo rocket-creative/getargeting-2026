@@ -216,11 +216,15 @@ export function UXUIDCNavigation() {
 
               {/* Search Input Field - 250px width, 100px margin right */}
               <div className="hidden lg:block" style={{ width: '250px', marginRight: '100px' }}>
-                <input 
-                  type="text" 
-                  placeholder="Search models..."
-                  className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:border-[#2384da] transition-colors duration-300"
-                />
+                <form action="/search" method="get" role="search" className="w-full">
+                  <input
+                    type="search"
+                    name="q"
+                    placeholder="Search models..."
+                    aria-label="Search site"
+                    className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:border-[#2384da] transition-colors duration-300"
+                  />
+                </form>
               </div>
 
               {/* Start an Order - White/rev button with animation */}
@@ -317,13 +321,15 @@ export function UXUIDCNavigation() {
           <div className="lg:hidden bg-white border-t">
             <div className="container py-4">
               {/* Mobile Search */}
-              <div className="mb-4">
+              <form action="/search" method="get" role="search" className="mb-4">
                 <input
                   type="search"
+                  name="q"
                   placeholder="Search models, services..."
+                  aria-label="Search site"
                   className="w-full px-3 py-2 border border-[#ccc]"
                 />
-              </div>
+              </form>
               <ul className="space-y-1">
                 {navigationItems.map((item) => (
                   <li key={item.href}>
