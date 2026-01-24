@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -395,6 +396,25 @@ export default function AlzheimersMouseModelsPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Modeling Alzheimer Disease Pathology
             </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in" style={{ marginBottom: '40px' }}>
+              <ScientificDiagramPlaceholder
+                figureId="fig-amyloid-001"
+                aspectRatio="4:3"
+                title="Amyloid Cascade Pathway"
+                caption="Fig. 1: The amyloid cascade shows APP processing by secretases leading to Aβ plaque formation."
+                variant="section"
+                altText="Amyloid cascade pathway showing APP processing and Aβ plaque formation"
+              />
+              <ScientificDiagramPlaceholder
+                figureId="fig-tau-001"
+                aspectRatio="4:3"
+                title="Tau Pathology Mechanism"
+                caption="Fig. 2: Tau hyperphosphorylation leads to microtubule destabilization and neurofibrillary tangle formation."
+                variant="section"
+                altText="Tau pathology diagram showing hyperphosphorylation and tangle formation"
+              />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Amyloid Cascade */}

@@ -1,5 +1,11 @@
 [
   {
+    "temp": "direct_fig-cre-lox-001.png",
+    "figure_id": "fig-cre-lox-001",
+    "title": "Cre-Lox Recombination Mechanism",
+    "category": "A1"
+  },
+  {
     "temp": "temp_001.png",
     "figure_id": "fig-flp-frt-001",
     "title": "FLP-FRT Recombination System",
@@ -268,5 +274,11 @@
     "figure_id": "fig-cko-breeding-001",
     "title": "Conditional Knockout Breeding",
     "category": "E3"
+  },
+  {
+    "temp": "direct_fig-derivative-workflow-001.png",
+    "figure_id": "fig-derivative-workflow-001",
+    "title": "Derivative Allele Conversion Workflow",
+    "category": "E4"
   }
 ]

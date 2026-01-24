@@ -1,5 +1,10 @@
 [
   {
+    "category": "A1",
+    "title": "Cre-Lox Recombination Mechanism",
+    "figure_id": "fig-cre-lox-001"
+  },
+  {
     "category": "A2",
     "title": "FLP-FRT Recombination System",
     "figure_id": "fig-flp-frt-001"

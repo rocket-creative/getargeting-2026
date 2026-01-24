@@ -629,5 +629,6 @@ When generating images:
 
 | Date | Changes |
 |------|---------|
-| 2026-01-23 | 45 diagrams implemented and added to /itl-website/public/images/diagrams/ |
+| 2026-01-24 | **Content-based mapping:** Sci-draw images matched to figure IDs by visual content (not filename/timestamp/sequence). Replaced diagram assets accordingly. Added ScientificDiagramPlaceholder to tissue-specific-cre-lines, rosa26, alzheimers-mouse-models. Fixed tamoxifen page figureId (fig-creert2-001). Mapping: `content_based_mapping.json`. |
+| 2026-01-23 | 47 diagrams implemented and added to /itl-website/public/images/diagrams/ |
 | 2026-01-22 | Initial tracker created with 47 diagram specifications |

@@ -133,7 +133,7 @@ export default function TamoxifenInducibleCrePage() {
               </div>
               <div className="hero-animate">
                 <ScientificDiagramPlaceholder
-                  figureId="fig-creert2-mechanism-001"
+                  figureId="fig-creert2-001"
                   aspectRatio="4:3"
                   title="CreERT2 Tamoxifen Induction Mechanism"
                   caption="Fig. 1: CreERT2 remains cytoplasmic until tamoxifen binding triggers nuclear translocation and Cre activity."
