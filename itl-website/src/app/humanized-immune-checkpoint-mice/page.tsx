@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Immuno Oncology",
@@ -103,7 +104,16 @@ export default function HumanizedImmuneCheckpointMicePage() {
                   <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
                 </div>
               </div>
-              <div className="hero-animate"><div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}><IconImage size={60} color="rgba(255,255,255,0.4)" /><span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Checkpoint Immunotherapy Illustration</span></div></div>
+              <div className="hero-animate">
+                <ScientificDiagramPlaceholder
+                  figureId="fig-checkpoint-001"
+                  aspectRatio="4:3"
+                  title="Immune Checkpoint Pathway"
+                  caption="Fig. 1: Immune checkpoint interactions regulate T cell activation and tumor immune evasion."
+                  variant="hero"
+                  altText="Immune checkpoint pathway showing PD-1/PD-L1 and CTLA-4/B7 interactions"
+                />
+              </div>
             </div>
           </div>
         </section>

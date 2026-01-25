@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Metabolic Research",
@@ -97,7 +98,16 @@ export default function ObesityMouseModelsPage() {
                   <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
                 </div>
               </div>
-              <div className="hero-animate"><div style={{ border: '2px dashed rgba(255,255,255,0.4)', borderRadius: '8px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)' }}><IconImage size={60} color="rgba(255,255,255,0.4)" /><span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Obesity Research Illustration</span></div></div>
+              <div className="hero-animate">
+                <ScientificDiagramPlaceholder
+                  figureId="fig-metabolic-001"
+                  aspectRatio="4:3"
+                  title="Metabolic Disease Pathway"
+                  caption="Fig. 1: Metabolic disease mouse models target key pathways in glucose homeostasis, lipid metabolism, and energy balance."
+                  variant="hero"
+                  altText="Metabolic disease pathways showing insulin, glucose, and lipid metabolism targets"
+                />
+              </div>
             </div>
           </div>
         </section>

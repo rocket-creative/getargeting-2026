@@ -356,19 +356,14 @@ export default function AlzheimersMouseModelsPage() {
               </div>
 
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Alzheimer Model Illustration</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-amyloid-001"
+                  aspectRatio="4:3"
+                  title="Amyloid Cascade Pathway"
+                  caption="Fig. 1: The amyloid cascade shows APP processing by secretases leading to Aβ plaque formation."
+                  variant="hero"
+                  altText="Amyloid cascade pathway showing APP processing and Aβ plaque formation"
+                />
               </div>
             </div>
           </div>
