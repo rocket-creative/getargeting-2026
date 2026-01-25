@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconFlask } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -359,19 +360,14 @@ export default function TagKnockinMicePage() {
               </div>
               
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Tag Knockin Diagram</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-tag-knockin-001"
+                  aspectRatio="4:3"
+                  title="Tag Knockin Design"
+                  caption="Fig. 1: Epitope tags enable protein detection, localization, and purification from endogenous expression."
+                  variant="hero"
+                  altText="Epitope tag knockin positions and detection methods diagram"
+                />
               </div>
             </div>
           </div>

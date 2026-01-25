@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -323,19 +324,14 @@ export default function TumorSuppressorKnockoutMicePage() {
               </div>
 
               <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Tumor Suppressor Model Illustration</span>
-                </div>
+                <ScientificDiagramPlaceholder
+                  figureId="fig-ko-structure-001"
+                  aspectRatio="4:3"
+                  title="Knockout Allele Structure"
+                  caption="Fig. 1: Knockout alleles eliminate gene function through deletion of critical coding sequences."
+                  variant="hero"
+                  altText="Knockout allele structure showing exon deletion and resulting null allele"
+                />
               </div>
             </div>
           </div>
