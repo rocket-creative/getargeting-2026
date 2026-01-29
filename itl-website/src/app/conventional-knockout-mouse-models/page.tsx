@@ -223,7 +223,7 @@ const faqData = [
   },
   {
     question: "How long does it take to generate a conventional knockout mouse?",
-    answer: "Conventional knockout projects typically require 6-8 months from project initiation to identification of germline-transmitted F1 mice. This includes targeting design, microinjection, and breeding F0s to germline transmission."
+    answer: "Conventional knockout projects include targeting design, microinjection, and breeding founders to germline transmission. Project timelines vary based on gene complexity and specific requirements. Contact us for a detailed timeline estimate for your project."
   }
 ];
 

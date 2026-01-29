@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Mouse Strain Selection Guide",
   intro: "Choosing the right genetic background is one of the most important decisions in mouse model design. The same genetic modification can produce dramatically different phenotypes on different strain backgrounds.",
   description: "This guide helps you navigate strain selection based on your research requirements. Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on multiple genetic backgrounds, with strain selection guided by experimental goals, phenotype considerations, and practical factors."

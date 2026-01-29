@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Huntington Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported Huntington disease research with custom mouse models enabling mechanistic studies of polyglutamine toxicity, CAG repeat instability, and therapeutic strategies targeting mutant huntingtin. Huntington mouse models provide essential platforms for investigating the molecular pathways underlying striatal neurodegeneration, testing hypotheses about protein aggregation and transcriptional dysregulation, and developing therapies including huntingtin lowering approaches and modifiers of somatic repeat expansion.",
   description: ""
@@ -32,7 +32,7 @@ const statsData = [
 // FAQ Data
 const faqData = [
   { question: "What types of Huntington's disease mouse models are available?", answer: "HD models include fragment models (N171-82Q, R6/2 expressing truncated HTT with expanded CAG repeats), full-length knockin models (replacing mouse Htt with human HTT containing expanded CAG), and conditional models (inducible HTT expression). Selection depends on research question, timeline needs, and phenotype severity requirements." },
-  { question: "How do CAG repeat length and age affect HD model phenotypes?", answer: "Longer CAG repeats cause earlier and more severe phenotypes. Fragment models (100+ CAG repeats) show rapid progression (3-6 months). Full-length knockin models (100-150 CAG) show slower progression (12+ months) more closely resembling human disease. Age at phenotype onset depends on repeat length and model type." },
+  { question: "How do CAG repeat length and age affect HD model phenotypes?", answer: "Longer CAG repeats cause earlier and more severe phenotypes. Fragment models with high CAG repeat numbers show rapid progression. Full-length knockin models show slower progression more closely resembling human disease. Age at phenotype onset depends on repeat length and model type. Contact us to discuss the best model for your study timeline." },
   { question: "Can HD models be used for therapeutic testing?", answer: "Yes. HD models enable testing of huntingtin-lowering therapies (ASOs, RNAi, zinc finger repressors), somatic instability modifiers (MSH3 reduction), aggregate clearance strategies, and gene therapy approaches. Models show measurable behavioral, neuropathological, and molecular endpoints for therapeutic evaluation." },
   { question: "What behavioral tests are used to phenotype HD models?", answer: "Core behavioral tests include rotarod (motor coordination), balance beam (fine motor control), grip strength (forelimb/hindlimb strength), gait analysis (stride length, coordination), open field (activity patterns), and clasping behavior (limb clasping when suspended). Multiple complementary tests strengthen phenotypic characterization. (/request-quote)" }
 ];

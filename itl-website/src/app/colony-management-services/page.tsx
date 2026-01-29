@@ -39,7 +39,7 @@ const expansionFeatures = [
   { name: "Cohort development", description: "Breed to specific genotypes and numbers for experiments" },
   { name: "Age matched cohorts", description: "Coordinate breeding for age synchronized animals" },
   { name: "Sex balanced groups", description: "Generate appropriate male and female numbers" },
-  { name: "Timeline optimization", description: "Strategic breeding to meet experimental deadlines" },
+  { name: "Schedule optimization", description: "Strategic breeding to meet experimental deadlines" },
   { name: "Large scale production", description: "Scale colony for high throughput studies" }
 ];
 
@@ -88,9 +88,9 @@ const conditionalBreedingTable = [
 
 // Backcrossing Table
 const backcrossingTable = [
-  { generation: "N1", purity: "50%", time: "2 months" },
-  { generation: "N5", purity: "97%", time: "10 months" },
-  { generation: "N10", purity: "99.9% (congenic)", time: "20 months" }
+  { generation: "N1", purity: "50%", time: "Contact us" },
+  { generation: "N5", purity: "97%", time: "Contact us" },
+  { generation: "N10", purity: "99.9% (congenic)", time: "Contact us" }
 ];
 
 // Advantages

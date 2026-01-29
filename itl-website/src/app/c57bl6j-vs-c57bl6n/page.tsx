@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "C57BL/6J vs C57BL/6N",
   intro: "C57BL/6 is the most widely used inbred mouse strain, but two major substrains exist with important genetic and phenotypic differences.",
   description: "Understanding the distinction between C57BL/6J (Jackson) and C57BL/6N (NIH) is essential for reproducible research and appropriate model selection. Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on defined C57BL/6 backgrounds, with substrain selection guided by research requirements and phenotype considerations."
@@ -35,7 +35,7 @@ const faqData = [
   { question: "Which substrain should I use for my project?", answer: "For most applications, either substrain works, but consistency within a study is critical. Use C57BL/6N if using standard ES cell targeting resources (EUCOMM, KOMP) that use C57BL/6N ES cells. Use C57BL/6J if matching existing protocols or historical data. Document your substrain choice in publications." },
   { question: "How do I ensure substrain matching throughout my project?", answer: "After ES cell targeting and germline transmission, maintain mice on the matching substrain to avoid introducing genetic variability. When ordering mice for breeding or controls, ensure you receive the correct substrain. SNP panels can distinguish C57BL/6J from C57BL/6N and verify substrain identity." },
   { question: "Can I backcross between C57BL/6J and C57BL/6N?", answer: "Yes, but this should be avoided as it introduces genetic variability and defeats the purpose of substrain selection. If you have a model on one substrain and need the other, plan for this from the start or use speed backcrossing with marker-assisted selection to convert backgrounds while maintaining the mutation of interest." },
-  { question: "Does ITL specify substrain in project deliverables?", answer: "Yes. ITL documents and reports specify C57BL/6J or C57BL/6N rather than just \"C57BL/6\" to enable reproducibility and appropriate interpretation. Publications should also specify substrain. This transparency helps researchers make informed decisions and ensures experimental reproducibility. (/request-quote) (/request-quote)" }
+  { question: "Does ingenious targeting laboratory specify substrain in project deliverables?", answer: "Yes. Our documents and reports specify C57BL/6J or C57BL/6N rather than just \"C57BL/6\" to enable reproducibility and appropriate interpretation. Publications should also specify substrain. This transparency helps researchers make informed decisions and ensures experimental reproducibility." }
 ];
 
 // Related Links

@@ -135,8 +135,8 @@ const faqData = [
     answer: "Conditional knockin can insert point mutations, reporters (GFP, luciferase), epitope tags, humanized gene sequences, or cDNA sequences. The conditional cassette (loxP-flanked stop) prevents expression until Cre recombination removes it, enabling controlled expression of the inserted sequence."
   },
   {
-    question: "What is the timeline for generating a conditional knockin model?",
-    answer: "Custom model generation takes 6-10 months from project initiation to identification of germline-transmitted mice."
+    question: "What is involved in generating a conditional knockin model?",
+    answer: "Custom model generation timelines vary based on project complexity and specific requirements. Contact us for a detailed timeline estimate tailored to your conditional knockin project."
   }
 ];
 

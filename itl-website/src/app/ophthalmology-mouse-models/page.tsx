@@ -184,8 +184,8 @@ const faqData = [
     answer: "Yes. Ophthalmology models are extensively used for testing AAV-mediated gene therapy approaches for inherited retinal diseases. Models enable evaluation of therapeutic transgene expression, rescue of visual function, safety assessment, and long-term persistence. Retina-specific targeting enables local delivery with systemic safety."
   },
   {
-    question: "What is the timeline for generating an ophthalmology mouse model?",
-    answer: "Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Conditional approaches for cell-type-specific studies follow the same timeline. Pre-germline characterization provides early validation of targeting before mouse generation."
+    question: "What is involved in generating an ophthalmology mouse model?",
+    answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Conditional approaches for cell-type-specific studies follow similar workflows. Pre-germline characterization provides early validation of targeting before mouse generation. Contact us for current timeline estimates."
   }
 ];
 

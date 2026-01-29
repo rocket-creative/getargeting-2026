@@ -134,7 +134,7 @@ const faqData = [
   },
   {
     question: "What is the typical disease progression in Parkinson's mouse models?",
-    answer: "Disease progression varies by mutation and model type. SNCA transgenic models show motor deficits and synuclein pathology over 6 to 12 months. LRRK2 models may show slower progression. Knockin models at physiological expression levels typically show slower, more gradual progression than transgenic models with overexpression."
+    answer: "Disease progression varies by mutation and model type. SNCA transgenic models show motor deficits and synuclein pathology with faster progression than knockin models. LRRK2 models may show slower progression. Knockin models at physiological expression levels typically show more gradual progression than transgenic models with overexpression. Contact us to discuss model selection for your study timeline."
   },
   {
     question: "What strain background is best for Parkinson's models?",

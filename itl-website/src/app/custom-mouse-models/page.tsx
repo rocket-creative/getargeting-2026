@@ -162,7 +162,7 @@ const publicationsData = [
 const faqData = [
   {
     question: "How long does it take to generate a custom mouse model?",
-    answer: "Project timelines vary by model type. Conventional knockout and targeted transgenic knockin models typically require 6-8 months from project initiation to germline transmission. Conditional knockouts and cDNA knockins require 8-10 months. Timelines include targeting design, injection, breeding of founders and confirming germline transmission."
+    answer: "Project timelines vary by model type and complexity. Conventional knockouts are generally faster than conditional knockouts and cDNA knockins due to simpler allele designs. All projects include targeting design, injection, breeding of founders and confirming germline transmission. With ongoing advances in technology, timelines continue to improve. Contact us for current estimates tailored to your project."
   },
   {
     question: "What strain backgrounds are available for custom models?",
@@ -190,7 +190,7 @@ const relatedLinksData = {
   selectionGuides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
+    { href: "/request-quote", label: "Request a Quote" },
     { href: "/pricing-overview", label: "Pricing Overview" }
   ]
 };

@@ -218,7 +218,7 @@ const modelDesignData = {
 
 // ITL Approach Data
 const itlApproachData = {
-  title: "ITL Approach to LAG3 Humanization",
+  title: "Our Approach to LAG3 Humanization",
   points: [
     "ES cell based gene targeting for precise humanization",
     "Custom design to meet specific research requirements",
@@ -273,7 +273,7 @@ const faqData = [
   },
   {
     question: "What is the timeline for generating LAG3 humanized mice?",
-    answer: "Custom LAG3 humanized mouse generation typically takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. This includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation."
+    answer: "Custom LAG3 humanized mouse generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation. Contact us for current timeline estimates based on your specific project requirements."
   }
 ];
 

@@ -140,8 +140,8 @@ const testimonials = [
 // FAQ Data
 const faqData = [
   {
-    question: "What support services does ITL provide beyond model generation?",
-    answer: "ITL provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, ES cell archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
+    question: "What support services does ingenious targeting laboratory provide beyond model generation?",
+    answer: "ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, ES cell archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
   },
   {
     question: "How do colony management services help maintain mouse lines?",

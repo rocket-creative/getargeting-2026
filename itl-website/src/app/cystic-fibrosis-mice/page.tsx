@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Cystic Fibrosis Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has supported cystic fibrosis research with custom mouse models enabling mechanistic studies of CFTR function, patient mutation effects, and therapeutic interventions.",
   description: "Our cystic fibrosis models have contributed to research on ion channel biology, gene therapy, and CFTR modulator development. Cystic fibrosis mouse models provide essential platforms for investigating CFTR mutations, testing gene therapy approaches, and developing therapies for this life limiting genetic disease affecting thousands of patients worldwide."
@@ -33,7 +33,7 @@ const statsData = [
 const faqData = [
   { question: "What cystic fibrosis mouse models are available?", answer: "Common CF mouse models include CFTR knockout and point mutation knockins modeling specific CFTR mutations found in patients (e.g., F508del, G551D). Models can be combined with conditional approaches for tissue specific CFTR expression or deletion to study organ specific disease mechanisms." },
   { question: "How do cystic fibrosis mouse models differ from human disease?", answer: "CF mice show intestinal obstruction (meconium ileus) and some lung pathology but do not fully recapitulate human lung disease severity. Models enable study of CFTR function, ion transport, and organ specific mechanisms, providing insights that complement human studies and enable preclinical testing." },
-  { question: "Can you create models with specific CFTR mutations?", answer: "Yes. ITL can generate point mutation knockin models carrying specific CFTR mutations found in patients (e.g., F508del, G551D, R117H). These models enable study of mutation-specific effects on CFTR folding, trafficking, and function, supporting development of mutation-specific therapeutics." }
+  { question: "Can you create models with specific CFTR mutations?", answer: "Yes. We can generate point mutation knockin models carrying specific CFTR mutations found in patients (e.g., F508del, G551D, R117H). These models enable study of mutation-specific effects on CFTR folding, trafficking, and function, supporting development of mutation-specific therapeutics." }
 ];
 
 // Related Links

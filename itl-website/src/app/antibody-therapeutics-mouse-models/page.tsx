@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Antibody Therapeutics Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported antibody therapeutic development with custom mouse models enabling preclinical evaluation of monoclonal antibodies, bispecific antibodies, and antibody drug conjugates across oncology, immunology, and other therapeutic areas.",
   description: "Antibody therapeutics mouse models provide essential platforms for testing clinical antibody candidates in relevant in vivo contexts. Humanized target models enable direct evaluation of antibodies designed for human epitopes, while syngeneic compatible models support efficacy studies in immunocompetent animals with intact tumor immunity."
@@ -34,8 +34,8 @@ const faqData = [
   { question: "What humanized models are needed for antibody therapeutic testing?", answer: "Humanized models express human target genes (receptors, checkpoint molecules, drug targets) to enable testing of clinical antibody candidates. Common targets include immune checkpoints (PD1, PDL1, CTLA4, LAG3), cytokine receptors, and disease-specific targets. Full gene humanization (complete human sequence) or ECD-only humanization (extracellular domain) are available." },
   { question: "Can you combine humanized targets with syngeneic tumor models?", answer: "Yes. Humanized checkpoint models can be combined with syngeneic tumor cell lines to create systems where both tumor and immune compartments express human targets. This enables evaluation of checkpoint blockade in immunocompetent animals with intact tumor immunity, providing more physiologically relevant testing." },
   { question: "How do you validate human target expression in humanized models?", answer: "Pre-germline characterization includes Southern blot analysis to confirm correct targeting and sequence verification to ensure human sequence fidelity. Post-germline validation includes flow cytometry for surface expression, Western blot for protein expression, and functional confirmation through binding of clinical antibody candidates." },
-  { question: "What is the timeline for generating humanized antibody testing models?", answer: "Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Humanized models follow the same timeline. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation." },
-  { question: "Can multiple checkpoints be humanized in a single model?", answer: "Yes. ITL can combine multiple checkpoint humanizations (double, triple, or multi-checkpoint models) for combination immunotherapy studies. For example, PD1 and CTLA4 humanized models enable testing of dual checkpoint blockade. Multiple humanizations require careful breeding and genotyping to maintain all alleles. (/request-quote)" }
+  { question: "What is involved in generating humanized antibody testing models?", answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us for current timeline estimates." },
+  { question: "Can multiple checkpoints be humanized in a single model?", answer: "Yes. We can combine multiple checkpoint humanizations (double, triple, or multi-checkpoint models) for combination immunotherapy studies. For example, PD1 and CTLA4 humanized models enable testing of dual checkpoint blockade. Multiple humanizations require careful breeding and genotyping to maintain all alleles." }
 ];
 
 // Related Links

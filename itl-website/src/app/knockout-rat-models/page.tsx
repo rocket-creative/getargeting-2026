@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Knockout Rat Models",
   intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 gene targeting projects across multiple species, including hundreds of knockout rat models enabling loss of function studies in larger rodents offering superior behavioral characterization and physiological readout capacity. Knockout rats represent a strategic alternative to knockout mice for research applications where larger body size, behavioral sophistication, or specific physiological phenotypes justify increased project complexity.",
   description: "Knockout rat models provide distinct advantages for studies examining behavioral responses, cardiovascular physiology, renal function, and complex neurobiological phenomena where rodent size or documented behavioral capacity offers superior scientific value compared to mouse models. The trade off between increased project timeline and cost against superior phenotypic readouts makes knockout rats optimal for specific research questions despite greater complexity."

@@ -203,7 +203,7 @@ const faqData = [
   },
   {
     question: "How is tamoxifen administered for inducible knockout?",
-    answer: "Tamoxifen is typically administered via IP injection (75-100 mg/kg for 3-5 days), oral gavage (100-200 mg/kg for 3-5 days), or tamoxifen diet (400 mg/kg chow for 1-4 weeks). IP injection and oral gavage provide rapid, high-efficiency recombination. Diet provides more convenient long-term administration."
+    answer: "Tamoxifen is typically administered via IP injection, oral gavage, or tamoxifen diet. IP injection and oral gavage provide rapid, high-efficiency recombination. Diet provides more convenient long-term administration. Dosing protocols vary by experimental requirements. Contact us to discuss optimal induction strategies for your study."
   },
   {
     question: "What controls are needed for inducible knockout experiments?",

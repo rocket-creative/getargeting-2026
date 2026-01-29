@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Epilepsy Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported epilepsy research with custom mouse models enabling mechanistic studies of seizure generation, ictogenesis, and therapeutic interventions targeting ion channels, synaptic transmission, and neuronal network excitability. Epilepsy mouse models provide essential platforms for investigating the molecular pathways underlying seizure disorders, testing hypotheses about genetic susceptibility, and developing novel anti seizure medications and precision therapies for patients with drug resistant epilepsy.",
   description: ""
@@ -33,7 +33,7 @@ const statsData = [
 const faqData = [
   { question: "How do you detect seizures in mouse models?", answer: "Video-EEG monitoring with cortical and/or hippocampal electrodes provides gold-standard seizure detection. Behavioral seizure scoring uses modified Racine scale (stages 1-5). Electrographic analysis quantifies spike frequency, ictal duration, and seizure burden. Many models show circadian variation in seizure occurrence." },
   { question: "Should I use knockout or knockin for epilepsy genes?", answer: "Loss-of-function mutations (haploinsufficiency) are modeled with conventional heterozygous knockout (e.g., SCN1A Dravet syndrome). Gain-of-function mutations require point mutation knockin to model the specific patient variant (e.g., SCN8A epileptic encephalopathy). Patient variant knockins enable precision medicine approaches." },
-  { question: "What is the timeline for generating an epilepsy mouse model?", answer: "Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Point mutation knockins or conditional approaches follow the same timeline. Pre-germline characterization enables early validation of targeting and sequence confirmation before mouse generation." },
+  { question: "What is involved in generating an epilepsy mouse model?", answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Point mutation knockins or conditional approaches follow similar workflows. Pre-germline characterization enables early validation of targeting and sequence confirmation before mouse generation. Contact us for current timeline estimates." },
   { question: "Can you create inducible epilepsy models?", answer: "Yes. Tamoxifen-inducible Cre (CreER) enables temporal control of gene deletion, avoiding developmental effects and enabling adult-onset studies. This is particularly useful for genes with essential developmental functions that would cause lethality if deleted constitutively." },
   { question: "How do genetic backgrounds affect seizure susceptibility?", answer: "Seizure susceptibility varies dramatically with genetic background. C57BL/6 is relatively resistant to some seizure models. DBA/2 is susceptible to audiogenic seizures. FVB/N shows high susceptibility to kainic acid seizures. Strain selection should match experimental goals and seizure induction methods. (/request-quote)" }
 ];

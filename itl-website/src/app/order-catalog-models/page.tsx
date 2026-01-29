@@ -79,7 +79,7 @@ const faqData = [
   },
   {
     question: 'How long does delivery take?',
-    answer: 'Delivery time depends on current stock availability. Live animal shipments typically take 2-4 weeks for in-stock models. Cryorecovery from frozen stock may take 8-12 weeks. Rush options are available for some models.',
+    answer: 'Delivery time depends on current stock availability and whether models are available as live animals or require cryorecovery from frozen stock. Contact us for current availability and delivery estimates for specific models. Rush options may be available.',
   },
   {
     question: 'Can I get a model on a different genetic background?',
@@ -87,7 +87,7 @@ const faqData = [
   },
   {
     question: 'Do you ship internationally?',
-    answer: 'Yes, ITL ships to most countries worldwide. International shipments require appropriate import permits and health certifications. We work with experienced animal transport providers to ensure safe delivery.',
+    answer: 'Yes, we ship to most countries worldwide. International shipments require appropriate import permits and health certifications. We work with experienced animal transport providers to ensure safe delivery.',
   },
   {
     question: 'What if I need modifications to a catalog model?',
@@ -536,7 +536,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 {submitStatus === 'error' && (
                   <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#fef2f2', borderRadius: '6px', border: '1px solid #ef4444' }}>
                     <p style={{ color: '#991b1b', fontSize: '.875rem', fontFamily: 'var(--system-ui)' }}>
-                      There was an error submitting your request. Please try again or contact us directly at info@genetargeting.com.
+                      There was an error submitting your request. Please try again or contact us directly at inquiry@genetargeting.com.
                     </p>
                   </div>
                 )}
@@ -594,7 +594,7 @@ export default function OrderInquiryCatalogModelsPage() {
                   {[
                     { step: '1', label: '1-2 Days', desc: 'Availability check & pricing' },
                     { step: '2', label: 'Confirm', desc: 'MTA/order confirmation' },
-                    { step: '3', label: '2-4 Weeks', desc: 'Preparation & delivery' },
+                    { step: '3', label: 'Delivery', desc: 'Preparation & shipping' },
                   ].map((item, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                       <div

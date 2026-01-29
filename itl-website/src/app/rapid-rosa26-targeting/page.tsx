@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Rapid ROSA26 Targeting",
   intro: "Ingenious Targeting Laboratory\'s Rapid Rosa26™ technology accelerates transgenic model generation through established protocols and proven vector backbones. This proprietary approach enables shorter timelines while maintaining reliable, high quality models with predictable expression patterns.",
   description: "Rosa26 remains the most widely used safe harbor locus for targeted transgenics due to its strong ubiquitous expression, well characterized regulatory elements, and minimal positional effects. Rapid Rosa26™ targeting leverages decades of experience with Rosa26 to streamline project execution."
@@ -33,7 +33,7 @@ const statsData = [
 const faqData = [
   { question: "What is Rapid Rosa26 targeting and how does it work?", answer: "Rapid Rosa26 targeting is an optimized gene targeting technology for inserting transgenes into the Rosa26 safe-harbor locus. The technology uses streamlined targeting vectors and workflows to reduce timelines while maintaining high-quality targeting and pre-germline characterization." },
   { question: "What types of transgenes can be inserted into Rosa26?", answer: "Rosa26 can accommodate various transgenes including reporters (GFP, luciferase, LacZ), Cre recombinase, inducible systems (CreER, TRE-driven expression), and other transgenes. Rosa26 provides ubiquitous expression with stable integration and minimal position effects." },
-  { question: "How does Rapid Rosa26 compare to standard Rosa26 targeting?", answer: "Rapid Rosa26 uses optimized targeting strategies and streamlined workflows to reduce project timelines while maintaining the quality advantages of ES cell targeting. Standard targeting takes 26-36 weeks; Rapid Rosa26 may reduce certain phases depending on project complexity." }
+  { question: "How does Rapid Rosa26 compare to standard Rosa26 targeting?", answer: "Rapid Rosa26 uses optimized targeting strategies and streamlined workflows to reduce project timelines while maintaining the quality advantages of ES cell targeting. Contact us to discuss how Rapid Rosa26 can accelerate your specific project." }
 ];
 
 // Related Links

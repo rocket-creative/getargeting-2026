@@ -203,7 +203,7 @@ const faqData = [
   },
   {
     question: "Can I get pricing for partial services?",
-    answer: "Yes. ITL provides pricing for partial services including targeting vector only, ES cell targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact ITL to discuss your partial service needs and receive a customized quote."
+    answer: "Yes. We provide pricing for partial services including targeting vector only, ES cell targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact us to discuss your partial service needs and receive a customized quote."
   },
   {
     question: "Are there discounts for academic institutions?",

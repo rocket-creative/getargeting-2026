@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Hypertension Mouse Models",
   intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom mouse models for studying hypertension, blood pressure regulation, and antihypertensive therapeutics.",
   description: "Our hypertension models have contributed to research on renin angiotensin system, renal function, and vascular biology. Hypertension mouse models provide essential platforms for investigating blood pressure regulatory pathways, testing hypotheses about genetic susceptibility, and developing therapies for hypertension affecting millions of patients worldwide."

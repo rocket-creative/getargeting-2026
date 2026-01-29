@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Lineage Tracing Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has engineered over 125 lineage tracing models including inducible Cre-dependent reporters, multi-color switching systems, and tissue specific fate mapping approaches, contributing to 103+ peer reviewed publications in cell fate determination and lineage diversity studies. Lineage tracing answers fundamental developmental and regenerative biology questions: Where do cells originate? What descendants do they produce? When do cell fate decisions occur? Which signals govern lineage commitment? These questions require sophisticated reporter systems revealing cell history.",
   description: ""

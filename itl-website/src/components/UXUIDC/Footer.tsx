@@ -68,8 +68,8 @@ const footerSections = [
   {
     title: 'Company',
     links: [
-      { label: 'About ITL', href: '/about-itl' },
-      { label: 'Why Choose ITL', href: '/why-choose-itl' },
+      { label: 'About Us', href: '/about-itl' },
+      { label: 'Why Choose Us', href: '/why-choose-itl' },
       { label: 'Testimonials', href: '/testimonials' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },
@@ -106,13 +106,13 @@ export function UXUIDCFooter() {
               />
             </Link>
             <div style={{ fontSize: '.9rem', lineHeight: '1.5', color: 'white' }}>
-              <p style={{ margin: '0 0 5px 0' }}>2200 Smithtown Avenue</p>
-              <p style={{ margin: '0 0 10px 0' }}>Ronkonkoma, NY 11779</p>
+              <p style={{ margin: '0 0 5px 0' }}>761-80 Coates Avenue</p>
+              <p style={{ margin: '0 0 10px 0' }}>Holbrook, NY 11741</p>
               <p style={{ margin: '0 0 5px 0' }}>
-                <a href="tel:+16315244447" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">(631) 524-4447</a>
+                <a href="tel:+16314688530" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">(631) 468-8530</a>
               </p>
               <p style={{ margin: 0 }}>
-                <a href="mailto:info@genetargeting.com" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">info@genetargeting.com</a>
+                <a href="mailto:inquiry@genetargeting.com" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">inquiry@genetargeting.com</a>
               </p>
             </div>
           </div>

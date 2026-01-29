@@ -447,8 +447,7 @@ export const breedingResources: ResourceLink[] = [
     title: "Breeding Scheme Architect",
     description: "Plan complex multi-allele breeding schemes with our interactive tool",
     href: "/breeding-scheme-architect",
-    type: 'tool',
-    isNew: true
+    type: 'tool'
   }
 ];
 
@@ -472,7 +471,6 @@ export const conditionalReversibleResources: ResourceLink[] = [
     title: "Breeding Scheme Architect",
     description: "Plan your breeding strategy with our interactive tool",
     href: "/breeding-scheme-architect",
-    type: 'tool',
-    isNew: true
+    type: 'tool'
   }
 ];

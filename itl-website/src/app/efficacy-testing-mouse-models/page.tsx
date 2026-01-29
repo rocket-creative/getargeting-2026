@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Efficacy Testing Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom mouse model projects supporting preclinical therapeutics development, with hundreds of efficacy testing models enabling validation of drug candidates and therapeutic biologics before clinical translation. Efficacy testing mouse models provide essential preclinical platform for demonstrating target engagement, dose-response relationships, and therapeutic efficacy reducing clinical trial failure risk.",
   description: "Efficacy testing mouse models integrate relevant disease mechanisms, appropriate target expression systems, and sensitive efficacy readouts enabling comprehensive characterization of therapeutic candidate function. Successful preclinical validation in appropriate models substantially improves clinical trial success probability while accelerating therapeutic development."

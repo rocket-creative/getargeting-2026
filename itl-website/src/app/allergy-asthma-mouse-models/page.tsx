@@ -112,7 +112,7 @@ const faqData = [
   },
   {
     question: "Can you create models for specific asthma phenotypes?",
-    answer: "Yes. ITL can design conditional knockout or knockin models targeting genes involved in airway hyperresponsiveness, mucus production, airway remodeling, or Th2 inflammation. Models can be combined with allergen challenge protocols to study specific asthma phenotypes."
+    answer: "Yes. We can design conditional knockout or knockin models targeting genes involved in airway hyperresponsiveness, mucus production, airway remodeling, or Th2 inflammation. Models can be combined with allergen challenge protocols to study specific asthma phenotypes."
   },
   {
     question: "What Cre drivers are appropriate for lung-specific studies?",

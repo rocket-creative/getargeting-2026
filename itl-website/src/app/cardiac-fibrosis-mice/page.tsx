@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Cardiac Fibrosis Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom mouse models for studying cardiac fibrosis, myocardial remodeling, and heart failure.",
   description: "Our cardiac fibrosis models have contributed to research on extracellular matrix remodeling, fibroblast activation, and anti fibrotic therapeutics. Cardiac fibrosis mouse models provide essential platforms for investigating the molecular pathways underlying myocardial fibrosis, testing hypotheses about fibroblast biology, and developing therapies for heart failure and cardiac remodeling."

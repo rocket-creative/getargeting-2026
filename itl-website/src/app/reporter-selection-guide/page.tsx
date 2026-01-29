@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Reporter Selection Guide",
   intro: "Selecting the appropriate reporter gene is critical for successful visualization of gene expression in knockin mouse models. Since 1998, Ingenious Targeting Laboratory has incorporated diverse reporter systems into hundreds of mouse models, developing expertise in matching reporter types to experimental requirements.",
   description: "This guide helps researchers navigate reporter selection by detection method, sensitivity, cellular resolution, and experimental applications. Proper reporter selection ensures accurate visualization of gene expression patterns with appropriate resolution for your research goals."

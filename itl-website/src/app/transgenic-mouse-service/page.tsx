@@ -374,7 +374,7 @@ export default function TransgenicMouseServicePage() {
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
-              ITL offers targeted transgenic approaches using ROSA26 and other safe harbor loci, providing options matched to your experimental requirements.
+              ingenious targeting laboratory offers targeted transgenic approaches using ROSA26 and other safe harbor loci, providing options matched to your experimental requirements.
             </p>
           </div>
         </section>

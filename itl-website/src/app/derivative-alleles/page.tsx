@@ -70,9 +70,9 @@ const conversionTable = [
 
 // Breeding Timeline
 const breedingTimeline = [
-  { conversion: "tm1a → tm1b", cross: "tm1a × Cre deleter", screening: "PCR for excision", timeline: "2 to 3 months" },
-  { conversion: "tm1a → tm1c", cross: "tm1a × Flp deleter", screening: "PCR for cassette removal", timeline: "2 to 3 months" },
-  { conversion: "tm1c → tm1d", cross: "tm1c × tissue Cre", screening: "Tissue specific PCR", timeline: "2 to 3 months" }
+  { conversion: "tm1a → tm1b", cross: "tm1a × Cre deleter", screening: "PCR for excision", timeline: "Contact us" },
+  { conversion: "tm1a → tm1c", cross: "tm1a × Flp deleter", screening: "PCR for cassette removal", timeline: "Contact us" },
+  { conversion: "tm1c → tm1d", cross: "tm1c × tissue Cre", screening: "Tissue specific PCR", timeline: "Contact us" }
 ];
 
 // Allele Applications

@@ -77,7 +77,7 @@ const contactData = {
 
 // Related Links Data
 const relatedLinksData = [
-  { href: "/about-itl", label: "About ITL" },
+  { href: "/about-itl", label: "About Us" },
   { href: "/general-contact", label: "General Contact" },
   { href: "/technology-overview", label: "Technology Overview" }
 ];
@@ -87,7 +87,7 @@ const ctaData = {
   title: "Interested in Joining Our Team?",
   description: "Contact us to learn more about current openings and career opportunities at Ingenious Targeting Laboratory.",
   primaryButton: { href: "/general-contact", label: "Contact Us" },
-  secondaryButton: { href: "/about-itl", label: "Learn About ITL" }
+  secondaryButton: { href: "/about-itl", label: "Learn About Us" }
 };
 
 export default function CurrentOpeningsPage() {
@@ -257,7 +257,7 @@ export default function CurrentOpeningsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                About ITL
+                About Us
               </Link>
             </div>
           </div>

@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Target Validation Mouse Models",
   intro: "Since 1998, Ingenious Targeting Laboratory has supported pharmaceutical and biotech companies with custom mouse models for drug target validation. Our target validation models have contributed to therapeutic development programs across oncology, immunology, neuroscience, metabolic disease, and other therapeutic areas, with results published in peer reviewed journals and presented at major scientific conferences.",
   description: "Target validation mouse models provide genetic evidence that modulating a specific target produces the desired therapeutic effect. Before committing significant resources to drug development, target validation answers fundamental questions: Does inhibiting this target affect disease biology? What are the consequences of target loss in normal tissues? Are there compensatory mechanisms or resistance pathways? Ingenious Targeting Laboratory designs and generates custom target validation models tailored to your therapeutic program, from conventional knockouts demonstrating proof of concept to sophisticated conditional and humanized models supporting clinical development."

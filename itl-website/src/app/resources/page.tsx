@@ -258,20 +258,20 @@ const relatedServicesData = [
 // FAQ Data
 const faqData = [
   {
-    question: "What resources does ITL provide for mouse model projects?",
-    answer: "ITL provides comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), case studies demonstrating successful project outcomes, technical resources, and FAQs addressing common project questions."
+    question: "What resources does ingenious targeting laboratory provide for mouse model projects?",
+    answer: "We provide comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), case studies demonstrating successful project outcomes, technical resources, and FAQs addressing common project questions."
   },
   {
     question: "How do I choose the right knockout or knockin strategy?",
-    answer: "Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). ITL's scientific consultants provide complimentary consultation to help select optimal strategies."
+    answer: "Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). Our scientific consultants provide complimentary consultation to help select optimal strategies."
   },
   {
     question: "Where can I find case studies of successful projects?",
-    answer: "Case studies are available in the resources section and include examples of conditional knockout for embryonic lethal genes, humanized immune checkpoint models, reporter knockin for lineage tracing, and large-scale targeting for BAC integration. These demonstrate how ITL approaches complex targeting challenges and delivers research-ready models."
+    answer: "Case studies are available in the resources section and include examples of conditional knockout for embryonic lethal genes, humanized immune checkpoint models, reporter knockin for lineage tracing, and large-scale targeting for BAC integration. These demonstrate how ingenious targeting laboratory approaches complex targeting challenges and delivers research-ready models."
   },
   {
-    question: "How do I access ITL's technical resources?",
-    answer: "Technical resources including selection guides, planning guides, case studies, and FAQs are available in the resources section. ITL's scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact ITL through the request quote form or schedule a consultation."
+    question: "How do I access our technical resources?",
+    answer: "Technical resources including selection guides, planning guides, case studies, and FAQs are available in the resources section. Our scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact us through the request quote form or schedule a consultation."
   }
 ];
 

@@ -426,7 +426,7 @@ export default function ContactPage() {
                   lineHeight: '1.6',
                   marginBottom: '20px',
                 }}>
-                  Interested in working at the forefront of genetic engineering? View current openings at ITL.
+                  Interested in working at the forefront of genetic engineering? View current openings at ingenious targeting laboratory.
                 </p>
                 <Link
                   href="/current-openings"

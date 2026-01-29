@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Inflammatory Disease Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has supported inflammatory disease research with custom mouse models enabling mechanistic studies of chronic inflammation, immune dysregulation, and therapeutic interventions.",
   description: "Our inflammatory disease models have contributed to research on autoimmune diseases, inflammatory bowel disease, and anti inflammatory therapeutics. Inflammatory disease mouse models provide essential platforms for investigating the molecular pathways underlying chronic inflammation, testing hypotheses about immune cell contributions, and developing therapies for inflammatory conditions affecting millions of patients worldwide."

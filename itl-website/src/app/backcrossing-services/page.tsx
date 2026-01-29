@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Mouse Backcrossing Services",
   intro: "Since 1998, ingenious targeting laboratory has provided backcrossing services to transfer targeted alleles onto defined genetic backgrounds, ensuring consistent phenotypes and compatibility with established research strains. Backcrossing is essential for eliminating mixed background effects, enabling strain specific phenotyping, and generating mice compatible with existing colony backgrounds used by research programs worldwide.",
   description: ""
