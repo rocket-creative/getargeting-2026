@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "About Ingenious Targeting Laboratory",
   intro: "Since 1998, Ingenious Targeting Laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
@@ -31,9 +31,9 @@ const statsData = [
 
 // FAQ Data
 const faqData = [
-  { question: "What services does Ingenious Targeting Laboratory provide?", answer: "ITL provides custom genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
-  { question: "How long has ITL been in business?", answer: "ITL has been generating custom mouse models since 1998, with over 25 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
-  { question: "How do I get started with a custom mouse model project?", answer: "Contact ITL through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
+  { question: "What services does ingenious targeting laboratory provide?", answer: "We provide custom genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
+  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 25 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How do I get started with a custom mouse model project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
 ];
 
 // Related Links

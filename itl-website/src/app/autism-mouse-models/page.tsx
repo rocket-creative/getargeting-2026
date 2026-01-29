@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Autism Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported autism spectrum disorder research with custom mouse models enabling mechanistic studies of social behavior, synaptic function, and neurodevelopmental processes underlying this complex neurodevelopmental condition. Autism mouse models provide essential platforms for investigating the molecular pathways underlying social communication deficits and repetitive behaviors, testing hypotheses about synaptic plasticity and neural circuit function, and developing targeted therapies for individuals on the autism spectrum.",
   description: ""

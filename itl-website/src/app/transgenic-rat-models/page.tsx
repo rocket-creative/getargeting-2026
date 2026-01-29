@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Transgenic Rat Models",
   intro: "Since 1998, ingenious targeting laboratory has generated over 2,500 custom mouse and rat models, with hundreds of transgenic rat projects enabling stable overexpression of transgenes, ectopic expression of therapeutic genes, and BAC based integration of large regulatory elements in larger rodents providing superior phenotypic complexity. Transgenic rats represent a valuable platform for disease models where gene overexpression or tissue specific expression patterns require rodent body size and behavioral sophistication.",
   description: "Transgenic rat models permit investigation of gain of function mechanisms through controlled transgene overexpression in intact animals with physiological complexity exceeding transgenic mice. The ability to monitor disease progression in larger organisms enables longitudinal studies revealing temporal dynamics and chronic consequences of transgene expression."

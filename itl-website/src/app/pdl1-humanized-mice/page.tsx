@@ -260,8 +260,8 @@ const faqData = [
     answer: "Pre-germline characterization includes Southern blot analysis to confirm correct targeting and sequence verification to ensure human sequence fidelity. Post-germline validation includes flow cytometry for surface expression on tumor cells, dendritic cells, and macrophages, Western blot for protein expression, and functional confirmation through binding of anti-PDL1 antibodies (atezolizumab, durvalumab)."
   },
   {
-    question: "What is the timeline for generating PDL1 humanized mice?",
-    answer: "Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Humanized models follow the same timeline. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation."
+    question: "What is involved in generating PDL1 humanized mice?",
+    answer: "Custom humanized model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us for current timeline estimates."
   },
   {
     question: "How do PDL1 humanized models work with syngeneic tumors?",
@@ -288,7 +288,7 @@ const relatedLinksData = {
   resources: [
     { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
     { href: "/c57bl6-mouse-background", label: "C57BL/6 Mouse Background" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
+    { href: "/request-quote", label: "Request a Quote" },
     { href: "/faqs", label: "FAQs" }
   ]
 };

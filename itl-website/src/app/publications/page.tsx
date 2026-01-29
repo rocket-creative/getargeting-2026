@@ -703,7 +703,7 @@ export default function PublicationsPage() {
                   Growing Archive
                 </h3>
                 <p style={{ fontSize: '.9rem', color: '#666', lineHeight: 1.6 }}>
-                  New publications are added regularly as researchers continue to advance science using ITL-generated mouse models.
+                  New publications are added regularly as researchers continue to advance science using ingenious targeting laboratory generated mouse models.
                 </p>
               </div>
             </div>

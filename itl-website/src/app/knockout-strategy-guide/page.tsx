@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Knockout Strategy Guide",
   intro: "Since 1998, Ingenious Targeting Laboratory has helped researchers design over 2,500 custom gene targeting projects. Our scientific consultants work with investigators at every career stage to identify the optimal knockout approach for their specific research questions, ensuring that model design aligns with experimental goals.",
   description: "Choosing the right knockout strategy is one of the most important decisions in mouse model generation. The difference between a conventional knockout that deletes gene function globally and a conditional knockout that enables tissue specific or temporal control can determine whether your model answers your research question or produces confounding phenotypes that obscure the biology of interest. This guide walks through the key considerations for knockout strategy selection, helping you make an informed decision before committing to a project."

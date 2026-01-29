@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "GFP Knockin Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has generated GFP knockin models that enable visualization of gene expression, cell tracking, and live imaging in mice.",
   description: "Green fluorescent protein knockin at endogenous loci provides physiological expression patterns without the artifacts associated with transgenic overexpression. Whether you need to visualize gene expression patterns, track specific cell populations, or enable cell isolation by fluorescence, Ingenious Targeting Laboratory designs GFP knockin alleles optimized for your specific imaging and research applications."

@@ -194,7 +194,7 @@ const getFaqData = () => [
     question: 'How long does it take to generate a knockout mouse model?',
     answer: (
       <>
-        Conventional knockout projects typically require 6-8 months. Conditional knockout projects can take 8-10 months due to additional complexity in allele design and verification. Timelines include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice.
+        Project timelines vary based on model type and complexity. Conditional knockout projects require additional time due to complexity in allele design and verification. All projects include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. Contact us for a detailed timeline estimate for your specific project.
       </>
     ),
   },
@@ -231,7 +231,7 @@ const relatedTech = [
 const relatedResources = [
   { label: 'Knockout Strategy Guide', href: '/knockout-strategy-guide' },
   { label: 'Conditional vs Conventional Guide', href: '/conditional-vs-conventional-guide' },
-  { label: 'Model Generation Timeline', href: '/model-generation-timeline' },
+  { label: 'Request a Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
 ];
 

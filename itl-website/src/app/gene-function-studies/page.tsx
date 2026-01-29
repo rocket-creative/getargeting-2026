@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Gene Function Studies",
   intro: "Since 1998, ingenious targeting laboratory has generated over 540 mouse models specifically designed for gene function analysis, including knockout models for loss of function studies, knockin models for gain of function investigations, and conditional approaches enabling tissue specific and temporal investigation of gene function, contributing to 287+ peer reviewed publications studying how specific genes control biological processes.",
   description: "Understanding gene function—what does this gene do? Which tissues require this gene? When during development is this gene essential?—forms the foundation of modern biomedical research. Appropriate mouse models transform these questions from speculation into testable biological hypotheses."

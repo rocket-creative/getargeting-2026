@@ -66,7 +66,7 @@ const tauModelsTable = [
 // Knockin vs Transgenic Comparison
 const comparisonTable = [
   { factor: "Expression level", knockin: "Physiological", transgenic: "Supraphysiological" },
-  { factor: "Pathology onset", knockin: "Gradual (12+ months)", transgenic: "Rapid (3 to 6 months)" },
+  { factor: "Pathology onset", knockin: "Gradual", transgenic: "Rapid" },
   { factor: "Overexpression artifacts", knockin: "None", transgenic: "Possible" },
   { factor: "Copy number", knockin: "Single", transgenic: "Variable" },
   { factor: "Regulatory control", knockin: "Endogenous", transgenic: "Promoter dependent" }
@@ -181,7 +181,7 @@ const relatedTechnologies = [
 const faqData = [
   {
     question: "What is the difference between knockin and transgenic Alzheimer models?",
-    answer: "Knockin models introduce mutations at the endogenous gene locus under native regulatory control, providing physiological expression levels but slower pathology onset (12+ months). Transgenic models use random integration with promoters, providing faster pathology (3-6 months) but may include overexpression artifacts. Knockin models are more physiologically relevant; transgenic models offer faster readouts."
+    answer: "Knockin models introduce mutations at the endogenous gene locus under native regulatory control, providing physiological expression levels but slower pathology onset. Transgenic models use random integration with promoters, providing faster pathology but may include overexpression artifacts. Knockin models are more physiologically relevant; transgenic models offer faster readouts. Contact us to discuss the best approach for your study timeline."
   },
   {
     question: "Which AD mutations can be modeled in mice?",
@@ -193,7 +193,7 @@ const faqData = [
   },
   {
     question: "How long does it take to see AD pathology in mouse models?",
-    answer: "Knockin models with APP or PSEN mutations typically develop amyloid pathology over 12-18 months. Tau pathology may develop earlier or later depending on the specific mutation. Transgenic models often show faster pathology (3-6 months) but may include overexpression artifacts. Pathology timing should be considered when planning studies."
+    answer: "Knockin models with APP or PSEN mutations develop amyloid pathology gradually over time. Tau pathology timing varies depending on the specific mutation. Transgenic models often show faster pathology but may include overexpression artifacts. Pathology timing varies by model and should be considered when planning studies. Contact us to discuss model selection for your research timeline."
   }
 ];
 

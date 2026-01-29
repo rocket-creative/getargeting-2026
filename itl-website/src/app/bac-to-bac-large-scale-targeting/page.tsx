@@ -76,7 +76,7 @@ const esCellData = {
 // Timeline Data
 const timelineData = {
   title: "Timeline and Project Planning for BAC Targeting",
-  intro: "BAC targeting projects typically require 8-12 months from project initiation through germline confirmation.",
+  intro: "BAC targeting projects involve complex allele design and verification. Contact us for current timeline estimates based on your specific project requirements.",
   phases: [
     {
       title: "Phase 1: BAC Selection and Characterization",

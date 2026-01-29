@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Cell Therapy Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has generated over 110 custom cell therapy mouse models including xenograft-compatible mice, humanized immune system models, and conditional transgenic approaches supporting CAR-T, stem cell, and engineered cell therapies, contributing to 92+ peer reviewed publications in cell-based therapeutic research. Cell therapy—transplanting or infusing functional cells to replace damaged tissue or modulate immunity—requires specialized animal models.",
   description: "Unlike small molecule drugs that distribute systemically, cell therapies demand appropriate tissue microenvironments, compatible immune systems, and survival niches. Engineered mouse models enable testing engraftment, homing, persistence, and functional integration essential for clinical translation."

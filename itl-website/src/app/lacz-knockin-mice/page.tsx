@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "LacZ Knockin Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has generated LacZ knockin models providing sensitive enzymatic detection of gene expression patterns.",
   description: "Beta galactosidase (LacZ) reporters offer signal amplification through enzymatic activity, enabling detection of low level expression and permanent histological records of expression patterns. Whether you need to map gene expression during development, detect expression in rare cell populations, or create permanent records for histological analysis, Ingenious Targeting Laboratory designs LacZ knockin alleles optimized for your expression analysis requirements."

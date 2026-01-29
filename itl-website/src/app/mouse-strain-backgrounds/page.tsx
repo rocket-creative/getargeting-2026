@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Mouse Strain Backgrounds",
   intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on multiple genetic backgrounds, with strain selection guided by experimental requirements and phenotype considerations.",
   description: "Understanding the characteristics of different inbred strains is essential for choosing the optimal background for your research. Whether you need models on C57BL/6 for broad compatibility, BALB/c for immunological studies, or other backgrounds for specific applications, Ingenious Targeting Laboratory provides expertise in strain selection and backcrossing services to establish your model on the ideal genetic background."
@@ -34,7 +34,7 @@ const faqData = [
   { question: "What are the key differences between common mouse strain backgrounds?", answer: "C57BL/6 is standard for most research, shows Th1 immune bias, susceptible to diet-induced obesity, and widely used for behavioral assays. BALB/c shows Th2 immune bias, more susceptible to some infections, relatively resistant to diet-induced obesity. 129 strains are commonly used for ES cell derivation. FVB/N is good for transgenic generation due to large pronuclei." },
   { question: "How do strain backgrounds affect model phenotypes?", answer: "Genetic background profoundly influences phenotypes. The same genetic modification can show different severity, penetrance, or even opposite effects on different backgrounds. Modifier genes on different backgrounds can mask or enhance phenotypes. Consistent background use within studies is critical for reproducibility and interpretation." },
   { question: "When should I use C57BL/6 vs BALB/c?", answer: "Use C57BL/6 for standard research applications, metabolic studies, behavioral assays, or when using C57BL/6N ES cells for targeting. Use BALB/c for Th2-biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c-based research protocols." },
-  { question: "Can I backcross my model to a different background?", answer: "Yes. ITL provides backcrossing services to transfer models to different backgrounds." },
+  { question: "Can I backcross my model to a different background?", answer: "Yes. We provide backcrossing services to transfer models to different backgrounds." },
   { question: "What is the difference between C57BL/6J and C57BL/6N substrains?", answer: "C57BL/6J carries a mutation in the Nnt gene affecting glucose metabolism; C57BL/6N does not. Substrains differ in some behavioral phenotypes and seizure susceptibility. C57BL/6N ES cells (JM8 lines) are standard for gene targeting. Consistency within a study is critical." }
 ];
 

@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Mouse Model Research Applications",
   intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
   description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. Ingenious Targeting Laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."

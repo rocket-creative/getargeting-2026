@@ -178,8 +178,8 @@ const faqData = [
     answer: "Genetic background profoundly influences phenotypes. The same genetic modification can show different severity, penetrance, or even opposite effects on different backgrounds. Modifier genes on different backgrounds can mask or enhance phenotypes. Consistent background use within studies is critical for reproducibility."
   },
   {
-    question: "What is the timeline for generating a model on BALB/c background?",
-    answer: "The typical timeline for custom mouse model generation is 6-8 months from project initiation to identification of germline transmission mice."
+    question: "What is involved in generating a model on BALB/c background?",
+    answer: "Custom mouse model generation timelines vary based on project complexity, model type, and specific requirements. Contact us for a detailed timeline estimate tailored to your project."
   }
 ];
 

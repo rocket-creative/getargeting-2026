@@ -188,7 +188,7 @@ const relatedTechnologies = [
 const projectResources = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
+  { title: "Request a Quote", href: "/request-quote" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -222,7 +222,7 @@ const getFaqData = () => [
     question: "How long does a conditional knockout project take?",
     answer: (
       <>
-        Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of loxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>.
+        Custom conditional knockout project timelines account for more complex allele designs and verification of loxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>. Contact us for current timeline estimates tailored to your project.
       </>
     )
   }

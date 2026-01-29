@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Safe Harbor Locus Integration Strategies",
   intro: "Since 1998, ingenious targeting laboratory has employed safe harbor locus targeting in over 800 custom mouse models, enabling predictable transgene expression with minimal disruption to endogenous mouse genomics and contributing to 215+ peer reviewed publications using safe harbor integration approaches. Safe harbor loci are genomic locations that tolerate large DNA insertions without disrupting essential genes, altering developmental patterns, or creating unpredictable expression effects.",
   description: "Unlike random integration or multi-copy insertions, safe harbor targeting provides consistent, copy number controlled expression while preserving normal mouse biology. This approach has become essential for researchers requiring reliable transgene expression combined with genetic predictability."

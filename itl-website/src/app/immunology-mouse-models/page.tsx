@@ -615,7 +615,7 @@ export default function ImmunologyMouseModelsPage() {
             </div>
             
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', marginTop: '30px' }}>
-              ITL has generated models for psoriasis, inflammatory arthritis, vasculitis, and other inflammatory diseases. Each model is designed based on the specific immune mechanisms driving the research program.
+              ingenious targeting laboratory has generated models for psoriasis, inflammatory arthritis, vasculitis, and other inflammatory diseases. Each model is designed based on the specific immune mechanisms driving the research program.
             </p>
           </div>
         </section>

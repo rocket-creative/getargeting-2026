@@ -377,10 +377,10 @@ export default function PrivacyPage() {
                 </p>
                 <p style={{ ...paragraphStyle, marginBottom: 0 }}>
                   <strong>ingenious targeting laboratory</strong><br />
-                  2200 Smithtown Avenue<br />
-                  Ronkonkoma, NY 11779<br /><br />
-                  Email: <a href="mailto:info@genetargeting.com" style={{ color: BRAND.teal }}>info@genetargeting.com</a><br />
-                  Phone: <a href="tel:+16312088757" style={{ color: BRAND.teal }}>(631) 208 8757</a>
+                  761-80 Coates Avenue<br />
+                  Holbrook, NY 11741<br /><br />
+                  Email: <a href="mailto:inquiry@genetargeting.com" style={{ color: BRAND.teal }}>inquiry@genetargeting.com</a><br />
+                  Phone: <a href="tel:+16314688530" style={{ color: BRAND.teal }}>(631) 468-8530</a>
                 </p>
               </div>
 

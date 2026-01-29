@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Gene Therapy Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported gene therapy research with custom mouse models that enable preclinical evaluation of viral vectors, gene editing approaches, and therapeutic transgene expression strategies.",
   description: "Gene therapy mouse models provide essential platforms for testing therapeutic gene delivery and expression in relevant disease contexts before advancing to clinical trials. These models allow researchers to evaluate vector tropism, expression levels, duration of therapeutic effect, and potential off target activities in a controlled in vivo setting."

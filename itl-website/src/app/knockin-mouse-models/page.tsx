@@ -178,7 +178,7 @@ const getFaqData = () => [
     question: 'How long does it take to generate a knockin mouse model?',
     answer: (
       <>
-        Knockin projects typically require 6-10 months depending on complexity. <GlossaryTermLink term="point-mutation">Point mutations</GlossaryTermLink> and small tags are faster. Large insertions require more time. Timelines include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice.
+        Knockin project timelines depend on complexity. <GlossaryTermLink term="point-mutation">Point mutations</GlossaryTermLink> and small tags are generally faster. Large insertions require more time. All projects include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. Contact us for current timeline estimates tailored to your project.
       </>
     ),
   },
@@ -200,7 +200,7 @@ const relatedModels = [
 
 const relatedResources = [
   { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
-  { label: 'Model Generation Timeline', href: '/model-generation-timeline' },
+  { label: 'Request a Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
   { label: 'Technologies', href: '/technologies' },
 ];

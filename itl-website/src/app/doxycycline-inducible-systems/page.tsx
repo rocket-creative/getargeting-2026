@@ -310,7 +310,7 @@ const relatedLinksData = {
 
 // CTA Data
 const ctaData = {
-  title: "ITL's Tet System Services",
+  title: "Our Tet System Services",
   description: "In need of a custom inducible mouse model? Contact us to discuss your specific project details.",
   primaryButton: { href: "/request-quote", label: "Request a Quote" },
   secondaryButton: { href: "/contact", label: "Contact Us" }

@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Biomarker Discovery Mice",
   intro: "Since 1998, ingenious targeting laboratory has engineered over 95 biomarker discovery models including reporter knockins, dual-fluorophore mice, and tissue specific biosensor lines enabling preclinical validation of disease biomarkers, contributing to 78+ peer reviewed publications in biomarker development and assay optimization. Biomarkers are measurable biological indicators of disease state, therapeutic response, or patient stratification.",
   description: "Moving biomarkers from candidate discovery to clinical validation requires mouse models enabling longitudinal tracking, spatial resolution, and mechanistic isolation of biomarker expression patterns. Engineered reporter mice provide these capabilities."

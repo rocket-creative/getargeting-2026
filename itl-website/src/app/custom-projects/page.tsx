@@ -54,87 +54,29 @@ const projectTypesData = [
   {
     title: "Conventional Knockout",
     description: "Complete gene inactivation throughout the organism.",
-    features: ["Global gene deletion", "Simple allele design", "Faster timeline", "Lower cost"],
-    timeline: "8-12 months"
+    features: ["Global gene deletion", "Simple allele design", "Streamlined approach", "Lower cost"]
   },
   {
     title: "Conditional Knockout",
     description: "Cre lox controlled gene deletion for tissue and temporal specificity.",
-    features: ["Floxed allele design", "Tissue specific deletion", "Temporal control options", "Maximum flexibility"],
-    timeline: "10-14 months"
+    features: ["Floxed allele design", "Tissue specific deletion", "Temporal control options", "Maximum flexibility"]
   },
   {
     title: "Knockin",
     description: "Introduction of specific sequences, mutations, or reporter genes.",
-    features: ["Point mutations", "Reporter insertions", "Human gene replacement", "Tag insertions"],
-    timeline: "10-14 months"
+    features: ["Point mutations", "Reporter insertions", "Human gene replacement", "Tag insertions"]
   },
   {
     title: "Humanization",
     description: "Replacement of mouse genes with human sequences.",
-    features: ["Single exon to full gene", "Functional validation", "Disease modeling", "Drug target studies"],
-    timeline: "12-18 months"
+    features: ["Single exon to full gene", "Functional validation", "Disease modeling", "Drug target studies"]
   },
   {
     title: "Complex Projects",
     description: "Multi allele designs, large insertions, and specialized applications.",
-    features: ["BAC transgenesis", "Multiple modifications", "Dual recombinase systems", "Custom requirements"],
-    timeline: "Variable"
+    features: ["BAC transgenesis", "Multiple modifications", "Dual recombinase systems", "Custom requirements"]
   }
 ];
-
-// Project Workflow Data
-const projectWorkflowData = {
-  title: "Custom Project Workflow",
-  steps: [
-    {
-      step: "Initial Consultation",
-      description: "Discuss your research goals and requirements with our scientific team. We review the gene of interest and evaluate the best approach."
-    },
-    {
-      step: "Proposal and Quote",
-      description: "Receive a detailed proposal including allele design, project timeline, milestones, and pricing. We address any questions before proceeding."
-    },
-    {
-      step: "Vector Construction",
-      description: "Our molecular biology team constructs the targeting vector according to the approved design, with quality control at each step."
-    },
-    {
-      step: "ES Cell Targeting",
-      description: "Introduction of the targeting vector into ES cells, followed by selection and screening to identify correctly targeted clones."
-    },
-    {
-      step: "Clone Validation",
-      description: "Extensive characterization of ES cell clones using Southern blot, PCR, and sequencing to confirm correct targeting."
-    },
-    {
-      step: "Mouse Generation",
-      description: "Microinjection of validated ES cells into blastocysts, followed by embryo transfer to generate chimeric founders."
-    },
-    {
-      step: "Germline Transmission",
-      description: "Breeding of chimeras to confirm germline transmission and establish the mouse line."
-    },
-    {
-      step: "Delivery",
-      description: "Delivery of heterozygous mice along with comprehensive documentation and genotyping protocols."
-    }
-  ]
-};
-
-// Deliverables Data
-const deliverablesData = {
-  title: "What You Receive",
-  items: [
-    "Heterozygous mice (typically 2-4 breeding pairs)",
-    "Detailed project report with all characterization data",
-    "Targeting vector construct and sequence",
-    "ES cell clone with characterization data",
-    "Genotyping protocol and primers",
-    "Southern blot probes (if applicable)",
-    "Ongoing technical support"
-  ]
-};
 
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
@@ -157,10 +99,6 @@ const publicationsData = {
 
 // FAQ Data
 const faqData = [
-  {
-    question: "How long does a custom mouse model project take?",
-    answer: "Timeline varies by project type. Conventional knockouts typically take 8-12 months, conditional knockouts 10-14 months, and complex projects may require 12-18 months. We provide detailed timeline estimates with every proposal and keep you updated throughout the project."
-  },
   {
     question: "What is included in the project cost?",
     answer: "Project cost includes all vector construction, ES cell work, mouse generation, and breeding to germline transmission. You receive heterozygous mice, full characterization data, genotyping protocols, and ongoing technical support. There are no hidden fees."
@@ -185,8 +123,8 @@ const relatedLinksData = {
   ],
   resources: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
-    { href: "/pricing-overview", label: "Pricing Overview" }
+    { href: "/technologies", label: "Technologies" },
+    { href: "/resources", label: "All Resources" }
   ],
   catalog: [
     { href: "/catalog-mouse-models", label: "Catalog Mouse Models" },
@@ -482,7 +420,7 @@ export default function CustomProjectsPage() {
                   <p style={{ fontSize: '.85rem', color: '#666', lineHeight: 1.6, marginBottom: '14px' }}>
                     {type.description}
                   </p>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 14px 0' }}>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {type.features.map((feature, idx) => (
                       <li key={idx} style={{
                         display: 'flex',
@@ -497,15 +435,6 @@ export default function CustomProjectsPage() {
                       </li>
                     ))}
                   </ul>
-                  <div style={{
-                    fontSize: '.8rem',
-                    color: '#008080',
-                    fontWeight: 600,
-                    paddingTop: '12px',
-                    borderTop: '1px solid #e0e0e0'
-                  }}>
-                    Timeline: {type.timeline}
-                  </div>
                 </div>
               ))}
             </div>
@@ -529,7 +458,7 @@ export default function CustomProjectsPage() {
                   <p style={{ fontSize: '.85rem', color: '#666', lineHeight: 1.6, marginBottom: '14px' }}>
                     {type.description}
                   </p>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 14px 0' }}>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {type.features.map((feature, idx) => (
                       <li key={idx} style={{
                         display: 'flex',
@@ -544,124 +473,8 @@ export default function CustomProjectsPage() {
                       </li>
                     ))}
                   </ul>
-                  <div style={{
-                    fontSize: '.8rem',
-                    color: '#008080',
-                    fontWeight: 600,
-                    paddingTop: '12px',
-                    borderTop: '1px solid #e0e0e0'
-                  }}>
-                    Timeline: {type.timeline}
-                  </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Project Workflow Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#2384da',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              {projectWorkflowData.title}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
-              {projectWorkflowData.steps.map((step, index) => (
-                <div key={index} className="animate-in" style={{
-                  display: 'flex',
-                  gap: '16px',
-                  background: '#ffffff',
-                  borderRadius: '8px',
-                  padding: '20px',
-                  alignItems: 'flex-start'
-                }}>
-                  <div style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '50%',
-                    background: '#008080',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    color: '#fff',
-                    fontWeight: 700,
-                    fontSize: '.85rem'
-                  }}>
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 style={{
-                      fontFamily: 'Poppins, sans-serif',
-                      fontSize: '.95rem',
-                      fontWeight: 600,
-                      color: '#333',
-                      marginBottom: '6px'
-                    }}>
-                      {step.step}
-                    </h3>
-                    <p style={{ fontSize: '.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Deliverables Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="animate-in" style={{
-              background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
-              borderRadius: '12px',
-              padding: '40px',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              <div style={{
-                position: 'absolute',
-                top: '-100px',
-                right: '-100px',
-                width: '300px',
-                height: '300px',
-                borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(0,212,212,0.1) 0%, transparent 70%)'
-              }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <h2 style={{
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '1.8rem',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                  marginBottom: '24px',
-                  textAlign: 'center'
-                }}>
-                  {deliverablesData.title}
-                </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
-                  {deliverablesData.items.map((item, index) => (
-                    <div key={index} style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      fontSize: '.9rem',
-                      color: 'rgba(255,255,255,0.9)'
-                    }}>
-                      <IconCheckCircle size={16} color="#00d4d4" style={{ flexShrink: 0 }} />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>

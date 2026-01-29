@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "FLAG Tag Knockin Mice",
   intro: "Since 1998, Ingenious Targeting Laboratory has generated FLAG tag knockin models enabling detection and purification of endogenous proteins without requiring gene specific antibodies.",
   description: "The FLAG epitope (DYKDDDDK) provides reliable detection across multiple applications with widely available, well characterized antibodies. FLAG tag knockin at endogenous loci preserves physiological expression levels while providing standardized reagents for protein detection, immunoprecipitation, and affinity purification."

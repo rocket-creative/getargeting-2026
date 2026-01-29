@@ -54,8 +54,8 @@ function generateRssFeed(): string {
       <link>${SITE_URL}/lab-signals</link>
     </image>
     <copyright>© ${new Date().getFullYear()} Ingenious Targeting Laboratory. All rights reserved.</copyright>
-    <managingEditor>info@genetargeting.com (ITL Scientific Team)</managingEditor>
-    <webMaster>info@genetargeting.com (ITL Web Team)</webMaster>
+    <managingEditor>inquiry@genetargeting.com (ingenious targeting laboratory Scientific Team)</managingEditor>
+    <webMaster>inquiry@genetargeting.com (ingenious targeting laboratory Web Team)</webMaster>
     <ttl>1440</ttl>
     ${items}
   </channel>

@@ -142,7 +142,7 @@ const faqData = [
   },
   {
     question: "How do you select the right model type for a therapeutic area?",
-    answer: "Model type selection depends on research question: use knockout for loss-of-function studies, knockin for patient mutations or reporters, conditional for tissue-specific studies or essential genes, and humanized for therapeutic testing requiring human targets. ITL's scientific consultants help match model type to research goals."
+    answer: "Model type selection depends on research question: use knockout for loss-of-function studies, knockin for patient mutations or reporters, conditional for tissue-specific studies or essential genes, and humanized for therapeutic testing requiring human targets. Our scientific consultants help match model type to research goals."
   },
   {
     question: "Can models be combined across therapeutic areas?",

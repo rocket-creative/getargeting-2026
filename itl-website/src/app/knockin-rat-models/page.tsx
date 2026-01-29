@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Knockin Rat Models",
   intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom mouse and rat models, with hundreds of knockin rat projects enabling precise insertion of human disease mutations, reporter genes, and functional variants in larger rodents providing superior translational relevance. Knockin rat models represent critical platform for investigating human disease mechanisms in physiologically complex organism approximating human phenotypes more closely than mouse models.",
   description: "Knockin rats enable introduction of disease associated human variants within intact rat genomic context, permitting investigation of pathogenic mechanisms with greater translational fidelity than humanized mouse models. The combination of superior behavioral capacity, complex physiology, and precise genetic modifications makes knockin rats optimal for human disease modeling studies requiring maximal biological relevance."

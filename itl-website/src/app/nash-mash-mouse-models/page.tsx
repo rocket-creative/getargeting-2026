@@ -176,7 +176,7 @@ const faqData = [
   },
   {
     question: "How do you model different stages of MASH progression?",
-    answer: "Steatosis develops in 8-12 weeks on HFD, steatohepatitis requires 16-24 weeks, and fibrosis requires 24+ weeks or accelerating approaches. Genetic modifications can accelerate specific stages: combining conditional knockouts with dietary challenge enables study of mechanisms driving progression from steatosis to fibrosis."
+    answer: "Disease progression timelines vary by model and dietary protocol. Steatosis develops first, followed by steatohepatitis, then fibrosis with longer challenge periods or accelerating approaches. Genetic modifications can accelerate specific stages: combining conditional knockouts with dietary challenge enables study of mechanisms driving progression from steatosis to fibrosis. Contact us to discuss model selection for your study timeline."
   },
   {
     question: "What cell-type-specific approaches are used for MASH?",
@@ -188,7 +188,7 @@ const faqData = [
   },
   {
     question: "How long does it take to generate a MASH mouse model?",
-    answer: "Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Conditional approaches for cell-type-specific studies follow the same timeline. Pre-germline characterization provides early validation of targeting before mouse generation."
+    answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Conditional approaches for cell-type-specific studies follow similar workflows. Pre-germline characterization provides early validation of targeting before mouse generation. Contact us for current timeline estimates."
   }
 ];
 

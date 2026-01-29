@@ -251,10 +251,10 @@ export default function MouseModelGenerationGuidePage() {
                 marginBottom: '25px',
               }}
             >
-              Typical project timelines range from 6-10 months depending on model complexity. Conventional knockouts typically require 6-8 months, while conditional knockouts and cDNA knockins require 8-10 months. Contact our team for specific timeline estimates for your project.
+              Project timelines vary based on model type and complexity. Conventional knockouts are generally faster than conditional knockouts and cDNA knockins due to simpler allele designs. With ongoing advances in gene editing technology, timelines continue to improve. Contact our team for current timeline estimates tailored to your specific project.
             </p>
             <Link
-              href="/model-generation-timeline"
+              href="/request-quote"
               className="animate-in inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               style={{
                 backgroundColor: '#134978',
@@ -264,7 +264,7 @@ export default function MouseModelGenerationGuidePage() {
                 fontWeight: 500,
               }}
             >
-              <span>View Detailed Timeline</span>
+              <span>Get a Project Estimate</span>
               <IconArrowRight size={16} color="white" />
             </Link>
           </div>
@@ -288,7 +288,7 @@ export default function MouseModelGenerationGuidePage() {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { label: 'Knockout Strategy Guide', href: '/knockout-strategy-guide' },
-                { label: 'Model Generation Timeline', href: '/model-generation-timeline' },
+                { label: 'Request a Quote', href: '/request-quote' },
                 { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
                 { label: 'Resources', href: '/resources' },
               ].map((item, i) => (

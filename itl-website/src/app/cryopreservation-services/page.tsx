@@ -165,7 +165,7 @@ const faqData = [
   },
   {
     question: "How long does it take to recover a line from cryopreserved material?",
-    answer: "Sperm recovery via IVF requires 4-6 weeks to produce live pups, plus breeding time to establish a colony. Embryo recovery requires 3-4 weeks. Recovery timelines depend on recipient availability and embryo/sperm quality."
+    answer: "Recovery timelines depend on the preservation method, recipient availability, and embryo/sperm quality. Embryo recovery is generally faster than sperm recovery via IVF. Contact us for current recovery timeline estimates based on your specific situation."
   },
   {
     question: "Can you cryopreserve lines with complex genotypes (multiple alleles)?",

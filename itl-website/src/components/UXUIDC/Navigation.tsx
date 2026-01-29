@@ -134,7 +134,7 @@ const navigationItems: NavItem[] = [
     label: 'About',
     href: '/about-itl',
     children: [
-      { label: 'Why Choose ITL', href: '/why-choose-itl' },
+      { label: 'Why Choose Us', href: '/why-choose-itl' },
       { label: 'Testimonials', href: '/testimonials' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },

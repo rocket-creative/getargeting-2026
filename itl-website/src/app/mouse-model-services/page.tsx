@@ -144,7 +144,7 @@ const relatedServices = [
 const modelSelectionGuides = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
+  { title: "Request a Quote", href: "/request-quote" }
 ];
 
 // FAQ Data
@@ -159,7 +159,7 @@ const faqData = [
   },
   {
     question: "How long does it take to generate a custom mouse model?",
-    answer: "Standard custom model generation takes 6-10 months from project initiation to identification of germline-transmitted mice. Timeline depends on project complexity, targeting efficiency, and breeding requirements. Expedited timelines may be available for certain project types."
+    answer: "Custom model generation timelines depend on project complexity, model type, and specific requirements. With ongoing advances in gene editing technology, timelines continue to improve. Expedited options may be available for certain project types. Contact us for current timeline estimates tailored to your project."
   },
   {
     question: "What is included in the project consultation?",

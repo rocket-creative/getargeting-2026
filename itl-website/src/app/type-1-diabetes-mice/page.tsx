@@ -15,7 +15,7 @@ import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, Icon
 
 // Hero Data
 const heroData = {
-  badge: "ITL Services",
+  badge: "Our Services",
   title: "Type 1 Diabetes Mice",
   intro: "Since 1998, ingenious targeting laboratory has generated over 85 custom type 1 diabetes models including NOD transgenic variants, streptozotocin-responsive knockins, and humanized immune checkpoint models, contributing to 68+ peer reviewed publications in autoimmune diabetes research. Type 1 diabetes results from loss of immune tolerance to pancreatic beta cells.",
   description: "Unlike type 2 diabetes driven by metabolic dysfunction, type 1 involves T cell-mediated destruction of insulin-producing cells. Mouse models recapitulate the autoimmune progression through transgenic disease susceptibility genes, chemical induction of beta cell destruction, and combination approaches capturing human disease complexity."
