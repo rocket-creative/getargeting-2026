@@ -139,28 +139,65 @@ export default function UXUIDCCookieConsent() {
 
   if (!show) return null;
 
+  // Button style constants for consistency
+  const primaryButtonStyle = `
+    px-6 py-3 
+    bg-emerald-600 text-white 
+    rounded-lg 
+    font-medium text-sm
+    shadow-sm
+    transition-all duration-150
+    hover:bg-emerald-700 hover:shadow-md
+    focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2
+    active:bg-emerald-800 active:scale-[0.98]
+  `;
+  
+  const secondaryButtonStyle = `
+    px-6 py-3 
+    bg-white text-slate-700
+    border-2 border-slate-300
+    rounded-lg 
+    font-medium text-sm
+    transition-all duration-150
+    hover:bg-slate-50 hover:border-slate-400
+    focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
+    active:bg-slate-100 active:scale-[0.98]
+  `;
+  
+  const outlineButtonStyle = `
+    px-6 py-3 
+    bg-white text-emerald-600
+    border-2 border-emerald-500
+    rounded-lg 
+    font-medium text-sm
+    transition-all duration-150
+    hover:bg-emerald-50 hover:border-emerald-600
+    focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2
+    active:bg-emerald-100 active:scale-[0.98]
+  `;
+
   return (
     <>
       {/* Overlay */}
-      <div className="fixed inset-0 bg-black/30 z-40" aria-hidden="true" />
+      <div className="fixed inset-0 bg-black/40 z-40 backdrop-blur-sm" aria-hidden="true" />
 
       {/* Cookie Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t z-50">
-        <div className="container py-6">
+      <div className="fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t border-slate-200 z-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {!showPreferences ? (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               <div className="flex-1">
-                <h3 className="font-semibold text-lg text-[var(--dk-blue)] mb-2">
+                <h3 className="font-bold text-lg text-slate-900 mb-2">
                   We Value Your Privacy
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   We use cookies to enhance your browsing experience and analyze site traffic. 
                   By clicking &quot;Accept All&quot;, you consent to our use of cookies. See our{' '}
-                  <Link href="/cookies" className="text-[var(--blue)] hover:underline">
+                  <Link href="/cookies" className="text-emerald-600 hover:text-emerald-700 underline underline-offset-2">
                     Cookie Policy
                   </Link>{' '}
                   and{' '}
-                  <Link href="/privacy" className="text-[var(--blue)] hover:underline">
+                  <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 underline underline-offset-2">
                     Privacy Policy
                   </Link>
                   .
@@ -170,19 +207,19 @@ export default function UXUIDCCookieConsent() {
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
                 <button
                   onClick={() => savePreferences(true)}
-                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium order-first sm:order-none"
+                  className={`${primaryButtonStyle} order-first sm:order-none`}
                 >
                   Accept All
                 </button>
                 <button
                   onClick={rejectAll}
-                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                  className={secondaryButtonStyle}
                 >
                   Reject Non-Essential
                 </button>
                 <button
                   onClick={() => setShowPreferences(true)}
-                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                  className={secondaryButtonStyle}
                 >
                   Cookie Settings
                 </button>
@@ -190,33 +227,33 @@ export default function UXUIDCCookieConsent() {
             </div>
           ) : (
             <div>
-              <h3 className="font-semibold text-lg text-[var(--dk-blue)] mb-4">
+              <h3 className="font-bold text-lg text-slate-900 mb-4">
                 Cookie Preferences
               </h3>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-3 mb-6 max-h-[50vh] overflow-y-auto">
                 {/* Necessary Cookies */}
-                <div className="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className="font-medium text-[var(--dk-blue)]">Strictly Necessary</h4>
-                      <span className="text-xs bg-gray-200 px-2 py-1 rounded">Always Active</span>
+                <div className="flex items-start justify-between p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <div className="flex-1 pr-4">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                      <h4 className="font-bold text-slate-900">Strictly Necessary</h4>
+                      <span className="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded font-medium">Always Active</span>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-slate-600">
                       Essential for the website to function. Cannot be disabled.
                     </p>
                   </div>
                 </div>
 
                 {/* Analytics Cookies */}
-                <div className="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <h4 className="font-medium text-[var(--dk-blue)] mb-1">Analytics Cookies</h4>
-                    <p className="text-sm text-gray-600">
+                <div className="flex items-start justify-between p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <div className="flex-1 pr-4">
+                    <h4 className="font-bold text-slate-900 mb-1">Analytics Cookies</h4>
+                    <p className="text-sm text-slate-600">
                       Help us understand how visitors interact with our website using Google Analytics.
                     </p>
                   </div>
-                  <label className="relative inline-flex items-center cursor-pointer">
+                  <label className="relative inline-flex items-center cursor-pointer shrink-0">
                     <input
                       type="checkbox"
                       checked={preferences.analytics}
@@ -225,19 +262,19 @@ export default function UXUIDCCookieConsent() {
                       }
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[var(--blue)] rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[var(--cta)]"></div>
+                    <div className="w-12 h-7 bg-slate-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-emerald-500 peer-focus:ring-offset-2 rounded-full peer peer-checked:after:translate-x-5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-200 after:rounded-full after:h-6 after:w-6 after:shadow-sm after:transition-all peer-checked:bg-emerald-600"></div>
                   </label>
                 </div>
 
                 {/* Functional Cookies */}
-                <div className="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <h4 className="font-medium text-[var(--dk-blue)] mb-1">Functional Cookies</h4>
-                    <p className="text-sm text-gray-600">
+                <div className="flex items-start justify-between p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <div className="flex-1 pr-4">
+                    <h4 className="font-bold text-slate-900 mb-1">Functional Cookies</h4>
+                    <p className="text-sm text-slate-600">
                       Enable enhanced functionality and personalization.
                     </p>
                   </div>
-                  <label className="relative inline-flex items-center cursor-pointer">
+                  <label className="relative inline-flex items-center cursor-pointer shrink-0">
                     <input
                       type="checkbox"
                       checked={preferences.functional}
@@ -246,20 +283,20 @@ export default function UXUIDCCookieConsent() {
                       }
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[var(--blue)] rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[var(--cta)]"></div>
+                    <div className="w-12 h-7 bg-slate-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-emerald-500 peer-focus:ring-offset-2 rounded-full peer peer-checked:after:translate-x-5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-200 after:rounded-full after:h-6 after:w-6 after:shadow-sm after:transition-all peer-checked:bg-emerald-600"></div>
                   </label>
                 </div>
 
                 {/* Marketing Cookies */}
-                <div className="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <h4 className="font-medium text-[var(--dk-blue)] mb-1">Marketing Cookies</h4>
-                    <p className="text-sm text-gray-600">
+                <div className="flex items-start justify-between p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <div className="flex-1 pr-4">
+                    <h4 className="font-bold text-slate-900 mb-1">Marketing Cookies</h4>
+                    <p className="text-sm text-slate-600">
                       Used for advertising and retargeting across platforms including Google Ads, 
                       Meta (Facebook/Instagram), LinkedIn, X (Twitter), and AdRoll.
                     </p>
                   </div>
-                  <label className="relative inline-flex items-center cursor-pointer">
+                  <label className="relative inline-flex items-center cursor-pointer shrink-0">
                     <input
                       type="checkbox"
                       checked={preferences.marketing}
@@ -268,33 +305,33 @@ export default function UXUIDCCookieConsent() {
                       }
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[var(--blue)] rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[var(--cta)]"></div>
+                    <div className="w-12 h-7 bg-slate-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-emerald-500 peer-focus:ring-offset-2 rounded-full peer peer-checked:after:translate-x-5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-200 after:rounded-full after:h-6 after:w-6 after:shadow-sm after:transition-all peer-checked:bg-emerald-600"></div>
                   </label>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-end flex-wrap">
+              <div className="flex flex-col sm:flex-row gap-3 justify-end flex-wrap border-t border-slate-200 pt-4">
                 <button
                   onClick={() => setShowPreferences(false)}
-                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                  className={secondaryButtonStyle}
                 >
                   Back
                 </button>
                 <button
                   onClick={rejectAll}
-                  className="px-6 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+                  className={secondaryButtonStyle}
                 >
                   Reject Non-Essential
                 </button>
                 <button
                   onClick={() => savePreferences(false)}
-                  className="px-6 py-2.5 border border-[var(--cta)] text-[var(--cta)] rounded-lg hover:bg-[var(--cta)]/5 transition text-sm font-medium"
+                  className={outlineButtonStyle}
                 >
                   Save Preferences
                 </button>
                 <button
                   onClick={() => savePreferences(true)}
-                  className="px-6 py-2.5 bg-[var(--cta)] text-white rounded-lg hover:bg-[var(--cta-hover)] transition text-sm font-medium"
+                  className={primaryButtonStyle}
                 >
                   Accept All
                 </button>
