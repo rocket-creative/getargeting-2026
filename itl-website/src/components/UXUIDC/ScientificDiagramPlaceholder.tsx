@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { createPortal } from 'react-dom';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { IconImage } from './Icons';
 
 export interface DiagramPlaceholderProps {
@@ -42,8 +42,14 @@ export function ScientificDiagramPlaceholder({
 }: DiagramPlaceholderProps) {
   const [imageError, setImageError] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const triggerButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+  const closeLightbox = useCallback(() => {
+    setLightboxOpen(false);
+    triggerButtonRef.current?.focus();
+  }, []);
+
   useEffect(() => {
     if (!lightboxOpen) return;
     const onEscape = (e: KeyboardEvent) => {
@@ -51,6 +57,7 @@ export function ScientificDiagramPlaceholder({
     };
     document.addEventListener('keydown', onEscape);
     document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => closeButtonRef.current?.focus());
     return () => {
       document.removeEventListener('keydown', onEscape);
       document.body.style.overflow = '';
@@ -116,6 +123,32 @@ export function ScientificDiagramPlaceholder({
     </div>
   );
 
+  const handleBackdropClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (e.target === e.currentTarget) closeLightbox();
+    },
+    [closeLightbox]
+  );
+
+  const handleLightboxKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      const focusables = e.currentTarget.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    },
+    []
+  );
+
   const lightboxNode =
     typeof document !== 'undefined' &&
     lightboxOpen &&
@@ -124,23 +157,28 @@ export function ScientificDiagramPlaceholder({
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Enlarged diagram"
-        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 md:p-6"
-        onClick={(e) => {
-          if (e.target === e.currentTarget) closeLightbox();
-        }}
+        aria-label="Enlarged diagram. Click outside the image or press Escape to close."
+        tabIndex={-1}
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 md:p-6 outline-none"
+        onClick={handleBackdropClick}
+        onKeyDown={handleLightboxKeyDown}
       >
         <button
+          ref={closeButtonRef}
           type="button"
           onClick={closeLightbox}
-          className="absolute right-2 top-2 z-10 rounded-full bg-white/90 p-2 text-[#333] transition hover:bg-white md:right-4 md:top-4"
+          className="absolute right-2 top-2 z-10 rounded-full bg-white/90 p-2 text-[#333] transition hover:bg-white focus:outline focus:ring-2 focus:ring-[var(--blue)] focus:ring-offset-2 focus:ring-offset-transparent md:right-4 md:top-4"
           aria-label="Close enlarged view"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
         </button>
-        <div className="relative max-h-[90vh] w-full max-w-5xl">
+        <div
+          className="relative max-h-[90vh] w-full max-w-5xl cursor-default"
+          onClick={closeLightbox}
+          role="presentation"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imagePath}
@@ -161,6 +199,7 @@ export function ScientificDiagramPlaceholder({
       aria-label={altText || title}
     >
       <button
+        ref={triggerButtonRef}
         type="button"
         onClick={() => !imageError && setLightboxOpen(true)}
         className="group block w-full cursor-pointer rounded-lg border-none text-left outline-offset-2 focus:outline focus:ring-2 focus:ring-[var(--blue)]"
