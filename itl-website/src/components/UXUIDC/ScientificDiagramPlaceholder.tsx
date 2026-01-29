@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import { createPortal } from 'react-dom';
+import { useCallback, useEffect, useState } from 'react';
 import { IconImage } from './Icons';
-import { useState } from 'react';
 
 export interface DiagramPlaceholderProps {
   /** Unique figure ID for tracking (e.g., "fig-cre-lox-001") */
@@ -40,7 +41,22 @@ export function ScientificDiagramPlaceholder({
   altText,
 }: DiagramPlaceholderProps) {
   const [imageError, setImageError] = useState(false);
-  
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox();
+    };
+    document.addEventListener('keydown', onEscape);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onEscape);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxOpen, closeLightbox]);
+
   const aspectRatioValue = {
     '4:3': '4/3',
     '1:1': '1/1',
@@ -100,42 +116,98 @@ export function ScientificDiagramPlaceholder({
     </div>
   );
 
+  const lightboxNode =
+    typeof document !== 'undefined' &&
+    lightboxOpen &&
+    !imageError &&
+    createPortal(
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged diagram"
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 md:p-6"
+        onClick={(e) => {
+          if (e.target === e.currentTarget) closeLightbox();
+        }}
+      >
+        <button
+          type="button"
+          onClick={closeLightbox}
+          className="absolute right-2 top-2 z-10 rounded-full bg-white/90 p-2 text-[#333] transition hover:bg-white md:right-4 md:top-4"
+          aria-label="Close enlarged view"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <div className="relative max-h-[90vh] w-full max-w-5xl">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imagePath}
+            alt={altText || title}
+            className="max-h-[90vh] w-auto max-w-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+            draggable={false}
+          />
+        </div>
+      </div>,
+      document.body
+    );
+
   return (
     <figure
       data-figure-id={figureId}
       style={{ margin: 0 }}
       aria-label={altText || title}
     >
-      <div
-        style={{
-          border: variantStyles.border,
-          borderRadius: '8px',
-          aspectRatio: aspectRatioValue,
-          position: 'relative',
-          overflow: 'hidden',
-          backgroundColor: variantStyles.backgroundColor,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+      <button
+        type="button"
+        onClick={() => !imageError && setLightboxOpen(true)}
+        className="group block w-full cursor-pointer rounded-lg border-none text-left outline-offset-2 focus:outline focus:ring-2 focus:ring-[var(--blue)]"
+        aria-label={`View full size: ${altText || title}`}
       >
-        {!imageError ? (
-          <Image
-            src={imagePath}
-            alt={altText || title}
-            fill
-            style={{
-              objectFit: 'contain',
-              padding: variant === 'hero' ? '10px' : '8px',
-            }}
-            sizes={variant === 'hero' ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 100vw, 33vw'}
-            onError={() => setImageError(true)}
-            priority={variant === 'hero'}
-          />
-        ) : (
-          <PlaceholderContent />
-        )}
-      </div>
+        <div
+          style={{
+            border: variantStyles.border,
+            borderRadius: '8px',
+            aspectRatio: aspectRatioValue,
+            position: 'relative',
+            overflow: 'hidden',
+            backgroundColor: variantStyles.backgroundColor,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'border-color 0.2s ease',
+          }}
+          className="group-hover:border-[var(--blue)] group-focus:border-[var(--blue)]"
+        >
+          {!imageError ? (
+            <Image
+              src={imagePath}
+              alt={altText || title}
+              fill
+              style={{
+                objectFit: 'contain',
+                padding: variant === 'hero' ? '10px' : '8px',
+              }}
+              sizes={variant === 'hero' ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 100vw, 33vw'}
+              onError={() => setImageError(true)}
+              priority={variant === 'hero'}
+            />
+          ) : (
+            <PlaceholderContent />
+          )}
+          {!imageError && (
+            <span
+              className="absolute bottom-2 right-2 rounded bg-black/60 px-2 py-1 text-xs font-normal text-white opacity-0 transition group-hover:opacity-100 group-focus:opacity-100 md:bottom-3 md:right-3 max-md:opacity-100"
+              aria-hidden
+            >
+              View full size
+            </span>
+          )}
+        </div>
+      </button>
+      {lightboxNode}
       <figcaption
         style={{
           color: variantStyles.captionColor,
