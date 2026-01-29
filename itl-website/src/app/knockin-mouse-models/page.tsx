@@ -637,39 +637,46 @@ export default function KnockinMouseModelsPage() {
 
         {/* ========== TESTIMONIALS ========== */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               What Researchers Say
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{
+              display: testimonials.length === 1 ? 'block' : 'grid',
+              gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined,
+              gap: '24px',
+            }}>
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
                   style={{
                     backgroundColor: 'rgba(255,255,255,0.05)',
-                    padding: '30px',
+                    padding: testimonials.length === 1 ? '48px 56px' : '30px',
                     border: '1px solid rgba(255,255,255,0.1)',
                     borderRadius: '8px',
                     display: 'flex',
                     flexDirection: 'column',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    textAlign: testimonials.length === 1 ? 'center' : 'left',
                   }}
                 >
-                  <IconQuote size={28} color="#00d4d4" />
+                  <IconQuote size={28} color="#00d4d4" style={testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : undefined} />
                   <p
                     style={{
                       color: 'rgba(255,255,255,0.9)',
-                      fontSize: '.95rem',
+                      fontSize: testimonials.length === 1 ? '1.1rem' : '.95rem',
                       fontWeight: 400,
                       lineHeight: '1.6rem',
                       fontStyle: 'italic',
                       marginTop: '15px',
                       marginBottom: '15px',
-                      flex: 1,
+                      flex: testimonials.length > 1 ? 1 : undefined,
                     }}
                   >
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
-                  <div style={{ marginTop: 'auto' }}>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
                       — {testimonial.name}
                     </p>
