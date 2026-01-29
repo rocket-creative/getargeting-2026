@@ -537,21 +537,29 @@ export default function MouseModelServicesPage() {
 
         {/* Testimonials */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               What Researchers Say
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              style={{
+                display: testimonials.length === 1 ? 'block' : 'grid',
+                gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : undefined,
+                gap: '24px',
+              }}
+            >
               {testimonials.map((testimonial, index) => (
-                <div 
+                <div
                   key={index}
                   className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
                     backgroundColor: '#f8f9fa',
-                    padding: '30px',
+                    padding: testimonials.length === 1 ? '40px 48px' : '30px',
                     borderRadius: '8px',
-                    borderLeft: '4px solid #008080'
+                    borderLeft: '4px solid #008080',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    textAlign: testimonials.length === 1 ? 'center' : 'left',
                   }}
                 >
                   <div style={{
@@ -562,16 +570,17 @@ export default function MouseModelServicesPage() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '15px'
+                    marginBottom: '15px',
+                    ...(testimonials.length === 1 && { margin: '0 auto 15px' }),
                   }}>
                     <IconQuote size={20} color="#008080" />
                   </div>
-                  <blockquote style={{ 
-                    color: '#333', 
-                    fontSize: '.95rem', 
+                  <blockquote style={{
+                    color: '#333',
+                    fontSize: testimonials.length === 1 ? '1.05rem' : '.95rem',
                     lineHeight: '1.7rem',
                     fontStyle: 'italic',
-                    marginBottom: '20px'
+                    marginBottom: '20px',
                   }}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
@@ -586,9 +595,8 @@ export default function MouseModelServicesPage() {
                 </div>
               ))}
             </div>
-            
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
-              <Link 
+              <Link
                 href="/testimonials"
                 className="inline-flex items-center gap-2 transition-colors duration-300"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
