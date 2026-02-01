@@ -216,7 +216,6 @@ const relatedServices = [
 
 const relatedTech = [
   { label: 'Cre Lox System', href: '/cre-lox-system' },
-  { label: 'Derivative Alleles', href: '/derivative-alleles' },
   { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
 ];
 

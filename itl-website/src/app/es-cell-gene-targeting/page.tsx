@@ -111,7 +111,6 @@ const relatedModelTypes = [
 
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" }
 ];
 

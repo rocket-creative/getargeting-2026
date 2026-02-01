@@ -205,7 +205,6 @@ const creLoxTechnologies = [
 const relatedRecombinaseSystems = [
   { title: "Flp FRT System", href: "/flp-frt-system" },
   { title: "Dre Rox System", href: "/dre-rox-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" }
 ];
 
 const relatedModelTypes = [
@@ -828,7 +827,6 @@ export default function CreLoxSystemPage() {
             
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
-                href="/derivative-alleles"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >

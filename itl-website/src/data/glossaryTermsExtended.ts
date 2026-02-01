@@ -646,7 +646,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     relatedTermSlugs: ["cre-lox-system", "dre-rox-system", "selection-markers"],
     relatedServices: [
       { title: "Flp-FRT System", href: "/flp-frt-system" },
-      { title: "Selection Cassette Design", href: "/selection-cassette-design" }
     ]
   },
 
@@ -785,7 +784,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     relatedTermSlugs: ["targeting-vector", "es-cell-targeting", "flp-frt-system"],
     relatedServices: [
       { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
-      { title: "Selection Cassette Design", href: "/selection-cassette-design" }
     ]
   },
 

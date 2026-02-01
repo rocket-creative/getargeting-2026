@@ -44,7 +44,6 @@ const relatedLinks = [
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
   { title: "Humanized Mouse Models", href: "/humanized-mouse-models" },
   { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "Es Cell Gene Targeting", href: "/es-cell-gene-targeting" }
 ];
 

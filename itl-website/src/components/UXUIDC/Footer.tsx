@@ -71,7 +71,6 @@ const footerSections = [
       { label: 'About Us', href: '/about-itl' },
       { label: 'Why Choose Us', href: '/why-choose-itl' },
       { label: 'Testimonials', href: '/testimonials' },
-      { label: 'Case Studies', href: '/case-studies' },
       { label: 'Current Openings', href: '/current-openings' },
       { label: 'Request Quote', href: '/request-quote' },
       { label: 'Contact', href: '/contact' },

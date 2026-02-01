@@ -148,8 +148,6 @@ const testimonials = [
 
 // Related Links
 const relatedTechnologies = [
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
-  { title: "Selection Cassette Design", href: "/selection-cassette-design" },
   { title: "Critical Exon Selection", href: "/critical-exon-selection" },
   { title: "Cre Lox System", href: "/cre-lox-system" }
 ];

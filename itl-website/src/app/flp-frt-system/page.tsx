@@ -79,7 +79,6 @@ const testimonials = [
 
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" }
 ];

@@ -44,7 +44,6 @@ const relatedLinks = [
   { title: "Tdtomato Knockin Mice", href: "/tdtomato-knockin-mice" },
   { title: "Tag Knockin Mice", href: "/tag-knockin-mice" },
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "Cre Lox System", href: "/cre-lox-system" }
 ];
 

@@ -179,7 +179,6 @@ const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
   { title: "Flp Frt System", href: "/flp-frt-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" }
 ];
 
@@ -709,7 +708,6 @@ export default function ConditionalKnockoutMouseModelsPage() {
             
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
-                href="/derivative-alleles"
                 className="inline-flex items-center gap-2 transition-colors duration-300"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >

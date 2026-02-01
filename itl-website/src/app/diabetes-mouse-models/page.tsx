@@ -122,7 +122,6 @@ const relatedModelTypes = [
 
 const relatedTechnologies = [
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" }
 ];
 

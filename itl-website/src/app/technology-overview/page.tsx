@@ -137,7 +137,6 @@ const advancedTargeting = [
   {
     title: "Derivative Allele System",
     description: "Generation of multiple model types from single targeted ES cell clone, including knockout first, null, conditional ready, and conditional null alleles.",
-    href: "/derivative-alleles"
   },
   {
     title: "BAC to BAC Large Scale Targeting",
@@ -156,7 +155,6 @@ const coreTechLinks = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "FLP FRT System", href: "/flp-frt-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" }
 ];
 
 const inducibleLinks = [
