@@ -229,6 +229,26 @@ export default function SelectionCassetteDesignPage() {
 
 ---
 
-**Commit**: `045_chore_remove-404-placeholder-pages` (pending)
+## 9. BUILD FIX (Commit 047)
+
+**Issue**: The automated removal script left broken JSX syntax
+- Removed `<Link href=` opening tags but left closing tags
+- Caused 7 parsing errors in Vercel build
+
+**Files with Broken JSX**:
+1. `conditional-vs-conventional-guide/page.tsx` (line 802)
+2. `resources/page.tsx` (line 433)  
+3. `technologies/page.tsx` (line 371)
+
+**Fix Applied**:
+- Restored complete `<Link>` components
+- Updated hrefs to valid pages:
+  - `/derivative-alleles` → `/cre-lox-system`
+  - `/case-studies` → `/resources`
+- Updated link text to match new destinations
+
+**Commits**:
+- `045_chore_remove-404-placeholder-pages` - Initial removal
+- `047_fix_broken-jsx-from-404-removal` - Build fix ✅
 
 **End of Log**
