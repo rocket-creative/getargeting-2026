@@ -44,7 +44,7 @@ const coreTechnologies = [
 const conditionalSystems = [
   {
     name: "Cre Lox System",
-    desc: "The Cre lox recombination system enables conditional gene modification by placing critical exons between loxP recognition sites. Cre recombinase expression catalyzes recombination between loxP sites to delete the flanked sequence.",
+    desc: "The Cre lox recombination system enables conditional gene modification by placing critical exons between LoxP recognition sites. Cre recombinase expression catalyzes recombination between LoxP sites to delete the flanked sequence.",
     link: "/cre-lox-system"
   },
   {
@@ -63,7 +63,7 @@ const conditionalSystems = [
 const derivativeAlleles = [
   { name: "tm1a Allele (knockout first)", desc: "Gene function disrupted by splice acceptor. LacZ reporter indicates endogenous expression pattern." },
   { name: "tm1b Allele (complete null)", desc: "Cre mediated deletion removes critical exon and neomycin cassette. Clean null allele with persistent reporter expression." },
-  { name: "tm1c Allele (conditional ready)", desc: "FLP mediated deletion removes gene trap cassette, restoring gene function. Critical exon remains flanked by loxP sites." },
+  { name: "tm1c Allele (conditional ready)", desc: "FLP mediated deletion removes gene trap cassette, restoring gene function. Critical exon remains flanked by LoxP sites." },
   { name: "tm1d Allele (conditional null)", desc: "Cre mediated deletion of the tm1c allele removes the critical exon, creating tissue specific or temporally controlled null allele." }
 ];
 
@@ -71,7 +71,6 @@ const derivativeAlleles = [
 const selectionGuides = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 // Related Model Types
@@ -96,7 +95,7 @@ const testimonials = TECHNOLOGY_TESTIMONIALS.map(t => ({
 const faqData = [
   {
     question: "How does the Cre lox system enable conditional gene modification?",
-    answer: "The Cre lox system places critical exons between loxP recognition sites. Cre recombinase expression, driven by tissue specific or inducible promoters, catalyzes recombination between loxP sites to delete the flanked sequence. This enables tissue specific or temporal control of gene deletion, avoiding developmental lethality and modeling pharmacological intervention."
+    answer: "The Cre lox system places critical exons between LoxP recognition sites. Cre recombinase expression, driven by tissue specific or inducible promoters, catalyzes recombination between LoxP sites to delete the flanked sequence. This enables tissue specific or temporal control of gene deletion, avoiding developmental lethality and modeling pharmacological intervention."
   },
   {
     question: "What is the difference between FLP FRT and Cre lox systems?",

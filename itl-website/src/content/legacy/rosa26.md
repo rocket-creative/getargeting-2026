@@ -50,7 +50,7 @@ A transgene can simply be inserted into the Rosa26 locus for ubiquitous over-exp
 
 ### Tissue Specific or Temporal Control
 
-The use of a loxP flanked stop cassette will enable you to activate gene expression in your tissue of choice through mating with a tissue-specific Cre mouse line. Or, CreERT2 mice can be utilized to provide inducible transgene expression upon treatment with Tamoxifen.
+The use of a LoxP flanked stop cassette will enable you to activate gene expression in your tissue of choice through mating with a tissue-specific Cre mouse line. Or, CreERT2 mice can be utilized to provide inducible transgene expression upon treatment with Tamoxifen.
 
 This approach creates a versatile line which can overexpress your construct in any tissue for which you have a Cre line.
 
@@ -60,7 +60,7 @@ Generally, there are three different types of Rosa26 locus knockins:
 
 1. **Original design:** The transgenic cDNA is expressed constitutively from the Rosa26 promoter. A splice acceptor (SA) sequence followed by cDNA of the transgene of interest is inserted into the respective restriction site within 1st intron of the Rosa26 gene. A stop cassette, composed of a neomycin resistance gene and polyadenylation (pA) sites, are inserted upstream of the transgene.
 
-2. **Conditional expression:** A variation using a stop cassette flanked by two loxP sites. The presence of a stop cassette can prevent the transgene from expressing unless the Cre is expressed to remove the stop cassette via homologous recombination.
+2. **Conditional expression:** A variation using a stop cassette flanked by two LoxP sites. The presence of a stop cassette can prevent the transgene from expressing unless the Cre is expressed to remove the stop cassette via homologous recombination.
 
 3. **Enhanced expression:** If the strength of the Rosa26 promoter is not able to achieve the desired levels of transgene expression, an exogenous or enhanced promoter could be used. An example of this type of promoter is CAG and is introduced to drive high transgene expression from the Rosa26 locus.
 

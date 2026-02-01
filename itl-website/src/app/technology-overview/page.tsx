@@ -54,7 +54,7 @@ const coreTechnologies = [
 const conditionalSystems = [
   {
     title: "Cre Lox System",
-    description: "Conditional gene modification by placing critical exons between loxP recognition sites. Cre expression catalyzes recombination to delete flanked sequences.",
+    description: "Conditional gene modification by placing critical exons between LoxP recognition sites. Cre expression catalyzes recombination to delete flanked sequences.",
     features: [
       "Tissue specific gene deletion through Cre driver lines",
       "Temporal control via inducible Cre systems",

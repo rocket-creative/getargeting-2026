@@ -238,7 +238,6 @@ const relatedTherapeuticAreas = [
 const projectResources = [
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
   { title: "Strain Selection Guide", href: "/strain-selection-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" }
 ];
 

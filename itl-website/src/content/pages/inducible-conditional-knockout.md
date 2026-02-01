@@ -30,7 +30,7 @@ This approach most closely models pharmacological intervention: gene function is
 
 Inducible conditional knockout requires two genetic components working together:
 
-**Floxed (Conditional) Allele:** The target gene contains loxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. Ingenious Targeting Laboratory can generate these conditional alleles specific to your research.
+**Floxed (Conditional) Allele:** The target gene contains LoxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. Ingenious Targeting Laboratory can generate these conditional alleles specific to your research.
 
 **Inducible Cre Driver:** A transgenic or knockin line expressing an inducible form of Cre recombinase. Cre activity is suppressed until an inducing agent (tamoxifen or doxycycline) is administered. There are repositories that offer these inducible lines. However, if you need a specialized inducible Cre driver, ingenious target laboratory has the expertise to produce these for you too.
 
@@ -43,7 +43,7 @@ CreERT2 is the most widely used inducible Cre system. It consists of Cre recombi
 - In the absence of tamoxifen, CreERT2 is sequestered in the cytoplasm
 - Tamoxifen (or its metabolite 4 hydroxytamoxifen) binds the modified estrogen receptor
 - Ligand binding triggers nuclear translocation of CreERT2
-- Nuclear Cre catalyzes recombination between loxP sites
+- Nuclear Cre catalyzes recombination between LoxP sites
 - Gene deletion is permanent once recombination occurs
 
 Recombination typically occurs within days of tamoxifen administration, with maximal deletion achieved by 1 to 2 weeks post treatment depending on dosing regimen.

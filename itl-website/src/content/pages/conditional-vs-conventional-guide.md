@@ -58,7 +58,7 @@ Allele complexity
 
 Simple
 
-More complex (loxP sites)
+More complex (LoxP sites)
 
 Breeding requirements
 
@@ -114,7 +114,7 @@ Conventional knockout permanently inactivates a gene throughout the entire organ
 
 ### How It Works
 
-Conditional knockout uses the Cre lox system to control gene inactivation. loxP sites flank critical exons, creating a "floxed" allele that functions normally until exposed to Cre recombinase. Gene deletion occurs only in cells where Cre is expressed.
+Conditional knockout uses the Cre lox system to control gene inactivation. LoxP sites flank critical exons, creating a "floxed" allele that functions normally until exposed to Cre recombinase. Gene deletion occurs only in cells where Cre is expressed.
 
 ### Best Applications
 

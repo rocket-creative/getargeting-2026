@@ -28,9 +28,9 @@ Floxed mouse models provide maximum experimental flexibility. A single condition
 
 ### The Cre Lox System
 
-Conditional knockout relies on the Cre lox recombination system. LoxP sites are 34 base pair DNA sequences recognized by Cre recombinase. When two loxP sites flank a DNA segment in the same orientation, Cre recombinase excises the intervening sequence, leaving a single loxP site.
+Conditional knockout relies on the Cre lox recombination system. LoxP sites are 34 base pair DNA sequences recognized by Cre recombinase. When two LoxP sites flank a DNA segment in the same orientation, Cre recombinase excises the intervening sequence, leaving a single LoxP site.
 
-In a conditional knockout allele, loxP sites flank one or more critical exons of the target gene. The floxed allele functions normally in the absence of Cre. When crossed to a Cre driver line, cells expressing Cre recombinase excise the floxed exons, creating a null allele in those specific cells while gene function is preserved elsewhere.
+In a conditional knockout allele, LoxP sites flank one or more critical exons of the target gene. The floxed allele functions normally in the absence of Cre. When crossed to a Cre driver line, cells expressing Cre recombinase excise the floxed exons, creating a null allele in those specific cells while gene function is preserved elsewhere.
 
 (/cre-lox-system)
 
@@ -59,7 +59,7 @@ Inducible systems enable studies of gene function after normal development is co
 
 ### Critical Exon Selection
 
-Successful conditional knockout requires careful selection of exons to flank with loxP sites. The targeted exon or exons must be essential for gene function, such that their deletion creates a true null allele. Considerations include:
+Successful conditional knockout requires careful selection of exons to flank with LoxP sites. The targeted exon or exons must be essential for gene function, such that their deletion creates a true null allele. Considerations include:
 
 - Exons present in all transcript variants
 - Exons encoding essential functional domains
@@ -87,7 +87,7 @@ Adding a reporter gene to your conditional knockout model enables visualization 
 A standard stop cassette configuration enables generation of four derivative alleles from a single targeted mouse line:
 
 - Knockout First:** Original targeted allele with full cassette. Gene is disrupted by stop cassette insertion, functioning as a null allele. 
-- Conditional Ready:** Flp excision removes the cassette while leaving loxP sites flanking the critical exon. Gene function is fully restored. This is the floxed allele used for conditional knockout experiments.
+- Conditional Ready:** Flp excision removes the cassette while leaving LoxP sites flanking the critical exon. Gene function is fully restored. This is the floxed allele used for conditional knockout experiments.
 - Conditional Null:** Cre excision removes the critical exon, creating the tissue specific or temporally controlled null allele.
 
 This derivative system allows a single project to support reporter studies (if included in stop cassette), conventional knockout controls, and conditional knockout experiments.
@@ -162,7 +162,7 @@ Our scientific consultants are ready to discuss your research requirements and r
 
 **What is the difference between a floxed mouse and a conditional knockout?**
 
-A floxed mouse carries loxP sites flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a Cre driver line. The resulting offspring with both the floxed allele and Cre expression are the actual conditional knockouts, where gene deletion occurs in Cre-expressing tissues.
+A floxed mouse carries LoxP sites flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a Cre driver line. The resulting offspring with both the floxed allele and Cre expression are the actual conditional knockouts, where gene deletion occurs in Cre-expressing tissues.
 
 **Can I use the same floxed mouse line with different Cre drivers?**
 
@@ -174,4 +174,4 @@ The critical exon must be essential for gene function. Ideal targets are exons p
 
 **How long does a conditional knockout project take?**
 
-Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of loxP site positioning in germline transmission mice. The investment provides greater experimental flexibility through tissue-specific and temporal control.
+Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of LoxP site positioning in germline transmission mice. The investment provides greater experimental flexibility through tissue-specific and temporal control.

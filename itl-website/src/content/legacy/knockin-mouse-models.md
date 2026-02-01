@@ -96,7 +96,7 @@ For a client investigating Cofilin-2 (CFL2) mutations in humans and their associ
 
 Furthermore, the knockin mice were found to have lower levels of Cf12 mRNA in tissues throughout the body, along with alternate splicing and two alternate transcripts. This suggests that pre-translational splicing could be associated with CFL2 mutations and their relationship with the development of myopathies.
 
-By using a homologous recombination-based technique, scientists at ingenious identified a positive C57BL/6N BAC clone (RPCI-23) clone, allowing the construction of a targeting vector by the use of a ~8.9 kb region. A point mutation was then created in exon 2 through PCR, after adding a pGK-gb2 loxP/FRT-flanked Neo cassette downstream of exon 2. The construct's total size was ~11.3 kb.
+By using a homologous recombination-based technique, scientists at ingenious identified a positive C57BL/6N BAC clone (RPCI-23) clone, allowing the construction of a targeting vector by the use of a ~8.9 kb region. A point mutation was then created in exon 2 through PCR, after adding a pGK-gb2 LoxP/FRT-flanked Neo cassette downstream of exon 2. The construct's total size was ~11.3 kb.
 
 To remove the Neo cassette and create heterozygous mice, resulting chimeras from the microinjection of IC1 C57BL/6 ES cells were mated with WT C57BL/6 FLP homozygous mice.
 

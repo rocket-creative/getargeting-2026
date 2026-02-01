@@ -128,7 +128,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/humanization-strategy-guide',
     '/reporter-selection-guide',
     '/cre-line-selection-guide',
-    '/model-generation-timeline',
 
     // Advanced Targeting (8)
     '/safe-harbor-locus',

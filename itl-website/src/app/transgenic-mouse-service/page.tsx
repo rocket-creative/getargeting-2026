@@ -134,7 +134,6 @@ const relatedTechnologies = [
 ];
 
 const projectResources = [
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" },
   { title: "Technologies", href: "/technologies" }
 ];
@@ -169,7 +168,7 @@ const getFaqData = () => [
     question: "Can transgenic models be used for conditional expression?",
     answer: (
       <>
-        Yes. Transgenic models can incorporate conditional expression cassettes including <GlossaryTermLink term="lox-stop-lox-cassette">loxP-stop-loxP</GlossaryTermLink> for Cre-dependent expression, <GlossaryTermLink term="tet-on-tet-off-systems">TRE-driven systems</GlossaryTermLink> for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional <GlossaryTermLink term="reporter-gene-reporter-allele">reporter</GlossaryTermLink> or Cre expression.
+        Yes. Transgenic models can incorporate conditional expression cassettes including <GlossaryTermLink term="lox-stop-lox-cassette">LoxP-stop-LoxP</GlossaryTermLink> for Cre-dependent expression, <GlossaryTermLink term="tet-on-tet-off-systems">TRE-driven systems</GlossaryTermLink> for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional <GlossaryTermLink term="reporter-gene-reporter-allele">reporter</GlossaryTermLink> or Cre expression.
       </>
     )
   }

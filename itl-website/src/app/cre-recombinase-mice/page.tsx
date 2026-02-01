@@ -26,8 +26,8 @@ const statsData = [
 
 // Mechanism of Action
 const mechanismSteps = [
-  { step: "Recognition", description: "Cre recognizes the 34 base pair loxP sequence, consisting of two 13 bp inverted repeats flanking an 8 bp asymmetric spacer region." },
-  { step: "Recombination", description: "When two loxP sites flank a DNA segment in the same orientation, Cre excises the intervening sequence as a circular DNA molecule, leaving a single loxP site behind." },
+  { step: "Recognition", description: "Cre recognizes the 34 base pair LoxP sequence, consisting of two 13 bp inverted repeats flanking an 8 bp asymmetric spacer region." },
+  { step: "Recombination", description: "When two LoxP sites flank a DNA segment in the same orientation, Cre excises the intervening sequence as a circular DNA molecule, leaving a single LoxP site behind." },
   { step: "Irreversibility", description: "Excision is essentially irreversible in vivo because the excised circle is rapidly degraded and reintegration probability is extremely low." }
 ];
 
@@ -102,7 +102,7 @@ const qualityConsiderations = [
   },
   {
     issue: "Cre Toxicity",
-    problem: "High Cre expression can cause cellular toxicity independent of target gene through DNA damage at pseudo loxP sites.",
+    problem: "High Cre expression can cause cellular toxicity independent of target gene through DNA damage at pseudo LoxP sites.",
     solutions: ["Include Cre positive, flox negative controls", "Distinguish Cre toxicity from gene deletion phenotypes", "Monitor for growth abnormalities with chronic Cre"]
   }
 ];
@@ -167,11 +167,11 @@ const faqData = [
   },
   {
     question: "How efficient is Cre mediated recombination?",
-    answer: "Cre recombination efficiency varies by target locus, Cre expression level, and loxP site accessibility. Not all Cre lines achieve 100% recombination, and mosaicism (incomplete recombination) can occur. Always include Cre positive, flox negative controls to distinguish Cre toxicity from gene deletion phenotypes."
+    answer: "Cre recombination efficiency varies by target locus, Cre expression level, and LoxP site accessibility. Not all Cre lines achieve 100% recombination, and mosaicism (incomplete recombination) can occur. Always include Cre positive, flox negative controls to distinguish Cre toxicity from gene deletion phenotypes."
   },
   {
     question: "What should I consider about Cre toxicity?",
-    answer: "High Cre expression can cause cellular toxicity independent of target gene deletion through DNA damage at pseudo loxP sites. Include Cre positive, flox negative controls to distinguish Cre toxicity from gene deletion phenotypes. Some tissues show growth abnormalities with chronic high Cre expression."
+    answer: "High Cre expression can cause cellular toxicity independent of target gene deletion through DNA damage at pseudo LoxP sites. Include Cre positive, flox negative controls to distinguish Cre toxicity from gene deletion phenotypes. Some tissues show growth abnormalities with chronic high Cre expression."
   }
 ];
 
@@ -365,7 +365,7 @@ export default function CreRecombinaseMicePage() {
               How Cre Recombinase Works
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Cre recombinase is a 38 kDa enzyme derived from bacteriophage P1 that catalyzes site specific recombination between loxP sequences without requiring cofactors or additional proteins.
+              Cre recombinase is a 38 kDa enzyme derived from bacteriophage P1 that catalyzes site specific recombination between LoxP sequences without requiring cofactors or additional proteins.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

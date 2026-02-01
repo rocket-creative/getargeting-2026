@@ -28,7 +28,7 @@ Our service provides unambiguous detection of your targeted allele, whether it i
 ### $10 per tail
 Examples of services that require one PCR assay each:
 - Screening for Neo selection cassette deletion
-- Screening for distal loxP (heterozygous or homozygous conditional knockout)
+- Screening for distal LoxP (heterozygous or homozygous conditional knockout)
 - Screening for Sox2-Cre transgene
 - Screening for FLP deleter transgene
 - Screening for heterozygous ROSA26 knockin

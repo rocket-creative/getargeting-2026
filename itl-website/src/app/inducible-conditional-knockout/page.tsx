@@ -34,7 +34,7 @@ const twoComponentData = {
   components: [
     {
       title: "Floxed (Conditional) Allele",
-      description: "The target gene contains loxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. ingenious targeting laboratory can generate these conditional alleles specific to your research."
+      description: "The target gene contains LoxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. ingenious targeting laboratory can generate these conditional alleles specific to your research."
     },
     {
       title: "Inducible Cre Driver",
@@ -52,7 +52,7 @@ const creERT2Data = {
     "In the absence of tamoxifen, CreERT2 is sequestered in the cytoplasm",
     "Tamoxifen (or its metabolite 4 hydroxytamoxifen) binds the modified estrogen receptor",
     "Ligand binding triggers nuclear translocation of CreERT2",
-    "Nuclear Cre catalyzes recombination between loxP sites",
+    "Nuclear Cre catalyzes recombination between LoxP sites",
     "Gene deletion is permanent once recombination occurs"
   ],
   note: "Recombination typically occurs within days of tamoxifen administration, with maximal deletion achieved by 1 to 2 weeks post treatment depending on dosing regimen."

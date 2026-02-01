@@ -20,7 +20,7 @@ What is a knockin and why is it so useful in the world of genetic research and e
 
 ### How Does the Gene Knockin Method Work?
 
-What is a knockin gene replacement and how is it used? The process of creating a knockin animal – most often a knockin mouse – involves targeted gene replacement mostly through homologous recombination. Typically, procedures such as Cre recombinase with gene vectors and loxP flanking sites are used, but some methods also use the lox511 sequence, which is equally effective in Cre-Lox recombination.
+What is a knockin gene replacement and how is it used? The process of creating a knockin animal – most often a knockin mouse – involves targeted gene replacement mostly through homologous recombination. Typically, procedures such as Cre recombinase with gene vectors and LoxP flanking sites are used, but some methods also use the lox511 sequence, which is equally effective in Cre-Lox recombination.
 
 ### The Diversity of Knockin Mouse Models
 

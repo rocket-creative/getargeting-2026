@@ -210,7 +210,6 @@ const relatedLinksData = {
   resources: [
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" }
   ],
   guides: [
     { href: "/cre-lox-system", label: "Cre Lox System" },

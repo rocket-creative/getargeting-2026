@@ -99,7 +99,6 @@ const relatedModels = [
 
 const relatedResources = [
   { title: "Therapeutic Areas", href: "/therapeutic-areas" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 // FAQ Data

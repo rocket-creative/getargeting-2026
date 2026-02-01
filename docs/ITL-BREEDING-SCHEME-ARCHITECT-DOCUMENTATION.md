@@ -224,7 +224,7 @@ backgroundPosition: 'right 12px center'
 |----------|----------|
 | knockout | knock-out |
 | knockin | knock-in |
-| loxP sites | LoxP sites |
+| LoxP sites | LoxP sites |
 | Cre recombinase | cre recombinase |
 | FRT sites | frt sites |
 | germline transmission | germ-line transmission |
@@ -531,7 +531,7 @@ Cards (4 in a row on desktop, stack on mobile):
 1. Cre Lox System
    - Icon: Settings (Lucide)
    - Link: /cre-lox-system
-   - Description: "Understanding Cre recombinase and loxP sites for conditional gene targeting"
+   - Description: "Understanding Cre recombinase and LoxP sites for conditional gene targeting"
 
 2. Conditional vs Conventional Guide
    - Icon: GitBranch (Lucide)

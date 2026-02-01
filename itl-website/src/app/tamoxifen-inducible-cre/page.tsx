@@ -26,7 +26,7 @@ const statsData = [
 const howItWorks = [
   { step: "CreERT2 Fusion Protein", description: "Cre recombinase fused to mutant estrogen receptor that prevents binding of endogenous estrogen but retains affinity for synthetic ligands." },
   { step: "Cytoplasmic Sequestration", description: "Without ligand, ERT2 domain associates with HSP90, sequestering CreERT2 in cytoplasm away from nuclear DNA." },
-  { step: "Tamoxifen Induction", description: "Tamoxifen administration displaces HSP90 and allows nuclear translocation of CreERT2, enabling loxP recombination." },
+  { step: "Tamoxifen Induction", description: "Tamoxifen administration displaces HSP90 and allows nuclear translocation of CreERT2, enabling LoxP recombination." },
   { step: "Permanent Recombination", description: "CreERT2 activity is transient once tamoxifen clears, but recombination events are permanent genetic changes." }
 ];
 
@@ -71,7 +71,7 @@ const relatedModelTypes = [
 const faqData = [
   {
     question: "How does tamoxifen inducible Cre (CreERT2) work?",
-    answer: "CreERT2 is a fusion protein combining Cre recombinase with a modified estrogen receptor that is inactive until tamoxifen administration. Tamoxifen binds to the receptor, causing translocation to the nucleus where Cre becomes active and excises loxP flanked sequences. This enables temporal control over gene deletion."
+    answer: "CreERT2 is a fusion protein combining Cre recombinase with a modified estrogen receptor that is inactive until tamoxifen administration. Tamoxifen binds to the receptor, causing translocation to the nucleus where Cre becomes active and excises LoxP flanked sequences. This enables temporal control over gene deletion."
   },
   {
     question: "What is the difference between CreERT2 and regular Cre?",
@@ -87,7 +87,7 @@ const faqData = [
   },
   {
     question: "Can CreERT2 be used for reversible gene regulation?",
-    answer: "No. CreERT2 causes permanent DNA excision (deletion), which is irreversible. Once loxP flanked sequences are excised, they cannot be restored. For reversible gene regulation, use doxycycline inducible (Tet) systems."
+    answer: "No. CreERT2 causes permanent DNA excision (deletion), which is irreversible. Once LoxP flanked sequences are excised, they cannot be restored. For reversible gene regulation, use doxycycline inducible (Tet) systems."
   }
 ];
 

@@ -79,7 +79,7 @@ const applicationsData = [
     title: "Conditional Expression",
     description: "Combine cDNA knockin with conditional systems:",
     items: [
-      { name: "Cre Dependent Expression", desc: "loxP-stop-loxP cassette upstream of cDNA blocks expression until Cre activation" },
+      { name: "Cre Dependent Expression", desc: "LoxP-stop-LoxP cassette upstream of cDNA blocks expression until Cre activation" },
       { name: "Replacement Strategies", desc: "Express cDNA conditionally to replace knockout of endogenous gene" }
     ]
   }
@@ -176,7 +176,6 @@ const relatedTechnologies = [
 ];
 
 const relatedResources = [
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" }
 ];
 
@@ -192,7 +191,7 @@ const faqData = [
   },
   {
     question: "What is conditional cDNA knockin and when is it used?",
-    answer: "Conditional cDNA knockin uses a loxP-flanked stop cassette that prevents expression until Cre recombination. This enables tissue-specific or temporally controlled expression of cDNA sequences. It's valuable when cDNA expression would be lethal if expressed globally from conception, such as oncogenic mutations or toxic proteins."
+    answer: "Conditional cDNA knockin uses a LoxP-flanked stop cassette that prevents expression until Cre recombination. This enables tissue-specific or temporally controlled expression of cDNA sequences. It's valuable when cDNA expression would be lethal if expressed globally from conception, such as oncogenic mutations or toxic proteins."
   },
   {
     question: "What size cDNA can be knocked in?",

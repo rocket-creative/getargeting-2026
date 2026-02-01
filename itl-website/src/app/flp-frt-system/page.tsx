@@ -28,11 +28,11 @@ const statsData = [
 const applications = [
   {
     title: "Selection Cassette Removal",
-    items: ["FRT flanked cassettes removed after ES cell selection", "Eliminates cassette effects on nearby genes", "Produces clean conditional alleles with only loxP sites"]
+    items: ["FRT flanked cassettes removed after ES cell selection", "Eliminates cassette effects on nearby genes", "Produces clean conditional alleles with only LoxP sites"]
   },
   {
     title: "Derivative Allele Conversion",
-    items: ["tm1a to tm1c conversion removes LacZ Neo cassette", "Restores gene function while maintaining loxP sites", "Enables conditional knockout after FLP processing"]
+    items: ["tm1a to tm1c conversion removes LacZ Neo cassette", "Restores gene function while maintaining LoxP sites", "Enables conditional knockout after FLP processing"]
   },
   {
     title: "Dual Recombinase Strategies",
@@ -46,7 +46,7 @@ const applications = [
 
 const comparisonTable = [
   { feature: "Origin", flp: "Yeast 2 micron plasmid", cre: "Bacteriophage P1" },
-  { feature: "Recognition site", flp: "34 bp FRT", cre: "34 bp loxP" },
+  { feature: "Recognition site", flp: "34 bp FRT", cre: "34 bp LoxP" },
   { feature: "Temperature optimum", flp: "30°C (wild type)", cre: "37°C" },
   { feature: "Driver availability", flp: "Limited", cre: "Extensive catalog" },
   { feature: "Primary use", flp: "Cassette removal", cre: "Conditional deletion" },
@@ -107,7 +107,7 @@ const getFaqData = () => [
     question: "Can FLP FRT be combined with Cre lox in the same model?",
     answer: (
       <>
-        Yes. Dual recombinase designs use both FRT (for FLP) and <GlossaryTermLink term="floxed-gene-loxp-site">loxP</GlossaryTermLink> (for Cre) sites, enabling independent control. For example, FLP removes FRT flanked cassettes to generate clean conditional alleles, then Cre controls gene deletion. This sequential use enables flexible allele architecture from knockout first designs.
+        Yes. Dual recombinase designs use both FRT (for FLP) and <GlossaryTermLink term="floxed-gene-loxp-site">LoxP</GlossaryTermLink> (for Cre) sites, enabling independent control. For example, FLP removes FRT flanked cassettes to generate clean conditional alleles, then Cre controls gene deletion. This sequential use enables flexible allele architecture from knockout first designs.
       </>
     )
   },

@@ -82,7 +82,7 @@ const approachesData = [
   },
   {
     title: 'Conditional Knockin',
-    description: 'Conditional knockin models express modified alleles only after Cre mediated activation. A stop cassette flanked by loxP sites prevents expression until Cre excision. This approach enables tissue specific or temporally controlled expression of mutant alleles, reporters, or other modifications.',
+    description: 'Conditional knockin models express modified alleles only after Cre mediated activation. A stop cassette flanked by LoxP sites prevents expression until Cre excision. This approach enables tissue specific or temporally controlled expression of mutant alleles, reporters, or other modifications.',
     benefit: 'Conditional knockins are particularly valuable for studying oncogenic mutations that would be lethal if expressed globally from conception.',
     href: '/conditional-knockin-mice',
     Icon: IconSettings,

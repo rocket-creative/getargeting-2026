@@ -32,7 +32,7 @@ Random transgenic integration tends to involve transgenic construct breakage bef
 
 ### 3. Choose a good community: Make sure your transgene will be expressed.
 
-ROSA26 is a transcriptionally active locus that has been used to create over 700 targeted transgenic mouse models, as shown in Mouse Genome Informatics. Transgene expression options include using endogenous ROSA26 gene promoter or adding an exogenous promoter into the construct, such as the artificial compound CAG promoter. A conditional expression design is commonly achieved by placing a STOP cassette between the promoter and the cDNA, and the STOP cassette is typically flanked with loxP sites for cassette removal by Cre-lox recombination.
+ROSA26 is a transcriptionally active locus that has been used to create over 700 targeted transgenic mouse models, as shown in Mouse Genome Informatics. Transgene expression options include using endogenous ROSA26 gene promoter or adding an exogenous promoter into the construct, such as the artificial compound CAG promoter. A conditional expression design is commonly achieved by placing a STOP cassette between the promoter and the cDNA, and the STOP cassette is typically flanked with LoxP sites for cassette removal by Cre-lox recombination.
 
 ### 4. Stability is key: Keep hold of your transgene.
 

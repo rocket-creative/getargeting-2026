@@ -43,7 +43,6 @@ const relatedLinks = [
   { title: "Inflammatory Disease Mice", href: "/inflammatory-disease-mice" },
   { title: "Immunology Mouse Models", href: "/immunology-mouse-models" },
   { title: "Therapeutic Areas", href: "/therapeutic-areas" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 export default function RheumatoidArthritisMicePage() {

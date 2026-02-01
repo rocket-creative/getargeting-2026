@@ -28,7 +28,7 @@ Different model types involve varying levels of complexity:
 
 **Conventional Knockout** projects involve deletion or disruption of a target gene. These represent the most straightforward targeting projects.
 
-**Conditional Knockout** projects require insertion of loxP sites flanking critical exons while preserving normal gene function. Additional design complexity increases project investment.
+**Conditional Knockout** projects require insertion of LoxP sites flanking critical exons while preserving normal gene function. Additional design complexity increases project investment.
 
 **Knockin** projects range widely in complexity:
 
@@ -43,7 +43,7 @@ Different model types involve varying levels of complexity:
 
 Factors that increase allele complexity:
 
-- Multiple recombinase recognition sites (loxP, FRT, Rox)
+- Multiple recombinase recognition sites (LoxP, FRT, Rox)
 - Reporter gene insertions
 - Fusion protein designs
 - Large sequence insertions

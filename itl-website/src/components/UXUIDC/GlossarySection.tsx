@@ -170,15 +170,15 @@ export const conditionalTerms: GlossaryTerm[] = [
   },
   {
     term: "Floxed Allele",
-    definition: "A gene with loxP sites flanking a critical region. The allele functions normally until Cre recombinase excises the flanked region."
+    definition: "A gene with LoxP sites flanking a critical region. The allele functions normally until Cre recombinase excises the flanked region."
   },
   {
     term: "Cre Recombinase",
-    definition: "A site-specific recombinase enzyme that catalyzes recombination between loxP sites, used in conditional knockout systems."
+    definition: "A site-specific recombinase enzyme that catalyzes recombination between LoxP sites, used in conditional knockout systems."
   },
   {
-    term: "loxP Site",
-    definition: "A 34 base pair DNA sequence recognized by Cre recombinase. Two loxP sites in the same orientation enable excision of the flanked sequence."
+    term: "LoxP Site",
+    definition: "A 34 base pair DNA sequence recognized by Cre recombinase. Two LoxP sites in the same orientation enable excision of the flanked sequence."
   }
 ];
 

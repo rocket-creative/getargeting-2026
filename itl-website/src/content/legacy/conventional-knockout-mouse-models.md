@@ -71,7 +71,7 @@ Some researchers prefer to not delete any endogenous gene sequence to avoid dele
 
 ### Knockout-First with Rescue of Expression
 
-By inserting a loxP flanked strong stop cassette in an early intron of the gene, the gene can be inactivated in a conventional manner. Utilizing Cre recombination to remove the stop cassette, the gene's expression can be rescued in a tissue specific, temporal or global manner, based on the specific Cre used.
+By inserting a LoxP flanked strong stop cassette in an early intron of the gene, the gene can be inactivated in a conventional manner. Utilizing Cre recombination to remove the stop cassette, the gene's expression can be rescued in a tissue specific, temporal or global manner, based on the specific Cre used.
 
 In addition, a reporter gene can be included to express when the gene is inactivated. The reporter can be deleted along with the stop cassette, or alternative, custom design options can be incorporated.
 
@@ -121,4 +121,4 @@ The drawbacks of adding FLP mating to the model production workflow include havi
 
 1. Hirotsune S, Fleck MW, Gambello MJ, Bix GJ, Chen A, Clark GD, Ledbetter DH, McBain CJ, Wynshaw-Boris A. 1998. Graded reduction of Pafah1b1 (Lis1) activity results in neuronal migration defects and early embryonic lethality. Nat Genet 19 (4): 333–9.
 
-2. Xu X, Li C, Garrett-Beal L, Larson D, Wynshaw-Boris A, Deng CX. 2001. Direct removal in the mouse of a floxed neo gene from a three-loxP conditional knockout allele by two novel approaches. Genesis 30 (1): 1-6.
+2. Xu X, Li C, Garrett-Beal L, Larson D, Wynshaw-Boris A, Deng CX. 2001. Direct removal in the mouse of a floxed neo gene from a three-LoxP conditional knockout allele by two novel approaches. Genesis 30 (1): 1-6.

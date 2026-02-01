@@ -46,10 +46,10 @@ Location: `/itl-website/public/images/diagrams/`
 - **Filename:** `fig-cre-lox-001.png`
 - **Page:** `/cre-lox-system`
 - **Aspect Ratio:** 4:3
-- **Caption:** "Fig. 1: Cre recombinase recognizes 34bp loxP sites and catalyzes excision of flanked DNA sequences, leaving a single loxP site."
-- **AI Generation Prompt:** "Scientific diagram showing Cre recombinase enzyme (blue protein structure) binding to two loxP sites (orange triangles) flanking a gene segment. Show the DNA before and after recombination with arrows indicating the excision process. Label loxP sites simply as 'loxP' with '34 bp' size indicator - DO NOT show actual nucleotide sequence letters. Show excised DNA as circular. Clean vector illustration style, white background, professional biotech aesthetic. Colors: navy blue, teal, orange accents."
-- **Alt Text:** "Diagram illustrating Cre-lox recombination mechanism showing DNA excision between loxP sites"
-- **SEO Keywords:** cre recombinase, loxP sites, site-specific recombination, conditional knockout
+- **Caption:** "Fig. 1: Cre recombinase recognizes 34bp LoxP sites and catalyzes excision of flanked DNA sequences, leaving a single LoxP site."
+- **AI Generation Prompt:** "Scientific diagram showing Cre recombinase enzyme (blue protein structure) binding to two LoxP sites (orange triangles) flanking a gene segment. Show the DNA before and after recombination with arrows indicating the excision process. Label LoxP sites simply as 'LoxP' with '34 bp' size indicator - DO NOT show actual nucleotide sequence letters. Show excised DNA as circular. Clean vector illustration style, white background, professional biotech aesthetic. Colors: navy blue, teal, orange accents."
+- **Alt Text:** "Diagram illustrating Cre-lox recombination mechanism showing DNA excision between LoxP sites"
+- **SEO Keywords:** cre recombinase, LoxP sites, site-specific recombination, conditional knockout
 
 ---
 
@@ -83,7 +83,7 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/conditional-knockout-mouse-models`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: Floxed alleles function normally until Cre expression triggers tissue-specific gene deletion."
-- **AI Generation Prompt:** "Scientific diagram showing conditional knockout in two states: Top - floxed allele with loxP sites flanking critical exon, gene expressed normally. Bottom - after Cre expression, exon excised, gene inactivated. Show in context of a cell with Cre driver indicated. Clean vector illustration."
+- **AI Generation Prompt:** "Scientific diagram showing conditional knockout in two states: Top - floxed allele with LoxP sites flanking critical exon, gene expressed normally. Bottom - after Cre expression, exon excised, gene inactivated. Show in context of a cell with Cre driver indicated. Clean vector illustration."
 - **Alt Text:** "Conditional knockout mechanism showing floxed allele before and after Cre-mediated excision"
 - **SEO Keywords:** conditional knockout, floxed allele, tissue-specific deletion, Cre driver
 
@@ -179,7 +179,7 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/rosa26`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: The ROSA26 locus provides reliable ubiquitous expression without disrupting endogenous genes."
-- **AI Generation Prompt:** "Scientific diagram showing ROSA26 locus structure with common cassette designs: CAG promoter, loxP-STOP-loxP, transgene. Show mouse chromosome with ROSA26 location marked. Include expression pattern (ubiquitous) in mouse silhouette. Clean genomic illustration style."
+- **AI Generation Prompt:** "Scientific diagram showing ROSA26 locus structure with common cassette designs: CAG promoter, LoxP-STOP-LoxP, transgene. Show mouse chromosome with ROSA26 location marked. Include expression pattern (ubiquitous) in mouse silhouette. Clean genomic illustration style."
 - **Alt Text:** "ROSA26 safe harbor locus structure and transgene insertion strategy"
 - **SEO Keywords:** ROSA26, safe harbor, ubiquitous expression, knockin locus
 
@@ -202,10 +202,10 @@ Location: `/itl-website/public/images/diagrams/`
 - **Filename:** `fig-loxp-design-001.png`
 - **Page:** `/loxp-site-design`
 - **Aspect Ratio:** 4:3
-- **Caption:** "Fig. 1: Optimal loxP site positioning preserves normal gene function while enabling efficient Cre-mediated excision."
-- **AI Generation Prompt:** "Scientific diagram showing proper loxP site placement: gene structure with exons, introns, and regulatory elements. Show loxP sites positioned in introns flanking critical exon. Highlight considerations: splice site preservation, regulatory element avoidance, exon selection criteria. Clean gene structure illustration."
+- **Caption:** "Fig. 1: Optimal LoxP site positioning preserves normal gene function while enabling efficient Cre-mediated excision."
+- **AI Generation Prompt:** "Scientific diagram showing proper LoxP site placement: gene structure with exons, introns, and regulatory elements. Show LoxP sites positioned in introns flanking critical exon. Highlight considerations: splice site preservation, regulatory element avoidance, exon selection criteria. Clean gene structure illustration."
 - **Alt Text:** "LoxP site positioning guidelines for conditional allele design"
-- **SEO Keywords:** loxP positioning, conditional allele design, intronic insertion, critical exon
+- **SEO Keywords:** LoxP positioning, conditional allele design, intronic insertion, critical exon
 
 ---
 
@@ -215,9 +215,9 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/conditional-knockin-mice`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: LoxP site orientation determines whether Cre-mediated recombination causes excision or inversion."
-- **AI Generation Prompt:** "Scientific diagram showing two scenarios: Top - parallel loxP sites (same direction arrows) leading to DNA excision and circularization. Bottom - antiparallel loxP sites (opposite arrows) leading to DNA inversion. Show before/after states for each. Clean vector illustration with directional arrows."
+- **AI Generation Prompt:** "Scientific diagram showing two scenarios: Top - parallel LoxP sites (same direction arrows) leading to DNA excision and circularization. Bottom - antiparallel LoxP sites (opposite arrows) leading to DNA inversion. Show before/after states for each. Clean vector illustration with directional arrows."
 - **Alt Text:** "LoxP orientation effects on Cre recombination outcomes - excision vs inversion"
-- **SEO Keywords:** loxP orientation, DNA excision, DNA inversion, flex allele
+- **SEO Keywords:** LoxP orientation, DNA excision, DNA inversion, flex allele
 
 ---
 
@@ -241,7 +241,7 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/derivative-alleles`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: The derivative allele system generates four functional configurations from a single ES cell targeting event."
-- **AI Generation Prompt:** "Scientific diagram showing derivative allele conversions: tm1a (knockout-first with LacZ-neo cassette) → tm1b (null, Cre removes all) OR → tm1c (floxed, Flp removes cassette). Then tm1c → tm1d (conditional null, Cre in specific tissue). Show DNA structure at each stage with FRT and loxP sites. Use flow arrows. Professional genomics illustration."
+- **AI Generation Prompt:** "Scientific diagram showing derivative allele conversions: tm1a (knockout-first with LacZ-neo cassette) → tm1b (null, Cre removes all) OR → tm1c (floxed, Flp removes cassette). Then tm1c → tm1d (conditional null, Cre in specific tissue). Show DNA structure at each stage with FRT and LoxP sites. Use flow arrows. Professional genomics illustration."
 - **Alt Text:** "Derivative allele system showing tm1a to tm1b, tm1c, and tm1d conversions"
 - **SEO Keywords:** derivative alleles, tm1a, tm1c, knockout-first, EUCOMM
 
@@ -275,9 +275,9 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/conditional-knockout-mouse-models`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 2: A properly designed floxed allele functions normally until exposed to Cre recombinase."
-- **AI Generation Prompt:** "Scientific diagram showing floxed allele in detail: gene structure with loxP sites (triangles) in introns flanking critical exon. Show that transcription, splicing, and protein production are normal. Then show Cre+ state with exon deleted and gene inactivated. Include annotations for design considerations."
+- **AI Generation Prompt:** "Scientific diagram showing floxed allele in detail: gene structure with LoxP sites (triangles) in introns flanking critical exon. Show that transcription, splicing, and protein production are normal. Then show Cre+ state with exon deleted and gene inactivated. Include annotations for design considerations."
 - **Alt Text:** "Floxed allele design showing normal function before and null after Cre exposure"
-- **SEO Keywords:** floxed allele, loxP-flanked, conditional ready, normal function preserved
+- **SEO Keywords:** floxed allele, LoxP-flanked, conditional ready, normal function preserved
 
 ---
 
@@ -286,7 +286,7 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/knockout-first-allele`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: The knockout-first allele includes a gene trap cassette that can be removed to generate a conditional allele."
-- **AI Generation Prompt:** "Scientific diagram showing tm1a knockout-first allele structure in detail: FRT sites flanking LacZ-neo cassette with splice acceptor and polyA, loxP sites flanking critical exon. Show gene is disrupted by cassette. Indicate Flp and Cre conversion possibilities. Professional genomics illustration."
+- **AI Generation Prompt:** "Scientific diagram showing tm1a knockout-first allele structure in detail: FRT sites flanking LacZ-neo cassette with splice acceptor and polyA, LoxP sites flanking critical exon. Show gene is disrupted by cassette. Indicate Flp and Cre conversion possibilities. Professional genomics illustration."
 - **Alt Text:** "Knockout-first (tm1a) allele structure with LacZ reporter and selection cassette"
 - **SEO Keywords:** knockout-first, tm1a allele, gene trap, LacZ reporter
 
@@ -307,8 +307,8 @@ Location: `/itl-website/public/images/diagrams/`
 - **Figure ID:** `fig-lsl-ki-001`
 - **Page:** `/conditional-knockin-mice`
 - **Aspect Ratio:** 4:3
-- **Caption:** "Fig. 1: LSL (loxP-STOP-loxP) cassettes prevent expression until Cre-mediated removal activates the allele."
-- **AI Generation Prompt:** "Scientific diagram showing conditional knockin with LSL cassette: promoter, loxP-STOP-loxP cassette (with transcriptional stop signals), transgene/mutation. Show silent state (STOP blocks transcription) and active state (Cre removes STOP, expression begins). Clean vector illustration."
+- **Caption:** "Fig. 1: LSL (LoxP-STOP-LoxP) cassettes prevent expression until Cre-mediated removal activates the allele."
+- **AI Generation Prompt:** "Scientific diagram showing conditional knockin with LSL cassette: promoter, LoxP-STOP-LoxP cassette (with transcriptional stop signals), transgene/mutation. Show silent state (STOP blocks transcription) and active state (Cre removes STOP, expression begins). Clean vector illustration."
 - **Alt Text:** "Conditional knockin with LSL stop cassette structure and Cre activation"
 - **SEO Keywords:** LSL cassette, conditional knockin, Cre-activatable, oncogene modeling
 
@@ -330,7 +330,7 @@ Location: `/itl-website/public/images/diagrams/`
 - **Page:** `/inducible-rosa26`
 - **Aspect Ratio:** 4:3
 - **Caption:** "Fig. 1: ROSA26 Cre-dependent alleles enable ubiquitous expression of transgenes when crossed to Cre drivers."
-- **AI Generation Prompt:** "Scientific diagram showing ROSA26 inducible allele: ROSA26 locus with CAG promoter, loxP-STOP-loxP, transgene (GFP example). Show inactive state (STOP blocks) and active state after Cre (ubiquitous expression). Include mouse silhouette showing expression pattern."
+- **AI Generation Prompt:** "Scientific diagram showing ROSA26 inducible allele: ROSA26 locus with CAG promoter, LoxP-STOP-LoxP, transgene (GFP example). Show inactive state (STOP blocks) and active state after Cre (ubiquitous expression). Include mouse silhouette showing expression pattern."
 - **Alt Text:** "ROSA26 Cre-dependent inducible allele for ubiquitous transgene expression"
 - **SEO Keywords:** ROSA26, Cre-dependent, ubiquitous expression, STOP cassette
 
@@ -340,10 +340,10 @@ Location: `/itl-website/public/images/diagrams/`
 - **Figure ID:** `fig-dual-recombinase-001`
 - **Page:** `/derivative-alleles`
 - **Aspect Ratio:** 4:3
-- **Caption:** "Fig. 2: Alleles with both FRT and loxP sites enable sequential manipulation by Flp and Cre recombinases."
-- **AI Generation Prompt:** "Scientific diagram showing dual recombinase allele: gene structure with both FRT sites (flanking cassette) and loxP sites (flanking exon). Show sequential processing: Flp removes cassette first, then Cre in specific tissue removes exon. Indicate independent control. Professional genomics illustration."
-- **Alt Text:** "Dual recombinase allele with FRT and loxP sites for sequential manipulation"
-- **SEO Keywords:** dual recombinase, FRT loxP, sequential recombination, intersectional genetics
+- **Caption:** "Fig. 2: Alleles with both FRT and LoxP sites enable sequential manipulation by Flp and Cre recombinases."
+- **AI Generation Prompt:** "Scientific diagram showing dual recombinase allele: gene structure with both FRT sites (flanking cassette) and LoxP sites (flanking exon). Show sequential processing: Flp removes cassette first, then Cre in specific tissue removes exon. Indicate independent control. Professional genomics illustration."
+- **Alt Text:** "Dual recombinase allele with FRT and LoxP sites for sequential manipulation"
+- **SEO Keywords:** dual recombinase, FRT LoxP, sequential recombination, intersectional genetics
 
 ---
 
@@ -599,7 +599,7 @@ import { ScientificDiagramPlaceholder } from '@/components/UXUIDC/ScientificDiag
   figureId="fig-cre-lox-001"
   aspectRatio="4:3"
   title="Cre-Lox Recombination Mechanism"
-  caption="Fig. 1: Cre recombinase recognizes 34bp loxP sites and catalyzes excision of flanked DNA sequences."
+  caption="Fig. 1: Cre recombinase recognizes 34bp LoxP sites and catalyzes excision of flanked DNA sequences."
   variant="section"
   altText="Diagram illustrating Cre-lox recombination mechanism"
 />

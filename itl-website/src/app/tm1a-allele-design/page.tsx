@@ -35,7 +35,7 @@ const tm1aElements = [
     description: "FLP recombinase recognition sites enabling removal of the lacZ cassette when FLP is expressed"
   },
   {
-    element: "loxP sites flanking critical exon",
+    element: "LoxP sites flanking critical exon",
     description: "Cre recombinase recognition sequences surrounding critical exon for conditional deletion"
   },
   {
@@ -75,7 +75,7 @@ const functionalAlleles = [
 const nomenclatureTable = [
   { name: "tm1a", definition: "First targeted mutation allele. Full cassette with lacZ present and critical exon present." },
   { name: "tm1b", definition: "Alternative cassette configuration at same locus (if applicable)." },
-  { name: "tm1c", definition: "After FLP mediated cassette removal. loxP flanked critical exon, lacks lacZ. Normal phenotype." },
+  { name: "tm1c", definition: "After FLP mediated cassette removal. LoxP flanked critical exon, lacks lacZ. Normal phenotype." },
   { name: "tm1d", definition: "After both FLP and Cre. Conventional knockout via exon deletion." },
   { name: "tm1e", definition: "Alternative FLP or Cre mediated modifications (when applicable)." }
 ];
@@ -86,12 +86,12 @@ const processingSteps = [
     conversion: "tm1a to tm1c",
     method: "FLP Crossing",
     description: "Cross tm1a founders with FLP transgenic mice. FLP recognizes FRT sites and excises lacZ cassette. Offspring with FLP transgene and tm1a allele produce tm1c allele.",
-    result: "tm1c mice show restored normal phenotype. They carry loxP flanked critical exons enabling conditional knockout."
+    result: "tm1c mice show restored normal phenotype. They carry LoxP flanked critical exons enabling conditional knockout."
   },
   {
     conversion: "tm1c to tm1d",
     method: "Cre Crossing",
-    description: "Cross tm1c mice with tissue specific, inducible, or ubiquitous Cre transgenic mice. Cre recognizes loxP sites and excises critical exon.",
+    description: "Cross tm1c mice with tissue specific, inducible, or ubiquitous Cre transgenic mice. Cre recognizes LoxP sites and excises critical exon.",
     result: "Ubiquitous Cre produces conventional knockout. Tissue specific Cre produces conditional knockout only in those tissues."
   }
 ];
@@ -169,7 +169,7 @@ const relatedServices = [
 const faqData = [
   {
     question: "What is the tm1a allele and how does it work?",
-    answer: "The tm1a (targeted mutation 1a) allele is a knockout first design containing an FRT flanked LacZ cassette and loxP flanked critical exon. The LacZ cassette disrupts gene function (knockout). FLP crossing removes LacZ to create tm1c (functional allele). Cre crossing deletes the critical exon to create tm1d (conditional knockout). This single targeting event produces three functional alleles."
+    answer: "The tm1a (targeted mutation 1a) allele is a knockout first design containing an FRT flanked LacZ cassette and LoxP flanked critical exon. The LacZ cassette disrupts gene function (knockout). FLP crossing removes LacZ to create tm1c (functional allele). Cre crossing deletes the critical exon to create tm1d (conditional knockout). This single targeting event produces three functional alleles."
   },
   {
     question: "What are the advantages of tm1a design over separate targeting?",
@@ -393,7 +393,7 @@ export default function Tm1aAlleleDesignPage() {
 
             <div className="animate-in" style={{ backgroundColor: '#008080', padding: '20px', borderRadius: '8px', marginTop: '30px' }}>
               <p style={{ color: 'white', fontSize: '.9rem', fontFamily: 'monospace', textAlign: 'center' }}>
-                Complete tm1a cassette order: 5&apos;—FRT—lacZ—polyA—FRT—loxP—Neo—loxP—3&apos;
+                Complete tm1a cassette order: 5&apos;—FRT—lacZ—polyA—FRT—LoxP—Neo—LoxP—3&apos;
               </p>
             </div>
           </div>

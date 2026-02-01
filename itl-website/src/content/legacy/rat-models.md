@@ -28,7 +28,7 @@ The types of custom rat models that we can make for you include:
 ### Knockout Models
 - **Conventional Knockout** - Standard gene deletion
 - **Knockout/Reporter Knockin** - Gene deletion with reporter integration
-- **Cre-conditional Knockout** - Conditional knockout with loxP sites
+- **Cre-conditional Knockout** - Conditional knockout with LoxP sites
 
 ### Knockin Models
 - **Point Mutation Knockin** - Precise base pair changes

@@ -34,7 +34,7 @@ Conventional knockouts offer a straightforward path to loss of function phenotyp
 
 ### Conditional Knockout
 
-Conditional knockout models use the Cre lox system to control where and when gene inactivation occurs. loxP sites flanking critical exons remain silent until the allele is exposed to Cre recombinase, at which point the target sequence is excised and gene function is lost.
+Conditional knockout models use the Cre lox system to control where and when gene inactivation occurs. LoxP sites flanking critical exons remain silent until the allele is exposed to Cre recombinase, at which point the target sequence is excised and gene function is lost.
 
 This approach is essential when global knockout causes embryonic lethality, when tissue specific gene function is the research focus, or when temporal control over gene deletion is required. Conditional knockouts provide maximum experimental flexibility from a single allele design.
 
@@ -96,7 +96,7 @@ Not sure which approach is right for your research? Our knockout strategy guide 
 
 ### Allele Design
 
-Ingenious Targeting Laboratory designs knockout alleles based on your specific experimental requirements. Critical exons are selected for loss of function after deletion. For conditional alleles, loxP sites are positioned to preserve normal gene expression in the absence of Cre while supporting null phenotypes after excision.
+Ingenious Targeting Laboratory designs knockout alleles based on your specific experimental requirements. Critical exons are selected for loss of function after deletion. For conditional alleles, LoxP sites are positioned to preserve normal gene expression in the absence of Cre while supporting null phenotypes after excision.
 
 ## Selected Publications
 
@@ -198,7 +198,7 @@ If homozygous null mutations of your target gene result in embryonic lethality i
 
 **What is a floxed allele?**
 
-A floxed allele contains loxP sites flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of conditional knockout strategies.
+A floxed allele contains LoxP sites flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between LoxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of conditional knockout strategies.
 
 **How long does it take to generate a knockout mouse model?**
 

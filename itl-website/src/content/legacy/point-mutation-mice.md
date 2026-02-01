@@ -55,7 +55,7 @@ The gene will express as wild-type initially, until Cre recombinase is activated
 
 ## Point Mutation Knockin by Minigene Approach
 
-The minigene approach involves introducing a construct that contains both wild-type and mutant sequences, separated by loxP sites. Before Cre activation, the wild-type minigene is expressed. After Cre-mediated recombination, the wild-type sequence is excised and the mutant sequence is expressed.
+The minigene approach involves introducing a construct that contains both wild-type and mutant sequences, separated by LoxP sites. Before Cre activation, the wild-type minigene is expressed. After Cre-mediated recombination, the wild-type sequence is excised and the mutant sequence is expressed.
 
 ### Notable Client Publications
 

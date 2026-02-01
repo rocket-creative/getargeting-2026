@@ -186,7 +186,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Cre-lox System",
     slug: "cre-lox-system",
-    definition: "A bacteriophage P1-derived site-specific recombination technology that utilizes Cre recombinase to mediate genomic modifications at engineered loxP sequences. This technology underpins conditional gene engineering approaches in mammalian genetics.",
+    definition: "A bacteriophage P1-derived site-specific recombination technology that utilizes Cre recombinase to mediate genomic modifications at engineered LoxP sequences. This technology underpins conditional gene engineering approaches in mammalian genetics.",
     category: "Recombination Systems & Tools",
   },
   {
@@ -196,15 +196,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Recombination Systems & Tools",
   },
   {
-    term: "Floxed Gene / loxP Site",
+    term: "Floxed Gene / LoxP Site",
     slug: "floxed-gene-loxp-site",
-    definition: "A floxed gene contains two loxP sites flanking an essential DNA segment, allowing Cre recombinase to mediate excision or inversion for conditional gene regulation. loxP sites are 34 base pair sequences recognized by Cre recombinase.",
+    definition: "A floxed gene contains two LoxP sites flanking an essential DNA segment, allowing Cre recombinase to mediate excision or inversion for conditional gene regulation. LoxP sites are 34 base pair sequences recognized by Cre recombinase.",
     category: "Recombination Systems & Tools",
   },
   {
     term: "Lox-STOP-Lox (LSL) Cassette",
     slug: "lox-stop-lox-cassette",
-    definition: "A cassette containing a transcriptional STOP sequence flanked by loxP sites that blocks gene expression until excised by Cre recombinase. This molecular 'gatekeeper' design is essential for gain-of-function models requiring precise gene induction.",
+    definition: "A cassette containing a transcriptional STOP sequence flanked by LoxP sites that blocks gene expression until excised by Cre recombinase. This molecular 'gatekeeper' design is essential for gain-of-function models requiring precise gene induction.",
     category: "Recombination Systems & Tools",
   },
   {
@@ -394,7 +394,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Tissue-Specific Knockout (Examples: Liver, Neuron)",
     slug: "tissue-specific-knockout",
-    definition: "A genetically engineered mouse model in which a target gene is selectively deleted or inactivated in a specific tissue or cell type, rather than throughout the entire organism. Typically relies on the Cre-loxP recombination system.",
+    definition: "A genetically engineered mouse model in which a target gene is selectively deleted or inactivated in a specific tissue or cell type, rather than throughout the entire organism. Typically relies on the Cre-LoxP recombination system.",
     category: "Study Design & Applications",
   },
   {

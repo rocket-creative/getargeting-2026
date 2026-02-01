@@ -13,7 +13,7 @@ const heroData = {
   badge: "Inducible Gene Expression",
   title: "Conditional Knockin Mice",
   intro: "Conditional knockin mouse models enable controlled gene expression through Cre lox mediated recombination. Since 1998, ingenious targeting laboratory has generated conditional knockin models for inducible reporter expression, tissue specific gene activation, and temporal control of gene function.",
-  description: "Conditional knockin alleles are designed with loxP sites flanking a STOP cassette that prevents expression until Cre mediated recombination removes the STOP sequence. This approach enables spatial and temporal control over gene expression, essential for studying genes with developmental effects or when expression timing is critical."
+  description: "Conditional knockin alleles are designed with LoxP sites flanking a STOP cassette that prevents expression until Cre mediated recombination removes the STOP sequence. This approach enables spatial and temporal control over gene expression, essential for studying genes with developmental effects or when expression timing is critical."
 };
 
 // Stats Data
@@ -26,7 +26,7 @@ const statsData = [
 
 // Allele Design Components
 const alleleDesignComponents = [
-  { name: "loxP Sites", desc: "Flank the STOP cassette" },
+  { name: "LoxP Sites", desc: "Flank the STOP cassette" },
   { name: "STOP Cassette", desc: "Prevents expression until removed" },
   { name: "Knockin Sequence", desc: "Gene, reporter, or tag to be expressed" },
   { name: "Endogenous Promoter", desc: "Native regulatory control" }
@@ -118,7 +118,7 @@ const relatedTechnologies = [
 const faqData = [
   {
     question: "What is the difference between conditional knockin and regular knockin?",
-    answer: "Conditional knockin models include loxP-flanked stop cassettes or other conditional elements that prevent expression until Cre-mediated recombination occurs. This enables tissue-specific or temporal control of knockin expression. Regular knockin models express the inserted sequence constitutively in all tissues."
+    answer: "Conditional knockin models include LoxP-flanked stop cassettes or other conditional elements that prevent expression until Cre-mediated recombination occurs. This enables tissue-specific or temporal control of knockin expression. Regular knockin models express the inserted sequence constitutively in all tissues."
   },
   {
     question: "When should I use conditional knockin instead of standard knockin?",
@@ -130,7 +130,7 @@ const faqData = [
   },
   {
     question: "What types of sequences can be conditionally inserted?",
-    answer: "Conditional knockin can insert point mutations, reporters (GFP, luciferase), epitope tags, humanized gene sequences, or cDNA sequences. The conditional cassette (loxP-flanked stop) prevents expression until Cre recombination removes it, enabling controlled expression of the inserted sequence."
+    answer: "Conditional knockin can insert point mutations, reporters (GFP, luciferase), epitope tags, humanized gene sequences, or cDNA sequences. The conditional cassette (LoxP-flanked stop) prevents expression until Cre recombination removes it, enabling controlled expression of the inserted sequence."
   },
   {
     question: "What is involved in generating a conditional knockin model?",

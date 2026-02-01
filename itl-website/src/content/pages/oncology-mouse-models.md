@@ -181,7 +181,7 @@ MMTV driven
 
 The LSL system enables conditional oncogene activation:
 
-- Oncogene preceded by loxP flanked transcriptional stop cassette
+- Oncogene preceded by LoxP flanked transcriptional stop cassette
 - Gene silent until Cre removes stop cassette
 - Enables tissue specific and temporal oncogene activation
 - Widely used for Kras, Braf, and other oncogene models
@@ -284,7 +284,7 @@ ES cell based targeting enables verification of oncology alleles before mouse ge
 - Confirm oncogene mutation sequences
 - Verify LSL cassette structure and function
 - Test conditional elements
-- Ensure loxP sites function correctly
+- Ensure LoxP sites function correctly
 
 ### Cre Driver Selection
 

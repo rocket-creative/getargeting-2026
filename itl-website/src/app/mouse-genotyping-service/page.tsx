@@ -144,7 +144,6 @@ const relatedServices = [
 
 const relatedResources = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" }
 ];
 

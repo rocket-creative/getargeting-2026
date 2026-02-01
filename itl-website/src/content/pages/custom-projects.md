@@ -42,7 +42,7 @@ We design each allele specifically for your research application:
 
 **Knockout Alleles** optimized for complete loss of function with appropriate exon selection and reading frame disruption
 
-**Conditional Alleles** designed with loxP site positioning that preserves gene function until Cre mediated deletion
+**Conditional Alleles** designed with LoxP site positioning that preserves gene function until Cre mediated deletion
 
 **Knockin Alleles** engineered for precise sequence integration with maintained reading frame and expression
 

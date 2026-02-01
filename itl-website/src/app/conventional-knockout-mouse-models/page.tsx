@@ -192,7 +192,6 @@ const relatedModelTypes = [
 const relatedGuides = [
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 const relatedTechnologies = [

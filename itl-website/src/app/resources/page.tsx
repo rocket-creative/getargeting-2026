@@ -79,7 +79,6 @@ const planningGuidesData = {
   title: "Planning Guides",
   guides: [
     {
-      href: "/model-generation-timeline",
       title: "Model Generation Timeline",
       description: "Detailed breakdown of project phases from targeting vector construction through germline transmission. Understand what determines timeline and options for acceleration."
     },

@@ -194,7 +194,7 @@ const technicalData = [
     icon: IconSettings,
     title: "Pre Germline Characterization",
     description: "ES cell based targeting enables verification of neuroscience alleles before mouse generation:",
-    points: ["Confirm correct allele structure", "Verify disease mutation sequences", "Test reporter expression where applicable", "Ensure loxP sites do not disrupt gene function"]
+    points: ["Confirm correct allele structure", "Verify disease mutation sequences", "Test reporter expression where applicable", "Ensure LoxP sites do not disrupt gene function"]
   },
   {
     icon: IconDNA,
@@ -277,7 +277,6 @@ const relatedTechnologies = [
 
 const projectResources = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" }
 ];
 

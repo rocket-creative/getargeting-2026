@@ -312,7 +312,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     sections: [
       {
         title: "How Conditional Knockouts Work",
-        content: "The most widely used system is Cre-lox recombination. A floxed allele is created with loxP sites flanking an essential exon. When crossed with Cre-expressing mice, the gene is deleted only in tissues where Cre is active."
+        content: "The most widely used system is Cre-lox recombination. A floxed allele is created with LoxP sites flanking an essential exon. When crossed with Cre-expressing mice, the gene is deleted only in tissues where Cre is active."
       },
       {
         title: "Advantages",
@@ -348,7 +348,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
       },
       {
         question: "Can a conventional knockout model be converted into a conditional one?",
-        answer: "No. Conventional knockouts involve permanent gene deletion. Conditional knockouts must be designed with site-specific recombination elements, such as loxP sites, from the start."
+        answer: "No. Conventional knockouts involve permanent gene deletion. Conditional knockouts must be designed with site-specific recombination elements, such as LoxP sites, from the start."
       }
     ],
     relatedTermSlugs: ["knockout-mouse-models", "conditional-knockout-mouse-models", "es-cell-targeting"],
@@ -548,11 +548,11 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "cre-lox-system": {
     metaTitle: "Cre-lox System | Site-Specific Recombination for Conditional Gene Engineering",
     metaDescription: "Learn how the Cre-lox system enables conditional gene knockout, activation, and lineage tracing in mouse models.",
-    introduction: "The Cre-lox system is a bacteriophage P1-derived site-specific recombination technology that utilizes Cre recombinase to mediate genomic modifications at engineered loxP sequences. This technology underpins conditional gene engineering approaches that are foundational in contemporary mammalian genetics.",
+    introduction: "The Cre-lox system is a bacteriophage P1-derived site-specific recombination technology that utilizes Cre recombinase to mediate genomic modifications at engineered LoxP sequences. This technology underpins conditional gene engineering approaches that are foundational in contemporary mammalian genetics.",
     faqs: [
       {
         question: "What determines whether Cre-lox produces excision or inversion?",
-        answer: "The relative orientation of loxP sites: parallel orientation yields excision, while inverted orientation yields inversion."
+        answer: "The relative orientation of LoxP sites: parallel orientation yields excision, while inverted orientation yields inversion."
       },
       {
         question: "Can Cre-lox be combined with other recombinases?",
@@ -588,34 +588,34 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   },
 
   "floxed-gene-loxp-site": {
-    metaTitle: "Floxed Genes & loxP Sites | Conditional Gene Control Elements",
-    metaDescription: "Understand how floxed genes and loxP sites enable conditional gene regulation through Cre-mediated recombination.",
-    introduction: "A floxed gene contains two loxP sites flanking an essential DNA segment, allowing Cre recombinase to mediate excision or inversion for conditional gene regulation. loxP sites are 34 base pair sequences recognized by Cre recombinase.",
+    metaTitle: "Floxed Genes & LoxP Sites | Conditional Gene Control Elements",
+    metaDescription: "Understand how floxed genes and LoxP sites enable conditional gene regulation through Cre-mediated recombination.",
+    introduction: "A floxed gene contains two LoxP sites flanking an essential DNA segment, allowing Cre recombinase to mediate excision or inversion for conditional gene regulation. LoxP sites are 34 base pair sequences recognized by Cre recombinase.",
     faqs: [
       {
-        question: "Where should loxP sites be placed for a null allele?",
+        question: "Where should LoxP sites be placed for a null allele?",
         answer: "Typically in introns flanking an essential exon to generate a nonfunctional transcript after excision."
       },
       {
-        question: "How far apart can loxP sites be?",
+        question: "How far apart can LoxP sites be?",
         answer: "Shorter distances favor efficient recombination; long segments may recombine less predictably."
       }
     ],
     relatedTermSlugs: ["cre-lox-system", "conditional-knockout-mouse-models", "lox-stop-lox-cassette"],
     relatedServices: [
       { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
-      { title: "loxP Site Design", href: "/loxp-site-design" }
+      { title: "LoxP Site Design", href: "/loxp-site-design" }
     ]
   },
 
   "lox-stop-lox-cassette": {
     metaTitle: "Lox-STOP-Lox (LSL) Cassette | Conditional Gene Activation",
     metaDescription: "Learn how LSL cassettes enable conditional gene activation by blocking expression until Cre-mediated excision.",
-    introduction: "An LSL cassette contains a transcriptional STOP sequence flanked by loxP sites that blocks gene expression until excised by Cre recombinase. This molecular 'gatekeeper' design is essential for gain-of-function models requiring precise spatial and temporal gene induction.",
+    introduction: "An LSL cassette contains a transcriptional STOP sequence flanked by LoxP sites that blocks gene expression until excised by Cre recombinase. This molecular 'gatekeeper' design is essential for gain-of-function models requiring precise spatial and temporal gene induction.",
     faqs: [
       {
         question: "What is inside an LSL cassette?",
-        answer: "STOP and polyA termination sequences, often accompanied by selectable markers, flanked by loxP sites."
+        answer: "STOP and polyA termination sequences, often accompanied by selectable markers, flanked by LoxP sites."
       },
       {
         question: "When should I use LSL designs?",
@@ -656,7 +656,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     introduction: "The Dre-rox system is an independent site-specific recombination platform derived from bacteriophage D6, using Dre recombinase to recognize rox sites for DNA rearrangements orthogonal to both Cre-lox and Flp-FRT.",
     faqs: [
       {
-        question: "Does Dre recombine loxP or FRT sites?",
+        question: "Does Dre recombine LoxP or FRT sites?",
         answer: "No. Dre acts exclusively on rox sites, ensuring complete orthogonality."
       },
       {
@@ -779,7 +779,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "Can selection markers be removed after targeting?",
-        answer: "Yes. Markers are often flanked by loxP or FRT sites for removal via Cre or Flp recombinase once correctly targeted clones are established."
+        answer: "Yes. Markers are often flanked by LoxP or FRT sites for removal via Cre or Flp recombinase once correctly targeted clones are established."
       }
     ],
     relatedTermSlugs: ["targeting-vector", "es-cell-targeting", "flp-frt-system"],
@@ -1131,8 +1131,8 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
 
   "tissue-specific-knockout": {
     metaTitle: "Tissue-Specific Knockout | Conditional Gene Deletion for Organ-Specific Studies",
-    metaDescription: "Explore how tissue-specific knockout mouse models use Cre-loxP recombination for selective gene deletion.",
-    introduction: "A tissue-specific knockout is a genetically engineered mouse model in which a target gene is selectively deleted or inactivated in a specific tissue or cell type, rather than throughout the entire organism. This typically relies on the Cre-loxP recombination system.",
+    metaDescription: "Explore how tissue-specific knockout mouse models use Cre-LoxP recombination for selective gene deletion.",
+    introduction: "A tissue-specific knockout is a genetically engineered mouse model in which a target gene is selectively deleted or inactivated in a specific tissue or cell type, rather than throughout the entire organism. This typically relies on the Cre-LoxP recombination system.",
     faqs: [
       {
         question: "What are common tissue-specific Cre drivers?",

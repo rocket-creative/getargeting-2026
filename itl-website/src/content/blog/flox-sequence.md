@@ -16,7 +16,7 @@ In genetic research, many scientists will mention terms like “gene recombinati
 
 ### Flox Sequences – Flanked by LoxP
 
-A flox sequence is obtained by inserting loxP sites on both sides of a gene to target it most typically for deletion, as part of the process of creating a knockout gene. Depending on the loxP sites’ orientation, the use of two loxP sites with the same orientation will lead to the excision of the gene, while opposite orientations will cause inversion. Flox sequences allow for the complete removal of the gene, but partial deletion is also possible. The incomplete deletion of Cre-mediated excisions has been found to lead to phenotype differences that can be used to study a variety of unusual genetic changes that can occur in the case of some diseases.
+A flox sequence is obtained by inserting LoxP sites on both sides of a gene to target it most typically for deletion, as part of the process of creating a knockout gene. Depending on the LoxP sites’ orientation, the use of two LoxP sites with the same orientation will lead to the excision of the gene, while opposite orientations will cause inversion. Flox sequences allow for the complete removal of the gene, but partial deletion is also possible. The incomplete deletion of Cre-mediated excisions has been found to lead to phenotype differences that can be used to study a variety of unusual genetic changes that can occur in the case of some diseases.
 
 ### Targeting Sequences in ES Cells
 

@@ -56,8 +56,8 @@ const advantagesData = {
 const creLoxData = {
   title: "How Conditional Knockout Works",
   subtitle: "The Cre Lox System",
-  description: "Conditional knockout relies on the Cre lox recombination system. LoxP sites are 34 base pair DNA sequences recognized by Cre recombinase. When two loxP sites flank a DNA segment in the same orientation, Cre recombinase excises the intervening sequence, leaving a single loxP site.",
-  mechanism: "In a conditional knockout allele, loxP sites flank one or more critical exons of the target gene. The floxed allele functions normally in the absence of Cre. When crossed to a Cre driver line, cells expressing Cre recombinase excise the floxed exons, creating a null allele in those specific cells while gene function is preserved elsewhere."
+  description: "Conditional knockout relies on the Cre lox recombination system. LoxP sites are 34 base pair DNA sequences recognized by Cre recombinase. When two LoxP sites flank a DNA segment in the same orientation, Cre recombinase excises the intervening sequence, leaving a single LoxP site.",
+  mechanism: "In a conditional knockout allele, LoxP sites flank one or more critical exons of the target gene. The floxed allele functions normally in the absence of Cre. When crossed to a Cre driver line, cells expressing Cre recombinase excise the floxed exons, creating a null allele in those specific cells while gene function is preserved elsewhere."
 };
 
 // Tissue Specific Data
@@ -93,7 +93,7 @@ const alleleDesignData = {
     {
       icon: IconSettings,
       title: "Critical Exon Selection",
-      description: "Successful conditional knockout requires careful selection of exons to flank with loxP sites. The targeted exon or exons must be essential for gene function.",
+      description: "Successful conditional knockout requires careful selection of exons to flank with LoxP sites. The targeted exon or exons must be essential for gene function.",
       considerations: [
         "Exons present in all transcript variants",
         "Exons encoding essential functional domains",
@@ -117,7 +117,7 @@ const alleleDesignData = {
       description: "A standard stop cassette configuration enables generation of four derivative alleles from a single targeted mouse line:",
       alleles: [
         { name: "Knockout First", desc: "Original targeted allele with full cassette. Gene is disrupted by stop cassette insertion." },
-        { name: "Conditional Ready", desc: "Flp excision removes the cassette while leaving loxP sites flanking the critical exon." },
+        { name: "Conditional Ready", desc: "Flp excision removes the cassette while leaving LoxP sites flanking the critical exon." },
         { name: "Conditional Null", desc: "Cre excision removes the critical exon, creating the tissue specific null allele." }
       ]
     }
@@ -196,7 +196,7 @@ const getFaqData = () => [
     question: "What is the difference between a floxed mouse and a conditional knockout?",
     answer: (
       <>
-        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed mouse</GlossaryTermLink> carries <GlossaryTermLink term="floxed-gene-loxp-site">loxP sites</GlossaryTermLink> flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a <GlossaryTermLink term="cre-driver-line">Cre driver line</GlossaryTermLink>. The resulting offspring with both the floxed allele and Cre expression are the actual <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockouts</GlossaryTermLink>, where gene deletion occurs in Cre-expressing tissues.
+        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed mouse</GlossaryTermLink> carries <GlossaryTermLink term="floxed-gene-loxp-site">LoxP sites</GlossaryTermLink> flanking a critical exon but retains normal gene function. The gene is only inactivated when the floxed mouse is crossed to a <GlossaryTermLink term="cre-driver-line">Cre driver line</GlossaryTermLink>. The resulting offspring with both the floxed allele and Cre expression are the actual <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockouts</GlossaryTermLink>, where gene deletion occurs in Cre-expressing tissues.
       </>
     )
   },
@@ -220,7 +220,7 @@ const getFaqData = () => [
     question: "How long does a conditional knockout project take?",
     answer: (
       <>
-        Custom conditional knockout project timelines account for more complex allele designs and verification of loxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>. Contact us for current timeline estimates tailored to your project.
+        Custom conditional knockout project timelines account for more complex allele designs and verification of LoxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>. Contact us for current timeline estimates tailored to your project.
       </>
     )
   }

@@ -34,7 +34,7 @@ const faqData = [
   { question: "What factors should I consider when selecting a reporter?", answer: "Consider detection method (fluorescence for live imaging, LacZ for fixed tissue), expression level (high-sensitivity reporters like LacZ for low expression), resolution needs (single-cell vs tissue-level), stability requirements (long-term expression for lineage tracing), and downstream applications (cell sorting, imaging, histology)." },
   { question: "What is the difference between fluorescent and enzymatic reporters?", answer: "Fluorescent reporters (GFP, tdTomato, mCherry) enable live imaging, cell sorting, and real-time tracking but require specialized equipment. Enzymatic reporters (LacZ) provide excellent sensitivity for rare cells, work in fixed tissue, and don't require specialized imaging equipment but are destructive (tissue must be fixed and stained)." },
   { question: "Which reporter is best for lineage tracing?", answer: "tdTomato and other stable fluorescent proteins are excellent for lineage tracing due to long-term stability and bright signal. LacZ can also be used for lineage tracing with whole-mount staining. Selection depends on whether you need live imaging (fluorescent) or fixed tissue analysis (LacZ)." },
-  { question: "Can reporters be combined with conditional systems?", answer: "Yes. Reporters can be made conditional using loxP-stop-loxP cassettes that prevent expression until Cre-mediated recombination removes the stop. This enables tissue specific or temporal control of reporter expression when combined with appropriate Cre driver lines (tissue specific Cre or inducible CreER). (/request-quote) (/request-quote)" }
+  { question: "Can reporters be combined with conditional systems?", answer: "Yes. Reporters can be made conditional using LoxP-stop-LoxP cassettes that prevent expression until Cre-mediated recombination removes the stop. This enables tissue specific or temporal control of reporter expression when combined with appropriate Cre driver lines (tissue specific Cre or inducible CreER). (/request-quote) (/request-quote)" }
 ];
 
 // Related Links
@@ -45,7 +45,6 @@ const relatedLinks = [
   { title: "Lacz Knockin Mice", href: "/lacz-knockin-mice" },
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Cre Line Selection Guide", href: "/cre-line-selection-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 export default function ReporterSelectionGuidePage() {

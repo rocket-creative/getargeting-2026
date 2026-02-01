@@ -70,7 +70,7 @@ Generate these images from the prompts below. Save as `[figure-id].png` in `/itl
 - **Figure ID:** `fig-exon-selection-001`
 - **Page:** `/critical-exon-selection`
 - **Caption:** "Fig. 1: Critical exon selection criteria ensure complete loss of function for knockout and conditional alleles."
-- **AI prompt:** "Scientific diagram showing gene structure with multiple exons; highlight one 'critical' exon (essential, all isoforms, frameshift, early). Show knockout (exon deleted) vs floxed (loxP flanking exon) outcomes. Criteria callouts: essential for function, all splice variants, frameshift, early in coding. Clean gene-structure illustration. Colors: navy, teal, blue; white background."
+- **AI prompt:** "Scientific diagram showing gene structure with multiple exons; highlight one 'critical' exon (essential, all isoforms, frameshift, early). Show knockout (exon deleted) vs floxed (LoxP flanking exon) outcomes. Criteria callouts: essential for function, all splice variants, frameshift, early in coding. Clean gene-structure illustration. Colors: navy, teal, blue; white background."
 - **Alt text:** "Critical exon selection for knockout and conditional allele design"
 
 ---

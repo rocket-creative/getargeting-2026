@@ -28,7 +28,7 @@ Use to verify accuracy. NEVER copy existing diagrams. Create 100% original illus
 
 ## ITL BRAND COLORS
 
-Primary: Navy #0a253c (DNA, structures), Teal #008080 (loxP/FRT, key elements), Blue #2384da (secondary)
+Primary: Navy #0a253c (DNA, structures), Teal #008080 (LoxP/FRT, key elements), Blue #2384da (secondary)
 Neutral: White #ffffff, Light Gray #f8f9fa, Medium Gray #555555
 Accent: Orange #e67e22 (mutations), Green #27ae60 (positive), Red #c0392b (deletions)
 
@@ -42,9 +42,9 @@ AI CANNOT reliably generate sequences. Follow strictly:
 
 DO NOT generate: DNA/RNA sequences (ATCG), amino acid sequences, chemical formulas
 
-USE INSTEAD: Simple labels ("loxP", "FRT", "Exon 1", "Gene"), symbols (triangles, boxes, arrows), size labels ("34 bp" without actual sequence)
+USE INSTEAD: Simple labels ("LoxP", "FRT", "Exon 1", "Gene"), symbols (triangles, boxes, arrows), size labels ("34 bp" without actual sequence)
 
-SAFE TEXT: Gene, Exon, Intron, loxP, FRT, Cre, 5', 3', N, C, Before, After, Excised DNA, Floxed Allele
+SAFE TEXT: Gene, Exon, Intron, LoxP, FRT, Cre, 5', 3', N, C, Before, After, Excised DNA, Floxed Allele
 
 When in doubt, use symbols instead of text.
 
@@ -59,18 +59,18 @@ Minimum 2x resolution, sharp edges.
 ## SCIENTIFIC CONVENTIONS
 
 DNA: Exons as boxes, introns as lines, 5'→3' indicated
-loxP: Triangles showing orientation (same = excision, opposite = inversion)
-FRT: Distinct from loxP in shape/color
+LoxP: Triangles showing orientation (same = excision, opposite = inversion)
+FRT: Distinct from LoxP in shape/color
 Proteins: Domains delineated, N/C labeled
 Cells: Membrane as bilayer, nucleus clear
 
 ## DOMAIN KNOWLEDGE
 
-Gene Targeting: Cre-loxP (34bp), FLP-FRT, CreERT2 (HSP90 sequesters until tamoxifen), Tet-On/Off, ES cell targeting, ROSA26/H11 loci
+Gene Targeting: Cre-LoxP (34bp), FLP-FRT, CreERT2 (HSP90 sequesters until tamoxifen), Tet-On/Off, ES cell targeting, ROSA26/H11 loci
 
 Alleles: Conventional KO, Conditional KO (floxed), Knockin, Derivatives (tm1a/b/c/d)
 
-Cre-loxP: Same orientation → excision (leaves 1 loxP), opposite → inversion
+Cre-LoxP: Same orientation → excision (leaves 1 LoxP), opposite → inversion
 CreERT2: Tamoxifen triggers nuclear entry, recombination is PERMANENT
 tm1a: knockout-first; tm1b: null (Cre); tm1c: floxed (Flp); tm1d: conditional null
 
@@ -99,7 +99,7 @@ These diagrams will be viewed by leading geneticists. Scientific accuracy is hig
 | Color | Hex | Use |
 |-------|-----|-----|
 | Navy | #0a253c | DNA |
-| Teal | #008080 | loxP/FRT |
+| Teal | #008080 | LoxP/FRT |
 | Blue | #2384da | Secondary |
 | Orange | #e67e22 | Mutations |
 | Green | #27ae60 | Positive |

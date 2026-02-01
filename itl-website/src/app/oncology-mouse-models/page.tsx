@@ -175,7 +175,7 @@ const technicalData = [
     icon: IconSettings,
     title: "Pre Germline Characterization",
     description: "ES cell based targeting enables verification of oncology alleles before mouse generation:",
-    points: ["Confirm oncogene mutation sequences", "Verify LSL cassette structure and function", "Test conditional elements", "Ensure loxP sites function correctly"]
+    points: ["Confirm oncogene mutation sequences", "Verify LSL cassette structure and function", "Test conditional elements", "Ensure LoxP sites function correctly"]
   },
   {
     icon: IconTarget,
@@ -257,7 +257,6 @@ const relatedModelTypes = [
 const projectResources = [
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -590,7 +589,7 @@ export default function OncologyMouseModelsPage() {
               <h4 style={{ color: '#0a253c', fontWeight: 600, marginBottom: '10px' }}>LSL (Lox Stop Lox) System</h4>
               <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>The LSL system enables conditional oncogene activation:</p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
-                {["Oncogene preceded by loxP flanked transcriptional stop cassette", "Gene silent until Cre removes stop cassette", "Enables tissue specific and temporal oncogene activation", "Widely used for Kras, Braf, and other oncogene models"].map((item, idx) => (
+                {["Oncogene preceded by LoxP flanked transcriptional stop cassette", "Gene silent until Cre removes stop cassette", "Enables tissue specific and temporal oncogene activation", "Widely used for Kras, Braf, and other oncogene models"].map((item, idx) => (
                   <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', color: '#666', fontSize: '.9rem' }}>
                     <IconCheckCircle size={16} color="#008080" />
                     <span>{item}</span>

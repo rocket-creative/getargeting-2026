@@ -174,7 +174,6 @@ const workflowData = {
       description: 'Study-ready cohort expansion with structured breeding for statistical power.',
     },
   ],
-  ctaHref: '/model-generation-timeline',
 };
 
 // Trusted by Researchers - lines 61-64

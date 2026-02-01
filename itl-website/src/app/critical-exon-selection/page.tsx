@@ -167,7 +167,7 @@ const faqData = [
   },
   {
     question: "How does exon selection differ for conventional vs conditional knockout?",
-    answer: "For conventional knockout, target early exons that create frameshift mutations. For conditional knockout (floxed exon), the same principles apply but the selected exon will be flanked by loxP sites. The exon you choose to flank becomes the critical exon that determines knockout when Cre recombination occurs."
+    answer: "For conventional knockout, target early exons that create frameshift mutations. For conditional knockout (floxed exon), the same principles apply but the selected exon will be flanked by LoxP sites. The exon you choose to flank becomes the critical exon that determines knockout when Cre recombination occurs."
   }
 ];
 

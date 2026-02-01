@@ -42,7 +42,6 @@ const relatedLinks = [
   { title: "Point Mutation Mice", href: "/point-mutation-mice" },
   { title: "Gene Therapy Mouse Models", href: "/gene-therapy-mouse-models" },
   { title: "Therapeutic Areas", href: "/therapeutic-areas" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 export default function CysticFibrosisMicePage() {

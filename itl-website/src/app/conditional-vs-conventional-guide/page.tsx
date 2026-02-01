@@ -31,7 +31,7 @@ const comparisonData = [
   { feature: "Timing of deletion", conventional: "From conception", conditional: "When Cre is active" },
   { feature: "Tissue specificity", conventional: "None (ubiquitous)", conditional: "Determined by Cre driver" },
   { feature: "Temporal control", conventional: "None", conditional: "Available with inducible Cre" },
-  { feature: "Allele complexity", conventional: "Simple", conditional: "More complex (loxP sites)" },
+  { feature: "Allele complexity", conventional: "Simple", conditional: "More complex (LoxP sites)" },
   { feature: "Breeding requirements", conventional: "Standard", conditional: "Requires Cre driver cross" },
   { feature: "Future flexibility", conventional: "Limited", conditional: "Extensive" },
   { feature: "Essential genes", conventional: "Often lethal", conditional: "Viable with tissue restriction" }
@@ -67,7 +67,7 @@ const conventionalData = {
 // Conditional Knockout Data
 const conditionalData = {
   title: "Conditional Knockout",
-  howItWorks: "Conditional knockout uses the Cre lox system to control gene inactivation. loxP sites flank critical exons, creating a \"floxed\" allele that functions normally until exposed to Cre recombinase. Gene deletion occurs only in cells where Cre is expressed.",
+  howItWorks: "Conditional knockout uses the Cre lox system to control gene inactivation. LoxP sites flank critical exons, creating a \"floxed\" allele that functions normally until exposed to Cre recombinase. Gene deletion occurs only in cells where Cre is expressed.",
   bestApplications: [
     "Genes essential for embryonic development",
     "Studies of tissue specific gene function",
@@ -200,7 +200,6 @@ const faqData = [
 const relatedLinksData = {
   guides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
     { href: "/mouse-model-budgeting-guide", label: "Mouse Model Budgeting Guide" },
     { href: "/cre-line-selection-guide", label: "Cre Line Selection Guide" }
   ],
