@@ -708,10 +708,11 @@ export default function ConditionalKnockoutMouseModelsPage() {
             
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
+                href="/cre-lox-system"
                 className="inline-flex items-center gap-2 transition-colors duration-300"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
-                <span>Learn more about Derivative Allele Systems</span>
+                <span>Learn more about Cre-LoxP Systems</span>
                 <IconChevronRight size={16} color="#008080" />
               </Link>
             </div>

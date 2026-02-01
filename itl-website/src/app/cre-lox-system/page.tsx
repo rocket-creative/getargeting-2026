@@ -827,10 +827,11 @@ export default function CreLoxSystemPage() {
             
             <div className="animate-in text-center" style={{ marginTop: '25px' }}>
               <Link 
+                href="/conditional-knockout-mouse-models"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
-                <span>Learn more about derivative alleles</span>
+                <span>Learn more about conditional knockout systems</span>
                 <IconChevronRight size={16} color="#008080" />
               </Link>
             </div>
