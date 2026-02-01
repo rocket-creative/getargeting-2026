@@ -94,7 +94,7 @@ const humanizedData = {
     },
     {
       title: "Immune Checkpoint Humanization",
-      description: "Humanized immune checkpoint models express human PD1, PDL1, CTLA4, LAG3, TIM3, or other checkpoint molecules. These models enable testing of checkpoint inhibitor antibodies in immunocompetent mice with functional immune systems.",
+      description: "Humanized immune checkpoint models express human PD1, PDL1, CTLA4, LAG3, TIM3, or other checkpoint proteins. These models enable testing of checkpoint inhibitor antibodies in immunocompetent mice with functional immune systems.",
       href: "/humanized-immune-checkpoint-mice"
     },
     {
