@@ -985,23 +985,6 @@ export default function ResourcesPage() {
                 </div>
               ))}
             </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link href={caseStudiesData.viewAllHref} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#008080',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                View All Case Studies
-                <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-            </div>
           </div>
         </section>
 

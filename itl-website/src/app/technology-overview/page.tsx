@@ -135,8 +135,9 @@ const proprietaryTechnologies = [
 // Advanced Targeting
 const advancedTargeting = [
   {
-    title: "Derivative Allele System",
-    description: "Generation of multiple model types from single targeted ES cell clone, including knockout first, null, conditional ready, and conditional null alleles.",
+    title: "Conditional Targeting Systems",
+    description: "Generation of multiple model types from single targeted ES cell clone using Cre-LoxP and FLP-FRT systems, enabling flexible conditional and constitutive knockout approaches.",
+    href: "/cre-lox-system"
   },
   {
     title: "BAC to BAC Large Scale Targeting",
