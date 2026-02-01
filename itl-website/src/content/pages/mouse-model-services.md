@@ -143,7 +143,7 @@ Our scientific team designs and constructs targeting vectors tailored to your sp
 - Custom cassette configurations for complex allele designs
 - Validated vector backbones with proven targeting efficiency
 
-Vector design incorporates optimal loxP and FRT site positioning, selection cassette configuration, and homology arm lengths to maximize targeting success.
+Vector design incorporates optimal LoxP and FRT site positioning, selection cassette configuration, and homology arm lengths to maximize targeting success.
 
 ### Microinjection Services
 

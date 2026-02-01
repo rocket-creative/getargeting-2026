@@ -45,9 +45,9 @@ const whyItMatters = [
 
 // Allele Types
 const alleleTypes = [
-  { type: "Knockout Alleles", options: ["Conventional knockout: Deletion of critical exons creates global null allele", "Conditional knockout: loxP sites flank critical exons for Cre mediated deletion", "Knockout first: Reporter and selection cassette disrupt gene, convertible to conditional"], link: "/knockout-mouse-models" },
+  { type: "Knockout Alleles", options: ["Conventional knockout: Deletion of critical exons creates global null allele", "Conditional knockout: LoxP sites flank critical exons for Cre mediated deletion", "Knockout first: Reporter and selection cassette disrupt gene, convertible to conditional"], link: "/knockout-mouse-models" },
   { type: "Knockin Alleles", options: ["Point mutations: Single nucleotide changes introduced at exact positions", "Reporter knockins: Fluorescent proteins or enzymatic reporters at endogenous loci", "Tag knockins: Epitope tags added to endogenous proteins", "Humanization: Human sequences replace mouse orthologs"], link: "/knockin-mouse-models" },
-  { type: "Conditional Alleles", options: ["loxP sites: Positioned to flank critical exons for Cre mediated excision", "FRT sites: Enable Flp mediated cassette removal", "Derivative allele systems: Single targeting event enables multiple allele configurations"], link: "/conditional-knockout-mouse-models" }
+  { type: "Conditional Alleles", options: ["LoxP sites: Positioned to flank critical exons for Cre mediated excision", "FRT sites: Enable Flp mediated cassette removal", "Derivative allele systems: Single targeting event enables multiple allele configurations"], link: "/conditional-knockout-mouse-models" }
 ];
 
 // Advantages

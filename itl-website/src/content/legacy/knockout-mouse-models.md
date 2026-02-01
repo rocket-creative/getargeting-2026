@@ -29,7 +29,7 @@ A knockout mouse is a mouse in which an existing gene has been inactivated, or "
 Target gene is partially deleted or replaced with a reporter gene, thereby inactivating it at all times in all tissues.
 
 ### Conditional Knockout Mice
-Targeted insertion of loxP sites enables Cre recombinase-mediated excision, leading to tissue-specific gene inactivation.
+Targeted insertion of LoxP sites enables Cre recombinase-mediated excision, leading to tissue-specific gene inactivation.
 
 ## Learn more about ingenious' core knockout specialties
 

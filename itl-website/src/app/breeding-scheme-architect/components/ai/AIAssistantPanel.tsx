@@ -53,9 +53,9 @@ function generateAIResponse(
     const tissue = tissueMatch ? tissueMatch[1] : 'target tissue';
 
     return {
-      content: `For a conditional knockout in ${tissue}, I recommend using the Cre-loxP system. Here's what you'll need:
+      content: `For a conditional knockout in ${tissue}, I recommend using the Cre-LoxP system. Here's what you'll need:
 
-1. **Floxed allele**: Your target gene flanked by loxP sites
+1. **Floxed allele**: Your target gene flanked by LoxP sites
 2. **Cre driver**: A tissue-specific Cre recombinase line
 
 The Cre will delete the floxed exon(s) only in cells where it's expressed, giving you tissue-specific knockout.`,
@@ -63,7 +63,7 @@ The Cre will delete the floxed exon(s) only in cells where it's expressed, givin
         {
           type: 'allele',
           title: 'Add Floxed Allele',
-          description: 'Conditional knockout allele with loxP sites flanking critical exon(s)',
+          description: 'Conditional knockout allele with LoxP sites flanking critical exon(s)',
           actionLabel: 'Add to scheme',
         },
         {
@@ -196,7 +196,7 @@ If homozygous knockouts are embryonic lethal, consider conditional knockout inst
   return {
     content: `I can help you with:
 
-• **Conditional knockouts** - Planning Cre-loxP based models
+• **Conditional knockouts** - Planning Cre-LoxP based models
 • **Cre line selection** - Finding the right tissue-specific Cre
 • **Breeding optimization** - Minimizing generations and mice needed
 • **Strategy recommendations** - Best approaches for your research goals

@@ -294,7 +294,6 @@ const relatedLinksData = {
     { href: "/humanized-mouse-models", label: "Humanized Mouse Models" },
     { href: "/knockin-mouse-models", label: "Knockin Mouse Models" },
     { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" }
   ]
 };
 

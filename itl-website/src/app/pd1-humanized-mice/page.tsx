@@ -263,7 +263,6 @@ const relatedLinksData = {
   resources: [
     { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
     { href: "/c57bl6-mouse-background", label: "C57BL/6 Mouse Background" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
     { href: "/faqs", label: "FAQs" }
   ]
 };

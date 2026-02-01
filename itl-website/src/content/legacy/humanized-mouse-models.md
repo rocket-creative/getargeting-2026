@@ -43,7 +43,7 @@ This method was first used in the 1980s to create mouse models with expression o
 
 A knockin to a safe harbor locus such as the Rosa26 locus (Rapid-Rosa26™) offers predictable, stable, high expression from a defined location in the mouse genome. This strategy overcomes the disadvantages of random transgenic insertion by making a targeted insertion. Mice don't need to be screened and maintained for multiple generations to identify stable expressors, and transgene expression level is predictable.
 
-The main advantage of safe harbor knockin is that the inserted gene can be expressed in any tissue by using a strong ubiquitously active promoter such as CAG. Expression can be made conditional with a loxP-flanked STOP cassette, such that only cells expressing Cre will express the transgene.
+The main advantage of safe harbor knockin is that the inserted gene can be expressed in any tissue by using a strong ubiquitously active promoter such as CAG. Expression can be made conditional with a LoxP-flanked STOP cassette, such that only cells expressing Cre will express the transgene.
 
 Safe harbor knockin is best suited for overexpression of wild-type or mutant transgenes, expression of Cre or a reporter in a conditional manner, or other experiments where expression of the transgene in its normal genomic environment is not needed. Overexpression is not always the ideal experiment however, and the gene is expressed from the safe harbor locus rather than its native environment.
 
@@ -88,7 +88,7 @@ Random-insertion transgenic strategies do not place the human sequence in the co
 ### Coding Sequence Knockin
 - Expression of human coding sequence under the control of the mouse promoter
 - Can incorporate mutations, co-express reporter gene
-- Can include loxP design for tissue specific or temporal control
+- Can include LoxP design for tissue specific or temporal control
 
 ### Point Mutation
 - Change a key amino acid to match human sequence

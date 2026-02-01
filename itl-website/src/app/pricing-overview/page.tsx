@@ -34,7 +34,7 @@ const modelTypePricingData = [
   },
   {
     title: "Conditional Knockout",
-    description: "Conditional Knockout projects require insertion of loxP sites flanking critical exons while preserving normal gene function. Additional design complexity increases project investment.",
+    description: "Conditional Knockout projects require insertion of LoxP sites flanking critical exons while preserving normal gene function. Additional design complexity increases project investment.",
     complexity: "Moderate"
   },
   {
@@ -54,7 +54,7 @@ const alleleComplexityData = {
   title: "Allele Design Complexity",
   description: "Factors that increase allele complexity:",
   factors: [
-    "Multiple recombinase recognition sites (loxP, FRT, Rox)",
+    "Multiple recombinase recognition sites (LoxP, FRT, Rox)",
     "Reporter gene insertions",
     "Fusion protein designs",
     "Large sequence insertions",
@@ -225,7 +225,6 @@ const faqData = [
 
 // Related Resources Data
 const relatedResourcesData = [
-  { href: "/model-generation-timeline", label: "Model Generation Timeline" },
   { href: "/faqs", label: "FAQs" },
   { href: "/mouse-model-services", label: "Mouse Model Services" },
   { href: "/mouse-model-budgeting-guide", label: "Mouse Model Budgeting Guide" }

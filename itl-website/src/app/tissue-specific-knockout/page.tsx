@@ -28,7 +28,7 @@ const statsData = [
 const twoComponentSystem = [
   {
     name: "Floxed (Conditional) Allele",
-    description: "The target gene contains loxP sites flanking critical exons. The floxed allele functions normally in the absence of Cre recombinase."
+    description: "The target gene contains LoxP sites flanking critical exons. The floxed allele functions normally in the absence of Cre recombinase."
   },
   {
     name: "Cre Driver Line",
@@ -159,7 +159,7 @@ const relatedTechnologies = [
 const faqData = [
   {
     question: "How do tissue-specific knockouts work?",
-    answer: "Tissue-specific knockouts combine floxed alleles (loxP sites flanking critical exons) with Cre driver lines that express Cre recombinase in specific cell types or tissues. When the floxed mouse is crossed to a tissue-specific Cre driver, gene deletion occurs only in Cre-expressing tissues while gene function is preserved elsewhere. This enables study of tissue-autonomous gene function."
+    answer: "Tissue-specific knockouts combine floxed alleles (LoxP sites flanking critical exons) with Cre driver lines that express Cre recombinase in specific cell types or tissues. When the floxed mouse is crossed to a tissue-specific Cre driver, gene deletion occurs only in Cre-expressing tissues while gene function is preserved elsewhere. This enables study of tissue-autonomous gene function."
   },
   {
     question: "What Cre drivers are commonly used for tissue-specific knockouts?",
@@ -175,7 +175,7 @@ const faqData = [
   },
   {
     question: "How do I verify tissue-specific deletion has occurred?",
-    answer: "Genomic PCR using primers flanking the loxP sites reveals deletion: wildtype and floxed alleles produce larger bands; recombined (deleted) allele produces a smaller band. Reporter crosses (Rosa26-tdTomato) visualize recombination pattern and confirm deletion in expected tissues. Functional assays (Western blot, immunohistochemistry) confirm loss of protein in target tissue."
+    answer: "Genomic PCR using primers flanking the LoxP sites reveals deletion: wildtype and floxed alleles produce larger bands; recombined (deleted) allele produces a smaller band. Reporter crosses (Rosa26-tdTomato) visualize recombination pattern and confirm deletion in expected tissues. Functional assays (Western blot, immunohistochemistry) confirm loss of protein in target tissue."
   }
 ];
 

@@ -27,7 +27,7 @@ const steps = [
   {
     number: '02',
     title: 'Strategy Design',
-    description: 'Detailed allele design including selection of critical exons, loxP site positioning for conditional models, and verification of targeting approach.',
+    description: 'Detailed allele design including selection of critical exons, LoxP site positioning for conditional models, and verification of targeting approach.',
   },
   {
     number: '03',

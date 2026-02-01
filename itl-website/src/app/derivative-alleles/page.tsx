@@ -30,7 +30,7 @@ const fourAlleles = [
   {
     allele: "tm1a",
     name: "Knockout First (Reporter)",
-    structure: "FRT — LacZ/neo — loxP — critical exon — loxP",
+    structure: "FRT — LacZ/neo — LoxP — critical exon — LoxP",
     function: "Gene disrupted by splice acceptor and polyadenylation signal",
     utility: "Immediate knockout phenotype plus expression data",
     color: "#008080"
@@ -46,7 +46,7 @@ const fourAlleles = [
   {
     allele: "tm1c",
     name: "Conditional Ready (Floxed)",
-    structure: "LacZ/neo removed; loxP flanked exon remains",
+    structure: "LacZ/neo removed; LoxP flanked exon remains",
     function: "Gene function restored; conditional deletion enabled",
     utility: "The floxed allele for tissue specific knockout",
     color: "#0a253c"
@@ -197,7 +197,7 @@ const faqData = [
   },
   {
     question: "How do I convert tm1a to tm1c (conditional ready floxed allele)?",
-    answer: "Cross the tm1a allele to a Flp deleter strain (ACTB FLPe or Rosa26 FLPo). Flp recombinase removes the FRT flanked selection cassette (LacZ and Neo), leaving only loxP sites flanking the critical exon. The resulting tm1c allele has normal gene function and is ready for conditional knockout experiments."
+    answer: "Cross the tm1a allele to a Flp deleter strain (ACTB FLPe or Rosa26 FLPo). Flp recombinase removes the FRT flanked selection cassette (LacZ and Neo), leaving only LoxP sites flanking the critical exon. The resulting tm1c allele has normal gene function and is ready for conditional knockout experiments."
   },
   {
     question: "Can I use the same tm1c floxed allele with different Cre drivers?",

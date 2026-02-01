@@ -91,9 +91,9 @@ Feedback says "remove ALL timeline mentions" but this affects 30+ pages. Need co
 ### LoxP Capitalization
 **Status:** PENDING SCIENTIFIC REVIEW
 
-Feedback requested changing "loxP" to "LoxP" (capitalizing the 'l').
+Feedback requested changing "LoxP" to "LoxP" (capitalizing the 'l').
 
-**Issue:** In scientific nomenclature, "loxP" with lowercase 'l' is the correct format. Changing to "LoxP" would be scientifically incorrect.
+**Issue:** In scientific nomenclature, "LoxP" with lowercase 'l' is the correct format. Changing to "LoxP" would be scientifically incorrect.
 
 **Recommendation:** Confirm if this was a mistake in the feedback or if brand guidelines override scientific convention.
 

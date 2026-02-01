@@ -55,7 +55,7 @@ We don't simply execute specifications. We actively optimize:
 
 - Allele design for your specific research application
 - Exon selection for complete loss of function
-- loxP positioning for preserved gene function
+- LoxP positioning for preserved gene function
 - Cassette configuration for derivative allele flexibility
 
 ## Comprehensive Service

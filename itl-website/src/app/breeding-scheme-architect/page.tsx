@@ -135,7 +135,7 @@ const relatedResources = [
   {
     title: 'Cre Lox System',
     link: '/cre-lox-system',
-    description: 'Understanding Cre recombinase and loxP sites for conditional gene targeting',
+    description: 'Understanding Cre recombinase and LoxP sites for conditional gene targeting',
   },
   {
     title: 'Conditional vs Conventional Guide',
@@ -144,7 +144,6 @@ const relatedResources = [
   },
   {
     title: 'Model Generation Timeline',
-    link: '/model-generation-timeline',
     description: 'Understand timelines from project start to study ready cohorts',
   },
   {

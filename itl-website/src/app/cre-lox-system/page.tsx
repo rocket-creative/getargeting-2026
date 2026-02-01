@@ -14,7 +14,7 @@ const heroData = {
   badge: "Conditional Gene Targeting",
   title: "Cre Lox System",
   intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
-  description: "The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with loxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts."
+  description: "The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with LoxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts."
 };
 
 // Stats Data
@@ -36,24 +36,24 @@ const technologyBenefits = [
 const creComponents = [
   {
     title: "Cre Recombinase",
-    description: "A 38 kDa enzyme from bacteriophage P1 that catalyzes recombination between specific DNA sequences. Cre recognizes and binds to loxP sites, bringing two sites together and catalyzing strand exchange to excise or invert the intervening DNA."
+    description: "A 38 kDa enzyme from bacteriophage P1 that catalyzes recombination between specific DNA sequences. Cre recognizes and binds to LoxP sites, bringing two sites together and catalyzing strand exchange to excise or invert the intervening DNA."
   },
   {
     title: "LoxP Sites",
-    description: "34 base pair DNA sequences consisting of two 13 bp inverted repeats flanking an 8 bp asymmetric spacer. The spacer sequence determines directionality. When two loxP sites are oriented in the same direction, Cre mediated recombination excises the intervening sequence, leaving a single loxP site."
+    description: "34 base pair DNA sequences consisting of two 13 bp inverted repeats flanking an 8 bp asymmetric spacer. The spacer sequence determines directionality. When two LoxP sites are oriented in the same direction, Cre mediated recombination excises the intervening sequence, leaving a single LoxP site."
   }
 ];
 
 // Recombination Outcomes
 const recombinationOutcomes = [
-  { orientation: "Same orientation (direct repeats)", outcome: "Excision of intervening sequence, leaving single loxP site" },
+  { orientation: "Same orientation (direct repeats)", outcome: "Excision of intervening sequence, leaving single LoxP site" },
   { orientation: "Opposite orientation (inverted repeats)", outcome: "Inversion of intervening sequence" },
   { orientation: "Different chromosomes or distant sites", outcome: "Translocation or large deletion (less efficient)" }
 ];
 
 // Conditional Knockout Mechanism
 const conditionalMechanism = [
-  "loxP sites flank one or more critical exons",
+  "LoxP sites flank one or more critical exons",
   "The floxed allele functions normally in the absence of Cre",
   "Gene expression, splicing, and protein function are preserved",
   "When Cre is expressed, the floxed exons are excised",
@@ -63,9 +63,9 @@ const conditionalMechanism = [
 
 // LoxP Positioning
 const loxpPositioning = [
-  { name: "Intronic placement", desc: "loxP sites are typically placed in introns to avoid disrupting gene expression before Cre exposure" },
+  { name: "Intronic placement", desc: "LoxP sites are typically placed in introns to avoid disrupting gene expression before Cre exposure" },
   { name: "Critical exon selection", desc: "Flanked exons must be essential for gene function; their deletion should create a true null" },
-  { name: "Splice site preservation", desc: "loxP insertion should not disrupt normal splicing" },
+  { name: "Splice site preservation", desc: "LoxP insertion should not disrupt normal splicing" },
   { name: "Regulatory element avoidance", desc: "Positioning should not interfere with enhancers or other regulatory sequences" }
 ];
 
@@ -139,7 +139,7 @@ const inducibleSystems = [
 // Derivative Allele System
 const derivativeAlleles = [
   { name: "Knockout First", desc: "Original targeted allele with full stop cassette; gene disrupted by cassette insertion; LacZ reports expression (if included)" },
-  { name: "Conditional Ready", desc: "Flp excision removes stop cassette; leaves loxP flanked exon; gene function restored; this is the floxed allele" },
+  { name: "Conditional Ready", desc: "Flp excision removes stop cassette; leaves LoxP flanked exon; gene function restored; this is the floxed allele" },
   { name: "Conditional Null", desc: "Cre excision removes critical exon; tissue specific or temporal knockout" }
 ];
 
@@ -218,10 +218,10 @@ const relatedModelTypes = [
 // FAQ Data
 const getFaqData = () => [
   {
-    question: "What is the difference between loxP and FRT sites?",
+    question: "What is the difference between LoxP and FRT sites?",
     answer: (
       <>
-        <GlossaryTermLink term="floxed-gene-loxp-site">loxP sites</GlossaryTermLink> are recognized by Cre recombinase; FRT sites are recognized by <GlossaryTermLink term="flp-frt-system">Flp recombinase</GlossaryTermLink>. Both are 34 base pair sequences that enable DNA <GlossaryTermLink term="inversion-vs-excision">excision</GlossaryTermLink> when two sites flank a DNA segment.
+        <GlossaryTermLink term="floxed-gene-loxp-site">LoxP sites</GlossaryTermLink> are recognized by Cre recombinase; FRT sites are recognized by <GlossaryTermLink term="flp-frt-system">Flp recombinase</GlossaryTermLink>. Both are 34 base pair sequences that enable DNA <GlossaryTermLink term="inversion-vs-excision">excision</GlossaryTermLink> when two sites flank a DNA segment.
       </>
     )
   },
@@ -237,7 +237,7 @@ const getFaqData = () => [
     question: "What is a floxed allele?",
     answer: (
       <>
-        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed allele</GlossaryTermLink> has loxP sites flanking a critical exon. The gene functions normally until exposed to Cre recombinase, which excises the DNA between loxP sites and eliminates gene function. Floxed alleles are the foundation of <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> strategies.
+        A <GlossaryTermLink term="floxed-gene-loxp-site">floxed allele</GlossaryTermLink> has LoxP sites flanking a critical exon. The gene functions normally until exposed to Cre recombinase, which excises the DNA between LoxP sites and eliminates gene function. Floxed alleles are the foundation of <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> strategies.
       </>
     )
   },
@@ -448,9 +448,9 @@ export default function CreLoxSystemPage() {
                   figureId="fig-cre-lox-001"
                   aspectRatio="4:3"
                   title="Cre-Lox Recombination Mechanism"
-                  caption="Fig. 1: Cre recombinase recognizes 34bp loxP sites and catalyzes excision of flanked DNA sequences, leaving a single loxP site."
+                  caption="Fig. 1: Cre recombinase recognizes 34bp LoxP sites and catalyzes excision of flanked DNA sequences, leaving a single LoxP site."
                   variant="hero"
-                  altText="Diagram illustrating Cre-lox recombination mechanism showing DNA excision between loxP sites"
+                  altText="Diagram illustrating Cre-lox recombination mechanism showing DNA excision between LoxP sites"
                 />
               </div>
             </div>
@@ -543,7 +543,7 @@ export default function CreLoxSystemPage() {
               Recombination Outcomes
             </h3>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
-              The relative orientation of loxP sites determines the recombination outcome:
+              The relative orientation of LoxP sites determines the recombination outcome:
             </p>
             
             <div className="animate-in" style={{ overflowX: 'auto', marginBottom: '30px' }}>
@@ -636,7 +636,7 @@ export default function CreLoxSystemPage() {
                   Positioning Considerations
                 </h3>
                 <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>
-                  Proper loxP site placement is essential for conditional allele function:
+                  Proper LoxP site placement is essential for conditional allele function:
                 </p>
                 {loxpPositioning.map((item, index) => (
                   <div 
@@ -660,7 +660,7 @@ export default function CreLoxSystemPage() {
                   Exon Selection Criteria
                 </h3>
                 <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>
-                  The exon or exons flanked by loxP sites must meet specific criteria:
+                  The exon or exons flanked by LoxP sites must meet specific criteria:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {exonCriteria.map((criterion, index) => (
@@ -1002,7 +1002,7 @@ export default function CreLoxSystemPage() {
               Start Your Cre Lox Project
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your conditional knockout requirements and recommend optimal loxP site positioning and Cre driver selection for your research goals. Initial consultation is provided at no charge.
+              Our scientific consultants are ready to discuss your conditional knockout requirements and recommend optimal LoxP site positioning and Cre driver selection for your research goals. Initial consultation is provided at no charge.
             </p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link 
@@ -1159,7 +1159,7 @@ export default function CreLoxSystemPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Cre lox system for conditional gene targeting in mice. loxP site design, Cre recombinase drivers, and floxed allele generation. 2,500+ projects since 1998.",
+            "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,500+ projects since 1998.",
             "serviceType": "Conditional Gene Targeting Technology"
           })
         }}

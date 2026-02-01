@@ -23,13 +23,13 @@ With hundreds of our conditional knockout models published, our experts will eva
 
 ## Traditional Conditional Knockouts
 
-The schematic below illustrates the targeting strategy of a conditional knockout mouse model in which exon 2 was flanked with loxP sites, and the Neo cassette was introduced into the intron downstream of exon 2. Upon FLP and Cre recombination, exon 2 is eliminated, and a loxP/FRT footprint remains.
+The schematic below illustrates the targeting strategy of a conditional knockout mouse model in which exon 2 was flanked with LoxP sites, and the Neo cassette was introduced into the intron downstream of exon 2. Upon FLP and Cre recombination, exon 2 is eliminated, and a LoxP/FRT footprint remains.
 
 The deletion of exon 2 results in a frame shift and early stop codons. The mRNA produced from this disrupted gene is targeted by the nonsense-mediated decay pathway, generally resulting in no protein being produced.
 
 ## General Strategy Considerations
 
-A specific target sequence within a gene of interest is flanked by loxP sites to facilitate Cre recombinase-mediated excision, for tissue specific or temporally controlled gene inactivation. The following general considerations apply for conditional knockout mouse models and are evaluated by our experts for each conditional knockout model generated at ingenious.
+A specific target sequence within a gene of interest is flanked by LoxP sites to facilitate Cre recombinase-mediated excision, for tissue specific or temporally controlled gene inactivation. The following general considerations apply for conditional knockout mouse models and are evaluated by our experts for each conditional knockout model generated at ingenious.
 
 ### Preservation of wildtype expression before Cre recombination
 

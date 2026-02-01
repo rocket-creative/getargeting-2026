@@ -32,7 +32,7 @@ const statsData = [
 // FAQ Data
 const faqData = [
   { question: "How is GFP knocked into endogenous genes?", answer: "GFP is inserted at the translational start site (ATG) or fused to the C-terminus of the target gene, typically replacing the stop codon. The GFP coding sequence is inserted in-frame to create a fusion protein. Alternatively, GFP can be inserted after an internal ribosome entry site (IRES) for bicistronic expression." },
-  { question: "Can GFP knockins be conditional?", answer: "Yes. Conditional GFP knockins can use loxP-flanked stop cassettes that prevent GFP expression until Cre-mediated recombination removes the stop. This enables tissue specific or temporal control of GFP expression when combined with appropriate Cre driver lines (tissue specific Cre or inducible CreER)." },
+  { question: "Can GFP knockins be conditional?", answer: "Yes. Conditional GFP knockins can use LoxP-flanked stop cassettes that prevent GFP expression until Cre-mediated recombination removes the stop. This enables tissue specific or temporal control of GFP expression when combined with appropriate Cre driver lines (tissue specific Cre or inducible CreER)." },
   { question: "What is the difference between GFP knockin and GFP transgenic?", answer: "GFP knockin replaces or fuses to endogenous gene sequences, ensuring GFP expression mirrors endogenous gene expression patterns (temporal, spatial, and quantitative). GFP transgenic uses random integration with exogenous promoters, which may not accurately reflect endogenous expression and can be subject to position effects." }
 ];
 

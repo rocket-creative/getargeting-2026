@@ -44,7 +44,7 @@ By combining these technologies, we generate precisely targeted, custom transgen
 Our Rapid-Rosa26™ Targeting models can be custom designed with the following traditional and novel expression strategies:
 
 - Incorporate our proprietary F.A.S.T.™ cassette, enabling inducible/reversible expression control of your cDNA
-- loxP flanked, removable stop cassette for tissue specific expression
+- LoxP flanked, removable stop cassette for tissue specific expression
 - Tissue specific promoters to control expression
 - Reporter or tag cassettes for co-expression with your cDNA
 - Tetracycline system expression cassettes for use with inducible models

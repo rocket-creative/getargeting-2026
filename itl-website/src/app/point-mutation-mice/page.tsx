@@ -121,7 +121,7 @@ const diseaseMutationsTable = [
 // Allele Design Options
 const alleleDesignOptions = [
   { name: "Simple knockin", desc: "Point mutation only" },
-  { name: "Conditional point mutation", desc: "loxP flanked wildtype exon enables Cre mediated conversion to mutant" },
+  { name: "Conditional point mutation", desc: "LoxP flanked wildtype exon enables Cre mediated conversion to mutant" },
   { name: "Inducible point mutation", desc: "Combine with inducible Cre for temporal control" },
   { name: "Dual reporter", desc: "Fluorescent markers distinguish wildtype from mutant expressing cells" }
 ];
@@ -230,7 +230,7 @@ const faqData = [
   },
   {
     question: "Can point mutations be made conditional?",
-    answer: "Yes. Point mutations can be designed as conditional alleles using loxP-flanked wildtype exons. Cre-mediated recombination converts wildtype to mutant sequence, enabling temporal or tissue-specific control over mutation expression. This is valuable for modeling mutations that would be lethal if expressed globally from conception."
+    answer: "Yes. Point mutations can be designed as conditional alleles using LoxP-flanked wildtype exons. Cre-mediated recombination converts wildtype to mutant sequence, enabling temporal or tissue-specific control over mutation expression. This is valuable for modeling mutations that would be lethal if expressed globally from conception."
   },
   {
     question: "What is the difference between homozygous and heterozygous point mutation models?",

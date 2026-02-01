@@ -40,7 +40,6 @@ const faqData = [
 // Related Links
 const relatedLinks = [
   { title: "Conditional Vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "Mouse Model Budgeting Guide", href: "/mouse-model-budgeting-guide" },
   { title: "Bench To Breeding Guide", href: "/bench-to-breeding-guide" },
   { title: "Cre Lox System", href: "/cre-lox-system" },

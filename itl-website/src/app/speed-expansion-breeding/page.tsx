@@ -97,7 +97,6 @@ const relatedServices = [
 ];
 
 const relatedResources = [
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" },
   { title: "FAQs", href: "/faqs" }
 ];
 

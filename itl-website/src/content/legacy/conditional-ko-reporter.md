@@ -27,7 +27,7 @@ Adding a reporter gene to a conditional knockout model enables you to visualize 
 
 ## Conditional Knockout with Inverted Reporter
 
-Cre recombinase is most commonly used to conditionally delete sequences flanked by loxP sites. However, by using atypical sequences and orientation for the loxP sites it is possible to invert the flanked sequence rather than delete it.
+Cre recombinase is most commonly used to conditionally delete sequences flanked by LoxP sites. However, by using atypical sequences and orientation for the LoxP sites it is possible to invert the flanked sequence rather than delete it.
 
 Taking advantage of this, a reporter gene can be placed next to a targeted exon, with the reporter sequence oriented in the opposite direction to the target gene. Recombinase activity inverts the region, effectively deleting the target exon by flipping its orientation. At the same time the reporter is placed in frame with the coding sequence, triggering its expression.
 
@@ -53,7 +53,7 @@ An even more sophisticated approach is to have one reporter gene expressed toget
 
 This strategy accomplishes the following:
 - The GFP is expressed along with the gene of interest from the gene's endogenous promoter
-- Due to the arrangement of the loxP sites, Cre-mediated recombination deletes major exons of the target gene and the GFP cassette
+- Due to the arrangement of the LoxP sites, Cre-mediated recombination deletes major exons of the target gene and the GFP cassette
 - Following Cre-mediated recombination, the RFP is expressed from the endogenous promoter of the target gene, for distinguishing the null gene allele from the floxed gene allele
 
 ## Why Add a Reporter?

@@ -33,7 +33,7 @@ This rules out efficient production of many popular model types such as conditio
 
 **Some examples:**
 - Any size cDNA insertion vectors
-- loxP (conditional KO) vectors with recombinase sites spaced beyond 1 Kb apart
+- LoxP (conditional KO) vectors with recombinase sites spaced beyond 1 Kb apart
 - Reporter gene knockin vectors
 - Combinations of any of the above
 - Or contact us to discuss your insertion need

@@ -33,22 +33,22 @@ ingenious provides the next step in gene knockout technology, our patented TruVi
 
 ### Traditional Conditional Knockout Challenges
 
-Traditional conditional knockout mouse model systems work by flanking an essential target region of a gene with loxP recombination sites. The respective loxP mouse line is then mated with a Cre recombinase expressing line to induce a recombination event, deleting the region between the loxP sites.
+Traditional conditional knockout mouse model systems work by flanking an essential target region of a gene with LoxP recombination sites. The respective LoxP mouse line is then mated with a Cre recombinase expressing line to induce a recombination event, deleting the region between the LoxP sites.
 
-Depending on the target cells or tissues, verifying that the recombination event has occurred, and has occurred where desired, can be challenging. Common solutions such as adding/testing conditional reporter alleles/lines for indicating Cre/loxP recombination events requires additional breeding, and does not necessarily provide a reference point at the very same allele to show that the desired genetic manipulation is taking place.
+Depending on the target cells or tissues, verifying that the recombination event has occurred, and has occurred where desired, can be challenging. Common solutions such as adding/testing conditional reporter alleles/lines for indicating Cre/LoxP recombination events requires additional breeding, and does not necessarily provide a reference point at the very same allele to show that the desired genetic manipulation is taking place.
 
 ## System Overview
 
-- Target region is flanked by loxP recombination sites and partial GFP segments, including a CAG promoter on the antisense strand
+- Target region is flanked by LoxP recombination sites and partial GFP segments, including a CAG promoter on the antisense strand
 - Model is designed to have a wild type expression profile of the target gene with no GFP production prior to the introduction of Cre recombinase
 - After the Cre-mediated recombination event, gene expression is disrupted and GFP expression commences under the CAG promoter allowing for positive, truview identification of targeted cells or tissues
 - The use of the split GFP cassette under CAG promoter control alleviates concerns about leakiness and weak visual signals
 
 ## Introducing ingenious' TruView Conditional Knockout™ System
 
-To address the critical need of researchers to verify the loxP-mediated recombination of their conditional knockout models, and to do so in a reliable manner without increasing timelines, ingenious has developed the TruView Conditional Knockout™ system.
+To address the critical need of researchers to verify the LoxP-mediated recombination of their conditional knockout models, and to do so in a reliable manner without increasing timelines, ingenious has developed the TruView Conditional Knockout™ system.
 
-Utilizing our proprietary split cassette technology, ingenious is able to include partial sequence segments of GFP in the antisense direction in relation to the loxP sites that flank the target region.
+Utilizing our proprietary split cassette technology, ingenious is able to include partial sequence segments of GFP in the antisense direction in relation to the LoxP sites that flank the target region.
 
 ### Design Features
 
@@ -71,7 +71,7 @@ When using tissue specific Cre recombinase, confirming the recombination event c
 Endogenous promoters may be weak or limited in their expression making them unsuitable for reporter production. Placing the GFP under the CAG promoter will offer high expression levels for detection.
 
 ### GFP expression is driven by a separate promoter, from the opposite strand
-Generally, the further the distal loxP site is from the selection cassette the more difficult it becomes to retain during gene targeting. The split-GFP-loxP cassette allows for increased sequence retention and the targeting of larger regions. In our hands, a target distance between loxP sites of virtually any size is possible.
+Generally, the further the distal LoxP site is from the selection cassette the more difficult it becomes to retain during gene targeting. The split-GFP-LoxP cassette allows for increased sequence retention and the targeting of larger regions. In our hands, a target distance between LoxP sites of virtually any size is possible.
 
 ### Using TruView allows for targeting larger regions, as well as less breeding work
 Introducing a conditional reporter line to your conditional knockout and Cre recombinase lines can add 2 or more generations of breeding to your project. ingenious' TruView Conditional Knockout™ system eliminates the need for additional reporter mouse lines.

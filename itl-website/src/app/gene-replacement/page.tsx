@@ -164,7 +164,6 @@ const relatedLinksData = {
   ],
   resources: [
     { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
-    { href: "/model-generation-timeline", label: "Model Generation Timeline" },
     { href: "/target-validation-mouse-models", label: "Target Validation Mouse Models" },
     { href: "/antibody-therapeutics-mouse-models", label: "Antibody Therapeutics Mouse Models" }
   ]

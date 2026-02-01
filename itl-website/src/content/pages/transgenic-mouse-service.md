@@ -157,4 +157,4 @@ BAC (bacterial artificial chromosome) transgenesis uses large genomic fragments 
 
 **Can transgenic models be used for conditional expression?**
 
-Yes. Transgenic models can incorporate conditional expression cassettes including loxP-stop-loxP for Cre-dependent expression, TRE-driven systems for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional reporter or Cre expression.
+Yes. Transgenic models can incorporate conditional expression cassettes including LoxP-stop-LoxP for Cre-dependent expression, TRE-driven systems for doxycycline control, or other inducible systems. ROSA26-targeted transgenics are commonly used for conditional reporter or Cre expression.

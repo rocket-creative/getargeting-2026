@@ -302,7 +302,7 @@ ES cell based targeting enables verification of neuroscience alleles before mous
 - Confirm correct allele structure
 - Verify disease mutation sequences
 - Test reporter expression where applicable
-- Ensure loxP sites do not disrupt gene function
+- Ensure LoxP sites do not disrupt gene function
 
 ### Strain Background
 

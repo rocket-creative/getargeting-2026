@@ -108,7 +108,7 @@ const relatedTechnologies = [
 const faqData = [
   {
     question: "What is the difference between tamoxifen inducible (CreER) and doxycycline inducible (Tet) systems?",
-    answer: "Tamoxifen inducible Cre (CreER) enables permanent genetic changes (gene deletion via loxP recombination) with temporal control. Doxycycline inducible (Tet) enables reversible transgene expression control. CreER provides permanent effects after induction; Tet provides reversible on/off control for expression studies."
+    answer: "Tamoxifen inducible Cre (CreER) enables permanent genetic changes (gene deletion via LoxP recombination) with temporal control. Doxycycline inducible (Tet) enables reversible transgene expression control. CreER provides permanent effects after induction; Tet provides reversible on/off control for expression studies."
   },
   {
     question: "When should I use tamoxifen inducible vs doxycycline inducible?",

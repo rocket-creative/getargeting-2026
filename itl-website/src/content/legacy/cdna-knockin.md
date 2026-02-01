@@ -17,7 +17,7 @@ By leveraging the regulatory elements of the endogenous gene, such as the promot
 
 One of the key advantages of ingenious targeting laboratory's cDNA knockin method is its versatility. Researchers have the option to express the cDNA sequence in place of the target mouse gene or alongside it, depending on the experimental requirements.
 
-Additionally, ingenious offers the possibility to design conditional and reversible cDNA knockin models by incorporating loxP sites, providing even greater control over the expression of the inserted sequence.
+Additionally, ingenious offers the possibility to design conditional and reversible cDNA knockin models by incorporating LoxP sites, providing even greater control over the expression of the inserted sequence.
 
 ## What Researchers Say
 
@@ -31,7 +31,7 @@ Expressing a specific sequence in place of a target gene, or in addition to that
 
 This strategy allows expression of human sequence in place of mouse, tissue-specific expression of Cre or a reporter gene, and more.
 
-We can also make your cDNA expression conditional by including loxP sites in the design. Contact us to discuss available options.
+We can also make your cDNA expression conditional by including LoxP sites in the design. Contact us to discuss available options.
 
 From single point mutations to the most intricate designs ingenious has delivered custom knockin mice again and again for over 20 years. With a complete toolkit of different approaches and an experienced scientific staff, there is no knockin design that is out of reach.
 

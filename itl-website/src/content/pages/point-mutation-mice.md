@@ -193,7 +193,7 @@ Mutations that abolish enzymatic activity while preserving protein expression en
 Point mutation alleles can be designed with varying complexity:
 
 - Simple knockin:** Point mutation only
-- Conditional point mutation:** loxP flanked wildtype exon enables Cre mediated conversion to mutant. 
+- Conditional point mutation:** LoxP flanked wildtype exon enables Cre mediated conversion to mutant. 
 - Inducible point mutation:** Combine with inducible Cre for temporal control
 - Dual reporter:** Fluorescent markers distinguish wildtype from mutant expressing cells
 
@@ -288,7 +288,7 @@ Any single or multiple nucleotide change can be modeled, including disease-assoc
 
 **Can point mutations be made conditional?**
 
-Yes. Point mutations can be designed as conditional alleles using loxP-flanked wildtype exons. Cre-mediated recombination converts wildtype to mutant sequence, enabling temporal or tissue-specific control over mutation expression. This is valuable for modeling mutations that would be lethal if expressed globally from conception.
+Yes. Point mutations can be designed as conditional alleles using LoxP-flanked wildtype exons. Cre-mediated recombination converts wildtype to mutant sequence, enabling temporal or tissue-specific control over mutation expression. This is valuable for modeling mutations that would be lethal if expressed globally from conception.
 
 **What is the difference between homozygous and heterozygous point mutation models?**
 

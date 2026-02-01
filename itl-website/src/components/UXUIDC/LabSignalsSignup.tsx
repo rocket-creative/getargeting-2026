@@ -111,7 +111,7 @@ export function getRelatedLabSignalsArticles(currentPath: string) {
 export default function LabSignalsSignup({
   variant = 'banner',
   title = "Stay Ahead with Lab Signals",
-  description = "Your biweekly source for life science research insights. Expert analysis from PhD-level scientists, actionable insights for your projects.",
+  description = "Expert research insights delivered biweekly. Written by PhD scientists, designed for researchers who need cutting-edge knowledge to advance their projects.",
   showArticles = false,
   relatedArticles = []
 }: LabSignalsSignupProps) {
@@ -136,7 +136,7 @@ export default function LabSignalsSignup({
           </h3>
         </div>
         <p style={{ fontSize: '.85rem', lineHeight: 1.6, marginBottom: '16px', opacity: 0.9 }}>
-          Biweekly insights from our PhD scientists. Subscribe for exclusive research updates.
+          Expert insights from PhD scientists. Latest research, breakthroughs, and practical guidance delivered biweekly.
         </p>
         <Link
           href="/lab-signals"
@@ -268,7 +268,7 @@ export default function LabSignalsSignup({
               Lab Signals Newsletter
             </h3>
             <p style={{ fontSize: '.85rem', color: '#666', margin: '4px 0 0 0' }}>
-              Biweekly insights from PhD scientists
+              Expert research insights from PhD scientists
             </p>
           </div>
         </div>

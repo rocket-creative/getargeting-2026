@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Cre Lox System',
-  description: 'Cre loxP recombination system for conditional gene targeting. Tissue specific and inducible knockouts.',
+  description: 'Cre LoxP recombination system for conditional gene targeting. Tissue specific and inducible knockouts.',
   path: '/cre-lox-system',
 });
 

@@ -42,7 +42,6 @@ const relatedLinks = [
   { title: "Heart Failure Mouse Models", href: "/heart-failure-mouse-models" },
   { title: "Hypertension Mouse Models", href: "/hypertension-mouse-models" },
   { title: "Therapeutic Areas", href: "/therapeutic-areas" },
-  { title: "Model Generation Timeline", href: "/model-generation-timeline" }
 ];
 
 export default function CardiacFibrosisMicePage() {
