@@ -366,7 +366,21 @@ export default function TechnologiesPage() {
             </div>
 
             <div className="animate-in mt-6">
-                <span>Learn about Derivative Alleles</span>
+              <Link
+                href="/cre-lox-system"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: '#008080',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  fontSize: '.85rem',
+                  fontWeight: 500,
+                  textDecoration: 'none'
+                }}>
+                <span>Learn about Cre-LoxP Systems</span>
                 <IconChevronRight size={14} color="white" />
               </Link>
             </div>

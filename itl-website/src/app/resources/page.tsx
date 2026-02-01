@@ -419,19 +419,22 @@ export default function ResourcesPage() {
                 Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)'
-              }}>
-                View Case Studies
+              <Link
+                href="/resources"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'transparent',
+                  color: '#ffffff',
+                  padding: '12px 24px',
+                  borderRadius: '6px',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  border: '2px solid rgba(255,255,255,0.3)'
+                }}>
+                View All Resources
               </Link>
             </div>
           </div>

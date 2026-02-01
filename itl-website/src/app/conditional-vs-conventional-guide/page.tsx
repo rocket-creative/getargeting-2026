@@ -789,18 +789,21 @@ export default function ConditionalVsConventionalGuidePage() {
                   </div>
                 </div>
                 <div style={{ marginTop: '24px' }}>
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    background: '#008080',
-                    color: '#ffffff',
-                    padding: '12px 24px',
-                    borderRadius: '6px',
-                    fontSize: '.9rem',
-                    fontWeight: 600,
-                    textDecoration: 'none'
-                  }}>
-                    Learn About Derivative Alleles
+                  <Link
+                    href="/cre-lox-system"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      background: '#008080',
+                      color: '#ffffff',
+                      padding: '12px 24px',
+                      borderRadius: '6px',
+                      fontSize: '.9rem',
+                      fontWeight: 600,
+                      textDecoration: 'none'
+                    }}>
+                    Learn More About Conditional Systems
                     <IconChevronRight size={16} color="#ffffff" />
                   </Link>
                 </div>
