@@ -76,9 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/doxycycline-inducible-systems',
     '/es-cell-gene-targeting',
     '/pre-germline-characterization',
-    '/derivative-alleles',
     '/tm1a-allele-design',
-    '/selection-cassette-design',
     '/critical-exon-selection',
 
     // Strain Backgrounds (6)

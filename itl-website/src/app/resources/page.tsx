@@ -101,27 +101,22 @@ const caseStudiesData = {
   description: "Real project examples demonstrate how ingenious targeting laboratory approaches complex targeting challenges and delivers research ready mouse models:",
   studies: [
     {
-      href: "/case-studies/embryonic-lethal-conditional",
       title: "Embryonic Lethal Conditional",
       description: "How conditional allele design enabled study of a gene essential for embryonic development without disrupting normal development."
     },
     {
-      href: "/case-studies/immune-checkpoint-humanization",
       title: "Immune Checkpoint Humanization",
       description: "PD1 humanization project enabling preclinical testing of checkpoint inhibitor therapeutics."
     },
     {
-      href: "/case-studies/lineage-tracing-reporter",
       title: "Lineage Tracing Reporter",
       description: "tdTomato reporter knockin enabling fate mapping of a rare cell population in metabolic disease research."
     },
     {
-      href: "/case-studies/bac-integration",
       title: "BAC Integration",
       description: "Complex targeting project integrating human genomic region for humanization of a multi gene cluster."
     }
   ],
-  viewAllHref: "/case-studies"
 };
 
 // Technical Resources Data
@@ -134,8 +129,6 @@ const technicalResourcesData = {
       links: [
         { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
         { href: "/cre-lox-system", label: "Cre-Lox System" },
-        { href: "/derivative-alleles", label: "Derivative Alleles" },
-        { href: "/selection-cassette-design", label: "Selection Cassette Design" },
         { href: "/safe-harbor-locus", label: "Safe Harbor Locus" }
       ]
     },
@@ -426,7 +419,6 @@ export default function ResourcesPage() {
                 Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/case-studies" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',

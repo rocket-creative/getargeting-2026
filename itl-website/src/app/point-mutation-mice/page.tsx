@@ -215,7 +215,6 @@ const diseaseApplications = [
 const relatedTechnologies = [
   { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" }
 ];
 
 // FAQ Data

@@ -40,7 +40,6 @@ const faqData = [
 const relatedLinks = [
   { title: "Mouse Model Services", href: "/mouse-model-services" },
   { title: "Technologies", href: "/technologies" },
-  { title: "Case Studies", href: "/case-studies" },
   { title: "Testimonials", href: "/testimonials" },
   { title: "Current Openings", href: "/current-openings" }
 ];

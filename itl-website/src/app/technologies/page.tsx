@@ -366,7 +366,6 @@ export default function TechnologiesPage() {
             </div>
 
             <div className="animate-in mt-6">
-              <Link href="/derivative-alleles" className="inline-flex items-center gap-2 transition-colors duration-300" style={{ color: 'white', fontSize: '.85rem', fontWeight: 500, textDecoration: 'underline' }}>
                 <span>Learn about Derivative Alleles</span>
                 <IconChevronRight size={14} color="white" />
               </Link>

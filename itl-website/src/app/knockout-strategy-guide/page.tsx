@@ -43,7 +43,6 @@ const relatedLinks = [
   { title: "Mouse Model Budgeting Guide", href: "/mouse-model-budgeting-guide" },
   { title: "Bench To Breeding Guide", href: "/bench-to-breeding-guide" },
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "Derivative Alleles", href: "/derivative-alleles" },
   { title: "Es Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" }
 ];

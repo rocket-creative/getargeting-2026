@@ -42,7 +42,6 @@ const relatedLinks = [
   { title: "About Ingenious", href: "/about-ingenious" },
   { title: "Testimonials", href: "/testimonials" },
   { title: "Publications", href: "/publications" },
-  { title: "Case Studies", href: "/case-studies" },
   { title: "Technologies", href: "/technologies" }
 ];
 

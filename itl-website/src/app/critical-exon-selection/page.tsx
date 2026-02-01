@@ -131,7 +131,6 @@ const testimonials = [
 // Related Links
 const relatedTechnologies = [
   { title: "tm1a Allele Design", href: "/tm1a-allele-design" },
-  { title: "Selection Cassette Design", href: "/selection-cassette-design" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" }
 ];

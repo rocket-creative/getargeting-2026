@@ -211,7 +211,6 @@ const relatedLinksData = {
   ],
   technologies: [
     { href: "/cre-lox-system", label: "Cre Lox System" },
-    { href: "/derivative-alleles", label: "Derivative Alleles" },
     { href: "/tissue-specific-cre-lines", label: "Tissue Specific Cre Lines" },
     { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" }
   ]
@@ -790,7 +789,6 @@ export default function ConditionalVsConventionalGuidePage() {
                   </div>
                 </div>
                 <div style={{ marginTop: '24px' }}>
-                  <Link href="/derivative-alleles" style={{
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '8px',
