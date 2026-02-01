@@ -147,6 +147,7 @@ const approachData = {
 const workflowData = {
   title: 'Conceptual Workflow',
   subtitle: 'Our systematic approach ensures consistent results from project initiation through delivery of study-ready cohorts:',
+  ctaHref: '/pricing-overview',
   steps: [
     {
       number: 1,

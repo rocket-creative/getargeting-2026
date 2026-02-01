@@ -79,8 +79,9 @@ const planningGuidesData = {
   title: "Planning Guides",
   guides: [
     {
-      title: "Model Generation Timeline",
-      description: "Detailed breakdown of project phases from targeting vector construction through germline transmission. Understand what determines timeline and options for acceleration."
+      href: "/pricing-overview",
+      title: "Project Planning Overview",
+      description: "Comprehensive guide to mouse model generation including timeline considerations, budget planning, and project phases from design through delivery."
     },
     {
       href: "/mouse-model-budgeting-guide",
@@ -946,13 +947,12 @@ export default function ResourcesPage() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
               {caseStudiesData.studies.map((study, index) => (
-                <Link key={index} href={study.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
+                <div key={index} className="animate-in group transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '28px',
-                  borderLeft: '4px solid #00d4d4',
-                  textDecoration: 'none'
+                  borderLeft: '4px solid #00d4d4'
                 }}>
                   <h3 style={{
                     fontFamily: 'Poppins, sans-serif',
@@ -979,10 +979,10 @@ export default function ResourcesPage() {
                     fontWeight: 600,
                     color: '#008080'
                   }}>
-                    Read Case Study
+                    Example Project
                     <IconChevronRight size={14} color="#008080" />
                   </span>
-                </Link>
+                </div>
               ))}
             </div>
             <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
