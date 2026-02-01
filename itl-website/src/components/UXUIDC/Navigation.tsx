@@ -289,7 +289,16 @@ export function UXUIDCNavigation() {
                   </Link>
 
                   {item.children && activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 w-56 bg-white shadow-xl py-2 mt-0 border border-[#e0e0e0] z-50 animate-fadeIn">
+                    <div 
+                      className={`absolute top-full left-0 bg-white shadow-xl py-2 mt-0 border border-[#e0e0e0] z-50 animate-fadeIn ${
+                        item.children.length > 10 ? 'w-[480px] max-h-[70vh] overflow-y-auto' : 'w-56'
+                      }`}
+                      style={{
+                        display: item.children.length > 10 ? 'grid' : 'block',
+                        gridTemplateColumns: item.children.length > 10 ? 'repeat(2, 1fr)' : undefined,
+                        gap: item.children.length > 10 ? '0' : undefined
+                      }}
+                    >
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
