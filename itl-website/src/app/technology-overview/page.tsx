@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA, IconFlask, IconSettings } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconSettings } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Technology Platform",
   title: "Gene Targeting Technology Overview",
-  intro: "Since 1998, Ingenious Targeting Laboratory has advanced gene targeting technologies through more than 2,500 custom mouse model projects. Our technology platform combines proven ES cell gene targeting with sophisticated conditional systems, inducible expression controls, and proprietary innovations to deliver mouse models with verified genetic modifications.",
+  intro: "Since 1998, ingenious targeting laboratory has advanced gene targeting technologies through more than 2,500 custom mouse model projects. Our technology platform combines proven ES cell gene targeting with sophisticated conditional systems, inducible expression controls, and proprietary innovations to deliver mouse models with verified genetic modifications.",
   description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. This overview introduces the core technologies that enable precise genetic modification in mice."
 };
 
@@ -178,8 +178,6 @@ const safeHarborLinks = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
@@ -720,7 +718,7 @@ export default function TechnologyOverviewPage() {
             "name": "Gene Targeting Technology Overview",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Comprehensive gene targeting technology platform. ES cell targeting, Cre lox, FLP FRT, inducible systems, and proprietary innovations since 1998.",
             "serviceType": "Gene Targeting Technology"

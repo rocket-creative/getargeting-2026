@@ -12,7 +12,7 @@ interface AIAccessContextType {
   queriesRemaining: number;
   shouldPromptConsult: boolean;
   hasShownConsultPrompt: boolean;
-  useQuery: () => boolean;
+  consumeQuery: () => boolean;
   dismissConsultPrompt: () => void;
   showConsultModal: boolean;
   setShowConsultModal: (show: boolean) => void;
@@ -24,31 +24,37 @@ const TOTAL_FREE_QUERIES = 15; // Generous limit
 const CONSULT_PROMPT_AFTER = 3; // Soft prompt after 3 queries
 const STORAGE_KEY = 'itl_breeding_ai_usage';
 
-export function AIAccessProvider({ children }: { children: ReactNode }) {
-  const [queriesUsed, setQueriesUsed] = useState(0);
-  const [hasShownConsultPrompt, setHasShownConsultPrompt] = useState(false);
-  const [showConsultModal, setShowConsultModal] = useState(false);
-
-  // Load usage from storage on mount
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const data = JSON.parse(stored);
-        // Reset if it's been more than 24 hours
-        const lastUsed = new Date(data.lastUsed);
-        const now = new Date();
-        const hoursSinceLastUse = (now.getTime() - lastUsed.getTime()) / (1000 * 60 * 60);
-        
-        if (hoursSinceLastUse < 24) {
-          setQueriesUsed(data.queriesUsed || 0);
-          setHasShownConsultPrompt(data.hasShownConsultPrompt || false);
-        }
+// Helper to load initial state from localStorage
+function getInitialState(): { queriesUsed: number; hasShownConsultPrompt: boolean } {
+  if (typeof window === 'undefined') {
+    return { queriesUsed: 0, hasShownConsultPrompt: false };
+  }
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const data = JSON.parse(stored);
+      const lastUsed = new Date(data.lastUsed);
+      const now = new Date();
+      const hoursSinceLastUse = (now.getTime() - lastUsed.getTime()) / (1000 * 60 * 60);
+      
+      if (hoursSinceLastUse < 24) {
+        return {
+          queriesUsed: data.queriesUsed || 0,
+          hasShownConsultPrompt: data.hasShownConsultPrompt || false,
+        };
       }
-    } catch {
-      // localStorage might not be available
     }
-  }, []);
+  } catch {
+    // localStorage might not be available
+  }
+  return { queriesUsed: 0, hasShownConsultPrompt: false };
+}
+
+export function AIAccessProvider({ children }: { children: ReactNode }) {
+  // Use lazy initialization to load from localStorage
+  const [queriesUsed, setQueriesUsed] = useState(() => getInitialState().queriesUsed);
+  const [hasShownConsultPrompt, setHasShownConsultPrompt] = useState(() => getInitialState().hasShownConsultPrompt);
+  const [showConsultModal, setShowConsultModal] = useState(false);
 
   // Save usage changes
   useEffect(() => {
@@ -66,7 +72,7 @@ export function AIAccessProvider({ children }: { children: ReactNode }) {
   const queriesRemaining = Math.max(0, TOTAL_FREE_QUERIES - queriesUsed);
   const shouldPromptConsult = queriesUsed >= CONSULT_PROMPT_AFTER && !hasShownConsultPrompt;
 
-  const useQuery = (): boolean => {
+  const consumeQuery = (): boolean => {
     // Check if should show consultation prompt (soft, dismissible)
     if (shouldPromptConsult) {
       setShowConsultModal(true);
@@ -96,7 +102,7 @@ export function AIAccessProvider({ children }: { children: ReactNode }) {
         queriesRemaining,
         shouldPromptConsult,
         hasShownConsultPrompt,
-        useQuery,
+        consumeQuery,
         dismissConsultPrompt,
         showConsultModal,
         setShowConsultModal,

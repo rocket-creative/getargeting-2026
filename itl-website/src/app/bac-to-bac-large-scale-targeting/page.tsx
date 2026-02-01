@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconChevronRight } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Large Scale Targeting",
   title: "BAC Targeting",
-  intro: "Since 1998, Ingenious Targeting Laboratory has completed over 2,500 gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
   description: "BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions."
 };
 
@@ -130,9 +130,7 @@ const publicationsData = {
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const fimmelTestimonial = getTestimonialById('fimmel-loyola')!;
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonialsData = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
@@ -226,7 +224,7 @@ export default function BACTargetingPage() {
             "description": "BAC to BAC large scale targeting for complex genomic modifications. Handle large DNA fragments and complex targeting projects.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Mouse Model Generation",

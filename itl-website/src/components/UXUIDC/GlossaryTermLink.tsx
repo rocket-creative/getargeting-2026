@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
 import Link from 'next/link';
-import { glossaryTerms, getTermBySlug, type GlossaryTerm } from '@/data/glossaryTerms';
+import { glossaryTerms, getTermBySlug } from '@/data/glossaryTerms';
 
 // Brand colors
 const BRAND = {
@@ -47,27 +47,27 @@ export function GlossaryTermLink({
   // Get the term data
   const termData = getTermBySlug(term);
 
+  // Determine tooltip position based on viewport
+  // Using useLayoutEffect for synchronous DOM measurements before paint
+  // This is a valid pattern: measuring DOM after render requires an effect
+  useLayoutEffect(() => {
+    if (!termData || !isHovered || !linkRef.current) return;
+    
+    const rect = linkRef.current.getBoundingClientRect();
+    const spaceAbove = rect.top;
+    const spaceBelow = window.innerHeight - rect.bottom;
+    
+    // If less than 200px above, show tooltip below
+    const newPosition = (spaceAbove < 200 && spaceBelow > spaceAbove) ? 'bottom' : 'top';
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Valid: DOM measurement requires effect
+    setTooltipPosition(newPosition);
+  }, [isHovered, termData]);
+
   // If term not found, just render children as plain text
   if (!termData) {
     console.warn(`GlossaryTermLink: Term "${term}" not found in glossary`);
     return <span>{children || term}</span>;
   }
-
-  // Determine tooltip position based on viewport
-  useEffect(() => {
-    if (isHovered && linkRef.current) {
-      const rect = linkRef.current.getBoundingClientRect();
-      const spaceAbove = rect.top;
-      const spaceBelow = window.innerHeight - rect.bottom;
-      
-      // If less than 200px above, show tooltip below
-      if (spaceAbove < 200 && spaceBelow > spaceAbove) {
-        setTooltipPosition('bottom');
-      } else {
-        setTooltipPosition('top');
-      }
-    }
-  }, [isHovered]);
 
   const displayText = children || termData.term;
 
@@ -218,7 +218,6 @@ export function GlossaryHighlight({
   
   // Track which terms we've already highlighted
   const highlightedTerms = new Set<string>();
-  let result = text;
   const replacements: { original: string; slug: string; term: string }[] = [];
 
   // Find terms to highlight (limit to maxHighlights)

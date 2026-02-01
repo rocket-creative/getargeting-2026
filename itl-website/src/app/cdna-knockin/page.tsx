@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconImage, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Complementary DNA Insertion",
   title: "cDNA Knockin Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated hundreds of cDNA knockin mouse models, providing researchers with tools for gene replacement, expression modification, and functional studies where insertion of complete coding sequences is required.",
+  intro: "Since 1998, ingenious targeting laboratory has generated hundreds of cDNA knockin mouse models, providing researchers with tools for gene replacement, expression modification, and functional studies where insertion of complete coding sequences is required.",
   description: "cDNA knockin models enable expression of modified gene products, replacement with orthologs or variants, and insertion of complete coding sequences at endogenous loci for physiologically regulated expression."
 };
 
@@ -782,7 +782,7 @@ export default function CDNAKnockinPage() {
             "name": "cDNA Knockin Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci. Since 1998.",
             "serviceType": "Custom Mouse Model Generation"

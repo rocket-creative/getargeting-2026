@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconSettings, IconChevronRight, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Humanized Gene Models",
   title: "Gene Replacement Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated gene replacement humanized models that substitute mouse genes with their human orthologs. This approach enables preclinical testing of human specific therapeutics and study of human disease mechanisms in physiologically relevant contexts.",
+  intro: "Since 1998, ingenious targeting laboratory has generated gene replacement humanized models that substitute mouse genes with their human orthologs. This approach enables preclinical testing of human specific therapeutics and study of human disease mechanisms in physiologically relevant contexts.",
   description: "Gene replacement humanization maintains expression under endogenous regulatory control, preserving tissue specific and temporal expression patterns while providing human target sequences for drug development and mechanistic research."
 };
 
@@ -91,11 +91,11 @@ const targetingData = {
     {
       title: "Allele Design Considerations",
       description: "Gene replacement allele design must account for sequence differences between mouse and human genes, including gene length, exon number, regulatory element locations, and protein domains.",
-      note: "Ingenious Targeting Laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
+      note: "ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
     },
     {
       title: "Large Fragment Targeting",
-      description: "When the human gene is larger than can be accommodated in standard targeting vectors, Ingenious Targeting Laboratory uses bacterial artificial chromosome (BAC) based approaches or sequential targeting strategies to achieve complete replacement."
+      description: "When the human gene is larger than can be accommodated in standard targeting vectors, ingenious targeting laboratory uses bacterial artificial chromosome (BAC) based approaches or sequential targeting strategies to achieve complete replacement."
     }
   ]
 };
@@ -133,7 +133,7 @@ const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
 // Publications Data
 const publicationsData = {
   title: "Selected Publications",
-  intro: "Humanized models from Ingenious Targeting Laboratory.",
+  intro: "Humanized models from ingenious targeting laboratory.",
   publications: [
     "Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, Pensalfini A, Pawlik M, Malampati S, Whyte L, Basavarajappa BS, Shivakumar S, Bleiwas C, Smiley JF, Mathews PM, Nixon RA. 2025. Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration. J Neurosci 29(45): e2331242025.",
     "Nargis T, Muralidharan C, Enriquez JR, Wang JE, Kaylan K, Chakraborty A, Pratuangtham S, Figatner K, Nelson JB, May SC, Nadler JL, Boxer MB, Maloney, DJ, Tersey SA, Mirmira RG. 2024. 12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice. JCI Insight24(9): e185299",
@@ -229,7 +229,7 @@ export default function GeneReplacementPage() {
             "description": "Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Custom models since 1998.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Mouse Model Generation",

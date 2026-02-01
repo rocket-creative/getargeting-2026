@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Conditional Gene Targeting",
   title: "Tissue Specific Cre Lines",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated and utilized tissue specific Cre driver lines in hundreds of conditional knockout and knockin projects, providing researchers with precise spatial control of gene manipulation in specific cell types and organs.",
+  intro: "Since 1998, ingenious targeting laboratory has generated and utilized tissue specific Cre driver lines in hundreds of conditional knockout and knockin projects, providing researchers with precise spatial control of gene manipulation in specific cell types and organs.",
   description: "Tissue specific Cre lines enable gene deletion or activation restricted to defined cell populations, distinguishing cell autonomous from non cell autonomous gene functions."
 };
 
@@ -27,11 +27,6 @@ const nervousSystemCre = [
   { category: "Pan Neuronal", lines: [{ name: "Nestin Cre", pattern: "Neural progenitors" }, { name: "Synapsin Cre", pattern: "Mature neurons" }, { name: "CamKII Cre", pattern: "Forebrain excitatory neurons" }] },
   { category: "Cell Type Specific", lines: [{ name: "POMC Cre", pattern: "POMC neurons" }, { name: "AgRP Cre", pattern: "AgRP neurons" }, { name: "DAT Cre", pattern: "Dopaminergic neurons" }, { name: "PV Cre", pattern: "PV+ interneurons" }] },
   { category: "Glial", lines: [{ name: "GFAP Cre", pattern: "Astrocytes" }, { name: "Olig2 Cre", pattern: "Oligodendrocyte lineage" }, { name: "CX3CR1 Cre", pattern: "Microglia" }] }
-];
-
-const immuneSystemCre = [
-  { category: "Myeloid", lines: [{ name: "LysM Cre", pattern: "Macrophages, granulocytes" }, { name: "CD11c Cre", pattern: "Dendritic cells" }, { name: "CX3CR1 Cre", pattern: "Monocytes, microglia" }] },
-  { category: "Lymphoid", lines: [{ name: "CD4 Cre", pattern: "T cells" }, { name: "CD19 Cre", pattern: "B cells" }, { name: "Foxp3 Cre", pattern: "Regulatory T cells" }] }
 ];
 
 const metabolicCre = [
@@ -55,17 +50,9 @@ const selectionConsiderations = [
   { factor: "Off Target Activity", description: "Does the driver express in unintended tissues? Germline expression causes global recombination." }
 ];
 
-const commonPitfalls = [
-  { pitfall: "Germline Recombination", description: "If Cre is active in germline, floxed allele becomes globally deleted in offspring.", solutions: "Choose drivers without germline activity, maintain Cre on one gender only, monitor genotyping" },
-  { pitfall: "Mosaic Recombination", description: "Incomplete recombination leaves mixture of deleted and non deleted cells.", solutions: "Choose stronger drivers, use homozygous floxed allele, allow more time for recombination" },
-  { pitfall: "Cre Toxicity", description: "High level Cre expression can cause DNA damage independent of floxed allele.", solutions: "Use appropriate controls (Cre only), consider lower expressing drivers" }
-];
-
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
@@ -192,9 +179,11 @@ export default function TissueSpecificCreLinesPage() {
         </section>
 
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
-            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '.9rem', lineHeight: '1.6rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.6rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
           </div>
         </section>
 
@@ -226,7 +215,7 @@ export default function TissueSpecificCreLinesPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
     </div>
   );
 }

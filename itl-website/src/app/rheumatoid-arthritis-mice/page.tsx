@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Rheumatoid Arthritis Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported rheumatoid arthritis research with custom mouse models enabling mechanistic studies of joint inflammation, autoimmune responses, and therapeutic interventions.",
+  intro: "Since 1998, ingenious targeting laboratory has supported rheumatoid arthritis research with custom mouse models enabling mechanistic studies of joint inflammation, autoimmune responses, and therapeutic interventions.",
   description: "Our rheumatoid arthritis models have contributed to research on synovial inflammation, cartilage destruction, and anti inflammatory therapeutics. Rheumatoid arthritis mouse models provide essential platforms for investigating the molecular pathways underlying autoimmune joint disease, testing hypotheses about immune cell contributions, and developing therapies for this debilitating condition affecting millions of patients worldwide."
 };
 

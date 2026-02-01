@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Conditional Allele Architecture",
   title: "loxP Site Design",
-  intro: "Since 1998, Ingenious Targeting Laboratory has designed and implemented loxP sites in over 1,500 conditional alleles, establishing precise frameworks for Cre mediated recombination that enable spatial and temporal control of gene expression.",
+  intro: "Since 1998, ingenious targeting laboratory has designed and implemented loxP sites in over 1,500 conditional alleles, establishing precise frameworks for Cre mediated recombination that enable spatial and temporal control of gene expression.",
   description: "loxP site design determines the success of conditional knockout and knockin strategies. Proper positioning ensures normal gene function before Cre exposure while guaranteeing complete loss of function after recombination."
 };
 
@@ -30,18 +30,6 @@ const loxPStructure = {
     { name: "Spacer Region", size: "8 bp", function: "Determines orientation and outcome" }
   ]
 };
-
-const recombinationOutcomes = [
-  { orientation: "Same Orientation", outcome: "Cre excises intervening DNA as circular molecule. Standard conditional knockout configuration." },
-  { orientation: "Opposite Orientation", outcome: "Cre inverts intervening sequence rather than excising. Used for conditional gene activation." }
-];
-
-const exonSelectionCriteria = [
-  { criterion: "Essential for protein function", rationale: "Deletion must eliminate activity" },
-  { criterion: "Present in all splice variants", rationale: "Ensures all isoforms affected" },
-  { criterion: "Deletion causes frameshift", rationale: "Prevents partial protein production" },
-  { criterion: "Early in coding sequence", rationale: "Minimizes truncated protein" }
-];
 
 const positioningGuidelines = [
   { guideline: "Distance from Splice Sites", recommendation: "At least 100 to 200 bp from exon boundaries to avoid disrupting splicing" },
@@ -197,9 +185,11 @@ export default function LoxPSiteDesignPage() {
         </section>
 
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
-            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '40px 48px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', margin: '0 auto 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '1rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
           </div>
         </section>
 
@@ -231,7 +221,7 @@ export default function LoxPSiteDesignPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "loxP Site Design", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "loxP site design for conditional knockout alleles since 1998.", "serviceType": "loxP Site Design" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "loxP Site Design", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "loxP site design for conditional knockout alleles since 1998.", "serviceType": "loxP Site Design" }) }} />
     </div>
   );
 }

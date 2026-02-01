@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import { GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Note: Metadata exported from metadata.ts for this client component
@@ -14,7 +14,7 @@ import { GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXU
 const heroData = {
   badge: "Site Specific Recombination",
   title: "FLP FRT System",
-  intro: "Since 1998, Ingenious Targeting Laboratory has utilized the FLP FRT recombination system in hundreds of gene targeting projects, providing researchers with versatile tools for selection cassette removal, conditional gene expression, and sophisticated allele conversion strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has utilized the FLP FRT recombination system in hundreds of gene targeting projects, providing researchers with versatile tools for selection cassette removal, conditional gene expression, and sophisticated allele conversion strategies.",
   description: "The FLP FRT system offers an orthogonal recombination platform that complements Cre lox technology, enabling complex genetic manipulations including dual recombinase strategies and sequential allele conversion."
 };
 
@@ -23,12 +23,6 @@ const statsData = [
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Guarantee" }
-];
-
-const recombinationOutcomes = [
-  { orientation: "Parallel FRT Sites", result: "Excision of intervening sequences, leaving single FRT site" },
-  { orientation: "Antiparallel FRT Sites", result: "Inversion of intervening sequences rather than deletion" },
-  { orientation: "Intermolecular", result: "FRT sites on different molecules can recombine for integration" }
 ];
 
 const applications = [
@@ -73,10 +67,7 @@ const driverLines = [
 ];
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
-import { SINGLE_DUNAIEF, getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
-
-const bassonTestimonial = getTestimonialById('basson-kings')!;
-const plumleyTestimonial = getTestimonialById('plumley-warren')!;
+import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const testimonials = [
   {
@@ -342,7 +333,7 @@ export default function FlpFrtSystemPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
     </div>
   );
 }

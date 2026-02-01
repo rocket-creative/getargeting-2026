@@ -6,15 +6,6 @@
  * - Remove Google Docs reference links or convert to footnotes
  */
 
-// Map of article slugs for cross-references
-const articleSlugMap: Record<string, string> = {
-  'how-humanized-mouse-models-are-transforming-pre-clinical-r-d': 'how-humanized-mouse-models-are-transforming-pre-clinical-r-d',
-  'inside-the-humanized-mouse-engineering-the-human-immune-system': 'inside-the-humanized-mouse-engineering-the-human-immune-system',
-  'modeling-complexity-multi-cytokine-and-multi-organ-humanization': 'modeling-complexity-multi-cytokine-and-multi-organ-humanization',
-  'model-vs-model-humanized-mice-compared-to-organoids-chips-and-ai': 'model-vs-model-humanized-mice-compared-to-organoids-chips-and-ai',
-  'translating-promise-into-practice-clinical-applications-cros-and-the-future': 'translating-promise-into-practice-clinical-applications-cros-and-the-future',
-};
-
 // Known external tools/resources that should keep their original links
 const externalToolPaths = [
   'mouse-breeding-planner-ingenious',
@@ -113,7 +104,7 @@ export function fixArticleLinks(html: string): string {
   // Match patterns like [Part 3: Title] or [<strong>Part 3: Title</strong>]
   fixed = fixed.replace(
     /\[(<strong>)?Part\s*(\d+)[:\s]+([^\]<]+)(<\/strong>)?\]/gi,
-    (match, strongOpen, partNum, title, strongClose) => {
+    (match, strongOpen, partNum, title) => {
       const partKey = `part ${partNum}`;
       const slug = partTitleToSlug[partKey];
       if (slug) {

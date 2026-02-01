@@ -120,8 +120,6 @@ const alternativeContactData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const francoTestimonial = getTestimonialById('franco-colorado')!;
-const plumleyTestimonial = getTestimonialById('plumley-warren')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonials = [
   { quote: francoTestimonial.quote, name: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },

@@ -13,7 +13,7 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Inducible Gene Control",
   title: "Doxycycline Inducible Systems",
-  intro: "Since 1998, Ingenious Targeting Laboratory has implemented doxycycline inducible systems in mouse models requiring reversible, tunable gene expression control for transgene regulation, disease modeling, and therapeutic target validation.",
+  intro: "Since 1998, ingenious targeting laboratory has implemented doxycycline inducible systems in mouse models requiring reversible, tunable gene expression control for transgene regulation, disease modeling, and therapeutic target validation.",
   description: "Doxycycline inducible systems use tetracycline responsive elements to control transgene expression. Unlike permanent Cre mediated recombination, Tet systems provide reversible control, allowing genes to be turned on and off repeatedly by administering or withdrawing doxycycline."
 };
 
@@ -262,9 +262,7 @@ const applicationsData = {
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const fimmelTestimonial = getTestimonialById('fimmel-loyola')!;
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonialsData = [
   { quote: plumleyTestimonial.quote, author: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
@@ -367,7 +365,7 @@ export default function DoxycyclineInducibleSystemsPage() {
             "description": "Doxycycline inducible systems provide reversible gene expression control in mice. Learn about Tet On, Tet Off, rtTA variants, and experimental applications.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Mouse Model Generation",

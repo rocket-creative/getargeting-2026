@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "F.A.S.T. Technology Mice",
-  intro: "F.A.S.T.™ (Flexible Accelerated STOP Tetracycline Operator) technology provides versatile inducible and reversible gene expression control, enabling multiple experimental approaches from a single knockin allele. Ingenious Targeting Laboratory incorporated F.A.S.T.™ technology into custom mouse models for neuroscience, immunology, and metabolic disease research.",
+  intro: "F.A.S.T.™ (Flexible Accelerated STOP Tetracycline Operator) technology provides versatile inducible and reversible gene expression control, enabling multiple experimental approaches from a single knockin allele. ingenious targeting laboratory incorporated F.A.S.T.™ technology into custom mouse models for neuroscience, immunology, and metabolic disease research.",
   description: "The F.A.S.T.™ system achieves a spectrum of controllable expression levels, streamlining mouse model generation by enabling knockout first, inducible expression, and conditional knockdown modes from one targeted allele. This flexibility maximizes research value while minimizing project timelines and costs."
 };
 

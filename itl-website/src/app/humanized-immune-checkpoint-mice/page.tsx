@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Immuno Oncology",
   title: "Humanized Immune Checkpoint Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models, including humanized immune checkpoint models, enabling preclinical testing of checkpoint inhibitor antibodies and combination immunotherapies.",
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models, including humanized immune checkpoint models, enabling preclinical testing of checkpoint inhibitor antibodies and combination immunotherapies.",
   description: "These models express human checkpoint proteins in immunocompetent mice, providing platforms for evaluating human specific therapeutics in the context of functional immune systems."
 };
 
@@ -51,8 +51,6 @@ const compatibleTumors = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
-const saidTestimonial = getTestimonialById('said-uci')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
@@ -228,7 +226,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
     </div>
   );
 }

@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 // Hero Data
 const heroData = {
   badge: "Immune Checkpoint Models",
   title: "TIM3 Humanized Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported immuno oncology research with humanized immune checkpoint models including TIM3 humanized mice that enable direct preclinical evaluation of clinical anti TIM3 antibody candidates and next generation combination checkpoint blockade strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology research with humanized immune checkpoint models including TIM3 humanized mice that enable direct preclinical evaluation of clinical anti TIM3 antibody candidates and next generation combination checkpoint blockade strategies.",
   description: "TIM3 humanized mice express human TIM3 (HAVCR2) protein on T cells and other immune populations, enabling testing of human specific therapeutic antibodies in immunocompetent animals with intact tumor immunity. These models are essential for evaluating the emerging class of anti TIM3 therapeutics in development."
 };
 
@@ -161,7 +161,6 @@ const publications = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const bassonTestimonial = getTestimonialById('basson-kings')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
 const testimonials = [
   { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
@@ -811,7 +810,7 @@ export default function TIM3HumanizedMicePage() {
                   Quality Assurance
                 </h3>
                 <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', marginBottom: '10px' }}>
-                  Ingenious Targeting Laboratory validates TIM3 humanized models:
+                  ingenious targeting laboratory validates TIM3 humanized models:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', marginBottom: '8px' }}>
@@ -1057,7 +1056,7 @@ export default function TIM3HumanizedMicePage() {
             "name": "TIM3 Humanized Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "TIM3 humanized mouse models for immune checkpoint research. Study TIM3 targeting therapeutics and combination immunotherapy. Since 1998.",
             "serviceType": "Humanized Mouse Model Generation"

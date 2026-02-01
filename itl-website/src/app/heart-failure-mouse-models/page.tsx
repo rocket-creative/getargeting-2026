@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconHeart } from '@/components/UXUIDC/Icons';
+import { IconImage, IconChevronRight, IconCheckCircle, IconHeart } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Cardiac Disease Research",
   title: "Heart Failure Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.",
-  description: "Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, Ingenious Targeting Laboratory provides models optimized for your cardiac research goals."
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.",
+  description: "Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, ingenious targeting laboratory provides models optimized for your cardiac research goals."
 };
 
 // Stats Data
@@ -692,7 +692,7 @@ export default function HeartFailureMouseModelsPage() {
             "name": "Heart Failure Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom mouse models for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.",
             "serviceType": "Heart Failure Mouse Model Generation"

@@ -159,7 +159,6 @@ const navigationItems: NavItem[] = [
 export function UXUIDCNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -167,7 +166,6 @@ export function UXUIDCNavigation() {
       if (e.key === 'Escape') {
         setIsOpen(false);
         setActiveDropdown(null);
-        setSearchOpen(false);
       }
     };
     document.addEventListener('keydown', handleEscape);

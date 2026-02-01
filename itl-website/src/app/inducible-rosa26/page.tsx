@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Inducible Rosa26 Page - Ingenious Targeting Laboratory
+ * Inducible Rosa26 Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';

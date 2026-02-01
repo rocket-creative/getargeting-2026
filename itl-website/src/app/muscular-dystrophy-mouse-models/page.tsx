@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Muscle Disease Research",
   title: "Muscular Dystrophy Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported muscular dystrophy research with custom mouse models enabling mechanistic studies of muscle degeneration, testing gene therapy approaches, and developing therapeutic interventions for Duchenne muscular dystrophy and related myopathies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported muscular dystrophy research with custom mouse models enabling mechanistic studies of muscle degeneration, testing gene therapy approaches, and developing therapeutic interventions for Duchenne muscular dystrophy and related myopathies.",
   description: "Muscular dystrophy mouse models provide essential platforms for investigating molecular pathways underlying muscle wasting and testing exon skipping strategies and gene replacement therapies."
 };
 
@@ -27,12 +27,6 @@ const dmdModels = [
   { model: "mdx Mouse", description: "Point mutation in exon 23 creating premature stop codon. Complete absence of full length dystrophin. Standard model for preclinical studies.", features: ["Milder than human DMD due to compensatory utrophin", "Elevated CK and muscle regeneration", "Widely used for baseline studies"] },
   { model: "mdx/utrophin Double Knockout", description: "Elimination of both dystrophin and utrophin produces severe muscular dystrophy with shortened lifespan, closely modeling human DMD severity.", features: ["Severe phenotype matching human disease", "Shortened lifespan", "Optimal for therapeutic testing"] },
   { model: "Humanized DMD Models", description: "hDMDTg mice carrying full length human DMD gene enable testing of human specific therapies including exon skipping oligonucleotides.", features: ["Human sequence for ASO testing", "Exon skipping validation", "Clinical translation studies"] }
-];
-
-const otherModels = [
-  { category: "Limb Girdle (LGMD)", models: ["Alpha Sarcoglycan (Sgca) KO - LGMD2D", "Beta/Gamma/Delta Sarcoglycan KOs", "Dysferlin KO - LGMD2B"] },
-  { category: "Dystroglycanopathies", models: ["LARGE Knockout", "FKRP, POMT1/2 Knockouts"] },
-  { category: "Emery Dreifuss", models: ["Lamin A/C Knockouts and Knockins", "Emerin Knockout"] }
 ];
 
 const phenotypingEndpoints = [
@@ -169,9 +163,11 @@ export default function MuscularDystrophyMouseModelsPage() {
         </section>
 
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
-            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '40px 48px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '1rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
           </div>
         </section>
 
@@ -203,7 +199,7 @@ export default function MuscularDystrophyMouseModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Custom muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
     </div>
   );
 }

@@ -10,7 +10,7 @@ import {
   rosa26Resources,
   ScientificDiagramPlaceholder,
 } from '@/components/UXUIDC';
-import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
 const legacyContentUrl = '/legacy/rosa26';

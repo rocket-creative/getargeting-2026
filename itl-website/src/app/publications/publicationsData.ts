@@ -1,5 +1,5 @@
 /**
- * Publications Data for Ingenious Targeting Laboratory
+ * Publications Data for ingenious targeting laboratory
  * 
  * HOW TO UPDATE:
  * 1. Add new publications to the beginning of the appropriate year array

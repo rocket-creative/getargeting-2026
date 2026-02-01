@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA, IconFlask, IconSettings } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Gene Targeting Technologies",
   title: "Gene Targeting Technologies",
-  intro: "Since 1998, Ingenious Targeting Laboratory has refined gene targeting technologies through more than 2,500 custom projects. Our methodology combines proven ES cell gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
-  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. Ingenious Targeting Laboratory's scientific consultants guide project design from initial concept through final allele verification."
+  intro: "Since 1998, ingenious targeting laboratory has refined gene targeting technologies through more than 2,500 custom projects. Our methodology combines proven ES cell gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
+  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
 };
 
 // Stats Data
@@ -80,34 +80,6 @@ const relatedModelTypes = [
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
   { title: "Reporter Knockin", href: "/reporter-knockin" },
   { title: "Transgenic Mouse Service", href: "/transgenic-mouse-service" }
-];
-
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Chakrabarti S et al.",
-    year: "2024",
-    title: "Touch sensation requires the mechanically gated ion channel ELKIN1.",
-    journal: "Science",
-    volume: "383(6686): 992-998",
-    link: "https://pubmed.ncbi.nlm.nih.gov/38422143/"
-  },
-  {
-    authors: "Mlynarczyk C et al.",
-    year: "2023",
-    title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
-    journal: "Science",
-    volume: "379(6629): eabj0412",
-    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
-  }
 ];
 
 // Testimonials
@@ -405,14 +377,28 @@ export default function TechnologiesPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               What Researchers Say
             </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div style={{
+              display: testimonials.length === 1 ? 'block' : 'grid',
+              gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined,
+              gap: '24px',
+            }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px' }}>
+                <div
+                  key={index}
+                  className="animate-in"
+                  style={{
+                    backgroundColor: '#f8f9fa',
+                    padding: testimonials.length === 1 ? '40px 48px' : '30px',
+                    borderRadius: '8px',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    textAlign: testimonials.length === 1 ? 'center' : 'left',
+                  }}
+                >
                   <div style={{
                     width: '40px',
                     height: '40px',
@@ -421,21 +407,22 @@ export default function TechnologiesPage() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '15px'
+                    marginBottom: '15px',
+                    ...(testimonials.length === 1 && { margin: '0 auto 15px' }),
                   }}>
                     <IconQuote size={20} color="#008080" />
                   </div>
                   <blockquote style={{
                     color: '#333',
-                    fontSize: '.9rem',
+                    fontSize: testimonials.length === 1 ? '1.05rem' : '.9rem',
                     lineHeight: '1.6rem',
                     fontStyle: 'italic',
-                    marginBottom: '15px'
+                    marginBottom: '15px',
                   }}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div>
-                    <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>
+                    <p style={{ color: '#0a253c', fontWeight: 600, fontSize: testimonials.length === 1 ? '.95rem' : '.85rem', marginBottom: '2px' }}>
                       — {testimonial.author}
                     </p>
                     <p style={{ color: '#666', fontSize: '.8rem' }}>
@@ -455,7 +442,7 @@ export default function TechnologiesPage() {
               Start Your Project
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants can help you select the optimal technology approach for your research goals. From allele design through study ready animals, Ingenious Targeting Laboratory provides comprehensive technical expertise.
+              Our scientific consultants can help you select the optimal technology approach for your research goals. From allele design through study ready animals, ingenious targeting laboratory provides comprehensive technical expertise.
             </p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link
@@ -562,7 +549,7 @@ export default function TechnologiesPage() {
             "name": "Gene Targeting Technologies",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "ES cell gene targeting, Cre lox conditional systems, and derivative allele design. Pre germline characterization for verified mouse models since 1998.",
             "serviceType": "Gene Targeting Technologies"

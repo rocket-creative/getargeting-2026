@@ -15,7 +15,6 @@ import {
   IconChevronRight,
   IconPackage,
   IconCheckCircle,
-  IconMouse,
 } from '@/components/UXUIDC';
 
 // Brand colors

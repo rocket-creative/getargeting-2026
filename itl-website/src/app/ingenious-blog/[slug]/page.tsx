@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -296,12 +295,12 @@ export async function generateMetadata({
       title: `${title} | Ingenious Blog Archive | ITL`,
       description:
         String(data.description) ||
-        `Archived blog post from Ingenious Targeting Laboratory: ${title}`,
+        `Archived blog post from ingenious targeting laboratory: ${title}`,
     };
   } catch {
     return {
       title: 'Blog Post | Ingenious Blog Archive | ITL',
-      description: 'Archived blog post from Ingenious Targeting Laboratory',
+      description: 'Archived blog post from ingenious targeting laboratory',
     };
   }
 }

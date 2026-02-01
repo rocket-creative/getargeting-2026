@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
   <div class="container">
     <div class="header">
       <h1>📦 Catalog Model Inquiry</h1>
-      <p style="margin: 10px 0 0 0; opacity: 0.9;">Ingenious Targeting Laboratory</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.9;">ingenious targeting laboratory</p>
       <span class="badge">CATALOG ORDER REQUEST</span>
     </div>
     
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
     `;
 
     const emailText = `
-CATALOG MODEL INQUIRY - Ingenious Targeting Laboratory
+CATALOG MODEL INQUIRY - ingenious targeting laboratory
 ======================================================
 
 CONTACT INFORMATION

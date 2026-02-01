@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "HA Tag Knockin Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated HA tag knockin models enabling reliable detection of endogenous proteins across multiple applications.",
+  intro: "Since 1998, ingenious targeting laboratory has generated HA tag knockin models enabling reliable detection of endogenous proteins across multiple applications.",
   description: "The hemagglutinin (HA) epitope derived from influenza virus provides robust antibody recognition with particularly strong performance in immunofluorescence applications. HA tag knockin at endogenous loci preserves physiological expression levels while providing standardized detection reagents when gene specific antibodies are unavailable or unreliable."
 };
 

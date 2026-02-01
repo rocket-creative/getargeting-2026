@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconFlask, IconSettings, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Custom Services",
   title: "Custom Mouse Model Projects",
-  intro: "When your research requires a unique mouse model, Ingenious Targeting Laboratory delivers custom solutions tailored to your specific scientific objectives.",
+  intro: "When your research requires a unique mouse model, ingenious targeting laboratory delivers custom solutions tailored to your specific scientific objectives.",
   description: "With over 2,500 custom projects completed since 1998, we have the expertise to design and generate virtually any genetically modified mouse model your research requires."
 };
 
@@ -83,8 +83,6 @@ const projectTypesData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const francoTestimonial = getTestimonialById('franco-colorado')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonialsData = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
@@ -93,7 +91,7 @@ const testimonialsData = [
 // Publications Data
 const publicationsData = {
   title: "Published Research",
-  description: "Custom models from Ingenious Targeting Laboratory have contributed to over 800 peer reviewed publications across all areas of biomedical research.",
+  description: "Custom models from ingenious targeting laboratory have contributed to over 800 peer reviewed publications across all areas of biomedical research.",
   journals: ["Nature", "Cell", "Science", "PNAS", "Journal of Clinical Investigation", "Nature Medicine", "Cell Metabolism", "Immunity"]
 };
 
@@ -191,7 +189,7 @@ export default function CustomProjectsPage() {
             "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,500 projects completed since 1998.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Genetic Engineering Services"

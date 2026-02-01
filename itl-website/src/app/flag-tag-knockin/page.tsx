@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "FLAG Tag Knockin Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated FLAG tag knockin models enabling detection and purification of endogenous proteins without requiring gene specific antibodies.",
+  intro: "Since 1998, ingenious targeting laboratory has generated FLAG tag knockin models enabling detection and purification of endogenous proteins without requiring gene specific antibodies.",
   description: "The FLAG epitope (DYKDDDDK) provides reliable detection across multiple applications with widely available, well characterized antibodies. FLAG tag knockin at endogenous loci preserves physiological expression levels while providing standardized reagents for protein detection, immunoprecipitation, and affinity purification."
 };
 

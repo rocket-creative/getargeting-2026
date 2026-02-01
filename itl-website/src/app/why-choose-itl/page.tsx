@@ -1,5 +1,5 @@
 /**
- * Why Choose Ingenious Targeting Laboratory Page
+ * Why Choose ingenious targeting laboratory Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
-  title: "Why Choose Ingenious Targeting Laboratory",
-  intro: "Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. Ingenious Targeting Laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success.",
+  title: "Why Choose ingenious targeting laboratory",
+  intro: "Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. ingenious targeting laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success.",
   description: ""
 };
 
@@ -340,7 +340,7 @@ export default function WhyChooseItlPage() {
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Why Choose itl",
+                "name": "Why Choose ingenious targeting laboratory",
                 "item": "https://www.genetargeting.com/why-choose-itl"
               }
             ]

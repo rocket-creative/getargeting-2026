@@ -104,8 +104,9 @@ async function fetchGA4Data(days: number) {
 
 /**
  * Format seconds into mm:ss
+ * Note: Currently unused but kept for future GA4 API implementation
  */
-function formatDuration(seconds: number): string {
+function _formatDuration(seconds: number): string {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins}:${secs.toString().padStart(2, '0')}`;

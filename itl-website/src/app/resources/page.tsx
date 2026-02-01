@@ -7,14 +7,14 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
+import { IconChevronRight, IconCheckCircle, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Resources",
   title: "Mouse Model Resources",
-  intro: "Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects.",
+  intro: "ingenious targeting laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects.",
   description: "From selection guides that clarify strategic decisions to case studies demonstrating successful project outcomes, these resources draw on our experience from more than 2,500 projects completed since 1998."
 };
 
@@ -99,7 +99,7 @@ const planningGuidesData = {
 // Case Studies Data
 const caseStudiesData = {
   title: "Case Studies",
-  description: "Real project examples demonstrate how Ingenious Targeting Laboratory approaches complex targeting challenges and delivers research ready mouse models:",
+  description: "Real project examples demonstrate how ingenious targeting laboratory approaches complex targeting challenges and delivers research ready mouse models:",
   studies: [
     {
       href: "/case-studies/embryonic-lethal-conditional",
@@ -131,7 +131,7 @@ const technicalResourcesData = {
   categories: [
     {
       title: "Technology Documentation",
-      description: "Detailed technical information about Ingenious Targeting Laboratory's gene targeting approaches:",
+      description: "Detailed technical information about ingenious targeting laboratory's gene targeting approaches:",
       links: [
         { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
         { href: "/cre-lox-system", label: "Cre-Lox System" },
@@ -154,7 +154,7 @@ const technicalResourcesData = {
 // Publications Data
 const publicationsData = {
   title: "Publications",
-  description: "Ingenious Targeting Laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
+  description: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
   features: [
     "Searchable archive by therapeutic area",
     "Publications organized by model type",
@@ -334,7 +334,7 @@ export default function ResourcesPage() {
             "description": "Mouse model selection guides, case studies, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

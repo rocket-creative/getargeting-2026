@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Respiratory Disease Models",
   title: "Allergy Asthma Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported allergy and asthma research with custom mouse models enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported allergy and asthma research with custom mouse models enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.",
   description: "Allergy and asthma mouse models provide essential platforms for investigating the molecular pathways underlying allergic inflammation, testing hypotheses about immune cell contributions, and developing therapies for respiratory diseases affecting millions of patients worldwide."
 };
 
@@ -85,8 +85,6 @@ const creDrivers = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const bassonTestimonial = getTestimonialById('basson-kings')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
 const testimonials = [
   { quote: bassonTestimonial.quote, name: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
@@ -496,14 +494,14 @@ export default function AllergyAsthmaMouseModelsPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
+                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                     <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                   </div>
@@ -627,7 +625,7 @@ export default function AllergyAsthmaMouseModelsPage() {
             "name": "Allergy Asthma Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.",
             "serviceType": "Allergy Asthma Mouse Model Generation"

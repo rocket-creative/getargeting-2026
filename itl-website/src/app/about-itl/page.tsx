@@ -1,5 +1,5 @@
 /**
- * About Ingenious Targeting Laboratory Page
+ * About ingenious targeting laboratory Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
-  title: "About Ingenious Targeting Laboratory",
-  intro: "Since 1998, Ingenious Targeting Laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
+  title: "About ingenious targeting laboratory",
+  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
 };
 

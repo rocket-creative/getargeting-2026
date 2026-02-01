@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Cystic Fibrosis Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported cystic fibrosis research with custom mouse models enabling mechanistic studies of CFTR function, patient mutation effects, and therapeutic interventions.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cystic fibrosis research with custom mouse models enabling mechanistic studies of CFTR function, patient mutation effects, and therapeutic interventions.",
   description: "Our cystic fibrosis models have contributed to research on ion channel biology, gene therapy, and CFTR modulator development. Cystic fibrosis mouse models provide essential platforms for investigating CFTR mutations, testing gene therapy approaches, and developing therapies for this life limiting genetic disease affecting thousands of patients worldwide."
 };
 

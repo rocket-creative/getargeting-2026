@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Temporal Gene Control",
   title: "Tamoxifen Inducible Cre",
-  intro: "Since 1998, Ingenious Targeting Laboratory has incorporated tamoxifen inducible Cre systems into hundreds of conditional knockout and knockin projects, providing researchers with precise temporal control over gene manipulation in adult animals.",
+  intro: "Since 1998, ingenious targeting laboratory has incorporated tamoxifen inducible Cre systems into hundreds of conditional knockout and knockin projects, providing researchers with precise temporal control over gene manipulation in adult animals.",
   description: "Tamoxifen inducible Cre (CreERT2) enables gene deletion at any chosen time point, avoiding developmental compensation, bypassing embryonic lethality, and enabling study of gene function in mature tissues."
 };
 
@@ -288,7 +288,7 @@ export default function TamoxifenInducibleCrePage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Mouse Model Generation Guide Page - Ingenious Targeting Laboratory
+ * Mouse Model Generation Guide Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';

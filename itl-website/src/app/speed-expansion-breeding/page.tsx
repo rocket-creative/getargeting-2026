@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Rapid Cohort Generation",
   title: "Speed Expansion Breeding",
-  intro: "Ingenious Targeting Laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort generation for time sensitive studies and large scale experiments.",
+  intro: "ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort generation for time sensitive studies and large scale experiments.",
   description: "Speed expansion breeding uses strategic breeding pair management, parallel breeding schemes, and optimized husbandry to accelerate cohort generation while maintaining genetic integrity and health status. This service is ideal when experimental timelines require rapid animal production."
 };
 
@@ -84,8 +84,6 @@ const qualityAssurance = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const saidTestimonial = getTestimonialById('said-uci')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const francoTestimonial = getTestimonialById('franco-colorado')!;
 
 const testimonials = [
@@ -637,7 +635,7 @@ export default function SpeedExpansionBreedingPage() {
             "name": "Speed Expansion Breeding",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Speed expansion breeding services for rapid generation of experimental cohorts. Optimized breeding strategies for large scale studies.",
             "serviceType": "Breeding Services"

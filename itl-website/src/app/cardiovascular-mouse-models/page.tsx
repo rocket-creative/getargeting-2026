@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconHeart, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconHeart } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Heart & Vascular Research",
   title: "Cardiovascular Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom mouse models enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom mouse models enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.",
   description: "Cardiovascular mouse models provide essential platforms for investigating the molecular mechanisms underlying vascular disease, testing hypotheses about lipid metabolism and inflammation, and developing therapies targeting cardiovascular risk factors and disease pathways."
 };
 
@@ -214,8 +214,6 @@ const publicationsData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const rateriTestimonial = getTestimonialById('rateri-kentucky')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonials = [
   { quote: rateriTestimonial.quote, name: formatAuthorWithCredentials(rateriTestimonial), affiliation: rateriTestimonial.affiliation },
@@ -1220,7 +1218,7 @@ export default function CardiovascularMouseModelsPage() {
             "name": "Cardiovascular Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.",
             "serviceType": "Custom Mouse Model Generation"

@@ -7,10 +7,9 @@ import { IconChevronRight, IconDNA, IconLayers, IconArrowLeft } from '@/componen
 import { 
   getExtendedTerm, 
   getAllGlossarySlugs, 
-  getRelatedTerms,
-  type GlossaryTermExtended 
+  getRelatedTerms
 } from '@/data/glossaryTermsExtended';
-import { glossaryTerms, glossaryCategories } from '@/data/glossaryTerms';
+import { glossaryTerms } from '@/data/glossaryTerms';
 
 // Brand colors
 const BRAND = {
@@ -52,7 +51,7 @@ export async function generateMetadata({
       title: term.metaTitle,
       description: term.metaDescription,
       type: 'article',
-      siteName: 'Ingenious Targeting Laboratory',
+      siteName: 'ingenious targeting laboratory',
       url: `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}`,
     },
     twitter: {

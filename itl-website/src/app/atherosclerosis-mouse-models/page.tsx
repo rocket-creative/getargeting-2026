@@ -12,7 +12,7 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Cardiovascular Disease Models",
   title: "Atherosclerosis Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom atherosclerosis mouse models enabling mechanistic studies of plaque development, lipid metabolism, and therapeutic interventions targeting the leading cause of death worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom atherosclerosis mouse models enabling mechanistic studies of plaque development, lipid metabolism, and therapeutic interventions targeting the leading cause of death worldwide.",
   description: "Atherosclerosis mouse models provide essential platforms for investigating the molecular pathways underlying plaque initiation and progression, testing hypotheses about inflammation and lipid handling, and developing therapies for coronary artery disease and stroke prevention."
 };
 
@@ -95,9 +95,7 @@ const publicationsData = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const rateriTestimonial = getTestimonialById('rateri-kentucky')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonials = [
   { quote: rateriTestimonial.quote, name: formatAuthorWithCredentials(rateriTestimonial), affiliation: rateriTestimonial.affiliation },
@@ -137,7 +135,7 @@ const faqData = [
   },
   {
     question: "Can you combine multiple gene modifications for atherosclerosis research?",
-    answer: "Yes. Ingenious Targeting Laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
+    answer: "Yes. ingenious targeting laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
   }
 ];
 
@@ -710,7 +708,7 @@ export default function AtherosclerosisMouseModelsPage() {
             "name": "Atherosclerosis Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom atherosclerosis mouse models for cardiovascular research. Study plaque formation, lipid metabolism, and vascular disease mechanisms.",
             "serviceType": "Atherosclerosis Mouse Model Generation"

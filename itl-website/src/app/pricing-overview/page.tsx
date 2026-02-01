@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconSettings, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, pricingResources } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Pricing Guide",
   title: "Mouse Model Pricing Overview",
-  intro: "Custom mouse model pricing depends on project complexity, model type, and scope of services. Ingenious Targeting Laboratory provides customized quotes based on your specific research requirements.",
+  intro: "Custom mouse model pricing depends on project complexity, model type, and scope of services. ingenious targeting laboratory provides customized quotes based on your specific research requirements.",
   description: "This overview explains the factors that influence project pricing and helps you understand what to expect."
 };
 
@@ -179,7 +179,7 @@ const budgetPlanningData = {
 // Catalog Models Data
 const catalogModelsData = {
   title: "Catalog Models",
-  description: "For certain applications, Ingenious Targeting Laboratory offers catalog models at fixed pricing:",
+  description: "For certain applications, ingenious targeting laboratory offers catalog models at fixed pricing:",
   models: [
     "PD1 humanized",
     "PDL1 humanized",
@@ -207,7 +207,7 @@ const faqData = [
   },
   {
     question: "Are there discounts for academic institutions?",
-    answer: "Contact Ingenious Targeting Laboratory directly to discuss institutional pricing arrangements."
+    answer: "Contact ingenious targeting laboratory directly to discuss institutional pricing arrangements."
   },
   {
     question: "What about grant budget constraints?",
@@ -290,7 +290,7 @@ export default function PricingOverviewPage() {
             "description": "Custom mouse model pricing factors and budget planning. Understand costs for knockout, knockin, conditional, and humanized models.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Pricing Guide"

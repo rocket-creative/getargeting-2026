@@ -171,7 +171,7 @@ function convertInternalLink(path: string): string {
 function htmlToMarkdown(html: string): string {
   if (!html) return '';
   
-  let md = html
+  const md = html
     // Handle line breaks
     .replace(/<br\s*\/?>/gi, '\n')
     // Handle paragraphs

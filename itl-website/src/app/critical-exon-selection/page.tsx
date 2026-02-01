@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Knockout Design",
   title: "Critical Exon Selection",
-  intro: "Since 1998, Ingenious Targeting Laboratory has analyzed exon structures and identified critical exons for over 470 mouse genes, maximizing knockout severity while preserving targeting efficiency, with expertise documented in 156+ peer reviewed publications on exon selection strategies for knockout and conditional knockout design.",
+  intro: "Since 1998, ingenious targeting laboratory has analyzed exon structures and identified critical exons for over 470 mouse genes, maximizing knockout severity while preserving targeting efficiency, with expertise documented in 156+ peer reviewed publications on exon selection strategies for knockout and conditional knockout design.",
   description: "Selecting which exon to delete for knockout or flanking for conditional control is arguably the most important decision in targeting design. A well chosen exon guarantees loss of function. A poorly chosen exon may leave residual protein activity."
 };
 
@@ -124,8 +124,6 @@ const publicationsData = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
@@ -775,7 +773,7 @@ export default function CriticalExonSelectionPage() {
             "name": "Critical Exon Selection",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Expert guidance on critical exon selection for knockout mouse design. Choose optimal exons for effective gene inactivation since 1998.",
             "serviceType": "Critical Exon Selection"
