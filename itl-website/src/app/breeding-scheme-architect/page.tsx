@@ -143,8 +143,9 @@ const relatedResources = [
     description: 'Choose the right knockout strategy for your research goals',
   },
   {
-    title: 'Model Generation Timeline',
-    description: 'Understand timelines from project start to study ready cohorts',
+    title: 'Breeding Services',
+    link: '/speed-expansion-breeding',
+    description: 'Professional breeding services to accelerate your project timeline',
   },
   {
     title: 'Request Project Consultation',
