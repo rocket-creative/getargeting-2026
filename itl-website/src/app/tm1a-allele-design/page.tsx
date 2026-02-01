@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA, IconFlask, IconSettings } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Knockout First Technology",
   title: "tm1a Allele Design",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated over 580 alleles using tm1a (knockout first) design strategies, enabling researchers to rapidly generate conventional knockouts, conditional knockouts, and functional knockin variants from single targeted ES cell clone with 205+ peer reviewed publications documenting tm1a allele applications across diverse genetic models.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 580 alleles using tm1a (knockout first) design strategies, enabling researchers to rapidly generate conventional knockouts, conditional knockouts, and functional knockin variants from single targeted ES cell clone with 205+ peer reviewed publications documenting tm1a allele applications across diverse genetic models.",
   description: "The tm1a (targeted mutation 1a) allele represents a paradigm in gene targeting efficiency: a single allele design that generates conventional knockout phenotypes while preserving the genetic infrastructure for subsequent conditional knockout or knockin generation."
 };
 
@@ -142,8 +142,6 @@ const publicationsData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
 ];
@@ -784,7 +782,7 @@ export default function Tm1aAlleleDesignPage() {
             "name": "tm1a Allele Design",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "tm1a knockout first allele design for flexible conditional targeting. Generate multiple allele types from single ES cell targeting since 1998.",
             "serviceType": "tm1a Allele Design"

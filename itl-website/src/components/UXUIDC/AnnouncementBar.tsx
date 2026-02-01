@@ -5,16 +5,14 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function UXUIDCAnnouncementBar() {
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const dismissed = sessionStorage.getItem('announcement-dismissed');
-    if (dismissed) setIsDismissed(true);
-  }, []);
+  const [isDismissed, setIsDismissed] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return sessionStorage.getItem('announcement-dismissed') === 'true';
+  });
 
   const handleDismiss = () => {
     setIsDismissed(true);

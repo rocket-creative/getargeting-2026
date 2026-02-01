@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Comprehensive Support",
   title: "Mouse Model Support Services",
-  intro: "Beyond custom mouse model generation, Ingenious Targeting Laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.",
+  intro: "Beyond custom mouse model generation, ingenious targeting laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.",
   description: "From colony maintenance through phenotypic characterization, our support services enable you to focus on your research while we manage the logistics."
 };
 
@@ -32,7 +32,7 @@ const colonyManagementServices = [
   },
   {
     name: "Genotyping Services",
-    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious Targeting Laboratory develops custom genotyping protocols for each targeted allele."
+    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. ingenious targeting laboratory develops custom genotyping protocols for each targeted allele."
   },
   {
     name: "Cohort Development",
@@ -130,8 +130,6 @@ const relatedModels = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
-const francoTestimonial = getTestimonialById('franco-colorado')!;
-const creemersTestimonial = getTestimonialById('creemers-leuven')!;
 
 const testimonials = [
   { quote: saidTestimonial.quote, name: formatAuthorWithCredentials(saidTestimonial), affiliation: saidTestimonial.affiliation },
@@ -540,14 +538,14 @@ export default function SupportServicesPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
+                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                     <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                   </div>
@@ -564,7 +562,7 @@ export default function SupportServicesPage() {
               Start Your Project
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Whether you need ongoing colony support, archival services, or complete project management, Ingenious Targeting Laboratory&apos;s service team can design a support plan aligned with your research goals.
+              Whether you need ongoing colony support, archival services, or complete project management, ingenious targeting laboratory&apos;s service team can design a support plan aligned with your research goals.
             </p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link
@@ -671,7 +669,7 @@ export default function SupportServicesPage() {
             "name": "Mouse Model Support Services",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Mouse colony management, cryopreservation, rederivation, and breeding services. Comprehensive support for your mouse model projects since 1998.",
             "serviceType": "Mouse Model Support Services"

@@ -1,7 +1,7 @@
 /**
  * Verified Publications Database
  * 
- * This file contains verified publications featuring ITL (Ingenious Targeting Laboratory) 
+ * This file contains verified publications featuring ITL (ingenious targeting laboratory) 
  * mouse models. All entries have been verified against PubMed.
  * 
  * IMPORTANT: Only add publications that:

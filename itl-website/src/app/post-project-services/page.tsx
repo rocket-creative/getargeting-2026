@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Post Project Services / Cohort Development Page - Ingenious Targeting Laboratory
+ * Post Project Services / Cohort Development Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';
@@ -141,7 +141,7 @@ export default function PostProjectServicesPage() {
                 maxWidth: '800px',
               }}
             >
-              After your custom mouse model is generated, Ingenious Targeting Laboratory offers comprehensive support services to help you move from model generation to experimental studies. From cohort expansion to cryopreservation, we support your research at every stage.
+              After your custom mouse model is generated, ingenious targeting laboratory offers comprehensive support services to help you move from model generation to experimental studies. From cohort expansion to cryopreservation, we support your research at every stage.
             </p>
             <div className="hero-animate flex flex-wrap gap-4 mt-6">
               <Link

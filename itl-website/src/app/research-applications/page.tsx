@@ -11,14 +11,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Research Applications",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
-  description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. Ingenious Targeting Laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
+  description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. ingenious targeting laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."
 };
 
 // Stats Data

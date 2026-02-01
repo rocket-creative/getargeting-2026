@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Publications Page - Ingenious Targeting Laboratory
+ * Publications Page - ingenious targeting laboratory
  * 
  * This page displays peer-reviewed publications featuring ITL mouse models.
  * 
@@ -22,7 +22,7 @@ import { publicationsByYear, getYears, getTotalPublicationCount, Publication } f
 const heroData = {
   badge: "Publications",
   title: "Groundbreaking Publications in Genetic Research",
-  intro: "Ingenious Targeting Laboratory generated mouse models have contributed to more than 800 peer-reviewed publications across all major therapeutic areas.",
+  intro: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer-reviewed publications across all major therapeutic areas.",
   description: "Our custom knockout, knockin, and humanized mouse models have supported groundbreaking research published in Nature, Cell, Science, and specialty journals worldwide."
 };
 
@@ -155,11 +155,11 @@ export default function PublicationsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Publications - Ingenious Targeting Laboratory",
+            "name": "Publications - ingenious targeting laboratory",
             "description": "Peer-reviewed publications featuring ingenious targeting laboratory mouse models. Over 800 publications in Nature, Cell, Science, and specialty journals.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 // Hero Data
 const heroData = {
   badge: "Ready to Ship Models",
   title: "Catalog Mouse Models",
-  intro: "In addition to custom gene targeting and editing services, Ingenious Targeting Laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.",
+  intro: "In addition to custom gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.",
   description: "Catalog models provide immediate access to study-ready strains without the timeline required for custom model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation."
 };
 
@@ -118,7 +118,7 @@ const orderingData = {
 const faqData = [
   {
     question: "How do I know if a catalog model is available?",
-    answer: "Contact Ingenious Targeting Laboratory to confirm current availability. Catalog models are maintained as breeding colonies or cryopreserved stocks. Availability and estimated ship dates are provided upon inquiry. Some models may require recovery from cryopreservation."
+    answer: "Contact ingenious targeting laboratory to confirm current availability. Catalog models are maintained as breeding colonies or cryopreserved stocks. Availability and estimated ship dates are provided upon inquiry. Some models may require recovery from cryopreservation."
   },
   {
     question: "What is included when I order a catalog model?",
@@ -209,7 +209,7 @@ export default function CatalogMouseModelsPage() {
             "description": "Catalog mouse models ready for immediate shipment. Humanized immune checkpoint mice, Cre driver lines, and reporter strains.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Distribution",

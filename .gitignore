@@ -1,1 +1,9 @@
 .ai-errors.log
+
+# Change documents (source files, not needed in repo)
+changes/
+Services-*.zip
+Services-Corrections/
+
+# Extracted content (generated from source docs)
+itl-website/extracted-changes/

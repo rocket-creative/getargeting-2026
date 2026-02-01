@@ -11,14 +11,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Mouse Strain Backgrounds",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on multiple genetic backgrounds, with strain selection guided by experimental requirements and phenotype considerations.",
-  description: "Understanding the characteristics of different inbred strains is essential for choosing the optimal background for your research. Whether you need models on C57BL/6 for broad compatibility, BALB/c for immunological studies, or other backgrounds for specific applications, Ingenious Targeting Laboratory provides expertise in strain selection and backcrossing services to establish your model on the ideal genetic background."
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models on multiple genetic backgrounds, with strain selection guided by experimental requirements and phenotype considerations.",
+  description: "Understanding the characteristics of different inbred strains is essential for choosing the optimal background for your research. Whether you need models on C57BL/6 for broad compatibility, BALB/c for immunological studies, or other backgrounds for specific applications, ingenious targeting laboratory provides expertise in strain selection and backcrossing services to establish your model on the ideal genetic background."
 };
 
 // Stats Data

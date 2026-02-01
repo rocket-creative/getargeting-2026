@@ -3,8 +3,6 @@
  * Shared types for metadata and structured data generation
  */
 
-import type { Metadata } from 'next';
-
 /**
  * Base URL for the website
  */

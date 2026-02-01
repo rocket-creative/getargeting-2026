@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Health Reestablishment",
   title: "Rederivation Services",
-  intro: "Ingenious Targeting Laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
+  intro: "ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
   description: "Rederivation eliminates pathogens through embryo transfer or cesarean section, producing offspring free of maternal pathogens. This process is essential when mouse lines have been exposed to pathogens or when transferring lines to SPF facilities requiring specific health status."
 };
 
@@ -85,9 +85,7 @@ const postRederivationSteps = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const saidTestimonial = getTestimonialById('said-uci')!;
 const francoTestimonial = getTestimonialById('franco-colorado')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonials = [
   { quote: francoTestimonial.quote, name: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
@@ -655,7 +653,7 @@ export default function RederivationServicesPage() {
             "name": "Rederivation Services",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Mouse rederivation services to reestablish SPF health status. Embryo transfer and cesarean section rederivation for pathogen free colonies.",
             "serviceType": "Rederivation Services"

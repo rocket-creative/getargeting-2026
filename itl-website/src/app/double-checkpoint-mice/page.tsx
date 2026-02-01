@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -14,7 +14,7 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Dual Checkpoint Models",
   title: "Double Immune Checkpoint Mice",
-  intro: "Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, Ingenious Targeting Laboratory has generated custom mouse models, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.",
+  intro: "Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, ingenious targeting laboratory has generated custom mouse models, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.",
   description: "Combination checkpoint blockade has shown enhanced efficacy compared to monotherapy in multiple cancer types. Double immune checkpoint humanized models enable preclinical evaluation of combination therapies using clinical antibody candidates, supporting therapeutic development programs."
 };
 
@@ -197,7 +197,7 @@ export default function DoubleCheckpointMicePage() {
             "description": "Double checkpoint humanized mouse models for combination immunotherapy testing. PD1+CTLA4, PD1+PDL1, and other dual checkpoint combinations.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Mouse Model Generation",

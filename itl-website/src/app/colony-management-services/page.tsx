@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, breedingResources, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Post-Project Services",
   title: "Mouse Colony Management Services",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported researchers with comprehensive colony management services, maintaining and expanding genetically engineered mouse lines for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.",
+  intro: "Since 1998, ingenious targeting laboratory has supported researchers with comprehensive colony management services, maintaining and expanding genetically engineered mouse lines for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.",
   description: "Colony management services enable research programs to focus on experimental work while experts handle the logistics of maintaining breeding colonies, tracking genotypes, and expanding lines for experimental cohorts."
 };
 
@@ -113,9 +113,7 @@ const expertiseAdvantages = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const saidTestimonial = getTestimonialById('said-uci')!;
-const francoTestimonial = getTestimonialById('franco-colorado')!;
 
 const testimonials = [
   { quote: saidTestimonial.quote, name: formatAuthorWithCredentials(saidTestimonial), affiliation: saidTestimonial.affiliation },
@@ -832,7 +830,7 @@ export default function ColonyManagementServicesPage() {
             "name": "Mouse Colony Management Services",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Professional mouse colony management services. Expert breeding, genotyping, and colony maintenance for genetically engineered mouse models. Since 1998.",
             "serviceType": "Colony Management Services"

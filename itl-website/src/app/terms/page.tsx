@@ -11,7 +11,6 @@ import {
   UXUIDCFooter,
   UXUIDCCookieConsent,
   IconChevronRight,
-  IconClipboard,
   IconScale,
 } from '@/components/UXUIDC';
 
@@ -379,7 +378,7 @@ export default function TermsPage() {
                   761-80 Coates Avenue<br />
                   Holbrook, NY 11741<br /><br />
                   Email: <a href="mailto:inquiry@genetargeting.com" style={{ color: BRAND.teal }}>inquiry@genetargeting.com</a><br />
-                  Phone: <a href="tel:+16314688530" style={{ color: BRAND.teal }}>(631) 468-8530</a>
+                  Phone: <a href="tel:+16314688534" style={{ color: BRAND.teal }}>(631) 468-8534</a>
                 </p>
               </div>
 

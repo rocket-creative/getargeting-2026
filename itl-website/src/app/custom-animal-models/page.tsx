@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Custom Animal Models Page - Ingenious Targeting Laboratory
+ * Custom Animal Models Page - ingenious targeting laboratory
  * Overview of custom animal model services beyond mice
  */
 
@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 const heroData = {
   badge: 'Custom Animal Model Services',
   title: 'Custom Animal Models',
-  description: 'While mice remain the most widely used model organism for biomedical research, Ingenious Targeting Laboratory also provides custom genetic engineering services for other species. Our expertise in gene targeting extends to rats, rabbits, and other animal models to meet specific research requirements.',
+  description: 'While mice remain the most widely used model organism for biomedical research, ingenious targeting laboratory also provides custom genetic engineering services for other species. Our expertise in gene targeting extends to rats, rabbits, and other animal models to meet specific research requirements.',
 };
 
 const services = [
@@ -51,7 +51,7 @@ const services = [
 
 const faqData = [
   {
-    question: 'What species does Ingenious Targeting Laboratory work with?',
+    question: 'What species does ingenious targeting laboratory work with?',
     answer: 'Our primary expertise is in mouse model generation, with over 2,500 completed projects. We also offer custom rat and rabbit model services. Contact us to discuss your specific requirements for other species.',
   },
   {

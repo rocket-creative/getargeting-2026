@@ -39,7 +39,6 @@ export function CatalogSearch({
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [headers, setHeaders] = useState<string[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Fetch data from /api/catalog (proxied Google Sheets, no CORS)
@@ -61,7 +60,6 @@ export function CatalogSearch({
       }
 
       const headerRow = data.values[0] as string[];
-      setHeaders(headerRow);
 
       const models: CatalogModel[] = data.values
         .slice(1)

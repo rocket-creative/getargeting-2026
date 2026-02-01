@@ -227,8 +227,23 @@ export default function AIAssistantPanel({
   isCollapsed,
   onToggleCollapse,
 }: AIAssistantPanelProps) {
-  const { queriesRemaining, useQuery } = useAIAccess();
-  const [messages, setMessages] = useState<Message[]>([]);
+  const { queriesRemaining, consumeQuery } = useAIAccess();
+  // Initialize with welcome message using lazy initialization
+  const [messages, setMessages] = useState<Message[]>(() => [
+    {
+      id: 'welcome',
+      role: 'assistant',
+      content: `Hello! I'm your AI breeding assistant. I can help you:
+
+• Plan complex multi-allele breeding schemes
+• Recommend tissue-specific Cre driver lines
+• Optimize your breeding strategy
+• Troubleshoot unexpected results
+
+What would you like help with today?`,
+      timestamp: new Date(),
+    },
+  ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -239,32 +254,11 @@ export default function AIAssistantPanel({
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Add initial welcome message
-  useEffect(() => {
-    if (messages.length === 0) {
-      setMessages([
-        {
-          id: 'welcome',
-          role: 'assistant',
-          content: `Hello! I'm your AI breeding assistant. I can help you:
-
-• Plan complex multi-allele breeding schemes
-• Recommend tissue-specific Cre driver lines
-• Optimize your breeding strategy
-• Troubleshoot unexpected results
-
-What would you like help with today?`,
-          timestamp: new Date(),
-        },
-      ]);
-    }
-  }, [messages.length]);
-
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
 
-    // Use a query (may show consultation prompt, but won't block unless at limit)
-    if (!useQuery()) {
+    // Consume a query (may show consultation prompt, but won't block unless at limit)
+    if (!consumeQuery()) {
       return; // At daily limit
     }
 
@@ -297,7 +291,7 @@ What would you like help with today?`,
   };
 
   const handleSuggestionClick = (suggestion: AIsuggestion) => {
-    if (!useQuery()) return; // At daily limit
+    if (!consumeQuery()) return; // At daily limit
 
     // Handle different suggestion types
     if (suggestion.type === 'allele' && suggestion.title.includes('Floxed')) {

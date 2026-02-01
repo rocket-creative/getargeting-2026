@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Reliable Analysis",
   title: "Mouse Genotyping Services",
-  intro: "Since 1998, Ingenious Targeting Laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.",
-  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. Ingenious Targeting Laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
+  intro: "Since 1998, ingenious targeting laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.",
+  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
 };
 
 // Stats Data
@@ -128,9 +128,7 @@ const protocolOptimization = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const saidTestimonial = getTestimonialById('said-uci')!;
 const francoTestimonial = getTestimonialById('franco-colorado')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonials = [
   { quote: francoTestimonial.quote, name: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
@@ -153,12 +151,12 @@ const relatedResources = [
 // FAQ Data
 const faqData = [
   {
-    question: "What genotyping methods does Ingenious Targeting Laboratory use?",
-    answer: "Ingenious Targeting Laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
+    question: "What genotyping methods does ingenious targeting laboratory use?",
+    answer: "ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
   },
   {
-    question: "Can Ingenious Targeting Laboratory develop custom genotyping assays for new alleles?",
-    answer: "Yes. Ingenious Targeting Laboratory can design custom genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Custom assay development includes protocol optimization and validation."
+    question: "Can ingenious targeting laboratory develop custom genotyping assays for new alleles?",
+    answer: "Yes. ingenious targeting laboratory can design custom genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Custom assay development includes protocol optimization and validation."
   },
   {
     question: "What information is provided with genotyping results?",
@@ -166,7 +164,7 @@ const faqData = [
   },
   {
     question: "Do you provide high-throughput genotyping for large colonies?",
-    answer: "Yes. Ingenious Targeting Laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
+    answer: "Yes. ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
   }
 ];
 
@@ -526,7 +524,7 @@ export default function MouseGenotypingServicePage() {
                   Assay Design
                 </h3>
                 <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>
-                  Ingenious Targeting Laboratory can design custom genotyping assays for:
+                  ingenious targeting laboratory can design custom genotyping assays for:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {assayDesign.map((item, index) => (
@@ -561,14 +559,14 @@ export default function MouseGenotypingServicePage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
+                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                     <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                   </div>
@@ -692,7 +690,7 @@ export default function MouseGenotypingServicePage() {
             "name": "Mouse Genotyping Services",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse genotyping services including PCR, Southern blot, and sequencing analysis. Reliable genotyping for breeding decisions since 1998.",
             "serviceType": "Genotyping Services"

@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
   <div class="container">
     <div class="header">
       <h1>🧬 New Quote Request</h1>
-      <p style="margin: 10px 0 0 0; opacity: 0.9;">Ingenious Targeting Laboratory</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.9;">ingenious targeting laboratory</p>
     </div>
     
     <div class="content">
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
     `;
 
     const emailText = `
-NEW QUOTE REQUEST - Ingenious Targeting Laboratory
+NEW QUOTE REQUEST - ingenious targeting laboratory
 ================================================
 
 CONTACT INFORMATION

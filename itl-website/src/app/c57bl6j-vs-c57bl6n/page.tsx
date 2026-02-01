@@ -11,14 +11,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "C57BL/6J vs C57BL/6N",
   intro: "C57BL/6 is the most widely used inbred mouse strain, but two major substrains exist with important genetic and phenotypic differences.",
-  description: "Understanding the distinction between C57BL/6J (Jackson) and C57BL/6N (NIH) is essential for reproducible research and appropriate model selection. Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on defined C57BL/6 backgrounds, with substrain selection guided by research requirements and phenotype considerations."
+  description: "Understanding the distinction between C57BL/6J (Jackson) and C57BL/6N (NIH) is essential for reproducible research and appropriate model selection. Since 1998, ingenious targeting laboratory has generated custom mouse models on defined C57BL/6 backgrounds, with substrain selection guided by research requirements and phenotype considerations."
 };
 
 // Stats Data

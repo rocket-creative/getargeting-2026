@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Contact Page - Ingenious Targeting Laboratory
+ * Contact Page - ingenious targeting laboratory
  * SIMPLIFIED VERSION - Clean, focused, no redundant sections
  */
 
@@ -29,10 +29,10 @@ gsap.registerPlugin(ScrollTrigger);
 // Contact information
 const contactInfo = {
   email: 'inquiry@genetargeting.com',
-  phone: '+1 (631) 468-8530',
+  phone: '+1 (631) 468-8534',
   hours: 'Monday - Friday, 9 AM - 5 PM ET',
   address: {
-    line1: 'Ingenious Targeting Laboratory',
+    line1: 'ingenious targeting laboratory',
     line2: '761-80 Coates Avenue',
     line3: 'Holbrook, NY 11741',
   },
@@ -511,12 +511,12 @@ export default function ContactPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
-            name: 'Contact Ingenious Targeting Laboratory',
-            description: 'Contact Ingenious Targeting Laboratory for custom mouse model projects.',
+            name: 'Contact ingenious targeting laboratory',
+            description: 'Contact ingenious targeting laboratory for custom mouse model projects.',
             mainEntity: {
               '@type': 'Organization',
-              name: 'Ingenious Targeting Laboratory',
-              telephone: '+1-631-468-8530',
+              name: 'ingenious targeting laboratory',
+              telephone: '+1-631-468-8534',
               email: 'inquiry@genetargeting.com',
               address: {
                 '@type': 'PostalAddress',

@@ -94,6 +94,7 @@ export default function LinkedInInsight() {
         }}
       />
       <noscript>
+        {/* eslint-disable-next-line @next/next/no-img-element -- Tracking pixel requires img tag */}
         <img
           height="1"
           width="1"

@@ -8,7 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
 import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
-import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconImage, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconFileText, IconZap } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconZap } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Legacy content link
@@ -18,7 +18,7 @@ const legacyContentUrl = '/legacy/humanized-mouse-models';
 const heroData = {
   badge: "Human Gene Knockin",
   title: "Humanized Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated hundreds of humanized mouse models for researchers and pharmaceutical companies worldwide. Our humanized models have supported therapeutic development programs across immuno-oncology, metabolic disease, neuroscience, and other areas, with results published in peer reviewed journals.",
+  intro: "Since 1998, ingenious targeting laboratory has generated hundreds of humanized mouse models for researchers and pharmaceutical companies worldwide. Our humanized models have supported therapeutic development programs across immuno-oncology, metabolic disease, neuroscience, and other areas, with results published in peer reviewed journals.",
   description: "Humanized mouse models express human proteins or protein domains in place of their mouse counterparts. This humanization enables testing of human specific therapeutics, study of human specific biology, and improved translation from preclinical models to clinical outcomes."
 };
 
@@ -125,7 +125,7 @@ const strategiesData = {
 // TruHumanization Data
 const truHumanizationData = {
   title: "TruHumanization™ Technology",
-  description: "Ingenious Targeting Laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
+  description: "ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
   note: "Quality Assurance: All TruHumanization™ projects include pre-germline analysis to verify correct human sequence integration before mouse generation."
 };
 
@@ -278,7 +278,7 @@ const getFaqData = () => [
     question: "Which humanized immune checkpoint models are available?",
     answer: (
       <>
-        Ingenious Targeting Laboratory offers <GlossaryTermLink term="humanized-immune-checkpoint">humanized immune checkpoint models</GlossaryTermLink> for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies.
+        ingenious targeting laboratory offers <GlossaryTermLink term="humanized-immune-checkpoint">humanized immune checkpoint models</GlossaryTermLink> for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies.
       </>
     )
   }
@@ -1020,7 +1020,7 @@ export default function HumanizedMouseModelsPage() {
             "name": "Humanized Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom humanized mouse models expressing human genes. Immune checkpoint humanization, drug target humanization, and complete gene replacement. Since 1998.",
             "serviceType": "Custom Mouse Model Generation"

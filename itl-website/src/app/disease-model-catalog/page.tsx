@@ -4,9 +4,8 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
-import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -14,7 +13,7 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Catalog Models",
   title: "Disease Model Catalog",
-  intro: "Ingenious Targeting Laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
+  intro: "ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
   description: "Our disease model catalog includes models across all major therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. All catalog models include genotyping protocols, strain background information, and health documentation."
 };
 
@@ -210,7 +209,7 @@ export default function DiseaseModelCatalogPage() {
             "description": "Catalog of disease model mouse lines available for research. Oncology, neuroscience, metabolic, cardiovascular, and immunology disease models.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Disease Model Mouse Lines"

@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Cell Type Specific",
   title: "Tissue Specific Knockout",
-  intro: "Since 1998, Ingenious Targeting Laboratory has completed over 2,500 mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.",
   description: "Tissue specific knockout restricts gene deletion to defined cell types or organs while preserving gene function elsewhere in the organism. By crossing a floxed (conditional) allele to a tissue specific Cre driver line, gene deletion occurs only in cells where Cre recombinase is expressed."
 };
 
@@ -138,8 +138,6 @@ const publications = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
 
 const testimonials = [
   { quote: plumleyTestimonial.quote, name: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
@@ -818,7 +816,7 @@ export default function TissueSpecificKnockoutPage() {
             "name": "Tissue Specific Knockout Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom tissue specific knockout mouse models. Cell type specific gene deletion using Cre lox technology. Comprehensive Cre driver guidance since 1998.",
             "serviceType": "Mouse Model Generation"

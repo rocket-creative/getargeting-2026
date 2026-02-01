@@ -1,7 +1,7 @@
 // Extended Glossary Term Data for Individual Pages
 // Contains full content, FAQs, and related information
 
-import { glossaryTerms, type GlossaryTerm, type GlossaryCategory } from './glossaryTerms';
+import { glossaryTerms, type GlossaryTerm } from './glossaryTerms';
 
 export interface GlossaryTermFAQ {
   question: string;
@@ -275,7 +275,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   // ═══════════════════════════════════════════════════════════════════════════
   "knockout-mouse-models": {
     metaTitle: "Knockout Mouse Models | Applications, Strategies, and Custom Development",
-    metaDescription: "Learn how knockout mouse models are engineered, why they're vital for disease research, and how Ingenious Targeting Laboratory designs precise, ES cell-based KO models for functional genomics.",
+    metaDescription: "Learn how knockout mouse models are engineered, why they're vital for disease research, and how ingenious targeting laboratory designs precise, ES cell-based KO models for functional genomics.",
     introduction: "Understanding what a gene does often begins with seeing what happens when it's missing. Knockout (KO) mouse models are among the most fundamental tools in biomedical research, allowing scientists to eliminate a gene's function and observe the resulting effects on physiology, behavior, and disease development.",
     sections: [
       {

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * General Contact Page - Ingenious Targeting Laboratory
+ * General Contact Page - ingenious targeting laboratory
  * Embeds HubSpot contact form
  */
 
@@ -24,9 +24,9 @@ import {
 // Contact information
 const contactInfo = {
   email: 'inquiry@genetargeting.com',
-  phone: '+1 (631) 468-8530',
+  phone: '+1 (631) 468-8534',
   hours: 'Monday - Friday, 9 AM - 5 PM ET',
-  address: 'Ingenious Targeting Laboratory\n761-80 Coates Avenue\nHolbrook, NY 11741',
+  address: 'ingenious targeting laboratory\n761-80 Coates Avenue\nHolbrook, NY 11741',
 };
 
 export default function GeneralContactPage() {
@@ -40,9 +40,9 @@ export default function GeneralContactPage() {
     document.head.appendChild(script);
 
     script.onload = () => {
-      // @ts-ignore - HubSpot global
+      // @ts-expect-error - HubSpot global object
       if (window.hbspt) {
-        // @ts-ignore
+        // @ts-expect-error - HubSpot forms API
         window.hbspt.forms.create({
           region: 'na1',
           portalId: '242707', // ITL's HubSpot portal ID

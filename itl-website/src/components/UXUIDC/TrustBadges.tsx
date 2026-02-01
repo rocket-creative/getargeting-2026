@@ -7,7 +7,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { gsap, ScrollTrigger } from '@/lib/UXUIDC/gsap';
+import { gsap } from '@/lib/UXUIDC/gsap';
 
 export default function UXUIDCTrustBadges() {
   const stats = [

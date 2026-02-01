@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Hypertension Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom mouse models for studying hypertension, blood pressure regulation, and antihypertensive therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom mouse models for studying hypertension, blood pressure regulation, and antihypertensive therapeutics.",
   description: "Our hypertension models have contributed to research on renin angiotensin system, renal function, and vascular biology. Hypertension mouse models provide essential platforms for investigating blood pressure regulatory pathways, testing hypotheses about genetic susceptibility, and developing therapies for hypertension affecting millions of patients worldwide."
 };
 

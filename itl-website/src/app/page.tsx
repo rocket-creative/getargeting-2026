@@ -101,7 +101,7 @@ const overviewData = {
   sectionTitle: 'Overview',
   whyChoose: {
     title: 'Why Researchers Choose ingenious targeting laboratory',
-    content: 'For more than 30 years, ingenious targeting laboratory has supported biomedical research with animal models that provide stable allele designs, reproducible cohorts, C57BL/6 backgrounds, and U.S.-based QC oversight. Each project follows an evidence-based, results-driven approach to deliver animal models with reliable inheritance and long-term performance.',
+    content: 'For more than 25 years, ingenious targeting laboratory has supported biomedical research with animal models that provide stable allele designs, reproducible cohorts, C57BL/6 backgrounds, and U.S.-based QC oversight. Each project follows an evidence-based, results-driven approach to deliver animal models with reliable inheritance and long-term performance.',
   },
   whatWeProvide: {
     title: 'What We Provide',
@@ -109,7 +109,7 @@ const overviewData = {
       'Custom mouse models including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.',
       'Multi-generation cohort development and colony planning for study readiness.',
       'Animal model catalog access to 10,000+ lines for study-ready biomedical research.',
-      'Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions',
+      'Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions.',
     ],
   },
 };
@@ -310,7 +310,7 @@ export default function HomePage() {
             },
             contactPoint: {
               '@type': 'ContactPoint',
-              telephone: '+1-631-468-8530',
+              telephone: '+1-631-468-8534',
               contactType: 'customer service',
             },
           }),

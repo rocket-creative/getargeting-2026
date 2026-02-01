@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IconMail, IconCheckCircle } from './Icons';
 import FlodeskForm from './FlodeskForm';
 
@@ -43,21 +43,20 @@ function getCookie(name: string): string | null {
 
 export default function NewsletterGate({ 
   children, 
-  articleTitle = 'this article',
   previewContent 
 }: NewsletterGateProps) {
-  const [isVerified, setIsVerified] = useState<boolean | null>(null);
-  const [isChecking, setIsChecking] = useState(true);
+  const [isVerified, setIsVerified] = useState<boolean>(() => {
+    if (typeof document === 'undefined') return false;
+    return getCookie(COOKIE_NAME) === 'true';
+  });
+  const [isChecking] = useState(() => {
+    // Only show loading state during SSR hydration
+    return typeof document === 'undefined';
+  });
   const [email, setEmail] = useState('');
   const [verifyError, setVerifyError] = useState('');
   const [showSignup, setShowSignup] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
-
-  useEffect(() => {
-    const verified = getCookie(COOKIE_NAME);
-    setIsVerified(verified === 'true');
-    setIsChecking(false);
-  }, []);
 
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault();

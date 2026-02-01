@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Inducible Gene Expression",
   title: "Conditional Knockin Mice",
-  intro: "Conditional knockin mouse models enable controlled gene expression through Cre lox mediated recombination. Since 1998, Ingenious Targeting Laboratory has generated conditional knockin models for inducible reporter expression, tissue specific gene activation, and temporal control of gene function.",
+  intro: "Conditional knockin mouse models enable controlled gene expression through Cre lox mediated recombination. Since 1998, ingenious targeting laboratory has generated conditional knockin models for inducible reporter expression, tissue specific gene activation, and temporal control of gene function.",
   description: "Conditional knockin alleles are designed with loxP sites flanking a STOP cassette that prevents expression until Cre mediated recombination removes the STOP sequence. This approach enables spatial and temporal control over gene expression, essential for studying genes with developmental effects or when expression timing is critical."
 };
 
@@ -94,8 +94,6 @@ const expressionTiming = [
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const maxsonTestimonial = getTestimonialById('maxson-ohsu')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
 const testimonials = [
@@ -677,7 +675,7 @@ export default function ConditionalKnockinMicePage() {
             "name": "Conditional Knockin Mice",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Conditional knockin mouse models with inducible gene expression. Cre lox controlled knockin alleles for temporal and spatial gene control.",
             "serviceType": "Conditional Knockin Mouse Model Generation"

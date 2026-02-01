@@ -12,7 +12,7 @@ import BlogIndexClient from './BlogIndexClient';
 export const metadata: Metadata = {
   title: 'Ingenious Blog Archive | Legacy Articles | ITL',
   description:
-    'Browse our archive of technical articles, educational guides, and research insights from the original Ingenious Targeting Laboratory blog.',
+    'Browse our archive of technical articles, educational guides, and research insights from the original ingenious targeting laboratory blog.',
 };
 
 interface BlogPostMeta {
@@ -148,7 +148,7 @@ export default function IngeniousBlogPage() {
               }}
             >
               Browse our archive of {blogPosts.length} technical articles, educational guides, and
-              research insights from the original Ingenious Targeting Laboratory blog.
+              research insights from the original ingenious targeting laboratory blog.
             </p>
             <p
               style={{

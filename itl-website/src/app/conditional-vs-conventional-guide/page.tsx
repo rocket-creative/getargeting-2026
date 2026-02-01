@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Comparison Guide",
   title: "Conditional vs Conventional Knockout",
-  intro: "Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
   description: "Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project."
 };
 
@@ -175,8 +175,6 @@ const quickDecisionData = {
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const harhajTestimonial = getTestimonialById('harhaj-pennstate')!;
-const plumleyTestimonial = getTestimonialById('plumley-warren')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonialsData = [
   { quote: harhajTestimonial.quote, author: formatAuthorWithCredentials(harhajTestimonial), affiliation: harhajTestimonial.affiliation },
@@ -279,7 +277,7 @@ export default function ConditionalVsConventionalGuidePage() {
             "description": "Compare conditional and conventional knockout strategies. Side by side analysis of timeline, cost, flexibility, and applications. Expert guidance since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Research Guides"

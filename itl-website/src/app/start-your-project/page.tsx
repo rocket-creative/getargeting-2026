@@ -1,13 +1,12 @@
 'use client';
 
 /**
- * Start Your Project Page - Ingenious Targeting Laboratory
+ * Start Your Project Page - ingenious targeting laboratory
  * Mirrors genetargeting.com/start-your-project with PDF download gated by email
  */
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -15,14 +14,10 @@ import {
   UXUIDCFooter,
   UXUIDCAnimatedCounter,
   IconDNA,
-  IconTarget,
-  IconMicroscope,
   IconCheckCircle,
   IconArrowRight,
   IconFlask,
   IconDownload,
-  IconMail,
-  IconChevronRight,
 } from '@/components/UXUIDC';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -95,7 +90,6 @@ const stats = [
 export default function StartYourProjectPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [email, setEmail] = useState('');
-  const [catalogSearch, setCatalogSearch] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 

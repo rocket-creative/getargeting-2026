@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Line Preservation",
   title: "Mouse Cryopreservation Services",
-  intro: "Since 1998, Ingenious Targeting Laboratory has provided cryopreservation services to protect valuable genetically engineered mouse lines for researchers worldwide. Our cryopreservation expertise ensures your mouse models remain available for future research, protected against colony loss due to disease outbreak, breeding failure, or facility disruption.",
+  intro: "Since 1998, ingenious targeting laboratory has provided cryopreservation services to protect valuable genetically engineered mouse lines for researchers worldwide. Our cryopreservation expertise ensures your mouse models remain available for future research, protected against colony loss due to disease outbreak, breeding failure, or facility disruption.",
   description: "Cryopreservation converts living mouse lines into stable frozen archives that can be stored indefinitely and recovered when needed. Whether preserving sperm for rapid archiving or embryos for maximum genetic preservation, cryopreservation provides insurance for your research investment and enables efficient management of mouse model resources."
 };
 
@@ -125,9 +125,7 @@ const methodSelectionGuide = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const saidTestimonial = getTestimonialById('said-uci')!;
-const francoTestimonial = getTestimonialById('franco-colorado')!;
 
 const testimonials = [
   { quote: saidTestimonial.quote, name: formatAuthorWithCredentials(saidTestimonial), affiliation: saidTestimonial.affiliation },
@@ -777,11 +775,11 @@ export default function CryopreservationServicesPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -790,26 +788,29 @@ export default function CryopreservationServicesPage() {
                     backgroundColor: '#ffffff',
                     border: '1px solid #e0e0e0',
                     borderRadius: '8px',
-                    padding: '30px',
+                    padding: testimonials.length === 1 ? '48px 56px' : '30px',
                     display: 'flex',
                     flexDirection: 'column',
                     transition: 'all 0.3s ease',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    textAlign: testimonials.length === 1 ? 'center' : 'left',
                   }}
                 >
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
                   <p style={{
                     color: '#666',
                     fontFamily: 'Lato, sans-serif',
-                    fontSize: '.9rem',
+                    fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem',
                     fontWeight: 400,
                     lineHeight: 1.6,
                     fontStyle: 'italic',
                     marginBottom: '20px',
-                    flex: 1,
+                    flex: testimonials.length > 1 ? 1 : undefined,
                   }}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
-                  <div style={{ marginTop: 'auto' }}>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
                       — {testimonial.name}
                     </p>
@@ -937,7 +938,7 @@ export default function CryopreservationServicesPage() {
             "name": "Mouse Cryopreservation Services",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Mouse cryopreservation services for long term line preservation. Sperm and embryo freezing with validated recovery. Protect your mouse models since 1998.",
             "serviceType": "Cryopreservation Services"

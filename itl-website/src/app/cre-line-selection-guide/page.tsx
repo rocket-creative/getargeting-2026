@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
@@ -299,7 +299,7 @@ export default function CreLineSelectionGuidePage() {
             "description": "Expert guidance for selecting Cre driver lines for conditional knockout experiments. Covers tissue specificity, timing, efficiency, and common selection mistakes.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Research Guides"

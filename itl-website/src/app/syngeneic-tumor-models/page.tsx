@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Immuno Oncology",
   title: "Syngeneic Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported immuno oncology research with custom mouse models that enable syngeneic tumor studies, providing immunocompetent platforms for evaluating cancer immunotherapies, checkpoint inhibitors, and combination treatment strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology research with custom mouse models that enable syngeneic tumor studies, providing immunocompetent platforms for evaluating cancer immunotherapies, checkpoint inhibitors, and combination treatment strategies.",
   description: "Syngeneic tumor models involve implanting tumor cell lines into genetically compatible mouse hosts, enabling study of tumor immunity in the context of a fully functional immune system."
 };
 
@@ -50,12 +50,6 @@ const humanizedCheckpoints = [
   { checkpoint: "PDL1 Humanized", application: "Testing anti PDL1 antibodies (atezolizumab, durvalumab)" },
   { checkpoint: "CTLA4 Humanized", application: "Testing anti CTLA4 antibodies (ipilimumab)" },
   { checkpoint: "Dual PD1/CTLA4", application: "Combination checkpoint blockade studies" }
-];
-
-const implantationMethods = [
-  { method: "Subcutaneous", description: "Most common. Easy tumor measurement by caliper. Simple injection technique.", advantages: "Accessible, measurable, reproducible", limitations: "Does not replicate orthotopic microenvironment" },
-  { method: "Orthotopic", description: "Tumor implanted in organ of origin (mammary fat pad, cecum, etc.).", advantages: "More physiological tumor microenvironment", limitations: "More technically demanding" },
-  { method: "Intravenous", description: "Tail vein injection seeds tumors in lung.", advantages: "Metastasis and lung colonization studies", limitations: "Limited to lung metastasis model" }
 ];
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
@@ -202,7 +196,7 @@ export default function SyngeneicTumorModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
     </div>
   );
 }

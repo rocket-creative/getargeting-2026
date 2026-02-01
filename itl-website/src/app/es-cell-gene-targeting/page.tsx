@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Gene Targeting Technology",
   title: "ES Cell Gene Targeting",
-  intro: "Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects using embryonic stem cell technology. Our ES cell based approach has supported research published in Science, Nature, Cell, and more than 800 peer reviewed journals.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects using embryonic stem cell technology. Our ES cell based approach has supported research published in Science, Nature, Cell, and more than 800 peer reviewed journals.",
   description: "ES cell gene targeting uses homologous recombination to introduce precise genetic modifications at defined genomic locations. This approach enables knockout, knockin, conditional, and humanized allele generation with complete control over allele structure."
 };
 
@@ -41,14 +41,6 @@ const whyItMatters = [
   "Defined starting point: The characterized clone provides a reference for all derived mice",
   "Predictable inheritance: Properly characterized alleles segregate as expected through breeding",
   "Troubleshooting foundation: If unexpected phenotypes arise, the characterized allele provides baseline for investigation"
-];
-
-// Targeting Vector Elements
-const vectorElements = [
-  { name: "Homology arms", desc: "Sequences flanking the modification that direct recombination to the correct locus (typically 3 to 8 kb each)" },
-  { name: "Selection cassette", desc: "Positive selection marker (usually neomycin resistance) for identifying targeted clones" },
-  { name: "Modification elements", desc: "The specific changes to be introduced (deletions, insertions, point mutations, loxP sites)" },
-  { name: "Negative selection", desc: "Optional elements (such as thymidine kinase) to select against random integration" }
 ];
 
 // Allele Types
@@ -98,8 +90,6 @@ const publicationsData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
@@ -137,7 +127,7 @@ const getFaqData = () => [
   },
   {
     question: "What strain backgrounds are available for ES cell targeting?",
-    answer: "Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and 129 strain ES cells. C57BL/6 is most commonly requested for its well characterized genetics and suitability for most research applications. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells. C57BL/6 is most commonly requested for its well characterized genetics and suitability for most research applications. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "Can ES cell targeting be used for any gene modification?",
@@ -443,7 +433,7 @@ export default function ESCellGeneTargetingPage() {
               Selected Publications
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', marginBottom: '30px' }}>
-              Models generated using ES cell targeting by Ingenious Targeting Laboratory:
+              Models generated using ES cell targeting by ingenious targeting laboratory:
             </p>
 
             <div className="grid grid-cols-1 gap-4">
@@ -692,7 +682,7 @@ export default function ESCellGeneTargetingPage() {
             "name": "ES Cell Gene Targeting",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "ES cell gene targeting for precise mouse model generation. Pre germline characterization ensures allele accuracy. 2,500+ projects since 1998.",
             "serviceType": "ES Cell Gene Targeting"

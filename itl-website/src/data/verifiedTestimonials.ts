@@ -35,8 +35,8 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
     id: 'bosmans-ghent',
     quote: "We are very happy with this mouse line and we're not done yet. There's still plenty to do. The versatility of the F.A.S.T.™ approach is really unparalleled. There are so many possibilities to use the cassette that one paper does not showcase it all. Also, the addition of N-terminal GFP has helped quite a bit to understand gene expression patterns.",
     author: 'Frank Bosmans',
-    credentials: 'PharmD',
-    affiliation: 'Ghent University',
+    credentials: 'PhD',
+    affiliation: 'Ghent University, Belgium',
     tags: ['fast-technology', 'reporter', 'knockin'],
   },
   {

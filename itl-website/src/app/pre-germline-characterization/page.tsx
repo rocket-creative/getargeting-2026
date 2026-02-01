@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Quality Assurance",
   title: "Pre-Germline Characterization",
-  intro: "Before germline transmission, Ingenious Targeting Laboratory performs comprehensive characterization of targeted ES cell clones, ensuring that only correctly targeted clones proceed to chimera production and significantly reducing project risk.",
+  intro: "Before germline transmission, ingenious targeting laboratory performs comprehensive characterization of targeted ES cell clones, ensuring that only correctly targeted clones proceed to chimera production and significantly reducing project risk.",
   description: "Pre-germline characterization validates targeting at the molecular level before the time and expense of chimera production and breeding, giving researchers confidence in their custom models."
 };
 
@@ -36,12 +36,6 @@ const southernBlotDetails = [
   { aspect: "Internal Probe", purpose: "Detects the targeting cassette (Neo, selection marker). Confirms single copy and rules out tandem duplications." }
 ];
 
-const qualityMetrics = [
-  { metric: "Targeting Efficiency", typical: "1 to 30% of screened clones", factors: "Varies by locus, construct design, ES cell line" },
-  { metric: "Karyotype Normal", typical: ">80% of targeted clones", factors: "Clone passage number, ES cell line quality" },
-  { metric: "Single Copy Verified", typical: "Most correctly targeted clones", factors: "Southern blot and qPCR confirmation" }
-];
-
 const cloneSelectionCriteria = [
   { criterion: "Correct Southern Pattern", importance: "Critical - confirms homologous recombination" },
   { criterion: "Normal Karyotype", importance: "Essential for germline transmission" },
@@ -59,8 +53,6 @@ const projectTimeline = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 const francoTestimonial = getTestimonialById('franco-colorado')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: francoTestimonial.quote, author: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
 ];
@@ -186,9 +178,11 @@ export default function PreGermlineCharacterizationPage() {
         </section>
 
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
-            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '40px 48px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '1rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
           </div>
         </section>
 
@@ -220,7 +214,7 @@ export default function PreGermlineCharacterizationPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Pre-Germline Characterization", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Comprehensive ES cell clone characterization before germline transmission since 1998.", "serviceType": "Pre-Germline Characterization" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Pre-Germline Characterization", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Comprehensive ES cell clone characterization before germline transmission since 1998.", "serviceType": "Pre-Germline Characterization" }) }} />
     </div>
   );
 }

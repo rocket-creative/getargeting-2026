@@ -12,7 +12,7 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Neurodegenerative Disease Models",
   title: "Parkinson Mouse Model",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported Parkinson disease research with custom mouse models enabling mechanistic studies of dopaminergic neurodegeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported Parkinson disease research with custom mouse models enabling mechanistic studies of dopaminergic neurodegeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
   description: "Parkinson disease mouse models provide essential platforms for investigating the molecular pathways underlying neuronal loss in the substantia nigra, testing hypotheses about alpha synuclein aggregation and spread, and developing therapies targeting LRRK2, GBA, and other genetically validated targets."
 };
 
@@ -89,9 +89,7 @@ const publicationsData = [
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonials = [
   { quote: plumleyTestimonial.quote, name: formatAuthorWithCredentials(plumleyTestimonial), affiliation: plumleyTestimonial.affiliation },
@@ -511,14 +509,14 @@ export default function ParkinsonsMouseModelsPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
+                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                     <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                   </div>
@@ -662,7 +660,7 @@ export default function ParkinsonsMouseModelsPage() {
             "name": "Parkinson Disease Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom Parkinson disease mouse models for neurodegenerative research. Study alpha synuclein, dopamine pathways, and motor dysfunction.",
             "serviceType": "Parkinson Disease Mouse Model Generation"

@@ -11,13 +11,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Quote Request",
-  intro: "Submit your mouse model project details to receive a customized quote including timeline, deliverables, and pricing. Ingenious Targeting Laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
+  intro: "Submit your mouse model project details to receive a customized quote including timeline, deliverables, and pricing. ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
   description: ""
 };
 

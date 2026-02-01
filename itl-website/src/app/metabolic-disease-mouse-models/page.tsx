@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Metabolic Research",
   title: "Metabolic Disease Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported metabolic disease researchers with custom mouse models contributing to peer reviewed publications in Diabetes, Cell Metabolism, Nature Medicine, and leading metabolism journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported metabolic disease researchers with custom mouse models contributing to peer reviewed publications in Diabetes, Cell Metabolism, Nature Medicine, and leading metabolism journals worldwide.",
   description: "Our metabolic disease mouse models have advanced understanding of glucose homeostasis, lipid metabolism, and the pathophysiology of obesity related complications."
 };
 
@@ -199,9 +199,11 @@ export default function MetabolicDiseaseMouseModelsPage() {
         </section>
 
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
-            {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: '40px 48px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: '1rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
           </div>
         </section>
 
@@ -233,7 +235,7 @@ export default function MetabolicDiseaseMouseModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "name": "Ingenious Targeting Laboratory" }, "description": "Custom metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
     </div>
   );
 }

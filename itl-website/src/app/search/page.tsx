@@ -6,7 +6,7 @@
  * Client-side search functionality
  */
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -81,7 +81,7 @@ const siteContent = [
   { title: 'Cre line selection guide', description: 'How to choose the right Cre driver line for your research.', url: '/cre-line-selection-guide', category: 'Resources' },
   
   // Company
-  { title: 'About iTL', description: 'Learn about Ingenious Targeting Laboratory and our 25 years of experience.', url: '/about-itl', category: 'Company' },
+  { title: 'About iTL', description: 'Learn about ingenious targeting laboratory and our 25 years of experience.', url: '/about-itl', category: 'Company' },
   { title: 'Why choose iTL', description: 'Discover why researchers trust iTL for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
   { title: 'Request a quote', description: 'Submit a project inquiry and receive a custom quote.', url: '/request-quote', category: 'Company' },
@@ -89,15 +89,12 @@ const siteContent = [
 ];
 
 export default function SearchPage() {
-  const [query, setQuery] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
-
-  // Get query from URL on mount
-  useEffect(() => {
+  const [query, setQuery] = useState(() => {
+    if (typeof window === 'undefined') return '';
     const params = new URLSearchParams(window.location.search);
-    const q = params.get('q');
-    if (q) setQuery(q);
-  }, []);
+    return params.get('q') || '';
+  });
+  const [isFocused, setIsFocused] = useState(false);
 
   // Filter results based on query
   const results = useMemo(() => {

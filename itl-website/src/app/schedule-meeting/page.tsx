@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Schedule Meeting Page - Ingenious Targeting Laboratory
+ * Schedule Meeting Page - ingenious targeting laboratory
  * Embeds HubSpot meetings scheduler
  */
 
@@ -33,7 +33,7 @@ const meetingBenefits = [
 // Contact info
 const contactInfo = {
   email: 'inquiry@genetargeting.com',
-  phone: '+1 (631) 468-8530',
+  phone: '+1 (631) 468-8534',
 };
 
 export default function ScheduleMeetingPage() {
@@ -47,9 +47,9 @@ export default function ScheduleMeetingPage() {
     document.head.appendChild(script);
 
     script.onload = () => {
-      // @ts-ignore - HubSpot global
+      // @ts-expect-error - HubSpot global object
       if (window.hbspt) {
-        // @ts-ignore
+        // @ts-expect-error - HubSpot forms API
         window.hbspt.forms.create({
           region: 'na1',
           portalId: '242707', // ITL's HubSpot portal ID

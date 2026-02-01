@@ -6,14 +6,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Custom Gene Targeting",
   title: "Custom Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
-  description: "Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, Ingenious Targeting Laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals."
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
+  description: "Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, ingenious targeting laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals."
 };
 
 // Stats Data
@@ -28,7 +28,7 @@ const statsData = [
 const modelTypes = [
   {
     title: "Knockout Mouse Models",
-    description: "Knockout mice enable loss of function studies by eliminating specific gene activity. Ingenious Targeting Laboratory offers both conventional knockouts for complete gene inactivation and conditional knockouts that allow spatial and temporal control of gene deletion.",
+    description: "Knockout mice enable loss of function studies by eliminating specific gene activity. ingenious targeting laboratory offers both conventional knockouts for complete gene inactivation and conditional knockouts that allow spatial and temporal control of gene deletion.",
     features: [
       { name: "Conventional Knockout", desc: "Permanently disrupt target gene function in all tissues throughout development, ideal for understanding essential gene function and creating disease models where complete loss of function is required." },
       { name: "Conditional Knockout", desc: "Use the Cre lox system to enable gene deletion in specific tissues or at defined timepoints, essential for studying genes with embryonic lethal phenotypes or investigating tissue specific gene function." }
@@ -68,7 +68,7 @@ const modelTypes = [
 // Advanced Technologies
 const advancedTech = {
   title: "Conditional Gene Targeting",
-  description: "Ingenious Targeting Laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted ES cell clone.",
+  description: "ingenious targeting laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted ES cell clone.",
   alleles: [
     { name: "tm1a", desc: "Knockout first allele (LacZ reporter intact)" },
     { name: "tm1b", desc: "Complete null allele" },
@@ -91,7 +91,7 @@ const strainOptions = [
 const additionalServices = [
   {
     title: "Genotyping Services",
-    description: "Ingenious Targeting Laboratory provides comprehensive genotyping services to support your mouse model research.",
+    description: "ingenious targeting laboratory provides comprehensive genotyping services to support your mouse model research.",
     items: [
       "PCR based genotyping for targeted alleles",
       "Quantitative PCR for copy number determination",
@@ -111,7 +111,7 @@ const additionalServices = [
   },
   {
     title: "Microinjection Services",
-    description: "Ingenious Targeting Laboratory's microinjection services deliver targeted ES cells into blastocysts for chimera generation.",
+    description: "ingenious targeting laboratory's microinjection services deliver targeted ES cells into blastocysts for chimera generation.",
     items: [
       "Blastocyst injection with characterized ES cell clones",
       "Morula injection for accelerated timelines",
@@ -126,8 +126,6 @@ const additionalServices = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const francoTestimonial = getTestimonialById('franco-colorado')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
@@ -150,12 +148,12 @@ const modelSelectionGuides = [
 // FAQ Data
 const faqData = [
   {
-    question: "Can Ingenious Targeting Laboratory provide partial services if I already have reagents?",
+    question: "Can ingenious targeting laboratory provide partial services if I already have reagents?",
     answer: "Yes. Partial service options are available for researchers with existing targeting vectors, ES cells, or other reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a customized quote."
   },
   {
     question: "What strain backgrounds are available for custom models?",
-    answer: "Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "How long does it take to generate a custom mouse model?",
@@ -497,7 +495,7 @@ export default function MouseModelServicesPage() {
               Strain Background Options
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '25px' }}>
-              Ingenious Targeting Laboratory generates custom models on the genetic background most appropriate for your research goals:
+              ingenious targeting laboratory generates custom models on the genetic background most appropriate for your research goals:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -664,7 +662,7 @@ export default function MouseModelServicesPage() {
               Start Your Project
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants can help you design the optimal mouse model strategy for your research goals. From initial concept through study ready animals, Ingenious Targeting Laboratory provides comprehensive support at every project phase.
+              Our scientific consultants can help you design the optimal mouse model strategy for your research goals. From initial concept through study ready animals, ingenious targeting laboratory provides comprehensive support at every project phase.
             </p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link 
@@ -771,7 +769,7 @@ export default function MouseModelServicesPage() {
             "name": "Custom Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,500+ projects since 1998.",
             "serviceType": "Custom Mouse Model Generation"

@@ -6,13 +6,13 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Inducible Systems",
   title: "Inducible Gene Expression",
-  intro: "Since 1998, Ingenious Targeting Laboratory has incorporated inducible expression systems into hundreds of mouse models, enabling researchers to control gene activation or deletion with temporal precision through small molecule administration.",
+  intro: "Since 1998, ingenious targeting laboratory has incorporated inducible expression systems into hundreds of mouse models, enabling researchers to control gene activation or deletion with temporal precision through small molecule administration.",
   description: "Inducible gene expression systems provide the ability to turn genes on or off at any point in the animal's life. This temporal control separates developmental requirements from adult functions, enables study of acute gene loss, and models therapeutic intervention timing for drug development."
 };
 
@@ -75,26 +75,6 @@ const creERT2Lines = [
   { line: "Myh6 CreERT2", tissue: "Cardiomyocytes", applications: "Inducible heart knockout" },
   { line: "Nestin CreERT2", tissue: "Neural progenitors", applications: "Inducible neural knockout" },
   { line: "LysM CreERT2", tissue: "Myeloid cells", applications: "Inducible macrophage knockout" }
-];
-
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Wang L, Noyer L, Jishage M, et al.",
-    year: "2025",
-    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
-    journal: "Sci Immunol",
-    volume: "10(108): eadq8860",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
-  }
 ];
 
 // Testimonials
@@ -652,7 +632,7 @@ export default function InducibleGeneExpressionPage() {
             "name": "Inducible Gene Expression Systems",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Inducible gene expression systems for temporal gene control. Tamoxifen, doxycycline, and F.A.S.T. technology for precise research applications since 1998.",
             "serviceType": "Inducible Gene Expression"

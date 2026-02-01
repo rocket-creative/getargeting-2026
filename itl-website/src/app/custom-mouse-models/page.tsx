@@ -7,15 +7,15 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
   badge: "Custom Mouse Model Services",
   title: "Custom Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated over 2,500 custom mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.",
-  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals."
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,500 custom mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.",
+  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, ingenious targeting laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals."
 };
 
 // Stats Data
@@ -29,7 +29,7 @@ const statsData = [
 // Knockout Models Data
 const knockoutData = {
   title: "Knockout Mouse Models",
-  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. Ingenious Targeting Laboratory offers multiple knockout strategies tailored to your experimental requirements.",
+  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. ingenious targeting laboratory offers multiple knockout strategies tailored to your experimental requirements.",
   models: [
     {
       title: "Conventional Knockout",
@@ -104,7 +104,7 @@ const humanizedData = {
     },
     {
       title: "BAC Transgenesis",
-      description: "Bacterial artificial chromosome BAC targeting enables integration of large genomic segments including complete genes with native regulatory elements. This approach is valuable when physiological expression patterns are essential.",
+      description: "Bacterial artificial chromosome (BAC) targeting enables integration of large genomic segments including complete genes with native regulatory elements. This approach is valuable when physiological expression patterns are essential.",
       href: "/transgenic-mouse-service"
     }
   ]
@@ -112,7 +112,7 @@ const humanizedData = {
 
 // ITL Approach Data
 const itlApproachData = {
-  title: "The Ingenious Targeting Laboratory Approach",
+  title: "The ingenious targeting laboratory Approach",
   sections: [
     {
       title: "Scientific Consultation",
@@ -132,8 +132,6 @@ const itlApproachData = {
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const hussainTestimonial = getTestimonialById('hussain-michigan')!;
-const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 
 const testimonialsData = [
   { quote: hussainTestimonial.quote, author: formatAuthorWithCredentials(hussainTestimonial), affiliation: hussainTestimonial.affiliation },
@@ -166,14 +164,14 @@ const faqData = [
   },
   {
     question: "What strain backgrounds are available for custom models?",
-    answer: "Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "What is included in a complete custom mouse model project?",
     answer: "Projects include scientific consultation, targeting design, injection, founder generation, breeding to germline transmission, genotyping protocols, and delivery of F1 heterozygous mice."
   },
   {
-    question: "Can Ingenious Targeting Laboratory help if I already have a targeting vector or ES cells?",
+    question: "Can ingenious targeting laboratory help if I already have a targeting vector or ES cells?",
     answer: "Yes. Partial service options are available for researchers with existing reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a customized quote."
   }
 ];
@@ -256,7 +254,7 @@ export default function CustomMouseModelsPage() {
             "description": "Custom knockout, knockin, and humanized mouse model generation services. Over 2,500 projects completed since 1998 with pre germline characterization.",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Custom Mouse Model Generation",
@@ -686,7 +684,7 @@ export default function CustomMouseModelsPage() {
               maxWidth: '700px',
               margin: '0 auto 30px'
             }}>
-              Custom mouse models from Ingenious Targeting Laboratory have contributed to over 800 peer reviewed publications.
+              Custom mouse models from ingenious targeting laboratory have contributed to over 800 peer reviewed publications.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {publicationsData.map((pub, index) => (

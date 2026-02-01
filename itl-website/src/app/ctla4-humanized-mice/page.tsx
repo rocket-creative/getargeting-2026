@@ -13,7 +13,7 @@ import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 const heroData = {
   badge: "Immune Checkpoint Models",
   title: "CTLA4 Humanized Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom knockin mouse models, including humanized immune checkpoint mice for developing next generation immunotherapies. CTLA4 humanized mice express human cytotoxic T lymphocyte associated protein 4, enabling preclinical testing of anti CTLA4 antibodies in immunocompetent mice with functional immune systems.",
+  intro: "Since 1998, ingenious targeting laboratory has generated custom knockin mouse models, including humanized immune checkpoint mice for developing next generation immunotherapies. CTLA4 humanized mice express human cytotoxic T lymphocyte associated protein 4, enabling preclinical testing of anti CTLA4 antibodies in immunocompetent mice with functional immune systems.",
   description: "These models support development of ipilimumab biosimilars, novel anti CTLA4 antibodies, and combination checkpoint immunotherapy approaches for oncology research."
 };
 
@@ -101,8 +101,6 @@ const relatedApplications = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const diekwischTestimonial = getTestimonialById('diekwisch-tamu')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const meansTestimonial = getTestimonialById('means-sanofi')!;
 
 const testimonials = [
@@ -566,7 +564,7 @@ export default function CTLA4HumanizedMicePage() {
             "name": "CTLA4 Humanized Mice",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "CTLA4 humanized mouse models for anti CTLA4 antibody testing. Ipilimumab and checkpoint inhibitor preclinical evaluation in immunocompetent mice.",
             "serviceType": "CTLA4 Humanized Mouse Model Generation"

@@ -6,15 +6,15 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Cancer Research",
   title: "Tumor Suppressor Knockout Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated tumor suppressor knockout models for cancer researchers worldwide. Disruption of tumor suppressor genes is fundamental to understanding cancer initiation, progression, and therapeutic response.",
-  description: "Our gene targeting expertise spans p53, Rb, PTEN, APC, BRCA1/2, and other tumor suppressor genes across all cancer types. Whether you need constitutive knockouts for germline tumor predisposition studies or conditional models for tissue specific tumorigenesis, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your oncology research."
+  intro: "Since 1998, ingenious targeting laboratory has generated tumor suppressor knockout models for cancer researchers worldwide. Disruption of tumor suppressor genes is fundamental to understanding cancer initiation, progression, and therapeutic response.",
+  description: "Our gene targeting expertise spans p53, Rb, PTEN, APC, BRCA1/2, and other tumor suppressor genes across all cancer types. Whether you need constitutive knockouts for germline tumor predisposition studies or conditional models for tissue specific tumorigenesis, ingenious targeting laboratory provides the scientific consultation and technical execution to deliver models optimized for your oncology research."
 };
 
 // Stats Data
@@ -633,7 +633,7 @@ export default function TumorSuppressorKnockoutMicePage() {
             "name": "Tumor Suppressor Knockout Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.",
             "serviceType": "Mouse Model Generation"

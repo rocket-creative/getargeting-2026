@@ -13,8 +13,8 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Strain Background",
   title: "BALB/c Mouse Background",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research.",
-  description: "BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages. Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, Ingenious Targeting Laboratory provides the expertise to deliver well characterized models suited to your research needs."
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research.",
+  description: "BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages. Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, ingenious targeting laboratory provides the expertise to deliver well characterized models suited to your research needs."
 };
 
 // Stats Data
@@ -171,7 +171,7 @@ const faqData = [
   },
   {
     question: "Can I backcross my existing model to BALB/c background?",
-    answer: "Yes. Ingenious Targeting Laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
+    answer: "Yes. ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
   },
   {
     question: "How do strain backgrounds affect model phenotypes?",
@@ -256,7 +256,7 @@ export default function BALBcMouseBackgroundPage() {
             "description": "BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Custom mouse models on BALB/c background since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory",
+              "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

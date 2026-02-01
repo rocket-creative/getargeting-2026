@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Custom Rabbit Models Page - Ingenious Targeting Laboratory
+ * Custom Rabbit Models Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';
@@ -100,7 +100,7 @@ export default function CustomRabbitModelsPage() {
                 maxWidth: '800px',
               }}
             >
-              Ingenious Targeting Laboratory offers custom genetically modified rabbit model services for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.
+              ingenious targeting laboratory offers custom genetically modified rabbit model services for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.
             </p>
             <div className="hero-animate flex flex-wrap gap-4 mt-6">
               <Link

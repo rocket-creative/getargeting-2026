@@ -9,8 +9,7 @@ import {
   UXUIDCResourceLinks,
   ratModelResources,
 } from '@/components/UXUIDC';
-import { IconDNA, IconTarget, IconSettings, IconCheckCircle, IconImage, IconQuote, IconChevronRight
-} from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconImage, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
 const legacyContentUrl = '/legacy/rat-models';

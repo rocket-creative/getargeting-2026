@@ -109,7 +109,7 @@ export function UXUIDCFooter() {
               <p style={{ margin: '0 0 5px 0' }}>761-80 Coates Avenue</p>
               <p style={{ margin: '0 0 10px 0' }}>Holbrook, NY 11741</p>
               <p style={{ margin: '0 0 5px 0' }}>
-                <a href="tel:+16314688530" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">(631) 468-8530</a>
+                <a href="tel:+16314688534" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">(631) 468-8534</a>
               </p>
               <p style={{ margin: 0 }}>
                 <a href="mailto:inquiry@genetargeting.com" style={{ color: 'white', textDecoration: 'none' }} className="hover:underline">inquiry@genetargeting.com</a>

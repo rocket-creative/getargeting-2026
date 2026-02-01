@@ -6,15 +6,15 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconTarget, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconFlask } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconQuote, IconChevronRight, IconFlask } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Protein Detection & Purification",
   title: "Tag Knockin Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene specific antibodies.",
-  description: "Whether you need FLAG, HA, V5, Myc, or other epitope tags, Ingenious Targeting Laboratory designs and generates tag knockin alleles optimized for your specific protein detection and purification goals."
+  intro: "Since 1998, ingenious targeting laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene specific antibodies.",
+  description: "Whether you need FLAG, HA, V5, Myc, or other epitope tags, ingenious targeting laboratory designs and generates tag knockin alleles optimized for your specific protein detection and purification goals."
 };
 
 // Stats Data
@@ -157,9 +157,7 @@ const publicationsData = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const bassonTestimonial = getTestimonialById('basson-kings')!;
 const rothTestimonial = getTestimonialById('roth-upenn')!;
-const arenzanaTestimonial = getTestimonialById('arenzana-pasteur')!;
 
 const testimonials = [
   { quote: rothTestimonial.quote, name: formatAuthorWithCredentials(rothTestimonial), affiliation: rothTestimonial.affiliation },
@@ -607,7 +605,7 @@ export default function TagKnockinMicePage() {
               Selected Publications
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', marginBottom: '30px' }}>
-              Tag knockin models from Ingenious Targeting Laboratory have enabled protein studies published in leading journals:
+              Tag knockin models from ingenious targeting laboratory have enabled protein studies published in leading journals:
             </p>
             
             <div className="grid grid-cols-1 gap-4">
@@ -831,7 +829,7 @@ export default function TagKnockinMicePage() {
             "name": "Tag Knockin Mice",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene specific antibodies. Custom models since 1998.",
             "serviceType": "Custom Mouse Model Generation"

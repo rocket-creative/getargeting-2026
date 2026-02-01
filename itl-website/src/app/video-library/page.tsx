@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Video Library Page - Ingenious Targeting Laboratory
+ * Video Library Page - ingenious targeting laboratory
  * Showcases educational and informational videos
  * Easy to add more videos - just add to the videosData array
  */
@@ -26,7 +26,7 @@ import {
 const videosData = [
   {
     id: 'itl-20-years',
-    title: 'Ingenious Targeting Laboratory - 20 Years of Innovation',
+    title: 'ingenious targeting laboratory - 20 Years of Innovation',
     description: 'Celebrating two decades of excellence in custom mouse model generation and gene targeting services.',
     youtubeId: 'REPLACE_WITH_YOUTUBE_ID', // Replace with actual YouTube video ID
     category: 'Company',
@@ -59,7 +59,7 @@ const videosData = [
   {
     id: 'raghu-mirmira-story',
     title: "Raghu Mirmira's Ingenious Story",
-    description: 'Hear from Dr. Raghu Mirmira about his experience working with Ingenious Targeting Laboratory.',
+    description: 'Hear from Dr. Raghu Mirmira about his experience working with ingenious targeting laboratory.',
     youtubeId: 'REPLACE_WITH_YOUTUBE_ID',
     category: 'Testimonial',
     featured: false,
@@ -423,6 +423,7 @@ function VideoCard({
       >
         {/* YouTube Thumbnail (when ID is available) */}
         {video.youtubeId && video.youtubeId !== 'REPLACE_WITH_YOUTUBE_ID' ? (
+          // eslint-disable-next-line @next/next/no-img-element -- External YouTube thumbnail
           <img
             src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
             alt={video.title}

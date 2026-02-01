@@ -12,7 +12,7 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Immune System Models",
   title: "Autoimmune Mouse Model",
-  intro: "Since 1998, Ingenious Targeting Laboratory has supported autoimmune disease research with custom mouse models enabling mechanistic studies of immune tolerance breakdown, autoreactive lymphocyte development, and therapeutic interventions targeting aberrant immune responses.",
+  intro: "Since 1998, ingenious targeting laboratory has supported autoimmune disease research with custom mouse models enabling mechanistic studies of immune tolerance breakdown, autoreactive lymphocyte development, and therapeutic interventions targeting aberrant immune responses.",
   description: "Autoimmune disease mouse models provide essential platforms for investigating the molecular pathways underlying loss of self tolerance, testing hypotheses about genetic susceptibility, and developing therapies for conditions including lupus, rheumatoid arthritis, multiple sclerosis, and type 1 diabetes."
 };
 
@@ -87,8 +87,6 @@ const publicationsData = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
-const saidTestimonial = getTestimonialById('said-uci')!;
 
 const testimonials = [
   { quote: mirmiraTestimonial.quote, name: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
@@ -333,7 +331,7 @@ export default function AutoimmuneDiseaseMicePage() {
               Categories of Autoimmune Disease
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Autoimmune diseases arise when the immune system fails to distinguish self from non self, leading to attack on the body's own tissues. Mouse models enable controlled study of specific genetic contributions to immune tolerance and autoreactivity.
+              Autoimmune diseases arise when the immune system fails to distinguish self from non self, leading to attack on the body&apos;s own tissues. Mouse models enable controlled study of specific genetic contributions to immune tolerance and autoreactivity.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -677,7 +675,7 @@ export default function AutoimmuneDiseaseMicePage() {
             "name": "Autoimmune Disease Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom autoimmune disease mouse models for immune system research. Study lupus, rheumatoid arthritis, and other autoimmune conditions.",
             "serviceType": "Autoimmune Disease Mouse Model Generation"

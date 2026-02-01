@@ -11,14 +11,14 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle, IconQuote } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "GFP Knockin Mice",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated GFP knockin models that enable visualization of gene expression, cell tracking, and live imaging in mice.",
-  description: "Green fluorescent protein knockin at endogenous loci provides physiological expression patterns without the artifacts associated with transgenic overexpression. Whether you need to visualize gene expression patterns, track specific cell populations, or enable cell isolation by fluorescence, Ingenious Targeting Laboratory designs GFP knockin alleles optimized for your specific imaging and research applications."
+  intro: "Since 1998, ingenious targeting laboratory has generated GFP knockin models that enable visualization of gene expression, cell tracking, and live imaging in mice.",
+  description: "Green fluorescent protein knockin at endogenous loci provides physiological expression patterns without the artifacts associated with transgenic overexpression. Whether you need to visualize gene expression patterns, track specific cell populations, or enable cell isolation by fluorescence, ingenious targeting laboratory designs GFP knockin alleles optimized for your specific imaging and research applications."
 };
 
 // Stats Data

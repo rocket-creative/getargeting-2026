@@ -7,15 +7,15 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Disease Research Models",
   title: "Therapeutic Area Mouse Models",
-  intro: "Since 1998, Ingenious Targeting Laboratory has generated custom mouse models supporting research across every major therapeutic area. Our 2,500+ completed projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.",
-  description: "Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, Ingenious Targeting Laboratory provides the custom knockout, knockin, and humanized models optimized for your specific disease research needs."
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models supporting research across every major therapeutic area. Our 2,500+ completed projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.",
+  description: "Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, ingenious targeting laboratory provides the custom knockout, knockin, and humanized models optimized for your specific disease research needs."
 };
 
 // Stats Data
@@ -30,7 +30,7 @@ const statsData = [
 const therapeuticAreas = [
   {
     title: "Oncology Mouse Models",
-    description: "Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. Ingenious Targeting Laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.",
+    description: "Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. ingenious targeting laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.",
     applications: [
       "Tumor suppressor knockout models enable study of cancer initiation and progression",
       "Conditional approaches allow tissue specific or temporal control over tumor development",
@@ -42,7 +42,7 @@ const therapeuticAreas = [
   },
   {
     title: "Neuroscience Mouse Models",
-    description: "Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. Ingenious Targeting Laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.",
+    description: "Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. ingenious targeting laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.",
     applications: [
       "Alzheimer disease models incorporate mutations in APP, presenilin genes, or tau",
       "Movement disorder research uses alpha synuclein models for Parkinson disease",
@@ -54,7 +54,7 @@ const therapeuticAreas = [
   },
   {
     title: "Metabolic Disease Mouse Models",
-    description: "Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. Ingenious Targeting Laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.",
+    description: "Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. ingenious targeting laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.",
     applications: [
       "Diabetes models address type 1 autoimmune mechanisms and type 2 insulin resistance",
       "Tissue specific knockouts in liver, adipose, muscle, or pancreas reveal organ contributions",
@@ -66,7 +66,7 @@ const therapeuticAreas = [
   },
   {
     title: "Immunology Mouse Models",
-    description: "Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. Ingenious Targeting Laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.",
+    description: "Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. ingenious targeting laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.",
     applications: [
       "Autoimmune disease models for rheumatoid arthritis, lupus, and multiple sclerosis",
       "Inflammatory bowel disease and other inflammatory conditions",
@@ -78,7 +78,7 @@ const therapeuticAreas = [
   },
   {
     title: "Cardiovascular Mouse Models",
-    description: "Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. Ingenious Targeting Laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.",
+    description: "Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. ingenious targeting laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.",
     applications: [
       "Atherosclerosis models combine lipid metabolism gene modifications with ApoE or LDLR deficiency",
       "Conditional knockouts enable tissue specific studies in endothelium or smooth muscle",
@@ -90,7 +90,7 @@ const therapeuticAreas = [
   },
   {
     title: "Rare Disease Mouse Models",
-    description: "Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. Ingenious Targeting Laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.",
+    description: "Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. ingenious targeting laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.",
     applications: [
       "Muscular dystrophy models carry mutations in dystrophin, dysferlin, or other muscle proteins",
       "Enable study of disease mechanisms and testing of gene therapy approaches",
@@ -102,7 +102,7 @@ const therapeuticAreas = [
   },
   {
     title: "Ophthalmology Mouse Models",
-    description: "Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. Ingenious Targeting Laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.",
+    description: "Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. ingenious targeting laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.",
     applications: [
       "Retinal degeneration models carry mutations in rhodopsin, peripherin, or other photoreceptor genes",
       "Conditional approaches enable temporal control over degeneration onset",
@@ -127,8 +127,6 @@ const relatedModelTypes = [
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
-const bassonTestimonial = getTestimonialById('basson-kings')!;
-const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
 const testimonials = [
   { quote: dunaiefTestimonial.quote, name: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation },
@@ -390,14 +388,14 @@ export default function TherapeuticAreasPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
+                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                     <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                     <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                   </div>
@@ -515,7 +513,7 @@ export default function TherapeuticAreasPage() {
             "name": "Therapeutic Area Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "Ingenious Targeting Laboratory"
+              "name": "ingenious targeting laboratory"
             },
             "description": "Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,500+ models since 1998.",
             "serviceType": "Therapeutic Area Mouse Models"

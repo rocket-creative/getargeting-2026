@@ -161,14 +161,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-// Conditionally apply bundle analyzer
-let config: NextConfig = nextConfig;
-
-if (process.env.ANALYZE === 'true') {
-  const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: true,
-  });
-  config = withBundleAnalyzer(config);
-}
-
-export default config;
+export default nextConfig;

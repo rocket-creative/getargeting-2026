@@ -2,8 +2,49 @@
 
 import Image from 'next/image';
 import { createPortal } from 'react-dom';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, memo } from 'react';
 import { IconImage } from './Icons';
+
+// Memoized placeholder content component - extracted outside to prevent recreation on every render
+interface PlaceholderContentProps {
+  variant: 'hero' | 'section' | 'inline';
+  iconColor: string;
+  textColor: string;
+  title: string;
+}
+
+const PlaceholderContent = memo(function PlaceholderContent({
+  variant,
+  iconColor,
+  textColor,
+  title,
+}: PlaceholderContentProps) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        height: '100%',
+      }}
+    >
+      <IconImage size={variant === 'hero' ? 60 : 50} color={iconColor} />
+      <span
+        style={{
+          color: textColor,
+          fontSize: '.8rem',
+          marginTop: '10px',
+          textAlign: 'center',
+          padding: '0 15px',
+        }}
+      >
+        {title}
+      </span>
+    </div>
+  );
+});
 
 export interface DiagramPlaceholderProps {
   /** Unique figure ID for tracking (e.g., "fig-cre-lox-001") */
@@ -95,33 +136,6 @@ export function ScientificDiagramPlaceholder({
       captionColor: '#666',
     },
   }[variant];
-
-  // Fallback placeholder if image fails to load
-  const PlaceholderContent = () => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '100%',
-      }}
-    >
-      <IconImage size={variant === 'hero' ? 60 : 50} color={variantStyles.iconColor} />
-      <span
-        style={{
-          color: variantStyles.textColor,
-          fontSize: '.8rem',
-          marginTop: '10px',
-          textAlign: 'center',
-          padding: '0 15px',
-        }}
-      >
-        {title}
-      </span>
-    </div>
-  );
 
   const handleBackdropClick = useCallback(
     (e: React.MouseEvent) => {
@@ -234,7 +248,12 @@ export function ScientificDiagramPlaceholder({
               priority={variant === 'hero'}
             />
           ) : (
-            <PlaceholderContent />
+            <PlaceholderContent
+              variant={variant}
+              iconColor={variantStyles.iconColor}
+              textColor={variantStyles.textColor}
+              title={title}
+            />
           )}
           {!imageError && (
             <span

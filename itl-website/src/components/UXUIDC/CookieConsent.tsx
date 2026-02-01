@@ -80,11 +80,23 @@ function updateAllPlatformConsent(prefs: CookiePreferences, shouldReload = false
 export default function UXUIDCCookieConsent() {
   const [show, setShow] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
-  const [preferences, setPreferences] = useState<CookiePreferences>({
-    necessary: true,
-    analytics: false,
-    marketing: false,
-    functional: false,
+  const [preferences, setPreferences] = useState<CookiePreferences>(() => {
+    const defaultPrefs = {
+      necessary: true,
+      analytics: false,
+      marketing: false,
+      functional: false,
+    };
+    if (typeof window === 'undefined') return defaultPrefs;
+    const saved = localStorage.getItem('itl-cookie-preferences');
+    if (saved) {
+      try {
+        return { ...defaultPrefs, ...JSON.parse(saved) };
+      } catch {
+        return defaultPrefs;
+      }
+    }
+    return defaultPrefs;
   });
 
   useEffect(() => {
@@ -93,9 +105,6 @@ export default function UXUIDCCookieConsent() {
       // Delay showing the banner slightly for better UX
       const timer = setTimeout(() => setShow(true), 1000);
       return () => clearTimeout(timer);
-    } else {
-      const saved = JSON.parse(localStorage.getItem('itl-cookie-preferences') || '{}');
-      setPreferences({ ...preferences, ...saved });
     }
   }, []);
 

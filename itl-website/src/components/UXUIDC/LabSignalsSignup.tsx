@@ -5,7 +5,7 @@
  */
 
 import Link from 'next/link';
-import { IconMail, IconFileText, IconArrowRight, IconDNA, IconFlask, IconTarget } from './Icons';
+import { IconMail, IconFileText, IconArrowRight, IconFlask, IconTarget } from './Icons';
 
 interface LabSignalsSignupProps {
   variant?: 'banner' | 'inline' | 'card' | 'sidebar';
