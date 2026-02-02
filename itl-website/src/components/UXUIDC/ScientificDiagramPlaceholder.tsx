@@ -112,6 +112,8 @@ export function ScientificDiagramPlaceholder({
   }[aspectRatio];
 
   const imagePath = `/images/diagrams/${figureId}.png`;
+  // Cache-busted path for lightbox to force fresh image load
+  const lightboxImagePath = `/images/diagrams/${figureId}.png?v=2`;
   
   const variantStyles = {
     hero: {
@@ -195,7 +197,7 @@ export function ScientificDiagramPlaceholder({
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={imagePath}
+            src={lightboxImagePath}
             alt={altText || title}
             className="max-h-[90vh] w-auto max-w-full object-contain"
             onClick={(e) => e.stopPropagation()}
