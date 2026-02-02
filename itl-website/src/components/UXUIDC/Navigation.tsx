@@ -211,13 +211,25 @@ export function UXUIDCNavigation() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
 
-              {/* Search Input Field - 250px width, 100px margin right */}
-              <div className="hidden lg:block" style={{ width: '250px', marginRight: '100px' }}>
+              {/* Search Input Field - Responsive width and margin */}
+              <div className="hidden xl:block" style={{ width: '250px', marginRight: '100px' }}>
                 <form action="/search" method="get" role="search" className="w-full">
                   <input
                     type="search"
                     name="q"
                     placeholder="Search models..."
+                    aria-label="Search site"
+                    className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:border-[#2384da] transition-colors duration-300"
+                  />
+                </form>
+              </div>
+              {/* Compact search input for medium screens (1024px-1440px) */}
+              <div className="hidden lg:block xl:hidden" style={{ width: '180px', marginRight: '20px' }}>
+                <form action="/search" method="get" role="search" className="w-full">
+                  <input
+                    type="search"
+                    name="q"
+                    placeholder="Search..."
                     aria-label="Search site"
                     className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:border-[#2384da] transition-colors duration-300"
                   />
@@ -263,7 +275,7 @@ export function UXUIDCNavigation() {
         {/* Row 2: Navigation Links - grey text with hover effects */}
         <div className="hidden lg:block bg-white">
           <div className="container">
-            <div className="flex items-center justify-end gap-5 h-10 px-5">
+            <div className="flex items-center justify-end gap-3 xl:gap-5 h-10 px-5">
               {navigationItems.map((item) => (
                 <div
                   key={item.href}
@@ -290,7 +302,7 @@ export function UXUIDCNavigation() {
                   {item.children && activeDropdown === item.label && (
                     <div 
                       className={`absolute top-full left-0 bg-white shadow-xl py-2 mt-0 border border-[#e0e0e0] z-50 animate-fadeIn ${
-                        item.children.length > 10 ? 'w-[480px] max-h-[70vh] overflow-y-auto' : 'w-56'
+                        item.children.length > 10 ? 'w-[560px] max-h-[70vh] overflow-y-auto' : 'w-56'
                       }`}
                       style={{
                         display: item.children.length > 10 ? 'grid' : 'block',
@@ -302,7 +314,7 @@ export function UXUIDCNavigation() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-[#666] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300"
+                          className="block px-4 py-2.5 text-[#666] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300 whitespace-nowrap"
                         >
                           {child.label}
                         </Link>
