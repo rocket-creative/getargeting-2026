@@ -111,9 +111,9 @@ export function ScientificDiagramPlaceholder({
     '3:4': '3/4',
   }[aspectRatio];
 
-  const imagePath = `/images/diagrams/${figureId}.png`;
-  // Cache-busted path for lightbox to force fresh image load
-  const lightboxImagePath = `/images/diagrams/${figureId}.png?v=3`;
+  // Use -v2 suffix to force CDN cache invalidation
+  const imagePath = `/images/diagrams/${figureId}-v2.png`;
+  const lightboxImagePath = `/images/diagrams/${figureId}-v2.png`;
   
   const variantStyles = {
     hero: {
