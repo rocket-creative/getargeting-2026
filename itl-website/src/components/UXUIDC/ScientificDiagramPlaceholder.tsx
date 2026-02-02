@@ -113,7 +113,7 @@ export function ScientificDiagramPlaceholder({
 
   const imagePath = `/images/diagrams/${figureId}.png`;
   // Cache-busted path for lightbox to force fresh image load
-  const lightboxImagePath = `/images/diagrams/${figureId}.png?v=2`;
+  const lightboxImagePath = `/images/diagrams/${figureId}.png?v=3`;
   
   const variantStyles = {
     hero: {
