@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 200 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-207,-167)">
+        <g id="Artboard1" transform="matrix(1,0,0,1,207,167)">
+            <rect x="0" y="0" width="200" height="75" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="0" y="0" width="200" height="75"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0.97561,0,0,1,4.87805,0)">
+                    <rect x="-5" y="0" width="205" height="75" style="fill:url(#_Radial2);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,119.512,88.108)">
+                    <g transform="matrix(16,0,0,16,46.512,-45)">
+                    </g>
+                    <text x="-86px" y="-45px" style="font-family:'Poppins-ExtraLight', 'Poppins';font-weight:275;font-size:16px;fill:white;">M<tspan x="-74.08px -67.424px -60.704px -51.872px -43.808px -32.368px -27.04px -24.88px -13.76px -10.448px -3.728px 5.104px 12.88px 24.272px 30.928px 37.648px " y="-45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px -45px ">ETABOLIC TARGETS</tspan></text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="_Radial2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(136.325,114,-116.85,133,-5,0)"><stop offset="0" style="stop-color:rgb(235,235,235);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(157,69,19);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>
