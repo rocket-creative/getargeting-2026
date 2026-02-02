@@ -195,7 +195,7 @@ export default function ParkinsonsMouseModelsPage() {
           }}
         >
           <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 gap-12 items-center">
               <div>
                 <div
                   className="hero-animate"
@@ -288,21 +288,6 @@ export default function ParkinsonsMouseModelsPage() {
                 </div>
               </div>
 
-              <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Parkinson Model Illustration</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
