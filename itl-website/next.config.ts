@@ -60,13 +60,6 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Allow query strings for cache-busting on local images
-    localPatterns: [
-      {
-        pathname: '/images/**',
-        search: '',
-      },
-    ],
   },
 
   // Experimental features for performance

@@ -111,9 +111,7 @@ export function ScientificDiagramPlaceholder({
     '3:4': '3/4',
   }[aspectRatio];
 
-  // Add cache-busting timestamp to force fresh images after updates
-  const cacheBuster = '?v=20260201';
-  const imagePath = `/images/diagrams/${figureId}.png${cacheBuster}`;
+  const imagePath = `/images/diagrams/${figureId}.png`;
   
   const variantStyles = {
     hero: {
