@@ -111,7 +111,9 @@ export function ScientificDiagramPlaceholder({
     '3:4': '3/4',
   }[aspectRatio];
 
-  const imagePath = `/images/diagrams/${figureId}.png`;
+  // Add cache-busting timestamp to force fresh images after updates
+  const cacheBuster = '?v=20260201';
+  const imagePath = `/images/diagrams/${figureId}.png${cacheBuster}`;
   
   const variantStyles = {
     hero: {
@@ -189,7 +191,7 @@ export function ScientificDiagramPlaceholder({
           </svg>
         </button>
         <div
-          className="relative max-h-[90vh] w-full max-w-5xl cursor-default"
+          className="relative max-h-[90vh] w-full max-w-5xl cursor-default bg-white rounded-lg p-4"
           onClick={closeLightbox}
           role="presentation"
         >
@@ -226,7 +228,7 @@ export function ScientificDiagramPlaceholder({
             aspectRatio: aspectRatioValue,
             position: 'relative',
             overflow: 'hidden',
-            backgroundColor: variantStyles.backgroundColor,
+            backgroundColor: '#FFFFFF', // Always white background for diagrams
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
