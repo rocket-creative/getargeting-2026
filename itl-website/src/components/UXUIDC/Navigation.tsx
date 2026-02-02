@@ -211,8 +211,8 @@ export function UXUIDCNavigation() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
 
-              {/* Search Input Field - Responsive width and margin */}
-              <div className="hidden xl:block" style={{ width: '250px', marginRight: '100px' }}>
+              {/* Search Input Field - Always visible on desktop, responsive sizing */}
+              <div className="hidden lg:block xl:w-[250px] lg:w-[180px] xl:mr-[100px] lg:mr-5">
                 <form action="/search" method="get" role="search" className="w-full">
                   <input
                     type="search"
@@ -223,23 +223,11 @@ export function UXUIDCNavigation() {
                   />
                 </form>
               </div>
-              {/* Compact search input for medium screens (1024px-1440px) */}
-              <div className="hidden lg:block xl:hidden" style={{ width: '180px', marginRight: '20px' }}>
-                <form action="/search" method="get" role="search" className="w-full">
-                  <input
-                    type="search"
-                    name="q"
-                    placeholder="Search..."
-                    aria-label="Search site"
-                    className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:border-[#2384da] transition-colors duration-300"
-                  />
-                </form>
-              </div>
 
               {/* Start an Order - White/rev button with animation */}
               <Link 
                 href="/request-quote"
-                className="group hidden lg:flex items-center gap-2 bg-white text-[#666] px-4 py-1.5 border border-black mr-2 transition-all duration-300 hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-md"
+                className="group hidden lg:flex items-center gap-2 bg-white text-[#666] px-4 py-1.5 border border-black transition-all duration-300 hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-md whitespace-nowrap"
                 style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
               >
                 <span>Start an Order</span>
@@ -249,7 +237,7 @@ export function UXUIDCNavigation() {
               {/* Start Your Project - Solid grey button with animation */}
               <Link 
                 href="/start-your-project" 
-                className="group hidden lg:flex items-center gap-2 bg-[#666] text-white px-4 py-1.5 transition-all duration-300 hover:bg-[#555] hover:-translate-y-0.5 hover:shadow-md"
+                className="group hidden lg:flex items-center gap-2 bg-[#666] text-white px-4 py-1.5 ml-2 transition-all duration-300 hover:bg-[#555] hover:-translate-y-0.5 hover:shadow-md whitespace-nowrap"
                 style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
               >
                 <span>Start Your Project</span>
