@@ -294,7 +294,7 @@ export function UXUIDCNavigation() {
                 <div
                   key={item.href}
                   className="relative group"
-                  onMouseEnter={() => item.children && setActiveDropdown(item.label)}
+                  onMouseEnter={() => (item.children || item.categorizedChildren) && setActiveDropdown(item.label)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <Link
