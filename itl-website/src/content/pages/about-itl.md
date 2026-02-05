@@ -131,15 +131,15 @@ Holbrook, New York
 
 **What services does Ingenious Targeting Laboratory provide?**
 
-ITL provides custom genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services. 
+ingenious targeting laboratory provides custom genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services. 
 
-**How long has ITL been in business?**
+**How long has ingenious targeting laboratory been in business?**
 
-ITL has been generating custom mouse models since 1998, with over 25 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
+ingenious targeting laboratory has been generating custom mouse models since 1998, with over 25 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
 
 **How do I get started with a custom mouse model project?**
 
-Contact ITL through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
+Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
 
 ## Related Resources
 

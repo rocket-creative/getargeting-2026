@@ -64,6 +64,7 @@ const siteContent = [
   { title: 'CTLA4 humanized mice', description: 'Humanized CTLA4 mice for immunotherapy research.', url: '/ctla4-humanized-mice', category: 'Catalog' },
   { title: 'LAG3 humanized mice', description: 'Humanized LAG3 mice for next generation checkpoint studies.', url: '/lag3-humanized-mice', category: 'Catalog' },
   { title: 'TIM3 humanized mice', description: 'Humanized TIM3 mice for immune checkpoint research.', url: '/tim3-humanized-mice', category: 'Catalog' },
+  { title: 'Single checkpoint mice', description: 'Single humanized immune checkpoint models including PD1, PDL1, CTLA4, LAG3, TIM3, and more.', url: '/single-checkpoint-mice', category: 'Catalog' },
   { title: 'Double checkpoint mice', description: 'Dual humanized checkpoint mice for combination therapy studies.', url: '/double-checkpoint-mice', category: 'Catalog' },
   
   // Support Services
@@ -81,8 +82,8 @@ const siteContent = [
   { title: 'Cre line selection guide', description: 'How to choose the right Cre driver line for your research.', url: '/cre-line-selection-guide', category: 'Resources' },
   
   // Company
-  { title: 'About iTL', description: 'Learn about ingenious targeting laboratory and our 25 years of experience.', url: '/about-itl', category: 'Company' },
-  { title: 'Why choose iTL', description: 'Discover why researchers trust iTL for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
+  { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 25 years of experience.', url: '/about-itl', category: 'Company' },
+  { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
   { title: 'Request a quote', description: 'Submit a project inquiry and receive a custom quote.', url: '/request-quote', category: 'Company' },
   { title: 'Pricing overview', description: 'Information about pricing for mouse model generation services.', url: '/pricing-overview', category: 'Company' },

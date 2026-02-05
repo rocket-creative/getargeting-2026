@@ -60,7 +60,7 @@ Work in an environment that values:
 For questions about positions or to submit applications:
 
 - Email: inquiry@genetargeting.com
-- Phone: +1 (631) 468-8530
+- Phone: +1 (631) 468-8534
 - Address: 761-80 Coates Avenue, Holbrook, NY 11741
 
 ## Related Information

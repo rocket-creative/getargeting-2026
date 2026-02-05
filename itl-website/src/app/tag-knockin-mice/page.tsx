@@ -13,7 +13,7 @@ import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 const heroData = {
   badge: "Protein Detection & Purification",
   title: "Tag Knockin Mice",
-  intro: "Since 1998, ingenious targeting laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene specific antibodies.",
+  intro: "Since 1998, ingenious targeting laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene-specific antibodies.",
   description: "Whether you need FLAG, HA, V5, Myc, or other epitope tags, ingenious targeting laboratory designs and generates tag knockin alleles optimized for your specific protein detection and purification goals."
 };
 
@@ -64,7 +64,7 @@ const epitopeTagsData = [
   {
     title: "Myc Tag",
     sequence: "EQKLISEEDL",
-    description: "The Myc tag from c Myc provides excellent immunoprecipitation performance and works well for protein interaction studies."
+    description: "The Myc tag from c-Myc provides excellent immunoprecipitation performance and works well for protein interaction studies."
   },
   {
     title: "His Tag",
@@ -99,15 +99,15 @@ const tagPlacementData = [
 const applicationsData = [
   {
     title: "Protein Detection and Localization",
-    description: "Tag knockin enables detection of endogenous proteins in tissues and cells using anti tag antibodies. This is particularly valuable when gene specific antibodies are unavailable or unreliable."
+    description: "Tag knockin enables detection of endogenous proteins in tissues and cells using anti-tag antibodies. This is particularly valuable when gene-specific antibodies are unavailable or unreliable."
   },
   {
     title: "Protein Purification",
-    description: "Affinity purification using anti tag resins enables isolation of endogenous protein complexes for mass spectrometry analysis, enzymatic studies, or structural biology."
+    description: "Affinity purification using anti-tag resins enables isolation of endogenous protein complexes for mass spectrometry analysis, enzymatic studies, or structural biology."
   },
   {
     title: "Chromatin Immunoprecipitation",
-    description: "ChIP with anti tag antibodies enables mapping of transcription factor binding sites when ChIP grade antibodies for the protein of interest are unavailable."
+    description: "ChIP with anti-tag antibodies enables mapping of transcription factor binding sites when ChIP grade antibodies for the protein of interest are unavailable."
   },
   {
     title: "Protein Interaction Studies",
@@ -128,7 +128,7 @@ const designConsiderationsData = [
   },
   {
     title: "Validation Strategy",
-    description: "Tagged protein expression is validated by immunoblotting and immunofluorescence using anti tag antibodies. Comparison with untagged littermates confirms specificity of detection."
+    description: "Tagged protein expression is validated by immunoblotting and immunofluorescence using anti-tag antibodies. Comparison with untagged littermates confirms specificity of detection."
   }
 ];
 
@@ -831,7 +831,7 @@ export default function TagKnockinMicePage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene specific antibodies. Custom models since 1998.",
+            "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene-specific antibodies. Custom models since 1998.",
             "serviceType": "Custom Mouse Model Generation"
           })
         }}

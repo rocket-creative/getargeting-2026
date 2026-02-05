@@ -198,19 +198,19 @@ Experience the Ingenious Targeting Laboratory difference on your next mouse mode
 
 **What makes Ingenious Targeting Laboratory different from other mouse model providers?**
 
-ITL has 28 years of exclusive focus on custom mouse model generation, 2,500+ completed projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
+ingenious targeting laboratory has 28 years of exclusive focus on custom mouse model generation, 2,500+ completed projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
 
-**How does ITL's experience benefit my project?**
+**How does ingenious targeting laboratory's experience benefit my project?**
 
-ITL's 2,500+ projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
+ingenious targeting laboratory's 2,500+ projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
 
-**What support does ITL provide after model delivery?**
+**What support does ingenious targeting laboratory provide after model delivery?**
 
-ITL provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise.
+ingenious targeting laboratory provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise.
 
 **How do I get started with a custom mouse model project?**
 
-Contact ITL through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
+Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
 
 ## Related Resources
 

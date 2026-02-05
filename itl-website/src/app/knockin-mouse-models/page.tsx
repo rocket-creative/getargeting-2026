@@ -194,7 +194,6 @@ const relatedModels = [
 ];
 
 const relatedResources = [
-  { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
   { label: 'Request a Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
   { label: 'Technologies', href: '/technologies' },

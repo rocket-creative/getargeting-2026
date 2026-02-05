@@ -109,10 +109,10 @@ const qualityCompliance = [
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const fraiettaTestimonial = getTestimonialById('fraietta-upenn-decart')!;
+const dunaieTestimonial = getTestimonialById('dunaief-upenn')!;
 
 const testimonials = [
-  { quote: fraiettaTestimonial.quote, name: formatAuthorWithCredentials(fraiettaTestimonial), affiliation: fraiettaTestimonial.affiliation },
+  { quote: dunaieTestimonial.quote, name: formatAuthorWithCredentials(dunaieTestimonial), affiliation: dunaieTestimonial.affiliation },
 ];
 
 // Related Links

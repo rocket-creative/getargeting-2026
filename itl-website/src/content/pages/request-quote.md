@@ -72,9 +72,7 @@ To provide an accurate quote, please include the following information in your r
 
 **Within 1 Business Day**: Our team acknowledges receipt and may request clarification if needed.
 
-**Within 2 to 3 Business Days**: Scientific consultants review targeting feasibility and develop strategy recommendations.
-
-**Quote Delivery**: Comprehensive quote including:
+**Quote Delivery**: Scientific consultants review targeting feasibility and develop strategy recommendations. Comprehensive quote including:
 
 - Recommended targeting strategy
 - Allele design overview
@@ -131,7 +129,7 @@ Once you receive your quote, our team is available to discuss any questions or c
 
 ## Quote Response Timeline
 
-We understand that timely quotes are important for project planning. Our team works to provide comprehensive quotes within 3 to 5 business days of receiving your request. For complex projects or projects requiring additional technical review, we'll provide an estimated timeline for quote delivery.
+We understand that timely quotes are important for project planning. Our team works to provide comprehensive quotes within 1 business day of receiving your request. For complex projects or projects requiring additional technical review, we'll provide an estimated timeline for quote delivery.
 
 If you have urgent timeline requirements, please indicate this in your quote request. We can prioritize urgent requests and provide expedited quote delivery when needed.
 
@@ -143,7 +141,7 @@ Provide target gene information (gene symbol, species, target region), model typ
 
 **How long does it take to receive a quote?**
 
-Quotes are typically delivered within 2-3 business days after receiving your request. For complex projects requiring additional technical review, we'll provide an estimated timeline for quote delivery. Urgent requests can be prioritized for expedited quote delivery when needed.
+Quotes are typically delivered within 1 business day after receiving your request. For complex projects requiring additional technical review, we'll provide an estimated timeline for quote delivery. Urgent requests can be prioritized for expedited quote delivery when needed.
 
 **What is included in a project quote?**
 

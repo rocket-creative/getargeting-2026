@@ -240,14 +240,6 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
     tags: ['knockin', 'long-term-partnership', 'international', 'recommendation'],
   },
   {
-    id: 'fraietta-upenn-decart',
-    quote: "We are 100% satisfied with iTL's service in generating this mouse model for us. The model was completed quickly, with the utmost efficiency and each member of their team was extremely responsive and helpful. The full service guarantee, as well as the company's excellent reputation were major decision factors for us.",
-    author: 'Joseph A. Fraietta',
-    credentials: 'PhD',
-    affiliation: 'Perelman School of Medicine, University of Pennsylvania, DeCART Therapeutics',
-    tags: ['efficiency', 'guarantee', 'reputation', 'biotech'],
-  },
-  {
     id: 'fullerton-ottawa',
     quote: "iTL recently produced a new knockout model for us from a KOMP targeting vector (knockout first, conditional potential). The entire process was extremely efficient and the staff at iTL were both knowledgeable and helpful. We chose iTL because of their cost-effective service and their guarantee of germline transmission when using a KOMP targeting vector. Now that the project is complete, I would definitely use their services again in the future and would recommend them highly to anyone looking to create a new mouse model.",
     author: 'Morgan Fullerton',
