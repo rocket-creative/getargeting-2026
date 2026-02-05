@@ -54,8 +54,9 @@ describe('Breeding Calculations - Critical Fixes', () => {
       expect(plan.estimatedBreedingPairs).toBe(9);
     });
 
-    test('should estimate 63 total mice (not 105)', () => {
-      expect(plan.estimatedTotalMice).toBe(63);
+    test('should estimate 50 total mice (not 105)', () => {
+      // 9 breeding pairs × 0.8 efficiency × 7 average = 50.4 → 50
+      expect(plan.estimatedTotalMice).toBe(50);
     });
 
     test('should have 9-week timeline (not 10)', () => {
@@ -114,8 +115,9 @@ describe('Breeding Calculations - Critical Fixes', () => {
       expect(plan.estimatedBreedingPairs).toBe(17);
     });
 
-    test('should estimate 119 total mice (not 203)', () => {
-      expect(plan.estimatedTotalMice).toBe(119);
+    test('should estimate 95 total mice (not 203)', () => {
+      // 17 breeding pairs × 0.8 efficiency × 7 average = 95.2 → 95
+      expect(plan.estimatedTotalMice).toBe(95);
     });
 
     test('should have 9-week timeline', () => {
