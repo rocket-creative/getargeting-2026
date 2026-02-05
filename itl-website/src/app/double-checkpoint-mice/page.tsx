@@ -26,9 +26,9 @@ const statsData = [
   { value: 100, suffix: "%", label: "Success Guarantee" }
 ];
 
-// Models Data
-const modelsData = {
-  title: "Available Double Immune Checkpoint Models",
+// Models Data - Top 2 Featured
+const featuredModelsData = {
+  title: "Most Requested Double Checkpoint Models",
   models: [
     {
       title: "PD1 + CTLA4 Humanized",
@@ -41,27 +41,33 @@ const modelsData = {
       ]
     },
     {
-      title: "PD1 + PDL1 Humanized",
-      subtitle: "Dual humanized PD1 and PDL1:",
+      title: "PD1 + LAG3 Humanized",
+      subtitle: "Dual humanized PD1 and LAG3:",
       features: [
-        "PD1/PDL1 axis targeting",
-        "Enhanced checkpoint blockade",
-        "Tumor microenvironment studies",
-        "Combination therapy evaluation"
-      ]
-    },
-    {
-      title: "Other Combinations",
-      subtitle: "Additional dual checkpoint combinations:",
-      features: [
-        "PD1 + LAG3",
-        "PD1 + TIM3",
-        "CTLA4 + PDL1",
-        "Custom combinations"
+        "Next generation combination",
+        "PD1/LAG3 axis targeting",
+        "Enhanced immune activation",
+        "Emerging clinical combination"
       ]
     }
   ]
 };
+
+// All Available Double Checkpoint Models
+const allDoubleCheckpointModels = [
+  { name: 'PD1 + CTLA4', description: 'Most requested dual checkpoint combination' },
+  { name: 'PD1 + LAG3', description: 'Next generation combination therapy' },
+  { name: 'PD1 + TIM3', description: 'Emerging checkpoint combination' },
+  { name: 'PD1 + PDL1', description: 'PD axis dual targeting' },
+  { name: 'CTLA4 + LAG3', description: 'Alternative combination strategy' },
+  { name: 'CTLA4 + PDL1', description: 'Dual inhibitory checkpoint' },
+  { name: 'LAG3 + TIM3', description: 'Next gen dual checkpoint' },
+  { name: 'PDL1 + TIM3', description: 'Tumor microenvironment targeting' },
+  { name: 'TIGIT + PD1', description: 'TIGIT pathway combination' },
+  { name: 'CD47 + PD1', description: 'Macrophage and T cell targeting' },
+  { name: 'VISTA + PD1', description: 'VISTA checkpoint combination' },
+  { name: 'B7H3 + PD1', description: 'B7H3 pathway targeting' },
+];
 
 // Applications Data
 const applicationsData = {
@@ -334,26 +340,35 @@ export default function DoubleCheckpointMicePage() {
           </div>
         </section>
 
-        {/* Models Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        {/* Featured Models Section */}
+        <section style={{ background: '#f7f7f7', padding: '60px 20px 40px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#2384da',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              {modelsData.title}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-              {modelsData.models.map((model, index) => (
+            <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+              <h2 className="animate-in" style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2384da',
+                marginBottom: '10px'
+              }}>
+                {featuredModelsData.title}
+              </h2>
+              <p style={{
+                fontSize: '.9rem',
+                color: '#666',
+                lineHeight: 1.6
+              }}>
+                Most popular dual checkpoint combinations for combination immunotherapy research
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+              {featuredModelsData.models.map((model, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
-                  padding: '24px',
-                  borderTop: '4px solid #008080'
+                  padding: '28px',
+                  borderTop: '4px solid #008080',
+                  boxShadow: '0 2px 12px rgba(0,0,0,0.1)'
                 }}>
                   <div style={{
                     width: '48px',
@@ -369,7 +384,7 @@ export default function DoubleCheckpointMicePage() {
                   </div>
                   <h3 style={{
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.1rem',
+                    fontSize: '1.2rem',
                     fontWeight: 600,
                     color: '#333',
                     marginBottom: '8px'
@@ -377,7 +392,7 @@ export default function DoubleCheckpointMicePage() {
                     {model.title}
                   </h3>
                   <p style={{
-                    fontSize: '.85rem',
+                    fontSize: '.9rem',
                     color: '#666',
                     marginBottom: '12px'
                   }}>
@@ -400,6 +415,88 @@ export default function DoubleCheckpointMicePage() {
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* All Available Double Checkpoint Models */}
+        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+              <h2 className="animate-in" style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2384da',
+                marginBottom: '10px'
+              }}>
+                All Double Checkpoint Combinations
+              </h2>
+              <p style={{
+                fontSize: '.9rem',
+                color: '#666',
+                lineHeight: 1.6,
+                maxWidth: '700px',
+                margin: '0 auto'
+              }}>
+                Browse our complete catalog of dual humanized checkpoint models. Click <Link href="/order-catalog-models" style={{ color: '#008080', fontWeight: 600, textDecoration: 'underline' }}>here to submit an order inquiry</Link> for any combination.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+              {allDoubleCheckpointModels.map((model, index) => (
+                <div key={index} className="animate-in" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  background: '#f7f7f7',
+                  border: '1px solid #e0e0e0',
+                  borderRadius: '8px',
+                  padding: '18px',
+                  transition: 'all 0.2s ease',
+                }} onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#008080';
+                  e.currentTarget.style.backgroundColor = '#ffffff';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }} onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#e0e0e0';
+                  e.currentTarget.style.backgroundColor = '#f7f7f7';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}>
+                  <div style={{
+                    fontWeight: 600,
+                    color: '#0a253c',
+                    fontSize: '.95rem',
+                    marginBottom: '6px'
+                  }}>
+                    {model.name}
+                  </div>
+                  <p style={{
+                    fontSize: '.8rem',
+                    color: '#666',
+                    margin: 0,
+                    lineHeight: 1.4
+                  }}>
+                    {model.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: '40px', textAlign: 'center' }}>
+              <Link href="/order-catalog-models" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#008080',
+                color: '#ffffff',
+                padding: '14px 28px',
+                borderRadius: '6px',
+                fontSize: '.95rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+              }} className="hover:shadow-lg hover:-translate-y-1">
+                Order Inquiry for Double Checkpoint Models
+                <IconChevronRight size={16} color="#ffffff" />
+              </Link>
             </div>
           </div>
         </section>

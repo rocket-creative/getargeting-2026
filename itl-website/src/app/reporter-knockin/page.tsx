@@ -92,7 +92,7 @@ const knockinDesignTypes = [
       "Reports expression pattern of disrupted gene",
       "Creates null allele (gene is inactivated)",
       "Useful when knockout phenotype is not lethal",
-      "Common in knockout first allele design"
+      "Common in knockout-first allele design"
     ]
   },
   {
@@ -253,7 +253,7 @@ const faqData = [
   },
   {
     question: "How do I choose between N-terminal and C-terminal reporter placement?",
-    answer: "Placement depends on protein structure and function. N-terminal reporters can interfere with signal peptides or membrane targeting. C-terminal reporters avoid signal sequence issues but may affect protein interactions at the terminus. Internal placement using 2A peptides or IRES sequences is also possible for some applications."
+    answer: "Placement depends on protein structure and function. N-terminal reporters can interfere with signal peptides or membrane targeting. C-terminal reporters avoid signal sequence issues but may affect protein interactions at the terminus. Internal placement using 2A peptide sequences is also possible for some applications."
   },
   {
     question: "Can reporter knockins be combined with conditional systems?",

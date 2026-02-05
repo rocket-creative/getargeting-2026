@@ -156,22 +156,7 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
         </div>
       </div>
 
-      {/* CTA - Dark Blue */}
-      <Link
-        href={data.ctaHref}
-        className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-        style={{
-          marginTop: '40px',
-          backgroundColor: '#134978',
-          padding: '10px 20px',
-          fontFamily: 'var(--system-ui)',
-          fontSize: '.9rem',
-          fontWeight: 400,
-        }}
-      >
-        <span>View Timeline</span>
-        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-      </Link>
+      {/* CTA removed per user request - no timeline button */}
     </section>
   );
 }

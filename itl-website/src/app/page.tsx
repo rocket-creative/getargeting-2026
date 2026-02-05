@@ -101,7 +101,7 @@ const overviewData = {
   sectionTitle: 'Overview',
   whyChoose: {
     title: 'Why Researchers Choose ingenious targeting laboratory',
-    content: 'For more than 25 years, ingenious targeting laboratory has supported biomedical research with animal models that provide stable allele designs, reproducible cohorts, C57BL/6 backgrounds, and U.S.-based QC oversight. Each project follows an evidence-based, results-driven approach to deliver animal models with reliable inheritance and long-term performance.',
+    content: 'For more than 30 years, ingenious targeting laboratory has supported biomedical research with animal models that provide stable allele designs, reproducible cohorts, C57BL/6 backgrounds, and U.S.-based QC oversight. Each project follows an evidence-based, results-driven approach to deliver animal models with reliable inheritance and long-term performance.',
   },
   whatWeProvide: {
     title: 'What We Provide',
@@ -147,7 +147,7 @@ const approachData = {
 const workflowData = {
   title: 'Conceptual Workflow',
   subtitle: 'Our systematic approach ensures consistent results from project initiation through delivery of study-ready cohorts:',
-  ctaHref: '/pricing-overview',
+  ctaHref: '', // No CTA link - button removed per user request
   steps: [
     {
       number: 1,

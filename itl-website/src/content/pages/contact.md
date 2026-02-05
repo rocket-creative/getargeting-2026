@@ -56,7 +56,7 @@ Ready to begin your mouse model project? Contact us today to discuss your resear
 
 **Email**: inquiry@genetargeting.com
 
-**Phone**: +1 (631) 468-8530
+**Phone**: +1 (631) 468-8534
 
 Available Monday through Friday, 9 AM to 5 PM Eastern Time
 

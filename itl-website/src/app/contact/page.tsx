@@ -135,7 +135,7 @@ export default function ContactPage() {
                   marginBottom: '30px',
                 }}>
                   Our scientific consultants are ready to help design your custom mouse model. 
-                  Get a free consultation and personalized quote within 2-3 business days.
+                  Get a free consultation and personalized quote within 1 business day.
                 </p>
                 
                 {/* Primary CTA Buttons */}
@@ -379,7 +379,7 @@ export default function ContactPage() {
               fontWeight: 400,
               margin: 0,
             }}>
-              We respond to all inquiries within one business day. Complex projects receive a detailed technical review within 2-3 days.
+              We respond to all inquiries within 1 business day. Complex projects receive a detailed technical review within 1 business day.
             </p>
           </div>
         </section>

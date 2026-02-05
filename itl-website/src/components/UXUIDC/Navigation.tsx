@@ -72,15 +72,25 @@ const navigationItems: NavItem[] = [
     href: '/catalog-mouse-models',
     children: [
       { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
+      { 
+        label: 'Humanized Immune Checkpoint', 
+        href: '/humanized-immune-checkpoint-mice',
+        children: [
+          { 
+            label: 'Single Checkpoint Mice', 
+            href: '/single-checkpoint-mice',
+            children: [
+              { label: 'PD1 Humanized Mice', href: '/pd1-humanized-mice' },
+              { label: 'PDL1 Humanized Mice', href: '/pdl1-humanized-mice' },
+              { label: 'CTLA4 Humanized Mice', href: '/ctla4-humanized-mice' },
+              { label: 'LAG3 Humanized Mice', href: '/lag3-humanized-mice' },
+              { label: 'TIM3 Humanized Mice', href: '/tim3-humanized-mice' },
+            ]
+          },
+          { label: 'Double Checkpoint Mice', href: '/double-checkpoint-mice' },
+        ]
+      },
       { label: 'Disease Model Catalog', href: '/disease-model-catalog' },
-      { label: 'Humanized Immune Checkpoint', href: '/humanized-immune-checkpoint-mice' },
-      { label: 'PD1 Humanized Mice', href: '/pd1-humanized-mice' },
-      { label: 'PDL1 Humanized Mice', href: '/pdl1-humanized-mice' },
-      { label: 'CTLA4 Humanized Mice', href: '/ctla4-humanized-mice' },
-      { label: 'LAG3 Humanized Mice', href: '/lag3-humanized-mice' },
-      { label: 'TIM3 Humanized Mice', href: '/tim3-humanized-mice' },
-      { label: 'Single Checkpoint Mice', href: '/single-checkpoint-mice' },
-      { label: 'Double Checkpoint Mice', href: '/double-checkpoint-mice' },
       { label: 'Syngeneic Tumor Models', href: '/syngeneic-tumor-models' },
     ],
   },
@@ -371,13 +381,43 @@ export function UXUIDCNavigation() {
                       }}
                     >
                       {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2.5 text-[#666] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300 whitespace-nowrap"
-                        >
-                          {child.label}
-                        </Link>
+                        <div key={child.href}>
+                          <Link
+                            href={child.href}
+                            className="block px-4 py-2.5 text-[#666] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300 whitespace-nowrap"
+                          >
+                            {child.label}
+                          </Link>
+                          {/* Nested children (level 2) */}
+                          {child.children && (
+                            <div className="pl-4">
+                              {child.children.map((subChild) => (
+                                <div key={subChild.href}>
+                                  <Link
+                                    href={subChild.href}
+                                    className="block px-4 py-2 text-[#888] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300 whitespace-nowrap text-sm"
+                                  >
+                                    {subChild.label}
+                                  </Link>
+                                  {/* Nested children (level 3) */}
+                                  {subChild.children && (
+                                    <div className="pl-4">
+                                      {subChild.children.map((deepChild) => (
+                                        <Link
+                                          key={deepChild.href}
+                                          href={deepChild.href}
+                                          className="block px-4 py-1.5 text-[#999] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-6 transition-all duration-300 whitespace-nowrap text-sm"
+                                        >
+                                          {deepChild.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
