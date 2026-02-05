@@ -247,7 +247,7 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
               <strong>Intermediate Generations:</strong> Keep homozygous floxed mice from Generation 1 for use in Generation 3. These serve as your "clean" breeding stock.
             </p>
             <p style={{ margin: '0 0 0 0' }}>
-              <strong>Cost Saving Tip:</strong> Consider purchasing homozygous floxed mice from vendors (JAX, Taconic) to skip Generation 1 and reduce breeding time from 27 to 18 weeks.
+              <strong>Cost Saving Tip:</strong> Consider purchasing homozygous floxed mice from commercial vendors to skip Generation 1 and reduce breeding time from 27 to 18 weeks.
             </p>
           </div>
         </div>
@@ -266,7 +266,6 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
         Estimates are based on standard C57BL/6 breeding parameters (average litter
         size 6 to 8 pups, 80% breeding efficiency). Actual results may vary based on
         strain background, allele effects on fertility, and environmental factors.
-        For detailed guidance, see <a href="https://www.jax.org/news-and-insights/jax-blog/2011/september/cre-lox-breeding" target="_blank" rel="noopener noreferrer" style={{ color: '#008080' }}>JAX Cre-loxP Breeding Guide</a>.
       </div>
     </div>
   );
