@@ -39,7 +39,6 @@ const footerSections = [
       { label: 'Cre-Lox System', href: '/cre-lox-system' },
       { label: 'Flp-Frt System', href: '/flp-frt-system' },
       { label: 'Rosa26 Targeting', href: '/rosa26' },
-      { label: 'ES Cell Targeting', href: '/es-cell-gene-targeting' },
       { label: 'Glossary', href: '/glossary' },
     ],
   },

@@ -125,9 +125,7 @@ const navigationItems: NavItem[] = [
       { label: 'Cre-Lox System', href: '/cre-lox-system' },
       { label: 'Flp-Frt System', href: '/flp-frt-system' },
       { label: 'Rosa26 Targeting', href: '/rosa26' },
-      { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
       { label: 'Inducible Gene Expression', href: '/inducible-gene-expression' },
-      { label: 'Doxycycline Inducible Systems', href: '/doxycycline-inducible-systems' },
       { label: 'BAC-to-BAC Large Scale Targeting', href: '/bac-to-bac-large-scale-targeting' },
       { label: 'Cre Line Selection Guide', href: '/cre-line-selection-guide' },
       { label: 'Conditional vs Conventional Guide', href: '/conditional-vs-conventional-guide' },
@@ -163,7 +161,6 @@ const navigationItems: NavItem[] = [
       { label: 'Mouse Model Generation Guide', href: '/mouse-model-generation-guide' },
       { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
       { label: 'Video Library', href: '/video-library' },
-      { label: 'Pricing Overview', href: '/pricing-overview' },
     ],
   },
   {
