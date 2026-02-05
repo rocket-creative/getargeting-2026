@@ -198,7 +198,7 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
           >
             {data.whatWeProvide.title}
           </h3>
-          <ul style={{ paddingLeft: '20px', margin: 0 }}>
+          <ul style={{ paddingLeft: '20px', margin: 0, listStyleType: 'disc' }}>
             {data.whatWeProvide.items.map((item, index) => (
               <li
                 key={index}
@@ -209,6 +209,7 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
                   fontSize: '.9rem',
                   fontWeight: 400,
                   lineHeight: '1.3rem',
+                  display: 'list-item',
                 }}
               >
                 {item}
