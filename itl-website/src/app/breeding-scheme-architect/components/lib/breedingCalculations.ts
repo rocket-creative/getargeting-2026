@@ -73,7 +73,8 @@ function calculateSingleAlleleCross(
 function calculateMultiAlleleCross(
   parentA: Record<string, AlleleState>,
   parentB: Record<string, AlleleState>,
-  alleleIds: string[]
+  alleleIds: string[],
+  alleles?: Allele[]
 ): OffspringOutcome[] {
   const outcomes: OffspringOutcome[] = [];
 
@@ -88,7 +89,7 @@ function calculateMultiAlleleCross(
         outcomes.push({
           genotype: { ...currentGenotype },
           probability: currentProbability,
-          label: generateGenotypeLabel(currentGenotype, alleleIds),
+          label: generateGenotypeLabel(currentGenotype, alleleIds, alleles),
           category: 'cull', // Will be categorized later
         });
       }
@@ -131,22 +132,27 @@ function calculateMultiAlleleCross(
 
 /**
  * Generate human-readable genotype label
+ * Uses context-aware notation: 'fl' for conditional knockouts, 'mut' for conventional
  */
 function generateGenotypeLabel(
   genotype: Record<string, AlleleState>,
-  alleleIds: string[]
+  alleleIds: string[],
+  alleles?: Allele[]
 ): string {
   const parts: string[] = [];
 
   for (const id of alleleIds) {
     const state = genotype[id] || 'wildtype';
+    const allele = alleles?.find(a => a.id === id);
+    const isConditional = allele?.alleleType === 'conditional-knockout';
+    
     let notation = '';
     switch (state) {
       case 'homozygous':
-        notation = 'mut/mut';
+        notation = isConditional ? 'fl/fl' : 'mut/mut';
         break;
       case 'heterozygous':
-        notation = '+/mut';
+        notation = isConditional ? '+/fl' : '+/mut';
         break;
       case 'wildtype':
         notation = '+/+';
@@ -228,11 +234,13 @@ export function detectWarnings(
 
 /**
  * Categorize offspring outcomes based on target genotypes
+ * Identifies experimental, control, keeper (useful for next generation), and cull mice
  */
 function categorizeOutcomes(
   outcomes: OffspringOutcome[],
   alleles: Allele[],
-  targetGenotypes: TargetGenotype[]
+  targetGenotypes: TargetGenotype[],
+  isIntermediateGeneration: boolean = false
 ): OffspringOutcome[] {
   return outcomes.map((outcome) => {
     // Check if matches experimental genotype
@@ -259,12 +267,42 @@ function categorizeOutcomes(
       if (matchesCtrl) category = 'control';
     }
 
+    // For intermediate generations, mark useful genotypes as "keeper"
+    if (isIntermediateGeneration && category === 'cull') {
+      // Check if this genotype will be useful for future crosses
+      // Examples: homozygous floxed (for Gen 3), heterozygous with Cre (for Gen 3)
+      const hasFloxed = alleles.some((a) => a.alleleType === 'conditional-knockout');
+      const hasCre = alleles.some((a) => a.alleleType === 'cre-constitutive' || a.alleleType === 'cre-inducible');
+
+      if (hasFloxed && !hasCre) {
+        // In Gen 1: homozygous floxed are keepers (needed for Gen 3)
+        const isHomozygousFloxed = alleles
+          .filter((a) => a.alleleType === 'conditional-knockout')
+          .every((a) => outcome.genotype[a.id] === 'homozygous');
+        if (isHomozygousFloxed) category = 'keeper';
+      }
+
+      if (hasFloxed && hasCre) {
+        // In Gen 2: heterozygous with Cre are keepers (needed for Gen 3)
+        const floxedAllele = alleles.find((a) => a.alleleType === 'conditional-knockout');
+        const creAllele = alleles.find((a) => a.alleleType === 'cre-constitutive' || a.alleleType === 'cre-inducible');
+        
+        if (floxedAllele && creAllele) {
+          const isHetWithCre = 
+            outcome.genotype[floxedAllele.id] === 'heterozygous' &&
+            outcome.genotype[creAllele.id] === 'hemizygous';
+          if (isHetWithCre) category = 'keeper';
+        }
+      }
+    }
+
     return { ...outcome, category };
   });
 }
 
 /**
  * Determine optimal breeding strategy
+ * Implements proper 3-generation Cre/loxP breeding scheme when needed
  */
 function determineBreedingStrategy(
   alleles: Allele[],
@@ -295,110 +333,171 @@ function determineBreedingStrategy(
 
   let genNumber = 1;
 
-  // Generation 1: If starting with heterozygous floxed, intercross to get homozygous
-  for (const allele of floxedAlleles) {
-    if (allele.startingGenotype === 'heterozygous') {
-      const parentA: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
-      const parentB: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
-
-      const outcomes = calculateMultiAlleleCross(parentA, parentB, [allele.id]);
-
-      generations.push({
-        number: genNumber++,
-        cross: {
-          parentA,
-          parentB,
-          parentALabel: `${allele.geneName} +/fl`,
-          parentBLabel: `${allele.geneName} +/fl`,
-        },
-        offspringRatios: outcomes,
-        purpose: `Fix ${allele.geneName} floxed allele to homozygosity`,
-      });
-    }
-  }
-
-  // Generation 2+: Cross homozygous floxed with Cre
+  // Handle Cre/loxP breeding schemes (most complex)
   if (floxedAlleles.length > 0 && creAlleles.length > 0) {
     const floxed = floxedAlleles[0];
     const cre = creAlleles[0];
 
-    const parentA: Record<string, AlleleState> = {
-      [floxed.id]: 'homozygous',
-    };
-    const parentB: Record<string, AlleleState> = {
-      [floxed.id]: 'homozygous',
-      [cre.id]: 'hemizygous',
-    };
+    // Generation 1: If starting with heterozygous floxed, intercross to get homozygous
+    if (floxed.startingGenotype === 'heterozygous') {
+      const parentA: Record<string, AlleleState> = { [floxed.id]: 'heterozygous' };
+      const parentB: Record<string, AlleleState> = { [floxed.id]: 'heterozygous' };
 
-    const outcomes = calculateMultiAlleleCross(
-      parentA,
-      parentB,
-      [floxed.id, cre.id]
-    );
-
-    // Categorize outcomes
-    const categorizedOutcomes = categorizeOutcomes(outcomes, [floxed, cre], targetGenotypes);
-
-    generations.push({
-      number: genNumber++,
-      cross: {
-        parentA,
-        parentB,
-        parentALabel: `${floxed.geneName} fl/fl`,
-        parentBLabel: `${floxed.geneName} fl/fl; ${cre.geneName}+`,
-      },
-      offspringRatios: categorizedOutcomes,
-      purpose: 'Generate experimental and control cohorts',
-    });
-  }
-
-  // Handle other alleles (knockouts, knockins, etc.)
-  for (const allele of otherAlleles) {
-    if (allele.startingGenotype === 'heterozygous') {
-      const parentA: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
-      const parentB: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
-
-      const outcomes = calculateMultiAlleleCross(parentA, parentB, [allele.id]);
+      const outcomes = calculateMultiAlleleCross(parentA, parentB, [floxed.id], [floxed]);
+      const categorizedOutcomes = categorizeOutcomes(outcomes, [floxed], targetGenotypes, true);
 
       generations.push({
         number: genNumber++,
         cross: {
           parentA,
           parentB,
-          parentALabel: `${allele.geneName} +/-`,
-          parentBLabel: `${allele.geneName} +/-`,
+          parentALabel: `${floxed.geneName} +/fl`,
+          parentBLabel: `${floxed.geneName} +/fl`,
         },
-        offspringRatios: outcomes,
-        purpose: `Generate ${allele.geneName} homozygous mutants`,
+        offspringRatios: categorizedOutcomes,
+        purpose: `Fix ${floxed.geneName} floxed allele to homozygosity`,
       });
     }
-  }
 
-  // If no generations were created, create a simple breeding plan
-  if (generations.length === 0 && alleles.length > 0) {
-    const alleleIds = alleles.map((a) => a.id);
-    const parentA: Record<string, AlleleState> = {};
-    const parentB: Record<string, AlleleState> = {};
+    // Generation 2: Introduce Cre transgene
+    // Cross homozygous floxed (no Cre) with Cre-positive
+    // This creates heterozygous-with-Cre or homozygous-with-Cre depending on vendor genotype
+    const gen2ParentA: Record<string, AlleleState> = {
+      [floxed.id]: 'homozygous',
+      [cre.id]: 'wildtype',
+    };
+    const gen2ParentB: Record<string, AlleleState> = {
+      [floxed.id]: 'wildtype', // Assuming vendor sells wild-type for floxed gene
+      [cre.id]: 'hemizygous',
+    };
 
-    alleles.forEach((allele) => {
-      parentA[allele.id] = allele.startingGenotype === 'hemizygous' ? 'hemizygous' : 'heterozygous';
-      parentB[allele.id] = 'wildtype';
-    });
-
-    const outcomes = calculateMultiAlleleCross(parentA, parentB, alleleIds);
-    const categorizedOutcomes = categorizeOutcomes(outcomes, alleles, targetGenotypes);
+    const gen2Outcomes = calculateMultiAlleleCross(
+      gen2ParentA,
+      gen2ParentB,
+      [floxed.id, cre.id],
+      [floxed, cre]
+    );
+    const categorizedGen2Outcomes = categorizeOutcomes(gen2Outcomes, [floxed, cre], targetGenotypes, true);
 
     generations.push({
-      number: 1,
+      number: genNumber++,
       cross: {
-        parentA,
-        parentB,
-        parentALabel: alleles.map((a) => `${a.geneName}+`).join('; '),
-        parentBLabel: 'Wild-type',
+        parentA: gen2ParentA,
+        parentB: gen2ParentB,
+        parentALabel: `${floxed.geneName} fl/fl; ${cre.geneName}-`,
+        parentBLabel: `${floxed.geneName} +/+; ${cre.geneName}+`,
+      },
+      offspringRatios: categorizedGen2Outcomes,
+      purpose: `Introduce ${cre.geneName} transgene`,
+    });
+
+    // Generation 3: Generate final experimental and control cohorts
+    // Cross heterozygous-with-Cre (from Gen 2) with homozygous-no-Cre (from Gen 1)
+    const gen3ParentA: Record<string, AlleleState> = {
+      [floxed.id]: 'heterozygous',
+      [cre.id]: 'hemizygous',
+    };
+    const gen3ParentB: Record<string, AlleleState> = {
+      [floxed.id]: 'homozygous',
+      [cre.id]: 'wildtype',
+    };
+
+    const gen3Outcomes = calculateMultiAlleleCross(
+      gen3ParentA,
+      gen3ParentB,
+      [floxed.id, cre.id],
+      [floxed, cre]
+    );
+
+    // Categorize outcomes for final generation
+    const categorizedOutcomes = categorizeOutcomes(gen3Outcomes, [floxed, cre], targetGenotypes);
+
+    generations.push({
+      number: genNumber++,
+      cross: {
+        parentA: gen3ParentA,
+        parentB: gen3ParentB,
+        parentALabel: `${floxed.geneName} +/fl; ${cre.geneName}+`,
+        parentBLabel: `${floxed.geneName} fl/fl; ${cre.geneName}-`,
       },
       offspringRatios: categorizedOutcomes,
-      purpose: 'Initial breeding cross',
+      purpose: 'Generate experimental and control cohorts',
     });
+  } 
+  // Handle simple floxed-only (no Cre) or other breeding schemes
+  else {
+    // Generation 1: If starting with heterozygous floxed, intercross to get homozygous
+    for (const allele of floxedAlleles) {
+      if (allele.startingGenotype === 'heterozygous') {
+        const parentA: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
+        const parentB: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
+
+        const outcomes = calculateMultiAlleleCross(parentA, parentB, [allele.id], [allele]);
+        const categorizedOutcomes = categorizeOutcomes(outcomes, [allele], targetGenotypes);
+
+        generations.push({
+          number: genNumber++,
+          cross: {
+            parentA,
+            parentB,
+            parentALabel: `${allele.geneName} +/fl`,
+            parentBLabel: `${allele.geneName} +/fl`,
+          },
+          offspringRatios: categorizedOutcomes,
+          purpose: `Fix ${allele.geneName} floxed allele to homozygosity`,
+        });
+      }
+    }
+
+    // Handle other alleles (knockouts, knockins, etc.)
+    for (const allele of otherAlleles) {
+      if (allele.startingGenotype === 'heterozygous') {
+        const parentA: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
+        const parentB: Record<string, AlleleState> = { [allele.id]: 'heterozygous' };
+
+        const outcomes = calculateMultiAlleleCross(parentA, parentB, [allele.id], [allele]);
+        const categorizedOutcomes = categorizeOutcomes(outcomes, [allele], targetGenotypes);
+
+        generations.push({
+          number: genNumber++,
+          cross: {
+            parentA,
+            parentB,
+            parentALabel: `${allele.geneName} +/-`,
+            parentBLabel: `${allele.geneName} +/-`,
+          },
+          offspringRatios: categorizedOutcomes,
+          purpose: `Generate ${allele.geneName} homozygous mutants`,
+        });
+      }
+    }
+
+    // If no generations were created, create a simple breeding plan
+    if (generations.length === 0 && alleles.length > 0) {
+      const alleleIds = alleles.map((a) => a.id);
+      const parentA: Record<string, AlleleState> = {};
+      const parentB: Record<string, AlleleState> = {};
+
+      alleles.forEach((allele) => {
+        parentA[allele.id] = allele.startingGenotype === 'hemizygous' ? 'hemizygous' : 'heterozygous';
+        parentB[allele.id] = 'wildtype';
+      });
+
+      const outcomes = calculateMultiAlleleCross(parentA, parentB, alleleIds, alleles);
+      const categorizedOutcomes = categorizeOutcomes(outcomes, alleles, targetGenotypes);
+
+      generations.push({
+        number: 1,
+        cross: {
+          parentA,
+          parentB,
+          parentALabel: alleles.map((a) => `${a.geneName}+`).join('; '),
+          parentBLabel: 'Wild-type',
+        },
+        offspringRatios: categorizedOutcomes,
+        purpose: 'Initial breeding cross',
+      });
+    }
   }
 
   return generations;
@@ -434,7 +533,11 @@ function calculateResources(
   // Calculate mice needed
   const expNeeded = experimental?.numberNeeded || 10;
   const ctrlNeeded = control?.numberNeeded || 10;
-  const totalTargetMice = expNeeded + ctrlNeeded;
+  
+  // For het × het crosses, both experimental and control come from same cross
+  // We only need enough pups to get the LARGER of the two requirements
+  // (since they occur at same frequency in most cases)
+  const maxNeeded = Math.max(expNeeded, ctrlNeeded);
 
   // Account for sex requirements
   let sexMultiplier = 1;
@@ -445,15 +548,19 @@ function calculateResources(
   }
 
   // Calculate breeding pairs needed
-  const miceNeededBeforeSex = totalTargetMice * sexMultiplier;
+  // Use lower-end litter size for conservative planning
+  const miceNeededBeforeSex = maxNeeded * sexMultiplier;
   const miceNeededBeforeFrequency = miceNeededBeforeSex / (targetFrequency || 0.25);
-  const littersNeeded = Math.ceil(miceNeededBeforeFrequency / params.averageLitterSize);
+  const littersNeeded = miceNeededBeforeFrequency / params.lowerEndLitterSize;
+  
+  // Apply breeding efficiency (not all pairs will produce litters)
+  // Round ONCE at the end for more accurate calculation
   const breedingPairs = Math.ceil(littersNeeded / params.breedingEfficiency);
 
-  // Total mice across all generations
-  const totalMice = breedingPairs * params.averageLitterSize * generations.length;
+  // Calculate total mice using average litter size for estimates
+  const totalMice = breedingPairs * params.averageLitterSize;
 
-  // Timeline
+  // Timeline: 9 weeks per generation (3 gestation + 3 weaning + 3 to breeding age)
   const weeks = generations.length * params.weeksPerGeneration;
 
   return {

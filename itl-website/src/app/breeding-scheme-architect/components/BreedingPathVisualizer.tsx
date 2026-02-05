@@ -238,43 +238,94 @@ export default function BreedingPathVisualizer({
         Generation by Generation Breeding Path
       </h3>
 
-      {/* Legend */}
+      {/* Legend with Educational Tooltips */}
       <div
         style={{
-          display: 'flex',
-          gap: '20px',
+          backgroundColor: '#f7f7f7',
+          border: '1px solid #e0e0e0',
+          padding: '15px',
           marginBottom: '20px',
-          flexWrap: 'wrap',
         }}
       >
-        {['experimental', 'control', 'keeper', 'cull'].map((cat) => (
-          <div
-            key={cat}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-            }}
-          >
+        <div
+          style={{
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '.9rem',
+            fontWeight: 600,
+            color: '#333',
+            marginBottom: '10px',
+          }}
+        >
+          Offspring Categories
+        </div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '15px',
+          }}
+        >
+          {[
+            { 
+              cat: 'experimental', 
+              description: 'Mice with your target experimental genotype' 
+            },
+            { 
+              cat: 'control', 
+              description: 'Littermate controls without Cre or with wild-type genotype' 
+            },
+            { 
+              cat: 'keeper', 
+              description: 'Mice needed as breeders for subsequent generations' 
+            },
+            { 
+              cat: 'cull', 
+              description: 'Not needed for study or future breeding' 
+            },
+          ].map(({ cat, description }) => (
             <div
+              key={cat}
               style={{
-                width: '16px',
-                height: '16px',
-                backgroundColor: getCategoryColor(cat),
-                borderRadius: '2px',
-              }}
-            />
-            <span
-              style={{
-                fontFamily: 'var(--system-ui)',
-                fontSize: '.8rem',
-                color: '#666',
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '8px',
               }}
             >
-              {getCategoryLabel(cat)}
-            </span>
-          </div>
-        ))}
+              <div
+                style={{
+                  width: '16px',
+                  height: '16px',
+                  backgroundColor: getCategoryColor(cat),
+                  borderRadius: '2px',
+                  flexShrink: 0,
+                  marginTop: '2px',
+                }}
+              />
+              <div>
+                <div
+                  style={{
+                    fontFamily: 'var(--system-ui)',
+                    fontSize: '.85rem',
+                    color: '#333',
+                    fontWeight: 600,
+                  }}
+                >
+                  {getCategoryLabel(cat)}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--system-ui)',
+                    fontSize: '.75rem',
+                    color: '#666',
+                    lineHeight: '1.4',
+                  }}
+                >
+                  {description}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Generation Cards */}

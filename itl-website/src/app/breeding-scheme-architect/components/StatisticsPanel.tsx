@@ -171,6 +171,88 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
         </div>
       )}
 
+      {/* Educational Information */}
+      <div
+        style={{
+          backgroundColor: 'white',
+          border: '1px solid #e0e0e0',
+          padding: '15px',
+          marginBottom: '15px',
+        }}
+      >
+        <div
+          style={{
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '.9rem',
+            fontWeight: 600,
+            color: '#008080',
+            marginBottom: '8px',
+          }}
+        >
+          📚 Understanding the Calculations
+        </div>
+        <div
+          style={{
+            fontFamily: 'var(--system-ui)',
+            fontSize: '.85rem',
+            color: '#666',
+            lineHeight: '1.7',
+          }}
+        >
+          <p style={{ margin: '0 0 8px 0' }}>
+            <strong>Timeline:</strong> Each generation takes approximately 9 weeks: 3 weeks gestation + 3 weeks weaning + 3 weeks to breeding age.
+          </p>
+          <p style={{ margin: '0 0 8px 0' }}>
+            <strong>Breeding Efficiency:</strong> We plan for 80% breeding success (not all pairs produce litters). We use the lower end of litter size (6 pups) for conservative planning, then average (7 pups) for total estimates.
+          </p>
+          <p style={{ margin: '0 0 0 0' }}>
+            <strong>Why More Breeders?</strong> To account for Mendelian ratios, sex requirements, and breeding efficiency, we need more breeding pairs than your target number. This ensures you get enough mice of the correct genotype.
+          </p>
+        </div>
+      </div>
+
+      {/* Best Practices for PIs */}
+      {plan.totalGenerations >= 3 && (
+        <div
+          style={{
+            backgroundColor: '#e8f4f8',
+            border: '1px solid #008080',
+            padding: '15px',
+            marginBottom: '15px',
+          }}
+        >
+          <div
+            style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '.9rem',
+              fontWeight: 600,
+              color: '#008080',
+              marginBottom: '8px',
+            }}
+          >
+            💡 Best Practices for Multi-Generation Breeding
+          </div>
+          <div
+            style={{
+              fontFamily: 'var(--system-ui)',
+              fontSize: '.85rem',
+              color: '#333',
+              lineHeight: '1.7',
+            }}
+          >
+            <p style={{ margin: '0 0 8px 0' }}>
+              <strong>Key Principle:</strong> Always cross Cre-positive mice back to "clean" (Cre-negative) genotypes. Never cross Cre+ × Cre+ for conditional knockout experiments.
+            </p>
+            <p style={{ margin: '0 0 8px 0' }}>
+              <strong>Intermediate Generations:</strong> Keep homozygous floxed mice from Generation 1 for use in Generation 3. These serve as your "clean" breeding stock.
+            </p>
+            <p style={{ margin: '0 0 0 0' }}>
+              <strong>Cost Saving Tip:</strong> Consider purchasing homozygous floxed mice from vendors (JAX, Taconic) to skip Generation 1 and reduce breeding time from 27 to 18 weeks.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Disclaimer */}
       <div
         style={{
@@ -184,7 +266,7 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
         Estimates are based on standard C57BL/6 breeding parameters (average litter
         size 6 to 8 pups, 80% breeding efficiency). Actual results may vary based on
         strain background, allele effects on fertility, and environmental factors.
-        Contact our scientific team for project-specific guidance.
+        For detailed guidance, see <a href="https://www.jax.org/news-and-insights/jax-blog/2011/september/cre-lox-breeding" target="_blank" rel="noopener noreferrer" style={{ color: '#008080' }}>JAX Cre-loxP Breeding Guide</a>.
       </div>
     </div>
   );

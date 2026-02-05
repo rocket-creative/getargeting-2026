@@ -70,14 +70,16 @@ export interface BreedingPlan {
 
 export interface BreedingParameters {
   averageLitterSize: number;
+  lowerEndLitterSize: number; // Conservative estimate for planning
   breedingEfficiency: number;
   weeksPerGeneration: number;
 }
 
 export const DEFAULT_BREEDING_PARAMS: BreedingParameters = {
-  averageLitterSize: 7, // C57BL/6 average
-  breedingEfficiency: 0.8,
-  weeksPerGeneration: 10, // ~3 weeks gestation + 3 weeks weaning + 4 weeks to breeding age
+  averageLitterSize: 7, // C57BL/6 average (6-8 pups per litter)
+  lowerEndLitterSize: 6, // Conservative lower-end estimate for resource planning
+  breedingEfficiency: 0.8, // 80% of breeding pairs successfully produce litters
+  weeksPerGeneration: 9, // 3 weeks gestation + 3 weeks weaning + 3 weeks to breeding age
 };
 
 export const ALLELE_TYPE_LABELS: Record<AlleleType, string> = {
