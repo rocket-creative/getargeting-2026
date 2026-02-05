@@ -15,6 +15,12 @@ interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
+  categorizedChildren?: {
+    categories: {
+      title: string;
+      items: NavItem[];
+    }[];
+  };
 }
 
 // Complete Navigation Structure - Updated January 2026
@@ -22,24 +28,44 @@ const navigationItems: NavItem[] = [
   {
     label: 'Custom Models',
     href: '/custom-mouse-models',
-    children: [
-      { label: 'Knockout Mouse Models', href: '/knockout-mouse-models' },
-      { label: 'Conditional Knockout', href: '/conditional-knockout-mouse-models' },
-      { label: 'Conventional Knockout', href: '/conventional-knockout-mouse-models' },
-      { label: 'Tissue-Specific Knockout', href: '/tissue-specific-knockout' },
-      { label: 'Inducible Conditional Knockout', href: '/inducible-conditional-knockout' },
-      { label: 'Knockin Mouse Models', href: '/knockin-mouse-models' },
-      { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
-      { label: 'Reporter Knockin', href: '/reporter-knockin' },
-      { label: 'Tag Knockin Mice', href: '/tag-knockin-mice' },
-      { label: 'Conditional Knockin Mice', href: '/conditional-knockin-mice' },
-      { label: 'Humanized Mouse Models', href: '/humanized-mouse-models' },
-      { label: 'Gene Replacement', href: '/gene-replacement' },
-      { label: 'Transgenic Mouse Service', href: '/transgenic-mouse-service' },
-      { label: 'cDNA Knockin', href: '/cdna-knockin' },
-      { label: 'Rat Models', href: '/rat-models' },
-      { label: 'Custom Animal Models', href: '/custom-animal-models' },
-    ],
+    categorizedChildren: {
+      categories: [
+        {
+          title: 'Knockout',
+          items: [
+            { label: 'Knockout Mouse Models', href: '/knockout-mouse-models' },
+            { label: 'Conventional Knockout', href: '/conventional-knockout-mouse-models' },
+            { label: 'Conditional Knockout', href: '/conditional-knockout-mouse-models' },
+            { label: 'Tissue-Specific Knockout', href: '/tissue-specific-knockout' },
+            { label: 'Inducible Conditional Knockout', href: '/inducible-conditional-knockout' },
+          ],
+        },
+        {
+          title: 'Knock-in Mouse Models',
+          items: [
+            { label: 'Knockin Mouse Models', href: '/knockin-mouse-models' },
+            { label: 'cDNA Knockin', href: '/cdna-knockin' },
+            { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
+            { label: 'Reporter Knockin', href: '/reporter-knockin' },
+            { label: 'Tag Knockin Mice', href: '/tag-knockin-mice' },
+            { label: 'Conditional Knockin Mice', href: '/conditional-knockin-mice' },
+          ],
+        },
+        {
+          title: 'Other Models',
+          items: [
+            { label: 'Humanized Mouse Models', href: '/humanized-mouse-models' },
+            { label: 'Gene Replacement', href: '/gene-replacement' },
+            { label: 'Transgenic Mouse Service', href: '/transgenic-mouse-service' },
+            { label: 'Rat Models', href: '/rat-models' },
+            { label: 'Knockout Rat Models', href: '/knockout-rat-models' },
+            { label: 'Knockin Rat Models', href: '/knockin-rat-models' },
+            { label: 'Custom Rabbit Models', href: '/custom-rabbit-models' },
+            { label: 'Custom Animal Models', href: '/custom-animal-models' },
+          ],
+        },
+      ],
+    },
   },
   {
     label: 'Catalog Models',
@@ -280,14 +306,60 @@ export function UXUIDCNavigation() {
                       {item.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full" />
                     </span>
-                    {item.children && (
+                    {(item.children || item.categorizedChildren) && (
                       <svg className="w-2.5 h-2.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     )}
                   </Link>
 
-                  {item.children && activeDropdown === item.label && (
+                  {/* Categorized Dropdown (three columns with headers) */}
+                  {item.categorizedChildren && activeDropdown === item.label && (
+                    <div 
+                      className="absolute top-full left-0 bg-white shadow-xl py-4 mt-0 border border-[#e0e0e0] z-50 animate-fadeIn"
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
+                        gap: '20px',
+                        padding: '20px',
+                        minWidth: '650px',
+                        maxHeight: '70vh',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      {item.categorizedChildren.categories.map((category, idx) => (
+                        <div key={idx} className="flex flex-col">
+                          <h4 
+                            style={{ 
+                              color: '#2384da',
+                              fontFamily: 'Poppins, sans-serif',
+                              fontSize: '.85rem',
+                              fontWeight: 600,
+                              marginBottom: '10px',
+                              paddingBottom: '8px',
+                              borderBottom: '2px solid #e0e0e0',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.5px'
+                            }}
+                          >
+                            {category.title}
+                          </h4>
+                          {category.items.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-2 py-2 text-[#666] hover:bg-[#f7f7f7] hover:text-teal-600 hover:pl-3 transition-all duration-300 text-sm"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Standard Dropdown (existing behavior for other menus) */}
+                  {item.children && !item.categorizedChildren && activeDropdown === item.label && (
                     <div 
                       className={`absolute top-full left-0 bg-white shadow-xl py-2 mt-0 border border-[#e0e0e0] z-50 animate-fadeIn ${
                         item.children.length > 10 ? 'w-[560px] max-h-[70vh] overflow-y-auto' : 'w-56'
