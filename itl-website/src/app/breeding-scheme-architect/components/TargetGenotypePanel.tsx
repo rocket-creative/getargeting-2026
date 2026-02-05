@@ -21,12 +21,23 @@ interface TargetGenotypePanelProps {
 
 const ALLELE_STATES: AlleleState[] = ['homozygous', 'heterozygous', 'wildtype', 'hemizygous'];
 
-const STATE_LABELS: Record<AlleleState, string> = {
-  homozygous: 'Homozygous (mut/mut)',
-  heterozygous: 'Heterozygous (+/mut)',
-  wildtype: 'Wild-type (+/+)',
-  hemizygous: 'Hemizygous (Tg+)',
-};
+// Context-aware labels based on allele type
+function getStateLabel(state: AlleleState, allele?: Allele): string {
+  const isConditional = allele?.alleleType === 'conditional-knockout';
+  
+  switch (state) {
+    case 'homozygous':
+      return isConditional ? 'Homozygous (fl/fl)' : 'Homozygous (mut/mut)';
+    case 'heterozygous':
+      return isConditional ? 'Heterozygous (+/fl)' : 'Heterozygous (+/mut)';
+    case 'wildtype':
+      return 'Wild-type (+/+)';
+    case 'hemizygous':
+      return 'Hemizygous (Tg+)';
+    default:
+      return state;
+  }
+}
 
 const SEX_REQUIREMENTS: SexRequirement[] = ['any', 'male', 'female', 'balanced'];
 
@@ -221,11 +232,32 @@ export default function TargetGenotypePanel({
           fontSize: '1.1rem',
           fontWeight: 600,
           margin: 0,
-          marginBottom: '20px',
+          marginBottom: '15px',
         }}
       >
         Define Target Genotypes
       </h3>
+
+      {/* Educational Info */}
+      <div
+        style={{
+          backgroundColor: '#e8f4f8',
+          border: '1px solid #008080',
+          padding: '12px 15px',
+          marginBottom: '20px',
+        }}
+      >
+        <div
+          style={{
+            fontFamily: 'var(--system-ui)',
+            fontSize: '.8rem',
+            color: '#333',
+            lineHeight: '1.6',
+          }}
+        >
+          <strong>💡 Genotype Notation Guide:</strong> "fl" = floxed (conditional knockout), "mut" = mutant (conventional knockout), "+" = wild-type allele, "Tg+" = transgene positive (Cre drivers, reporters)
+        </div>
+      </div>
 
       <div
         style={{
@@ -294,7 +326,7 @@ export default function TargetGenotypePanel({
                   >
                     {ALLELE_STATES.map((state) => (
                       <option key={state} value={state}>
-                        {STATE_LABELS[state]}
+                        {getStateLabel(state, allele)}
                       </option>
                     ))}
                   </select>
