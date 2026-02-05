@@ -535,9 +535,10 @@ function calculateResources(
   const ctrlNeeded = control?.numberNeeded || 10;
   
   // For het × het crosses, both experimental and control come from same cross
-  // We only need enough pups to get the LARGER of the two requirements
-  // (since they occur at same frequency in most cases)
-  const maxNeeded = Math.max(expNeeded, ctrlNeeded);
+  // We need enough pups to get BOTH experimental AND control requirements
+  // However, they usually occur at the same frequency (e.g., 25% hom vs 25% wt in het×het)
+  // So we calculate based on the single genotype needed (they're independent outcomes)
+  const miceNeeded = expNeeded; // Calculate for experimental genotype
 
   // Account for sex requirements
   let sexMultiplier = 1;
@@ -547,30 +548,39 @@ function calculateResources(
     sexMultiplier = 1.2; // Some buffer for balancing
   }
 
-  // Calculate breeding pairs needed
-  // Use lower-end litter size for conservative planning
-  const miceNeededBeforeSex = maxNeeded * sexMultiplier;
-  const miceNeededBeforeFrequency = miceNeededBeforeSex / (targetFrequency || 0.25);
-  const littersNeeded = miceNeededBeforeFrequency / params.lowerEndLitterSize;
+  // Calculate breeding pairs needed using proper formula:
+  // 1. Apply sex multiplier to target number
+  // 2. Divide by genotype frequency to get total pups needed
+  // 3. Divide by lower-end litter size to get litters needed
+  // 4. Divide by breeding efficiency to account for failed matings
+  const miceNeededAfterSex = miceNeeded * sexMultiplier;
+  const totalPupsNeeded = miceNeededAfterSex / (targetFrequency || 0.25);
+  const littersNeeded = totalPupsNeeded / params.lowerEndLitterSize;
+  const breedingPairsNeeded = littersNeeded / params.breedingEfficiency;
   
-  // Apply breeding efficiency (not all pairs will produce litters)
-  // Round ONCE at the end for more accurate calculation
-  const breedingPairs = Math.ceil(littersNeeded / params.breedingEfficiency);
+  // Round up to whole number of breeding pairs
+  const breedingPairs = Math.ceil(breedingPairsNeeded);
 
   // Calculate total mice using average litter size for estimates
-  const totalMice = breedingPairs * params.averageLitterSize;
+  // Only count successful breeding pairs (apply breeding efficiency)
+  const successfulPairs = breedingPairs * params.breedingEfficiency;
+  const totalMice = Math.round(successfulPairs * params.averageLitterSize);
 
   // Timeline: 9 weeks per generation (3 gestation + 3 weaning + 3 to breeding age)
   const weeks = generations.length * params.weeksPerGeneration;
 
+  // Calculate expected mice per genotype based on actual breeding pairs and frequencies
+  const estimatedExpMice = totalMice * targetFrequency;
+  const estimatedCtrlMice = totalMice * targetFrequency; // Same frequency for het×het crosses
+  
   return {
     estimatedBreedingPairs: Math.max(breedingPairs, 2),
-    estimatedTotalMice: Math.round(totalMice),
+    estimatedTotalMice: totalMice,
     estimatedWeeks: weeks,
     targetGenotypeFrequency: targetFrequency,
     micePerGenotype: {
-      experimental: expNeeded,
-      control: ctrlNeeded,
+      experimental: Math.round(estimatedExpMice),
+      control: Math.round(estimatedCtrlMice),
     },
   };
 }
