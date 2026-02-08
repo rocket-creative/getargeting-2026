@@ -121,8 +121,7 @@ const relatedModelTypes = [
 ];
 
 const relatedTechnologies = [
-  { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" }
+  { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" }
 ];
 
 // FAQ Data
@@ -263,9 +262,9 @@ export default function DiabetesMouseModelsPage() {
                   className="hero-animate"
                   style={{
                     color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.6rem',
+                    lineHeight: '1.7rem',
                     marginBottom: '25px'
                   }}
                 >
@@ -547,19 +546,47 @@ export default function DiabetesMouseModelsPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                  <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div style={{ marginTop: 'auto' }}>
-                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
-                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
-                  </div>
-                </div>
-              ))}
+          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
+              What Researchers Say
+            </h2>
+            <div
+              className="animate-in"
+              style={{
+                backgroundColor: '#ffffff',
+                border: '1px solid #e0e0e0',
+                borderRadius: '8px',
+                padding: '40px',
+                textAlign: 'center',
+              }}
+            >
+              <p style={{
+                color: '#666',
+                fontFamily: 'Lato, sans-serif',
+                fontSize: '1.05rem',
+                fontWeight: 400,
+                lineHeight: 1.7,
+                fontStyle: 'italic',
+                marginBottom: '25px',
+              }}>
+                &ldquo;{testimonials[0].quote}&rdquo;
+              </p>
+              <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>
+                — {testimonials[0].name}
+              </p>
+              <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.85rem', fontWeight: 400 }}>
+                {testimonials[0].affiliation}
+              </p>
+            </div>
+            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
+              <Link
+                href="/testimonials"
+                className="inline-flex items-center gap-2 transition-colors duration-300"
+                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
+              >
+                <span>Read more testimonials</span>
+                <IconChevronRight size={16} color="#008080" />
+              </Link>
             </div>
           </div>
         </section>

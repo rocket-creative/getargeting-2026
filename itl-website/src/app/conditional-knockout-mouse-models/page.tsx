@@ -178,8 +178,7 @@ const relatedModelTypes = [
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "Flp Frt System", href: "/flp-frt-system" },
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" }
+  { title: "Flp Frt System", href: "/flp-frt-system" }
 ];
 
 const projectResources = [

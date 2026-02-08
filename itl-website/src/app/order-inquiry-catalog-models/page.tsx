@@ -15,6 +15,8 @@ import {
   IconChevronRight,
   IconPackage,
   IconCheckCircle,
+  IconMail,
+  IconPhone,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -203,6 +205,59 @@ export default function OrderInquiryCatalogModelsPage() {
               Submit an inquiry for our ready made mouse models. Our team will confirm 
               availability, provide pricing, and coordinate shipping to your facility.
             </p>
+          </div>
+        </section>
+
+        {/* Direct Contact Callout */}
+        <section style={{ padding: '24px', background: BRAND.lightGray }}>
+          <div 
+            style={{ 
+              maxWidth: '700px', 
+              margin: '0 auto',
+              backgroundColor: BRAND.white,
+              border: `1px solid ${BRAND.teal}`,
+              borderRadius: '10px',
+              padding: '20px 24px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '12px',
+            }}
+          >
+            <p style={{ color: BRAND.navy, fontSize: '.95rem', fontWeight: 600, margin: 0 }}>
+              Prefer to contact us directly?
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+              <a 
+                href="mailto:inquiry@genetargeting.com"
+                style={{
+                  color: BRAND.teal,
+                  fontSize: '.95rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontWeight: 500,
+                }}
+              >
+                <IconMail size={18} color={BRAND.teal} />
+                <span>inquiry@genetargeting.com</span>
+              </a>
+              <a 
+                href="tel:+16314688534"
+                style={{
+                  color: BRAND.teal,
+                  fontSize: '.95rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontWeight: 500,
+                }}
+              >
+                <IconPhone size={18} color={BRAND.teal} />
+                <span>(631) 468-8534</span>
+              </a>
+            </div>
           </div>
         </section>
 

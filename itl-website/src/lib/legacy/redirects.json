@@ -27,7 +27,7 @@
   { "source": "/humanized-immune-target-mice", "destination": "/catalog-mouse-models/", "permanent": true },
   { "source": "/humanized-catalog-mouse-models", "destination": "/catalog-mouse-models/", "permanent": true },
   { "source": "/cre-mice", "destination": "/mouse-lines/", "permanent": true },
-  { "source": "/es-cells", "destination": "/es-cell-gene-targeting/", "permanent": true },
+  { "source": "/es-cells", "destination": "/technology-overview/", "permanent": true },
   { "source": "/video-library", "destination": "/resources/", "permanent": true },
   { "source": "/pharma-biotech-mouse-models", "destination": "/pharma-and-biotech/", "permanent": true },
   { "source": "/ingenious-process-2", "destination": "/how-it-works/", "permanent": true },

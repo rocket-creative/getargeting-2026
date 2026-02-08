@@ -191,12 +191,6 @@ const modelTypesData = [
 // Technical Considerations Data
 const technicalData = [
   {
-    icon: IconSettings,
-    title: "Pre Germline Characterization",
-    description: "ES cell based targeting enables verification of neuroscience alleles before mouse generation:",
-    points: ["Confirm correct allele structure", "Verify disease mutation sequences", "Test reporter expression where applicable", "Ensure LoxP sites do not disrupt gene function"]
-  },
-  {
     icon: IconDNA,
     title: "Strain Background",
     description: "Strain background affects neural and behavioral phenotypes:",
@@ -276,7 +270,6 @@ const relatedTechnologies = [
 ];
 
 const projectResources = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -434,9 +427,9 @@ export default function NeuroscienceMouseModelsPage() {
                   className="hero-animate"
                   style={{
                     color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.6rem',
+                    lineHeight: '1.7rem',
                     marginBottom: '25px'
                   }}
                 >

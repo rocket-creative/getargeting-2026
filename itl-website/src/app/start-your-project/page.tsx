@@ -400,7 +400,7 @@ export default function StartYourProjectPage() {
                 fontStyle: 'italic',
               }}
             >
-              <strong>Trusted by 900+ universities, biotech startups, and global research institutions for over 25 years.</strong>
+              <strong>Trusted by 900+ universities, biotech startups, and global research institutions for over 26 years.</strong>
               <br />
               More than <strong>2,500 custom mouse models delivered</strong>.
             </p>
@@ -766,7 +766,7 @@ export default function StartYourProjectPage() {
               }}
             >
               {[
-                'Over 25 years of experience in genetic model development',
+                'Over 26 years of experience in genetic model development',
                 '2500+ custom mouse models delivered',
                 'Trusted by NIH-funded labs and global biotech teams',
                 'Clear communication, fixed prices and ongoing project support',

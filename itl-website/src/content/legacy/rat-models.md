@@ -4,7 +4,7 @@ new_build_url: "/rat-models/"
 url_handling: "reuse"
 link_from: ["/custom-animal-models/"]
 extracted_date: "2026-01-11"
-title: "CRISPR Rat Models for Genetic Research"
+title: "Rat Models for Genetic Research"
 ---
 
 # Rat Models

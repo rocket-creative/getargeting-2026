@@ -172,12 +172,6 @@ const researchApplicationsData = [
 // Technical Considerations Data
 const technicalData = [
   {
-    icon: IconSettings,
-    title: "Pre Germline Characterization",
-    description: "ES cell based targeting enables verification of oncology alleles before mouse generation:",
-    points: ["Confirm oncogene mutation sequences", "Verify LSL cassette structure and function", "Test conditional elements", "Ensure LoxP sites function correctly"]
-  },
-  {
     icon: IconTarget,
     title: "Cre Driver Selection",
     description: "Tissue specific Cre drivers determine tumor location:",
@@ -256,7 +250,6 @@ const relatedModelTypes = [
 
 const projectResources = [
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -398,9 +391,9 @@ export default function OncologyMouseModelsPage() {
                   className="hero-animate"
                   style={{
                     color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.6rem',
+                    lineHeight: '1.7rem',
                     marginBottom: '25px'
                   }}
                 >

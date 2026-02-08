@@ -43,7 +43,7 @@ const services = [
   },
   {
     title: 'Mouse Models',
-    description: 'Our core expertise in custom mouse model generation spans knockout, knockin, humanized, and transgenic approaches with over 2,500 completed projects since 1998.',
+    description: 'Our core expertise in custom mouse model generation spans knockout, knockin, humanized, and targeted transgenic approaches with over 2,500 completed projects since 1998.',
     href: '/custom-mouse-models',
     Icon: IconDNA,
   },
@@ -60,7 +60,7 @@ const faqData = [
   },
   {
     question: 'What genetic modifications are available for non-mouse species?',
-    answer: 'We offer knockout, knockin, and transgenic modifications for rat models. Available modifications for other species depend on current technology capabilities and reagent availability. Contact us for specific inquiries.',
+    answer: 'We offer knockout, knockin, and targeted transgenic modifications for rat models. Available modifications for other species depend on current technology capabilities and reagent availability. Contact us for specific inquiries.',
   },
 ];
 

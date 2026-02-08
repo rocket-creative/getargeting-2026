@@ -5,25 +5,15 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 // Hero Data
 const heroData = {
-  badge: "Immune Checkpoint Models",
+  badge: "Catalog Models",
   title: "TIM3 Humanized Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology research with humanized immune checkpoint models including TIM3 humanized mice that enable direct preclinical evaluation of clinical anti TIM3 antibody candidates and next generation combination checkpoint blockade strategies.",
-  description: "TIM3 humanized mice express human TIM3 (HAVCR2) protein on T cells and other immune populations, enabling testing of human specific therapeutic antibodies in immunocompetent animals with intact tumor immunity. These models are essential for evaluating the emerging class of anti TIM3 therapeutics in development."
+  intro: "TIM3 humanized mice enable preclinical testing of anti human TIM3 therapeutic antibodies in immunocompetent mice for next generation checkpoint immunotherapy development."
 };
-
-// Stats Data
-const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
-  { value: 800, suffix: "+", label: "Publications" },
-  { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
-];
 
 // TIM3 Biology Items
 const tim3BiologyItems = [
@@ -182,7 +172,6 @@ const relatedAreas = [
 ];
 
 const relatedTechnologies = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" }
 ];
 
@@ -247,119 +236,57 @@ export default function TIM3HumanizedMicePage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section
-          ref={heroRef}
-          style={{
-            background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
-            padding: '80px 20px 60px',
-            position: 'relative',
-            overflow: 'hidden'
-          }}
-        >
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            opacity: 0.1,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }} />
-
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 gap-12 items-center">
-              <div>
-                <div
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconTarget size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
-
-                <h1
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px'
-                  }}
-                >
-                  {heroData.title}
-                </h1>
-
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
-                  }}
-                >
-                  {heroData.intro}
-                </p>
-
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
-                    fontWeight: 400,
-                    lineHeight: '1.6rem',
-                    marginBottom: '25px'
-                  }}
-                >
-                  {heroData.description}
-                </p>
-
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-
+        <section style={{
+          background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
+          padding: '80px 20px 60px',
+        }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'rgba(0,212,212,0.15)',
+              border: '1px solid rgba(0,212,212,0.3)',
+              borderRadius: '20px',
+              padding: '6px 14px',
+              marginBottom: '20px'
+            }}>
+              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
+            <h1 style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '2.5rem',
+              fontWeight: 700,
+              color: '#ffffff',
+              marginBottom: '20px',
+            }}>
+              {heroData.title}
+            </h1>
+            <p style={{
+              fontSize: '1rem',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '30px',
+              lineHeight: 1.7,
+              maxWidth: '800px'
+            }}>
+              {heroData.intro}
+            </p>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Link href="/request-quote" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#008080',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 600,
+                textDecoration: 'none'
+              }}>
+                Request a Quote
+                <IconChevronRight size={16} color="#ffffff" />
+              </Link>
             </div>
           </div>
         </section>
@@ -368,22 +295,6 @@ export default function TIM3HumanizedMicePage() {
         <section style={{ backgroundColor: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <CatalogSearch maxResults={15} showTitle={true} />
-          </div>
-        </section>
-
-        {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {statsData.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
-                    <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -770,27 +681,8 @@ export default function TIM3HumanizedMicePage() {
               Our Approach to TIM3 Humanized Models
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
-                <h3 style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
-                  Pre Germline Characterization
-                </h3>
-                <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', marginBottom: '10px' }}>
-                  ES cell based targeting enables comprehensive verification:
-                </p>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', marginBottom: '8px' }}>
-                    <span style={{ color: '#008080', marginRight: '8px' }}>✓</span>
-                    Sequence Confirmation: Ensures correct human TIM3 sequences at all junctions
-                  </li>
-                  <li style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem' }}>
-                    <span style={{ color: '#008080', marginRight: '8px' }}>✓</span>
-                    Expression Verification: Optional early validation of human TIM3 expression
-                  </li>
-                </ul>
-              </div>
-
-              <div className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
+            <div className="grid grid-cols-1 gap-6">
+              <div className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px', maxWidth: '600px', margin: '0 auto', width: '100%' }}>
                 <h3 style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Quality Assurance
                 </h3>

@@ -7,14 +7,14 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
+import { GlossaryTermLink } from '@/components/UXUIDC';
 
 // Note: Metadata exported from metadata.ts for this client component
 
 const heroData = {
   badge: "Site Specific Recombination",
   title: "FLP FRT System",
-  intro: "Since 1998, ingenious targeting laboratory has utilized the FLP FRT recombination system in hundreds of gene targeting projects, providing researchers with versatile tools for selection cassette removal, conditional gene expression, and sophisticated allele conversion strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has utilized the FLP FRT recombination system in hundreds of gene targeting projects, providing researchers with versatile tools for conditional gene expression and sophisticated allele conversion strategies.",
   description: "The FLP FRT system offers an orthogonal recombination platform that complements Cre lox technology, enabling complex genetic manipulations including dual recombinase strategies and sequential allele conversion."
 };
 
@@ -26,14 +26,6 @@ const statsData = [
 ];
 
 const applications = [
-  {
-    title: "Selection Cassette Removal",
-    items: ["FRT flanked cassettes removed after ES cell selection", "Eliminates cassette effects on nearby genes", "Produces clean conditional alleles with only LoxP sites"]
-  },
-  {
-    title: "Derivative Allele Conversion",
-    items: ["tm1a to tm1c conversion removes LacZ Neo cassette", "Restores gene function while maintaining LoxP sites", "Enables conditional knockout after FLP processing"]
-  },
   {
     title: "Dual Recombinase Strategies",
     items: ["Sequential FLP then Cre recombination", "Intersectional approaches for precise targeting", "Conditional rescue in Cre defined populations"]
@@ -79,7 +71,6 @@ const testimonials = [
 
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" }
 ];
 
@@ -90,14 +81,6 @@ const relatedModelTypes = [
 ];
 
 const getFaqData = () => [
-  {
-    question: "When should I use FLP FRT instead of Cre lox?",
-    answer: (
-      <>
-        <GlossaryTermLink term="flp-frt-system">FLP FRT</GlossaryTermLink> is primarily used for removal of FRT flanked <GlossaryTermLink term="selection-markers">selection cassettes</GlossaryTermLink> from knockout first alleles (tm1a to tm1c conversion), enabling generation of clean <GlossaryTermLink term="conditional-knockout-mouse-models">conditional alleles</GlossaryTermLink>. FLP can also be used in dual recombinase experiments where independent control of Cre and FLP modifications is needed.
-      </>
-    )
-  },
   {
     question: "How does FLP recombination efficiency compare to Cre?",
     answer: "FLP recombinase activity is generally efficient but may vary by target locus and driver strength, similar to Cre. Enhanced FLP variants (FLPe, FLPo) work well at 37°C in mammalian cells. For cassette removal applications, germline FLP expression provides efficient removal in offspring."
@@ -161,16 +144,6 @@ export default function FlpFrtSystemPage() {
                   <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
                   <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
                 </div>
-              </div>
-              <div className="hero-animate">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-flp-frt-001"
-                  aspectRatio="4:3"
-                  title="FLP-FRT Recombination System"
-                  caption="Fig. 1: FLP recombinase from yeast excises DNA between FRT sites, commonly used for selection cassette removal."
-                  variant="hero"
-                  altText="FLP-FRT recombination system diagram showing DNA excision and inversion outcomes"
-                />
               </div>
             </div>
           </div>

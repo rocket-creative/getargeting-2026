@@ -74,8 +74,9 @@ export {
   getRelatedLabSignalsArticles
 } from './LabSignalsSignup';
 
-// Flodesk Form
+// Forms
 export { default as FlodeskForm } from './FlodeskForm';
+export { default as HubSpotForm } from './HubSpotForm';
 
 // Newsletter Components
 export { default as NewsletterGate } from './NewsletterGate';

@@ -17,7 +17,7 @@ import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons
 const heroData = {
   badge: "Our Services",
   title: "Knockin Rat Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom mouse and rat models, with hundreds of knockin rat projects enabling precise insertion of human disease mutations, reporter genes, and functional variants in larger rodents providing superior translational relevance. Knockin rat models represent critical platform for investigating human disease mechanisms in physiologically complex organism approximating human phenotypes more closely than mouse models.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom mouse and rat models, enabling precise insertion of human disease mutations, reporter genes, and functional variants in rodents providing superior translational relevance.",
   description: "Knockin rats enable introduction of disease associated human variants within intact rat genomic context, permitting investigation of pathogenic mechanisms with greater translational fidelity than humanized mouse models. The combination of superior behavioral capacity, complex physiology, and precise genetic modifications makes knockin rats optimal for human disease modeling studies requiring maximal biological relevance."
 };
 
@@ -32,9 +32,8 @@ const statsData = [
 // FAQ Data
 const faqData = [
   { question: "Can knockin rats be combined with conditional knockout designs?", answer: "Yes, knockin mutations can be introduced flanked by LoxP sites to create conditional knockin alleles permitting temporal or tissue specific modification. This approach is particularly valuable for studying mutations causing embryonic lethality or developmental toxicity when constitutive expression is problematic." },
-  { question: "What is the maximum size insert for knockin rat models?", answer: "Standard CRISPR knockin approaches accommodate point mutations and small insertions up to approximately 10 kilobases. Larger inserts face declining efficiency, requiring alternative approaches including BAC integration or modified CRISPR strategies. Most practical knockin applications involve inserts under 5 kilobases." },
   { question: "How do humanized rats compare to transgenic humanized mice?", answer: "Humanized rats more closely approximate human physiology and behavior, with superior translational relevance particularly for diseases with behavioral components or cardiovascular manifestations. Transgenic mice with human transgene insertions remain valuable for high-throughput screening, while humanized knockin rats excel for detailed mechanistic investigation and drug development." },
-  { question: "Can knockin rat phenotypes be validated through rapid backcross crosses?", answer: "Yes, backcrossing knockin founders to wild type animals to establish F1 heterozygous generation enables rapid phenotype validation. Subsequent crosses generating F2 homozygous animals reveal genotype phenotype relationships. This approach typically requires 12 to 16 weeks to establish foundational lines." }
+  { question: "Can knockin rat phenotypes be validated through rapid backcross crosses?", answer: "Yes, backcrossing knockin founders to wild type animals to establish F1 heterozygous generation enables rapid phenotype validation. Subsequent crosses generating F2 homozygous animals reveal genotype phenotype relationships." }
 ];
 
 // Related Links

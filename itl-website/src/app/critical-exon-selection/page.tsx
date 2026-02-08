@@ -12,14 +12,14 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from
 const heroData = {
   badge: "Knockout Design",
   title: "Critical Exon Selection",
-  intro: "Since 1998, ingenious targeting laboratory has analyzed exon structures and identified critical exons for over 470 mouse genes, maximizing knockout severity while preserving targeting efficiency, with expertise documented in 156+ peer reviewed publications on exon selection strategies for knockout and conditional knockout design.",
-  description: "Selecting which exon to delete for knockout or flanking for conditional control is arguably the most important decision in targeting design. A well chosen exon guarantees loss of function. A poorly chosen exon may leave residual protein activity."
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including Science, Nature, and Cell.",
+  description: "Selecting which exon to delete for knockout or flanking for conditional control is arguably the most important decision in targeting design. A well chosen exon maximizes loss of function. A poorly chosen exon may leave residual protein activity."
 };
 
 // Stats Data
 const statsData = [
-  { value: 470, suffix: "+", label: "Genes Analyzed" },
-  { value: 156, suffix: "+", label: "Publications" },
+  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Guarantee" }
 ];
@@ -91,14 +91,6 @@ const validationSteps = [
   }
 ];
 
-// ITL Approach
-const itlApproach = [
-  { title: "Comprehensive Exon Analysis", description: "Complete exon structure analysis including all isoforms, reading frame assessment, domain mapping, and tissue specific expression patterns." },
-  { title: "Functional Domain Mapping", description: "Integrate structural domain information with exon locations, targeting exons encoding critical domains for maximum knockout certainty." },
-  { title: "Conditional Knockout Design", description: "When designing tm1a or other conditional alleles, identify optimal exons for floxing that guarantee function loss upon Cre mediated recombination." },
-  { title: "Isoform Consideration", description: "Assess whether chosen exon appears in all relevant transcript variants, avoiding exons that may be bypassed through alternative splicing." }
-];
-
 // Publications Data
 // Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
@@ -130,9 +122,9 @@ const testimonials = [
 
 // Related Links
 const relatedTechnologies = [
-  { title: "tm1a Allele Design", href: "/tm1a-allele-design" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" }
+  { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
+  { title: "LoxP Site Design", href: "/loxp-site-design" }
 ];
 
 const relatedModelTypes = [
@@ -141,16 +133,11 @@ const relatedModelTypes = [
   { title: "Tissue Specific Knockout", href: "/tissue-specific-knockout" }
 ];
 
-const relatedServices = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
-  { title: "Pre Germline Characterization", href: "/pre-germline-characterization" }
-];
-
 // FAQ Data
 const faqData = [
   {
     question: "How do I select which exon to target for knockout?",
-    answer: "Target early exons (exons 2 to 4), exons encoding essential functional domains, or exons present in all transcript variants. Exons with length not divisible by 3 (creating frameshift) are preferred. Exon 1 is highly efficient but difficult for conditional knockout. We perform comprehensive exon analysis including all isoforms, domain mapping, and tissue specific expression."
+    answer: "Target early exons (exons 2 to 4), exons encoding essential functional domains, or exons present in all transcript variants. Exons with length not divisible by 3 (creating frameshift) are preferred."
   },
   {
     question: "What if my target gene has multiple transcript variants?",
@@ -159,10 +146,6 @@ const faqData = [
   {
     question: "How do I validate my exon selection before model generation?",
     answer: "Perform transcript analysis: reverse transcribe mRNA from expressing tissues, amplify across your selected exon, and sequence to confirm exon inclusion and splice boundaries. Use exon length analysis to predict frameshift consequences. Model protein consequences to identify stop codons and domains lost."
-  },
-  {
-    question: "What is the difference between targeting a single exon vs multiple exons?",
-    answer: "Single exon deletion is typically sufficient with proper exon selection. Multiple exon deletion (deleting exons 3 to 5) guarantees knockout even if individual exons are in frame, but is rarely necessary. Large exons (over 500 bp) may be challenging; consider deleting a smaller exon within the large exon instead."
   },
   {
     question: "How does exon selection differ for conventional vs conditional knockout?",
@@ -451,7 +434,7 @@ export default function CriticalExonSelectionPage() {
               Targeting Early Exons (Exon 1 to 3)
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Early exons are excellent targets because deleting exon 1 guarantees loss of function in every transcript variant produced from that gene:
+              Early exons are excellent targets because deleting exon 1 can cause loss of function in every transcript variant produced from that gene:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -485,28 +468,6 @@ export default function CriticalExonSelectionPage() {
                       {item.step}
                     </h3>
                   </div>
-                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ITL Approach Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
-              Our Exon Selection Approach
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {itlApproach.map((item, index) => (
-                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
-                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>
-                    {item.title}
-                  </h3>
                   <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>
                     {item.description}
                   </p>
@@ -696,7 +657,7 @@ export default function CriticalExonSelectionPage() {
         {/* Related Links Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="animate-in">
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>
                   Related Technologies
@@ -723,26 +684,6 @@ export default function CriticalExonSelectionPage() {
                 </h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {relatedModelTypes.map((link, index) => (
-                    <li key={index} style={{ marginBottom: '10px' }}>
-                      <Link
-                        href={link.href}
-                        className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600"
-                        style={{ color: '#2384da', fontSize: '.85rem' }}
-                      >
-                        <IconChevronRight size={12} color="#2384da" />
-                        <span>{link.title}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="animate-in">
-                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>
-                  Related Services
-                </h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {relatedServices.map((link, index) => (
                     <li key={index} style={{ marginBottom: '10px' }}>
                       <Link
                         href={link.href}

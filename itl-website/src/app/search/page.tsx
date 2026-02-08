@@ -43,8 +43,6 @@ const siteContent = [
   // Technology
   { title: 'Cre lox system', description: 'Site specific recombination for conditional gene modification in mice.', url: '/cre-lox-system', category: 'Technology' },
   { title: 'Flp FRT system', description: 'Alternative recombination system for complex genetic manipulations.', url: '/flp-frt-system', category: 'Technology' },
-  { title: 'Doxycycline inducible systems', description: 'Temporal control of gene expression using Tet On or Tet Off systems.', url: '/doxycycline-inducible-systems', category: 'Technology' },
-  { title: 'ES cell gene targeting', description: 'Traditional ES cell based gene targeting for precise modifications.', url: '/es-cell-gene-targeting', category: 'Technology' },
   
   // Therapeutic Areas
   { title: 'Oncology mouse models', description: 'Mouse models for cancer research and immuno oncology studies.', url: '/oncology-mouse-models', category: 'Therapeutic Areas' },
@@ -82,7 +80,7 @@ const siteContent = [
   { title: 'Cre line selection guide', description: 'How to choose the right Cre driver line for your research.', url: '/cre-line-selection-guide', category: 'Resources' },
   
   // Company
-  { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 25 years of experience.', url: '/about-itl', category: 'Company' },
+  { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 26+ years of experience.', url: '/about-itl', category: 'Company' },
   { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
   { title: 'Request a quote', description: 'Submit a project inquiry and receive a custom quote.', url: '/request-quote', category: 'Company' },

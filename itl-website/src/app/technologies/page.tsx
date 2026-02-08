@@ -27,12 +27,6 @@ const statsData = [
 // Core Technologies
 const coreTechnologies = [
   {
-    title: "ES Cell Gene Targeting",
-    desc: "ES cell gene targeting is a strong methodology for precise genetic modification. Pre germline verification ensures correct allele structure before mouse generation.",
-    features: ["Pre germline verification through PCR and RT-PCR", "Defined starting point with characterized ES cell clones", "Predictable inheritance patterns", "Archived ES cells for future derivative allele generation"],
-    link: "/es-cell-gene-targeting"
-  },
-  {
     title: "Homologous Recombination",
     desc: "Homologous recombination enables precise genetic modification by exchanging genomic sequences between the targeting vector and chromosomal DNA.",
     features: ["Targeted modifications occur at the intended locus", "Surrounding genomic architecture remains intact", "Single copy integration at native chromosomal position", "Predictable expression under endogenous regulatory control"],

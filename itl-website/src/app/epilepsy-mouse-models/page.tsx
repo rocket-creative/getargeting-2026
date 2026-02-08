@@ -46,7 +46,6 @@ const relatedLinks = [
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
   { title: "Point Mutation Mice", href: "/point-mutation-mice" },
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
-  { title: "Es Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" }
 ];
 

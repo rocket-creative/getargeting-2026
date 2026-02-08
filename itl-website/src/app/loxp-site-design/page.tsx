@@ -13,7 +13,7 @@ const heroData = {
   badge: "Conditional Allele Architecture",
   title: "LoxP Site Design",
   intro: "Since 1998, ingenious targeting laboratory has designed and implemented LoxP sites in over 1,500 conditional alleles, establishing precise frameworks for Cre mediated recombination that enable spatial and temporal control of gene expression.",
-  description: "LoxP site design determines the success of conditional knockout and knockin strategies. Proper positioning ensures normal gene function before Cre exposure while guaranteeing complete loss of function after recombination."
+  description: "LoxP site design determines the success of conditional knockout and knockin strategies. Proper positioning ensures normal gene function prior to exposure to Cre."
 };
 
 const statsData = [
@@ -41,7 +41,7 @@ const positioningGuidelines = [
 const designPatterns = [
   { pattern: "Single Exon Floxing", description: "Simplest approach when one exon contains catalytic domain, is in all isoforms, and deletion causes frameshift" },
   { pattern: "Multi Exon Floxing", description: "Required when gene has multiple functional domains, single exon maintains frame, or isoform specific exons exist" },
-  { pattern: "First Coding Exon", description: "Eliminates all downstream sequence. No possibility of truncated functional protein. Frameshift guaranteed." }
+  { pattern: "First Coding Exon", description: "Can eliminate all downstream sequence and possibility of truncated functional proteins." }
 ];
 
 const commonPitfalls = [
@@ -59,14 +59,12 @@ const relatedLinks = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "Cre Recombinase Mice", href: "/cre-recombinase-mice" },
   { title: "Critical Exon Selection", href: "/critical-exon-selection" },
-  { title: "Conditional Knockout Models", href: "/conditional-knockout-mouse-models" },
-  { title: "tm1a Allele Design", href: "/tm1a-allele-design" }
+  { title: "Conditional Knockout Models", href: "/conditional-knockout-mouse-models" }
 ];
 
 const faqData = [
   { question: "Where should LoxP sites be placed for conditional knockout?", answer: "LoxP sites should be placed in introns flanking the exon to be deleted, avoiding placement within exons or too close to splice sites. Sites should be at least 100 to 200 bp from exon boundaries to avoid interfering with splicing. The floxed exon should encode critical functional domains." },
   { question: "How far apart should LoxP sites be for efficient recombination?", answer: "LoxP sites can efficiently recombine when separated by distances from a few hundred base pairs to several kilobases. Very large floxed regions (10+ kb) may show reduced efficiency. Standard floxed exons are typically 100 to 500 bp, with intronic LoxP sites placed appropriately." },
-  { question: "Should selection cassettes be removed from floxed alleles?", answer: "Yes. Selection cassettes (Neo) should be removed using FLP mediated deletion because cassettes can affect neighboring gene expression through promoter interference or cause splice abnormalities. After FLP removal, the floxed allele contains only LoxP sites and functions normally until Cre exposure." },
   { question: "Can LoxP variant sites be used for more complex designs?", answer: "Yes. LoxP variant sites (lox2272, loxN) enable independent recombination events in the same construct for serial deletions, inversions, or dual recombinase strategies. Standard LoxP is preferred for most applications as variant sites require compatible Cre variants." }
 ];
 
@@ -196,7 +194,7 @@ export default function LoxPSiteDesignPage() {
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>Start Your LoxP Design Project</h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Our scientific team evaluates each gene for optimal LoxP placement, including gene structure review, exon essentiality analysis, and frameshift verification.</p>
+            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Our scientific team evaluates each gene for LoxP placement, including gene structure review, exon essentiality analysis, and frameshift verification.</p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: '#008080', color: 'white', padding: '12px 30px', fontSize: '.9rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
               <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '12px 30px', border: '2px solid white', fontSize: '.9rem', fontWeight: 500 }}><span>Free Consultation</span><span>→</span></Link>

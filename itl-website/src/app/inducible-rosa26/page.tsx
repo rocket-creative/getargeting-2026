@@ -250,7 +250,6 @@ export default function InducibleRosa26Page() {
               {[
                 { label: 'Rosa26 Locus', href: '/rosa26' },
                 { label: 'Safe Harbor Targeting', href: '/safe-harbor-locus' },
-                { label: 'Doxycycline Inducible Systems', href: '/doxycycline-inducible-systems' },
                 { label: 'Knockin Mouse Models', href: '/knockin-mouse-models' },
               ].map((item, i) => (
                 <Link

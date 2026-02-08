@@ -195,7 +195,6 @@ const relatedGuides = [
 ];
 
 const relatedTechnologies = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Cre Lox System", href: "/cre-lox-system" }
 ];
 

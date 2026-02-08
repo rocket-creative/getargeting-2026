@@ -111,7 +111,7 @@ const commonApplicationsData = {
     },
     {
       title: "Receptor Humanization",
-      description: "G protein coupled receptors, cytokine receptors, growth factor receptors, and other therapeutic target receptors are humanized to enable drug development in relevant preclinical models."
+      description: "G-protein coupled receptors, cytokine receptors, growth factor receptors, and other therapeutic target receptors are humanized to enable drug development in relevant preclinical models."
     },
     {
       title: "Enzyme Humanization",
@@ -163,7 +163,6 @@ const relatedLinksData = {
     { href: "/cdna-knockin", label: "cDNA Knockin" }
   ],
   resources: [
-    { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
     { href: "/target-validation-mouse-models", label: "Target Validation Mouse Models" },
     { href: "/antibody-therapeutics-mouse-models", label: "Antibody Therapeutics Mouse Models" }
   ]

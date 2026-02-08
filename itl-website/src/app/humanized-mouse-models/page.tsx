@@ -243,7 +243,6 @@ const therapeuticAreas = [
 ];
 
 const projectResources = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "FAQs", href: "/faqs" }
 ];
 

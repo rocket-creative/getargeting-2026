@@ -1,6 +1,6 @@
 /**
  * Mouse Model Quote Request Page
- * Built from FINAL TEXT PAGES ALL content
+ * With embedded HubSpot form in hero section
  */
 
 'use client';
@@ -11,7 +11,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
+import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
+import { IconDNA, IconCheckCircle, IconChevronRight, IconMail, IconPhone } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
@@ -85,12 +86,12 @@ export default function RequestQuotePage() {
       <UXUIDCNavigation />
       
       <main id="main-content">
-        {/* Hero Section */}
+        {/* Hero Section with Embedded Form */}
         <section 
           ref={heroRef}
           style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
-            padding: '80px 20px 60px',
+            padding: '80px 20px 80px',
             position: 'relative',
             overflow: 'hidden'
           }}
@@ -101,41 +102,26 @@ export default function RequestQuotePage() {
             left: 0,
             right: 0,
             bottom: 0,
-            opacity: 0.1,
+            opacity: 0.05,
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }} />
           
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div 
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconDNA size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
-                
+          <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+              {/* Left Column: Content (40%) */}
+              <div className="lg:col-span-2">
                 <h1 
                   className="hero-animate"
                   style={{
                     color: 'white',
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
+                    fontSize: 'clamp(2rem, 5vw, 2.5rem)',
                     fontWeight: 700,
-                    lineHeight: 1.1,
+                    lineHeight: 1.15,
                     marginBottom: '20px'
                   }}
                 >
-                  {heroData.title}
+                  Custom Animal Model Quote Request Form
                 </h1>
                 
                 <p 
@@ -144,76 +130,109 @@ export default function RequestQuotePage() {
                     color: 'rgba(255,255,255,0.9)',
                     fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
+                    lineHeight: '1.7',
+                    marginBottom: '25px'
                   }}
                 >
-                  {heroData.intro}
+                  Please fill in the form below, and one of our scientific consultants will contact you within 1 business day.
                 </p>
-                
-                {heroData.description && (
-                  <p 
-                    className="hero-animate"
-                    style={{
-                      color: 'rgba(255,255,255,0.85)',
-                      fontSize: '.9rem',
-                      fontWeight: 400,
-                      lineHeight: '1.6rem',
-                      marginBottom: '25px'
-                    }}
-                  >
-                    {heroData.description}
+
+                {/* Prominent Direct Contact Callout */}
+                <div 
+                  className="hero-animate" 
+                  style={{ 
+                    marginBottom: '25px',
+                    backgroundColor: 'rgba(0, 212, 212, 0.15)',
+                    border: '1px solid rgba(0, 212, 212, 0.4)',
+                    borderRadius: '10px',
+                    padding: '16px 20px',
+                  }}
+                >
+                  <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
+                    Prefer to contact us directly?
                   </p>
-                )}
-                
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link 
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link 
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <a 
+                      href="mailto:inquiry@genetargeting.com"
+                      style={{
+                        color: '#00d4d4',
+                        fontSize: '.95rem',
+                        textDecoration: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        fontWeight: 500,
+                      }}
+                    >
+                      <IconMail size={18} color="#00d4d4" />
+                      <span>inquiry@genetargeting.com</span>
+                    </a>
+                    <a 
+                      href="tel:+16314688534"
+                      style={{
+                        color: '#00d4d4',
+                        fontSize: '.95rem',
+                        textDecoration: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        fontWeight: 500,
+                      }}
+                    >
+                      <IconPhone size={18} color="#00d4d4" />
+                      <span>(631) 468-8534</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="hero-animate">
+                  <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
+                    What to expect:
+                  </p>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5' }}>
+                        Response within 1 business day
+                      </span>
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5' }}>
+                        Detailed project proposal with timeline
+                      </span>
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5' }}>
+                        Transparent pricing and deliverables
+                      </span>
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5' }}>
+                        Free scientific consultation
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
               
-              <div className="hero-animate hidden lg:block">
+              {/* Right Column: HubSpot Form (60%) */}
+              <div className="lg:col-span-3 hero-animate">
                 <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  padding: '32px',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
                 }}>
-                  <IconTarget size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Featured Visual</span>
+                  <HubSpotForm
+                    formId="REPLACE_WITH_QUOTE_FORM_ID"
+                    portalId="242707"
+                    region="na1"
+                    loadingMessage="Loading quote request form..."
+                    style={{ minHeight: '500px' }}
+                  />
                 </div>
               </div>
             </div>

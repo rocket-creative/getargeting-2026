@@ -5,26 +5,16 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
-  badge: "Immune Checkpoint Models",
+  badge: "Catalog Models",
   title: "PD1 Humanized Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology researchers with custom humanized mouse models for checkpoint immunotherapy development. Our PD1 humanized mice enable direct testing of anti human PD1 therapeutic antibodies in immunocompetent mouse systems, supporting preclinical evaluation of clinical candidates.",
-  description: "PD1 (programmed cell death protein 1, encoded by PDCD1) is a key immune checkpoint receptor expressed on activated T cells. Therapeutic antibodies targeting PD1 have transformed cancer treatment, with pembrolizumab, nivolumab, and other anti PD1 agents approved across multiple tumor types. Because these antibodies are designed specifically for human PD1 and show limited cross reactivity with mouse PD1, humanized models are essential for preclinical efficacy testing."
+  intro: "PD1 humanized mice enable preclinical testing of anti human PD1 therapeutic antibodies including pembrolizumab and nivolumab in immunocompetent mouse systems."
 };
-
-// Stats Data
-const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
-  { value: 800, suffix: "+", label: "Publications" },
-  { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
-];
 
 // Why Humanize PD1 Data
 const whyHumanizeData = {
@@ -175,17 +165,6 @@ const technicalData = {
   title: "Technical Considerations",
   sections: [
     {
-      title: "Pre Germline Characterization",
-      intro: "ES cell based targeting enables comprehensive characterization of PD1 humanized alleles before mouse generation:",
-      points: [
-        "Sequence verification confirms exact human sequence integration",
-        "Junction analysis verifies mouse to human transitions",
-        "Expression testing confirms human PD1 protein in ES cells",
-        "Antibody binding can be tested in ES cells where applicable"
-      ],
-      summary: "Pre germline characterization ensures that humanized mice express functional human PD1 that engages therapeutic antibodies as intended."
-    },
-    {
       title: "Strain Background",
       intro: "Choose strain background based on tumor model compatibility:",
       points: [
@@ -261,7 +240,6 @@ const relatedLinksData = {
     { href: "/oncology-mouse-models", label: "Oncology Mouse Models" }
   ],
   resources: [
-    { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
     { href: "/c57bl6-mouse-background", label: "C57BL/6 Mouse Background" },
     { href: "/faqs", label: "FAQs" }
   ]
@@ -342,29 +320,9 @@ export default function PD1HumanizedMicePage() {
         <section style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px',
-          position: 'relative',
-          overflow: 'hidden'
         }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            opacity: 0.05
-          }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{
-              position: 'absolute',
-              width: '600px',
-              height: '600px',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle, #00d4d4 0%, transparent 70%)',
-              top: '-200px',
-              right: '-200px'
-            }} />
-          </div>
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-            <div className="hero-animate" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -374,40 +332,27 @@ export default function PD1HumanizedMicePage() {
               padding: '6px 14px',
               marginBottom: '20px'
             }}>
-              <IconTarget size={14} color="#00d4d4" />
               <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
-            <h1 className="hero-animate" style={{
+            <h1 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '2.8rem',
+              fontSize: '2.5rem',
               fontWeight: 700,
               color: '#ffffff',
               marginBottom: '20px',
-              lineHeight: 1.2
             }}>
               {heroData.title}
             </h1>
-            <p className="hero-animate" style={{
+            <p style={{
               fontSize: '1rem',
-              fontWeight: 400,
               color: 'rgba(255,255,255,0.9)',
-              marginBottom: '16px',
+              marginBottom: '30px',
               lineHeight: 1.7,
               maxWidth: '800px'
             }}>
               {heroData.intro}
             </p>
-            <p className="hero-animate" style={{
-              fontSize: '.9rem',
-              fontWeight: 400,
-              color: 'rgba(255,255,255,0.8)',
-              marginBottom: '30px',
-              lineHeight: 1.7,
-              maxWidth: '800px'
-            }}>
-              {heroData.description}
-            </p>
-            <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -418,27 +363,10 @@ export default function PD1HumanizedMicePage() {
                 borderRadius: '6px',
                 fontSize: '.9rem',
                 fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'background 0.2s ease'
+                textDecoration: 'none'
               }}>
                 Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-              <Link href="/humanized-mouse-models" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)',
-                transition: 'border-color 0.2s ease'
-              }}>
-                All Humanized Models
               </Link>
             </div>
           </div>
@@ -448,22 +376,6 @@ export default function PD1HumanizedMicePage() {
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <CatalogSearch maxResults={15} showTitle={true} />
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
-              {statsData.map((stat, index) => (
-                <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
-                    <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

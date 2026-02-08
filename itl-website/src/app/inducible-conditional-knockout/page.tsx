@@ -217,8 +217,7 @@ const relatedLinksData = {
     { href: "/knockout-mouse-models", label: "Knockout Mouse Models" }
   ],
   technologies: [
-    { href: "/cre-lox-system", label: "Cre Lox System" },
-    { href: "/doxycycline-inducible-systems", label: "Doxycycline Inducible Systems" }
+    { href: "/cre-lox-system", label: "Cre Lox System" }
   ],
   guides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },

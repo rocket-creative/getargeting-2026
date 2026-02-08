@@ -88,8 +88,7 @@ const testimonials = [
 
 // Related Links
 const inducibleSystems = [
-  { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" },
-  { title: "Doxycycline Inducible Systems", href: "/doxycycline-inducible-systems" }
+  { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" }
 ];
 
 const relatedModelTypes = [

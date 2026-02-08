@@ -84,7 +84,7 @@ export default function TestimonialsPage() {
             className="max-w-3xl mx-auto opacity-90"
             style={{ fontSize: '1.1rem', lineHeight: '1.7' }}
           >
-            For over 25 years, ingenious targeting laboratory has partnered with researchers 
+            For over 26 years, ingenious targeting laboratory has partnered with researchers 
             at leading academic institutions, pharmaceutical companies, and biotechnology 
             organizations worldwide. Here&apos;s what they have to say about working with us.
           </p>

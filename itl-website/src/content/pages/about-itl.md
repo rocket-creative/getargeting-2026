@@ -145,6 +145,5 @@ Contact ingenious targeting laboratory through our request quote form or schedul
 
 - (/mouse-model-services)
 - (/technologies)
-- (/case-studies)
 - (/testimonials)
 - (/current-openings)
