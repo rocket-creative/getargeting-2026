@@ -5,7 +5,7 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
