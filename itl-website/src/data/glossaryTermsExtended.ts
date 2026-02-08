@@ -197,7 +197,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["non-homologous-end-joining", "homology-directed-repair", "es-cell-targeting", "targeting-vector"],
     relatedServices: [
-      { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
       { title: "Knockout Mouse Models", href: "/knockout-mouse-models" }
     ]
   },
@@ -685,7 +684,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["inducible-allele-cre-er", "doxycycline-inducible-systems", "temporal-control"],
     relatedServices: [
-      { title: "Doxycycline-Inducible Systems", href: "/doxycycline-inducible-systems" },
       { title: "Inducible Gene Expression", href: "/inducible-gene-expression" }
     ]
   },
@@ -747,7 +745,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["inducible-cre-ert2", "cre-driver-line", "mosaicism"],
     relatedServices: [
-      { title: "Pre-Germline Characterization", href: "/pre-germline-characterization" }
+      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
     ]
   },
 
@@ -766,7 +764,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["homologous-recombination", "homology-directed-repair", "es-cell-targeting", "selection-markers"],
     relatedServices: [
-      { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
       { title: "Custom Mouse Models", href: "/custom-mouse-models" }
     ]
   },
@@ -783,7 +780,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["targeting-vector", "es-cell-targeting", "flp-frt-system"],
     relatedServices: [
-      { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
+      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
     ]
   },
 
@@ -799,7 +796,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["targeting-vector", "blastocyst-injection-chimera", "homologous-recombination"],
     relatedServices: [
-      { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
       { title: "Technology Overview", href: "/technology-overview" }
     ]
   },
@@ -816,7 +812,6 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["es-cell-targeting", "germline-transmission", "germline-confirmation-coat-color"],
     relatedServices: [
-      { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
       { title: "Speed Expansion Breeding", href: "/speed-expansion-breeding" }
     ]
   },
@@ -919,7 +914,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["genotyping-pcr-qpcr", "sanger-ngs-validation", "es-cell-targeting"],
     relatedServices: [
-      { title: "Pre-Germline Characterization", href: "/pre-germline-characterization" }
+      { title: "Mouse Genotyping Service", href: "/mouse-genotyping-service" }
     ]
   },
 
@@ -935,7 +930,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["southern-blot-copy-number", "off-target-assessment", "homology-directed-repair"],
     relatedServices: [
-      { title: "Pre-Germline Characterization", href: "/pre-germline-characterization" }
+      { title: "Mouse Genotyping Service", href: "/mouse-genotyping-service" }
     ]
   },
 
@@ -951,7 +946,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["sanger-ngs-validation", "southern-blot-copy-number", "genotyping-pcr-qpcr"],
     relatedServices: [
-      { title: "Pre-Germline Characterization", href: "/pre-germline-characterization" }
+      { title: "Mouse Genotyping Service", href: "/mouse-genotyping-service" }
     ]
   },
 
@@ -1156,8 +1151,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["inducible-cre-ert2", "tet-on-tet-off-systems", "inducible-allele-cre-er"],
     relatedServices: [
-      { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
-      { title: "Doxycycline-Inducible Systems", href: "/doxycycline-inducible-systems" }
+      { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" }
     ]
   },
 

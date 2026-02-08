@@ -289,7 +289,6 @@ export default function MouseModelGenerationGuidePage() {
               {[
                 { label: 'Knockout Strategy Guide', href: '/knockout-strategy-guide' },
                 { label: 'Request a Quote', href: '/request-quote' },
-                { label: 'ES Cell Gene Targeting', href: '/es-cell-gene-targeting' },
                 { label: 'Resources', href: '/resources' },
               ].map((item, i) => (
                 <Link

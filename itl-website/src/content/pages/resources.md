@@ -4,21 +4,21 @@ slug: "resources"
 extracted: "2026-01-09T17:03:05.796Z"
 ---
 
-# Resources and Guides | Mouse Model Selection, Timeline, Case Studies | Ingenious Targeting Laboratory
+# Resources and Guides | Mouse Model Selection, Timeline | Ingenious Targeting Laboratory
 
 **Url: /resources**
 
-**Meta Description: Mouse model selection guides, case studies, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.**
+**Meta Description: Mouse model selection guides, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.**
 
 **Primary Keyword: mouse model resources**
 
-**Secondary Keywords: knockout strategy guide, mouse model timeline, case studies, project FAQs, model selection**
+**Secondary Keywords: knockout strategy guide, mouse model timeline, project FAQs, model selection**
 
 **Word Count: 1600**
 
 # Mouse Model Resources
 
-Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects. From selection guides that clarify strategic decisions to case studies demonstrating successful project outcomes, these resources draw on our experience from more than 2,500 projects completed since 1998.
+Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,500 projects completed since 1998.
 
 ## Selection Guides
 
@@ -59,28 +59,6 @@ Comprehensive guide to project costs including targeting vector, ES cell targeti
 **(/bench-to-breeding-guide)**
 
 End to end overview of the mouse model generation process including decision points, deliverables, and what to expect at each project phase.
-
-## Case Studies
-
-Real project examples demonstrate how Ingenious Targeting Laboratory approaches complex targeting challenges and delivers research ready mouse models:
-
-**(/case-studies/embryonic-lethal-conditional)**
-
-How conditional allele design enabled study of a gene essential for embryonic development without disrupting normal development.
-
-**(/case-studies/immune-checkpoint-humanization)**
-
-PD1 humanization project enabling preclinical testing of checkpoint inhibitor therapeutics.
-
-**(/case-studies/lineage-tracing-reporter)**
-
-tdTomato reporter knockin enabling fate mapping of a rare cell population in metabolic disease research.
-
-**(/case-studies/bac-integration)**
-
-Complex targeting project integrating human genomic region for humanization of a multi gene cluster.
-
-(/case-studies)
 
 ## Technical Resources
 
@@ -144,8 +122,6 @@ Yes, Ingenious Targeting Laboratory offers partial services including ES cell ta
 Educational videos covering gene targeting concepts, project workflows, and technical approaches:
 
 - Understanding Conditional Knockouts
-- The Derivative Allele System Explained
-- ES Cell Targeting Process Overview
 - Project Planning Webinar Series
 
 (/video-library)
@@ -178,18 +154,14 @@ Ready to discuss your research goals? Our scientific consultants provide complim
 
 **What resources does ITL provide for mouse model projects?**
 
-ITL provides comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), case studies demonstrating successful project outcomes, technical resources, and FAQs addressing common project questions.
+ITL provides comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), technical resources, and FAQs addressing common project questions.
 
 **How do I choose the right knockout or knockin strategy?**
 
 Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). ITL's scientific consultants provide complimentary consultation to help select optimal strategies.
 
-**Where can I find case studies of successful projects?**
-
-Case studies are available in the resources section and include examples of conditional knockout for embryonic lethal genes, humanized immune checkpoint models, reporter knockin for lineage tracing, and large-scale targeting for BAC integration. These demonstrate how ITL approaches complex targeting challenges and delivers research-ready models.
-
 **How do I access ITL's technical resources?**
 
-Technical resources including selection guides, planning guides, case studies, and FAQs are available in the resources section. ITL's scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact ITL through the request quote form or schedule a consultation.
+Technical resources including selection guides, planning guides, and FAQs are available in the resources section. ITL's scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact ITL through the request quote form or schedule a consultation.
 
 (/request-quote)

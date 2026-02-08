@@ -59,8 +59,7 @@ const testimonials = [{ quote: mirmiraTestimonial.quote, author: formatAuthorWit
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
-  { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "Doxycycline Inducible Systems", href: "/doxycycline-inducible-systems" }
+  { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" }
 ];
 
 const relatedModelTypes = [

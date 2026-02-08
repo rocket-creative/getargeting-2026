@@ -5,26 +5,16 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
+import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
-  badge: "Immune Checkpoint Models",
+  badge: "Catalog Models",
   title: "LAG3 Humanized Mouse Models",
-  intro: "LAG3 (lymphocyte activation gene 3) is a next generation immune checkpoint target with multiple anti LAG3 therapeutic antibodies in clinical development. ingenious targeting laboratory generates custom LAG3 humanized mice that enable preclinical evaluation of anti human LAG3 antibodies in immunocompetent mouse systems.",
-  description: "LAG3 humanized mice express human LAG3 in place of mouse Lag3, providing the human target for therapeutic antibody binding while maintaining normal immune function. These models support efficacy testing of relatlimab, ieramilimab, and novel anti LAG3 candidates, as well as combination studies with PD1, PDL1, and other checkpoint pathways."
+  intro: "LAG3 humanized mice enable preclinical evaluation of anti human LAG3 therapeutic antibodies including relatlimab and novel candidates in immunocompetent mouse systems."
 };
-
-// Stats Data
-const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
-  { value: 800, suffix: "+", label: "Publications" },
-  { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
-];
 
 // LAG3 Biology Data
 const lag3BiologyData = {
@@ -293,7 +283,6 @@ const relatedLinksData = {
   technologies: [
     { href: "/humanized-mouse-models", label: "Humanized Mouse Models" },
     { href: "/knockin-mouse-models", label: "Knockin Mouse Models" },
-    { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
   ]
 };
 
@@ -372,29 +361,9 @@ export default function LAG3HumanizedMicePage() {
         <section style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px',
-          position: 'relative',
-          overflow: 'hidden'
         }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            opacity: 0.05
-          }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{
-              position: 'absolute',
-              width: '600px',
-              height: '600px',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle, #00d4d4 0%, transparent 70%)',
-              top: '-200px',
-              right: '-200px'
-            }} />
-          </div>
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-            <div className="hero-animate" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -404,40 +373,27 @@ export default function LAG3HumanizedMicePage() {
               padding: '6px 14px',
               marginBottom: '20px'
             }}>
-              <IconTarget size={14} color="#00d4d4" />
               <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
-            <h1 className="hero-animate" style={{
+            <h1 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '2.8rem',
+              fontSize: '2.5rem',
               fontWeight: 700,
               color: '#ffffff',
               marginBottom: '20px',
-              lineHeight: 1.2
             }}>
               {heroData.title}
             </h1>
-            <p className="hero-animate" style={{
+            <p style={{
               fontSize: '1rem',
-              fontWeight: 400,
               color: 'rgba(255,255,255,0.9)',
-              marginBottom: '16px',
+              marginBottom: '30px',
               lineHeight: 1.7,
               maxWidth: '800px'
             }}>
               {heroData.intro}
             </p>
-            <p className="hero-animate" style={{
-              fontSize: '.9rem',
-              fontWeight: 400,
-              color: 'rgba(255,255,255,0.8)',
-              marginBottom: '30px',
-              lineHeight: 1.7,
-              maxWidth: '800px'
-            }}>
-              {heroData.description}
-            </p>
-            <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -448,27 +404,10 @@ export default function LAG3HumanizedMicePage() {
                 borderRadius: '6px',
                 fontSize: '.9rem',
                 fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'background 0.2s ease'
+                textDecoration: 'none'
               }}>
                 Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-              <Link href="/humanized-mouse-models" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)',
-                transition: 'border-color 0.2s ease'
-              }}>
-                All Humanized Models
               </Link>
             </div>
           </div>
@@ -478,22 +417,6 @@ export default function LAG3HumanizedMicePage() {
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <CatalogSearch maxResults={15} showTitle={true} />
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
-              {statsData.map((stat, index) => (
-                <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
-                    <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

@@ -2,14 +2,14 @@
 
 /**
  * General Contact Page - ingenious targeting laboratory
- * Embeds HubSpot contact form
+ * Embeds HubSpot contact form in hero section
  */
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
+  HubSpotForm,
 } from '@/components/UXUIDC';
 import {
   IconPhone,
@@ -30,124 +30,125 @@ const contactInfo = {
 };
 
 export default function GeneralContactPage() {
-  // Load HubSpot form script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//js.hsforms.net/forms/embed/v2.js';
-    script.charset = 'utf-8';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      // @ts-expect-error - HubSpot global object
-      if (window.hbspt) {
-        // @ts-expect-error - HubSpot forms API
-        window.hbspt.forms.create({
-          region: 'na1',
-          portalId: '242707', // ITL's HubSpot portal ID
-          formId: 'REPLACE_WITH_CONTACT_FORM_ID', // Replace with actual form ID
-          target: '#hubspot-form-container',
-        });
-      }
-    };
-
-    return () => {
-      // Cleanup if needed
-      const existingScript = document.querySelector('script[src*="hsforms"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
       <UXUIDCNavigation />
 
-      {/* Header Section */}
+      {/* Hero Section with Embedded Form */}
       <section
         style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
-          padding: '70px 20px 50px',
+          padding: '80px 20px 80px',
+          position: 'relative',
         }}
       >
-        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-          <h1
-            style={{
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              marginBottom: '12px',
-            }}
-          >
-            Contact Us
-          </h1>
-          <p
-            style={{
-              color: 'rgba(255,255,255,0.85)',
-              fontFamily: 'var(--system-ui)',
-              fontSize: '.95rem',
-              fontWeight: 400,
-              maxWidth: '600px',
-              margin: '0 auto',
-              lineHeight: '1.6',
-            }}
-          >
-            Have a question or need assistance? Fill out the form below and our team will get back to you within one business day.
-          </p>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+            {/* Left Column: Content (40%) */}
+            <div className="lg:col-span-2">
+              <h1
+                style={{
+                  color: 'white',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: 'clamp(2rem, 5vw, 2.5rem)',
+                  fontWeight: 700,
+                  lineHeight: 1.15,
+                  marginBottom: '20px',
+                }}
+              >
+                Have questions?
+              </h1>
+              <p
+                style={{
+                  color: 'rgba(255,255,255,0.9)',
+                  fontFamily: 'var(--system-ui)',
+                  fontSize: '1rem',
+                  fontWeight: 400,
+                  lineHeight: '1.7',
+                  marginBottom: '25px',
+                }}
+              >
+                A technical consultant will respond within 1 business day.
+              </p>
+              {/* Prominent Direct Contact Callout */}
+              <div 
+                style={{ 
+                  backgroundColor: 'rgba(0, 212, 212, 0.15)',
+                  border: '1px solid rgba(0, 212, 212, 0.4)',
+                  borderRadius: '10px',
+                  padding: '16px 20px',
+                  marginBottom: '30px',
+                }}
+              >
+                <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
+                  Prefer to contact us directly?
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a 
+                    href="mailto:inquiry@genetargeting.com"
+                    style={{
+                      color: '#00d4d4',
+                      fontSize: '.95rem',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      fontWeight: 500,
+                    }}
+                  >
+                    <IconMail size={18} color="#00d4d4" />
+                    <span>inquiry@genetargeting.com</span>
+                  </a>
+                  <a 
+                    href="tel:+16314688534"
+                    style={{
+                      color: '#00d4d4',
+                      fontSize: '.95rem',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      fontWeight: 500,
+                    }}
+                  >
+                    <IconPhone size={18} color="#00d4d4" />
+                    <span>(631) 468-8534</span>
+                  </a>
+                </div>
+              </div>
+
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.9rem', lineHeight: '1.6', fontStyle: 'italic' }}>
+                At ingenious, we value every inquiry and are committed to providing you with the highest level of support. Whether you have questions about our services, need assistance with a specific project, or simply want to learn more about our capabilities, our expert team is here to help.
+              </p>
+            </div>
+            
+            {/* Right Column: HubSpot Form (60%) */}
+            <div className="lg:col-span-3">
+              <div style={{
+                backgroundColor: 'white',
+                borderRadius: '12px',
+                padding: '32px',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+              }}>
+                <HubSpotForm
+                  formId="REPLACE_WITH_CONTACT_FORM_ID"
+                  portalId="242707"
+                  region="na1"
+                  loadingMessage="Loading contact form..."
+                  style={{ minHeight: '500px' }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section style={{ padding: '50px 20px' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      {/* Additional Info Section */}
+      <section style={{ padding: '50px 20px', backgroundColor: '#f8fafc' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Form Column */}
-            <div className="lg:col-span-2">
-              <div
-                style={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '32px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
-                }}
-              >
-                <h2
-                  style={{
-                    color: '#0a253c',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.25rem',
-                    fontWeight: 600,
-                    marginBottom: '20px',
-                  }}
-                >
-                  Send Us a Message
-                </h2>
-                
-                {/* HubSpot Form Container */}
-                <div 
-                  id="hubspot-form-container" 
-                  style={{ minHeight: '400px' }}
-                >
-                  {/* HubSpot form will be injected here */}
-                  <div style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    height: '300px',
-                    color: '#666',
-                    fontFamily: 'var(--system-ui)',
-                    fontSize: '.9rem',
-                  }}>
-                    Loading contact form...
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Sidebar */}
+            {/* Sidebar Content - moved below form */}
             <div className="lg:col-span-1 space-y-5">
               {/* Contact Info Card */}
               <div
@@ -300,6 +301,62 @@ export default function GeneralContactPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Additional Quick Links */}
+            <div className="lg:col-span-2">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                <Link
+                  href="/request-quote"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    padding: '20px',
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    border: '1px solid #e5e7eb',
+                    transition: 'all 0.2s',
+                  }}
+                  className="hover:shadow-md hover:-translate-y-1"
+                >
+                  <IconFileText size={24} color="#008080" />
+                  <div>
+                    <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
+                      Request a Quote
+                    </p>
+                    <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
+                      Get project pricing
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  href="/schedule-meeting"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    padding: '20px',
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    border: '1px solid #e5e7eb',
+                    transition: 'all 0.2s',
+                  }}
+                  className="hover:shadow-md hover:-translate-y-1"
+                >
+                  <IconCalendar size={24} color="#008080" />
+                  <div>
+                    <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
+                      Schedule a Meeting
+                    </p>
+                    <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
+                      Book a consultation
+                    </p>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

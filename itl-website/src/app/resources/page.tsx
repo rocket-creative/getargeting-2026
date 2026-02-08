@@ -15,7 +15,7 @@ const heroData = {
   badge: "Resources",
   title: "Mouse Model Resources",
   intro: "ingenious targeting laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects.",
-  description: "From selection guides that clarify strategic decisions to case studies demonstrating successful project outcomes, these resources draw on our experience from more than 2,500 projects completed since 1998."
+  description: "From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,500 projects completed since 1998."
 };
 
 // Stats Data
@@ -96,29 +96,6 @@ const planningGuidesData = {
   ]
 };
 
-// Case Studies Data
-const caseStudiesData = {
-  title: "Case Studies",
-  description: "Real project examples demonstrate how ingenious targeting laboratory approaches complex targeting challenges and delivers research ready mouse models:",
-  studies: [
-    {
-      title: "Embryonic Lethal Conditional",
-      description: "How conditional allele design enabled study of a gene essential for embryonic development without disrupting normal development."
-    },
-    {
-      title: "Immune Checkpoint Humanization",
-      description: "PD1 humanization project enabling preclinical testing of checkpoint inhibitor therapeutics."
-    },
-    {
-      title: "Lineage Tracing Reporter",
-      description: "tdTomato reporter knockin enabling fate mapping of a rare cell population in metabolic disease research."
-    },
-    {
-      title: "BAC Integration",
-      description: "Complex targeting project integrating human genomic region for humanization of a multi gene cluster."
-    }
-  ],
-};
 
 // Technical Resources Data
 const technicalResourcesData = {
@@ -128,7 +105,6 @@ const technicalResourcesData = {
       title: "Technology Documentation",
       description: "Detailed technical information about ingenious targeting laboratory's gene targeting approaches:",
       links: [
-        { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" },
         { href: "/cre-lox-system", label: "Cre-Lox System" },
         { href: "/safe-harbor-locus", label: "Safe Harbor Locus" }
       ]
@@ -163,8 +139,6 @@ const videoLibraryData = {
   description: "Educational videos covering gene targeting concepts, project workflows, and technical approaches:",
   videos: [
     "Understanding Conditional Knockouts",
-    "The Derivative Allele System Explained",
-    "ES Cell Targeting Process Overview",
     "Project Planning Webinar Series"
   ],
   href: "/video-library"
@@ -206,7 +180,6 @@ const downloadableResourcesData = {
         { title: "Conditional Knockout (cKO) Quick Guide", href: "https://go.genetargeting.com/conditional-ko-quick-guide" },
         { title: "Conditional + Reversible Mouse Model Guide", href: "https://go.genetargeting.com/conditional-reversible-guide" },
         { title: "ingenious Pricing Guide", href: "https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/Pricing%20Guide%202024.pdf" },
-        { title: "Mouse Model Generation: Step-by-Step Guide", href: "/mouse-model-generation-guide", isInternal: true },
         { title: "Rapid-Rosa26™ Quick Guide", href: "https://go.genetargeting.com/rapid-rosa26-quick-guide" },
         { title: "Rat Model Quick Guide", href: "https://go.genetargeting.com/rat-model-technology-guide" }
       ]
@@ -252,19 +225,15 @@ const relatedServicesData = [
 const faqData = [
   {
     question: "What resources does ingenious targeting laboratory provide for mouse model projects?",
-    answer: "We provide comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), case studies demonstrating successful project outcomes, technical resources, and FAQs addressing common project questions."
+    answer: "We provide comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), technical resources, and FAQs addressing common project questions."
   },
   {
     question: "How do I choose the right knockout or knockin strategy?",
     answer: "Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). Our scientific consultants provide complimentary consultation to help select optimal strategies."
   },
   {
-    question: "Where can I find case studies of successful projects?",
-    answer: "Case studies are available in the resources section and include examples of conditional knockout for embryonic lethal genes, humanized immune checkpoint models, reporter knockin for lineage tracing, and large-scale targeting for BAC integration. These demonstrate how ingenious targeting laboratory approaches complex targeting challenges and delivers research-ready models."
-  },
-  {
     question: "How do I access our technical resources?",
-    answer: "Technical resources including selection guides, planning guides, case studies, and FAQs are available in the resources section. Our scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact us through the request quote form or schedule a consultation."
+    answer: "Technical resources including selection guides, planning guides, and FAQs are available in the resources section. Our scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact us through the request quote form or schedule a consultation."
   }
 ];
 
@@ -917,72 +886,6 @@ export default function ResourcesPage() {
                     <IconChevronRight size={14} color="#134978" />
                   </span>
                 </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Studies Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#2384da',
-              marginBottom: '16px',
-              textAlign: 'center'
-            }}>
-              {caseStudiesData.title}
-            </h2>
-            <p className="animate-in" style={{
-              fontSize: '.9rem',
-              color: '#666',
-              textAlign: 'center',
-              marginBottom: '40px',
-              maxWidth: '700px',
-              margin: '0 auto 40px'
-            }}>
-              {caseStudiesData.description}
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
-              {caseStudiesData.studies.map((study, index) => (
-                <div key={index} className="animate-in group transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
-                  display: 'block',
-                  background: '#f7f7f7',
-                  borderRadius: '8px',
-                  padding: '28px',
-                  borderLeft: '4px solid #00d4d4'
-                }}>
-                  <h3 style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.1rem',
-                    fontWeight: 600,
-                    color: '#333',
-                    marginBottom: '10px'
-                  }}>
-                    {study.title}
-                  </h3>
-                  <p style={{
-                    fontSize: '.9rem',
-                    color: '#666',
-                    lineHeight: 1.6,
-                    marginBottom: '14px'
-                  }}>
-                    {study.description}
-                  </p>
-                  <span style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    fontSize: '.85rem',
-                    fontWeight: 600,
-                    color: '#008080'
-                  }}>
-                    Example Project
-                    <IconChevronRight size={14} color="#008080" />
-                  </span>
-                </div>
               ))}
             </div>
           </div>

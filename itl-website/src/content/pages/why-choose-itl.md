@@ -217,5 +217,4 @@ Contact ingenious targeting laboratory through our request quote form or schedul
 - (/about-ingenious)
 - (/testimonials)
 - (/publications)
-- (/case-studies)
 - (/technologies)

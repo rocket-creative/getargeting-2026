@@ -160,8 +160,7 @@ const faqData = [
 const relatedLinksData = {
   resources: [
     { href: "/safe-harbor-locus", label: "Safe Harbor Locus" },
-    { href: "/transgenic-mouse-service", label: "Transgenic Mouse Service" },
-    { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" }
+    { href: "/transgenic-mouse-service", label: "Transgenic Mouse Service" }
   ]
 };
 

@@ -626,9 +626,9 @@ export function CatalogSearch({
         }}>
           {[
             { label: 'Total Models', value: allModels.length > 0 ? `${allModels.length.toLocaleString()}+` : '10,000+' },
-            { label: 'Model Types', value: '6+' },
-            { label: 'Backgrounds', value: '5+' },
-            { label: 'Disease Areas', value: '20+' },
+            { label: 'Model Types', value: allModels.length > 0 ? `${new Set(allModels.map(m => m.modelType).filter(Boolean)).size}+` : '6+' },
+            { label: 'Backgrounds', value: allModels.length > 0 ? `${new Set(allModels.map(m => m.background).filter(Boolean)).size}+` : '5+' },
+            { label: 'Disease Areas', value: allModels.length > 0 ? `${new Set(allModels.map(m => m.category).filter(Boolean)).size}+` : '20+' },
           ].map((stat, index) => (
             <div 
               key={index}

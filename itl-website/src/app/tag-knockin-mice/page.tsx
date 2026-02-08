@@ -136,20 +136,28 @@ const designConsiderationsData = [
 // Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Vacher CM et al.",
-    year: "2021",
-    title: "Placental endocrine function shapes cerebellar development and social behavior.",
-    journal: "Nature Neuroscience",
-    volume: "24(10): 1392-1401",
-    link: "https://pubmed.ncbi.nlm.nih.gov/34400844/"
+    authors: "Tebbe L, Mwoyosvi ML, Crane R, Makia MS, Kakakhel M, Cosgrove D, Al-Ubaidi MR, Naash MI.",
+    year: "2023",
+    title: "The usherin mutation c.2299delG leads to its mislocalization and disrupts interactions with whirlin and VLGR1.",
+    journal: "Nat Commun",
+    volume: "14(1): 972",
+    link: "https://pubmed.ncbi.nlm.nih.gov/36810733/"
   },
   {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
+    authors: "Rumney RMH, Róg J, Chira N, Kao AP, Al-Khalidi R, Górecki DC.",
+    year: "2022",
+    title: "P2X7 Purinoceptor Affects Ectopic Calcification of Dystrophic Muscles.",
+    journal: "Front Pharmacol",
+    volume: "13: 935804",
+    link: "https://pubmed.ncbi.nlm.nih.gov/35910348/"
+  },
+  {
+    authors: "Samant SA, Pillai VB, Gupta MP.",
+    year: "2021",
+    title: "Skeletal muscle-specific over-expression of the nuclear sirtuin SIRT6 blocks cancer-associated cachexia by regulating multiple targets.",
+    journal: "JCSM Rapid Commun",
+    volume: "4(1): 40-56",
+    link: "https://pubmed.ncbi.nlm.nih.gov/34212132/"
   }
 ];
 

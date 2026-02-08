@@ -13,7 +13,7 @@ import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup,
 const heroData = {
   badge: "Conditional Gene Targeting",
   title: "Cre Lox System",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, and Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
   description: "The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with LoxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts."
 };
 
@@ -134,13 +134,6 @@ const inducibleSystems = [
       "Useful when reversible gene regulation is needed"
     ]
   }
-];
-
-// Derivative Allele System
-const derivativeAlleles = [
-  { name: "Knockout First", desc: "Original targeted allele with full stop cassette; gene disrupted by cassette insertion; LacZ reports expression (if included)" },
-  { name: "Conditional Ready", desc: "Flp excision removes stop cassette; leaves LoxP flanked exon; gene function restored; this is the floxed allele" },
-  { name: "Conditional Null", desc: "Cre excision removes critical exon; tissue specific or temporal knockout" }
 ];
 
 // Applications
@@ -775,65 +768,6 @@ export default function CreLoxSystemPage() {
               <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', lineHeight: '1.6rem' }}>
                 Tissue specific CreERT2 lines combine spatial and temporal control. For example, Albumin CreERT2 enables tamoxifen inducible deletion specifically in hepatocytes, allowing study of gene function in adult liver without developmental effects.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Derivative Allele System */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px' }}>
-              Derivative Allele System
-            </h2>
-            <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '25px' }}>
-              This system allows a single project to support reporter studies, conventional knockout controls, and conditional knockout experiments.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {derivativeAlleles.map((allele, index) => (
-                <div 
-                  key={index}
-                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  style={{
-                    backgroundColor: 'white',
-                    padding: '25px',
-                    borderRadius: '8px',
-                    borderTop: '4px solid #2384da',
-                    position: 'relative'
-                  }}
-                >
-                  <div style={{
-                    position: 'absolute',
-                    top: '-15px',
-                    left: '20px',
-                    backgroundColor: '#2384da',
-                    color: 'white',
-                    padding: '4px 12px',
-                    borderRadius: '12px',
-                    fontSize: '.75rem',
-                    fontWeight: 600
-                  }}>
-                    Step {index + 1}
-                  </div>
-                  <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px', marginTop: '10px' }}>
-                    {allele.name}
-                  </h4>
-                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>
-                    {allele.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="animate-in text-center" style={{ marginTop: '25px' }}>
-              <Link 
-                href="/conditional-knockout-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
-              >
-                <span>Learn more about conditional knockout systems</span>
-                <IconChevronRight size={16} color="#008080" />
-              </Link>
             </div>
           </div>
         </section>

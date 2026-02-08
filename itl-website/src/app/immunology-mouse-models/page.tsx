@@ -141,12 +141,6 @@ const checkpointTable = [
 // Technical Considerations Data
 const technicalData = [
   {
-    icon: IconSettings,
-    title: "Pre Germline Characterization",
-    description: "ES cell based targeting enables comprehensive characterization of immunology alleles before mouse generation. This pre germline analysis confirms correct allele structure, mutation sequence, and absence of random integration events.",
-    note: "For humanized immune models, sequence verification confirms exact human sequence integration. Functional testing can verify human specific antibody binding in ES cells prior to mouse production."
-  },
-  {
     icon: IconDNA,
     title: "Strain Background Considerations",
     description: "Strain background significantly impacts immune phenotypes. Key considerations include:",
@@ -379,9 +373,9 @@ export default function ImmunologyMouseModelsPage() {
                   className="hero-animate"
                   style={{
                     color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.6rem',
+                    lineHeight: '1.7rem',
                     marginBottom: '25px'
                   }}
                 >

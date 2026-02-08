@@ -41,7 +41,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
       ref={sectionRef}
       className="relative overflow-hidden"
       style={{
-        backgroundImage: 'url(/images/mouse-hero-blue.jpg)',
+        backgroundImage: 'url(/images/mouse-hero-glove.jpg)',
         backgroundPosition: '0 0',
         backgroundSize: 'auto',
         minHeight: '600px',

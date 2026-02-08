@@ -235,7 +235,6 @@ const relatedModelTypes = [
 ];
 
 const relatedTechnologies = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
   { title: "C57BL/6 Mouse Background", href: "/c57bl6-mouse-background" }
@@ -379,9 +378,9 @@ export default function CardiovascularMouseModelsPage() {
                   className="hero-animate"
                   style={{
                     color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: '1.6rem',
+                    lineHeight: '1.7rem',
                     marginBottom: '25px'
                   }}
                 >

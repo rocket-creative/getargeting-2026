@@ -5,24 +5,14 @@ import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
-import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 const heroData = {
-  badge: "Immuno Oncology",
+  badge: "Catalog Models",
   title: "Humanized Immune Checkpoint Mice",
-  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models, including humanized immune checkpoint models, enabling preclinical testing of checkpoint inhibitor antibodies and combination immunotherapies.",
-  description: "These models express human checkpoint proteins in immunocompetent mice, providing platforms for evaluating human specific therapeutics in the context of functional immune systems."
+  intro: "Humanized immune checkpoint models enable preclinical testing of human specific checkpoint inhibitor antibodies in immunocompetent mice."
 };
-
-const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
-  { value: 800, suffix: "+", label: "Publications" },
-  { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
-];
 
 const checkpointModels = [
   { name: "PD1 Humanized Mice", gene: "PDCD1", description: "Enables testing of anti PD1 antibodies including pembrolizumab and nivolumab.", href: "/pd1-humanized-mice" },
@@ -79,7 +69,6 @@ export default function HumanizedImmuneCheckpointMicePage() {
       const { gsap } = await import('gsap');
       const { ScrollTrigger } = await import('gsap/ScrollTrigger');
       gsap.registerPlugin(ScrollTrigger);
-      if (heroRef.current) { gsap.fromTo(heroRef.current.querySelectorAll('.hero-animate'), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }); }
       document.querySelectorAll('.animate-in').forEach((el) => { gsap.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } }); });
     };
     loadGSAP();
@@ -89,29 +78,58 @@ export default function HumanizedImmuneCheckpointMicePage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
-        <section ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
+        {/* Hero Section */}
+        <section style={{
+          background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
+          padding: '80px 20px 60px',
+        }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
-                <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
-                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px' }}>{heroData.intro}</p>
-                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px' }}>{heroData.description}</p>
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
-                  <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
-                </div>
-              </div>
-              <div className="hero-animate">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-checkpoint-001"
-                  aspectRatio="4:3"
-                  title="Immune Checkpoint Pathway"
-                  caption="Fig. 1: Immune checkpoint interactions regulate T cell activation and tumor immune evasion."
-                  variant="hero"
-                  altText="Immune checkpoint pathway showing PD-1/PD-L1 and CTLA-4/B7 interactions"
-                />
-              </div>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'rgba(0,212,212,0.15)',
+              border: '1px solid rgba(0,212,212,0.3)',
+              borderRadius: '20px',
+              padding: '6px 14px',
+              marginBottom: '20px'
+            }}>
+              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
+            <h1 style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '2.5rem',
+              fontWeight: 700,
+              color: '#ffffff',
+              marginBottom: '20px',
+            }}>
+              {heroData.title}
+            </h1>
+            <p style={{
+              fontSize: '1rem',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '30px',
+              lineHeight: 1.7,
+              maxWidth: '800px'
+            }}>
+              {heroData.intro}
+            </p>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Link href="/request-quote" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#008080',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                fontSize: '.9rem',
+                fontWeight: 600,
+                textDecoration: 'none'
+              }}>
+                Request a Quote
+                <IconChevronRight size={16} color="#ffffff" />
+              </Link>
             </div>
           </div>
         </section>
@@ -120,14 +138,6 @@ export default function HumanizedImmuneCheckpointMicePage() {
         <section style={{ backgroundColor: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <CatalogSearch maxResults={15} showTitle={true} />
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {statsData.map((stat, index) => (<div key={index} className="text-center"><div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}><UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} /></div><div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div></div>))}
-            </div>
           </div>
         </section>
 

@@ -213,8 +213,7 @@ const relatedLinksData = {
   ],
   guides: [
     { href: "/cre-lox-system", label: "Cre Lox System" },
-    { href: "/tissue-specific-cre-lines", label: "Tissue Specific Cre Lines" },
-    { href: "/doxycycline-inducible-systems", label: "Doxycycline Inducible Systems" }
+    { href: "/tissue-specific-cre-lines", label: "Tissue Specific Cre Lines" }
   ],
   catalog: [
     { href: "/catalog-mouse-models", label: "Catalog Mouse Models" },

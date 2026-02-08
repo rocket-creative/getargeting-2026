@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Knockout Mouse Models',
-  description: 'Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR technology. 25+ years experience, 2500+ projects.',
+  description: 'Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR technology. 26+ years experience, 2500+ projects.',
   path: '/knockout-mouse-models',
 });
 

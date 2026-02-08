@@ -33,7 +33,7 @@ const benefits = [
 const modelTypes = [
   { title: 'Constitutive Expression', description: 'Continuous expression from Rosa26 or CAG promoter' },
   { title: 'Tissue-Specific Expression', description: 'Expression controlled by tissue-specific Cre lines' },
-  { title: 'Conditional Expression', description: 'Inducible expression with Cre or Tet systems' },
+  { title: 'Conditional Expression', description: 'Inducible expression with Cre or other systems' },
 ];
 
 export default function Rosa26Page() {
@@ -304,7 +304,7 @@ export default function Rosa26Page() {
               Start Your Rosa26 Project
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your transgenic requirements and determine the optimal targeting strategy for your research goals.
+              Our scientific consultants are ready to discuss your targeted transgenic requirements and determine the optimal strategy for your research goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

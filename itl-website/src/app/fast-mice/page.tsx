@@ -38,7 +38,6 @@ const faqData = [
 // Related Links
 const relatedLinks = [
   { title: "Inducible Gene Expression", href: "/inducible-gene-expression" },
-  { title: "Doxycycline Inducible Systems", href: "/doxycycline-inducible-systems" },
   { title: "Tet On Tet Off Systems", href: "/tet-on-tet-off-systems" },
   { title: "Safe Harbor Locus", href: "/safe-harbor-locus" },
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },

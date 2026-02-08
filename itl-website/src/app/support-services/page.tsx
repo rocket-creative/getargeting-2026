@@ -11,7 +11,7 @@ import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle }
 // Hero Data
 const heroData = {
   badge: "Comprehensive Support",
-  title: "Mouse Model Support Services",
+  title: "Post Project Services",
   intro: "Beyond custom mouse model generation, ingenious targeting laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.",
   description: "From colony maintenance through phenotypic characterization, our support services enable you to focus on your research while we manage the logistics."
 };

@@ -170,7 +170,6 @@ const relatedModelTypes = [
 ];
 
 const relatedTechnologies = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
   { title: "Point Mutation Mice", href: "/point-mutation-mice" }
 ];

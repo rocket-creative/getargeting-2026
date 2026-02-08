@@ -17,7 +17,7 @@ import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons
 const heroData = {
   badge: "Our Services",
   title: "Knockout Rat Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 gene targeting projects across multiple species, including hundreds of knockout rat models enabling loss of function studies in larger rodents offering superior behavioral characterization and physiological readout capacity. Knockout rats represent a strategic alternative to knockout mice for research applications where larger body size, behavioral sophistication, or specific physiological phenotypes justify increased project complexity.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 gene targeting projects across multiple species, including rat, enabling loss of function studies in larger rodents offering superior behavioral characterization and physiological readout capacity.",
   description: "Knockout rat models provide distinct advantages for studies examining behavioral responses, cardiovascular physiology, renal function, and complex neurobiological phenomena where rodent size or documented behavioral capacity offers superior scientific value compared to mouse models. The trade off between increased project timeline and cost against superior phenotypic readouts makes knockout rats optimal for specific research questions despite greater complexity."
 };
 
@@ -31,9 +31,8 @@ const statsData = [
 
 // FAQ Data
 const faqData = [
-  { question: "Can knockout rats carry germline mutations in multiple genes?", answer: "Yes, multiplexed CRISPR approaches targeting several genes simultaneously are feasible in rats, though knockout efficiency typically decreases with increasing target number. Dual knockout rats are reliably generated, while triple knockouts face more substantial challenges. Sequential CRISPR editing with selection of appropriately edited embryos enables more complex genetic combinations." },
+  { question: "Can knockout rats carry germline mutations in multiple genes?", answer: "Yes, multiple mutations in several genes are feasible in rats, though knockout efficiency typically decreases with increased target number." },
   { question: "What behavioral tests are most valuable for knockout rat characterization?", answer: "Morris water maze, open field tests, elevated plus maze, and novel object recognition effectively characterize behavioral phenotypes in knockout rats. More complex learning paradigms including 5 choice serial reaction time and operant conditioning reveal subtle cognitive changes invisible in simpler behavioral assays." },
-  { question: "How do I establish multiple knockout rat lines for validation?", answer: "CRISPR injection of multiple founders typically generates diverse indel mutations at the same target locus. Establishing separate knockout rat lines from different founders permits validation that phenotypes reflect target gene disruption rather than off target mutagenesis, since independent mutations should produce identical phenotypes." },
   { question: "Are knockout rats suitable for cardiovascular telemetry studies?", answer: "Yes, rat body size and commercial telemetry system availability make cardiovascular telemetry studies highly practical. Implanted transmitters enable continuous blood pressure, heart rate, and ECG monitoring throughout lifespan, revealing phenotypes impossible to detect in mice." }
 ];
 

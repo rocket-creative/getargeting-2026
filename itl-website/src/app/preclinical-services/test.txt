@@ -1,0 +1,5 @@
+const dunaieTestimonial = getTestimonialById('dunaief-upenn')!;
+
+const testimonials = [
+  { quote: dunaieTestimonial.quote, name: formatAuthorWithCredentials(dunaieTestimonial), affiliation: dunaieTestimonial.affiliation },
+];

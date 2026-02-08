@@ -129,8 +129,7 @@ const relatedModelTypes = [
 
 const relatedTechnologies = [
   { title: "Cre Lox System", href: "/cre-lox-system" },
-  { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" },
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" }
+  { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" }
 ];
 
 const projectResources = [

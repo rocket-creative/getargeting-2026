@@ -17,7 +17,7 @@ import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons
 const heroData = {
   badge: "Our Services",
   title: "tdTomato Knockin Mice",
-  intro: "Since 1998, ingenious targeting laboratory has generated tdTomato knockin models providing exceptionally bright red fluorescent reporting for gene expression visualization, cell tracking, and deep tissue imaging.",
+  intro: "Since 1998, ingenious targeting laboratory has generated tdTomato knockin models for reporting gene expression visualization, cell tracking, and deep tissue imaging.",
   description: "The tandem dimer Tomato protein offers superior brightness and photostability compared to monomeric red fluorescent proteins. Whether you need red fluorescence for multiplexed imaging with GFP, reduced autofluorescence interference, or enhanced signal for deep tissue applications, ingenious targeting laboratory designs tdTomato knockin alleles optimized for your imaging requirements."
 };
 

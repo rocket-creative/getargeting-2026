@@ -91,16 +91,12 @@ const testimonialsData = [
 // Publications Data
 const publicationsData = {
   title: "Published Research",
-  description: "Custom models from ingenious targeting laboratory have contributed to over 800 peer reviewed publications across all areas of biomedical research.",
+  description: "Here are some custom mouse model publications for your review.",
   journals: ["Nature", "Cell", "Science", "PNAS", "Journal of Clinical Investigation", "Nature Medicine", "Cell Metabolism", "Immunity"]
 };
 
 // FAQ Data
 const faqData = [
-  {
-    question: "What is included in the project cost?",
-    answer: "Project cost includes all vector construction, ES cell work, mouse generation, and breeding to germline transmission. You receive heterozygous mice, full characterization data, genotyping protocols, and ongoing technical support. There are no hidden fees."
-  },
   {
     question: "What if my gene of interest is difficult to target?",
     answer: "We have successfully completed projects on genes considered difficult by other providers. Our extensive experience allows us to design strategies that work even for challenging targets. We evaluate each project individually and discuss any anticipated challenges during initial consultation."

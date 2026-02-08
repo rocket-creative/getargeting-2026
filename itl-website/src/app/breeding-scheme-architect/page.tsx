@@ -789,7 +789,7 @@ function BreedingSchemeArchitectContent() {
                 fontWeight: 500,
               }}
             >
-              — Research Scientist, Academic Medical Center
+              — Michaela Ballas, Research Scientist
             </p>
           </div>
         </div>

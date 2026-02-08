@@ -12,7 +12,7 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconSettings }
 const heroData = {
   badge: "Technology Platform",
   title: "Gene Targeting Technology Overview",
-  intro: "Since 1998, ingenious targeting laboratory has advanced gene targeting technologies through more than 2,500 custom mouse model projects. Our technology platform combines proven ES cell gene targeting with sophisticated conditional systems, inducible expression controls, and proprietary innovations to deliver mouse models with verified genetic modifications.",
+  intro: "Ingenious Targeting Laboratory has refined gene targeting technologies through more than 2,500 custom projects. Our methodology combines proven technologies with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
   description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. This overview introduces the core technologies that enable precise genetic modification in mice."
 };
 
@@ -24,31 +24,6 @@ const statsData = [
   { value: 100, suffix: "%", label: "Success Guarantee" }
 ];
 
-// Core Technologies
-const coreTechnologies = [
-  {
-    title: "ES Cell Gene Targeting",
-    description: "ES cell gene targeting is a strong methodology for precise genetic modification. Pre germline characterization ensures correct allele structure before mouse generation.",
-    features: [
-      "Pre germline verification through PCR and RT PCR",
-      "Defined starting point with characterized ES cell clones",
-      "Predictable inheritance patterns",
-      "Archived ES cells for future derivative allele generation"
-    ],
-    href: "/es-cell-gene-targeting"
-  },
-  {
-    title: "Homologous Recombination",
-    description: "Enables precise genetic modification by exchanging sequences between targeting vectors and chromosomal DNA, ensuring modifications occur at intended locus with genomic architecture intact.",
-    features: [
-      "Precise sequence exchange at defined loci",
-      "Preserves surrounding genomic structure",
-      "Foundation for all targeted modifications",
-      "Enables complex multi element designs"
-    ],
-    href: "/homologous-recombination"
-  }
-];
 
 // Conditional Systems
 const conditionalSystems = [
@@ -153,7 +128,6 @@ const advancedTargeting = [
 
 // Related Links
 const coreTechLinks = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Cre Lox System", href: "/cre-lox-system" },
   { title: "FLP FRT System", href: "/flp-frt-system" },
 ];
@@ -161,7 +135,6 @@ const coreTechLinks = [
 const inducibleLinks = [
   { title: "Inducible Gene Expression", href: "/inducible-gene-expression" },
   { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" },
-  { title: "Doxycycline Inducible Systems", href: "/doxycycline-inducible-systems" },
   { title: "F.A.S.T. Mice", href: "/fast-mice" }
 ];
 
@@ -185,7 +158,7 @@ const testimonials = [
 const faqData = [
   {
     question: "How do conditional systems (Cre lox, FLP FRT, Dre Rox) differ?",
-    answer: "Cre lox is the primary system for conditional gene deletion, with extensive driver line availability. FLP FRT is primarily used for selection cassette removal and complementing Cre lox in dual recombinase strategies. Dre Rox provides a third orthogonal system for sophisticated intersectional strategies. Selection depends on whether you need gene deletion, cassette removal, or independent control of multiple modifications."
+    answer: "Cre lox is the primary system for conditional gene deletion, with extensive driver line availability. FLP FRT complements Cre lox in dual recombinase strategies. Dre Rox provides a third orthogonal system for sophisticated intersectional strategies. Selection depends on whether you need gene deletion or independent control of multiple modifications."
   },
   {
     question: "What is safe harbor targeting and why is it used?",
@@ -194,10 +167,6 @@ const faqData = [
   {
     question: "What is the difference between tamoxifen inducible and doxycycline inducible systems?",
     answer: "Tamoxifen inducible Cre (CreER) enables permanent genetic changes with temporal control. Doxycycline inducible (Tet) enables reversible transgene expression control. CreER provides permanent effects after induction; Tet provides reversible on/off control. Selection depends on whether you need permanent modification or reversible expression."
-  },
-  {
-    question: "How does ES cell targeting differ from CRISPR approaches?",
-    answer: "ES cell targeting provides pre germline characterization confirming correct allele structure before mouse generation. CRISPR approaches often require founder screening for correct modifications. ES cell targeting offers archived clones for derivative allele generation and complex multi element designs with verified structure."
   }
 ];
 
@@ -363,40 +332,6 @@ export default function TechnologyOverviewPage() {
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
                   <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Core Technologies Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
-              Core Gene Targeting Technologies
-            </h2>
-
-            <div className="grid grid-cols-1 gap-8">
-              {coreTechnologies.map((tech, index) => (
-                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
-                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
-                    {tech.title}
-                  </h3>
-                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '15px' }}>
-                    {tech.description}
-                  </p>
-                  <ul style={{ listStyle: 'none', padding: 0, marginBottom: '15px' }}>
-                    {tech.features.map((feature, idx) => (
-                      <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '8px' }}>
-                        <IconCheckCircle size={16} color="#008080" style={{ marginTop: '3px', flexShrink: 0 }} />
-                        <span style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={tech.href} className="inline-flex items-center gap-2 transition-colors duration-300" style={{ color: '#2384da', fontSize: '.85rem', fontWeight: 500 }}>
-                    <span>Learn more</span>
-                    <IconChevronRight size={14} color="#2384da" />
-                  </Link>
                 </div>
               ))}
             </div>

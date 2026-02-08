@@ -73,10 +73,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/flp-frt-system',
     '/inducible-gene-expression',
     '/tamoxifen-inducible-cre',
-    '/doxycycline-inducible-systems',
-    '/es-cell-gene-targeting',
-    '/pre-germline-characterization',
-    '/tm1a-allele-design',
     '/critical-exon-selection',
 
     // Strain Backgrounds (6)

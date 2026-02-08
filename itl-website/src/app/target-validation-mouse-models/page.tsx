@@ -43,8 +43,7 @@ const relatedLinks = [
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
   { title: "Humanized Mouse Models", href: "/humanized-mouse-models" },
-  { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" },
-  { title: "Es Cell Gene Targeting", href: "/es-cell-gene-targeting" }
+  { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" }
 ];
 
 export default function TargetValidationMouseModelsPage() {

@@ -170,7 +170,6 @@ const relatedModelTypes = [
 ];
 
 const relatedTechnologies = [
-  { title: "ES Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
   { title: "ROSA26", href: "/rosa26" }
 ];

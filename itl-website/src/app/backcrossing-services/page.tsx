@@ -45,7 +45,6 @@ const relatedLinks = [
   { title: "Speed Expansion Breeding", href: "/speed-expansion-breeding" },
   { title: "C57bl6 Mouse Background", href: "/c57bl6-mouse-background" },
   { title: "Strain Selection Guide", href: "/strain-selection-guide" },
-  { title: "Es Cell Gene Targeting", href: "/es-cell-gene-targeting" },
   { title: "Knockout Mouse Models", href: "/knockout-mouse-models" },
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" }
 ];

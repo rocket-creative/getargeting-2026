@@ -128,7 +128,7 @@ const derivativeAlleleData = {
   alleles: [
     "Knockout first allele (functions as null, potentially with LacZ reporter)",
     "Conditional ready (Flp excision creates floxed allele)",
-    "Conditional null (Cre excision of stop cassette)"
+    "Conditional null (Cre excision of target exon)"
   ],
   benefits: [
     "Immediate access to null phenotype",
@@ -211,8 +211,7 @@ const relatedLinksData = {
   ],
   technologies: [
     { href: "/cre-lox-system", label: "Cre Lox System" },
-    { href: "/tissue-specific-cre-lines", label: "Tissue Specific Cre Lines" },
-    { href: "/es-cell-gene-targeting", label: "ES Cell Gene Targeting" }
+    { href: "/tissue-specific-cre-lines", label: "Tissue Specific Cre Lines" }
   ]
 };
 
