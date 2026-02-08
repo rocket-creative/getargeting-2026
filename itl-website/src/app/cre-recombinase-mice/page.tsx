@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 
 // Hero Data
 const heroData = {
@@ -229,115 +229,97 @@ export default function CreRecombinaseMicePage() {
             overflow: 'hidden'
           }}
         >
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconDNA size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+            <div
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '20px'
+              }}
+            >
+              <IconDNA size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
 
-                <h1
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px'
-                  }}
-                >
-                  {heroData.title}
-                </h1>
+            <h1
+              className="hero-animate"
+              style={{
+                color: 'white',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.8rem',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '20px'
+              }}
+            >
+              {heroData.title}
+            </h1>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
-                  }}
-                >
-                  {heroData.intro}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.9)',
+                fontSize: '1rem',
+                fontWeight: 400,
+                lineHeight: '1.7rem',
+                marginBottom: '15px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.intro}
+            </p>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
-                    fontWeight: 400,
-                    lineHeight: '1.6rem',
-                    marginBottom: '25px'
-                  }}
-                >
-                  {heroData.description}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.85)',
+                fontSize: '.9rem',
+                fontWeight: 400,
+                lineHeight: '1.6rem',
+                marginBottom: '25px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.description}
+            </p>
 
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="hero-animate">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconImage size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Cre Recombinase Mechanism Diagram</span>
-                </div>
-              </div>
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link
+                href="/request-quote"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'white',
+                  color: '#0a253c',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Request a Quote</span>
+                <span>→</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  border: '2px solid white',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Talk to a Scientist</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>

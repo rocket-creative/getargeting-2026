@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { IconDNA, IconTarget, IconFlask, IconSettings, IconImage, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 
 // Hero Data
