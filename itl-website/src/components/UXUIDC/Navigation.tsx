@@ -251,7 +251,7 @@ export function UXUIDCNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -275,7 +275,6 @@ export function UXUIDCNavigation() {
     };
   }, [activeDropdown]);
 
-  // Page load animation
   useEffect(() => {
     if (navRef.current) {
       gsap.fromTo(
@@ -294,10 +293,8 @@ export function UXUIDCNavigation() {
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
         setActiveDropdown(itemLabel);
-        // Focus first link in dropdown
         setTimeout(() => {
-          const dropdown = dropdownRefs.current[itemLabel];
-          const firstLink = dropdown?.querySelector('a');
+          const firstLink = dropdownRef.current?.querySelector('a');
           firstLink?.focus();
         }, 0);
       }
@@ -314,11 +311,12 @@ export function UXUIDCNavigation() {
         Skip to main content
       </a>
 
-      <nav ref={navRef} className="w-full z-50 sticky top-0" aria-label="Main navigation">
-        {/* Row 1: Logo, Search (blue), Input, Start an Order (white/rev), Start Your Project (grey) */}
-        <div className="bg-white">
-          <div className="container">
-            <div className="flex items-center justify-end h-14 gap-0 py-3 px-5">
+      <nav ref={navRef} className="w-full z-50 sticky top-0 bg-white" aria-label="Main navigation">
+        {/* All rows inside main wrapper so dropdown never overflows */}
+        <div className="container">
+        {/* Row 1: Logo, Search, Input, CTAs */}
+        <div>
+            <div className="flex items-center justify-end h-14 gap-0 py-3">
               {/* Logo - auto, pushed left */}
               <Link href="/" className="mr-auto" aria-label="Home">
                 <Image
@@ -390,23 +388,28 @@ export function UXUIDCNavigation() {
                 </div>
               </button>
             </div>
-          </div>
         </div>
 
-        {/* Row 2: Navigation Links - grey text with hover effects */}
-        <div className="hidden lg:block bg-white">
-          <div className="container">
-            <div className="flex items-center justify-end gap-5 xl:gap-7 h-9 px-5">
-              {navigationItems.map((item) => {
-                const hasDropdown = !!(item.children || item.categorizedChildren);
-                const isDropdownOpen = activeDropdown === item.label;
-                
-                return (
+        {/* Row 2: Nav links with individual dropdowns positioned under each link */}
+        <div
+          className="hidden lg:block"
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <div className="flex items-center justify-end gap-5 xl:gap-7 h-9">
+            {navigationItems.map((item) => {
+              const hasDropdown = !!(item.children || item.categorizedChildren);
+              const isDropdownOpen = activeDropdown === item.label;
+              return (
                 <div
                   key={item.href}
-                  className="relative group"
-                  onMouseEnter={() => hasDropdown && setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (hasDropdown) {
+                      setActiveDropdown(item.label);
+                    } else {
+                      setActiveDropdown(null);
+                    }
+                  }}
                 >
                   <Link
                     href={item.href}
@@ -418,153 +421,146 @@ export function UXUIDCNavigation() {
                   >
                     {item.label}
                     {hasDropdown && (
-                      <svg 
-                        className="w-2 h-2 transition-transform duration-300 group-hover:rotate-180" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
+                      <svg className={`w-2 h-2 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     )}
                   </Link>
 
-                  {/* Categorized Dropdown */}
-                  {item.categorizedChildren && isDropdownOpen && (
-                    <div 
-                      ref={(el) => { dropdownRefs.current[item.label] = el; }}
-                      className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 z-50 animate-fadeIn mt-0 max-h-[80vh] overflow-y-auto"
+                  {/* Dropdown positioned directly under this nav link */}
+                  {isDropdownOpen && (item.categorizedChildren || item.children) ? (
+                    <div
+                      ref={dropdownRef}
+                      className="absolute left-0 top-full mt-0 bg-white shadow-lg border border-gray-200 z-50 animate-fadeIn max-h-[calc(100vh-200px)] overflow-y-auto"
                       role="menu"
                       aria-label={`${item.label} menu`}
-                      style={{
-                        display: 'grid',
-                        gridTemplateColumns: `repeat(${Math.min(item.categorizedChildren.categories.length, 3)}, minmax(160px, auto))`,
-                        gap: '16px',
-                        padding: '12px 16px',
-                        maxWidth: '800px',
-                        alignItems: 'start'
-                      }}
                     >
-                      {item.categorizedChildren.categories.map((category, idx) => (
-                        <div key={idx} role="group" aria-labelledby={`${item.label}-${idx}-heading`}>
-                          <div 
-                            id={`${item.label}-${idx}-heading`}
-                            className="text-[#134978] uppercase mb-1.5"
-                            style={{ 
-                              fontFamily: 'var(--system-ui)',
-                              fontSize: '10px',
-                              fontWeight: 600,
-                              letterSpacing: '0.8px'
-                            }}
-                          >
-                            {category.title}
-                          </div>
+                      <div className="py-2 px-4">
+                        {item.categorizedChildren ? (
                           <div className="flex flex-col">
-                            {category.items.map((child) => (
+                            {item.categorizedChildren.categories.flatMap((category) =>
+                              category.items.map((child) => (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  role="menuitem"
+                                  className="text-[#666] hover:text-teal-600 hover:bg-gray-50 py-1 px-2 text-[13px] whitespace-nowrap rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-gray-50"
+                                  style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))
+                            )}
+                          </div>
+                        ) : item.children ? (
+                          <div className="flex flex-col">
+                            {item.children.map((child) => (
                               <Link
                                 key={child.href}
                                 href={child.href}
                                 role="menuitem"
-                                className="block text-[#666] hover:text-teal-600 hover:bg-gray-50 transition-colors duration-200 py-0.5 whitespace-nowrap rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-gray-50"
-                                style={{ 
-                                  fontFamily: 'var(--system-ui)',
-                                  fontSize: '13px',
-                                  fontWeight: 400
-                                }}
+                                className="text-[#666] hover:bg-gray-50 hover:text-teal-600 py-1 px-2 text-[13px] whitespace-nowrap rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-gray-50"
+                                style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
                               >
                                 {child.label}
                               </Link>
                             ))}
                           </div>
-                        </div>
-                      ))}
+                        ) : null}
+                      </div>
                     </div>
-                  )}
-
-                  {/* Simple Dropdown */}
-                  {item.children && !item.categorizedChildren && isDropdownOpen && (
-                    <div 
-                      ref={(el) => { dropdownRefs.current[item.label] = el; }}
-                      className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 z-50 animate-fadeIn mt-0 min-w-[180px] max-h-[80vh] overflow-y-auto"
-                      role="menu"
-                      aria-label={`${item.label} menu`}
-                      style={{
-                        padding: '8px 12px'
-                      }}
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          role="menuitem"
-                          className="block text-[#666] hover:bg-gray-50 hover:text-teal-600 transition-colors duration-200 py-0.5 whitespace-nowrap rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-gray-50"
-                          style={{ 
-                            fontFamily: 'var(--system-ui)',
-                            fontSize: '13px',
-                            fontWeight: 400
-                          }}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  ) : null}
                 </div>
               );
-              })}
-            </div>
+            })}
           </div>
         </div>
+        </div>
 
-        {/* Row 3: Green Announcement Bar - teal bg, white bold centered */}
-        <div className="flex justify-center items-center h-7 px-5" style={{ backgroundColor: 'teal' }}>
-          <div className="text-white font-semibold text-center text-xs" style={{ fontFamily: 'var(--system-ui)' }}>
+        {/* Announcement bar - full width with teal background */}
+        <div className="w-full flex justify-center items-center h-7" style={{ backgroundColor: 'teal' }}>
+          <span className="text-center text-xs px-4 leading-7" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
             Is uncertain NIH funding holding you back from starting a much needed mouse model project? We have ways for you to start your project now and pay later.
-          </div>
+          </span>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div id="mobile-menu" className="lg:hidden bg-white border-t" role="dialog" aria-label="Mobile navigation menu">
-            <div className="container py-4">
-              {/* Mobile Search */}
-              <form action="/search" method="get" role="search" className="mb-4">
-                <label htmlFor="mobile-search" className="sr-only">Search models</label>
-                <input
-                  id="mobile-search"
-                  type="search"
-                  name="q"
-                  placeholder="Search models, services..."
-                  className="w-full px-3 py-2 border border-[#ccc] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600"
-                />
-              </form>
-              <nav aria-label="Mobile menu">
-                <ul className="space-y-1">
-                  {navigationItems.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="block py-2 text-sm text-[#0a253c] font-medium hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 rounded-sm"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              <Link
-                href="/request-quote"
-                onClick={() => setIsOpen(false)}
-                className="block mt-4 text-white text-center py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600 rounded-sm"
-                style={{ backgroundColor: 'teal' }}
-              >
-                Start Your Project
-              </Link>
+        {/* Mobile Menu - with all sub-links */}
+        {isOpen ? (
+          <div className="container">
+            <div id="mobile-menu" className="lg:hidden bg-white border-t max-h-[calc(100vh-120px)] overflow-y-auto" role="dialog" aria-label="Mobile navigation menu">
+              <div className="py-4">
+                {/* Mobile Search */}
+                <form action="/search" method="get" role="search" className="mb-4">
+                  <label htmlFor="mobile-search" className="sr-only">Search models</label>
+                  <input
+                    id="mobile-search"
+                    type="search"
+                    name="q"
+                    placeholder="Search models, services..."
+                    className="w-full px-3 py-2 border border-[#ccc] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600"
+                  />
+                </form>
+                <nav aria-label="Mobile menu">
+                  <ul className="space-y-0">
+                    {navigationItems.map((item) => (
+                      <li key={item.href}>
+                        {/* Parent link */}
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block py-2 text-sm text-[#0a253c] font-semibold hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 rounded-sm"
+                        >
+                          {item.label}
+                        </Link>
+                        {/* Child links - show all sub-pages */}
+                        {item.categorizedChildren && (
+                          <ul className="pl-4 pb-2">
+                            {item.categorizedChildren.categories.flatMap((category) =>
+                              category.items.map((child) => (
+                                <li key={child.href}>
+                                  <Link
+                                    href={child.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block py-1.5 text-sm text-[#666] hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600 rounded-sm whitespace-nowrap"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              ))
+                            )}
+                          </ul>
+                        )}
+                        {item.children && (
+                          <ul className="pl-4 pb-2">
+                            {item.children.map((child) => (
+                              <li key={child.href}>
+                                <Link
+                                  href={child.href}
+                                  onClick={() => setIsOpen(false)}
+                                  className="block py-1.5 text-sm text-[#666] hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600 rounded-sm whitespace-nowrap"
+                                >
+                                  {child.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <Link
+                  href="/request-quote"
+                  onClick={() => setIsOpen(false)}
+                  className="block mt-4 text-white text-center py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600 rounded-sm"
+                  style={{ backgroundColor: 'teal' }}
+                >
+                  Start Your Project
+                </Link>
+              </div>
             </div>
           </div>
-        )}
+        ) : null}
       </nav>
     </>
   );

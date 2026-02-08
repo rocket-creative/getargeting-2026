@@ -7,7 +7,6 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { ScientificDiagramPlaceholder } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -258,110 +257,97 @@ export default function AlzheimersMouseModelsPage() {
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }} />
 
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconTarget size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+            <div
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '20px'
+              }}
+            >
+              <IconTarget size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
 
-                <h1
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px'
-                  }}
-                >
-                  {heroData.title}
-                </h1>
+            <h1
+              className="hero-animate"
+              style={{
+                color: 'white',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.8rem',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '20px'
+              }}
+            >
+              {heroData.title}
+            </h1>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
-                  }}
-                >
-                  {heroData.intro}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.9)',
+                fontSize: '1rem',
+                fontWeight: 400,
+                lineHeight: '1.7rem',
+                marginBottom: '15px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.intro}
+            </p>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
-                    fontWeight: 400,
-                    lineHeight: '1.6rem',
-                    marginBottom: '25px'
-                  }}
-                >
-                  {heroData.description}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.85)',
+                fontSize: '.9rem',
+                fontWeight: 400,
+                lineHeight: '1.6rem',
+                marginBottom: '25px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.description}
+            </p>
 
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="hero-animate">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-amyloid-001"
-                  aspectRatio="4:3"
-                  title="Amyloid Cascade Pathway"
-                  caption="Fig. 1: The amyloid cascade shows APP processing by secretases leading to Aβ plaque formation."
-                  variant="hero"
-                  altText="Amyloid cascade pathway showing APP processing and Aβ plaque formation"
-                />
-              </div>
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link
+                href="/request-quote"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'white',
+                  color: '#0a253c',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Request a Quote</span>
+                <span>→</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  border: '2px solid white',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Talk to a Scientist</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -388,25 +374,6 @@ export default function AlzheimersMouseModelsPage() {
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Modeling Alzheimer Disease Pathology
             </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in" style={{ marginBottom: '40px' }}>
-              <ScientificDiagramPlaceholder
-                figureId="fig-amyloid-001"
-                aspectRatio="4:3"
-                title="Amyloid Cascade Pathway"
-                caption="Fig. 1: The amyloid cascade shows APP processing by secretases leading to Aβ plaque formation."
-                variant="section"
-                altText="Amyloid cascade pathway showing APP processing and Aβ plaque formation"
-              />
-              <ScientificDiagramPlaceholder
-                figureId="fig-tau-001"
-                aspectRatio="4:3"
-                title="Tau Pathology Mechanism"
-                caption="Fig. 2: Tau hyperphosphorylation leads to microtubule destabilization and neurofibrillary tangle formation."
-                variant="section"
-                altText="Tau pathology diagram showing hyperphosphorylation and tangle formation"
-              />
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Amyloid Cascade */}

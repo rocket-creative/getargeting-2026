@@ -8,7 +8,6 @@ import {
   LegacyInfoLink,
   UXUIDCResourceLinks,
   rosa26Resources,
-  ScientificDiagramPlaceholder,
 } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -90,94 +89,81 @@ export default function Rosa26Page() {
             overflow: 'hidden',
           }}
         >
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  <IconDNA size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+            <div
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '20px',
+              }}
+            >
+              <IconDNA size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
 
-                <h1
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px',
-                  }}
-                >
-                  {heroData.title}
-                </h1>
+            <h1
+              className="hero-animate"
+              style={{
+                color: 'white',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.8rem',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '20px',
+              }}
+            >
+              {heroData.title}
+            </h1>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1.1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px',
-                  }}
-                >
-                  {heroData.intro}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.9)',
+                fontSize: '1.1rem',
+                fontWeight: 400,
+                lineHeight: '1.7rem',
+                marginBottom: '15px',
+                maxWidth: '800px',
+              }}
+            >
+              {heroData.intro}
+            </p>
 
-                <p
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
-                    fontWeight: 400,
-                    lineHeight: '1.6rem',
-                    marginBottom: '25px',
-                  }}
-                >
-                  {heroData.description}
-                </p>
+            <p
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.85)',
+                fontSize: '.9rem',
+                fontWeight: 400,
+                lineHeight: '1.6rem',
+                marginBottom: '25px',
+                maxWidth: '800px',
+              }}
+            >
+              {heroData.description}
+            </p>
 
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500,
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="hero-animate">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-rosa26-001"
-                  aspectRatio="4:3"
-                  title="ROSA26 Safe Harbor Locus"
-                  caption="Fig. 1: The ROSA26 locus provides reliable ubiquitous expression without disrupting endogenous genes."
-                  variant="hero"
-                  altText="ROSA26 safe harbor locus structure and transgene insertion strategy"
-                />
-              </div>
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link
+                href="/request-quote"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'white',
+                  color: '#0a253c',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500,
+                }}
+              >
+                <span>Request a Quote</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>
