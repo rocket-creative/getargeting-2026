@@ -88,8 +88,10 @@ export default function VideoLibraryPage() {
   const featuredVideos = videosData.filter(v => v.featured);
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
+      
+      <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
 
       {/* Hero Section */}
       <section
@@ -383,9 +385,10 @@ export default function VideoLibraryPage() {
       {activeVideo && (
         <VideoModal video={activeVideo} onClose={() => setActiveVideo(null)} />
       )}
+      </main>
 
       <UXUIDCFooter />
-    </main>
+    </div>
   );
 }
 

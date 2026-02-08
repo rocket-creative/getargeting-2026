@@ -74,7 +74,7 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
 
       {/* Testimonials Grid */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="grid grid-cols-1 gap-6"
         style={{ maxWidth: '1200px', width: '100%' }}
       >
         {data.testimonials.map((testimonial, index) => (

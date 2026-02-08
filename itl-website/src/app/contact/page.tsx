@@ -100,10 +100,10 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
-      <main id="main-content">
+      <main id="main-content" style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
         {/* ========== HERO SECTION ========== */}
         <section 
           ref={heroRef}
@@ -501,7 +501,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
+      
       <UXUIDCFooter />
 
       {/* SEO: Schema.org ContactPage */}

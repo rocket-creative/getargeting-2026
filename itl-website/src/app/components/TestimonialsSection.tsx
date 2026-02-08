@@ -112,18 +112,12 @@ export default function TestimonialsSection({
       </h2>
 
       <div
-        className={testimonials.length > 1 ? 'testimonials-grid' : undefined}
         style={{
-          maxWidth: testimonials.length === 1 ? '900px' : '1100px',
+          maxWidth: '1200px',
           width: '100%',
           margin: '0 auto',
-          display: testimonials.length === 1 ? 'block' : 'grid',
-          gridTemplateColumns:
-            testimonials.length === 1
-              ? undefined
-              : testimonials.length === 2
-                ? 'repeat(2, 1fr)'
-                : 'repeat(3, 1fr)',
+          display: 'grid',
+          gridTemplateColumns: '1fr',
           gap: '24px',
         }}
       >
@@ -134,34 +128,34 @@ export default function TestimonialsSection({
             style={{
               ...cardStyle,
               opacity: 0,
-              padding: testimonials.length === 1 ? '48px 56px' : '32px',
+              padding: '32px',
               display: 'flex',
               flexDirection: 'column',
               transition: 'all 0.3s ease',
               width: '100%',
-              textAlign: testimonials.length === 1 ? 'center' : 'left',
+              textAlign: 'left',
             }}
           >
             <p
               style={{
                 ...quoteStyle,
                 fontFamily: 'Lato, sans-serif',
-                fontSize: testimonials.length === 1 ? '1.1rem' : '0.95rem',
+                fontSize: '0.95rem',
                 fontWeight: 400,
                 lineHeight: 1.7,
                 fontStyle: 'italic',
                 marginBottom: '20px',
-                flex: testimonials.length > 1 ? 1 : undefined,
+                flex: 1,
               }}
             >
               &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
+            <div style={{ marginTop: 'auto' }}>
               <p
                 style={{
                   ...nameStyle,
                   fontFamily: 'Poppins, sans-serif',
-                  fontSize: testimonials.length === 1 ? '1rem' : '.9rem',
+                  fontSize: '.9rem',
                   fontWeight: 600,
                   marginBottom: '5px',
                 }}
@@ -209,11 +203,6 @@ export default function TestimonialsSection({
         .testimonial-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        @media (max-width: 900px) {
-          .testimonials-grid {
-            grid-template-columns: 1fr !important;
-          }
         }
       `}</style>
     </section>

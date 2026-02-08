@@ -32,8 +32,10 @@ const contactInfo = {
 export default function GeneralContactPage() {
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
+      
+      <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
 
       {/* Hero Section with Embedded Form */}
       <section
@@ -362,8 +364,9 @@ export default function GeneralContactPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <UXUIDCFooter />
-    </main>
+    </div>
   );
 }

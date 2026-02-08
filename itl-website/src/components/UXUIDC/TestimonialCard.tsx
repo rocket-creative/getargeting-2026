@@ -72,7 +72,7 @@ export function UXUIDCTestimonialsSection({
         <h2 className="text-2xl lg:text-3xl font-semibold text-[var(--dk-blue)] text-center mb-12">
           {title}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <UXUIDCTestimonialCard key={index} {...testimonial} />
           ))}
