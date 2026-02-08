@@ -31,7 +31,7 @@ const heroData = {
 const services = [
   {
     title: 'Rat Models',
-    description: 'Custom knockout, knockin, and transgenic rat models. Rats offer advantages for certain research applications including larger size for surgical procedures, physiological similarity to humans in cardiovascular and metabolic studies, and established behavioral paradigms.',
+    description: 'Custom knockout, knockin, and targeted transgenic rat models. Rats offer advantages for certain research applications including larger size for surgical procedures, physiological similarity to humans in cardiovascular and metabolic studies, and established behavioral paradigms.',
     href: '/rat-models',
     Icon: IconTarget,
   },
