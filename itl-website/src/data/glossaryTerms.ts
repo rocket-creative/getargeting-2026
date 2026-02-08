@@ -257,37 +257,37 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Selection Markers (NeoR, PuroR)",
     slug: "selection-markers",
     definition: "Genes incorporated into targeting vectors to identify and isolate cells that have successfully integrated a genetic modification. Common markers include neomycin resistance (NeoR) and puromycin resistance (PuroR).",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Blastocyst Injection / Chimera Production",
     slug: "blastocyst-injection-chimera",
     definition: "The process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells from both the host embryo and the engineered cells.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Pronuclear Injection (Transgenics)",
     slug: "pronuclear-injection",
     definition: "A technique used to generate transgenic mice by directly introducing foreign DNA into the pronucleus of a fertilized one-cell embryo. The injected DNA integrates randomly into the mouse genome.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Single-Copy Integration",
     slug: "single-copy-integration",
     definition: "The precise insertion of a single copy of a DNA construct into a defined location within the genome. This approach prevents the variability, gene silencing, and expression artifacts associated with random multi-copy insertions.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Large-Fragment / BAC Targeting",
     slug: "large-fragment-bac-targeting",
     definition: "Introducing extended genomic DNA segments—often spanning 100–300 kilobases—into the mouse genome using bacterial artificial chromosomes (BACs) to preserve native gene context and regulatory elements.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Safe-Harbor Targeted Transgenesis",
     slug: "safe-harbor-targeted-transgenesis",
     definition: "A precise genome engineering strategy in which a transgene is inserted into a well-characterized, transcriptionally active, and non-disruptive genomic locus to ensure predictable and stable expression.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
 
   // ═══════════════════════════════════════════════════════════════════════════

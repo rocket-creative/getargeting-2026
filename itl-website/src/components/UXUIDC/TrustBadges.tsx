@@ -11,7 +11,7 @@ import { gsap } from '@/lib/UXUIDC/gsap';
 
 export default function UXUIDCTrustBadges() {
   const stats = [
-    { value: '1998', label: 'Since', isNumber: true },
+    { value: '26+', label: 'Years', isNumber: false },
     { value: '2,500+', label: 'Projects', isNumber: false },
     { value: '800+', label: 'Publications', isNumber: false },
   ];
