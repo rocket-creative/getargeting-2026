@@ -112,117 +112,99 @@ export default function AutismMouseModelsPage() {
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }} />
           
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div 
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconDNA size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
-                
-                <h1 
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px'
-                  }}
-                >
-                  {heroData.title}
-                </h1>
-                
-                <p 
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
-                  }}
-                >
-                  {heroData.intro}
-                </p>
-                
-                {heroData.description && (
-                  <p 
-                    className="hero-animate"
-                    style={{
-                      color: 'rgba(255,255,255,0.85)',
-                      fontSize: '.9rem',
-                      fontWeight: 400,
-                      lineHeight: '1.6rem',
-                      marginBottom: '25px'
-                    }}
-                  >
-                    {heroData.description}
-                  </p>
-                )}
-                
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link 
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link 
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="hero-animate hidden lg:block">
-                <div style={{
-                  border: '2px dashed rgba(255,255,255,0.4)',
-                  borderRadius: '8px',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(255,255,255,0.05)'
-                }}>
-                  <IconTarget size={60} color="rgba(255,255,255,0.4)" />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '.8rem', marginTop: '10px' }}>Featured Visual</span>
-                </div>
-              </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+            <div 
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '20px'
+              }}
+            >
+              <IconDNA size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
+            
+            <h1 
+              className="hero-animate"
+              style={{
+                color: 'white',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.8rem',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '20px'
+              }}
+            >
+              {heroData.title}
+            </h1>
+            
+            <p 
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.9)',
+                fontSize: '1rem',
+                fontWeight: 400,
+                lineHeight: '1.7rem',
+                marginBottom: '15px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.intro}
+            </p>
+            
+            {heroData.description && (
+              <p 
+                className="hero-animate"
+                style={{
+                  color: 'rgba(255,255,255,0.85)',
+                  fontSize: '.9rem',
+                  fontWeight: 400,
+                  lineHeight: '1.6rem',
+                  marginBottom: '25px',
+                  maxWidth: '800px'
+                }}
+              >
+                {heroData.description}
+              </p>
+            )}
+            
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link 
+                href="/request-quote"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'white',
+                  color: '#0a253c',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Request a Quote</span>
+                <span>→</span>
+              </Link>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  border: '2px solid white',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Talk to a Scientist</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>
