@@ -251,7 +251,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Targeting Vector (Homology Arms)",
     slug: "targeting-vector",
     definition: "A synthetic DNA construct designed to introduce specific genetic modifications into a genome through homologous recombination or HDR. It contains sequences known as homology arms that align precisely with the genomic target locus.",
-    category: "Vectors & Delivery",
+    category: "Vectors, ES Cells & Delivery",
   },
   {
     term: "Selection Markers (NeoR, PuroR)",
