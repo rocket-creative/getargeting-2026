@@ -21,7 +21,7 @@ const statsData = [
   { value: 7000, suffix: "+", label: "Known Rare Diseases" },
   { value: 300, suffix: "M", label: "Patients Worldwide" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 // Patient Mutation Knockins

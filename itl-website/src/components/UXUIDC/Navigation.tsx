@@ -476,12 +476,13 @@ export function UXUIDCNavigation() {
           </div>
         </div>
 
-        {/* Announcement bar - inside container for magazine layout */}
-        <div className="flex justify-center items-center h-7" style={{ backgroundColor: 'teal' }}>
+        </div>
+
+        {/* Announcement bar - full width edge to edge */}
+        <div className="w-full flex justify-center items-center h-7" style={{ backgroundColor: 'teal' }}>
           <span className="text-center text-xs px-4 leading-7" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
             Is uncertain NIH funding holding you back from starting a much needed mouse model project? We have ways for you to start your project now and pay later.
           </span>
-        </div>
         </div>
 
         {/* Mobile Menu - with all sub-links */}

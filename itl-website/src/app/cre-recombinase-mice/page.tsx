@@ -21,7 +21,7 @@ const statsData = [
   { value: 1500, suffix: "+", label: "Conditional Projects" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 // Mechanism of Action

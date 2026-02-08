@@ -22,7 +22,7 @@ const statsData = [
   { value: 2500, suffix: "+", label: "Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 // Comparison Table Data
@@ -128,7 +128,7 @@ const derivativeAlleleData = {
   alleles: [
     "Knockout first allele (functions as null, potentially with LacZ reporter)",
     "Conditional ready (Flp excision creates floxed allele)",
-    "Conditional null (Cre excision of target exon)"
+    "Conditional null (Cre excision of targeted exon)"
   ],
   benefits: [
     "Immediate access to null phenotype",

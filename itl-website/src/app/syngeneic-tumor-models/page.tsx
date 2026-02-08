@@ -19,7 +19,7 @@ const statsData = [
   { value: 2500, suffix: "+", label: "Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 const keyAdvantages = [

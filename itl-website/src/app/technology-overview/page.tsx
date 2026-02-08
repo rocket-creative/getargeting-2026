@@ -21,7 +21,7 @@ const statsData = [
   { value: 2500, suffix: "+", label: "Custom Projects" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 
@@ -111,7 +111,7 @@ const proprietaryTechnologies = [
 const advancedTargeting = [
   {
     title: "Conditional Targeting Systems",
-    description: "Generation of multiple model types from single targeted ES cell clone using Cre-LoxP and FLP-FRT systems, enabling flexible conditional and constitutive knockout approaches.",
+    description: "Generation of multiple model types using Cre-LoxP and FLP-FRT systems, enabling flexible conditional and constitutive knockout approaches.",
     href: "/cre-lox-system"
   },
   {

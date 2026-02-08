@@ -113,19 +113,25 @@ const publicationsData = {
       authors: 'Diamond EL, Emile JF, Fujino T, Haroche J, Maron MI, Lewis AM, et al.',
       year: '2025',
       title: 'RAF-independent MEK mutations drive refractory histiocytic neoplasms but respond to ERK inhibition.',
-      journal: 'Cancer Cell. S1535-6108(25): 00406-4',
+      journal: 'Cancer Cell.',
+      volume: 'S1535-6108(25): 00406-4',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/40032711/',
     },
     {
       authors: 'Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, et al.',
       year: '2025',
       title: 'Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration.',
-      journal: 'J Neurosci 29(45): e2331242025.',
+      journal: 'J Neurosci.',
+      volume: '45(29): e2331242025',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/40032044/',
     },
     {
       authors: 'Mohassel P, Hearn H, Rooney J, Zou Y, Johnson K, Norato G, et al.',
       year: '2025',
       title: 'Collagen type VI regulates TGF-β bioavailability in skeletal muscle in mice.',
-      journal: 'J Clin Invest. 9(135): e173354.',
+      journal: 'J Clin Invest.',
+      volume: '135(9): e173354',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/40029857/',
     },
   ],
 };
@@ -567,18 +573,45 @@ export default function KnockinMouseModelsPage() {
               {publicationsData.publications.map((pub, i) => (
                 <div
                   key={i}
-                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="animate-in group transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
-                    backgroundColor: '#f7f7f7',
-                    padding: '20px 25px',
-                    border: '.5px solid #e0e0e0',
-                    borderLeft: '4px solid #008080',
+                    backgroundColor: '#f8f9fa',
+                    padding: '25px',
+                    borderRadius: '8px',
+                    borderLeft: '4px solid #2384da',
                   }}
                 >
-                  <p style={{ color: '#333', fontSize: '.9rem', fontWeight: 500, marginBottom: '5px' }}>
-                    {pub.authors} {pub.year}. {pub.title}
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
                   </p>
-                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, fontStyle: 'italic' }}>{pub.journal}</p>
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
+                  </p>
                 </div>
               ))}
             </div>

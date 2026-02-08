@@ -21,7 +21,7 @@ const statsData = [
   { value: 2500, suffix: "+", label: "Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 // Exon Selection Criteria
@@ -50,7 +50,7 @@ const deletionTypes = [
     type: "Frameshift Deletions",
     description: "Exon length not divisible by 3 creates +1 or +2 frameshift in downstream exons.",
     outcome: "All downstream codons read out of frame. Stop codons terminate translation early. Protein becomes severely truncated.",
-    recommendation: "Preferred—guarantees loss of function"
+    recommendation: "Preferred—can cause loss of function"
   },
   {
     type: "In-Frame Deletions",
@@ -383,7 +383,7 @@ export default function CriticalExonSelectionPage() {
               Functional Domain Analysis
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Understanding where functional domains reside within your target gene is critical. Targeting an exon encoding part of an essential domain almost guarantees knockout.
+              Understanding where functional domains reside within your target gene is critical. Targeting an exon encoding part of an essential domain can effectively cause knockout.
             </p>
 
             <div className="animate-in" style={{ overflowX: 'auto' }}>

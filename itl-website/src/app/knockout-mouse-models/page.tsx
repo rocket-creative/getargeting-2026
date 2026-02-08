@@ -99,19 +99,25 @@ const publicationsData = {
       authors: 'Salzbank J, Lacaille H, Gaby J, O\'Reilly JJ, Kissner M, Vacher CM, Penn AA.',
       year: '2025',
       title: 'Microglia alter sex-specific cerebellar myelination following placental hormone loss.',
-      journal: 'Nat Commun. 16(1): 9846',
+      journal: 'Nat Commun.',
+      volume: '16(1): 9846',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/40038759/',
     },
     {
       authors: 'Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.',
       year: '2025',
       title: 'Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.',
-      journal: 'J Immunol. vkaf224.',
+      journal: 'J Immunol.',
+      volume: 'vkaf224',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/39999169/',
     },
     {
       authors: 'MacDowell Kaswan ZA, Hurtado M, Chen EY, Steelman AJ, McCusker RH.',
       year: '2025',
       title: 'Ido1 or Ido2 deficiency in myeloid-derived cells attenuates TMEV-induced ictogenesis.',
-      journal: 'J Neuroimmunol. 2025 (408): 578707.',
+      journal: 'J Neuroimmunol.',
+      volume: '408: 578707',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/39542015/',
     },
   ],
 };
@@ -602,19 +608,44 @@ export default function KnockoutMouseModelsPage() {
               {publicationsData.publications.map((pub, i) => (
                 <div
                   key={i}
-                  className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="animate-in group transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   style={{
-                    backgroundColor: 'white',
-                    padding: '20px 25px',
-                    border: '.5px solid #e0e0e0',
-                    borderLeft: '4px solid #008080',
+                    backgroundColor: '#f8f9fa',
+                    padding: '25px',
+                    borderRadius: '8px',
+                    borderLeft: '4px solid #2384da',
                   }}
                 >
-                  <p style={{ color: '#333', fontSize: '.9rem', fontWeight: 500, marginBottom: '5px' }}>
-                    {pub.authors} {pub.year}. {pub.title}
+                  <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px' }}>
+                    <span style={{ color: '#0a253c', fontWeight: 500 }}>{pub.authors}</span> ({pub.year}).
                   </p>
-                  <p style={{ color: '#666', fontSize: '.85rem', fontWeight: 400, fontStyle: 'italic' }}>
-                    {pub.journal}
+                  {pub.link ? (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        fontSize: '.95rem',
+                        color: '#008080',
+                        fontWeight: 600,
+                        marginBottom: '8px',
+                        lineHeight: '1.5',
+                        textDecoration: 'none'
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                      onMouseOut={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                    >
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{ fontSize: '.95rem', color: '#333', fontWeight: 600, marginBottom: '8px', lineHeight: '1.5' }}>
+                      {pub.title}
+                    </p>
+                  )}
+                  <p style={{ color: '#666', fontSize: '.85rem', fontStyle: 'italic' }}>
+                    <em>{pub.journal}</em>
+                    {pub.volume && <span style={{ fontStyle: 'normal' }}> {pub.volume}</span>}
                   </p>
                 </div>
               ))}

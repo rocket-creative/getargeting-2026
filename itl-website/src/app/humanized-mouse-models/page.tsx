@@ -27,7 +27,7 @@ const statsData = [
   { value: 100, suffix: "s", label: "Humanized Models" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Guarantee" }
+  { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
 // Why Humanize Data

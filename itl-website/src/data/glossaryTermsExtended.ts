@@ -750,7 +750,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // CATEGORY 4: Vectors, ES Cells & Delivery
+  // CATEGORY 4: Vectors & Delivery
   // ═══════════════════════════════════════════════════════════════════════════
   "targeting-vector": {
     metaTitle: "Targeting Vector (Homology Arms) | Precision Gene Targeting in Mouse Models",
@@ -784,26 +784,10 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ]
   },
 
-  "es-cell-targeting": {
-    metaTitle: "Embryonic Stem (ES) Cell Targeting | Precision Gene Modification in Mouse Models",
-    metaDescription: "Learn how ES cell targeting enables precise genetic modification via homologous recombination.",
-    introduction: "Embryonic stem (ES) cell targeting is a foundational technique in mouse genetics that enables the introduction of precise genetic modifications into the genome of pluripotent embryonic stem cells. These modified ES cells can then be used to generate chimeric mice capable of transmitting the engineered allele through the germline.",
-    faqs: [
-      {
-        question: "Why use ES cell targeting instead of direct embryo editing?",
-        answer: "ES cell targeting remains preferred when high precision is required, for large or complex DNA fragment integration, or when extensive screening and QC are needed before animal production."
-      }
-    ],
-    relatedTermSlugs: ["targeting-vector", "blastocyst-injection-chimera", "homologous-recombination"],
-    relatedServices: [
-      { title: "Technology Overview", href: "/technology-overview" }
-    ]
-  },
-
   "blastocyst-injection-chimera": {
     metaTitle: "Blastocyst Injection and Chimera Production | Germline Transmission in Mouse Models",
     metaDescription: "Understand how blastocyst injection transfers targeted ES cell modifications into the germline.",
-    introduction: "Blastocyst injection is the process of introducing genetically modified embryonic stem (ES) cells into a developing mouse blastocyst to create a chimera—an organism composed of cells derived from both the host embryo and the engineered ES cells. This step is essential for transferring targeted genetic modifications into the germline.",
+    introduction: "Blastocyst injection is the process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells derived from both the host embryo and the engineered cells. This step is essential for transferring targeted genetic modifications into the germline.",
     faqs: [
       {
         question: "How do you identify high-contribution chimeras?",
