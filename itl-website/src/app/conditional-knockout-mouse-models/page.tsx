@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, ScientificDiagramPlaceholder } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconEye, IconQuote, IconChevronRight, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -291,110 +291,97 @@ export default function ConditionalKnockoutMouseModelsPage() {
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }} />
           
-          <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div 
-                  className="hero-animate"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  <IconDNA size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
-                </div>
-                
-                <h1 
-                  className="hero-animate"
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2.8rem',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    marginBottom: '20px'
-                  }}
-                >
-                  {heroData.title}
-                </h1>
-                
-                <p 
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '1rem',
-                    fontWeight: 400,
-                    lineHeight: '1.7rem',
-                    marginBottom: '15px'
-                  }}
-                >
-                  {heroData.intro}
-                </p>
-                
-                <p 
-                  className="hero-animate"
-                  style={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '.9rem',
-                    fontWeight: 400,
-                    lineHeight: '1.6rem',
-                    marginBottom: '25px'
-                  }}
-                >
-                  {heroData.description}
-                </p>
-                
-                <div className="hero-animate flex flex-wrap gap-4">
-                  <Link 
-                    href="/request-quote"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Request a Quote</span>
-                    <span>→</span>
-                  </Link>
-                  <Link 
-                    href="/contact"
-                    className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 20px',
-                      minWidth: '160px',
-                      border: '2px solid white',
-                      fontSize: '.85rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    <span>Talk to a Scientist</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="hero-animate">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-cko-mechanism-001"
-                  aspectRatio="4:3"
-                  title="Conditional Knockout Mechanism"
-                  caption="Fig. 1: Floxed alleles function normally until Cre expression triggers tissue-specific gene deletion."
-                  variant="hero"
-                  altText="Conditional knockout mechanism showing floxed allele before and after Cre-mediated excision"
-                />
-              </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+            <div 
+              className="hero-animate"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '20px'
+              }}
+            >
+              <IconDNA size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
+            
+            <h1 
+              className="hero-animate"
+              style={{
+                color: 'white',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2.8rem',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '20px'
+              }}
+            >
+              {heroData.title}
+            </h1>
+            
+            <p 
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.9)',
+                fontSize: '1rem',
+                fontWeight: 400,
+                lineHeight: '1.7rem',
+                marginBottom: '15px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.intro}
+            </p>
+            
+            <p 
+              className="hero-animate"
+              style={{
+                color: 'rgba(255,255,255,0.85)',
+                fontSize: '.9rem',
+                fontWeight: 400,
+                lineHeight: '1.6rem',
+                marginBottom: '25px',
+                maxWidth: '800px'
+              }}
+            >
+              {heroData.description}
+            </p>
+            
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link 
+                href="/request-quote"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: 'white',
+                  color: '#0a253c',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Request a Quote</span>
+                <span>→</span>
+              </Link>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  padding: '10px 20px',
+                  minWidth: '160px',
+                  border: '2px solid white',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Talk to a Scientist</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -478,33 +465,21 @@ export default function ConditionalKnockoutMouseModelsPage() {
               </h3>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="animate-in">
-                <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
-                  {creLoxData.description}
-                </p>
-                <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem' }}>
-                  {creLoxData.mechanism}
-                </p>
-                <Link 
-                  href="/cre-lox-system"
-                  className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
-                  style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
-                >
-                  <span>Learn more about Cre Lox System</span>
-                  <IconChevronRight size={16} color="#008080" />
-                </Link>
-              </div>
-              <div className="animate-in">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-floxed-001"
-                  aspectRatio="4:3"
-                  title="Floxed Allele Design"
-                  caption="Fig. 2: A properly designed floxed allele functions normally until exposed to Cre recombinase, then becomes a null allele."
-                  variant="section"
-                  altText="Floxed allele design showing normal function before and null after Cre exposure"
-                />
-              </div>
+            <div className="animate-in">
+              <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px', maxWidth: '800px' }}>
+                {creLoxData.description}
+              </p>
+              <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', maxWidth: '800px' }}>
+                {creLoxData.mechanism}
+              </p>
+              <Link 
+                href="/cre-lox-system"
+                className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
+                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
+              >
+                <span>Learn more about Cre Lox System</span>
+                <IconChevronRight size={16} color="#008080" />
+              </Link>
             </div>
           </div>
         </section>
@@ -566,63 +541,51 @@ export default function ConditionalKnockoutMouseModelsPage() {
         {/* Inducible Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="animate-in">
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(0,128,128,0.1)',
-                  marginBottom: '15px'
-                }}>
-                  <IconClock size={24} color="#008080" />
-                </div>
-                <h2 style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700, marginBottom: '15px' }}>
-                  {inducibleData.title}
-                </h2>
-                <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
-                  {inducibleData.description}
-                </p>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {inducibleData.benefits.map((benefit, index) => (
-                    <li 
-                      key={index}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'flex-start',
-                        gap: '10px',
-                        marginBottom: '10px',
-                        color: '#555',
-                        fontSize: '.9rem'
-                      }}
-                    >
-                      <IconCheckCircle size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  href="/inducible-conditional-knockout"
-                  className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
-                  style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
-                >
-                  <span>Learn more about inducible systems</span>
-                  <IconChevronRight size={16} color="#008080" />
-                </Link>
+            <div className="animate-in">
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(0,128,128,0.1)',
+                marginBottom: '15px'
+              }}>
+                <IconClock size={24} color="#008080" />
               </div>
-              <div className="animate-in">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-creert2-001"
-                  aspectRatio="4:3"
-                  title="CreERT2 Tamoxifen Induction Mechanism"
-                  caption="Fig. 3: CreERT2 remains cytoplasmic until tamoxifen binding triggers nuclear translocation and Cre activity."
-                  variant="section"
-                  altText="Tamoxifen-inducible CreERT2 mechanism showing cytoplasmic sequestration and nuclear translocation"
-                />
-              </div>
+              <h2 style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700, marginBottom: '15px' }}>
+                {inducibleData.title}
+              </h2>
+              <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px', maxWidth: '800px' }}>
+                {inducibleData.description}
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {inducibleData.benefits.map((benefit, index) => (
+                  <li 
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '10px',
+                      marginBottom: '10px',
+                      color: '#555',
+                      fontSize: '.9rem'
+                    }}
+                  >
+                    <IconCheckCircle size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link 
+                href="/inducible-conditional-knockout"
+                className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
+                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
+              >
+                <span>Learn more about inducible systems</span>
+                <IconChevronRight size={16} color="#008080" />
+              </Link>
             </div>
           </div>
         </section>
@@ -720,56 +683,44 @@ export default function ConditionalKnockoutMouseModelsPage() {
 
         {/* TruView Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="animate-in">
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  backgroundColor: 'rgba(255,255,255,0.15)',
-                  padding: '6px 16px',
-                  borderRadius: '20px',
-                  marginBottom: '15px'
-                }}>
-                  <IconAward size={16} color="white" />
-                  <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Proprietary Technology</span>
-                </div>
-                <h2 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700, marginBottom: '15px' }}>
-                  {truViewData.title}
-                </h2>
-                <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
-                  {truViewData.description}
-                </p>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {truViewData.benefits.map((benefit, index) => (
-                    <li 
-                      key={index}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px',
-                        marginBottom: '10px',
-                        color: 'rgba(255,255,255,0.9)',
-                        fontSize: '.9rem'
-                      }}
-                    >
-                      <IconCheckCircle size={18} color="white" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="animate-in">
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '15px'
+              }}>
+                <IconAward size={16} color="white" />
+                <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Proprietary Technology</span>
               </div>
-              <div className="animate-in">
-                <ScientificDiagramPlaceholder
-                  figureId="fig-reporter-configs-001"
-                  aspectRatio="4:3"
-                  title="TruView Reporter Configuration"
-                  caption="Fig. 4: TruView technology provides strong reporter expression after knockout for visualization of recombined cells."
-                  variant="hero"
-                  altText="TruView conditional knockout reporter configuration and expression visualization"
-                />
-              </div>
+              <h2 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700, marginBottom: '15px' }}>
+                {truViewData.title}
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px', maxWidth: '800px' }}>
+                {truViewData.description}
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {truViewData.benefits.map((benefit, index) => (
+                  <li 
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      marginBottom: '10px',
+                      color: 'rgba(255,255,255,0.9)',
+                      fontSize: '.9rem'
+                    }}
+                  >
+                    <IconCheckCircle size={18} color="white" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
