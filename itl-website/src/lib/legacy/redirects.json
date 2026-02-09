@@ -22,8 +22,6 @@
   { "source": "/mouse-genotyping-service", "destination": "/mouse-genotyping/", "permanent": true },
   { "source": "/partial-services", "destination": "/mouse-model-services/", "permanent": true },
   { "source": "/quote-request-form", "destination": "/request-quote/", "permanent": true },
-  { "source": "/general-contact", "destination": "/contact/", "permanent": true },
-  { "source": "/schedule-meeting", "destination": "/contact/", "permanent": true },
   { "source": "/humanized-immune-target-mice", "destination": "/catalog-mouse-models/", "permanent": true },
   { "source": "/humanized-catalog-mouse-models", "destination": "/catalog-mouse-models/", "permanent": true },
   { "source": "/cre-mice", "destination": "/mouse-lines/", "permanent": true },
