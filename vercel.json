@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd itl-website && npm run build",
-  "outputDirectory": "itl-website/.next",
-  "installCommand": "cd itl-website && npm install"
-}
