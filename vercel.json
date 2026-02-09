@@ -1,7 +1,5 @@
 {
-  "framework": "nextjs",
-  "rootDirectory": "itl-website",
-  "git": {
-    "deploymentEnabled": true
-  }
+  "buildCommand": "cd itl-website && npm run build",
+  "outputDirectory": "itl-website/.next",
+  "installCommand": "cd itl-website && npm install"
 }
