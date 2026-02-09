@@ -2485,70 +2485,80 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2009,
       title: "Knockout of GARPs and the beta-subunit of the rod cGMP-gated channel disrupts disk morphogenesis and rod outer segment structural integrity",
       journal: "J Cell Sci",
-      volume: "122: 1192-1200"
+      volume: "122: 1192-1200",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19339551/"
     },
     {
       authors: "Weinreich MA, Takada K, Skon C, Reiner SL, Jameson SC, Hogquist KA.",
       year: 2009,
       title: "KLF2 transcription-factor deficiency in T cells results in unrestrained cytokine production and upregulation of bystander chemokine receptors",
       journal: "Immunity",
-      volume: "31: 122-130"
+      volume: "31: 122-130",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19592277/"
     },
     {
       authors: "Uchimura A, Hidaka Y, Hirabayashi T, Hirabayashi M, Yagi T.",
       year: 2009,
       title: "DNA polymerase delta is required for early mammalian embryogenesis",
       journal: "PLoS One",
-      volume: "4: e4184"
+      volume: "4: e4184",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19145245/"
     },
     {
       authors: "Saint Fleur S, Hoshino A, Kondo K, Egawa T, Fujii H.",
       year: 2009,
       title: "Regulation of Fas-mediated immune homeostasis by an activation-induced protein, Cyclon",
       journal: "Blood",
-      volume: "114: 1355-1365"
+      volume: "114: 1355-1365",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19528538/"
     },
     {
       authors: "Robling AG, Childress P, Yu J, Cotte J, Heller A, Philip BK, Bidwell JP.",
       year: 2009,
       title: "Nmp4/CIZ suppresses parathyroid hormone-induced increases in trabecular bone",
       journal: "J Cell Physiol",
-      volume: "219: 734-743"
+      volume: "219: 734-743",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19189321/"
     },
     {
       authors: "Miyagoe-Suzuki Y, Masubuchi N, Miyamoto K, Wada MR, Yuasa S, Saito F, Matsumura K, Kanesaki H, Kudo A, Manya H, Endo T, Takeda S.",
       year: 2009,
       title: "Reduced proliferative activity of primary POMGnT1-null myoblasts in vitro",
       journal: "Mech Dev",
-      volume: "126: 107-116"
+      volume: "126: 107-116",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19114101/"
     },
     {
       authors: "Liu J, Zhang H, Li Z, Hailemariam TK, Chakraborty M, Jiang K, Qiu D, Bui HH, Peake DA, Kuo MS, Wadgaonkar R, Cao G, Jiang XC.",
       year: 2009,
       title: "Sphingomyelin synthase 2 is one of the determinants for plasma and liver sphingomyelin levels in mice",
       journal: "Arterioscler Thromb Vasc Biol",
-      volume: "29: 850-856"
+      volume: "29: 850-856",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19286635/"
     },
     {
       authors: "Hoover RG, Gullickson G, Kornbluth J.",
       year: 2009,
       title: "Impaired NK cytolytic activity and enhanced tumor growth in NK lytic-associated molecule-deficient mice",
       journal: "J Immunol",
-      volume: "183: 6913-6921"
+      volume: "183: 6913-6921",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19915045/"
     },
     {
       authors: "Festing MH, Speer MY, Yang HY, Giachelli CM.",
       year: 2009,
       title: "Generation of mouse conditional and null alleles of the type III sodium-dependent phosphate cotransporter PiT-1",
       journal: "Genesis",
-      volume: "47: 858-863"
+      volume: "47: 858-863",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19882669/"
     },
     {
       authors: "Amleh A, Nair SJ, Sun J, Sutherland A, Hasty P, Li R.",
       year: 2009,
       title: "Mouse cofactor of BRCA1 (Cobra1) is required for early embryogenesis",
       journal: "PLoS One",
-      volume: "4: e5034"
+      volume: "4: e5034",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19340312/"
     }
   ],
   "2008": [
@@ -2557,84 +2567,96 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2008,
       title: "Targeted knockout of the mouse betaB2-crystallin gene (Crybb2) induces age-related cataract",
       journal: "Invest Ophthalmol Vis Sci",
-      volume: "49: 5476-5483"
+      volume: "49: 5476-5483",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18719080/"
     },
     {
       authors: "Makino CL, Peshenko IV, Wen XH, Olshevskaya EV, Barrett R, Dizhoor AM.",
       year: 2008,
       title: "A role for GCAP2 in regulating the photoresponse. Guanylyl cyclase activation and rod electrophysiology in GUCA1B knock-out mice",
       journal: "J Biol Chem",
-      volume: "283: 29135-29143"
+      volume: "283: 29135-29143",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18723510/"
     },
     {
       authors: "Yang G, Wu L, Jiang B, Yang W, Qi J, Cao K, Meng Q, Mustafa AK, Mu W, Zhang S et al.",
       year: 2008,
       title: "H2S as a physiologic vasorelaxant: hypertension in mice with deletion of cystathionine gamma-lyase",
       journal: "Science",
-      volume: "322: 587-590"
+      volume: "322: 587-590",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18948540/"
     },
     {
       authors: "Maeda A, Maeda T, Golczak M, Palczewski K.",
       year: 2008,
       title: "Retinopathy in mice induced by disrupted all-trans-retinal clearance",
       journal: "J Biol Chem",
-      volume: "283: 26684-26693"
+      volume: "283: 26684-26693",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18658157/"
     },
     {
       authors: "Imanishi Y, Sun W, Maeda T, Maeda A, Palczewski K.",
       year: 2008,
       title: "Retinyl ester homeostasis in the adipose differentiation-related protein-deficient retina",
       journal: "J Biol Chem",
-      volume: "283: 25091-25102"
+      volume: "283: 25091-25102",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18606814/"
     },
     {
       authors: "Nikonov SS, Brown BM, Davis JA, Zuniga FI, Bragin A, Pugh EN, Jr., Craft CM.",
       year: 2008,
       title: "Mouse cones require an arrestin for normal inactivation of phototransduction",
       journal: "Neuron",
-      volume: "59(3): 462-74"
+      volume: "59(3): 462-74",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18701071/"
     },
     {
       authors: "Hailemariam TK, Huan C, Liu J, Li Z, Roman C, Kalbfeisch M, Bui HH, Peake DA, Kuo MS, Cao G, Wadgaonkar R, Jiang XC.",
       year: 2008,
       title: "Sphingomyelin synthase 2 deficiency attenuates NFkappaB activation",
       journal: "Arterioscler Thromb Vasc Biol",
-      volume: "28: 1519-1526"
+      volume: "28: 1519-1526",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18566297/"
     },
     {
       authors: "Suzuki Y, Kovacs CS, Takanaga H, Peng JB, Landowski CP, Hediger MA.",
       year: 2008,
       title: "Calcium channel TRPV6 is involved in murine maternal-fetal calcium transport",
       journal: "J Bone Miner Res",
-      volume: "23: 1249-1256"
+      volume: "23: 1249-1256",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18348695/"
     },
     {
       authors: "Luke Y, Zaim H, Karakesisoglou I, Jaeger VM, Sellin L, Lu W, Schneider M, Neumann S, Beijer A, Munck M, Padmakumar VC, Gloy J, Walz G, Noegel AA.",
       year: 2008,
       title: "Nesprin-2 Giant (NUANCE) maintains nuclear envelope architecture and composition in skin",
       journal: "J Cell Sci",
-      volume: "121: 1887-1898"
+      volume: "121: 1887-1898",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18477613/"
     },
     {
       authors: "Nakashima A, Kawamoto T, Honda KK, Ueshima T, Noshiro M, Iwata T, Fujimoto K, Kubo H, Honma S, Yorioka N, Kohno N, Kato Y.",
       year: 2008,
       title: "DEC1 modulates the circadian phase of clock gene expression",
       journal: "Mol Cell Biol",
-      volume: "28: 4080-4092"
+      volume: "28: 4080-4092",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18411297/"
     },
     {
       authors: "Arikketh D, Nelson R, Vance JE.",
       year: 2008,
       title: "Defining the importance of phosphatidylserine synthase-1 (PSS1): unexpected viability of PSS1-deficient mice",
       journal: "J Biol Chem",
-      volume: "283: 12888-12897"
+      volume: "283: 12888-12897",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18343815/"
     },
     {
       authors: "Joesting MS, Cheever TR, Volzing KG, Yamaguchi TP, Wolf V, Naf D, Rubin JS, Marker PC.",
       year: 2008,
       title: "Secreted frizzled related protein 1 is a paracrine modulator of epithelial branching morphogenesis, proliferation, and secretory gene expression in the prostate",
       journal: "Dev Biol",
-      volume: "317: 161-173"
+      volume: "317: 161-173",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18371946/"
     },
     {
       authors: "Golczak M, Maeda A, Bereta G, Maeda T, Kiser PD, Hunzelmann S, von Lintig J, Blaner WS, Palczewski K.",
@@ -2642,35 +2664,39 @@ export const publicationsByYear: PublicationsByYear = {
       title: "Metabolic basis of visual cycle inhibition by retinoid and nonretinoid compounds in the vertebrate retina",
       journal: "J Biol Chem",
       volume: "283(15): 9543-54",
-      link: "https://www.ncbi.nlm.nih.gov/pubmed/18195010"
+      link: "https://pubmed.ncbi.nlm.nih.gov/18195010/"
     },
     {
       authors: "Monks J, Smith-Steinhart C, Kruk ER, Fadok VA, Henson PM.",
       year: 2008,
       title: "Epithelial cells remove apoptotic epithelial cells during post-lactation involution of the mouse mammary gland",
       journal: "Biol Reprod",
-      volume: "78: 586-594"
+      volume: "78: 586-594",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18057312/"
     },
     {
       authors: "Jordan MS, Smith JE, Burns JC, Austin JE, Nichols KE, Aschenbrenner AC, Koretzky GA.",
       year: 2008,
       title: "Complementation in trans of altered thymocyte development in mice expressing mutant forms of the adaptor molecule SLP76",
       journal: "Immunity",
-      volume: "28: 359-369"
+      volume: "28: 359-369",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18342008/"
     },
     {
       authors: "Edwin F, Patel TB.",
       year: 2008,
       title: "A novel role of Sprouty 2 in regulating cellular apoptosis",
       journal: "J Biol Chem",
-      volume: "283: 3181-3190"
+      volume: "283: 3181-3190",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18070883/"
     },
     {
       authors: "Beliakoff J, Lee J, Ueno H, Aiyer A, Weissman IL, Barsh GS, Cardiff RD, Sun Z.",
       year: 2008,
       title: "The PIAS-like protein Zimp10 is essential for embryonic viability and proper vascular development",
       journal: "Mol Cell Biol",
-      volume: "28: 282-292"
+      volume: "28: 282-292",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17967885/"
     }
   ],
   "2007": [
@@ -2679,63 +2705,72 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2007,
       title: "Expression and localization of RGS9-2/G 5/R7BP complex in vivo is set by dynamic control of its constitutive degradation by cellular cysteine proteases",
       journal: "J Neurosci",
-      volume: "27: 14117-14127"
+      volume: "27: 14117-14127",
+      link: "https://pubmed.ncbi.nlm.nih.gov/18094251/"
     },
     {
       authors: "Baertschi S, Zhuang L, Trueb B.",
       year: 2007,
       title: "Mice with a targeted disruption of the Fgfrl1 gene die at birth due to alterations in the diaphragm",
       journal: "FEBS J",
-      volume: "274: 6241-6253"
+      volume: "274: 6241-6253",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17986259/"
     },
     {
       authors: "Malicdan MC, Noguchi S, Nonaka I, Hayashi YK, Nishino I.",
       year: 2007,
       title: "A Gne knockout mouse expressing human GNE D176V mutation develops features similar to distal myopathy with rimmed vacuoles or hereditary inclusion body myopathy",
       journal: "Hum Mol Genet",
-      volume: "16: 2669-2682"
+      volume: "16: 2669-2682",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17704511/"
     },
     {
       authors: "Ding C, Liu Y, Wang Y, Park BK, Wang CY, Zheng P, Liu Y.",
       year: 2007,
       title: "Siglecg limits the size of B1a B cell lineage by down-regulating NFkappaB activation",
       journal: "PLoS One",
-      volume: "2: e997"
+      volume: "2: e997",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17912374/"
     },
     {
       authors: "Krispel CM, Sokolov M, Chen YM, Song H, Herrmann R, Arshavsky VY, Burns ME.",
       year: 2007,
       title: "Phosducin regulates the expression of transducin betagamma subunits in rod photoreceptors and does not contribute to phototransduction adaptation",
       journal: "J Gen Physiol",
-      volume: "130: 303-312"
+      volume: "130: 303-312",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17724163/"
     },
     {
       authors: "Garcia-Gonzalez MA, Menezes LF, Piontek KB, Kaimori J, Huso DL, Watnick T, Onuchic LF, Guay-Woodford LM, Germino GG.",
       year: 2007,
       title: "Genetic interaction studies link autosomal dominant and recessive polycystic kidney disease in a common pathway",
       journal: "Hum Mol Genet",
-      volume: "16: 1940-1950"
+      volume: "16: 1940-1950",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17575307/"
     },
     {
       authors: "Chen H, McCaffery JM, Chan DC.",
       year: 2007,
       title: "Mitochondrial fusion protects against neurodegeneration in the cerebellum",
       journal: "Cell",
-      volume: "130: 548-562"
+      volume: "130: 548-562",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17693261/"
     },
     {
       authors: "Mei Y, Thompson MD, Shiraishi Y, Cohen RA, Tong X, Lu J, Lian G, Lenkinski R, De Grand A, Vaid RR, Bryce T, Stasenko M, Boskey A, Walsh C, Sheen V.",
       year: 2007,
       title: "Filamin B mutations cause chondrocyte defects in skeletal development",
       journal: "Hum Mol Genet",
-      volume: "16: 1661-1675"
+      volume: "16: 1661-1675",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17510210/"
     },
     {
       authors: "Fullerton MD, Hakimuddin F, Bakovic M.",
       year: 2007,
       title: "Developmental and metabolic effects of disruption of the mouse CTP:phosphoethanolamine cytidylyltransferase gene (Pcyt2)",
       journal: "Mol Cell Biol",
-      volume: "27: 3327-3336"
+      volume: "27: 3327-3336",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17325045/"
     }
   ],
   "2006": [
@@ -2744,77 +2779,88 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2006,
       title: "Loss of the mouse ortholog of the shwachman-diamond syndrome gene (Sbds) results in early embryonic lethality",
       journal: "Mol Cell Biol",
-      volume: "26: 6656-6663"
+      volume: "26: 6656-6663",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16914746/"
     },
     {
       authors: "Xu J, Lee WN, Phan J, Saad MF, Reue K, Kurland IJ.",
       year: 2006,
       title: "Lipin deficiency impairs diurnal metabolic fuel switching",
       journal: "Diabetes",
-      volume: "55: 3429-3438"
+      volume: "55: 3429-3438",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17130489/"
     },
     {
       authors: "Vives V, Su J, Zhong S, Ratnayaka I, Slee E, Goldin R, Lu X.",
       year: 2006,
       title: "ASPP2 is a haploinsufficient tumor suppressor that cooperates with p53 to suppress tumor growth",
       journal: "Genes Dev",
-      volume: "20: 1262-1267"
+      volume: "20: 1262-1267",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16702401/"
     },
     {
       authors: "Vasireddy V, Jablonski MM, Mandal MN, Raz-Prag D, Wang XF, Nizol L, Iannaccone A, Musch DC, Bush RA, Salem N, Jr., Sieving PA, Ayyagari R.",
       year: 2006,
       title: "Elovl4 5-bp-deletion knock-in mice develop progressive photoreceptor degeneration",
       journal: "Invest Ophthalmol Vis Sci",
-      volume: "47: 4558-4568"
+      volume: "47: 4558-4568",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17003453/"
     },
     {
       authors: "Park JM, Kohn MJ, Bruinsma MW, Vech C, Intine RV, Fuhrmann S, Grinberg A, Mukherjee I, Love PE, Ko MS, DePamphilis ML, Maraia RJ.",
       year: 2006,
       title: "The multifunctional RNA-binding protein La is required for mouse development and for the establishment of embryonic stem cells",
       journal: "Mol Cell Biol",
-      volume: "26: 1445-1451"
+      volume: "26: 1445-1451",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16449655/"
     },
     {
       authors: "Nanda A, Karim B, Peng Z, Liu G, Qiu W, Gan C, Vogelstein B, St Croix B, Kinzler KW, Huso DL.",
       year: 2006,
       title: "Tumor endothelial marker 1 (Tem1) functions in the growth and progression of abdominal tumors",
       journal: "Proc Natl Acad Sci U S A",
-      volume: "103: 3351-3356"
+      volume: "103: 3351-3356",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16492758/"
     },
     {
       authors: "McVay LD, Keilbaugh SA, Wong TM, Kierstein S, Shin ME, Lehrke M, Lefterova MI, Shifflett DE, Barnes SL, Cominelli F, Cohn SM, Hecht G, Lazar MA, Haczku A, Wu GD.",
       year: 2006,
       title: "Absence of bacterially induced RELMbeta reduces injury in the dextran sodium sulfate model of colitis",
       journal: "J Clin Invest",
-      volume: "116: 2914-2923"
+      volume: "116: 2914-2923",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17024245/"
     },
     {
       authors: "Maeda A, Maeda T, Imanishi Y, Sun W, Jastrzebska B, Hatala DA, Winkens HJ, Hofmann KP, Janssen JJ, Baehr W, Driessen CA, Palczewski K.",
       year: 2006,
       title: "Retinol dehydrogenase (RDH12) protects photoreceptors from light-induced degeneration in mice",
       journal: "J Biol Chem",
-      volume: "281: 37697-37704"
+      volume: "281: 37697-37704",
+      link: "https://pubmed.ncbi.nlm.nih.gov/17032653/"
     },
     {
       authors: "Kim KI, Yan M, Malakhova O, Luo JK, Shen MF, Zou W, de la Torre JC, Zhang DE.",
       year: 2006,
       title: "Ube1L and protein ISGylation are not essential for alpha/beta interferon signaling",
       journal: "Mol Cell Biol",
-      volume: "26: 472-479"
+      volume: "26: 472-479",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16382139/"
     },
     {
       authors: "Faria AM, Levay A, Wang Y, Kamphorst AO, Rosa ML, Nussenzveig DR, Balkan W, Chook YM, Levy DE, Fontoura BM.",
       year: 2006,
       title: "The nucleoporin Nup96 is required for proper expression of interferon-regulated proteins and functions",
       journal: "Immunity",
-      volume: "24: 295-304"
+      volume: "24: 295-304",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16546098/"
     },
     {
       authors: "Dalkilic I, Schienda J, Thompson TG, Kunkel LM.",
       year: 2006,
       title: "Loss of FilaminC (FLNc) results in severe defects in myogenesis and myotube structure",
       journal: "Mol Cell Biol",
-      volume: "26: 6522-6534"
+      volume: "26: 6522-6534",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16914736/"
     }
   ],
   "2005": [
@@ -2823,14 +2869,16 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2005,
       title: "Targeted disruption of Tgif, the mouse ortholog of a human holoprosencephaly gene, does not result in holoprosencephaly in mice",
       journal: "Mol Cell Biol",
-      volume: "25: 3639-3647"
+      volume: "25: 3639-3647",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15831469/"
     },
     {
       authors: "Chesney J, Telang S, Yalcin A, Clem A, Wallis N, Bucala R.",
       year: 2005,
       title: "Targeted disruption of inducible 6-phosphofructo-2-kinase results in embryonic lethality",
       journal: "Biochem Biophys Res Commun",
-      volume: "331: 139-146"
+      volume: "331: 139-146",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15845370/"
     }
   ],
   "2004": [
@@ -2839,42 +2887,48 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2004,
       title: "RS-1 Gene Delivery to an Adult Rs1h Knockout Mouse Model Restores ERG b-Wave with Reversal of the Electronegative Waveform of X-Linked Retinoschisis",
       journal: "Invest Ophthalmol Vis Sci",
-      volume: "45: 3279-3285"
+      volume: "45: 3279-3285",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15326152/"
     },
     {
       authors: "Utku N, Boerner A, Tomschegg A, Bennai-Sanfourche F, Bulwin GC, Heinemann T, Loehler J, Blumberg RS, Volk HD.",
       year: 2004,
       title: "TIRC7 deficiency causes in vitro and in vivo augmentation of T and B cell activation and cytokine response",
       journal: "J Immunol",
-      volume: "173: 2342-2352"
+      volume: "173: 2342-2352",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15294947/"
     },
     {
       authors: "Uda M, Ottolenghi C, Crisponi L, Garcia JE, Deiana M, Kimber W, Forabosco A, Cao A, Schlessinger D, Pilia G.",
       year: 2004,
       title: "Foxl2 disruption causes mouse ovarian failure by pervasive blockage of follicle development",
       journal: "Hum Mol Genet",
-      volume: "13: 1171-1181"
+      volume: "13: 1171-1181",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15056605/"
     },
     {
       authors: "Sokolov M, Strissel KJ, Leskov IB, Michaud NA, Govardovskii VI, Arshavsky VY.",
       year: 2004,
       title: "Phosducin facilitates light-driven transducin translocation in rod photoreceptors. Evidence from the phosducin knockout mouse",
       journal: "J Biol Chem",
-      volume: "279: 19149-19156"
+      volume: "279: 19149-19156",
+      link: "https://pubmed.ncbi.nlm.nih.gov/14973130/"
     },
     {
       authors: "Ogg SL, Weldon AK, Dobbie L, Smith AJ, Mather IH.",
       year: 2004,
       title: "Expression of butyrophilin (Btn1a1) in lactating mammary gland is essential for the regulated secretion of milk-lipid droplets",
       journal: "Proc Natl Acad Sci U S A",
-      volume: "101: 10084-10089"
+      volume: "101: 10084-10089",
+      link: "https://pubmed.ncbi.nlm.nih.gov/15226505/"
     },
     {
       authors: "Batten ML, Imanishi Y, Maeda T, Tu DC, Moise AR, Bronson D, Possin D, Van Gelder RN, Baehr W, Palczewski K.",
       year: 2004,
       title: "Lecithin-retinol acyltransferase is essential for accumulation of all-trans-retinyl esters in the eye and in the liver",
       journal: "J Biol Chem",
-      volume: "279: 10422-10432"
+      volume: "279: 10422-10432",
+      link: "https://pubmed.ncbi.nlm.nih.gov/14684738/"
     }
   ],
   "2003": [
@@ -2883,7 +2937,8 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2003,
       title: "Targeted disruption of the murine Bin1/Amphiphysin II gene does not disable endocytosis but results in embryonic cardiomyopathy with aberrant myofibril formation",
       journal: "Mol Cell Biol",
-      volume: "23: 4295-4306"
+      volume: "23: 4295-4306",
+      link: "https://pubmed.ncbi.nlm.nih.gov/12773571/"
     }
   ],
   "2001": [
@@ -2892,7 +2947,8 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2001,
       title: "Coupling of the TCR to integrin activation by Slap-130/Fyb",
       journal: "Science",
-      volume: "293: 2263-2265"
+      volume: "293: 2263-2265",
+      link: "https://pubmed.ncbi.nlm.nih.gov/11567141/"
     }
   ]
 };
