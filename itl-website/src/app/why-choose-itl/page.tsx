@@ -477,9 +477,9 @@ export default function WhyChooseItlPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { quote: dunaief.quote, name: formatAuthorWithCredentials(dunaief), affiliation: dunaief.affiliation },
-                { quote: basson.quote, name: formatAuthorWithCredentials(basson), affiliation: basson.affiliation }
-              ].map((testimonial, index) => (
+                dunaief ? { quote: dunaief.quote, name: formatAuthorWithCredentials(dunaief), affiliation: dunaief.affiliation } : null,
+                basson ? { quote: basson.quote, name: formatAuthorWithCredentials(basson), affiliation: basson.affiliation } : null
+              ].filter((t): t is {quote: string; name: string; affiliation: string} => t !== null).map((testimonial, index) => (
                 <div key={index} className="animate-in" style={{
                   backgroundColor: 'rgba(255,255,255,0.05)',
                   borderRadius: '12px',
