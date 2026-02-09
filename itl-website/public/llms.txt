@@ -1,0 +1,54 @@
+# ingenious targeting laboratory
+> Custom mouse model engineering since 1998. Over 2,500 projects completed, 800+ peer reviewed publications.
+
+## About
+ingenious targeting laboratory (iTL) is a leading provider of custom genetically engineered mouse and rat models for biomedical research. Founded in 1998, we specialize in knockout, knockin, humanized, and transgenic models using both ES cell and CRISPR technologies.
+
+## Services
+- Custom knockout mouse models (conditional and conventional)
+- Knockin mouse models (point mutations, reporters, tags)
+- Humanized mouse models (immune checkpoint, disease genes)
+- Transgenic mouse and rat models
+- Colony management and breeding services
+- Cryopreservation and rederivation
+- Genotyping services
+- Phenotyping services
+
+## Technologies
+- Cre/loxP conditional gene targeting
+- Flp/FRT recombination system
+- CRISPR/Cas9 genome editing
+- ES cell gene targeting
+- BAC transgenics
+- Inducible gene expression systems
+
+## Therapeutic Areas
+- Oncology and immuno oncology
+- Neuroscience (Alzheimer's, Parkinson's, ALS)
+- Immunology and autoimmune diseases
+- Cardiovascular disease
+- Metabolic disease (diabetes, obesity, NASH)
+- Rare diseases
+- Ophthalmology
+
+## Catalog Models
+- Humanized immune checkpoint mice (PD1, PDL1, CTLA4, LAG3, TIM3)
+- Reporter mouse models (GFP, tdTomato, LacZ)
+- Disease model catalog
+
+## Strain Backgrounds
+- C57BL/6J and C57BL/6N
+- BALB/c
+- Custom strain backgrounds available
+
+## Contact
+Phone: (631) 468-8530
+Email: inquiry@genetargeting.com
+Website: https://www.genetargeting.com
+Address: 761-80 Coates Avenue, Holbrook, NY 11741
+
+## Quick Links
+- Request a quote: /request-quote
+- Browse catalog models: /catalog-mouse-models
+- Technology overview: /technologies
+- About us: /about-itl

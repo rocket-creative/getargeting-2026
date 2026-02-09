@@ -1,0 +1,50 @@
+{
+  "generated": "2026-02-09T19:44:52.111Z",
+  "domain": "https://www.ingenious.com",
+  "totalUrls": 148,
+  "priorityBreakdown": {
+    "1": 1,
+    "0.9": 3,
+    "0.8": 5,
+    "0.7": 67,
+    "0.6": 72
+  },
+  "topPages": [
+    {
+      "url": "homepage",
+      "priority": 1
+    },
+    {
+      "url": "contact",
+      "priority": 0.9
+    },
+    {
+      "url": "order-catalog-models",
+      "priority": 0.9
+    },
+    {
+      "url": "request-quote",
+      "priority": 0.9
+    },
+    {
+      "url": "custom-mouse-models",
+      "priority": 0.8
+    },
+    {
+      "url": "humanized-mouse-models",
+      "priority": 0.8
+    },
+    {
+      "url": "knockin-mouse-models",
+      "priority": 0.8
+    },
+    {
+      "url": "knockout-mouse-models",
+      "priority": 0.8
+    },
+    {
+      "url": "rat-models",
+      "priority": 0.8
+    }
+  ]
+}

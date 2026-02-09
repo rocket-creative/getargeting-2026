@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "git": {
+    "deploymentEnabled": {
+      "ITL_2026_MAIN": true,
+      "ITL_2026_DEV": true
+    }
+  }
+}

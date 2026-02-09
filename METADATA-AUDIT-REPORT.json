@@ -1,0 +1,1649 @@
+{
+  "summary": {
+    "auditDate": "2026-02-09T19:47:53.150Z",
+    "domain": "https://www.ingenious.com",
+    "oldDomain": "https://www.genetargeting.com",
+    "totalPages": 148,
+    "withMetadata": 5,
+    "withTitle": 5,
+    "withDescription": 5,
+    "withCanonical": 3,
+    "withOG": 3,
+    "wrongCanonical": 0,
+    "titleTooLong": 1,
+    "titleTooShort": 0,
+    "descTooLong": 1,
+    "descTooShort": 0
+  },
+  "criticalIssues": 0,
+  "highPriorityIssues": 145,
+  "pagesWithIssues": [
+    {
+      "page": "/(homepage)",
+      "filePath": "src/app/page.tsx",
+      "issues": [
+        {
+          "severity": "medium",
+          "issue": "Title too long (89 chars)",
+          "value": "Custom Mouse Models | Knockout, Knockin & Humanize...",
+          "fix": "Shorten to 50-60 characters"
+        },
+        {
+          "severity": "high",
+          "issue": "Missing canonical URL",
+          "fix": "Add: alternates: { canonical: 'https://www.ingenious.com/' }"
+        },
+        {
+          "severity": "medium",
+          "issue": "Missing Open Graph tags",
+          "fix": "Add openGraph object with title, description, images"
+        }
+      ]
+    },
+    {
+      "page": "/about-itl",
+      "filePath": "src/app/about-itl/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/all-catalog-mouse-models",
+      "filePath": "src/app/all-catalog-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/allergy-asthma-mouse-models",
+      "filePath": "src/app/allergy-asthma-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/als-mouse-models",
+      "filePath": "src/app/als-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/alzheimers-mouse-models",
+      "filePath": "src/app/alzheimers-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/antibody-therapeutics-mouse-models",
+      "filePath": "src/app/antibody-therapeutics-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/atherosclerosis-mouse-models",
+      "filePath": "src/app/atherosclerosis-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/autism-mouse-models",
+      "filePath": "src/app/autism-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/autoimmune-disease-mice",
+      "filePath": "src/app/autoimmune-disease-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/bac-to-bac-large-scale-targeting",
+      "filePath": "src/app/bac-to-bac-large-scale-targeting/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/backcrossing-services",
+      "filePath": "src/app/backcrossing-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/balbc-mouse-background",
+      "filePath": "src/app/balbc-mouse-background/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/biomarker-discovery-mice",
+      "filePath": "src/app/biomarker-discovery-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/breeding-scheme-architect",
+      "filePath": "src/app/breeding-scheme-architect/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/c57bl6-mouse-background",
+      "filePath": "src/app/c57bl6-mouse-background/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/c57bl6j-vs-c57bl6n",
+      "filePath": "src/app/c57bl6j-vs-c57bl6n/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cardiac-fibrosis-mice",
+      "filePath": "src/app/cardiac-fibrosis-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cardiovascular-mouse-models",
+      "filePath": "src/app/cardiovascular-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/catalog-mouse-models",
+      "filePath": "src/app/catalog-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cdna-knockin",
+      "filePath": "src/app/cdna-knockin/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cell-therapy-mouse-models",
+      "filePath": "src/app/cell-therapy-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/colony-management-services",
+      "filePath": "src/app/colony-management-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/conditional-knockin-mice",
+      "filePath": "src/app/conditional-knockin-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/conditional-knockout-mouse-models",
+      "filePath": "src/app/conditional-knockout-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/conditional-vs-conventional-guide",
+      "filePath": "src/app/conditional-vs-conventional-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/contact",
+      "filePath": "src/app/contact/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/conventional-knockout-mouse-models",
+      "filePath": "src/app/conventional-knockout-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cre-line-selection-guide",
+      "filePath": "src/app/cre-line-selection-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cre-lox-system",
+      "filePath": "src/app/cre-lox-system/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cre-recombinase-mice",
+      "filePath": "src/app/cre-recombinase-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/critical-exon-selection",
+      "filePath": "src/app/critical-exon-selection/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cryopreservation-services",
+      "filePath": "src/app/cryopreservation-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/ctla4-humanized-mice",
+      "filePath": "src/app/ctla4-humanized-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/current-openings",
+      "filePath": "src/app/current-openings/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/custom-animal-models",
+      "filePath": "src/app/custom-animal-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/custom-mouse-models",
+      "filePath": "src/app/custom-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/custom-projects",
+      "filePath": "src/app/custom-projects/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/custom-rabbit-models",
+      "filePath": "src/app/custom-rabbit-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/cystic-fibrosis-mice",
+      "filePath": "src/app/cystic-fibrosis-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/depression-anxiety-mouse-models",
+      "filePath": "src/app/depression-anxiety-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/diabetes-mouse-models",
+      "filePath": "src/app/diabetes-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/disease-model-catalog",
+      "filePath": "src/app/disease-model-catalog/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/double-checkpoint-mice",
+      "filePath": "src/app/double-checkpoint-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/efficacy-testing-mouse-models",
+      "filePath": "src/app/efficacy-testing-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/epilepsy-mouse-models",
+      "filePath": "src/app/epilepsy-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/fast-mice",
+      "filePath": "src/app/fast-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/flag-tag-knockin",
+      "filePath": "src/app/flag-tag-knockin/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/flp-frt-system",
+      "filePath": "src/app/flp-frt-system/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/gene-function-studies",
+      "filePath": "src/app/gene-function-studies/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/gene-replacement",
+      "filePath": "src/app/gene-replacement/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/gene-therapy-mouse-models",
+      "filePath": "src/app/gene-therapy-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/general-contact",
+      "filePath": "src/app/general-contact/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/gfp-knockin-mice",
+      "filePath": "src/app/gfp-knockin-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/glossary",
+      "filePath": "src/app/glossary/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/h11-safe-harbor",
+      "filePath": "src/app/h11-safe-harbor/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/ha-tag-knockin",
+      "filePath": "src/app/ha-tag-knockin/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/heart-failure-mouse-models",
+      "filePath": "src/app/heart-failure-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/hprt-locus-targeting",
+      "filePath": "src/app/hprt-locus-targeting/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/humanization-strategy-guide",
+      "filePath": "src/app/humanization-strategy-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/humanized-immune-checkpoint-mice",
+      "filePath": "src/app/humanized-immune-checkpoint-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/humanized-mouse-models",
+      "filePath": "src/app/humanized-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/huntingtons-mouse-models",
+      "filePath": "src/app/huntingtons-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/hypertension-mouse-models",
+      "filePath": "src/app/hypertension-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/ibd-mouse-models",
+      "filePath": "src/app/ibd-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/immuno-oncology-mouse-models",
+      "filePath": "src/app/immuno-oncology-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/immunology-mouse-models",
+      "filePath": "src/app/immunology-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/inducible-conditional-knockout",
+      "filePath": "src/app/inducible-conditional-knockout/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/inducible-gene-expression",
+      "filePath": "src/app/inducible-gene-expression/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/inducible-rosa26",
+      "filePath": "src/app/inducible-rosa26/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/inflammatory-disease-mice",
+      "filePath": "src/app/inflammatory-disease-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/ingenious-blog",
+      "filePath": "src/app/ingenious-blog/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing canonical URL",
+          "fix": "Add: alternates: { canonical: 'https://www.ingenious.com/ingenious-blog' }"
+        },
+        {
+          "severity": "medium",
+          "issue": "Missing Open Graph tags",
+          "fix": "Add openGraph object with title, description, images"
+        }
+      ]
+    },
+    {
+      "page": "/knockin-mouse-models",
+      "filePath": "src/app/knockin-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/knockin-rat-models",
+      "filePath": "src/app/knockin-rat-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/knockout-first-allele",
+      "filePath": "src/app/knockout-first-allele/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/knockout-mouse-models",
+      "filePath": "src/app/knockout-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/knockout-rat-models",
+      "filePath": "src/app/knockout-rat-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/knockout-strategy-guide",
+      "filePath": "src/app/knockout-strategy-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/lab-signals",
+      "filePath": "src/app/lab-signals/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/lacz-knockin-mice",
+      "filePath": "src/app/lacz-knockin-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/lag3-humanized-mice",
+      "filePath": "src/app/lag3-humanized-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/lineage-tracing-mouse-models",
+      "filePath": "src/app/lineage-tracing-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/loxp-site-design",
+      "filePath": "src/app/loxp-site-design/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/lupus-mouse-models",
+      "filePath": "src/app/lupus-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/metabolic-disease-mouse-models",
+      "filePath": "src/app/metabolic-disease-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/mouse-genotyping-service",
+      "filePath": "src/app/mouse-genotyping-service/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/mouse-model-generation-guide",
+      "filePath": "src/app/mouse-model-generation-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/mouse-model-services",
+      "filePath": "src/app/mouse-model-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/mouse-strain-backgrounds",
+      "filePath": "src/app/mouse-strain-backgrounds/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/muscular-dystrophy-mouse-models",
+      "filePath": "src/app/muscular-dystrophy-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/nash-mash-mouse-models",
+      "filePath": "src/app/nash-mash-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/neuroscience-mouse-models",
+      "filePath": "src/app/neuroscience-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/obesity-mouse-models",
+      "filePath": "src/app/obesity-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/oncology-mouse-models",
+      "filePath": "src/app/oncology-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/ophthalmology-mouse-models",
+      "filePath": "src/app/ophthalmology-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/order-catalog-models",
+      "filePath": "src/app/order-catalog-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/order-inquiry-catalog-models",
+      "filePath": "src/app/order-inquiry-catalog-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/parkinsons-mouse-models",
+      "filePath": "src/app/parkinsons-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/pathway-analysis-mice",
+      "filePath": "src/app/pathway-analysis-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/pd1-humanized-mice",
+      "filePath": "src/app/pd1-humanized-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/pdl1-humanized-mice",
+      "filePath": "src/app/pdl1-humanized-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/phenotyping-services",
+      "filePath": "src/app/phenotyping-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/point-mutation-mice",
+      "filePath": "src/app/point-mutation-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/post-project-services",
+      "filePath": "src/app/post-project-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/preclinical-services",
+      "filePath": "src/app/preclinical-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/publications",
+      "filePath": "src/app/publications/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rapid-rosa26-targeting",
+      "filePath": "src/app/rapid-rosa26-targeting/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rare-disease-mouse-models",
+      "filePath": "src/app/rare-disease-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rat-models",
+      "filePath": "src/app/rat-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rederivation-services",
+      "filePath": "src/app/rederivation-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/reporter-knockin",
+      "filePath": "src/app/reporter-knockin/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/reporter-mouse-catalog",
+      "filePath": "src/app/reporter-mouse-catalog/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/reporter-selection-guide",
+      "filePath": "src/app/reporter-selection-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/request-quote",
+      "filePath": "src/app/request-quote/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/research-applications",
+      "filePath": "src/app/research-applications/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/resources",
+      "filePath": "src/app/resources/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rheumatoid-arthritis-mice",
+      "filePath": "src/app/rheumatoid-arthritis-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/rosa26",
+      "filePath": "src/app/rosa26/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/safe-harbor-locus",
+      "filePath": "src/app/safe-harbor-locus/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/schedule-meeting",
+      "filePath": "src/app/schedule-meeting/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/search",
+      "filePath": "src/app/search/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/single-checkpoint-mice",
+      "filePath": "src/app/single-checkpoint-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/speed-expansion-breeding",
+      "filePath": "src/app/speed-expansion-breeding/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/start-your-project",
+      "filePath": "src/app/start-your-project/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/strain-selection-guide",
+      "filePath": "src/app/strain-selection-guide/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/support-services",
+      "filePath": "src/app/support-services/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/syngeneic-tumor-models",
+      "filePath": "src/app/syngeneic-tumor-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tag-knockin-mice",
+      "filePath": "src/app/tag-knockin-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tamoxifen-inducible-cre",
+      "filePath": "src/app/tamoxifen-inducible-cre/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/target-validation-mouse-models",
+      "filePath": "src/app/target-validation-mouse-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tdtomato-knockin-mice",
+      "filePath": "src/app/tdtomato-knockin-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/technologies",
+      "filePath": "src/app/technologies/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/technology-overview",
+      "filePath": "src/app/technology-overview/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/terms",
+      "filePath": "src/app/terms/page.tsx",
+      "issues": [
+        {
+          "severity": "low",
+          "issue": "Description too long (161 chars)",
+          "value": "Terms and conditions for using the ingenious targeting laboratory website and services. Read about a...",
+          "fix": "Shorten to 150-160 characters"
+        }
+      ]
+    },
+    {
+      "page": "/testimonials",
+      "filePath": "src/app/testimonials/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/therapeutic-areas",
+      "filePath": "src/app/therapeutic-areas/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tim3-humanized-mice",
+      "filePath": "src/app/tim3-humanized-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tissue-specific-cre-lines",
+      "filePath": "src/app/tissue-specific-cre-lines/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tissue-specific-knockout",
+      "filePath": "src/app/tissue-specific-knockout/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/transgenic-mouse-service",
+      "filePath": "src/app/transgenic-mouse-service/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/transgenic-rat-models",
+      "filePath": "src/app/transgenic-rat-models/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/tumor-suppressor-knockout-mice",
+      "filePath": "src/app/tumor-suppressor-knockout-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/type-1-diabetes-mice",
+      "filePath": "src/app/type-1-diabetes-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/type-2-diabetes-mice",
+      "filePath": "src/app/type-2-diabetes-mice/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/video-library",
+      "filePath": "src/app/video-library/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    },
+    {
+      "page": "/why-choose-itl",
+      "filePath": "src/app/why-choose-itl/page.tsx",
+      "issues": [
+        {
+          "severity": "high",
+          "issue": "Missing metadata export",
+          "fix": "Add: export const metadata: Metadata = { ... }"
+        }
+      ]
+    }
+  ],
+  "pagesPassed": [
+    "/accessibility",
+    "/privacy"
+  ]
+}
