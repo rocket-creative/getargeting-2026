@@ -12,6 +12,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -222,6 +223,9 @@ export default function HypertensionMouseModelsPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -279,9 +283,19 @@ export default function HypertensionMouseModelsPage() {
           </section>
         )}
 
+        {/* Lab Signals Signup */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              title="Stay Updated on Hypertension Research Models"
+              description="Get the latest insights on blood pressure regulation, renin angiotensin system, and cardiovascular therapeutics."
+            />
+          </div>
+        </section>
+
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
-          <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 600, marginBottom: '30px', textAlign: 'center' }}>
                 Related resources

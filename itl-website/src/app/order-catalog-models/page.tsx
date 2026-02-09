@@ -298,75 +298,10 @@ export default function OrderInquiryCatalogModelsPage() {
             </p>
           </div>
 
-          {/* Two Column Layout: Form + Sidebar */}
+          {/* Two Column Layout: Sidebar + Form */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-            {/* ===== MAIN FORM ===== */}
-            <div className="lg:col-span-2 flex">
-              <div
-                style={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '28px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-                  width: '100%',
-                }}
-              >
-                {showCatalogSearch && (
-                  <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
-                    <CatalogSearch maxResults={5} showTitle={false} />
-                    <button
-                      onClick={() => setShowCatalogSearch(false)}
-                      style={{
-                        marginTop: '12px',
-                        padding: '6px 12px',
-                        backgroundColor: '#f3f4f6',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '.75rem',
-                        color: '#008080',
-                        fontWeight: 500,
-                      }}
-                    >
-                      Hide Search
-                    </button>
-                  </div>
-                )}
-                <CustomHubSpotForm
-                  portalId="242707"
-                  formGuid="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
-                  fields={catalogFormFields}
-                  submitButtonText="Submit Order Inquiry"
-                  successMessage="Thank you! Your catalog model inquiry has been submitted. Our team will contact you within 1-2 business days with availability and pricing."
-                  errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
-                />
-                <button
-                  onClick={() => setShowCatalogSearch(!showCatalogSearch)}
-                  style={{
-                    marginTop: '16px',
-                    width: '100%',
-                    padding: '10px',
-                    backgroundColor: '#f3f4f6',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '6px',
-                    cursor: 'pointer',
-                    fontSize: '.85rem',
-                    color: '#008080',
-                    fontWeight: 500,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '8px',
-                  }}
-                >
-                  <IconSearch size={14} />
-                  {showCatalogSearch ? 'Hide' : 'Search'} Catalog
-                </button>
-              </div>
-            </div>
-
-            {/* ===== SIDEBAR ===== */}
-            <div className="lg:col-span-1 flex flex-col gap-4">
+            {/* ===== SIDEBAR (LEFT) ===== */}
+            <div className="lg:col-span-1 flex flex-col gap-4 order-2 lg:order-1">
               {/* Order Process */}
               <div
                 style={{
@@ -414,7 +349,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {[
-                    { step: '1', label: '1-2 Days', desc: 'Availability check & pricing' },
+                    { step: '1', label: '1 Day', desc: 'Availability check & pricing' },
                     { step: '2', label: 'Confirm', desc: 'MTA/order confirmation' },
                     { step: '3', label: 'Delivery', desc: 'Preparation & shipping' },
                   ].map((item, i) => (
@@ -512,6 +447,71 @@ export default function OrderInquiryCatalogModelsPage() {
                 </div>
               </Link>
             </div>
+
+            {/* ===== MAIN FORM (RIGHT) ===== */}
+            <div className="lg:col-span-2 flex order-1 lg:order-2">
+              <div
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  padding: '28px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                  width: '100%',
+                }}
+              >
+                {showCatalogSearch && (
+                  <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <CatalogSearch maxResults={5} showTitle={false} />
+                    <button
+                      onClick={() => setShowCatalogSearch(false)}
+                      style={{
+                        marginTop: '12px',
+                        padding: '6px 12px',
+                        backgroundColor: '#f3f4f6',
+                        border: '1px solid #e5e7eb',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontSize: '.75rem',
+                        color: '#008080',
+                        fontWeight: 500,
+                      }}
+                    >
+                      Hide Search
+                    </button>
+                  </div>
+                )}
+                <CustomHubSpotForm
+                  portalId="242707"
+                  formGuid="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                  fields={catalogFormFields}
+                  submitButtonText="Submit Order Inquiry"
+                  successMessage="Thank you! Your catalog model inquiry has been submitted. Our team will contact you within 1 business day with availability and pricing."
+                  errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
+                />
+                <button
+                  onClick={() => setShowCatalogSearch(!showCatalogSearch)}
+                  style={{
+                    marginTop: '16px',
+                    width: '100%',
+                    padding: '10px',
+                    backgroundColor: '#f3f4f6',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontSize: '.85rem',
+                    color: '#008080',
+                    fontWeight: 500,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                  }}
+                >
+                  <IconSearch size={14} />
+                  {showCatalogSearch ? 'Hide' : 'Search'} Catalog
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -588,7 +588,7 @@ export default function OrderInquiryCatalogModelsPage() {
       <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="#f8fafc" />
 
       {/* ========== ALTERNATIVE CONTACT OPTIONS ========== */}
-      <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
+      <section style={{ backgroundColor: '#f8f9fa', padding: '50px 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2
             className="animate-in text-center"

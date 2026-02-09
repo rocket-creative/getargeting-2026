@@ -8,7 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -581,7 +581,7 @@ export default function TransgenicMouseServicePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -684,8 +684,11 @@ export default function TransgenicMouseServicePage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"

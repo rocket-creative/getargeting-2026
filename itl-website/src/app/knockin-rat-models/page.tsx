@@ -12,6 +12,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -216,6 +217,9 @@ export default function KnockinRatModelsPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -272,6 +276,12 @@ export default function KnockinRatModelsPage() {
             </div>
           </section>
         )}
+
+        {/* Lab Signals Signup */}
+        <LabSignalsSignup 
+          title="Track Your Knockin Rat Model Progress"
+          description="Receive updates on your humanized or point mutation knockin rat model, including targeting validation, expression analysis, and phenotype characterization."
+        />
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (

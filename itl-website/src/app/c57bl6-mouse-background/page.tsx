@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -891,6 +892,9 @@ export default function C57BL6MouseBackgroundPage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ background: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -947,7 +951,7 @@ export default function C57BL6MouseBackgroundPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -965,8 +969,14 @@ export default function C57BL6MouseBackgroundPage() {
           </div>
         </section>
 
+        {/* Lab Signals Signup */}
+        <LabSignalsSignup 
+          title="Track Your C57BL/6 Model Progress"
+          description="Stay informed with real-time updates on your strain background selection, substrain considerations, and backcrossing milestones throughout your project."
+        />
+
         {/* Related Links Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               <div className="animate-in">

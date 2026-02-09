@@ -21,6 +21,7 @@ import {
   LabSignalsSignup,
   getRelatedLabSignalsArticles,
   GlossaryTermLink,
+  BreedingSchemeArchitectCTA,
   IconDNA,
   IconTarget,
   IconSettings,
@@ -716,8 +717,11 @@ export default function KnockinMouseModelsPage() {
           ]}
         />
 
+        {/* ========== BREEDING SCHEME ARCHITECT CTA ========== */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* ========== LAB SIGNALS NEWSLETTER ========== */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"
@@ -740,7 +744,7 @@ export default function KnockinMouseModelsPage() {
         <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={getFaqData()} backgroundColor="white" />
 
         {/* ========== RELATED LINKS ========== */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="animate-in">

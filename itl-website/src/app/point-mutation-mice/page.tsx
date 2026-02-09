@@ -8,7 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup, { getRelatedLabSignalsArticles } from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, pointMutationResources } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, pointMutationResources, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -788,7 +788,7 @@ export default function PointMutationMicePage() {
         </section>
 
         {/* Downloadable Resources Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Point Mutation Resources"
@@ -799,8 +799,11 @@ export default function PointMutationMicePage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"

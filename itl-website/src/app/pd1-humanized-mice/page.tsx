@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -835,6 +836,9 @@ export default function PD1HumanizedMicePage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ background: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -909,8 +913,18 @@ export default function PD1HumanizedMicePage() {
           </div>
         </section>
 
+        {/* Lab Signals Signup */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              title="Stay Updated on Checkpoint Immunotherapy Models"
+              description="Get the latest insights on PD1 humanization and immuno oncology research."
+            />
+          </div>
+        </section>
+
         {/* Related Links Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               <div className="animate-in">

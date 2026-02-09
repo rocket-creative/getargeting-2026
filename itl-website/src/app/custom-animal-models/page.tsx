@@ -285,7 +285,7 @@ export default function CustomAnimalModelsPage() {
         <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="#f7f7f7" />
 
         {/* Related Links */}
-        <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '50px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <h3
               className="animate-in text-center"

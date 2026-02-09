@@ -813,7 +813,7 @@ export default function CreLineSelectionGuidePage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -832,7 +832,7 @@ export default function CreLineSelectionGuidePage() {
         </section>
 
         {/* Related Links Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
               <div className="animate-in">

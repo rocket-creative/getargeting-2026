@@ -14,6 +14,8 @@ import {
   UXUIDCStartProjectCTA,
   IconDNA,
   IconArrowRight,
+  BreedingSchemeArchitectCTA,
+  LabSignalsSignup,
 } from '@/components/UXUIDC';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -231,6 +233,9 @@ export default function InducibleRosa26Page() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* Related Links */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -284,6 +289,16 @@ export default function InducibleRosa26Page() {
             { label: 'Contact Us', href: '/contact' },
           ]}
         />
+
+        {/* Lab Signals Signup */}
+        <section style={{ backgroundColor: '#ffffff', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              title="Stay Updated on Rosa26 and Inducible Expression Technologies"
+              description="Get the latest insights on safe harbor targeting, temporal control systems, and advanced gene targeting strategies."
+            />
+          </div>
+        </section>
       </main>
 
       <UXUIDCFooter />

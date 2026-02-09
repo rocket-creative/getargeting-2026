@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
+import { LabSignalsSignup, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -663,7 +663,7 @@ export default function CustomMouseModelsPage() {
         <TestimonialsSection testimonials={testimonialsData} variant="light" />
 
         {/* Publications Section - 3 cards grid */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <h2 style={{
               fontFamily: 'Poppins, sans-serif',
@@ -790,8 +790,11 @@ export default function CustomMouseModelsPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"

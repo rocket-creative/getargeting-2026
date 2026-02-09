@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   title: 'Terms of Service | ingenious targeting laboratory',
   description: 'Terms and conditions for using the ingenious targeting laboratory website and services. Read about acceptable use, intellectual property, and service agreements.',
   alternates: {
-    canonical: 'https://www.genetargeting.com/terms',
+    canonical: 'https://www.ingenious.com/terms',
   },
   openGraph: {
     title: 'Terms of Service | ingenious targeting laboratory',
     description: 'Terms and conditions for using our website and services.',
-    url: 'https://www.genetargeting.com/terms',
+    url: 'https://www.ingenious.com/terms',
     siteName: 'ingenious targeting laboratory',
     locale: 'en_US',
     type: 'website',

@@ -108,8 +108,8 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Contact Method Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Contact Method Cards - 2x2 Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Card 1: Request a Quote */}
               <Link
                 href="/request-quote"
@@ -231,9 +231,9 @@ export default function ContactPage() {
                 </div>
               </Link>
 
-              {/* Card 3: General Inquiry */}
+              {/* Card 3: Join Our Team */}
               <Link
-                href="/general-contact"
+                href="/current-openings"
                 className="hero-animate group"
                 style={{
                   backgroundColor: 'white',
@@ -249,14 +249,14 @@ export default function ContactPage() {
                 <div style={{
                   width: '56px',
                   height: '56px',
-                  backgroundColor: '#008080',
+                  backgroundColor: '#0a253c',
                   borderRadius: '10px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: '20px',
                 }}>
-                  <IconMail size={28} color="white" />
+                  <IconBriefcase size={28} color="white" />
                 </div>
                 <h3 style={{
                   color: '#0a253c',
@@ -265,7 +265,7 @@ export default function ContactPage() {
                   fontWeight: 600,
                   marginBottom: '10px',
                 }}>
-                  Send a Message
+                  Join Our Team
                 </h3>
                 <p style={{
                   color: '#666',
@@ -275,7 +275,67 @@ export default function ContactPage() {
                   marginBottom: '20px',
                   flex: 1,
                 }}>
-                  Have a general question or inquiry? Send us a detailed message and our team will respond within 1 business day.
+                  Interested in working at the forefront of genetic engineering? View current openings at ingenious targeting laboratory.
+                </p>
+                <div 
+                  className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
+                  style={{ 
+                    color: '#008080',
+                    fontFamily: 'var(--system-ui)',
+                    fontSize: '.9rem',
+                    fontWeight: 600,
+                  }}
+                >
+                  <span>View openings</span>
+                  <IconArrowRight size={16} />
+                </div>
+              </Link>
+
+              {/* Card 4: Partnership Inquiries */}
+              <a
+                href={`mailto:${contactInfo.email}?subject=Partnership Inquiry`}
+                className="hero-animate group"
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  padding: '32px',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'all 0.3s',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                }}
+              >
+                <div style={{
+                  width: '56px',
+                  height: '56px',
+                  backgroundColor: '#0a253c',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                }}>
+                  <IconPackage size={28} color="white" />
+                </div>
+                <h3 style={{
+                  color: '#0a253c',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  marginBottom: '10px',
+                }}>
+                  Partnership Inquiries
+                </h3>
+                <p style={{
+                  color: '#666',
+                  fontFamily: 'var(--system-ui)',
+                  fontSize: '.95rem',
+                  lineHeight: '1.6',
+                  marginBottom: '20px',
+                  flex: 1,
+                }}>
+                  Academic core facilities, CROs, and pharma/biotech companies looking to collaborate with ingenious.
                 </p>
                 <div 
                   className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
@@ -289,8 +349,70 @@ export default function ContactPage() {
                   <span>Contact us</span>
                   <IconArrowRight size={16} />
                 </div>
-              </Link>
+              </a>
             </div>
+
+            {/* General Inquiry - Full Width */}
+            <Link
+              href="/general-contact"
+              className="hero-animate group block mt-6"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '12px',
+                padding: '24px 32px',
+                textDecoration: 'none',
+                border: '1px solid rgba(255,255,255,0.2)',
+                transition: 'all 0.3s',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    backgroundColor: '#008080',
+                    borderRadius: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <IconMail size={24} color="white" />
+                  </div>
+                  <div>
+                    <h3 style={{
+                      color: 'white',
+                      fontFamily: 'Poppins, sans-serif',
+                      fontSize: '1.1rem',
+                      fontWeight: 600,
+                      marginBottom: '4px',
+                    }}>
+                      General Inquiry
+                    </h3>
+                    <p style={{
+                      color: 'rgba(255,255,255,0.8)',
+                      fontFamily: 'var(--system-ui)',
+                      fontSize: '.9rem',
+                      margin: 0,
+                    }}>
+                      Have a question? Send us a message and we&apos;ll respond within 1 business day.
+                    </p>
+                  </div>
+                </div>
+                <div 
+                  className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
+                  style={{ 
+                    color: '#00d4d4',
+                    fontFamily: 'var(--system-ui)',
+                    fontSize: '.9rem',
+                    fontWeight: 600,
+                  }}
+                >
+                  <span>Send message</span>
+                  <IconArrowRight size={16} />
+                </div>
+              </div>
+            </Link>
 
             {/* Direct Contact Info */}
             <div className="hero-animate" style={{
@@ -341,292 +463,92 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ========== ADDITIONAL INFO ========== */}
+        {/* ========== CONTACT INFO SECTION ========== */}
         <section ref={contentRef} style={{ padding: '50px 20px', backgroundColor: '#f8fafc' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Sidebar Content */}
-              <div className="lg:col-span-1 space-y-5">
-                {/* Contact Info Card */}
-                <div className="animate-in" style={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '24px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
-                }}>
-                  <h3 style={{
-                    color: '#0a253c',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    marginBottom: '16px',
-                  }}>
-                    Contact Information
-                  </h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <IconMail size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
-                      <div>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Email</p>
-                        <a href={`mailto:${contactInfo.email}`} style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', textDecoration: 'none' }}>
-                          {contactInfo.email}
-                        </a>
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <IconPhone size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
-                      <div>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Phone</p>
-                        <a href={`tel:${contactInfo.phone.replace(/[^\d+]/g, '')}`} style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', textDecoration: 'none' }}>
-                          {contactInfo.phone}
-                        </a>
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <IconClock size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
-                      <div>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Hours</p>
-                        <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                          {contactInfo.hours}
-                        </p>
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <IconMapPin size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
-                      <div>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Address</p>
-                        <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.4' }}>
-                          {contactInfo.address.line2}<br />
-                          {contactInfo.address.line3}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Quick Links Card */}
-                <div className="animate-in" style={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '24px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
-                }}>
-                  <h3 style={{
-                    color: '#0a253c',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    marginBottom: '16px',
-                  }}>
-                    Quick Links
-                  </h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    <Link href="/request-quote" style={{
-                      display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 14px',
-                      backgroundColor: '#f8fafc', borderRadius: '8px', textDecoration: 'none', transition: 'all 0.2s',
-                    }} className="hover:bg-gray-100">
-                      <IconFileText size={18} color="#008080" />
-                      <div>
-                        <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
-                          Request a Quote
-                        </p>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                          Get project pricing
-                        </p>
-                      </div>
-                    </Link>
-                    <Link href="/schedule-meeting" style={{
-                      display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 14px',
-                      backgroundColor: '#f8fafc', borderRadius: '8px', textDecoration: 'none', transition: 'all 0.2s',
-                    }} className="hover:bg-gray-100">
-                      <IconCalendar size={18} color="#008080" />
-                      <div>
-                        <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
-                          Schedule a Meeting
-                        </p>
-                        <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                          Book a consultation
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Response Time Card */}
-                <div className="animate-in" style={{
-                  backgroundColor: '#0a253c',
-                  borderRadius: '12px',
-                  padding: '20px',
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <IconCheckCircle size={20} color="#00d4d4" style={{ marginTop: '2px', flexShrink: 0 }} />
-                    <div>
-                      <p style={{ color: 'white', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: '0 0 4px 0' }}>
-                        Fast Response
-                      </p>
-                      <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.4' }}>
-                        We typically respond to inquiries within 1 business day.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Additional Quick Links */}
-              <div className="lg:col-span-2">
-                <div className="animate-in" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
-                  <Link href="/request-quote" style={{
-                    display: 'flex', alignItems: 'center', gap: '10px', padding: '20px',
-                    backgroundColor: 'white', borderRadius: '8px', textDecoration: 'none',
-                    border: '1px solid #e5e7eb', transition: 'all 0.2s',
-                  }} className="hover:shadow-md hover:-translate-y-1">
-                    <IconFileText size={24} color="#008080" />
-                    <div>
-                      <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
-                        Request a Quote
-                      </p>
-                      <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                        Get project pricing
-                      </p>
-                    </div>
-                  </Link>
-                  <Link href="/schedule-meeting" style={{
-                    display: 'flex', alignItems: 'center', gap: '10px', padding: '20px',
-                    backgroundColor: 'white', borderRadius: '8px', textDecoration: 'none',
-                    border: '1px solid #e5e7eb', transition: 'all 0.2s',
-                  }} className="hover:shadow-md hover:-translate-y-1">
-                    <IconCalendar size={24} color="#008080" />
-                    <div>
-                      <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
-                        Schedule a Meeting
-                      </p>
-                      <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                        Book a consultation
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== CAREERS & PARTNERSHIPS ========== */}
-        <section style={{ backgroundColor: '#f8fafc', padding: '60px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Careers */}
-              <div 
-                className="animate-in"
-                style={{
-                  backgroundColor: 'white',
-                  padding: '32px',
-                  borderRadius: '12px',
-                  border: '1px solid #e5e7eb',
-                }}
-              >
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  backgroundColor: '#0a253c',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '16px',
-                }}>
-                  <IconBriefcase size={28} color="white" />
-                </div>
+              {/* Contact Info Card */}
+              <div className="animate-in" style={{
+                backgroundColor: 'white',
+                borderRadius: '12px',
+                padding: '28px',
+                boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+              }}>
                 <h3 style={{
-                  color: '#333',
+                  color: '#0a253c',
                   fontFamily: 'Poppins, sans-serif',
-                  fontSize: '1.25rem',
+                  fontSize: '1.1rem',
                   fontWeight: 600,
-                  marginBottom: '10px',
-                }}>
-                  Join Our Team
-                </h3>
-                <p style={{
-                  color: '#666',
-                  fontFamily: 'var(--system-ui)',
-                  fontSize: '.9rem',
-                  lineHeight: '1.6',
                   marginBottom: '20px',
                 }}>
-                  Interested in working at the forefront of genetic engineering? View current openings at ingenious targeting laboratory.
-                </p>
-                <Link
-                  href="/current-openings"
-                  className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    color: '#008080',
-                    fontFamily: 'var(--system-ui)',
-                    fontSize: '.9rem',
-                    fontWeight: 600,
-                  }}
-                >
-                  <span>View Openings</span>
-                  <IconArrowRight size={16} />
-                </Link>
+                  Contact Information
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <IconMail size={20} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ color: '#666', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Email</p>
+                      <a href={`mailto:${contactInfo.email}`} style={{ color: '#0a253c', fontSize: '.95rem', fontFamily: 'var(--system-ui)', textDecoration: 'none', fontWeight: 500 }}>
+                        {contactInfo.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <IconPhone size={20} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ color: '#666', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Phone</p>
+                      <a href={`tel:${contactInfo.phone.replace(/[^\d+]/g, '')}`} style={{ color: '#0a253c', fontSize: '.95rem', fontFamily: 'var(--system-ui)', textDecoration: 'none', fontWeight: 500 }}>
+                        {contactInfo.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <IconClock size={20} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ color: '#666', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Hours</p>
+                      <p style={{ color: '#0a253c', fontSize: '.95rem', fontFamily: 'var(--system-ui)', margin: 0, fontWeight: 500 }}>
+                        {contactInfo.hours}
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <IconMapPin size={20} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ color: '#666', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Address</p>
+                      <p style={{ color: '#0a253c', fontSize: '.95rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.5', fontWeight: 500 }}>
+                        {contactInfo.address.line2}<br />
+                        {contactInfo.address.line3}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Partnerships */}
-              <div 
-                className="animate-in"
-                style={{
-                  backgroundColor: 'white',
-                  padding: '32px',
-                  borderRadius: '12px',
-                  border: '1px solid #e5e7eb',
-                }}
-              >
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  backgroundColor: '#0a253c',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '16px',
-                }}>
-                  <IconPackage size={28} color="white" />
+              {/* Response Time Card */}
+              <div className="animate-in" style={{
+                backgroundColor: '#0a253c',
+                borderRadius: '12px',
+                padding: '28px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                  <IconCheckCircle size={24} color="#00d4d4" style={{ marginTop: '2px', flexShrink: 0 }} />
+                  <div>
+                    <p style={{ color: 'white', fontSize: '1.1rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: '0 0 8px 0' }}>
+                      Fast Response Guaranteed
+                    </p>
+                    <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.6' }}>
+                      We typically respond to all inquiries within 1 business day. Our scientific consultants are available Monday through Friday, 9 AM to 5 PM ET.
+                    </p>
+                  </div>
                 </div>
-                <h3 style={{
-                  color: '#333',
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '1.25rem',
-                  fontWeight: 600,
-                  marginBottom: '10px',
-                }}>
-                  Partnership Inquiries
-                </h3>
-                <p style={{
-                  color: '#666',
-                  fontFamily: 'var(--system-ui)',
-                  fontSize: '.9rem',
-                  lineHeight: '1.6',
-                  marginBottom: '20px',
-                }}>
-                  Academic core facilities, CROs, and pharma/biotech companies looking to collaborate.
-                </p>
-                <a
-                  href={`mailto:${contactInfo.email}?subject=Partnership Inquiry`}
-                  className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    color: '#008080',
-                    fontFamily: 'var(--system-ui)',
-                    fontSize: '.9rem',
-                    fontWeight: 600,
-                  }}
-                >
-                  <span>Contact us</span>
-                  <IconArrowRight size={16} />
-                </a>
               </div>
             </div>
           </div>
         </section>
+
       </main>
       
       <UXUIDCFooter />

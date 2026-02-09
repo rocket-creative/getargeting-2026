@@ -25,6 +25,7 @@ import {
   LabSignalsSignup,
   getRelatedLabSignalsArticles,
   GlossaryTermLink,
+  BreedingSchemeArchitectCTA,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -889,7 +890,7 @@ export default function KnockoutMouseModelsPage() {
         />
 
         {/* ========== DOWNLOADABLE RESOURCES ========== */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Knockout Resources & Tools"
@@ -899,6 +900,9 @@ export default function KnockoutMouseModelsPage() {
             />
           </div>
         </section>
+
+        {/* ========== BREEDING SCHEME ARCHITECT CTA ========== */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
 
         {/* ========== LAB SIGNALS NEWSLETTER ========== */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>

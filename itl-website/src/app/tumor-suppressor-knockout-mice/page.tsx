@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -505,6 +506,9 @@ export default function TumorSuppressorKnockoutMicePage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -559,6 +563,12 @@ export default function TumorSuppressorKnockoutMicePage() {
             </div>
           </div>
         </section>
+
+        {/* Lab Signals Signup */}
+        <LabSignalsSignup 
+          title="Monitor Your Tumor Suppressor Knockout Project"
+          description="Receive updates on your p53, PTEN, or other tumor suppressor knockout model development, including genotype validation and tumor phenotype characterization."
+        />
 
         {/* Related Links Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>

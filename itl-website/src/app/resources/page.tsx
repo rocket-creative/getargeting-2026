@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
+import { LabSignalsSignup, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
 import { IconChevronRight, IconCheckCircle, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -78,21 +78,7 @@ const strategyGuidesData = {
 const planningGuidesData = {
   title: "Planning Guides",
   guides: [
-    {
-      href: "/pricing-overview",
-      title: "Project Planning Overview",
-      description: "Comprehensive guide to mouse model generation including timeline considerations, budget planning, and project phases from design through delivery."
-    },
-    {
-      href: "/mouse-model-budgeting-guide",
-      title: "Mouse Model Budgeting Guide",
-      description: "Comprehensive guide to project costs including targeting vector, ES cell targeting, microinjection, breeding, and ongoing colony maintenance considerations."
-    },
-    {
-      href: "/bench-to-breeding-guide",
-      title: "Bench to Breeding Guide",
-      description: "End to end overview of the mouse model generation process including decision points, deliverables, and what to expect at each project phase."
-    }
+    // Planning guides to be added in future
   ]
 };
 
@@ -462,17 +448,18 @@ export default function ResourcesPage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'rgba(255,255,255,0.2)',
-                border: '1px solid rgba(255,255,255,0.4)',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                border: '1px solid rgba(255,215,0,0.5)',
                 borderRadius: '20px',
                 padding: '8px 16px',
-                marginBottom: '20px'
+                marginBottom: '20px',
+                boxShadow: '0 4px 15px rgba(255,215,0,0.3)'
               }}>
-                <IconSparkle size={16} color="#ffffff" />
+                <IconSparkle size={16} color="#000000" />
                 <span style={{ 
-                  color: '#ffffff', 
+                  color: '#000000', 
                   fontSize: '.9rem', 
-                  fontWeight: 600,
+                  fontWeight: 700,
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px'
                 }}>
@@ -551,7 +538,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Downloadable Resources Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in" style={{ textAlign: 'center', marginBottom: '40px' }}>
               <div style={{
@@ -763,7 +750,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Selection Guides Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -838,61 +825,65 @@ export default function ResourcesPage() {
             </div>
 
             {/* Planning Guides */}
-            <h3 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.3rem',
-              fontWeight: 600,
-              color: '#333',
-              marginBottom: '24px'
-            }}>
-              {planningGuidesData.title}
-            </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
-              {planningGuidesData.guides.map((guide, index) => (
-                <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
-                  display: 'block',
-                  background: '#ffffff',
-                  borderRadius: '8px',
-                  padding: '24px',
-                  borderTop: '4px solid #134978',
-                  textDecoration: 'none'
+            {planningGuidesData.guides.length > 0 && (
+              <>
+                <h3 className="animate-in" style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '1.3rem',
+                  fontWeight: 600,
+                  color: '#333',
+                  marginBottom: '24px'
                 }}>
-                  <h4 style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    color: '#333',
-                    marginBottom: '10px'
-                  }}>
-                    {guide.title}
-                  </h4>
-                  <p style={{
-                    fontSize: '.85rem',
-                    color: '#666',
-                    lineHeight: 1.6,
-                    marginBottom: '12px'
-                  }}>
-                    {guide.description}
-                  </p>
-                  <span style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    fontSize: '.85rem',
-                    fontWeight: 600,
-                    color: '#134978'
-                  }}>
-                    Read Guide
-                    <IconChevronRight size={14} color="#134978" />
-                  </span>
-                </Link>
-              ))}
-            </div>
+                  {planningGuidesData.title}
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+                  {planningGuidesData.guides.map((guide, index) => (
+                    <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
+                      display: 'block',
+                      background: '#ffffff',
+                      borderRadius: '8px',
+                      padding: '24px',
+                      borderTop: '4px solid #134978',
+                      textDecoration: 'none'
+                    }}>
+                      <h4 style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '1rem',
+                        fontWeight: 600,
+                        color: '#333',
+                        marginBottom: '10px'
+                      }}>
+                        {guide.title}
+                      </h4>
+                      <p style={{
+                        fontSize: '.85rem',
+                        color: '#666',
+                        lineHeight: 1.6,
+                        marginBottom: '12px'
+                      }}>
+                        {guide.description}
+                      </p>
+                      <span style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        fontSize: '.85rem',
+                        fontWeight: 600,
+                        color: '#134978'
+                      }}>
+                        Read Guide
+                        <IconChevronRight size={14} color="#134978" />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
 
         {/* Technical Resources Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -955,7 +946,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="animate-in" style={{
               background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
@@ -1222,8 +1213,11 @@ export default function ResourcesPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* Lab Signals Newsletter CTA */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"
@@ -1234,7 +1228,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -1253,7 +1247,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Related Services Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',

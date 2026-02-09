@@ -8,6 +8,8 @@ import {
   LegacyInfoLink,
   UXUIDCResourceLinks,
   ratModelResources,
+  BreedingSchemeArchitectCTA,
+  LabSignalsSignup,
 } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -307,6 +309,9 @@ export default function RatModelsPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -334,6 +339,12 @@ export default function RatModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* Lab Signals Signup */}
+        <LabSignalsSignup 
+          title="Track Your Custom Rat Model Project"
+          description="Get real-time updates on your knockout, knockin, or conditional rat model development including germline transmission and phenotype validation milestones."
+        />
 
         {/* Legacy Content Link */}
         <section style={{ backgroundColor: '#e8f5f5', padding: '30px 20px', borderTop: '3px solid #008080' }}>
@@ -363,7 +374,7 @@ export default function RatModelsPage() {
         </section>
 
         {/* Related Links */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '40px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '20px' }}>
               Related Services

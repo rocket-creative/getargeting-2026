@@ -8,6 +8,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -350,7 +351,7 @@ export default function DiseaseModelCatalogPage() {
         </section>
 
         {/* Catalog Categories Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -416,7 +417,7 @@ export default function DiseaseModelCatalogPage() {
         </section>
 
         {/* Catalog Features Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -482,7 +483,7 @@ export default function DiseaseModelCatalogPage() {
         </section>
 
         {/* Ordering Process Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -535,8 +536,11 @@ export default function DiseaseModelCatalogPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* Shipping Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="animate-in" style={{
               background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
@@ -596,7 +600,7 @@ export default function DiseaseModelCatalogPage() {
         <TestimonialsSection testimonials={testimonialsData} variant="light" />
 
         {/* Browse by Category Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -688,8 +692,15 @@ export default function DiseaseModelCatalogPage() {
           </div>
         </section>
 
+        {/* Lab Signals Signup */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup title="Disease Model Catalog Updates" />
+          </div>
+        </section>
+
         {/* Related Resources Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',

@@ -95,12 +95,12 @@ const validationSteps = [
 // Publications Data - Verified with PubMed links (January 2026)
 const publicationsData = [
   {
-    authors: "Skarnes WC, Rosen B, West AP, et al.",
-    year: "2011",
-    title: "A conditional knockout resource for the genome wide study of mouse gene function.",
-    journal: "Nature",
-    volume: "474(7351): 337-342",
-    link: "https://pubmed.ncbi.nlm.nih.gov/21677750/"
+    authors: "Wang L, Noyer L, Jishage M, Wang YH, Tao AY, McDermott M, et al.",
+    year: "2025",
+    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
+    journal: "Sci Immunol",
+    volume: "10(108): eadq8860",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
   },
   {
     authors: "Clausen BE et al.",
@@ -416,7 +416,7 @@ export default function CriticalExonSelectionPage() {
               Targeting Early Exons (Exon 1 to 3)
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Early exons are excellent targets because deleting exon 1 can cause loss of function in every transcript variant produced from that gene:
+              Consider targeting early exons, such as Exon 1, which can cause loss of function in every transcript variant produced from the gene:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -460,7 +460,7 @@ export default function CriticalExonSelectionPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
               Selected Publications in Exon Selection
@@ -537,7 +537,7 @@ export default function CriticalExonSelectionPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               What Researchers Say
@@ -588,7 +588,7 @@ export default function CriticalExonSelectionPage() {
               Start Your Exon Analysis
             </h2>
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Critical exon selection is the foundation of successful knockout design. Our team can help you analyze your target gene&apos;s exon structure, identify optimal exons for targeting, and validate your selection before committing to model generation.
+              Critical exon selection is the foundation of successful knockout design. Our team can help you analyze your target gene&apos;s exon structure and identify optimal exons for targeting.
             </p>
             <div className="animate-in flex flex-wrap justify-center gap-4">
               <Link

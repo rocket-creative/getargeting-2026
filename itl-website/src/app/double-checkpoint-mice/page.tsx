@@ -341,7 +341,7 @@ export default function DoubleCheckpointMicePage() {
         </section>
 
         {/* Featured Models Section */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px 40px' }}>
+        <section style={{ background: 'white', padding: '60px 20px 40px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <h2 className="animate-in" style={{
@@ -420,7 +420,7 @@ export default function DoubleCheckpointMicePage() {
         </section>
 
         {/* All Available Double Checkpoint Models */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <h2 className="animate-in" style={{
@@ -502,7 +502,7 @@ export default function DoubleCheckpointMicePage() {
         </section>
 
         {/* Applications Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',

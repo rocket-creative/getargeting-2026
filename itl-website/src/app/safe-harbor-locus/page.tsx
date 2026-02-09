@@ -12,6 +12,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -219,6 +220,9 @@ export default function SafeHarborLocusPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA />
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -275,6 +279,12 @@ export default function SafeHarborLocusPage() {
             </div>
           </section>
         )}
+
+        {/* Lab Signals Signup */}
+        <LabSignalsSignup 
+          title="Safe Harbor Locus Project Updates"
+          description="Receive real-time notifications on your Rosa26, H11, or HPRT locus targeting project milestones and transgene integration progress."
+        />
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (

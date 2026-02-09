@@ -11,6 +11,8 @@ import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
+  BreedingSchemeArchitectCTA,
+  LabSignalsSignup,
 } from '@/components/UXUIDC';
 import {
   IconPlay,
@@ -228,6 +230,9 @@ export default function VideoLibraryPage() {
         </div>
       </section>
 
+      {/* Breeding Scheme Architect CTA */}
+      <BreedingSchemeArchitectCTA variant="light" />
+
       {/* CTA Section */}
       <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -309,8 +314,19 @@ export default function VideoLibraryPage() {
         </div>
       </section>
 
+      {/* Lab Signals Newsletter */}
+      <section style={{ backgroundColor: '#f8f9fa', padding: '50px 20px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <LabSignalsSignup 
+            variant="banner"
+            title="Stay Informed with Lab Signals"
+            description="Get the latest research breakthroughs, technical guides, and expert insights delivered directly to your inbox. Join researchers worldwide who rely on Lab Signals for cutting-edge knowledge."
+          />
+        </div>
+      </section>
+
       {/* Subscribe Section */}
-      <section style={{ backgroundColor: '#f8fafc', padding: '50px 20px' }}>
+      <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <h2
             style={{
@@ -335,7 +351,7 @@ export default function VideoLibraryPage() {
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
-              href="https://www.youtube.com/@ingenioustargetinglab"
+              href="https://www.youtube.com/@ingeniouslab"
               target="_blank"
               rel="noopener noreferrer"
               style={{

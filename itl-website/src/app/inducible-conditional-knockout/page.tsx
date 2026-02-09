@@ -8,7 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconSettings, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
-import { UXUIDCResourceLinks, conditionalReversibleResources } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, conditionalReversibleResources, BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -1032,8 +1032,11 @@ export default function InducibleConditionalKnockoutPage() {
           </div>
         </section>
 
+        {/* Breeding Scheme Architect CTA */}
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
         {/* Downloadable Resources Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Inducible & Reversible Resources"
@@ -1045,7 +1048,7 @@ export default function InducibleConditionalKnockoutPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -1060,6 +1063,17 @@ export default function InducibleConditionalKnockoutPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
+          </div>
+        </section>
+
+        {/* Lab Signals Signup */}
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <LabSignalsSignup 
+              variant="banner"
+              title="Inducible Knockout Insights"
+              description="Stay updated on inducible gene targeting strategies, temporal control techniques, and breakthrough advances in conditional knockout technology. Expert insights from our PhD scientists."
+            />
           </div>
         </section>
 
