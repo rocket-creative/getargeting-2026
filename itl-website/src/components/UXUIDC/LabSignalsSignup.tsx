@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * |UXUIDC| Lab Signals Newsletter Signup Component
  * Displays newsletter signup callouts throughout the site
