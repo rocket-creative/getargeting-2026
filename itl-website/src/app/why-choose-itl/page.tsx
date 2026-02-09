@@ -17,8 +17,8 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUID
 // Import verified testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-const dunaief = getTestimonialById('joshua-dunaief')!;
-const basson = getTestimonialById('albert-basson')!;
+const dunaief = getTestimonialById('dunaief-upenn');
+const basson = getTestimonialById('roth-upenn');
 
 // Hero Data
 const heroData = {
