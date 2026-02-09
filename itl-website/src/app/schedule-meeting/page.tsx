@@ -9,8 +9,9 @@ import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
-  HubSpotForm,
 } from '@/components/UXUIDC';
+import CustomHubSpotForm from '@/components/UXUIDC/CustomHubSpotForm';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconPhone,
   IconMail,
@@ -34,6 +35,73 @@ const contactInfo = {
   email: 'inquiry@genetargeting.com',
   phone: '+1 (631) 468-8534',
 };
+
+// Schedule Meeting Form Fields
+const meetingFormFields: FormField[] = [
+  {
+    name: 'firstname',
+    label: 'First Name',
+    type: 'text',
+    required: true,
+    placeholder: 'John',
+  },
+  {
+    name: 'lastname',
+    label: 'Last Name',
+    type: 'text',
+    required: true,
+    placeholder: 'Doe',
+  },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    required: true,
+    placeholder: 'john.doe@university.edu',
+  },
+  {
+    name: 'phone',
+    label: 'Phone',
+    type: 'tel',
+    required: true,
+    placeholder: '(555) 123-4567',
+  },
+  {
+    name: 'company',
+    label: 'Institution/Company',
+    type: 'text',
+    required: true,
+    placeholder: 'University of Research',
+  },
+  {
+    name: 'meeting_purpose',
+    label: 'Meeting Purpose',
+    type: 'select',
+    required: true,
+    options: [
+      { value: 'project_consultation', label: 'New Project Consultation' },
+      { value: 'technical_discussion', label: 'Technical Discussion' },
+      { value: 'quote_review', label: 'Review Existing Quote' },
+      { value: 'partnership', label: 'Partnership Discussion' },
+      { value: 'other', label: 'Other' },
+    ],
+  },
+  {
+    name: 'preferred_time',
+    label: 'Preferred Meeting Time',
+    type: 'text',
+    required: false,
+    placeholder: 'e.g., Tuesday afternoons, any weekday morning',
+  },
+  {
+    name: 'message',
+    label: 'Additional Information',
+    type: 'textarea',
+    required: false,
+    placeholder: 'Please share any additional details that would help us prepare for our conversation...',
+    rows: 4,
+  },
+];
 
 export default function ScheduleMeetingPage() {
 
@@ -192,12 +260,13 @@ export default function ScheduleMeetingPage() {
                 padding: '32px',
                 boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
               }}>
-                <HubSpotForm
-                  formId="c0c02dc8-960c-4d14-acff-eaa43b8c7b6a"
-                  portalId="3977953"
-                  region="na1"
-                  loadingMessage="Loading consultation form..."
-                  style={{ minHeight: '500px' }}
+                <CustomHubSpotForm
+                  portalId="242707"
+                  formGuid="c0c02dc8-960c-4d14-acff-eaa43b8c7b6a"
+                  fields={meetingFormFields}
+                  submitButtonText="Schedule Consultation"
+                  successMessage="Thank you! Our scientific consultants will review your request and contact you within 1 business day to schedule your free consultation."
+                  errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
                 />
               </div>
             </div>

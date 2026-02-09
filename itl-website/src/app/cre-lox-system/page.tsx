@@ -869,11 +869,11 @@ export default function CreLoxSystemPage() {
 
         {/* Testimonials Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -882,30 +882,29 @@ export default function CreLoxSystemPage() {
                     backgroundColor: '#ffffff',
                     border: '1px solid #e0e0e0',
                     borderRadius: '8px',
-                    padding: '30px',
+                    padding: '35px 40px',
                     display: 'flex',
                     flexDirection: 'column',
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
+                  <IconQuote size={32} color="#008080" style={{ marginBottom: '20px', opacity: 0.8 }} />
                   <p style={{
-                    color: '#666',
+                    color: '#555',
                     fontFamily: 'Lato, sans-serif',
-                    fontSize: '.9rem',
+                    fontSize: '1rem',
                     fontWeight: 400,
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                     fontStyle: 'italic',
-                    marginBottom: '20px',
-                    flex: 1,
+                    marginBottom: '25px',
                   }}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div style={{ marginTop: 'auto' }}>
-                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                    <p style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '5px' }}>
                       — {testimonial.name}
                     </p>
-                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>
+                    <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400 }}>
                       {testimonial.affiliation}
                     </p>
                   </div>

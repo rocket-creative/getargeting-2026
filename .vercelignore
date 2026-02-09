@@ -1,0 +1,26 @@
+# Development and design assets - DO NOT UPLOAD TO VERCEL
+scientific-diagrams/
+competitor-diagrams/
+images/
+docs/
+feedback-from-video/
+design-screenshot.png
+mouse-hero-GLOVE.jpg
+
+# Documentation files
+*.md
+!README.md
+
+# JSON data files (not used in build)
+content_based_mapping.json
+diagram_mapping.json
+figure_ids.json
+final_matches.json
+image_analysis.json
+
+# Scripts
+new-project.sh
+log-error.sh
+
+# Backup directories
+**/INCORRECT-diagrams-backup/

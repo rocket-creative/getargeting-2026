@@ -11,6 +11,8 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch } from '@/components/UXUIDC';
+import CustomHubSpotForm from '@/components/UXUIDC/CustomHubSpotForm';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconCheckCircle,
   IconMessageCircle,
@@ -66,6 +68,88 @@ const deliverableOptions = [
   'Cryopreserved embryos',
   'Cryopreserved sperm',
   'Not sure - need guidance',
+];
+
+// Catalog Order Form Fields
+const catalogFormFields: FormField[] = [
+  {
+    name: 'firstname',
+    label: 'First Name',
+    type: 'text',
+    required: true,
+    placeholder: 'John',
+  },
+  {
+    name: 'lastname',
+    label: 'Last Name',
+    type: 'text',
+    required: true,
+    placeholder: 'Doe',
+  },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    required: true,
+    placeholder: 'john.doe@university.edu',
+  },
+  {
+    name: 'phone',
+    label: 'Phone',
+    type: 'tel',
+    required: false,
+    placeholder: '(555) 123-4567',
+  },
+  {
+    name: 'company',
+    label: 'Institution/Company',
+    type: 'text',
+    required: true,
+    placeholder: 'University of Research',
+  },
+  {
+    name: 'model_name',
+    label: 'Model Name or Gene Symbol',
+    type: 'text',
+    required: true,
+    placeholder: 'e.g., PD-1 Humanized, Brca1 KO',
+  },
+  {
+    name: 'model_category',
+    label: 'Model Type',
+    type: 'select',
+    required: false,
+    options: modelCategoryOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  {
+    name: 'strain_background',
+    label: 'Strain Background',
+    type: 'select',
+    required: false,
+    options: strainOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  {
+    name: 'quantity',
+    label: 'Quantity Needed',
+    type: 'select',
+    required: true,
+    options: quantityOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  {
+    name: 'timeline',
+    label: 'Timeline',
+    type: 'select',
+    required: false,
+    options: urgencyOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  {
+    name: 'additional_info',
+    label: 'Additional Information',
+    type: 'textarea',
+    required: false,
+    placeholder: 'Please provide any additional details about your order, specific requirements, or questions...',
+    rows: 4,
+  },
 ];
 
 const faqData = [
@@ -128,9 +212,6 @@ const testimonials = [
 // ========== PAGE COMPONENT ==========
 
 export default function OrderInquiryCatalogModelsPage() {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
 
   useEffect(() => {
@@ -158,91 +239,6 @@ export default function OrderInquiryCatalogModelsPage() {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    const formData = new FormData(formRef.current!);
-    
-    const catalogOrderData = {
-      name: formData.get('name') as string || '',
-      email: formData.get('email') as string || '',
-      phone: formData.get('phone') as string || '',
-      institution: formData.get('institution') as string || '',
-      modelName: formData.get('model-name') as string || '',
-      modelNumber: formData.get('model-number') as string || '',
-      geneSymbol: formData.get('gene-symbol') as string || '',
-      modelCategory: formData.get('model-category') as string || '',
-      strainBackground: formData.get('strain-background') as string || '',
-      quantity: formData.get('quantity') as string || '',
-      deliverable: formData.get('deliverable') as string || '',
-      urgency: formData.get('urgency') as string || '',
-      additionalNotes: formData.get('additional-notes') as string || '',
-      preferredContact: formData.get('preferred-contact') as string || '',
-      requestType: 'catalog-model',
-    };
-
-    try {
-      const response = await fetch('/api/send-catalog-inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(catalogOrderData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        formRef.current?.reset();
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  // Custom select component style
-  const selectStyle = {
-    width: '100%',
-    padding: '10px 12px',
-    backgroundColor: 'white',
-    border: '1px solid #d1d5db',
-    borderRadius: '6px',
-    color: '#374151',
-    fontFamily: 'var(--system-ui)',
-    fontSize: '.875rem',
-    cursor: 'pointer',
-    appearance: 'none' as const,
-    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'right 10px center',
-    backgroundSize: '16px',
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '10px 12px',
-    backgroundColor: 'white',
-    border: '1px solid #d1d5db',
-    borderRadius: '6px',
-    color: '#374151',
-    fontFamily: 'var(--system-ui)',
-    fontSize: '.875rem',
-  };
-
-  const labelStyle = {
-    color: '#374151',
-    fontFamily: 'var(--system-ui)',
-    fontSize: '.75rem',
-    fontWeight: 500 as const,
-    display: 'block',
-    marginBottom: '4px',
-    textTransform: 'uppercase' as const,
-    letterSpacing: '0.025em',
-  };
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -306,241 +302,67 @@ export default function OrderInquiryCatalogModelsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             {/* ===== MAIN FORM ===== */}
             <div className="lg:col-span-2 flex">
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
+              <div
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '28px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
                   width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
                 }}
               >
-                {/* Contact Info Row */}
-                <div style={{ marginBottom: '20px' }}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      marginBottom: '12px',
-                      paddingBottom: '8px',
-                      borderBottom: '1px solid #e5e7eb',
-                    }}
-                  >
-                    <span style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600 }}>
-                      Contact Information
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    <div>
-                      <label style={labelStyle}>Name *</label>
-                      <input type="text" name="name" required style={inputStyle} placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Email *</label>
-                      <input type="email" name="email" required style={inputStyle} placeholder="email@institution.edu" />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Phone</label>
-                      <input type="tel" name="phone" style={inputStyle} placeholder="(Optional)" />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Institution</label>
-                      <input type="text" name="institution" style={inputStyle} placeholder="University/Company" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Model Information Row */}
-                <div style={{ marginBottom: '20px' }}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      gap: '8px',
-                      marginBottom: '12px',
-                      paddingBottom: '8px',
-                      borderBottom: '1px solid #e5e7eb',
-                    }}
-                  >
-                    <span style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600 }}>
-                      Model Information
-                    </span>
+                {showCatalogSearch && (
+                  <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                    <CatalogSearch maxResults={5} showTitle={false} />
                     <button
-                      type="button"
-                      onClick={() => setShowCatalogSearch(!showCatalogSearch)}
+                      onClick={() => setShowCatalogSearch(false)}
                       style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '6px',
+                        marginTop: '12px',
+                        padding: '6px 12px',
                         backgroundColor: '#f3f4f6',
                         border: '1px solid #e5e7eb',
                         borderRadius: '4px',
-                        padding: '4px 10px',
                         cursor: 'pointer',
                         fontSize: '.75rem',
                         color: '#008080',
                         fontWeight: 500,
                       }}
                     >
-                      <IconSearch size={12} />
-                      {showCatalogSearch ? 'Hide Search' : 'Search Catalog'}
+                      Hide Search
                     </button>
                   </div>
-                  
-                  {/* Expandable Catalog Search */}
-                  {showCatalogSearch && (
-                    <div style={{ marginBottom: '16px', padding: '16px', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
-                      <CatalogSearch maxResults={5} showTitle={false} />
-                    </div>
-                  )}
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div>
-                      <label style={labelStyle}>Model Name / Description *</label>
-                      <input type="text" name="model-name" required style={inputStyle} placeholder="e.g., hPD-1 Humanized Mouse" />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Model/Stock Number</label>
-                      <input type="text" name="model-number" style={inputStyle} placeholder="If known (e.g., ITL-001)" />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Gene Symbol</label>
-                      <input type="text" name="gene-symbol" style={inputStyle} placeholder="e.g., Pdcd1, Cd274" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Order Specifications Row */}
-                <div style={{ marginBottom: '20px' }}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      marginBottom: '12px',
-                      paddingBottom: '8px',
-                      borderBottom: '1px solid #e5e7eb',
-                    }}
-                  >
-                    <span style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600 }}>
-                      Order Specifications
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div>
-                      <label style={labelStyle}>Model Category</label>
-                      <select name="model-category" style={selectStyle}>
-                        <option value="">Select category...</option>
-                        {modelCategoryOptions.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Strain Background</label>
-                      <select name="strain-background" style={selectStyle}>
-                        <option value="">Select strain...</option>
-                        {strainOptions.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Quantity Needed</label>
-                      <select name="quantity" style={selectStyle}>
-                        <option value="">Select quantity...</option>
-                        {quantityOptions.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Deliverable Type</label>
-                      <select name="deliverable" style={selectStyle}>
-                        <option value="">Select type...</option>
-                        {deliverableOptions.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Timeline / Urgency</label>
-                      <select name="urgency" style={selectStyle}>
-                        <option value="">Select timeline...</option>
-                        {urgencyOptions.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Contact Preference</label>
-                      <select name="preferred-contact" style={selectStyle}>
-                        <option value="email">Email</option>
-                        <option value="phone">Phone</option>
-                        <option value="virtual meeting">Virtual Meeting</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Additional Notes */}
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={labelStyle}>Additional Details</label>
-                  <textarea
-                    name="additional-notes"
-                    rows={3}
-                    style={{ ...inputStyle, resize: 'vertical' }}
-                    placeholder="Research application, specific genotype requirements, shipping preferences, or questions..."
-                  />
-                </div>
-
-                {/* Submit */}
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p style={{ color: '#6b7280', fontSize: '.75rem', fontFamily: 'var(--system-ui)' }}>
-                    * Required fields. We&apos;ll respond within 1-2 business days.
-                  </p>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center justify-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg disabled:opacity-50"
-                    style={{
-                      backgroundColor: '#008080',
-                      padding: '12px 28px',
-                      borderRadius: '6px',
-                      fontFamily: 'var(--system-ui)',
-                      fontSize: '.9rem',
-                      fontWeight: 600,
-                      border: 'none',
-                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                      minWidth: '180px',
-                    }}
-                  >
-                    <span>{isSubmitting ? 'Submitting...' : 'Submit Inquiry'}</span>
-                    {!isSubmitting && <IconArrowRight size={16} />}
-                  </button>
-                </div>
-
-                {submitStatus === 'success' && (
-                  <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#ecfdf5', borderRadius: '6px', border: '1px solid #10b981' }}>
-                    <p style={{ color: '#065f46', fontSize: '.875rem', fontFamily: 'var(--system-ui)' }}>
-                      Thank you! Your catalog model inquiry has been submitted. Our team will contact you within 1-2 business days with availability and pricing.
-                    </p>
-                  </div>
                 )}
-                {submitStatus === 'error' && (
-                  <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#fef2f2', borderRadius: '6px', border: '1px solid #ef4444' }}>
-                    <p style={{ color: '#991b1b', fontSize: '.875rem', fontFamily: 'var(--system-ui)' }}>
-                      There was an error submitting your request. Please try again or contact us directly at inquiry@genetargeting.com.
-                    </p>
-                  </div>
-                )}
-              </form>
+                <CustomHubSpotForm
+                  portalId="242707"
+                  formGuid="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                  fields={catalogFormFields}
+                  submitButtonText="Submit Order Inquiry"
+                  successMessage="Thank you! Your catalog model inquiry has been submitted. Our team will contact you within 1-2 business days with availability and pricing."
+                  errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
+                />
+                <button
+                  onClick={() => setShowCatalogSearch(!showCatalogSearch)}
+                  style={{
+                    marginTop: '16px',
+                    width: '100%',
+                    padding: '10px',
+                    backgroundColor: '#f3f4f6',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontSize: '.85rem',
+                    color: '#008080',
+                    fontWeight: 500,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                  }}
+                >
+                  <IconSearch size={14} />
+                  {showCatalogSearch ? 'Hide' : 'Search'} Catalog
+                </button>
+              </div>
             </div>
 
             {/* ===== SIDEBAR ===== */}
@@ -844,14 +666,14 @@ export default function OrderInquiryCatalogModelsPage() {
 
       {/* ========== TESTIMONIALS ========== */}
       <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
           <h2 className="animate-in" style={{ textAlign: 'center', color: '#ffffff', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', padding: '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-                <IconQuote size={24} color="#008080" style={{ marginBottom: '15px' }} />
-                <p style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Lato, sans-serif', fontSize: '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: 1 }}>&ldquo;{testimonial.quote}&rdquo;</p>
-                <div style={{ marginTop: 'auto' }}>
+              <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                   <p style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
                   <p style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                 </div>

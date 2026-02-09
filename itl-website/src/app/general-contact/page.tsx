@@ -9,8 +9,9 @@ import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
-  HubSpotForm,
 } from '@/components/UXUIDC';
+import CustomHubSpotForm from '@/components/UXUIDC/CustomHubSpotForm';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconPhone,
   IconMail,
@@ -28,6 +29,66 @@ const contactInfo = {
   hours: 'Monday - Friday, 9 AM - 5 PM ET',
   address: 'ingenious targeting laboratory\n761-80 Coates Avenue\nHolbrook, NY 11741',
 };
+
+// Contact Form Fields
+const contactFormFields: FormField[] = [
+  {
+    name: 'firstname',
+    label: 'First Name',
+    type: 'text',
+    required: true,
+    placeholder: 'John',
+  },
+  {
+    name: 'lastname',
+    label: 'Last Name',
+    type: 'text',
+    required: true,
+    placeholder: 'Doe',
+  },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    required: true,
+    placeholder: 'john.doe@university.edu',
+  },
+  {
+    name: 'phone',
+    label: 'Phone',
+    type: 'tel',
+    required: false,
+    placeholder: '(555) 123-4567',
+  },
+  {
+    name: 'company',
+    label: 'Institution/Company',
+    type: 'text',
+    required: false,
+    placeholder: 'University of Research',
+  },
+  {
+    name: 'inquiry_type',
+    label: 'Subject',
+    type: 'select',
+    required: true,
+    options: [
+      { value: 'general', label: 'General Inquiry' },
+      { value: 'technical', label: 'Technical Question' },
+      { value: 'partnership', label: 'Partnership Opportunity' },
+      { value: 'career', label: 'Career/Employment' },
+      { value: 'other', label: 'Other' },
+    ],
+  },
+  {
+    name: 'message',
+    label: 'Message',
+    type: 'textarea',
+    required: true,
+    placeholder: 'Please describe your inquiry...',
+    rows: 6,
+  },
+];
 
 export default function GeneralContactPage() {
 
@@ -133,12 +194,13 @@ export default function GeneralContactPage() {
                 padding: '32px',
                 boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
               }}>
-                <HubSpotForm
-                  formId="REPLACE_WITH_CONTACT_FORM_ID"
+                <CustomHubSpotForm
                   portalId="242707"
-                  region="na1"
-                  loadingMessage="Loading contact form..."
-                  style={{ minHeight: '500px' }}
+                  formGuid="efefc866-97ec-4500-a380-4cf28e733f54"
+                  fields={contactFormFields}
+                  submitButtonText="Send Message"
+                  successMessage="Thank you for contacting us! We'll respond to your inquiry within 1 business day."
+                  errorMessage="We're having trouble submitting your message. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
                 />
               </div>
             </div>
