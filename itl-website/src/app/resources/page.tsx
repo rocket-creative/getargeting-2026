@@ -75,7 +75,14 @@ const strategyGuidesData = {
 };
 
 // Planning Guides Data
-const planningGuidesData = {
+const planningGuidesData: {
+  title: string;
+  guides: Array<{
+    href: string;
+    title: string;
+    description: string;
+  }>;
+} = {
   title: "Planning Guides",
   guides: [
     // Planning guides to be added in future
