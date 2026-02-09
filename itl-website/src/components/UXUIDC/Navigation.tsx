@@ -363,13 +363,13 @@ export function UXUIDCNavigation() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </Link>
 
-              {/* Start Your Project - Solid grey button with animation */}
+              {/* Pricing Guide - Solid grey button with animation */}
               <Link 
                 href="/start-your-project" 
                 className="group hidden lg:flex items-center gap-1.5 bg-[#666] text-white px-4 py-1 ml-2 text-sm transition-all duration-300 hover:bg-[#555] hover:-translate-y-0.5 hover:shadow-md whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 rounded-sm"
                 style={{ fontFamily: 'var(--system-ui)', fontWeight: 400 }}
               >
-                <span>Start Your Project</span>
+                <span>Pricing Guide</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </Link>
 

@@ -162,7 +162,7 @@ export default function LabSignalsPage() {
           priority
         />
 
-        {/* Floating Content - Right Justified */}
+        {/* Floating Content - Right Justified with Glass Box */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -173,105 +173,126 @@ export default function LabSignalsPage() {
           justifyContent: 'center',
           alignItems: 'flex-end',
           padding: '40px',
-          textAlign: 'right',
-          maxWidth: '500px',
         }}>
-          <div className="hero-animate" style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            backgroundColor: BRAND.gold,
-            padding: '6px 16px',
-            borderRadius: '20px',
-            marginBottom: '16px',
+          <div style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            borderRadius: '12px',
+            padding: '32px',
+            maxWidth: '480px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
           }}>
-            <IconMail size={14} color={BRAND.black} />
-            <span style={{ 
-              color: BRAND.black, 
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '.7rem', 
-              fontWeight: 700, 
-              letterSpacing: '0.5px',
-              textTransform: 'uppercase',
+            <div className="hero-animate" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: BRAND.gold,
+              padding: '6px 16px',
+              borderRadius: '20px',
+              marginBottom: '16px',
             }}>
-              Biweekly Newsletter
-            </span>
-          </div>
-          <h1 className="hero-animate" style={{
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-            fontWeight: 700,
-            lineHeight: 1.1,
-            marginBottom: '12px',
-          }}>
-            Lab Signals
-          </h1>
-          <p className="hero-animate" style={{
-            color: BRAND.black,
-            fontFamily: 'Lato, sans-serif',
-            fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
-            lineHeight: 1.5,
-            marginBottom: '20px',
-          }}>
-            Your Biweekly Source for Life Science Research Insights
-          </p>
-          <div className="hero-animate" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-            <a
-              href="#signup"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                backgroundColor: BRAND.gold,
-                color: BRAND.black,
-                padding: '10px 22px',
-                borderRadius: '6px',
+              <IconMail size={14} color={BRAND.black} />
+              <span style={{ 
+                color: BRAND.black, 
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '.85rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,187,0,0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Subscribe Free
-            </a>
-            <a
-              href="/api/rss/lab-signals"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                backgroundColor: 'rgba(255,255,255,0.2)',
-                backdropFilter: 'blur(4px)',
-                color: BRAND.white,
-                padding: '10px 16px',
-                borderRadius: '6px',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '.85rem',
-                fontWeight: 500,
-                textDecoration: 'none',
-                border: '1px solid rgba(255,255,255,0.3)',
-                transition: 'background-color 0.2s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)';
-              }}
-            >
-              <RSSIcon color={BRAND.white} /> RSS
-            </a>
+                fontSize: '.7rem', 
+                fontWeight: 700, 
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase',
+              }}>
+                Biweekly Newsletter
+              </span>
+            </div>
+            <h1 className="hero-animate" style={{
+              color: BRAND.black,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontWeight: 700,
+              lineHeight: 1.1,
+              marginBottom: '12px',
+            }}>
+              Lab Signals
+            </h1>
+            <p className="hero-animate" style={{
+              color: BRAND.black,
+              fontFamily: 'Lato, sans-serif',
+              fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
+              lineHeight: 1.5,
+              marginBottom: '24px',
+            }}>
+              Your Biweekly Source for Life Science Research Insights
+            </p>
+            <div className="hero-animate" style={{ 
+              display: 'flex', 
+              gap: '10px', 
+              flexWrap: 'wrap',
+              width: '100%',
+            }}>
+              <a
+                href="#signup"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: BRAND.gold,
+                  color: BRAND.black,
+                  padding: '12px 24px',
+                  borderRadius: '6px',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '.85rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                  flex: '1 1 auto',
+                  minWidth: '140px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,187,0,0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                Subscribe Free
+              </a>
+              <a
+                href="/api/rss/lab-signals"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px',
+                  backgroundColor: 'rgba(255,255,255,0.3)',
+                  backdropFilter: 'blur(4px)',
+                  WebkitBackdropFilter: 'blur(4px)',
+                  color: BRAND.black,
+                  padding: '12px 20px',
+                  borderRadius: '6px',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '.85rem',
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                  border: '1px solid rgba(0, 0, 0, 0.1)',
+                  transition: 'background-color 0.2s ease',
+                  flex: '0 1 auto',
+                  minWidth: '100px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)';
+                }}
+              >
+                <RSSIcon color={BRAND.black} /> RSS
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -294,11 +315,13 @@ export default function LabSignalsPage() {
                 left: 0,
                 width: '100%',
                 height: '100%',
+                border: 'none',
               }}
               src="https://mediazilla.com/xxexlvtJRB"
               frameBorder="0"
               allowFullScreen
-              allow="autoplay; fullscreen"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              title="Lab Signals Video"
             />
           </div>
         </div>
